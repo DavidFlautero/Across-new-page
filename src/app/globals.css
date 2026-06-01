@@ -1,0 +1,12 @@
+@import "../styles/reset.css";
+@import "../styles/tokens.css";
+@import "../styles/utilities.css";
+
+body {
+  overflow-x: hidden;
+  font-family: var(--font-body);
+}
+
+main {
+  isolation: isolate;
+}

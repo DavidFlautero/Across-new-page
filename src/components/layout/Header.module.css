@@ -1,0 +1,324 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1.2rem 2rem;
+}
+
+.header {
+  max-width: 1680px;
+  margin: 0 auto;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.6rem;
+  border-radius: 999px;
+  backdrop-filter: blur(20px);
+  background:
+    linear-gradient(135deg, rgba(10,10,14,.86), rgba(22,22,30,.58));
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow:
+    0 20px 70px rgba(0,0,0,.34),
+    inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+.logo img {
+  width: 190px;
+  height: auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav a,
+.dropdownTrigger {
+  color: rgba(255,255,255,.88);
+  text-decoration: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: .92rem;
+  font-weight: 700;
+  transition: color .2s ease;
+}
+
+.nav a:hover,
+.dropdownTrigger:hover {
+  color: #ff2b57;
+}
+
+.divider {
+  width: 1px;
+  height: 26px;
+  background: rgba(255,255,255,.14);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownTrigger {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 1.2rem);
+  left: 50%;
+  transform: translateX(-50%) translateY(12px);
+  width: 320px;
+  padding: 1rem;
+  border-radius: 28px;
+  opacity: 0;
+  visibility: hidden;
+  transition: .28s ease;
+  backdrop-filter: blur(20px);
+  background:
+    linear-gradient(145deg, rgba(8,8,12,.96), rgba(18,18,24,.88));
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow:
+    0 35px 90px rgba(0,0,0,.55),
+    inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+.dropdownVisible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdownMenu a {
+  display: flex;
+  align-items: center;
+  min-height: 58px;
+  padding: 0 1rem;
+  border-radius: 18px;
+  color: rgba(255,255,255,.88);
+}
+
+.dropdownMenu a:hover {
+  background:
+    linear-gradient(135deg, rgba(160,14,44,.26), rgba(255,255,255,.03));
+}
+
+.mobileButton {
+  display: none;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .nav {
+    display: none;
+  }
+
+  .mobileButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,.08);
+    background:
+      linear-gradient(135deg, rgba(20,20,26,.92), rgba(10,10,14,.86));
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    max-width: 1680px;
+    margin: 1rem auto 0;
+    padding: 1rem;
+    border-radius: 28px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: .28s ease;
+    backdrop-filter: blur(18px);
+    background:
+      linear-gradient(145deg, rgba(8,8,12,.96), rgba(18,18,24,.88));
+    border: 1px solid rgba(255,255,255,.08);
+  }
+
+  .mobileVisible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .mobileMenu a,
+  .mobileCompanyTrigger {
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    border-radius: 16px;
+    color: rgba(255,255,255,.9);
+    text-decoration: none;
+    background: transparent;
+    border: 0;
+    font-size: .95rem;
+  }
+
+  .mobileCompanyMenu {
+    display: none;
+    padding-left: .8rem;
+  }
+
+  .mobileCompanyVisible {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+  }
+}
+
+.languageSwitcher {
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+  margin-left: 1.5rem;
+  padding-left: 1.5rem;
+  border-left: 1px solid rgba(255,255,255,.10);
+}
+
+.languageSwitcher button {
+  position: relative;
+  height: 34px;
+  padding: 0 .7rem;
+  border: 0;
+  background: transparent;
+  color: rgba(255,255,255,.52);
+  cursor: pointer;
+  font-size: .74rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  transition: color .2s ease;
+}
+
+.languageSwitcher button:hover {
+  color: rgba(255,255,255,.92);
+}
+
+.languageActive {
+  color: white !important;
+}
+
+.languageActive::after {
+  content: "";
+  position: absolute;
+  left: .7rem;
+  right: .7rem;
+  bottom: .15rem;
+  height: 1px;
+  border-radius: 999px;
+  background:
+    linear-gradient(90deg, transparent, rgba(255,40,84,.95), transparent);
+  box-shadow: 0 0 12px rgba(255,40,84,.55);
+}
+
+@media (max-width: 1100px) {
+  .languageSwitcher {
+    display: none;
+  }
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+  padding-left: 1rem;
+  border-left: 1px solid rgba(255,255,255,.10);
+}
+
+.language button,
+.mobileLang button {
+  height: 36px;
+  padding: 0 .55rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: rgba(255,255,255,.58);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  font-size: .76rem;
+  font-weight: 800;
+}
+
+.language button:hover,
+.mobileLang button:hover {
+  color: white;
+  background: rgba(255,255,255,.06);
+}
+
+.languageActive {
+  color: white !important;
+  background: rgba(255,255,255,.08) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+.mobileLang {
+  display: flex;
+  gap: .35rem;
+  padding: .8rem 1rem;
+}
+
+@media (max-width: 1100px) {
+  .language {
+    display: none;
+  }
+}
+
+.header button,
+.header a {
+  background-color: transparent;
+}
+
+.language button {
+  border: 1px solid rgba(255,255,255,.09) !important;
+  background: rgba(255,255,255,.045) !important;
+  color: rgba(255,255,255,.78) !important;
+}
+
+.languageActive {
+  background: rgba(255,255,255,.13) !important;
+  color: #fff !important;
+}
+
+.dropdownMenu {
+  width: 360px !important;
+  padding: .7rem !important;
+}
+
+.dropdownMenu a {
+  min-height: 48px !important;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  border-radius: 0 !important;
+  font-size: .86rem !important;
+}
+
+.dropdownMenu a:last-child {
+  border-bottom: 0;
+}
+
+.dropdownMenu a:hover {
+  border-radius: 14px !important;
+  background:
+    linear-gradient(90deg, rgba(210, 12, 52, .26), rgba(255,255,255,.03)) !important;
+}

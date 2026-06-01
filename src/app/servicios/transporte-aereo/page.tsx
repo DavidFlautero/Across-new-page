@@ -1,0 +1,142 @@
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import Image from "next/image";
+import Link from "next/link";
+import Certifications from "@/components/sections/Certifications";
+import styles from "./TransporteAereo.module.css";
+
+export default function TransporteAereoPage() {
+  return (
+    <div className="page-shell">
+      <Header />
+
+      <main className={styles.page}>
+        <section className={styles.hero}>
+          <Image
+            src="/images/hero/cargaAereahero.jpg"
+            alt="Transporte aéreo Across Logistics"
+            fill
+            priority
+            sizes="100vw"
+            className={styles.heroImage}
+          />
+
+          <div className={styles.heroOverlay} />
+
+          <div className={styles.heroContent}>
+            <span>Transporte Aéreo</span>
+
+            <h1>Rápido. Global. Confiable.</h1>
+
+            <p>
+              Ofrecemos soluciones globales de transporte aéreo para envíos donde el tiempo es una prioridad. Como Agente IATA Acreditado, trabajamos con las principales aerolíneas del mundo para asegurar que su mercancía llegue a destino en tiempo y forma.
+              <br />
+              <strong>Salidas diarias a casi todos los destinos del mundo.</strong>
+            </p>
+
+            <div className={styles.actions}>
+              <Link href="/cotizacion">Solicitar presupuesto</Link>
+              <Link href="/contacto">Hablar con un asesor</Link>
+            </div>
+          </div>
+        </section>
+
+        <Certifications />
+
+        <section className={styles.content}>
+          <div className={styles.mainContent}>
+            <section id="overview" className={styles.block}>
+              <span>Air Freight</span>
+              <h2>Transporte aéreo internacional con control operativo.</h2>
+              <p>
+                Coordinamos operaciones aéreas urgentes, sensibles y de alto
+                valor con seguimiento, documentación y acompañamiento experto
+                durante todo el proceso logístico.
+              </p>
+            </section>
+
+            <section id="services" className={styles.servicesPanel}>
+              <div className={styles.servicesCopy}>
+                <p>
+                  Con salidas diarias a casi todos los destinos, su mercancía estará en cualquier
+                  punto del mundo de manera urgente y con la máxima eficacia y profesionalidad.
+                </p>
+                <h2>Nuestros Servicios para el Transporte Aéreo</h2>
+
+                <div className={styles.accordion}>
+              {[
+                  {
+                    title: "Servicios de mensajería",
+                    text: "Soluciones aéreas para documentación, muestras, piezas críticas y envíos urgentes que requieren trazabilidad, rapidez y gestión prioritaria de origen a destino.",
+                  },
+                  {
+                    title: "Carga peligrosa / DGR",
+                    text: "Gestión especializada de mercancías peligrosas bajo normativa IATA DGR, con revisión documental, embalaje, etiquetado y coordinación operativa segura.",
+                  },
+                  {
+                    title: "Chartering",
+                    text: "Contratación de aeronaves dedicadas para cargas sobredimensionadas, sensibles o extremadamente urgentes, cuando la operación requiere capacidad exclusiva y control total.",
+                  },
+                  {
+                    title: "e-Booking",
+                    text: "Reservas aéreas ágiles con aerolíneas aliadas, seguimiento operativo y confirmación eficiente de espacios para optimizar tiempos de tránsito y disponibilidad.",
+                  },
+                  {
+                    title: "Aéreos urgentes 24/7",
+                    text: "Respuesta inmediata para operaciones críticas, con coordinación permanente, monitoreo continuo y acompañamiento experto durante todo el movimiento internacional.",
+                  },
+                ].map((item) => (
+                  <details key={item.title} className={styles.serviceItem}>
+                    <summary>
+                      <h3>{item.title}</h3>
+                      <span>+</span>
+                    </summary>
+                    <p>{item.text}</p>
+                  </details>
+                ))}
+                </div>
+              </div>
+
+              <div className={styles.servicesImageWrap}>
+                <Image
+                  src="/images/hero/cargaAereahero.jpg"
+                  alt="Servicios de transporte aéreo"
+                  fill
+                  sizes="(max-width: 900px) 100vw, 48vw"
+                  className={styles.servicesImage}
+                />
+              </div>
+            </section>
+
+            <section id="related" className={styles.related}>
+              <h2>Servicios relacionados</h2>
+
+              <div className={styles.relatedGrid}>
+                <Link href="/servicios/aduanas">Servicios de Aduanas</Link>
+                <Link href="/servicios/temperatura-controlada">
+                  Temperatura Controlada
+                </Link>
+                <Link href="/servicios/cargas-especiales">
+                  Cargas Especiales
+                </Link>
+              </div>
+            </section>
+
+            <section id="quote" className={styles.cta}>
+              <span>Cotización Express</span>
+              <h2>Presupuesto personalizado para su operación aérea.</h2>
+              <p>
+                Complete la información de su envío y nuestro equipo preparará
+                una propuesta logística ajustada a su urgencia, destino y tipo de
+                carga.
+              </p>
+              <Link href="/cotizacion">Solicitar presupuesto ahora</Link>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
