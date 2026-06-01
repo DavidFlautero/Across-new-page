@@ -1,16 +1,12 @@
-export default function Page() {
+import Footer from "@/components/layout/Footer";
+
+export default function SostenibilidadPage() {
   return (
-    <main style={{
-      minHeight: "100vh",
-      background: "#07080c",
-      color: "white",
-      display: "grid",
-      placeItems: "center",
-      fontSize: "2rem",
-      fontWeight: 700
-    }}>
-      sostenibilidad
-    </main>
+    <>
+      <main>
+        sostenibilidad
+      </main>
       <Footer />
+    </>
   );
 }
