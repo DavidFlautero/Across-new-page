@@ -33,7 +33,7 @@ export default function FloatingCallButton() {
         <div className={styles.icon}>✆</div>
         <div className={styles.copy}>
           <span>Asesor comercial</span>
-          <strong>¡Hable con un asesor!</strong>
+          <strong>Solicitar llamada</strong>
         </div>
       </button>
 

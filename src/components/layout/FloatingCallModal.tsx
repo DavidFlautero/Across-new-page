@@ -7,7 +7,7 @@ type Locale = "es" | "en" | "zh";
 
 const copy = {
   es: {
-    button: "Solicitar llamada de un agente comercial",
+    button: "¡Hable con un asesor comercial!",
     title: "Agende una llamada",
     subtitle: "Para un asesoramiento personalizado",
     date: "Fecha",

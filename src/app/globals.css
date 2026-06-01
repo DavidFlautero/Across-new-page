@@ -10,3 +10,74 @@ body {
 main {
   isolation: isolate;
 }
+
+/* === Across premium mobile fixes === */
+
+@media (max-width: 900px) {
+  .heroServices,
+  .serviceGrid {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    width: calc(100% - 24px) !important;
+    margin: 28px auto 0 !important;
+    border-radius: 26px !important;
+    background: linear-gradient(180deg, rgba(7,8,12,.92), rgba(7,8,12,.98)) !important;
+    border: 1px solid rgba(255,255,255,.08) !important;
+    backdrop-filter: blur(18px) !important;
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+  }
+
+  .heroServices::-webkit-scrollbar,
+  .serviceGrid::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .heroService,
+  .serviceCard {
+    min-width: 238px !important;
+    max-width: 238px !important;
+    min-height: 92px !important;
+    padding: 18px 20px !important;
+    border-right: 1px solid rgba(255,255,255,.07) !important;
+    border-bottom: 0 !important;
+  }
+
+  .heroService:last-child,
+  .serviceCard:last-child {
+    border-right: 0 !important;
+  }
+}
+
+@media (max-width: 720px) {
+  [class*="FloatingCallButton_wrapper"],
+  [class*="floating"] {
+    right: 14px !important;
+    bottom: 18px !important;
+    z-index: 9999 !important;
+  }
+
+  [class*="FloatingCallButton_label"] {
+    display: block !important;
+    margin-bottom: 8px !important;
+    padding: 9px 14px !important;
+    border-radius: 999px !important;
+    background: linear-gradient(135deg,#c70039,#ff174f) !important;
+    color: #fff !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    box-shadow: 0 14px 34px rgba(199,0,57,.34) !important;
+  }
+}
+
+
+/* Hide decorative big numbers that cheapen premium cards */
+[class*="number"],
+[class*="Number"],
+[class*="index"],
+[class*="Index"] {
+  opacity: 0;
+  pointer-events: none;
+}
+
