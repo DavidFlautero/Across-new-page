@@ -1,116 +1,98 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./FloatingCallButton.module.css";
 
-const countries = [
-  "Argentina",
-  "Colombia",
-  "España",
-  "México",
-  "Chile",
-  "Perú",
-  "Ecuador",
-  "Uruguay",
-  "Paraguay",
-  "Bolivia",
-  "Brasil",
-  "Estados Unidos",
-  "China",
-  "Hong Kong",
-  "Países Bajos",
-  "Portugal",
-  "Emiratos Árabes Unidos",
-  "Otro",
-];
+type Locale = "es" | "en" | "zh";
+
+const LOCALE_KEY = "across-locale";
+
+const copy = {
+  es: {
+    bubble: "¿Necesita ayuda?",
+    label: "Agendar una llamada",
+    aria: "Agendar una llamada comercial",
+  },
+  en: {
+    bubble: "Need assistance?",
+    label: "Schedule a call",
+    aria: "Schedule a commercial call",
+  },
+  zh: {
+    bubble: "需要帮助吗？",
+    label: "预约电话",
+    aria: "预约商务电话",
+  },
+} as const;
 
 export default function FloatingCallButton() {
+  const [locale, setLocale] = useState<Locale>("es");
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const saved = window.localStorage.getItem(LOCALE_KEY) as Locale | null;
+    if (saved && saved in copy) setLocale(saved);
+
+    const onChange = (event: Event) => {
+      const next = (event as CustomEvent<Locale>).detail;
+      if (next in copy) setLocale(next);
+    };
+
+    window.addEventListener("across-locale-change", onChange);
+    return () => window.removeEventListener("across-locale-change", onChange);
+  }, []);
+
+  const t = copy[locale];
 
   return (
     <>
-      <button className={styles.floating} onClick={() => setOpen(true)}>
-        <div className={styles.icon}>✆</div>
-        <div className={styles.copy}>
-          <span>Asesor comercial</span>
-          <strong>¡Hable con un asesor!</strong>
-        </div>
+      <button
+        type="button"
+        className={styles.floating}
+        aria-label={t.aria}
+        onClick={() => setOpen(true)}
+      >
+        <span className={styles.chatBubble}>{t.bubble}</span>
+
+        <span className={styles.callPill}>
+          <span className={styles.iconCircle}>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.48 19.48 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.92.33 1.82.63 2.68a2 2 0 0 1-.45 2.11L8.1 9.7a16 16 0 0 0 6.2 6.2l1.19-1.19a2 2 0 0 1 2.11-.45c.86.3 1.76.51 2.68.63A2 2 0 0 1 22 16.92Z" />
+            </svg>
+          </span>
+
+          <span>{t.label}</span>
+        </span>
       </button>
 
-      {open && (
-        <div className={styles.overlay} onClick={() => setOpen(false)}>
-          <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-            <button className={styles.close} onClick={() => setOpen(false)}>
+      {open ? (
+        <div className={styles.backdrop} onClick={() => setOpen(false)}>
+          <div className={styles.modal} onClick={(event) => event.stopPropagation()}>
+            <button
+              type="button"
+              className={styles.close}
+              onClick={() => setOpen(false)}
+              aria-label="Cerrar"
+            >
               ×
             </button>
 
-            <div className={styles.modalHeader}>
-              <div className={styles.modalIcon}>✆</div>
-              <div>
-                <h3>Agende una llamada</h3>
-                <p>Para un asesoramiento personalizado</p>
-              </div>
-            </div>
+            <span className={styles.modalEyebrow}>{t.label}</span>
+            <h2>{locale === "en" ? "Commercial assistance" : locale === "zh" ? "商务咨询" : "Asesoría comercial"}</h2>
+            <p>
+              {locale === "en"
+                ? "Leave your details and our team will contact you."
+                : locale === "zh"
+                  ? "留下您的信息，我们的团队会与您联系。"
+                  : "Deje sus datos y nuestro equipo comercial se comunicará con usted."}
+            </p>
 
-            <form className={styles.form}>
-              <div className={styles.grid}>
-                <label>
-                  <span>Fecha:</span>
-                  <input type="date" required />
-                </label>
-
-                <label>
-                  <span>Hora:</span>
-                  <input type="time" required />
-                </label>
-              </div>
-
-              <label>
-                <span>Nombre:</span>
-                <input type="text" required />
-              </label>
-
-              <label>
-                <span>Empresa:</span>
-                <input type="text" />
-              </label>
-
-              <div className={styles.grid}>
-                <label>
-                  <span>Teléfono:</span>
-                  <input type="tel" required />
-                </label>
-
-                <label>
-                  <span>Email:</span>
-                  <input type="email" required />
-                </label>
-              </div>
-
-              <label>
-                <span>País:</span>
-                <select defaultValue="" required>
-                  <option value="" disabled>
-                    Seleccionar país
-                  </option>
-                  {countries.map((country) => (
-                    <option key={country} value={country}>
-                      {country}
-                    </option>
-                  ))}
-                </select>
-              </label>
-
-              <label>
-                <span>Breve Descripción:</span>
-                <textarea rows={4} />
-              </label>
-
-              <button type="submit">Reservar cita de llamada</button>
-            </form>
+            <a href="/contacto" className={styles.modalCta}>
+              {t.label}
+            </a>
           </div>
         </div>
-      )}
+      ) : null}
     </>
   );
 }

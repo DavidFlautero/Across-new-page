@@ -81,3 +81,27 @@ main {
   pointer-events: none;
 }
 
+
+/* === FIX GLOBAL MOBILE OVERFLOW === */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* === FIX GLOBAL MOBILE OVERFLOW === */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+

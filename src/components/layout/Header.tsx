@@ -11,10 +11,6 @@ const LOCALE_KEY = "across-locale";
 const PRIVATE_AREA_URL =
   "https://id.factorialhr.com/login?&return_to=https%3A%2F%2Fapp.factorialhr.com%2F";
 
-const COMPLAINTS_URL = "https://acrosslogistics.factorialhr.com/complaints";
-const CAREERS_URL =
-  "https://hubspot.acrosslogistics.com/work-with-us?_gl=1*4r16p5*_ga*MTc2Mjc1OTc4MS4xNzgwMTM5MzAz*_ga_5YSHEDWDMT*czE3ODAyMzAxNDUkbzEwJGcxJHQxNzgwMjMwMTQ5JGo1NiRsMCRoMA..";
-
 const services: [string, string][] = [
   ["/servicios/transporte-aereo", "Transporte Aéreo"],
   ["/servicios/transporte-maritimo", "Transporte Marítimo"],
@@ -30,15 +26,10 @@ const sectors: [string, string][] = [
   ["/sectores#energias-renovables", "Energías Renovables"],
   ["/sectores#automocion", "Automoción"],
   ["/sectores#tecnologico", "Tecnológico"],
-  ["/sectores#farmaceutico-sanitario", "Farmacéutico & Sanitario"],
-  ["/sectores#consumo-distribucion", "Consumo & Distribución"],
-  ["/sectores#quimico", "Químico"],
 ];
 
 const resources: [string, string][] = [
   ["/recursos", "Recursos"],
-  ["/recursos#faq", "FAQ"],
-  ["/recursos#blog", "Blog"],
   ["/cotizacion", "Cotización Express"],
   ["/contacto", "Contacto"],
 ];
@@ -61,32 +52,12 @@ export default function Header() {
 
   const t = acrossCopy[locale].nav;
 
-  const companyLinks = [
-    { href: "/empresa/quienes-somos", label: t.who },
-    { href: "/empresa/oficinas", label: t.offices },
-    { href: "/empresa/sostenibilidad", label: t.sustainability },
-    { href: COMPLAINTS_URL, label: t.complaints, external: true },
-    { href: CAREERS_URL, label: t.careers, external: true },
-  ];
-
-  const renderLinks = (
-    items: Array<[string, string] | { href: string; label: string; external?: boolean }>
-  ) =>
-    items.map((item) => {
-      const href = Array.isArray(item) ? item[0] : item.href;
-      const label = Array.isArray(item) ? item[1] : item.label;
-      const external = !Array.isArray(item) && item.external;
-
-      return external ? (
-        <a key={href} href={href} target="_blank" rel="noopener noreferrer">
-          {label}
-        </a>
-      ) : (
-        <Link key={href} href={href}>
-          {label}
-        </Link>
-      );
-    });
+  const renderLinks = (items: [string, string][]) =>
+    items.map(([href, label]) => (
+      <Link key={href} href={href}>
+        {label}
+      </Link>
+    ));
 
   return (
     <header className={styles.wrapper}>
@@ -111,58 +82,22 @@ export default function Header() {
 
           <Link href="/">{t.home}</Link>
 
-          <div
-            className={styles.dropdown}
-            onMouseEnter={() => setOpenMenu("services")}
-            onMouseLeave={() => setOpenMenu(null)}
-          >
-            <button type="button" className={styles.dropdownTrigger}>
-              {t.services} <span>▾</span>
-            </button>
+          <div className={styles.dropdown} onMouseEnter={() => setOpenMenu("services")} onMouseLeave={() => setOpenMenu(null)}>
+            <button type="button" className={styles.dropdownTrigger}>{t.services} <span>▾</span></button>
             <div className={`${styles.dropdownMenu} ${openMenu === "services" ? styles.dropdownVisible : ""}`}>
               {renderLinks(services)}
             </div>
           </div>
 
-          <div
-            className={styles.dropdown}
-            onMouseEnter={() => setOpenMenu("sectors")}
-            onMouseLeave={() => setOpenMenu(null)}
-          >
-            <button type="button" className={styles.dropdownTrigger}>
-              {t.sectors} <span>▾</span>
-            </button>
+          <div className={styles.dropdown} onMouseEnter={() => setOpenMenu("sectors")} onMouseLeave={() => setOpenMenu(null)}>
+            <button type="button" className={styles.dropdownTrigger}>{t.sectors} <span>▾</span></button>
             <div className={`${styles.dropdownMenu} ${openMenu === "sectors" ? styles.dropdownVisible : ""}`}>
               {renderLinks(sectors)}
             </div>
           </div>
 
-          <div
-            className={styles.dropdown}
-            onMouseEnter={() => setOpenMenu("company")}
-            onMouseLeave={() => setOpenMenu(null)}
-          >
-            <button type="button" className={styles.dropdownTrigger}>
-              {t.company} <span>▾</span>
-            </button>
-            <div className={`${styles.dropdownMenu} ${openMenu === "company" ? styles.dropdownVisible : ""}`}>
-              {renderLinks(companyLinks)}
-            </div>
-          </div>
-
-          <div
-            className={styles.dropdown}
-            onMouseEnter={() => setOpenMenu("resources")}
-            onMouseLeave={() => setOpenMenu(null)}
-          >
-            <button type="button" className={styles.dropdownTrigger}>
-              {t.resources} <span>▾</span>
-            </button>
-            <div className={`${styles.dropdownMenu} ${openMenu === "resources" ? styles.dropdownVisible : ""}`}>
-              {renderLinks(resources)}
-            </div>
-          </div>
-
+          <Link href="/empresa">{t.company}</Link>
+          <Link href="/recursos">{t.resources}</Link>
           <Link href="/contacto">{t.contact}</Link>
         </nav>
 
@@ -180,23 +115,58 @@ export default function Header() {
           ))}
         </div>
 
+        <div className={styles.mobileLang}>
+          {(Object.keys(locales) as Locale[]).map((key) => (
+            <button
+              key={key}
+              type="button"
+              className={key === locale ? styles.languageActive : ""}
+              onClick={() => changeLocale(key)}
+            >
+              <span>{locales[key].flag}</span>
+            </button>
+          ))}
+        </div>
+
         <button
           type="button"
           className={styles.mobileButton}
-          onClick={() => setMobileOpen(!mobileOpen)}
+          onClick={() => setMobileOpen(true)}
+          aria-label="Abrir menú"
         >
           ☰
         </button>
       </div>
 
-      <div className={`${styles.mobileMenu} ${mobileOpen ? styles.mobileVisible : ""}`}>
-        <Link href="/">{t.home}</Link>
-        <Link href="/servicios">{t.services}</Link>
-        <Link href="/sectores">{t.sectors}</Link>
-        <Link href="/empresa">{t.company}</Link>
-        <Link href="/recursos">{t.resources}</Link>
-        <Link href="/contacto">{t.contact}</Link>
-      </div>
+      <div
+        className={`${styles.mobileBackdrop} ${mobileOpen ? styles.mobileBackdropVisible : ""}`}
+        onClick={() => setMobileOpen(false)}
+      />
+
+      <aside className={`${styles.mobilePanel} ${mobileOpen ? styles.mobilePanelVisible : ""}`}>
+        <button type="button" className={styles.closeButton} onClick={() => setMobileOpen(false)}>
+          ×
+        </button>
+
+        <Image
+          src="/images/logo-ACROSS-Blanco.svg"
+          alt="Across Logistics"
+          width={190}
+          height={58}
+          className={styles.mobileLogo}
+        />
+
+        <nav className={styles.mobileLinks}>
+          <Link href="/" onClick={() => setMobileOpen(false)}>{t.home}</Link>
+          <Link href="/tracking" onClick={() => setMobileOpen(false)}>{t.tracking}</Link>
+          <Link href="/servicios" onClick={() => setMobileOpen(false)}>{t.services}</Link>
+          <Link href="/sectores" onClick={() => setMobileOpen(false)}>{t.sectors}</Link>
+          <Link href="/empresa" onClick={() => setMobileOpen(false)}>{t.company}</Link>
+          <Link href="/recursos" onClick={() => setMobileOpen(false)}>{t.resources}</Link>
+          <Link href="/contacto" onClick={() => setMobileOpen(false)}>{t.contact}</Link>
+          <a href={PRIVATE_AREA_URL} target="_blank" rel="noopener noreferrer">{t.private}</a>
+        </nav>
+      </aside>
     </header>
   );
 }
