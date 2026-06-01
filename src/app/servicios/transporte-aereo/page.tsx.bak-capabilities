@@ -3,7 +3,7 @@ import Footer from "@/components/layout/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
-import styles from "../_shared/ServicePage.module.css";
+import styles from "./TransporteAereo.module.css";
 
 export default function TransporteAereoPage() {
   return (
@@ -104,45 +104,6 @@ export default function TransporteAereoPage() {
                   fill
                   sizes="(max-width: 900px) 100vw, 48vw"
                   className={styles.servicesImage}
-                />
-              </div>
-            </section>
-
-            <section className={styles.capabilities}>
-              <div className={styles.capabilitiesContent}>
-                <span>CAPACIDADES OPERATIVAS</span>
-                <h2>Coordinación aérea para cargas críticas, urgentes y sensibles.</h2>
-                <p>
-                  Diseñamos operaciones con control documental, trazabilidad y coordinación internacional
-                  para responder cuando el tiempo, la seguridad y la precisión son decisivos.
-                </p>
-
-                <div className={styles.capabilityStats}>
-                  <div>
-                    <strong>IATA</strong>
-                    <small>Operación aérea especializada</small>
-                  </div>
-                  <div>
-                    <strong>24/7</strong>
-                    <small>Time critical logistics</small>
-                  </div>
-                  <div>
-                    <strong>DGR</strong>
-                    <small>Carga peligrosa y sensible</small>
-                  </div>
-                  <div>
-                    <strong>Global</strong>
-                    <small>Coordinación internacional</small>
-                  </div>
-                </div>
-              </div>
-
-              <div className={styles.capabilitiesImage}>
-                <Image
-                  src="/images/cargaaerea.png"
-                  alt="Capacidades operativas de transporte aéreo"
-                  fill
-                  sizes="(max-width: 900px) 100vw, 42vw"
                 />
               </div>
             </section>
