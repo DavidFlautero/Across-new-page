@@ -15,7 +15,7 @@ const COMPLAINTS_URL = "https://acrosslogistics.factorialhr.com/complaints";
 const CAREERS_URL =
   "https://hubspot.acrosslogistics.com/work-with-us?_gl=1*4r16p5*_ga*MTc2Mjc1OTc4MS4xNzgwMTM5MzAz*_ga_5YSHEDWDMT*czE3ODAyMzAxNDUkbzEwJGcxJHQxNzgwMjMwMTQ5JGo1NiRsMCRoMA..";
 
-const services = [
+const services: [string, string][] = [
   ["/servicios/transporte-aereo", "Transporte Aéreo"],
   ["/servicios/transporte-maritimo", "Transporte Marítimo"],
   ["/servicios/cargas-especiales", "Cargas Especiales"],
@@ -25,7 +25,7 @@ const services = [
   ["/servicios/e-commerce", "e-Commerce"],
 ];
 
-const sectors = [
+const sectors: [string, string][] = [
   ["/sectores#alimentacion-bebidas", "Alimentación & Bebidas"],
   ["/sectores#energias-renovables", "Energías Renovables"],
   ["/sectores#automocion", "Automoción"],
@@ -35,7 +35,7 @@ const sectors = [
   ["/sectores#quimico", "Químico"],
 ];
 
-const resources = [
+const resources: [string, string][] = [
   ["/recursos", "Recursos"],
   ["/recursos#faq", "FAQ"],
   ["/recursos#blog", "Blog"],
