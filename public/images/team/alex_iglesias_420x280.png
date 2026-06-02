@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+            <head>
+            <meta http-equiv='refresh' content='3'>
+            <title>acrosslogistics.com</title>
+            </head>
+            <body>
+            <style type='text/css'>
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+            }
+            body {
+              padding: 30px;
+              text-align: center;
+            }
+            .loading {
+              font-size: 80px;
+            }
+            .loading span {
+              font-size: 80px;
+              animation-name: blink;
+              animation-duration: 1.4s;
+              animation-iteration-count: infinite;
+              animation-fill-mode: both;
+            }
+            .loading span:nth-child(2) {
+              animation-delay: .2s;
+            }
+            .loading span:nth-child(3) {
+              animation-delay: .4s;
+            }
+            @keyframes blink {
+              0% {
+                opacity: .1;
+              }
+              20% {
+                opacity: 1;
+              }
+              100% {
+                opacity: .0;
+              }
+            }
+            </style>
+            <font family='Arial'><center><br><p class='loading'><span>.</span><span>.</span><span>.</span></p></center>
+            <script type='text/javascript'> document.cookie = 'dhd2=e6efb1098b59a1868ca228d150629e10; max-age=86400; path=/; domain=acrosslogistics.com'
+            </script>
+            </body>

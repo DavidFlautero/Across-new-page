@@ -1,0 +1,22 @@
+133:                        <li><a href="https://hubspot.acrosslogistics.com/work-with-us" class="nav-link">Trabaja con nosotros</a></li>
+253:    function submit_with_validations(token) {
+254:        var form = document.getElementById('contact-form');
+255:        if (form.checkValidity()) {
+256:            form.submit();
+259:            form.reportValidity();
+270:                    <strong>¿Necesita más información?</strong><br>
+296:            <div class="form-container p-3 py-2-md px-1-md">
+297:                            <script charset="utf-8" type="text/javascript"3. src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+299:                hbspt.forms.create({
+301:                    portalId: "143534810",
+302:                    formId: "42649111-7518-40b8-ab3d-764b390763d5"
+329:                                <a href="https://hubspot.acrosslogistics.com/es/logistica-barcelona">
+345:                            <a href="https://hubspot.acrosslogistics.com/es/logistica-madrid">
+362:                            <a href="https://hubspot.acrosslogistics.com/es/logistica-valencia">
+379:                            <a href="https://hubspot.acrosslogistics.com/es/logistica-gijon">
+715:        <div class="column-content">© Copyright 2018 - Across Logistics            <!-- Inicio de fragmento de código de HubSpot -->
+728:            <!-- Fin de fragmento de código de HubSpot --></div>
+731:        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PNG7S6X"
+732:                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+752:        <!-- Start of HubSpot Embed Code -->
+754:        <!-- End of HubSpot Embed Code -->

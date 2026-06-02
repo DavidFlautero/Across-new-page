@@ -11,25 +11,89 @@ const LOCALE_KEY = "across-locale";
 const PRIVATE_AREA_URL =
   "https://id.factorialhr.com/login?&return_to=https%3A%2F%2Fapp.factorialhr.com%2F";
 
-const services: [string, string][] = [
-  ["/servicios/transporte-aereo", "Transporte Aéreo"],
-  ["/servicios/transporte-maritimo", "Transporte Marítimo"],
-  ["/servicios/cargas-especiales", "Cargas Especiales"],
-  ["/servicios/temperatura-controlada", "Temperatura Controlada"],
-  ["/servicios/almacen-distribucion", "Almacén y Distribución"],
-  ["/servicios/aduanas", "Servicios de Aduanas"],
-  ["/servicios/e-commerce", "e-Commerce"],
-];
-
-const sectors: [string, string][] = [
-  ["/sectores/alimentacion-bebidas", "Alimentación & Bebidas"],
-  ["/sectores/energias-renovables", "Energías Renovables"],
-  ["/sectores/automocion", "Automoción"],
-  ["/sectores/tecnologico", "Tecnológico"],
-  ["/sectores/farmaceutico-sanitario", "Farmacéutico & Sanitario"],
-  ["/sectores/consumo-distribucion", "Consumo & Distribución"],
-  ["/sectores/quimico", "Químico"],
-];
+const menuCopy = {
+  es: {
+    services: [
+      ["/servicios/transporte-aereo", "Transporte Aéreo"],
+      ["/servicios/transporte-maritimo", "Transporte Marítimo"],
+      ["/servicios/cargas-especiales", "Cargas Especiales"],
+      ["/servicios/temperatura-controlada", "Carga de Temperatura Controlada"],
+      ["/servicios/almacen-distribucion", "Almacén y Distribución"],
+      ["/servicios/aduanas", "Servicios de Aduanas"],
+      ["/servicios/e-commerce", "e-Commerce"],
+    ],
+    sectors: [
+      ["/sectores/alimentacion-bebidas", "Alimentación & Bebidas"],
+      ["/sectores/energias-renovables", "Energías Renovables"],
+      ["/sectores/automocion", "Automoción"],
+      ["/sectores/tecnologico", "Tecnológico"],
+      ["/sectores/farmaceutico-sanitario", "Farmacéutico & Sanitario"],
+      ["/sectores/consumo-distribucion", "Consumo & Distribución"],
+      ["/sectores/quimico", "Químico"],
+    ],
+    company: [
+      ["/empresa/quienes-somos", "Quiénes somos"],
+      ["/empresa/oficinas", "Nuestras oficinas"],
+      ["/empresa/sostenibilidad", "Sostenibilidad"],
+      ["https://acrosslogistics.factorialhr.com/complaints", "Quejas y denuncias"],
+      ["https://hubspot.acrosslogistics.com/work-with-us?_gl=1*4r16p5*_ga*MTc2Mjc1OTc4MS4xNzgwMTM5MzAz*_ga_5YSHEDWDMT*czE3ODAyMzAxNDUkbzEwJGcxJHQxNzgwMjMwMTQ5JGo1NiRsMCRoMA..", "Trabaja con nosotros"],
+    ],
+  },
+  en: {
+    services: [
+      ["/servicios/transporte-aereo", "Air Freight"],
+      ["/servicios/transporte-maritimo", "Ocean Freight"],
+      ["/servicios/cargas-especiales", "Special Cargo"],
+      ["/servicios/temperatura-controlada", "Temperature-Controlled Cargo"],
+      ["/servicios/almacen-distribucion", "Warehousing & Distribution"],
+      ["/servicios/aduanas", "Customs Services"],
+      ["/servicios/e-commerce", "e-Commerce"],
+    ],
+    sectors: [
+      ["/sectores/alimentacion-bebidas", "Food & Beverage"],
+      ["/sectores/energias-renovables", "Renewable Energy"],
+      ["/sectores/automocion", "Automotive"],
+      ["/sectores/tecnologico", "Technology"],
+      ["/sectores/farmaceutico-sanitario", "Pharma & Healthcare"],
+      ["/sectores/consumo-distribucion", "Consumer & Distribution"],
+      ["/sectores/quimico", "Chemical"],
+    ],
+    company: [
+      ["/empresa/quienes-somos", "About us"],
+      ["/empresa/oficinas", "Our offices"],
+      ["/empresa/sostenibilidad", "Sustainability"],
+      ["https://acrosslogistics.factorialhr.com/complaints", "Complaints channel"],
+      ["https://hubspot.acrosslogistics.com/work-with-us?_gl=1*4r16p5*_ga*MTc2Mjc1OTc4MS4xNzgwMTM5MzAz*_ga_5YSHEDWDMT*czE3ODAyMzAxNDUkbzEwJGcxJHQxNzgwMjMwMTQ5JGo1NiRsMCRoMA..", "Work with us"],
+    ],
+  },
+  zh: {
+    services: [
+      ["/servicios/transporte-aereo", "空运"],
+      ["/servicios/transporte-maritimo", "海运"],
+      ["/servicios/cargas-especiales", "特殊货运"],
+      ["/servicios/temperatura-controlada", "温控货运"],
+      ["/servicios/almacen-distribucion", "仓储与配送"],
+      ["/servicios/aduanas", "海关服务"],
+      ["/servicios/e-commerce", "电商物流"],
+    ],
+    sectors: [
+      ["/sectores/alimentacion-bebidas", "食品饮料"],
+      ["/sectores/energias-renovables", "可再生能源"],
+      ["/sectores/automocion", "汽车行业"],
+      ["/sectores/tecnologico", "科技行业"],
+      ["/sectores/farmaceutico-sanitario", "医药与医疗"],
+      ["/sectores/consumo-distribucion", "消费与配送"],
+      ["/sectores/quimico", "化工行业"],
+    ],
+    company: [
+      ["/empresa/quienes-somos", "关于我们"],
+      ["/empresa/oficinas", "我们的办公室"],
+      ["/empresa/sostenibilidad", "可持续发展"],
+      ["https://acrosslogistics.factorialhr.com/complaints", "投诉渠道"],
+      ["https://hubspot.acrosslogistics.com/work-with-us?_gl=1*4r16p5*_ga*MTc2Mjc1OTc4MS4xNzgwMTM5MzAz*_ga_5YSHEDWDMT*czE3ODAyMzAxNDUkbzEwJGcxJHQxNzgwMjMwMTQ5JGo1NiRsMCRoMA..", "加入我们"],
+    ],
+  },
+} as const;
 
 const company: [string, string][] = [
   ["/empresa/quienes-somos", "Quiénes somos"],
@@ -40,9 +104,8 @@ const company: [string, string][] = [
 ];
 
 const resources: [string, string][] = [
-  ["/recursos", "Recursos"],
-  ["/cotizacion", "Cotización Express"],
-  ["/contacto", "Contacto"],
+  ["/recursos", "FAQ & Recursos"],
+  ["/blog", "Blog"],
 ];
 
 export default function Header() {
@@ -62,6 +125,7 @@ export default function Header() {
   }
 
   const t = acrossCopy[locale].nav;
+  const menu = menuCopy[locale];
 
   const renderLinks = (items: [string, string][]) =>
     items.map(([href, label]) => {
@@ -108,14 +172,14 @@ export default function Header() {
           <div className={styles.dropdown} onMouseEnter={() => setOpenMenu("services")} onMouseLeave={() => setOpenMenu(null)}>
             <button type="button" className={styles.dropdownTrigger}>{t.services} <span>▾</span></button>
             <div className={`${styles.dropdownMenu} ${openMenu === "services" ? styles.dropdownVisible : ""}`}>
-              {renderLinks(services)}
+              {renderLinks(menu.services as [string, string][])}
             </div>
           </div>
 
           <div className={styles.dropdown} onMouseEnter={() => setOpenMenu("sectors")} onMouseLeave={() => setOpenMenu(null)}>
             <button type="button" className={styles.dropdownTrigger}>{t.sectors} <span>▾</span></button>
             <div className={`${styles.dropdownMenu} ${openMenu === "sectors" ? styles.dropdownVisible : ""}`}>
-              {renderLinks(sectors)}
+              {renderLinks(menu.sectors as [string, string][])}
             </div>
           </div>
 
@@ -123,10 +187,31 @@ export default function Header() {
             <button type="button" className={styles.dropdownTrigger}>{t.company} <span>▾</span></button>
 
             <div className={`${styles.dropdownMenu} ${openMenu === "company" ? styles.dropdownVisible : ""}`}>
-              {renderLinks(company)}
+              {renderLinks(menu.company as [string, string][])}
             </div>
           </div>
-          <Link href="/recursos">{t.resources}</Link>
+          <div
+            className={styles.dropdown}
+            onMouseEnter={() => setOpenMenu("resources")}
+            onMouseLeave={() => setOpenMenu(null)}
+          >
+            <button type="button" className={styles.dropdownTrigger}>
+              {t.resources} <span>▾</span>
+            </button>
+
+            <div
+              className={`${styles.dropdownMenu} ${
+                openMenu === "resources" ? styles.dropdownVisible : ""
+              }`}
+            >
+              {resources.map(([href, label]) => (
+                <Link key={href} href={href}>
+                  {label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
           <Link href="/contacto">{t.contact}</Link>
         </nav>
 

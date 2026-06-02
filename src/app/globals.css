@@ -105,3 +105,179 @@ body {
   box-sizing: border-box;
 }
 
+
+/* FIX CONTACTO: oficinas sobre fondo marfil, no negro */
+main:has(.contact-office-grid) {
+  background: #f4f1eb !important;
+}
+
+main:has(.contact-office-grid) section {
+  background: #f4f1eb !important;
+  background-color: #f4f1eb !important;
+  background-image: none !important;
+}
+
+.contact-office-grid {
+  background: #f4f1eb !important;
+  background-color: #f4f1eb !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  padding-top: 18px !important;
+}
+
+.contact-office-grid::before,
+.contact-office-grid::after {
+  display: none !important;
+  content: none !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.contact-office-grid > a {
+  background: #111 !important;
+  border: 1px solid rgba(0,0,0,.08) !important;
+  box-shadow: 0 22px 60px rgba(0,0,0,.14) !important;
+}
+
+.contact-office-grid [class*="cardOverlay"] {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.04) 0%,
+      rgba(0,0,0,.16) 45%,
+      rgba(0,0,0,.74) 100%
+    ) !important;
+}
+
+/* FIX CONTACTO: oficinas sobre fondo marfil, no negro */
+main:has(.contact-office-grid) {
+  background: #f4f1eb !important;
+}
+
+main:has(.contact-office-grid) section {
+  background: #f4f1eb !important;
+  background-color: #f4f1eb !important;
+  background-image: none !important;
+}
+
+.contact-office-grid {
+  background: #f4f1eb !important;
+  background-color: #f4f1eb !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  padding-top: 18px !important;
+}
+
+.contact-office-grid::before,
+.contact-office-grid::after {
+  display: none !important;
+  content: none !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.contact-office-grid > a {
+  background: #111 !important;
+  border: 1px solid rgba(0,0,0,.08) !important;
+  box-shadow: 0 22px 60px rgba(0,0,0,.14) !important;
+}
+
+.contact-office-grid [class*="cardOverlay"] {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.04) 0%,
+      rgba(0,0,0,.16) 45%,
+      rgba(0,0,0,.74) 100%
+    ) !important;
+}
+
+/* FIX CONTACTO: oficinas sobre fondo marfil, no negro */
+main:has(.contact-office-grid) {
+  background: #f4f1eb !important;
+}
+
+main:has(.contact-office-grid) section {
+  background: #f4f1eb !important;
+  background-color: #f4f1eb !important;
+  background-image: none !important;
+}
+
+.contact-office-grid {
+  background: #f4f1eb !important;
+  background-color: #f4f1eb !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  padding-top: 18px !important;
+}
+
+.contact-office-grid::before,
+.contact-office-grid::after {
+  display: none !important;
+  content: none !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.contact-office-grid > a {
+  background: #111 !important;
+  border: 1px solid rgba(0,0,0,.08) !important;
+  box-shadow: 0 22px 60px rgba(0,0,0,.14) !important;
+}
+
+.contact-office-grid [class*="cardOverlay"] {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.04) 0%,
+      rgba(0,0,0,.16) 45%,
+      rgba(0,0,0,.74) 100%
+    ) !important;
+}
+
+/* FIX CONTACTO: oficinas sobre fondo marfil, no negro */
+main:has(.contact-office-grid) {
+  background: #f4f1eb !important;
+}
+
+main:has(.contact-office-grid) section {
+  background: #f4f1eb !important;
+  background-color: #f4f1eb !important;
+  background-image: none !important;
+}
+
+.contact-office-grid {
+  background: #f4f1eb !important;
+  background-color: #f4f1eb !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  padding-top: 18px !important;
+}
+
+.contact-office-grid::before,
+.contact-office-grid::after {
+  display: none !important;
+  content: none !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.contact-office-grid > a {
+  background: #111 !important;
+  border: 1px solid rgba(0,0,0,.08) !important;
+  box-shadow: 0 22px 60px rgba(0,0,0,.14) !important;
+}
+
+.contact-office-grid [class*="cardOverlay"] {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.04) 0%,
+      rgba(0,0,0,.16) 45%,
+      rgba(0,0,0,.74) 100%
+    ) !important;
+}
