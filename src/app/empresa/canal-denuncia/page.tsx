@@ -10,7 +10,7 @@ export default function Page() {
       fontSize:"48px",
       fontWeight:"700"
     }}>
-      quienes-somos
+      canal-denuncia
     </main>
   );
 }

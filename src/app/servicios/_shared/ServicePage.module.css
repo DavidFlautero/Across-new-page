@@ -1005,3 +1005,116 @@
     font-size: .96rem;
   }
 }
+
+.servicesPanelReverse {
+  margin-top: 5rem;
+}
+
+@media (max-width: 900px) {
+  .servicesPanelReverse {
+    margin-top: 2.5rem;
+  }
+}
+
+.servicesPanel {
+  align-items: center;
+  gap: clamp(2rem, 4vw, 5rem);
+  margin-top: 5rem;
+}
+
+.servicesImageWrap {
+  position: relative;
+  min-height: 520px;
+  border-radius: 2rem;
+  overflow: hidden;
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.04),
+      rgba(255,255,255,.01)
+    );
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.28),
+    0 0 0 1px rgba(255,255,255,.04),
+    0 0 80px rgba(120,0,30,.16);
+
+  isolation: isolate;
+}
+
+.servicesImageWrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.06) 0%,
+      rgba(0,0,0,.32) 100%
+    );
+
+  pointer-events: none;
+}
+
+.servicesImageWrap::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 2px;
+  z-index: 3;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(193,25,62,.95),
+      transparent
+    );
+
+  opacity: .9;
+}
+
+.servicesImage {
+  object-fit: cover;
+  transition:
+    transform .9s ease,
+    filter .6s ease;
+}
+
+.servicesImageWrap:hover .servicesImage {
+  transform: scale(1.04);
+  filter: brightness(1.05);
+}
+
+.servicesPanelReverse {
+  margin-top: 4rem;
+}
+
+@media (max-width: 1200px) {
+  .servicesImageWrap {
+    min-height: 460px;
+  }
+}
+
+@media (max-width: 900px) {
+  .servicesImageWrap {
+    min-height: 360px;
+    border-radius: 1.5rem;
+  }
+
+  .servicesPanel,
+  .servicesPanelReverse {
+    margin-top: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .servicesImageWrap {
+    min-height: 300px;
+  }
+}

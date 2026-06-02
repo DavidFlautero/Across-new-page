@@ -22,10 +22,21 @@ const services: [string, string][] = [
 ];
 
 const sectors: [string, string][] = [
-  ["/sectores#alimentacion-bebidas", "Alimentación & Bebidas"],
-  ["/sectores#energias-renovables", "Energías Renovables"],
-  ["/sectores#automocion", "Automoción"],
-  ["/sectores#tecnologico", "Tecnológico"],
+  ["/sectores/alimentacion-bebidas", "Alimentación & Bebidas"],
+  ["/sectores/energias-renovables", "Energías Renovables"],
+  ["/sectores/automocion", "Automoción"],
+  ["/sectores/tecnologico", "Tecnológico"],
+  ["/sectores/farmaceutico-sanitario", "Farmacéutico & Sanitario"],
+  ["/sectores/consumo-distribucion", "Consumo & Distribución"],
+  ["/sectores/quimico", "Químico"],
+];
+
+const company: [string, string][] = [
+  ["/empresa/quienes-somos", "Quiénes somos"],
+  ["/empresa/oficinas", "Nuestras oficinas"],
+  ["/empresa/sostenibilidad", "Sostenibilidad"],
+  ["https://acrosslogistics.factorialhr.com/complaints", "Quejas y denuncias"],
+  ["https://hubspot.acrosslogistics.com/work-with-us?_gl=1*4r16p5*_ga*MTc2Mjc1OTc4MS4xNzgwMTM5MzAz*_ga_5YSHEDWDMT*czE3ODAyMzAxNDUkbzEwJGcxJHQxNzgwMjMwMTQ5JGo1NiRsMCRoMA..", "Trabaja con nosotros"],
 ];
 
 const resources: [string, string][] = [
@@ -53,11 +64,23 @@ export default function Header() {
   const t = acrossCopy[locale].nav;
 
   const renderLinks = (items: [string, string][]) =>
-    items.map(([href, label]) => (
-      <Link key={href} href={href}>
-        {label}
-      </Link>
-    ));
+    items.map(([href, label]) => {
+      const external = href.startsWith("http");
+
+      if (external) {
+        return (
+          <a key={href} href={href} target="_blank" rel="noopener noreferrer">
+            {label}
+          </a>
+        );
+      }
+
+      return (
+        <Link key={href} href={href}>
+          {label}
+        </Link>
+      );
+    });
 
   return (
     <header className={styles.wrapper}>
@@ -96,7 +119,13 @@ export default function Header() {
             </div>
           </div>
 
-          <Link href="/empresa">{t.company}</Link>
+          <div className={styles.dropdown} onMouseEnter={() => setOpenMenu("company")} onMouseLeave={() => setOpenMenu(null)}>
+            <button type="button" className={styles.dropdownTrigger}>{t.company} <span>▾</span></button>
+
+            <div className={`${styles.dropdownMenu} ${openMenu === "company" ? styles.dropdownVisible : ""}`}>
+              {renderLinks(company)}
+            </div>
+          </div>
           <Link href="/recursos">{t.resources}</Link>
           <Link href="/contacto">{t.contact}</Link>
         </nav>

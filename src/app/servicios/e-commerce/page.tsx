@@ -1,184 +1,245 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import Certifications from "@/components/sections/Certifications";
 import Image from "next/image";
 import Link from "next/link";
-import Certifications from "@/components/sections/Certifications";
 import styles from "../_shared/ServicePage.module.css";
 
-export default function TransporteAereoPage() {
+type Locale = "es" | "en" | "zh";
+
+const copy = {
+  es: {
+    eyebrow: "E-COMMERCE LOGISTICS",
+    heroTitle: "Logística y almacén para e-commerce con gestión total.",
+    heroText:
+      "Conectamos almacenamiento, stock, pedidos, preparación y entrega para que su tienda online venda más rápido, reduzca costes y opere sin fricción.",
+    quote: "Solicitar cotización",
+    specialist: "Hablar con un especialista",
+    blockEyebrow: "OPERACIÓN E-COMMERCE",
+    blockTitle: "Deje en nuestras manos la gestión del stock y la entrega.",
+    blockText:
+      "Nos conectamos con su e-commerce y su ERP para gestionar pedidos de forma rápida y eficiente, coordinando inventario, preparación, distribución y última milla desde un mismo sistema operativo.",
+    servicesIntro:
+      "Escalamos su operación digital con tecnología, integración entre sistemas y procesos logísticos diseñados para vender mejor.",
+    servicesTitle: "Nuestros servicios de gestión para e-Commerce.",
+    ctaEyebrow: "Cotización express",
+    ctaTitle: "Construyamos una operación e-commerce más rápida y rentable.",
+    ctaText:
+      "Analizamos plataforma, volumen de pedidos, stock, destino y tiempos de entrega para diseñar una solución clara, integrada y escalable.",
+    ctaButton: "Solicitar propuesta →",
+    services: [
+      [
+        "Software de gestión de almacenes (SGA)",
+        "Tecnología para controlar, coordinar y optimizar movimientos, procesos y operativas de almacén.",
+      ],
+      [
+        "Integración perfecta entre sistemas",
+        "Conexión en tiempo real con CMS como Shopify o WooCommerce, ERP, transportistas y sistemas clave del negocio.",
+      ],
+      [
+        "Gestión 360 de su negocio e-Commerce",
+        "Coordinación del negocio desde origen, pedidos, fábrica del proveedor, almacenes y distribución final.",
+      ],
+      [
+        "Informes periódicos de KPI",
+        "Cuadros de mando para seguir indicadores clave, rendimiento operativo y evolución del negocio.",
+      ],
+      [
+        "Mejora continua de procesos",
+        "Análisis permanente para eliminar fricción, optimizar costes y reducir tiempos de preparación.",
+      ],
+      [
+        "Last Mile Delivery",
+        "Gestión de última milla para reducir costes y tiempos de entrega en España, Portugal y Europa Occidental.",
+      ],
+    ],
+  },
+  en: {
+    eyebrow: "E-COMMERCE LOGISTICS",
+    heroTitle: "E-commerce warehousing and logistics with full management.",
+    heroText:
+      "We connect storage, stock, orders, preparation and delivery so your online store can sell faster, reduce costs and operate without friction.",
+    quote: "Request quotation",
+    specialist: "Talk to a specialist",
+    blockEyebrow: "E-COMMERCE OPERATIONS",
+    blockTitle: "Leave stock management and delivery in our hands.",
+    blockText:
+      "We connect with your e-commerce and ERP to manage orders quickly and efficiently, coordinating inventory, preparation, distribution and last mile from one operating system.",
+    servicesIntro:
+      "We scale your digital operation with technology, system integration and logistics processes designed to help you sell better.",
+    servicesTitle: "Our e-commerce management services.",
+    ctaEyebrow: "Express quotation",
+    ctaTitle: "Let’s build a faster and more profitable e-commerce operation.",
+    ctaText:
+      "We analyze platform, order volume, stock, destination and delivery times to design a clear, integrated and scalable solution.",
+    ctaButton: "Request proposal →",
+    services: [
+      [
+        "Warehouse Management System (WMS)",
+        "Technology to control, coordinate and optimize warehouse movements, processes and operations.",
+      ],
+      [
+        "Seamless systems integration",
+        "Real-time connection with CMS platforms such as Shopify or WooCommerce, ERP, carriers and key business systems.",
+      ],
+      [
+        "360º e-commerce business management",
+        "Business coordination from origin, orders, supplier factory, warehouses and final distribution.",
+      ],
+      [
+        "Periodic KPI reports",
+        "Dashboards to monitor key indicators, operational performance and business evolution.",
+      ],
+      [
+        "Continuous process improvement",
+        "Permanent analysis to remove friction, optimize costs and reduce order preparation times.",
+      ],
+      [
+        "Last Mile Delivery",
+        "Last-mile management to reduce delivery costs and transit times in Spain, Portugal and Western Europe.",
+      ],
+    ],
+  },
+  zh: {
+    eyebrow: "电商物流",
+    heroTitle: "提供全流程管理的电商仓储与物流方案。",
+    heroText:
+      "我们连接仓储、库存、订单、备货与配送，帮助您的线上商店更快销售、降低成本并顺畅运营。",
+    quote: "申请报价",
+    specialist: "联系专家",
+    blockEyebrow: "电商运营",
+    blockTitle: "将库存管理与配送交给我们。",
+    blockText:
+      "我们可连接您的电商平台与 ERP，高效管理订单，并在同一运营体系下协调库存、备货、配送与最后一公里。",
+    servicesIntro:
+      "我们通过技术、系统集成与专业物流流程，帮助您的数字业务实现规模化增长。",
+    servicesTitle: "我们的电商管理服务。",
+    ctaEyebrow: "快速报价",
+    ctaTitle: "让我们打造更快、更高效的电商物流运营。",
+    ctaText:
+      "我们会分析平台、订单量、库存、目的地与交付时效，设计清晰、集成且可扩展的解决方案。",
+    ctaButton: "申请方案 →",
+    services: [
+      [
+        "仓库管理系统（WMS）",
+        "用于控制、协调与优化仓库移动、流程和运营的技术系统。",
+      ],
+      [
+        "系统无缝集成",
+        "与 Shopify、WooCommerce 等 CMS、ERP、承运商及关键业务系统实时连接。",
+      ],
+      [
+        "360° 电商业务管理",
+        "从源头、订单、供应商工厂、仓库到最终配送的业务协调。",
+      ],
+      [
+        "定期 KPI 报告",
+        "通过仪表盘监控关键指标、运营表现与业务发展。",
+      ],
+      [
+        "持续流程改进",
+        "持续分析流程，减少摩擦、优化成本并缩短订单准备时间。",
+      ],
+      [
+        "最后一公里配送",
+        "管理末端配送，降低西班牙、葡萄牙及西欧地区的配送成本与时间。",
+      ],
+    ],
+  },
+} as const;
+
+export default function EcommercePage() {
+  const [locale, setLocale] = useState<Locale>("es");
+
+  useEffect(() => {
+    const saved = window.localStorage.getItem("across-locale") as Locale | null;
+    if (saved && saved in copy) setLocale(saved);
+
+    const handler = (event: Event) => {
+      const next = (event as CustomEvent<Locale>).detail;
+      if (next && next in copy) setLocale(next);
+    };
+
+    window.addEventListener("across-locale-change", handler);
+    return () => window.removeEventListener("across-locale-change", handler);
+  }, []);
+
+  const t = copy[locale];
+
   return (
-    <div className="page-shell">
+    <div className={styles.page}>
       <Header />
 
-      <main className={styles.page}>
-        <section className={styles.hero}>
-          <Image
-            src="/images/hero/hero-empresas.png"
-            alt="Transporte aéreo Across Logistics"
-            fill
-            priority
-            sizes="100vw"
-            className={styles.heroImage}
-          />
+      <section className={styles.hero}>
+        <Image
+          src="/images/heroecommerce.png"
+          alt="Logística e-commerce"
+          fill
+          priority
+          className={styles.heroImage}
+          sizes="100vw"
+        />
 
-          <div className={styles.heroOverlay} />
+        <div className={styles.heroOverlay} />
 
-          <div className={styles.heroContent}>
-            <span>Transporte Aéreo</span>
+        <div className={styles.heroContent}>
+          <span>{t.eyebrow}</span>
+          <h1>{t.heroTitle}</h1>
+          <p>{t.heroText}</p>
 
-            <h1>Rápido. Global. Confiable.</h1>
+          <div className={styles.actions}>
+            <Link href="/cotizacion">{t.quote}</Link>
+            <Link href="/contacto">{t.specialist}</Link>
+          </div>
+        </div>
+      </section>
 
-            <p>
-              Ofrecemos soluciones globales de transporte aéreo para envíos donde el tiempo es una prioridad. Como Agente IATA Acreditado, trabajamos con las principales aerolíneas del mundo para asegurar que su mercancía llegue a destino en tiempo y forma.
-              <br />
-              <strong>Salidas diarias a casi todos los destinos del mundo.</strong>
-            </p>
+      <Certifications />
 
-            <div className={styles.actions}>
-              <Link href="/cotizacion">Solicitar presupuesto</Link>
-              <Link href="/contacto">Hablar con un asesor</Link>
+      <main className={styles.content}>
+        <section className={styles.block}>
+          <span>{t.blockEyebrow}</span>
+          <h2>{t.blockTitle}</h2>
+          <p>{t.blockText}</p>
+        </section>
+
+        <section className={styles.servicesPanel}>
+          <div className={styles.servicesCopy}>
+            <p>{t.servicesIntro}</p>
+            <h2>{t.servicesTitle}</h2>
+
+            <div className={styles.accordion}>
+              {t.services.map(([title, description]) => (
+                <details key={title} className={styles.serviceItem}>
+                  <summary>
+                    <h3>{title}</h3>
+                    <span>+</span>
+                  </summary>
+                  <p>{description}</p>
+                </details>
+              ))}
             </div>
+          </div>
+
+          <div className={styles.servicesImageWrap}>
+            <Image
+              src="/images/segundaecommerce.png"
+              alt="Operación e-commerce"
+              fill
+              className={styles.servicesImage}
+              sizes="(max-width: 900px) 100vw, 50vw"
+            />
           </div>
         </section>
 
-        <Certifications />
-
-        <section className={styles.content}>
-          <div className={styles.mainContent}>
-            <section id="overview" className={styles.block}>
-              <span>Air Freight</span>
-              <h2>Transporte aéreo internacional con control operativo.</h2>
-              <p>
-                Coordinamos operaciones aéreas urgentes, sensibles y de alto
-                valor con seguimiento, documentación y acompañamiento experto
-                durante todo el proceso logístico.
-              </p>
-            </section>
-
-            <section id="services" className={styles.servicesPanel}>
-              <div className={styles.servicesCopy}>
-                <p>
-                  Con salidas diarias a casi todos los destinos, su mercancía estará en cualquier
-                  punto del mundo de manera urgente y con la máxima eficacia y profesionalidad.
-                </p>
-                <h2>Nuestros Servicios para el Transporte Aéreo</h2>
-
-                <div className={styles.accordion}>
-              {[
-                  {
-                    title: "Servicios de mensajería",
-                    text: "Soluciones aéreas para documentación, muestras, piezas críticas y envíos urgentes que requieren trazabilidad, rapidez y gestión prioritaria de origen a destino.",
-                  },
-                  {
-                    title: "Carga peligrosa / DGR",
-                    text: "Gestión especializada de mercancías peligrosas bajo normativa IATA DGR, con revisión documental, embalaje, etiquetado y coordinación operativa segura.",
-                  },
-                  {
-                    title: "Chartering",
-                    text: "Contratación de aeronaves dedicadas para cargas sobredimensionadas, sensibles o extremadamente urgentes, cuando la operación requiere capacidad exclusiva y control total.",
-                  },
-                  {
-                    title: "e-Booking",
-                    text: "Reservas aéreas ágiles con aerolíneas aliadas, seguimiento operativo y confirmación eficiente de espacios para optimizar tiempos de tránsito y disponibilidad.",
-                  },
-                  {
-                    title: "Aéreos urgentes 24/7",
-                    text: "Respuesta inmediata para operaciones críticas, con coordinación permanente, monitoreo continuo y acompañamiento experto durante todo el movimiento internacional.",
-                  },
-                ].map((item) => (
-                  <details key={item.title} className={styles.serviceItem}>
-                    <summary>
-                      <h3>{item.title}</h3>
-                      <span>+</span>
-                    </summary>
-                    <p>{item.text}</p>
-                  </details>
-                ))}
-                </div>
-              </div>
-
-              <div className={styles.servicesImageWrap}>
-                <Image
-                  src="/images/hero/hero-empresas.png"
-                  alt="Servicios de transporte aéreo"
-                  fill
-                  sizes="(max-width: 900px) 100vw, 48vw"
-                  className={styles.servicesImage}
-                />
-              </div>
-            </section>
-
-            <section className={styles.capabilities}>
-              <div className={styles.capabilitiesContent}>
-                <span>CAPACIDADES OPERATIVAS</span>
-                <h2>Coordinación aérea para cargas críticas, urgentes y sensibles.</h2>
-                <p>
-                  Diseñamos operaciones con control documental, trazabilidad y coordinación internacional
-                  para responder cuando el tiempo, la seguridad y la precisión son decisivos.
-                </p>
-
-                <div className={styles.capabilityStats}>
-                  <div>
-                    <strong>IATA</strong>
-                    <small>Operación aérea especializada</small>
-                  </div>
-                  <div>
-                    <strong>24/7</strong>
-                    <small>Time critical logistics</small>
-                  </div>
-                  <div>
-                    <strong>DGR</strong>
-                    <small>Carga peligrosa y sensible</small>
-                  </div>
-                  <div>
-                    <strong>Global</strong>
-                    <small>Coordinación internacional</small>
-                  </div>
-                </div>
-              </div>
-
-              <div className={styles.capabilitiesImage}>
-                <Image
-                  src="/images/cargaaerea.png"
-                  alt="Capacidades operativas de transporte aéreo"
-                  fill
-                  sizes="(max-width: 900px) 100vw, 42vw"
-                />
-              </div>
-            </section>
-
-            <section id="related" className={styles.related}>
-              <h2>Servicios relacionados</h2>
-
-              <div className={styles.relatedGrid}>
-                <Link href="/servicios/aduanas" className={styles.relatedCard}>
-                  <Image src="/images/caduana.png" alt="Servicios de Aduanas" fill sizes="(max-width: 900px) 100vw, 33vw" />
-                  <span>Servicios de Aduanas</span>
-                </Link>
-
-                <Link href="/servicios/temperatura-controlada" className={styles.relatedCard}>
-                  <Image src="/images/controltemp.png" alt="Temperatura Controlada" fill sizes="(max-width: 900px) 100vw, 33vw" />
-                  <span>Temperatura Controlada</span>
-                </Link>
-
-                <Link href="/servicios/cargas-especiales" className={styles.relatedCard}>
-                  <Image src="/images/cargaspecial.png" alt="Cargas Especiales" fill sizes="(max-width: 900px) 100vw, 33vw" />
-                  <span>Cargas Especiales</span>
-                </Link>
-              </div>
-            </section>
-
-            <section id="quote" className={styles.cta}>
-              <span>Cotización Express</span>
-              <h2>Presupuesto personalizado para su operación aérea.</h2>
-              <p>
-                Complete la información de su envío y nuestro equipo preparará
-                una propuesta logística ajustada a su urgencia, destino y tipo de
-                carga.
-              </p>
-              <Link href="/cotizacion">Solicitar presupuesto ahora</Link>
-            </section>
-          </div>
+        <section className={styles.cta}>
+          <span>{t.ctaEyebrow}</span>
+          <h2>{t.ctaTitle}</h2>
+          <p>{t.ctaText}</p>
+          <Link href="/cotizacion">{t.ctaButton}</Link>
         </section>
       </main>
 
