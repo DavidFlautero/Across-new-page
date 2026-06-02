@@ -127,7 +127,7 @@ export default function Header() {
   const t = acrossCopy[locale].nav;
   const menu = menuCopy[locale];
 
-  const renderLinks = (items: [string, string][]) =>
+  const renderLinks = (items: readonly (readonly [string, string])[]) =>
     items.map(([href, label]) => {
       const external = href.startsWith("http");
 
@@ -172,14 +172,14 @@ export default function Header() {
           <div className={styles.dropdown} onMouseEnter={() => setOpenMenu("services")} onMouseLeave={() => setOpenMenu(null)}>
             <button type="button" className={styles.dropdownTrigger}>{t.services} <span>▾</span></button>
             <div className={`${styles.dropdownMenu} ${openMenu === "services" ? styles.dropdownVisible : ""}`}>
-              {renderLinks(menu.services as [string, string][])}
+              {renderLinks(menu.services)}
             </div>
           </div>
 
           <div className={styles.dropdown} onMouseEnter={() => setOpenMenu("sectors")} onMouseLeave={() => setOpenMenu(null)}>
             <button type="button" className={styles.dropdownTrigger}>{t.sectors} <span>▾</span></button>
             <div className={`${styles.dropdownMenu} ${openMenu === "sectors" ? styles.dropdownVisible : ""}`}>
-              {renderLinks(menu.sectors as [string, string][])}
+              {renderLinks(menu.sectors)}
             </div>
           </div>
 
@@ -187,7 +187,7 @@ export default function Header() {
             <button type="button" className={styles.dropdownTrigger}>{t.company} <span>▾</span></button>
 
             <div className={`${styles.dropdownMenu} ${openMenu === "company" ? styles.dropdownVisible : ""}`}>
-              {renderLinks(menu.company as [string, string][])}
+              {renderLinks(menu.company)}
             </div>
           </div>
           <div
