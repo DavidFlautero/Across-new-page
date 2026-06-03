@@ -228,13 +228,13 @@
 
   .imageWrap{
     width:100% !important;
-    height:78px !important;
+    height:92px !important;
     background:#fbfaf7 !important;
     overflow:hidden !important;
   }
 
   .image{
-    width:118% !important;
+    width:90% !important;
     height:100% !important;
     object-fit:cover !important;
     object-position:center !important;
@@ -245,5 +245,23 @@
   .imageWrap::before,
   .imageWrap::after{
     width:42px !important;
+  }
+}
+
+/* FINAL MOBILE LOGOS FULL */
+@media (max-width: 640px){
+  .imageWrap{
+    height:86px !important;
+    width:100% !important;
+    overflow:hidden !important;
+  }
+
+  .image{
+    width:100% !important;
+    height:100% !important;
+    object-fit:contain !important;
+    object-position:center !important;
+    transform:none !important;
+    opacity:1 !important;
   }
 }

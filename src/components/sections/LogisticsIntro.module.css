@@ -319,3 +319,25 @@
     margin: 28px auto 0 !important;
   }
 }
+
+/* SMALLER EXPRESS CTA */
+.quoteCard{
+  max-width:380px !important;
+  width:380px !important;
+
+  padding:18px 22px !important;
+
+  margin-right:140px !important;
+}
+
+.quoteCard strong{
+  font-size:1.05rem !important;
+}
+
+@media (max-width: 900px){
+  .quoteCard{
+    width:calc(100% - 32px) !important;
+    max-width:none !important;
+    margin:24px auto 0 !important;
+  }
+}
