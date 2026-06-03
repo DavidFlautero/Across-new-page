@@ -18,9 +18,9 @@ const phones = [
 const copy = {
   es: {
     badge: "CONTACTO",
-    title: "Soluciones logísticas con atención internacional.",
+    title: "Solicite hoy su solución logística con atención internacional.",
     text: "Complete el formulario o contacte directamente con nuestro equipo regional. Across Logistics atenderá su solicitud con una respuesta personalizada.",
-    formTitle: "Formulario de contacto",
+    formTitle: "Envíe su solicitud ahora",
     name: "Nombre*",
     company: "Empresa*",
     email: "Email*",
@@ -313,7 +313,7 @@ export default function ContactForm() {
           </div>
         </div>
         <form onSubmit={submit} style={formStyle}>
-          <h2 style={formTitleStyle}>{t.formTitle}</h2>
+          <h2 style={{ ...formTitleStyle, color: "#000000" }}>{t.formTitle}</h2>
           <div style={twoColsStyle}>
             <input name="name" placeholder={t.name} required minLength={2} style={inputStyle} />
             <input name="company" placeholder={t.company} required minLength={2} style={inputStyle} />
