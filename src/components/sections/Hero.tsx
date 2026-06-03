@@ -55,19 +55,19 @@ const copy = {
         title: `Su operación logística
 no puede detenerse.
 Nosotros tampoco.`,
-        text: "Visibilidad en tiempo real, transporte internacional y control operativo para empresas que necesitan cumplir cada entrega.",
+        text: "Controle su operación en tiempo real y solicite una solución logística adaptada a su carga, destino y urgencia.",
       },
       {
         title: `Carga internacional
 con control real
 de punta a punta.`,
-        text: "Coordinamos transporte marítimo, aéreo y terrestre con trazabilidad, respuesta rápida y gestión operativa especializada.",
+        text: "Planifique su próximo envío con trazabilidad, respuesta rápida y gestión operativa especializada.",
       },
       {
         title: `Más que transporte.
 Gestión logística
 sin fricción.`,
-        text: "Soluciones integrales para empresas que necesitan mover mercancía crítica con precisión, visibilidad y cumplimiento.",
+        text: "Hable con un especialista y convierta su operación logística en una ventaja competitiva.",
       },
     ],
     cta: "Solicite su presupuesto ahora",
