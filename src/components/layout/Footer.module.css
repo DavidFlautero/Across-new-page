@@ -1,165 +1,199 @@
 .footer {
-  background:
-    radial-gradient(circle at 92% 8%, rgba(120, 8, 32, .16), transparent 26rem),
-    linear-gradient(180deg, #101114 0%, #08090d 100%);
-  color: #fff;
-  padding: 2.8rem 5vw 1.2rem;
-  border-top: 1px solid rgba(255,255,255,.08);
+  background: linear-gradient(180deg, #0c0d12 0%, #05060a 100%);
+  color: #e5e7eb;
+  padding: 2rem 5vw 1rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-family: inherit;
 }
 
 .inner {
-  width: min(1180px, 100%);
+  width: min(1220px, 100%);
   margin: 0 auto;
 }
 
+/* Layout escritorio: columnas en una fila compacta */
 .top {
   display: grid;
-  grid-template-columns: 210px minmax(390px, 1.35fr) minmax(520px, 1.6fr);
-  gap: 2.6rem;
+  grid-template-columns: 220px 1fr 1fr 1fr 1fr 1fr;
+  gap: 1.2rem;
   align-items: start;
 }
 
+/* Brand */
 .brand {
-  display: grid;
-  gap: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
-
 .brand img {
-  width: 180px;
+  width: 160px;
   height: auto;
 }
-
 .socials {
   display: flex;
-  gap: .9rem;
-  padding-top: 1.1rem;
-  border-top: 1px solid rgba(255,255,255,.36);
+  gap: 0.7rem;
+  padding-top: 0;
+  border-top: none;
 }
-
 .socials a {
-  width: 25px;
-  height: 25px;
-  display: grid;
-  place-items: center;
-  color: rgba(255,255,255,.86);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e5e7eb;
   text-decoration: none;
-  font-size: 1.08rem;
-  font-weight: 900;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
-
 .email {
-  color: #fff;
-  text-decoration: none;
-  font-size: .82rem;
-  font-weight: 850;
+  font-size: 0.75rem;
 }
 
-.contactBlock h3,
-.linksBlock h3 {
-  width: fit-content;
-  margin: 0 0 .85rem;
-  padding-bottom: .42rem;
-  border-bottom: 1px solid rgba(255,255,255,.68);
-  color: #fff;
-  font-size: .72rem;
+/* Secciones */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.section h3 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  letter-spacing: .06em;
+  color: #fff;
+  margin: 0 0 0.25rem 0;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  display: inline-block;
 }
-
+/* Grid de oficinas: 2 columnas en desktop para que ocupe menos altura */
 .officesGrid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(112px, 1fr));
-  gap: .66rem 1rem;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  gap: 0.4rem 0.8rem;
 }
-
 .officesGrid p {
   margin: 0;
-  font-size: .72rem;
-  line-height: 1.18;
-  color: rgba(255,255,255,.72);
+  font-size: 0.7rem;
+  line-height: 1.3;
+  color: #cbd5e1;
 }
-
-.officesGrid strong,
+.officesGrid strong {
+  display: block;
+  font-weight: 700;
+  color: #f1f5f9;
+}
 .officesGrid span {
   display: block;
+  font-size: 0.65rem;
+  color: #94a3b8;
 }
 
-.officesGrid strong {
-  color: rgba(255,255,255,.96);
-  font-weight: 900;
+/* Enlaces */
+.linksList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
 }
-
-.linksBlock {
-  display: grid;
-  grid-template-columns: 1.05fr .95fr .85fr 1.1fr;
-  gap: 1.55rem;
-}
-
-.linksBlock a {
-  display: block;
-  margin: 0 0 .56rem;
-  color: rgba(255,255,255,.72);
+.linksList a {
+  color: #cbd5e1;
   text-decoration: none;
-  font-size: .75rem;
-  line-height: 1.18;
-  font-weight: 700;
+  font-size: 0.7rem;
+  line-height: 1.3;
 }
-
-.linksBlock a:hover,
-.email:hover,
-.socials a:hover {
+.linksList a:hover {
   color: #fff;
   text-decoration: underline;
   text-decoration-color: #d00032;
-  text-underline-offset: 4px;
-}
-
-.legalTitle {
-  margin-top: 1.4rem !important;
 }
 
 .bottom {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(255,255,255,.12);
+  border-top: 1px solid rgba(255,255,255,0.1);
   display: flex;
   justify-content: space-between;
-  color: rgba(255,255,255,.48);
-  font-size: .7rem;
+  font-size: 0.65rem;
+  color: #94a3b8;
 }
 
-@media (max-width: 1180px) {
+/* Responsive tablet */
+@media (max-width: 1024px) {
   .top {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
   }
-
-  .linksBlock {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (max-width: 760px) {
-  .footer {
-    padding: 3rem 1.1rem 1.4rem;
-  }
-
   .officesGrid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .linksBlock {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .bottom {
-    flex-direction: column;
-    gap: .45rem;
-  }
 }
 
+/* Responsive móvil (acordeón) */
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.5rem 1rem 1rem;
+  }
+  .top {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .brand {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+  }
+  .brand img {
+    width: 140px;
+  }
+  .socials {
+    justify-content: center;
+  }
+  .section {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .section h3 {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0.8rem 0;
+    border-bottom: none;
+    font-size: 0.85rem;
+  }
+  .section h3::after {
+    content: "▼";
+    font-size: 0.7rem;
+    transition: transform 0.2s;
+  }
+  .section.open h3::after {
+    transform: rotate(180deg);
+  }
+  .sectionContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  .section.open .sectionContent {
+    max-height: 600px;
+    transition: max-height 0.4s ease-in;
+    margin-bottom: 0.8rem;
+  }
+  .officesGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+  }
+  .linksList {
+    gap: 0.6rem;
+  }
+  .linksList a {
+    font-size: 0.8rem;
+  }
+}
 @media (max-width: 480px) {
-  .officesGrid,
-  .linksBlock {
+  .officesGrid {
     grid-template-columns: 1fr;
   }
 }

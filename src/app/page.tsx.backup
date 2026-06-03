@@ -5,19 +5,19 @@ import Hero from "@/components/sections/Hero";
 import Certifications from "@/components/sections/Certifications";
 import LogisticsIntro from "@/components/sections/LogisticsIntro";
 import ServicesOverview from "@/components/sections/ServicesOverview";
-import ContactForm from "@/components/sections/ContactForm";
+import Quote from "@/components/sections/Quote";
 
 export default function HomePage() {
   return (
     <div className="page-shell">
       <Header />
 
-      <main style={{ background: "#F3EFE8" }}>
+      <main>
         <Hero />
         <Certifications />
         <LogisticsIntro />
         <ServicesOverview />
-        <ContactForm />
+        <Quote />
       </main>
 
       <Footer />
