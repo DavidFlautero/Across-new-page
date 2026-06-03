@@ -284,3 +284,38 @@
 .quoteCard {
   border-radius: 26px !important;
 }
+
+/* FINAL COMPACT EXPRESS CTA */
+.quoteCard {
+  width: min(100%, 460px) !important;
+  max-width: 460px !important;
+  min-height: 86px !important;
+  padding: 20px 26px !important;
+  margin-left: auto !important;
+  margin-right: clamp(110px, 8vw, 160px) !important;
+}
+
+.quoteCard b {
+  width: 58px !important;
+  height: 58px !important;
+  flex: 0 0 58px !important;
+  font-size: 1.6rem !important;
+}
+
+.quoteCard small {
+  font-size: .68rem !important;
+  letter-spacing: .22em !important;
+}
+
+.quoteCard strong {
+  font-size: clamp(1rem, 1.25vw, 1.22rem) !important;
+  line-height: 1.1 !important;
+}
+
+@media (max-width: 900px) {
+  .quoteCard {
+    width: calc(100% - 32px) !important;
+    max-width: none !important;
+    margin: 28px auto 0 !important;
+  }
+}

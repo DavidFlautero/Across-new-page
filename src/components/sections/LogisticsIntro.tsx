@@ -12,11 +12,11 @@ const copy = {
     eyebrow: "Across Logistics",
     title: "Logística integral para operaciones exigentes",
     body1:
-      "Coordinamos transporte, aduanas, almacenamiento y distribución con precisión operativa y alcance internacional.",
+      "Diseñamos soluciones logísticas internacionales para empresas que necesitan control, trazabilidad y cumplimiento en cada operación.",
     body2:
-      "Cada movimiento se diseña para reducir fricción, proteger la carga y mantener el control de punta a punta.",
+      "Cada movimiento se planifica para reducir fricción operativa, proteger la carga y mantener visibilidad de punta a punta.",
     quoteSmall: "Solicite su presupuesto",
-    quoteTitle: "Cotización Express Online",
+    quoteTitle: "Cotización Express",
     items: [
       ["Soluciones a medida", "Operaciones diseñadas según carga, destino, urgencia y nivel de criticidad."],
       ["Integración con el cliente", "Comunicación clara, seguimiento operativo y acompañamiento constante."],

@@ -208,3 +208,42 @@
   width:112% !important;
   transform:translateY(-16px) scale(.92) !important;
 }
+
+/* MOBILE CERTIFICATIONS FIX */
+@media (max-width: 640px){
+  .section{
+    padding-top:8px !important;
+    padding-bottom:0 !important;
+    background:#fbfaf7 !important;
+  }
+
+  .head{
+    margin:0 auto 4px !important;
+  }
+
+  .head span{
+    font-size:.58rem !important;
+    letter-spacing:.28em !important;
+  }
+
+  .imageWrap{
+    width:100% !important;
+    height:78px !important;
+    background:#fbfaf7 !important;
+    overflow:hidden !important;
+  }
+
+  .image{
+    width:118% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:center !important;
+    transform:none !important;
+    opacity:.92 !important;
+  }
+
+  .imageWrap::before,
+  .imageWrap::after{
+    width:42px !important;
+  }
+}
