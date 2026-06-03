@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { locales, type Locale } from "@/i18n/across";
 import styles from "./Hero.module.css";
 
@@ -144,6 +144,7 @@ without friction.`,
 export default function Hero() {
   const [locale, setLocale] = useState<Locale>("es");
   const [activeSlide, setActiveSlide] = useState(0);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
     const saved = window.localStorage.getItem(LOCALE_KEY) as Locale | null;
@@ -174,11 +175,48 @@ export default function Hero() {
     return () => window.clearInterval(timer);
   }, [slides.length]);
 
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const forcePlay = () => {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.playsInline = true;
+      video.setAttribute("muted", "");
+      video.setAttribute("playsinline", "");
+      video.setAttribute("webkit-playsinline", "");
+      video.load();
+      video.play().catch(() => {});
+    };
+
+    forcePlay();
+
+    window.addEventListener("touchstart", forcePlay, { once: true });
+    document.addEventListener("visibilitychange", forcePlay);
+
+    return () => {
+      window.removeEventListener("touchstart", forcePlay);
+      document.removeEventListener("visibilitychange", forcePlay);
+    };
+  }, []);
+
   return (
     <section className={styles.hero}>
-      <video className={styles.video} autoPlay muted loop playsInline>
-        <source src="/videos/Across-Demo.mp4" type="video/mp4" />
-      </video>
+      <video
+        ref={videoRef}
+        className={styles.video}
+        src="/videos/Across-Demo-mobile.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        webkit-playsinline="true" suppressHydrationWarning
+        preload="auto"
+        controls={false}
+        disablePictureInPicture
+        aria-hidden="true"
+      />
 
       <div className={styles.overlay} />
       <div className={styles.redGlow} />
