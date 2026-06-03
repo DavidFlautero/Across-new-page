@@ -108,8 +108,44 @@ const resources: [string, string][] = [
   ["/blog", "Blog"],
 ];
 
+
+function FlagIcon({ locale }: { locale: Locale }) {
+  if (locale === "es") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="12" fill="#AA151B"/>
+        <path d="M0 7h24v10H0z" fill="#F1BF00"/>
+      </svg>
+    );
+  }
+
+  if (locale === "en") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="12" fill="#012169"/>
+        <path d="M0 0 24 24M24 0 0 24" stroke="#fff" strokeWidth="4"/>
+        <path d="M0 0 24 24M24 0 0 24" stroke="#C8102E" strokeWidth="2"/>
+        <path d="M12 0v24M0 12h24" stroke="#fff" strokeWidth="7"/>
+        <path d="M12 0v24M0 12h24" stroke="#C8102E" strokeWidth="4"/>
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="12" fill="#DE2910"/>
+      <path d="M6.2 5.2 7 7.4h2.3L7.4 8.8l.8 2.2-2-1.35L4.2 11l.8-2.2-1.9-1.4h2.3l.8-2.2Z" fill="#FFDE00"/>
+    </svg>
+  );
+}
+
+
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const [mobileSection, setMobileSection] = useState<
+    null | "services" | "sectors" | "company" | "resources"
+  >(null);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [locale, setLocale] = useState<Locale>("es");
 
@@ -223,8 +259,7 @@ export default function Header() {
               className={key === locale ? styles.languageActive : ""}
               onClick={() => changeLocale(key)}
             >
-              <span>{locales[key].flag}</span>
-              <strong>{locales[key].short}</strong>
+              <FlagIcon locale={key} />
             </button>
           ))}
         </div>
@@ -237,7 +272,7 @@ export default function Header() {
               className={key === locale ? styles.languageActive : ""}
               onClick={() => changeLocale(key)}
             >
-              <span>{locales[key].flag}</span>
+              <FlagIcon locale={key} />
             </button>
           ))}
         </div>
@@ -271,14 +306,125 @@ export default function Header() {
         />
 
         <nav className={styles.mobileLinks}>
-          <Link href="/" onClick={() => setMobileOpen(false)}>{t.home}</Link>
-          <Link href="/tracking" onClick={() => setMobileOpen(false)}>{t.tracking}</Link>
-          <Link href="/servicios" onClick={() => setMobileOpen(false)}>{t.services}</Link>
-          <Link href="/sectores" onClick={() => setMobileOpen(false)}>{t.sectors}</Link>
-          <Link href="/empresa" onClick={() => setMobileOpen(false)}>{t.company}</Link>
-          <Link href="/recursos" onClick={() => setMobileOpen(false)}>{t.resources}</Link>
-          <Link href="/contacto" onClick={() => setMobileOpen(false)}>{t.contact}</Link>
-          <a href={PRIVATE_AREA_URL} target="_blank" rel="noopener noreferrer">{t.private}</a>
+          {!mobileSection && (
+            <>
+              <Link href="/" onClick={() => setMobileOpen(false)}>
+                {t.home}
+              </Link>
+
+              <Link href="/tracking" onClick={() => setMobileOpen(false)}>
+                {t.tracking}
+              </Link>
+
+              <button type="button" onClick={() => setMobileSection("services")}>
+                {t.services} <span>›</span>
+              </button>
+
+              <button type="button" onClick={() => setMobileSection("sectors")}>
+                {t.sectors} <span>›</span>
+              </button>
+
+              <button type="button" onClick={() => setMobileSection("company")}>
+                {t.company} <span>›</span>
+              </button>
+
+              <button type="button" onClick={() => setMobileSection("resources")}>
+                {t.resources} <span>›</span>
+              </button>
+
+              <Link href="/contacto" onClick={() => setMobileOpen(false)}>
+                {t.contact}
+              </Link>
+            </>
+          )}
+
+          {mobileSection === "services" && (
+            <div className={styles.mobileSubmenu}>
+              <button
+                type="button"
+                className={styles.mobileBack}
+                onClick={() => setMobileSection(null)}
+              >
+                ← Volver
+              </button>
+
+              {menu.services.map(([href, label]) => (
+                <Link
+                  key={href}
+                  href={href}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {label}
+                </Link>
+              ))}
+            </div>
+          )}
+
+          {mobileSection === "sectors" && (
+            <div className={styles.mobileSubmenu}>
+              <button
+                type="button"
+                className={styles.mobileBack}
+                onClick={() => setMobileSection(null)}
+              >
+                ← Volver
+              </button>
+
+              {menu.sectors.map(([href, label]) => (
+                <Link
+                  key={href}
+                  href={href}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {label}
+                </Link>
+              ))}
+            </div>
+          )}
+
+          {mobileSection === "company" && (
+            <div className={styles.mobileSubmenu}>
+              <button
+                type="button"
+                className={styles.mobileBack}
+                onClick={() => setMobileSection(null)}
+              >
+                ← Volver
+              </button>
+
+              {menu.company.map(([href, label]) => (
+                <Link
+                  key={href}
+                  href={href}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {label}
+                </Link>
+              ))}
+            </div>
+          )}
+
+          {mobileSection === "resources" && (
+            <div className={styles.mobileSubmenu}>
+              <button
+                type="button"
+                className={styles.mobileBack}
+                onClick={() => setMobileSection(null)}
+              >
+                ← Volver
+              </button>
+
+              {resources.map(([href, label]) => (
+                <Link
+                  key={href}
+                  href={href}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {label}
+                </Link>
+              ))}
+            </div>
+          )}
         </nav>
       </aside>
     </header>

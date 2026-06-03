@@ -50,58 +50,13 @@ function PlaneIcon() {
 
 const copy = {
   es: {
-    slides: [
-      {
-        title: `Su operación logística
+    title: `Su operación logística
 no puede detenerse.
+
 Nosotros tampoco.`,
-        text: "Visibilidad en tiempo real, transporte internacional y control operativo para empresas que necesitan cumplir cada entrega.",
-      },
-      {
-        title: `Carga internacional
-con control real
-de punta a punta.`,
-        text: "Coordinamos transporte marítimo, aéreo y terrestre con trazabilidad, respuesta rápida y gestión operativa especializada.",
-      },
-      {
-        title: `Más que transporte.
-Gestión logística
-sin fricción.`,
-        text: "Soluciones integrales para empresas que necesitan mover mercancía crítica con precisión, visibilidad y cumplimiento.",
-      },
-    ],
+    text: "Visibilidad en tiempo real, transporte internacional y control operativo para empresas que necesitan cumplir cada entrega.",
     cta: "Solicite su presupuesto ahora",
     secondary: "Hablar con un especialista",
-    quickLinks: [
-      { icon: TrackingIcon, title: "Tracking", subtitle: "Visibilidad de carga", href: "/tracking" },
-      { icon: WarehouseIcon, title: "Almacén", subtitle: "Almacenamiento y distribución", href: "/#servicios" },
-      { icon: ShipIcon, title: "Marítimo", subtitle: "Transporte marítimo", href: "/servicios/transporte-maritimo" },
-      { icon: PlaneIcon, title: "Aéreo", subtitle: "Carga aérea prioritaria", href: "/servicios/transporte-aereo" },
-    ],
-  },
-  en: {
-    slides: [
-      {
-        title: `Your logistics operation
-cannot stop.
-Neither can we.`,
-        text: "Real-time visibility, international freight and operational control for companies that need every shipment delivered on time.",
-      },
-      {
-        title: `International cargo
-with end-to-end
-operational control.`,
-        text: "We coordinate ocean, air and ground freight with traceability, fast response and specialized logistics management.",
-      },
-      {
-        title: `More than freight.
-Logistics management
-without friction.`,
-        text: "Integrated solutions for companies that need to move critical cargo with precision, visibility and compliance.",
-      },
-    ],
-    cta: "Request your quote now",
-    secondary: "Speak with a specialist",
     quickLinks: [
       { icon: TrackingIcon, title: "Tracking", subtitle: "Cargo visibility", href: "/tracking" },
       { icon: WarehouseIcon, title: "Warehouse", subtitle: "Storage & distribution", href: "/#servicios" },
@@ -110,26 +65,11 @@ without friction.`,
     ],
   },
   zh: {
-    slides: [
-      {
-        title: `您的物流运营
-不能停止。
-我们也是。`,
-        text: "为需要确保每一次交付的企业提供实时可视化、国际运输与运营控制。",
-      },
-      {
-        title: `国际货运
-全流程
-运营可控。`,
-        text: "我们协调海运、空运与陆运，提供可视化追踪、快速响应与专业物流管理。",
-      },
-      {
-        title: `不只是运输。
-更是高效的
-物流管理。`,
-        text: "为需要精准、可视化与合规交付的企业提供一体化物流解决方案。",
-      },
-    ],
+    title: `Your logistics operation
+cannot stop.
+
+Neither can we.`,
+    text: "为需要确保每一次交付的企业提供实时可视化、国际运输与运营控制。",
     cta: "申请报价",
     secondary: "联系专家",
     quickLinks: [
@@ -143,15 +83,13 @@ without friction.`,
 
 export default function Hero() {
   const [locale, setLocale] = useState<Locale>("es");
-  const [activeSlide, setActiveSlide] = useState(0);
 
   useEffect(() => {
     const saved = window.localStorage.getItem(LOCALE_KEY) as Locale | null;
     if (saved && saved in locales) setLocale(saved);
 
     const onChange = (event: Event) => {
-      const next = (event as CustomEvent<Locale>).detail;
-      if (next && next in locales) setLocale(next);
+      setLocale((event as CustomEvent<Locale>).detail);
     };
 
     window.addEventListener("across-locale-change", onChange);
@@ -159,20 +97,6 @@ export default function Hero() {
   }, []);
 
   const t = copy[locale];
-  const slides = t.slides;
-  const slide = slides[activeSlide % slides.length];
-
-  useEffect(() => {
-    setActiveSlide(0);
-  }, [locale]);
-
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      setActiveSlide((current) => (current + 1) % slides.length);
-    }, 5200);
-
-    return () => window.clearInterval(timer);
-  }, [slides.length]);
 
   return (
     <section className={styles.hero}>
@@ -186,12 +110,12 @@ export default function Hero() {
       <div className={styles.content}>
         <div className={styles.titleWrap}>
           <h1 className={styles.title}>
-            {slide.title.split("\n").map((line, index) => (
-              <span key={`${line}-${index}`}>{line}</span>
-            ))}
+            {t.title}
           </h1>
 
-          <p className={styles.subtitle}>{slide.text}</p>
+          <p className={styles.subtitle}>
+            {t.text}
+          </p>
         </div>
 
         <div className={styles.line} />
@@ -201,7 +125,7 @@ export default function Hero() {
             {t.cta}
           </a>
 
-          <a href="/contacto" className={styles.secondaryBtn}>
+          <a href="/#servicios" className={styles.secondaryBtn}>
             {t.secondary}
           </a>
         </div>
