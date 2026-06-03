@@ -10,19 +10,19 @@ const LOCALE_KEY = "across-locale";
 const copy = {
   es: {
     eyebrow: "Across Logistics",
-    title: "Logística integral para operaciones exigentes",
+    title: "Soluciones logísticas\ninternacionales",
     body1:
-      "Diseñamos soluciones logísticas internacionales para empresas que necesitan control, trazabilidad y cumplimiento en cada operación.",
+      "Diseñamos y gestionamos cadenas de suministro globales con altos estándares de confiabilidad, eficiencia y control operativo para empresas con operaciones internacionales.",
     body2:
-      "Cada movimiento se planifica para reducir fricción operativa, proteger la carga y mantener visibilidad de punta a punta.",
+      "Integramos transporte, aduanas, almacenamiento, distribución y trazabilidad para reducir fricción operativa y mantener control total de punta a punta.",
     quoteSmall: "Solicite su presupuesto",
-    quoteTitle: "Cotización Express",
+    quoteTitle: "Solicitar Propuesta Comercial",
     items: [
-      ["Soluciones a medida", "Operaciones diseñadas según carga, destino, urgencia y nivel de criticidad."],
-      ["Integración con el cliente", "Comunicación clara, seguimiento operativo y acompañamiento constante."],
-      ["Control y mejora continua", "Optimización de tiempos, rutas, documentación y proveedores."],
-      ["Envíos críticos", "Respuesta ágil para operaciones donde cada hora cuenta."],
-      ["Red internacional", "Aliados estratégicos para transporte, aduanas, almacén y distribución."],
+      ["Transporte Multimodal", "Soluciones integrales de transporte aéreo, marítimo y terrestre con coordinación operativa de principio a fin."],
+      ["Gestión Aduanera y Cumplimiento Normativo", "Procesos aduaneros eficientes, cumplimiento regulatorio y optimización documental para operaciones internacionales."],
+      ["Almacenamiento y Distribución Estratégica", "Infraestructura logística diseñada para almacenamiento, preparación de pedidos y distribución nacional e internacional."],
+      ["Cadena de Frío y Cargas Especiales", "Gestión especializada de mercancías sensibles, cargas de alto valor y operaciones complejas bajo estrictos controles operativos."],
+      ["Trazabilidad y Control Operativo en Tiempo Real", "Herramientas de monitoreo y visibilidad para garantizar control total de cada operación logística."],
     ],
   },
   en: {
