@@ -35,11 +35,11 @@ const copy = {
       ["Gestión documental", "Control de permisos, documentación técnica y requerimientos operativos."],
       ["Entrega en obra", "Planificación de llegada, descarga y coordinación con equipos en sitio."],
     ],
-    ctaEyebrow: "Planificación logística especializada",
-    ctaTitle: "Planifique su próxima operación renovable con un equipo experto.",
+    ctaEyebrow: "Cotización express",
+    ctaTitle: "Planifiquemos su próxima operación renovable.",
     ctaText:
-      "Comparta el tipo de componente, dimensiones, origen, destino y condiciones de obra. Nuestro equipo analiza la viabilidad operativa, permisos, rutas y manipulación para construir una propuesta segura, trazable y eficiente.",
-    ctaButton: "Solicitar propuesta técnica →",
+      "Analizamos tipo de componente, dimensiones, origen, destino y requerimientos de obra para construir una operación segura y viable.",
+    ctaButton: "Solicitar propuesta →",
   },
   en: {
     eyebrow: "RENEWABLE ENERGY LOGISTICS",
@@ -63,11 +63,11 @@ const copy = {
       ["Documentation management", "Control of permits, technical documentation and operational requirements."],
       ["Site delivery", "Arrival planning, unloading and coordination with on-site teams."],
     ],
-    ctaEyebrow: "Specialized logistics planning",
-    ctaTitle: "Plan your next renewable energy operation with an expert team.",
+    ctaEyebrow: "Express quotation",
+    ctaTitle: "Let’s plan your next renewable energy operation.",
     ctaText:
-      "Share the component type, dimensions, origin, destination and site conditions. Our team analyzes operational feasibility, permits, routes and handling requirements to build a safe, traceable and efficient proposal.",
-    ctaButton: "Request technical proposal →",
+      "We analyze component type, dimensions, origin, destination and site requirements to build a safe and viable operation.",
+    ctaButton: "Request proposal →",
   },
   zh: {
     eyebrow: "可再生能源物流",
@@ -130,15 +130,14 @@ export default function EnergiasRenovablesPage() {
           className={styles.heroImage}
           sizes="100vw"
         />
+
         <div className={styles.heroOverlay} />
+
         <div className={styles.heroContent}>
           <span>{t.eyebrow}</span>
           <h1>{t.title}</h1>
           <p>{t.description}</p>
-          <div className={styles.actions}>
-            <Link href="/cotizacion">{t.primary}</Link>
-            <Link href="/contacto">{t.secondary}</Link>
-          </div>
+
         </div>
       </section>
 
@@ -149,12 +148,8 @@ export default function EnergiasRenovablesPage() {
           <span>{t.blockEyebrow}</span>
           <h2>{t.blockTitle}</h2>
           <p>{t.blockText}</p>
-        </section>
 
-        <div className={styles.actions}>
-          <Link href="/cotizacion">Evaluar mi proyecto</Link>
-          <Link href="/contacto">Asesoría técnica</Link>
-        </div>
+        </section>
 
         <section className={styles.servicesPanel}>
           <div className={styles.servicesCopy}>
@@ -184,10 +179,6 @@ export default function EnergiasRenovablesPage() {
             />
           </div>
         </section>
-
-        <div className={styles.actions}>
-          <Link href="/cotizacion">Cotizar ahora</Link>
-        </div>
 
         <section className={styles.cta}>
           <span>{t.ctaEyebrow}</span>
