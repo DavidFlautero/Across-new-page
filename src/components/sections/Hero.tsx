@@ -206,12 +206,11 @@ export default function Hero() {
       <video
         ref={videoRef}
         className={styles.video}
-        src="/videos/Across-Demo-mobile.mp4"
+        src="/videos/Across-Demo.mp4"
         autoPlay
         muted
         loop
-        playsInline
-        webkit-playsinline="true" suppressHydrationWarning
+        playsInline suppressHydrationWarning
         preload="auto"
         controls={false}
         disablePictureInPicture
