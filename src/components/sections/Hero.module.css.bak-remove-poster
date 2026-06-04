@@ -1041,14 +1041,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background: #07080c;
+  background: #07080c url("/images/logisticahome.png") center / cover no-repeat;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: #07080c;
+  background: #07080c url("/images/logisticahome.png") center / cover no-repeat;
   z-index: 0;
 }
 
