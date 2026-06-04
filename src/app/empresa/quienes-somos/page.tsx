@@ -10,127 +10,380 @@ import styles from "../../servicios/_shared/ServicePage.module.css";
 
 type Locale = "es" | "en" | "zh";
 
-
 const team = [
-  ["Vicente Castellano", "Director General", "/images/team/vicente_420x280_ok.jpg"],
-  ["Isabel Gordillo", "Directora Financiera", "/images/team/isa_420x280_ok.jpg"],
-  ["Juan Castellano", "Group Overseas Manager", "/images/team/juan_420x280.jpg"],
-  ["Manel Luque", "Spain Country Manager", "/images/team/manel_420x280.jpg"],
-  ["Ramón Macho", "China Country Manager", "/images/team/ramon_420x280.jpg"],
-  ["Gonzalo Giner", "Steering Committee", "/images/team/gonzalo_420x280.jpg"],
-  ["Simone Serra", "Netherlands Country Manager", "/images/team/simone_serra_420x280.png"],
-  ["Xavier Sanz", "Global Intragroup Manager", "/images/team/xavi_420x280.jpg"],
-  ["Nieves Ferrer", "Directora de Aduanas", "/images/team/nieves_420x280.jpg"],
-  ["Ignacio Ardisana", "Director oficina Northern Spain", "/images/team/ignacio_420x280.jpg"],
-  ["Álex Iglesias", "Director oficina Barcelona", "/images/team/alex_iglesias_420x280.png"],
-  ["Miguel Giménez", "Director oficina Madrid", "/images/team/miguel_gimenez_420x280.png"],
-  ["Marta Guillot", "Directora de oficina Valencia", "/images/team/marta_guillot_420x280.png"],
-  ["Vicente Castellano", "UAE Country Manager", "/images/team/vicente_420x280_ok.jpg"],
-  ["Andreia Monteiro", "Portugal Country Manager", "/images/team/andreia_monteiro_420x280.png"],
-  ["Jesus Espinosa", "US Country Manager", "/images/team/jesus_espinosa_420x280.png"],
+  {
+    name: "Vicente Castellano",
+    image: "/images/team/vicente_420x280_ok.jpg",
+    position: {
+      es: "Director General",
+      en: "General Manager",
+      zh: "总经理",
+    },
+  },
+  {
+    name: "Isabel Gordillo",
+    image: "/images/team/isa_420x280_ok.jpg",
+    position: {
+      es: "Directora Financiera",
+      en: "Finance Director",
+      zh: "财务总监",
+    },
+  },
+  {
+    name: "Juan Castellano",
+    image: "/images/team/juan_420x280.jpg",
+    position: {
+      es: "Group Overseas Manager",
+      en: "Group Overseas Manager",
+      zh: "集团海外业务经理",
+    },
+  },
+  {
+    name: "Manel Luque",
+    image: "/images/team/manel_420x280.jpg",
+    position: {
+      es: "Spain Country Manager",
+      en: "Spain Country Manager",
+      zh: "西班牙区域经理",
+    },
+  },
+  {
+    name: "Ramón Macho",
+    image: "/images/team/ramon_420x280.jpg",
+    position: {
+      es: "China Country Manager",
+      en: "China Country Manager",
+      zh: "中国区域经理",
+    },
+  },
+  {
+    name: "Gonzalo Giner",
+    image: "/images/team/gonzalo_420x280.jpg",
+    position: {
+      es: "Steering Committee",
+      en: "Steering Committee",
+      zh: "管理委员会",
+    },
+  },
+  {
+    name: "Simone Serra",
+    image: "/images/team/simone_serra_420x280.png",
+    position: {
+      es: "Netherlands Country Manager",
+      en: "Netherlands Country Manager",
+      zh: "荷兰区域经理",
+    },
+  },
+  {
+    name: "Xavier Sanz",
+    image: "/images/team/xavi_420x280.jpg",
+    position: {
+      es: "Global Intragroup Manager",
+      en: "Global Intragroup Manager",
+      zh: "全球集团内部业务经理",
+    },
+  },
+  {
+    name: "Nieves Ferrer",
+    image: "/images/team/nieves_420x280.jpg",
+    position: {
+      es: "Directora de Aduanas",
+      en: "Customs Director",
+      zh: "海关业务总监",
+    },
+  },
+  {
+    name: "Ignacio Ardisana",
+    image: "/images/team/ignacio_420x280.jpg",
+    position: {
+      es: "Director oficina Northern Spain",
+      en: "Northern Spain Office Director",
+      zh: "西班牙北部办公室主任",
+    },
+  },
+  {
+    name: "Álex Iglesias",
+    image: "/images/team/alex_iglesias_420x280.png",
+    position: {
+      es: "Director oficina Barcelona",
+      en: "Barcelona Office Director",
+      zh: "巴塞罗那办公室主任",
+    },
+  },
+  {
+    name: "Miguel Giménez",
+    image: "/images/team/miguel_gimenez_420x280.png",
+    position: {
+      es: "Director oficina Madrid",
+      en: "Madrid Office Director",
+      zh: "马德里办公室主任",
+    },
+  },
+  {
+    name: "Marta Guillot",
+    image: "/images/team/marta_guillot_420x280.png",
+    position: {
+      es: "Directora oficina Valencia",
+      en: "Valencia Office Director",
+      zh: "瓦伦西亚办公室主任",
+    },
+  },
+  {
+    name: "Vicente Castellano",
+    image: "/images/team/vicente_420x280_ok.jpg",
+    position: {
+      es: "UAE Country Manager",
+      en: "UAE Country Manager",
+      zh: "阿联酋区域经理",
+    },
+  },
+  {
+    name: "Andreia Monteiro",
+    image: "/images/team/andreia_monteiro_420x280.png",
+    position: {
+      es: "Portugal Country Manager",
+      en: "Portugal Country Manager",
+      zh: "葡萄牙区域经理",
+    },
+  },
+  {
+    name: "Jesus Espinosa",
+    image: "/images/team/jesus_espinosa_420x280.png",
+    position: {
+      es: "US Country Manager",
+      en: "US Country Manager",
+      zh: "美国区域经理",
+    },
+  },
 ] as const;
 
 const copy = {
   es: {
     eyebrow: "QUIÉNES SOMOS",
-    title: "Soluciones logísticas integrales para empresas que operan sin fronteras.",
+    title: "Logística internacional para empresas que necesitan control, precisión y capacidad operativa global.",
     description:
-      "Across Logistics nace para resolver operaciones internacionales complejas con claridad, eficiencia y control. No trasladamos problemas a nuestros clientes: diseñamos soluciones logísticas ejecutables.",
-    primary: "Solicitar información",
+      "Conectamos empresas, mercados y cadenas de suministro mediante soluciones logísticas integrales, combinando cobertura internacional, experiencia operativa, tecnología, cumplimiento documental y atención especializada.",
+    primary: "Conocer nuestras soluciones",
     secondary: "Ver oficinas",
+
     blockEyebrow: "ACROSS LOGISTICS",
-    blockTitle: "Transporte, aduanas, almacén y distribución bajo una misma visión.",
+    blockTitle: "Logística internacional con visión operativa y compromiso de largo plazo.",
     blockText:
-      "Asesoramos, organizamos y coordinamos operaciones internacionales aplicando normas de comercio global para que cada mercancía llegue a destino en el menor tiempo posible y en perfectas condiciones.",
+      "Across Logistics acompaña a empresas que necesitan mover mercancías con seguridad, control y eficiencia. Coordinamos transporte, aduanas, almacenaje, distribución y operaciones especiales para cadenas de suministro nacionales e internacionales.",
+
     servicesIntro:
-      "Nuestra estructura combina equipo experto, credenciales internacionales y una red global preparada para responder donde la operación lo necesita.",
+      "Nuestra forma de trabajar combina equipo experto, red internacional, certificaciones y metodología operativa para responder con precisión en cada mercado.",
     servicesTitle: "Lo que define nuestra forma de operar.",
+
     services: [
-      ["Soluciones integrales", "Diseñamos operaciones completas: transporte, documentación, aduanas, almacén y distribución."],
-      ["Red mundial", "Oficinas, agentes y partners conectados en Europa, Asia, Oriente Medio y América."],
-      ["Credenciales internacionales", "AEO/OEA, ISO 9001, IATA y GDP respaldan seguridad, calidad y cumplimiento."],
-      ["Equipo especializado", "Profesionales en comercio internacional, operaciones, aduanas y coordinación global."],
-      ["Control operativo", "Seguimiento, trazabilidad y comunicación clara durante toda la operación."],
-      ["Sostenibilidad", "Soluciones multimodales y visión responsable para reducir impacto y mejorar eficiencia."]
+      [
+        "Soluciones integrales",
+        "Diseñamos operaciones completas que conectan transporte, documentación, aduanas, almacenaje y distribución.",
+      ],
+      [
+        "Red internacional",
+        "Oficinas, agentes y partners conectados en Europa, Asia, Oriente Medio y América.",
+      ],
+      [
+        "Credenciales internacionales",
+        "AEO/OEA, ISO 9001, IATA y GDP respaldan seguridad, calidad, cumplimiento y confianza operativa.",
+      ],
+      [
+        "Equipo especializado",
+        "Profesionales en comercio internacional, operaciones, aduanas, coordinación global y sectores regulados.",
+      ],
+      [
+        "Control operativo",
+        "Seguimiento, trazabilidad, comunicación clara y coordinación durante toda la operación logística.",
+      ],
+      [
+        "Visión sostenible",
+        "Soluciones multimodales y enfoque responsable para mejorar eficiencia y reducir impacto operativo.",
+      ],
     ],
-    ctaEyebrow: "Across the world",
-    ctaTitle: "Una red global con metodología común y equipos locales.",
+
+    teamEyebrow: "NUESTRO EQUIPO",
+    teamTitle: "Dirección global, experiencia local y coordinación internacional.",
+    teamText:
+      "Un equipo directivo conectado entre oficinas, países y áreas operativas para responder con precisión en cada mercado.",
+
+    ctaEyebrow: "RED INTERNACIONAL",
+    ctaTitle: "Conectemos su operación con nuestra red logística.",
     ctaText:
-      "Nuestra estructura internacional nos permite ofrecer servicios logísticos en cualquier parte del mundo con la misma filosofía: control, cercanía, eficiencia y compromiso.",
-    ctaButton: "Conocer nuestras oficinas →"
+      "Analizamos su cadena de suministro, mercados, necesidades operativas y objetivos de crecimiento para identificar cómo Across Logistics puede aportar control, eficiencia y escalabilidad.",
+    ctaPrimary: "Hablar con un especialista",
+    ctaSecondary: "Ver oficinas",
   },
+
   en: {
     eyebrow: "ABOUT US",
-    title: "Integrated logistics solutions for companies operating without borders.",
+    title: "International logistics for companies that need control, precision and global operational capacity.",
     description:
-      "Across Logistics was created to solve complex international operations with clarity, efficiency and control. We do not transfer problems to our clients: we design executable logistics solutions.",
-    primary: "Request information",
+      "We connect companies, markets and supply chains through integrated logistics solutions, combining international coverage, operational expertise, technology, documentation compliance and specialized support.",
+    primary: "Explore our solutions",
     secondary: "View offices",
+
     blockEyebrow: "ACROSS LOGISTICS",
-    blockTitle: "Transport, customs, warehousing and distribution under one vision.",
+    blockTitle: "International logistics with operational vision and long-term commitment.",
     blockText:
-      "We advise, organize and coordinate international operations applying global trade standards so every shipment reaches its destination as quickly as possible and in perfect condition.",
+      "Across Logistics supports companies that need to move cargo with security, control and efficiency. We coordinate transport, customs, warehousing, distribution and special operations for domestic and international supply chains.",
+
     servicesIntro:
-      "Our structure combines expert teams, international credentials and a global network ready to respond wherever the operation requires.",
+      "Our way of working combines expert teams, international network, certifications and operational methodology to respond with precision in every market.",
     servicesTitle: "What defines the way we operate.",
+
     services: [
-      ["Integrated solutions", "We design complete operations: transport, documentation, customs, warehousing and distribution."],
-      ["Global network", "Offices, agents and partners connected across Europe, Asia, the Middle East and America."],
-      ["International credentials", "AEO, ISO 9001, IATA and GDP support safety, quality and compliance."],
-      ["Specialized team", "Professionals in international trade, operations, customs and global coordination."],
-      ["Operational control", "Tracking, traceability and clear communication throughout the operation."],
-      ["Sustainability", "Multimodal solutions and a responsible vision to reduce impact and improve efficiency."]
+      [
+        "Integrated solutions",
+        "We design complete operations connecting transport, documentation, customs, warehousing and distribution.",
+      ],
+      [
+        "International network",
+        "Offices, agents and partners connected across Europe, Asia, the Middle East and America.",
+      ],
+      [
+        "International credentials",
+        "AEO, ISO 9001, IATA and GDP support safety, quality, compliance and operational trust.",
+      ],
+      [
+        "Specialized team",
+        "Professionals in international trade, operations, customs, global coordination and regulated sectors.",
+      ],
+      [
+        "Operational control",
+        "Tracking, traceability, clear communication and coordination throughout the full logistics operation.",
+      ],
+      [
+        "Sustainable vision",
+        "Multimodal solutions and a responsible approach to improve efficiency and reduce operational impact.",
+      ],
     ],
-    ctaEyebrow: "Across the world",
-    ctaTitle: "A global network with a shared methodology and local teams.",
+
+    teamEyebrow: "OUR TEAM",
+    teamTitle: "Global leadership, local expertise and international coordination.",
+    teamText:
+      "A management team connected across offices, countries and operational areas to respond with precision in every market.",
+
+    ctaEyebrow: "INTERNATIONAL NETWORK",
+    ctaTitle: "Connect your operation with our logistics network.",
     ctaText:
-      "Our international structure allows us to provide logistics services anywhere in the world with the same philosophy: control, proximity, efficiency and commitment.",
-    ctaButton: "Explore our offices →"
+      "We analyze your supply chain, markets, operational needs and growth objectives to identify how Across Logistics can deliver control, efficiency and scalability.",
+    ctaPrimary: "Talk to a specialist",
+    ctaSecondary: "View offices",
   },
+
   zh: {
     eyebrow: "关于我们",
-    title: "为无边界运营企业提供一体化物流解决方案。",
+    title: "为需要控制力、精准度和全球运营能力的企业提供国际物流服务。",
     description:
-      "Across Logistics 致力于以清晰、高效和可控的方式解决复杂国际物流业务。我们不把问题转嫁给客户，而是设计可执行的物流方案。",
-    primary: "申请信息",
+      "我们通过一体化物流解决方案连接企业、市场与供应链，结合国际覆盖、运营经验、技术、文件合规和专业支持。",
+    primary: "了解我们的解决方案",
     secondary: "查看办公室",
+
     blockEyebrow: "ACROSS LOGISTICS",
-    blockTitle: "以统一视角协调运输、海关、仓储与配送。",
+    blockTitle: "具备运营视野与长期承诺的国际物流。",
     blockText:
-      "我们按照国际贸易标准组织和协调全球物流业务，确保每票货物以最快速度、安全并以最佳状态到达目的地。",
+      "Across Logistics 支持需要以安全、控制和效率运输货物的企业。我们为国内与国际供应链协调运输、海关、仓储、配送和特殊物流操作。",
+
     servicesIntro:
-      "我们的结构结合专业团队、国际资质与全球网络，可在业务需要的任何地点快速响应。",
+      "我们的工作方式结合专业团队、国际网络、认证资质和运营方法论，以便在每个市场精准响应。",
     servicesTitle: "定义我们运营方式的核心能力。",
+
     services: [
-      ["一体化解决方案", "我们设计完整业务：运输、文件、海关、仓储与配送。"],
-      ["全球网络", "连接欧洲、亚洲、中东和美洲的办公室、代理与合作伙伴。"],
-      ["国际资质", "AEO、ISO 9001、IATA 与 GDP 支持安全、质量与合规。"],
-      ["专业团队", "国际贸易、运营、海关与全球协调领域的专业人员。"],
-      ["运营控制", "全流程追踪、可视化和清晰沟通。"],
-      ["可持续发展", "通过多式联运和负责任方案降低影响并提升效率。"]
+      [
+        "一体化解决方案",
+        "我们设计完整业务，连接运输、文件、海关、仓储与配送。",
+      ],
+      [
+        "国际网络",
+        "连接欧洲、亚洲、中东和美洲的办公室、代理与合作伙伴。",
+      ],
+      [
+        "国际资质",
+        "AEO、ISO 9001、IATA 与 GDP 支持安全、质量、合规和运营信任。",
+      ],
+      [
+        "专业团队",
+        "国际贸易、运营、海关、全球协调和受监管行业领域的专业人员。",
+      ],
+      [
+        "运营控制",
+        "在整个物流操作中提供跟踪、可追溯性、清晰沟通和协调。",
+      ],
+      [
+        "可持续视野",
+        "通过多式联运和负责任方法提升效率并降低运营影响。",
+      ],
     ],
-    ctaEyebrow: "全球网络",
-    ctaTitle: "统一方法论与本地团队组成的全球网络。",
+
+    teamEyebrow: "我们的团队",
+    teamTitle: "全球管理、本地经验与国际协调。",
+    teamText:
+      "连接各办公室、国家和运营领域的管理团队，能够在每个市场精准响应。",
+
+    ctaEyebrow: "国际网络",
+    ctaTitle: "将您的业务连接到我们的物流网络。",
     ctaText:
-      "我们的国际结构让我们能够在世界任何地方提供物流服务，并保持同样的理念：控制、贴近、高效与承诺。",
-    ctaButton: "查看我们的办公室 →"
-  }
+      "我们分析您的供应链、市场、运营需求和增长目标，识别 Across Logistics 如何为您提供控制、效率和可扩展性。",
+    ctaPrimary: "联系专家",
+    ctaSecondary: "查看办公室",
+  },
 } as const;
+
+function getInitialLocale(): Locale {
+  if (typeof window === "undefined") return "es";
+
+  const saved =
+    window.localStorage.getItem("locale") ||
+    window.localStorage.getItem("across-locale");
+
+  if (saved === "en" || saved === "zh" || saved === "es") return saved;
+
+  const htmlLang = document.documentElement.lang;
+  if (htmlLang === "en" || htmlLang === "zh" || htmlLang === "es") return htmlLang;
+
+  return "es";
+}
 
 export default function QuienesSomosPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
-    const saved = window.localStorage.getItem("across-locale") as Locale | null;
-    if (saved && saved in copy) setLocale(saved);
+    const updateLocale = (event?: Event) => {
+      const rawDetail = event instanceof CustomEvent ? event.detail : null;
 
-    const handler = (event: Event) => {
-      const next = (event as CustomEvent<Locale>).detail;
-      if (next && next in copy) setLocale(next);
+      const next =
+        typeof rawDetail === "string"
+          ? rawDetail
+          : rawDetail && typeof rawDetail === "object" && "locale" in rawDetail
+            ? String((rawDetail as { locale?: unknown }).locale)
+            : rawDetail && typeof rawDetail === "object" && "language" in rawDetail
+              ? String((rawDetail as { language?: unknown }).language)
+              : null;
+
+      if (next === "es" || next === "en" || next === "zh") {
+        setLocale(next);
+        return;
+      }
+
+      setLocale(getInitialLocale());
     };
 
-    window.addEventListener("across-locale-change", handler);
-    return () => window.removeEventListener("across-locale-change", handler);
+    updateLocale();
+
+    window.addEventListener("storage", updateLocale);
+    window.addEventListener("languagechange", updateLocale);
+    window.addEventListener("localechange", updateLocale);
+    window.addEventListener("across-language-change", updateLocale);
+    window.addEventListener("across-locale-change", updateLocale);
+
+    return () => {
+      window.removeEventListener("storage", updateLocale);
+      window.removeEventListener("languagechange", updateLocale);
+      window.removeEventListener("localechange", updateLocale);
+      window.removeEventListener("across-language-change", updateLocale);
+      window.removeEventListener("across-locale-change", updateLocale);
+    };
   }, []);
 
   const t = copy[locale];
@@ -142,7 +395,7 @@ export default function QuienesSomosPage() {
       <section className={styles.hero}>
         <Image
           src="/images/quienes1.png"
-          alt="Across Logistics quienes somos"
+          alt={t.title}
           fill
           priority
           className={styles.heroImage}
@@ -157,7 +410,7 @@ export default function QuienesSomosPage() {
           <p>{t.description}</p>
 
           <div className={styles.actions}>
-            <Link href="/contacto">{t.primary}</Link>
+            <Link href="/servicios">{t.primary}</Link>
             <Link href="/empresa/oficinas">{t.secondary}</Link>
           </div>
         </div>
@@ -193,7 +446,7 @@ export default function QuienesSomosPage() {
           <div className={styles.servicesImageWrap}>
             <Image
               src="/images/quienes2.png"
-              alt="Across Logistics global team"
+              alt={t.servicesTitle}
               fill
               className={styles.servicesImage}
               sizes="(max-width: 900px) 100vw, 50vw"
@@ -201,23 +454,22 @@ export default function QuienesSomosPage() {
           </div>
         </section>
 
-
         <section className={styles.teamSection}>
           <div className={styles.teamHead}>
-            <span>NUESTRO EQUIPO</span>
-            <h2>Dirección global, experiencia local y coordinación internacional.</h2>
-            <p>
-              Un equipo directivo conectado entre oficinas, países y áreas operativas
-              para responder con precisión en cada mercado.
-            </p>
+            <span>{t.teamEyebrow}</span>
+            <h2>{t.teamTitle}</h2>
+            <p>{t.teamText}</p>
           </div>
 
           <div className={styles.teamGrid}>
-            {team.map(([name, position, image]) => (
-              <article key={`${name}-${position}`} className={styles.teamCard}>
+            {team.map((person) => (
+              <article
+                key={`${person.name}-${person.position.en}`}
+                className={styles.teamCard}
+              >
                 <Image
-                  src={image}
-                  alt={name}
+                  src={person.image}
+                  alt={person.name}
                   fill
                   className={styles.teamImage}
                   sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 25vw"
@@ -226,19 +478,25 @@ export default function QuienesSomosPage() {
                 <div className={styles.teamOverlay} />
 
                 <div className={styles.teamInfo}>
-                  <h3>{name}</h3>
-                  <p>{position}</p>
+                  <h3>{person.name}</h3>
+                  <p>{person.position[locale]}</p>
                 </div>
               </article>
             ))}
           </div>
         </section>
 
-        <section className={styles.cta}>
-          <span>{t.ctaEyebrow}</span>
-          <h2>{t.ctaTitle}</h2>
-          <p>{t.ctaText}</p>
-          <Link href="/empresa/oficinas">{t.ctaButton}</Link>
+        <section className={styles.compactCta}>
+          <div>
+            <span>{t.ctaEyebrow}</span>
+            <h2>{t.ctaTitle}</h2>
+            <p>{t.ctaText}</p>
+          </div>
+
+          <div className={styles.compactCtaActions}>
+            <Link href="/contacto">{t.ctaPrimary}</Link>
+            <Link href="/empresa/oficinas">{t.ctaSecondary}</Link>
+          </div>
         </section>
       </main>
 

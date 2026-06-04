@@ -70,7 +70,7 @@
 
 .titleBlock h2 {
   margin: 0;
-  color: #bc496b;
+  color: #e11343f2;
   font-size: clamp(2.2rem, 4vw, 4.4rem);
   letter-spacing: -.07em;
   line-height: .92;
@@ -140,7 +140,7 @@
 
 .postBody h3 {
   margin: 0 0 1rem;
-  color: #bc496b;
+  color: #e11343f2;
   font-size: 1.35rem;
   line-height: 1.15;
   letter-spacing: -.04em;
@@ -162,7 +162,7 @@
   margin-top: auto;
   align-self: flex-end;
   padding: .55rem .7rem;
-  background: #c84d71;
+  background: #e11343f2;
   color: #fff;
   font-size: .78rem;
   font-weight: 950;
@@ -177,7 +177,7 @@
 .sidebar h3 {
   margin: 0;
   padding: .78rem 1rem;
-  background: #c84d71;
+  background: #e11343f2;
   color: #fff;
   font-size: .9rem;
   letter-spacing: .05em;
@@ -189,7 +189,7 @@
   border: 0;
   border-bottom: 1px solid rgba(0,0,0,.35);
   background: transparent;
-  color: #bc496b;
+  color: #e11343f2;
   text-align: left;
   padding: 1rem .8rem;
   cursor: pointer;
@@ -199,7 +199,7 @@
 .sidebar button:hover,
 .sidebar .active {
   color: #111;
-  background: rgba(188,73,107,.08);
+  background: rgba(225,19,67,.08);
 }
 
 .loading {

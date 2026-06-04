@@ -13,104 +13,197 @@ type Locale = "es" | "en" | "zh";
 const copy = {
   es: {
     eyebrow: "SEA FREIGHT",
-    heroTitle: "Transporte marítimo global, seguro y competitivo.",
+    heroTitle: "Transporte marítimo internacional para cargas de gran volumen.",
     heroText:
-      "Movemos cargas FCL, LCL, RO/RO y proyectos especiales con cobertura internacional, control documental y planificación operativa de principio a fin.",
-    quote: "Solicitar cotización",
+      "Coordinamos soluciones marítimas globales para cargas FCL, LCL, RO/RO, mercancías especiales y proyectos internacionales que requieren planificación, control documental y trazabilidad de origen a destino.",
+    quote: "Solicitar cotización marítima",
     specialist: "Hablar con un especialista",
-    blockEyebrow: "OPERACIÓN MARÍTIMA INTERNACIONAL",
-    blockTitle: "Más alcance, menor coste y máxima visibilidad para su carga.",
+
+    blockEyebrow: "OPERACIÓN MARÍTIMA GLOBAL",
+    blockTitle: "Gestione sus operaciones marítimas con cobertura, control y precisión.",
     blockText:
-      "Diseñamos operaciones marítimas para empresas que necesitan mover mercancía internacional sin perder control: rutas, documentación, modalidad de carga, coordinación portuaria y entrega final.",
+      "Diseñamos operaciones marítimas internacionales combinando planificación de rutas, coordinación portuaria, gestión documental y seguimiento operativo para cargas contenerizadas, consolidadas y especiales.",
+
     servicesIntro:
-      "Elija la modalidad adecuada para su operación y deje la coordinación completa en manos de un equipo especializado.",
-    servicesTitle: "Nuestros servicios para transporte marítimo.",
-    ctaEyebrow: "Cotización express",
-    ctaTitle: "Coordinemos su próxima operación marítima internacional.",
+      "Coordinamos soluciones marítimas para cargas completas, consolidadas, mercancías especiales y operaciones puerta a puerta, optimizando tiempos, costes y control documental.",
+    servicesTitle: "Servicios marítimos adaptados a cada operación internacional.",
+
+    ctaEyebrow: "RED MARÍTIMA INTERNACIONAL",
+    ctaTitle: "Operaciones marítimas conectadas con puertos y oficinas estratégicas.",
     ctaText:
-      "Analizamos origen, destino, volumen, tipo de carga y urgencia para preparar una propuesta clara, rápida y viable.",
-    ctaButton: "Solicitar propuesta →",
+      "Coordinamos cargas FCL, LCL y proyectos especiales con soporte documental, gestión aduanera y seguimiento operativo internacional.",
+    ctaPrimary: "Cotizar carga marítima",
+    ctaSecondary: "Ver oficinas",
+
     services: [
-      ["Carga peligrosa / IMO", "Gestión especializada de mercancías IMO con protocolos internacionales de seguridad."],
-      ["Equipos especiales / OT · RF · FR · OOG", "Coordinación para carga sobredimensionada, refrigerada y proyectos complejos."],
-      ["Cargas convencionales y RO/RO", "Operaciones para vehículos, maquinaria y carga general."],
-      ["Contenedores completos / FCL", "Servicios FCL para exportaciones e importaciones de alto volumen."],
-      ["Grupaje marítimo / LCL", "Consolidación de mercancías para reducir costos manteniendo control."],
-      ["Chartering marítimo", "Soluciones personalizadas para operaciones especiales y gran escala."],
+      [
+        "FCL - Contenedor completo",
+        "Soluciones marítimas para cargas que requieren contenedor exclusivo, mayor control operativo y planificación directa desde origen hasta destino.",
+      ],
+      [
+        "LCL - Carga consolidada",
+        "Alternativa eficiente para mercancías de menor volumen, compartiendo espacio en contenedor con trazabilidad y coordinación documental.",
+      ],
+      [
+        "Mercancía peligrosa / IMO",
+        "Gestión especializada de mercancías IMO con protocolos internacionales de seguridad, revisión documental y coordinación operativa segura.",
+      ],
+      [
+        "Equipos especiales / OT · RF · FR · OOG",
+        "Coordinación para carga sobredimensionada, refrigerada, pesada o sensible que requiere planificación técnica y manipulación especializada.",
+      ],
+      [
+        "RO/RO y carga convencional",
+        "Operaciones para vehículos, maquinaria, carga rodante y mercancía general con coordinación portuaria internacional.",
+      ],
+      [
+        "Chartering marítimo",
+        "Soluciones personalizadas para operaciones especiales, proyectos de gran escala y cargas que requieren capacidad dedicada.",
+      ],
     ],
   },
+
   en: {
     eyebrow: "SEA FREIGHT",
-    heroTitle: "Global, secure and competitive ocean freight.",
+    heroTitle: "International ocean freight for high-volume cargo.",
     heroText:
-      "We move FCL, LCL, RO/RO and project cargo operations with international coverage, documentation control and end-to-end operational planning.",
-    quote: "Request quotation",
+      "We coordinate global ocean freight solutions for FCL, LCL, RO/RO, special cargo and international projects that require planning, documentation control and traceability from origin to destination.",
+    quote: "Request ocean quotation",
     specialist: "Talk to a specialist",
-    blockEyebrow: "INTERNATIONAL OCEAN OPERATIONS",
-    blockTitle: "Greater reach, lower cost and full visibility for your cargo.",
+
+    blockEyebrow: "GLOBAL OCEAN OPERATIONS",
+    blockTitle: "Manage your ocean freight operations with coverage, control and precision.",
     blockText:
-      "We design ocean freight operations for companies that need to move international cargo without losing control: routes, documentation, cargo mode, port coordination and final delivery.",
+      "We design international ocean freight operations by combining route planning, port coordination, documentation management and operational tracking for containerized, consolidated and special cargo.",
+
     servicesIntro:
-      "Choose the right modality for your operation and let a specialized team coordinate the full process.",
-    servicesTitle: "Our ocean freight services.",
-    ctaEyebrow: "Express quotation",
-    ctaTitle: "Let’s coordinate your next international ocean freight operation.",
+      "We coordinate ocean freight solutions for full loads, consolidated cargo, special goods and door-to-door operations, optimizing transit times, costs and documentation control.",
+    servicesTitle: "Ocean freight services adapted to each international operation.",
+
+    ctaEyebrow: "INTERNATIONAL OCEAN NETWORK",
+    ctaTitle: "Ocean operations connected with strategic ports and offices.",
     ctaText:
-      "We analyze origin, destination, volume, cargo type and urgency to prepare a clear, fast and viable proposal.",
-    ctaButton: "Request proposal →",
+      "We coordinate FCL, LCL and special project cargo with documentation support, customs management and international operational tracking.",
+    ctaPrimary: "Quote ocean cargo",
+    ctaSecondary: "View offices",
+
     services: [
-      ["Dangerous goods / IMO", "Specialized management of IMO cargo with international safety protocols."],
-      ["Special equipment / OT · RF · FR · OOG", "Coordination for oversized, refrigerated and complex project cargo."],
-      ["Conventional cargo and RO/RO", "Operations for vehicles, machinery and general cargo."],
-      ["Full container load / FCL", "FCL services for high-volume imports and exports."],
-      ["Less than container load / LCL", "Cargo consolidation to reduce costs while maintaining control."],
-      ["Ocean chartering", "Tailored ocean freight solutions for special operations and large-scale projects."],
+      [
+        "FCL - Full container load",
+        "Ocean freight solutions for cargo requiring an exclusive container, greater operational control and direct planning from origin to destination.",
+      ],
+      [
+        "LCL - Consolidated cargo",
+        "An efficient alternative for lower-volume shipments, sharing container space with traceability and documentation coordination.",
+      ],
+      [
+        "Dangerous goods / IMO",
+        "Specialized management of IMO cargo with international safety protocols, documentation review and safe operational coordination.",
+      ],
+      [
+        "Special equipment / OT · RF · FR · OOG",
+        "Coordination for oversized, refrigerated, heavy or sensitive cargo requiring technical planning and specialized handling.",
+      ],
+      [
+        "RO/RO and conventional cargo",
+        "Operations for vehicles, machinery, rolling cargo and general goods with international port coordination.",
+      ],
+      [
+        "Ocean chartering",
+        "Tailored solutions for special operations, large-scale projects and cargo requiring dedicated capacity.",
+      ],
     ],
   },
+
   zh: {
     eyebrow: "海运物流",
-    heroTitle: "全球化、安全且高效的海运解决方案。",
+    heroTitle: "面向大批量货物的国际海运解决方案。",
     heroText:
-      "我们提供 FCL、LCL、RO/RO 及项目货运服务，覆盖国际运输、文件控制与全流程运营规划。",
-    quote: "申请报价",
+      "我们为 FCL、LCL、RO/RO、特殊货物和国际项目协调全球海运方案，提供从始发地到目的地的规划、文件控制和可追溯性。",
+    quote: "申请海运报价",
     specialist: "联系专家",
-    blockEyebrow: "国际海运运营",
-    blockTitle: "更广覆盖、更低成本，并为您的货物提供全程可视化。",
+
+    blockEyebrow: "全球海运运营",
+    blockTitle: "以覆盖能力、运营控制和精准执行管理您的海运业务。",
     blockText:
-      "我们为需要在国际范围内运输货物且保持全程控制的企业设计海运方案：航线、文件、装载方式、港口协调与最终交付。",
+      "我们通过航线规划、港口协调、文件管理和运营跟踪，为集装箱货物、拼箱货物和特殊货物设计国际海运操作。",
+
     servicesIntro:
-      "选择适合您业务的运输模式，由专业团队负责完整协调。",
-    servicesTitle: "我们的海运服务。",
-    ctaEyebrow: "快速报价",
-    ctaTitle: "让我们协调您的下一次国际海运业务。",
+      "我们为整箱、拼箱、特殊货物和门到门业务协调海运方案，优化运输时间、成本和文件控制。",
+    servicesTitle: "适用于不同国际业务的海运服务。",
+
+    ctaEyebrow: "国际海运网络",
+    ctaTitle: "连接战略港口与办公室的海运操作。",
     ctaText:
-      "我们会分析起运地、目的地、体积、货物类型与时效要求，为您准备清晰、快速且可执行的方案。",
-    ctaButton: "申请方案 →",
+      "我们为 FCL、LCL 和特殊项目货物提供文件支持、清关管理和国际运营跟踪。",
+    ctaPrimary: "获取海运报价",
+    ctaSecondary: "查看办公室",
+
     services: [
-      ["危险品 / IMO", "按照国际安全标准管理 IMO 危险品货物。"],
-      ["特殊设备 / OT · RF · FR · OOG", "协调超限、冷藏及复杂项目货物。"],
-      ["普通货物与 RO/RO", "车辆、机械及普通货物的海运操作。"],
-      ["整箱运输 / FCL", "面向大批量进出口业务的整箱运输服务。"],
-      ["拼箱运输 / LCL", "通过货物拼箱降低成本，同时保持运输控制。"],
-      ["海运包船", "为特殊操作与大型项目提供定制化海运方案。"],
+      [
+        "FCL - 整箱运输",
+        "为需要专属集装箱、更高运营控制和从始发地到目的地直接规划的货物提供海运方案。",
+      ],
+      [
+        "LCL - 拼箱运输",
+        "适用于较小体积货物的高效方案，通过共享集装箱空间实现可追溯运输和文件协调。",
+      ],
+      [
+        "危险品 / IMO",
+        "按照国际安全标准专业管理 IMO 危险品，包括文件审核和安全运营协调。",
+      ],
+      [
+        "特殊设备 / OT · RF · FR · OOG",
+        "协调超限、冷藏、重型或敏感货物，提供技术规划和专业装卸支持。",
+      ],
+      [
+        "RO/RO 与普通货物",
+        "为车辆、机械、滚装货物和普通货物提供国际港口协调操作。",
+      ],
+      [
+        "海运包船",
+        "为特殊操作、大型项目和需要专属运力的货物提供定制化海运方案。",
+      ],
     ],
   },
 } as const;
+
+function getInitialLocale(): Locale {
+  if (typeof window === "undefined") return "es";
+
+  const saved =
+    window.localStorage.getItem("locale") ||
+    window.localStorage.getItem("across-locale");
+
+  if (saved === "en" || saved === "zh" || saved === "es") return saved;
+
+  const htmlLang = document.documentElement.lang;
+  if (htmlLang === "en" || htmlLang === "zh" || htmlLang === "es") return htmlLang;
+
+  return "es";
+}
 
 export default function TransporteMaritimoPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
-    const saved = window.localStorage.getItem("across-locale") as Locale | null;
-    if (saved && saved in copy) setLocale(saved);
+    const updateLocale = () => setLocale(getInitialLocale());
 
-    const handler = (event: Event) => {
-      const next = (event as CustomEvent<Locale>).detail;
-      if (next && next in copy) setLocale(next);
+    updateLocale();
+
+    window.addEventListener("storage", updateLocale);
+    window.addEventListener("languagechange", updateLocale);
+    window.addEventListener("localechange", updateLocale);
+    window.addEventListener("across-language-change", updateLocale);
+    window.addEventListener("across-locale-change", updateLocale);
+
+    return () => {
+      window.removeEventListener("storage", updateLocale);
+      window.removeEventListener("languagechange", updateLocale);
+      window.removeEventListener("localechange", updateLocale);
+      window.removeEventListener("across-language-change", updateLocale);
+      window.removeEventListener("across-locale-change", updateLocale);
     };
-
-    window.addEventListener("across-locale-change", handler);
-    return () => window.removeEventListener("across-locale-change", handler);
   }, []);
 
   const t = copy[locale];
@@ -120,7 +213,14 @@ export default function TransporteMaritimoPage() {
       <Header />
 
       <section className={styles.hero}>
-        <Image src="/images/maritimo.png" alt="Transporte marítimo" fill priority className={styles.heroImage} sizes="100vw" />
+        <Image
+          src="/images/maritimo.png"
+          alt={t.heroTitle}
+          fill
+          priority
+          className={styles.heroImage}
+          sizes="100vw"
+        />
         <div className={styles.heroOverlay} />
 
         <div className={styles.heroContent}>
@@ -164,7 +264,7 @@ export default function TransporteMaritimoPage() {
           <div className={styles.servicesImageWrap}>
             <Image
               src="/images/transportemaritimo.png"
-              alt="Operación marítima"
+              alt={t.servicesTitle}
               fill
               className={styles.servicesImage}
               sizes="(max-width: 900px) 100vw, 50vw"
@@ -172,11 +272,17 @@ export default function TransporteMaritimoPage() {
           </div>
         </section>
 
-        <section className={styles.cta}>
-          <span>{t.ctaEyebrow}</span>
-          <h2>{t.ctaTitle}</h2>
-          <p>{t.ctaText}</p>
-          <Link href="/cotizacion">{t.ctaButton}</Link>
+        <section className={styles.compactCta}>
+          <div>
+            <span>{t.ctaEyebrow}</span>
+            <h2>{t.ctaTitle}</h2>
+            <p>{t.ctaText}</p>
+          </div>
+
+          <div className={styles.compactCtaActions}>
+            <Link href="/cotizacion">{t.ctaPrimary}</Link>
+            <Link href="/empresa/oficinas">{t.ctaSecondary}</Link>
+          </div>
         </section>
       </main>
 

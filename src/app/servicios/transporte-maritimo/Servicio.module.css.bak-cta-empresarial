@@ -884,625 +884,476 @@
 }
 
 
-/* RESPONSIVE SERVICE PAGES — DESKTOP / TABLET / MOBILE / IPHONE PRO MAX */
-
-@media (min-width: 1440px) {
-  .hero {
-    min-height: 82vh;
-    padding: 10rem 6vw 7rem;
-  }
-
-  .heroContent h1 {
-    font-size: clamp(4rem, 5.6vw, 6.8rem);
-  }
-
-  .servicesPanel,
-  .block,
-  .related,
-  .cta {
-    width: min(1240px, calc(100% - 72px));
-  }
+.heroBg{
+  object-fit:cover!important;
+  object-position:center!important;
+  filter:brightness(.58) contrast(1.08) saturate(1.08)!important;
+  transform:scale(1.02)!important;
 }
 
-@media (max-width: 1180px) {
-  .hero {
-    min-height: 74vh;
-    padding: 8rem 5vw 5rem;
-  }
-
-  .servicesPanel {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  .servicesImageWrap {
-    min-height: 520px;
-  }
-
-  .relatedGrid {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    min-height: 78vh;
-    padding: 7.5rem 20px 4rem;
-  }
-
-  .heroContent h1 {
-    font-size: clamp(2.9rem, 12vw, 4.8rem);
-    line-height: .92;
-  }
-
-  .heroContent p {
-    font-size: 1rem;
-    line-height: 1.65;
-  }
-
-  .actions {
-    gap: .7rem;
-  }
-
-  .actions a,
-  .cta a {
-    width: 100%;
-  }
-
-  .block,
-  .cta {
-    padding: 1.7rem;
-  }
-
-  .servicesCopy h2,
-  .block h2,
-  .cta h2 {
-    font-size: clamp(2rem, 10vw, 3.2rem);
-  }
-
-  .servicesImageWrap {
-    min-height: 360px;
-  }
-
-  .relatedGrid {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-@media (max-width: 430px) {
-  .hero {
-    min-height: 82vh;
-    padding: 7rem 16px 3.5rem;
-  }
-
-  .heroContent > span,
-  .block > span,
-  .cta > span {
-    font-size: .66rem;
-    letter-spacing: .14em;
-  }
-
-  .heroContent h1 {
-    font-size: clamp(2.65rem, 13.5vw, 4rem);
-  }
-
-  .heroContent p {
-    font-size: .96rem;
-  }
-
-  .block,
-  .servicesPanel,
-  .related,
-  .cta {
-    width: calc(100% - 24px);
-  }
-
-  .serviceItem summary {
-    padding: 1.25rem 0;
-  }
-
-  .serviceItem h3 {
-    font-size: .96rem;
-  }
-}
-
-.servicesPanelReverse {
-  margin-top: 5rem;
-}
-
-@media (max-width: 900px) {
-  .servicesPanelReverse {
-    margin-top: 2.5rem;
-  }
-}
-
-.servicesPanel {
-  align-items: center;
-  gap: clamp(2rem, 4vw, 5rem);
-  margin-top: 5rem;
-}
-
-.servicesImageWrap {
-  position: relative;
-  min-height: 520px;
-  border-radius: 2rem;
-  overflow: hidden;
-
-  border: 1px solid rgba(255,255,255,.08);
-
+.heroOverlay{
   background:
-    linear-gradient(
-      135deg,
-      rgba(255,255,255,.04),
-      rgba(255,255,255,.01)
-    );
-
-  box-shadow:
-    0 30px 80px rgba(0,0,0,.28),
-    0 0 0 1px rgba(255,255,255,.04),
-    0 0 80px rgba(120,0,30,.16);
-
-  isolation: isolate;
-}
-
-.servicesImageWrap::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-
-  background:
+    radial-gradient(circle at 85% 18%, rgba(190,18,55,.22), transparent 34rem),
+    linear-gradient(90deg,
+      rgba(5,6,9,.92) 0%,
+      rgba(5,6,9,.72) 32%,
+      rgba(5,6,9,.24) 58%,
+      rgba(5,6,9,.68) 100%
+    ),
     linear-gradient(
       180deg,
-      rgba(0,0,0,.06) 0%,
-      rgba(0,0,0,.32) 100%
-    );
-
-  pointer-events: none;
+      rgba(5,6,9,.12) 0%,
+      rgba(5,6,9,.48) 72%,
+      #07080b 100%
+    )!important;
 }
 
-.servicesImageWrap::after {
-  content: "";
-  position: absolute;
-  inset: auto 0 0 0;
-  height: 2px;
-  z-index: 3;
+/* FIX ACORDEON + BODY PREMIUM */
 
+.serviceBody {
   background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(193,25,62,.95),
-      transparent
-    );
-
-  opacity: .9;
+    radial-gradient(circle at 88% 0%, rgba(190,18,55,.16), transparent 34rem),
+    linear-gradient(180deg, #07080b 0%, #050608 100%) !important;
+  color: white !important;
+  display: grid !important;
+  grid-template-columns: 280px 1fr !important;
+  gap: 4rem !important;
+  padding: 6rem 5vw !important;
 }
 
-.servicesImage {
-  object-fit: cover;
-  transition:
-    transform .9s ease,
-    filter .6s ease;
+.sideMenu {
+  position: sticky !important;
+  top: 8rem !important;
+  height: fit-content !important;
+  display: grid !important;
+  gap: .65rem !important;
+  padding: 1rem !important;
+  border-radius: 26px !important;
+  background: rgba(255,255,255,.045) !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
 }
 
-.servicesImageWrap:hover .servicesImage {
-  transform: scale(1.04);
-  filter: brightness(1.05);
+.sideMenu a {
+  min-height: 48px !important;
+  padding: 0 1rem !important;
+  border-radius: 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  color: rgba(255,255,255,.72) !important;
+  text-decoration: none !important;
+  font-weight: 850 !important;
 }
 
-.servicesPanelReverse {
-  margin-top: 4rem;
+.sideMenu a:hover {
+  color: white !important;
+  background: rgba(255,35,82,.14) !important;
 }
 
-@media (max-width: 1200px) {
-  .servicesImageWrap {
-    min-height: 460px;
-  }
+.content {
+  display: grid !important;
+  gap: 6rem !important;
 }
 
-@media (max-width: 900px) {
-  .servicesImageWrap {
-    min-height: 360px;
-    border-radius: 1.5rem;
-  }
-
-  .servicesPanel,
-  .servicesPanelReverse {
-    margin-top: 2.5rem;
-  }
+.introBlock span,
+.solutions span,
+.cta span {
+  color: #d5a85b !important;
+  font-size: .76rem !important;
+  font-weight: 900 !important;
+  letter-spacing: .28em !important;
+  text-transform: uppercase !important;
 }
 
-@media (max-width: 640px) {
-  .servicesImageWrap {
-    min-height: 300px;
-  }
+.introBlock h2,
+.solutions h2,
+.cta h2 {
+  max-width: 940px !important;
+  margin: 1rem 0 0 !important;
+  font-family: var(--font-tight), system-ui, sans-serif !important;
+  font-size: clamp(3rem, 5vw, 6rem) !important;
+  font-weight: 300 !important;
+  line-height: .92 !important;
+  letter-spacing: -.08em !important;
+  color: white !important;
 }
 
-.teamSection {
-  width: min(1320px, calc(100% - 40px));
-  margin: 6rem auto;
+.introBlock p,
+.cta p {
+  max-width: 760px !important;
+  margin-top: 1.4rem !important;
+  color: rgba(255,255,255,.70) !important;
+  font-size: 1.08rem !important;
+  line-height: 1.85 !important;
 }
 
-.teamHead {
-  max-width: 920px;
-  margin-bottom: 2.5rem;
+.solutions {
+  display: grid !important;
+  grid-template-columns: .85fr 1.15fr !important;
+  gap: 3.5rem !important;
+  align-items: start !important;
 }
 
-.teamHead span {
-  color: #c7a25a;
-  font-size: .78rem;
-  font-weight: 900;
-  letter-spacing: .18em;
-  text-transform: uppercase;
+.accordion {
+  display: grid !important;
+  border-top: 1px solid rgba(255,255,255,.12) !important;
 }
 
-.teamHead h2 {
-  margin: 1rem 0 0;
-  color: #111;
-  font-size: clamp(2.4rem, 4.5vw, 5rem);
-  line-height: .95;
-  letter-spacing: -.07em;
+.accordion article {
+  min-height: 82px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0 1.1rem !important;
+  border-bottom: 1px solid rgba(255,255,255,.12) !important;
+  background: rgba(255,255,255,.025) !important;
+  transition: background .25s ease, padding-left .25s ease;
 }
 
-.teamHead p {
-  max-width: 720px;
-  color: rgba(0,0,0,.66);
-  font-size: 1.05rem;
-  line-height: 1.75;
-}
-
-.teamGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-}
-
-.teamCard {
-  position: relative;
-  min-height: 360px;
-  overflow: hidden;
-  border-radius: 30px;
-  background: #08090d;
-  border: 1px solid rgba(255,255,255,.1);
-  box-shadow: 0 24px 70px rgba(0,0,0,.18);
-  isolation: isolate;
-}
-
-.teamImage {
-  object-fit: cover;
-  filter: brightness(.84) contrast(1.06) saturate(1.04);
-  transition: transform .45s ease, filter .45s ease;
-}
-
-.teamOverlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
+.accordion article:hover {
+  padding-left: 1.6rem !important;
   background:
-    radial-gradient(circle at 82% 12%, rgba(200,16,46,.24), transparent 18rem),
-    linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.82));
+    linear-gradient(90deg, rgba(190,18,55,.18), rgba(255,255,255,.025)) !important;
 }
 
-.teamInfo {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-  padding: 1.4rem;
+.accordion strong {
+  color: white !important;
+  font-size: 1rem !important;
+  font-weight: 850 !important;
 }
 
-.teamInfo h3 {
-  margin: 0;
-  color: #fff;
-  font-size: 1.35rem;
-  letter-spacing: -.03em;
+.accordion span {
+  width: 34px !important;
+  height: 34px !important;
+  display: grid !important;
+  place-items: center !important;
+  border-radius: 999px !important;
+  color: #ff315d !important;
+  background: rgba(255,49,93,.10) !important;
+  border: 1px solid rgba(255,49,93,.22) !important;
+  font-size: 1.2rem !important;
 }
 
-.teamInfo p {
-  margin: .4rem 0 0;
-  color: rgba(255,255,255,.72);
-  line-height: 1.45;
+.cta {
+  padding: 4rem !important;
+  border-radius: 40px !important;
+  background:
+    radial-gradient(circle at 82% 12%, rgba(255,35,82,.22), transparent 24rem),
+    linear-gradient(145deg, rgba(18,18,24,.98), rgba(8,8,12,.95)) !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  box-shadow: 0 34px 100px rgba(0,0,0,.30) !important;
 }
 
-.teamCard:hover .teamImage {
-  transform: scale(1.07);
-  filter: brightness(.98) contrast(1.08) saturate(1.08);
-}
+@media (max-width: 950px) {
+  .serviceBody,
+  .solutions {
+    grid-template-columns: 1fr !important;
+  }
 
-@media (max-width: 1100px) {
-  .teamGrid {
-    grid-template-columns: repeat(2, 1fr);
+  .sideMenu {
+    position: static !important;
+  }
+
+  .serviceBody {
+    padding: 4rem 1.2rem !important;
   }
 }
 
-@media (max-width: 640px) {
-  .teamSection {
-    width: calc(100% - 24px);
-  }
+/* FIX ACORDEON + BODY PREMIUM */
 
-  .teamGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .teamCard {
-    min-height: 390px;
-  }
+.serviceBody {
+  background:
+    radial-gradient(circle at 88% 0%, rgba(190,18,55,.16), transparent 34rem),
+    linear-gradient(180deg, #07080b 0%, #050608 100%) !important;
+  color: white !important;
+  display: grid !important;
+  grid-template-columns: 280px 1fr !important;
+  gap: 4rem !important;
+  padding: 6rem 5vw !important;
 }
 
-/* Compact CTA strip for service pages */
-.compactCta {
-  margin: 0;
-  padding: 22px clamp(24px, 6vw, 72px);
-  background: linear-gradient(135deg, #170912 0%, #351326 100%);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
+.sideMenu {
+  position: sticky !important;
+  top: 8rem !important;
+  height: fit-content !important;
+  display: grid !important;
+  gap: .65rem !important;
+  padding: 1rem !important;
+  border-radius: 26px !important;
+  background: rgba(255,255,255,.045) !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
 }
 
-.compactCta span {
-  display: block;
-  margin-bottom: 8px;
-  color: #c8a24a;
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+.sideMenu a {
+  min-height: 48px !important;
+  padding: 0 1rem !important;
+  border-radius: 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  color: rgba(255,255,255,.72) !important;
+  text-decoration: none !important;
+  font-weight: 850 !important;
 }
 
-.compactCta h2 {
-  margin: 0;
-  max-width: 720px;
-  font-size: clamp(1.25rem, 2vw, 1.9rem);
-  line-height: 1;
-  letter-spacing: -0.04em;
+.sideMenu a:hover {
+  color: white !important;
+  background: rgba(255,35,82,.14) !important;
 }
 
-.compactCta p {
-  margin: 10px 0 0;
-  max-width: 720px;
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 0.86rem;
-  line-height: 1.45;
+.content {
+  display: grid !important;
+  gap: 6rem !important;
 }
 
-.compactCtaActions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
+.introBlock span,
+.solutions span,
+.cta span {
+  color: #d5a85b !important;
+  font-size: .76rem !important;
+  font-weight: 900 !important;
+  letter-spacing: .28em !important;
+  text-transform: uppercase !important;
 }
 
-.compactCtaActions a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 34px;
-  padding: 0 18px;
-  border-radius: 999px;
-  background: #d1113f;
-  color: #fff;
-  font-size: 0.78rem;
-  font-weight: 800;
-  text-decoration: none;
-  white-space: nowrap;
+.introBlock h2,
+.solutions h2,
+.cta h2 {
+  max-width: 940px !important;
+  margin: 1rem 0 0 !important;
+  font-family: var(--font-tight), system-ui, sans-serif !important;
+  font-size: clamp(3rem, 5vw, 6rem) !important;
+  font-weight: 300 !important;
+  line-height: .92 !important;
+  letter-spacing: -.08em !important;
+  color: white !important;
 }
 
-.compactCtaActions a:nth-child(2) {
-  background: rgba(255, 255, 255, 0.12);
-  color: #fff;
+.introBlock p,
+.cta p {
+  max-width: 760px !important;
+  margin-top: 1.4rem !important;
+  color: rgba(255,255,255,.70) !important;
+  font-size: 1.08rem !important;
+  line-height: 1.85 !important;
 }
 
-@media (max-width: 760px) {
-  .compactCta {
-    padding: 24px 18px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
+.solutions {
+  display: grid !important;
+  grid-template-columns: .85fr 1.15fr !important;
+  gap: 3.5rem !important;
+  align-items: start !important;
+}
+
+.accordion {
+  display: grid !important;
+  border-top: 1px solid rgba(255,255,255,.12) !important;
+}
+
+.accordion article {
+  min-height: 82px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0 1.1rem !important;
+  border-bottom: 1px solid rgba(255,255,255,.12) !important;
+  background: rgba(255,255,255,.025) !important;
+  transition: background .25s ease, padding-left .25s ease;
+}
+
+.accordion article:hover {
+  padding-left: 1.6rem !important;
+  background:
+    linear-gradient(90deg, rgba(190,18,55,.18), rgba(255,255,255,.025)) !important;
+}
+
+.accordion strong {
+  color: white !important;
+  font-size: 1rem !important;
+  font-weight: 850 !important;
+}
+
+.accordion span {
+  width: 34px !important;
+  height: 34px !important;
+  display: grid !important;
+  place-items: center !important;
+  border-radius: 999px !important;
+  color: #ff315d !important;
+  background: rgba(255,49,93,.10) !important;
+  border: 1px solid rgba(255,49,93,.22) !important;
+  font-size: 1.2rem !important;
+}
+
+.cta {
+  padding: 4rem !important;
+  border-radius: 40px !important;
+  background:
+    radial-gradient(circle at 82% 12%, rgba(255,35,82,.22), transparent 24rem),
+    linear-gradient(145deg, rgba(18,18,24,.98), rgba(8,8,12,.95)) !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  box-shadow: 0 34px 100px rgba(0,0,0,.30) !important;
+}
+
+@media (max-width: 950px) {
+  .serviceBody,
+  .solutions {
+    grid-template-columns: 1fr !important;
   }
 
-  .compactCtaActions {
-    width: 100%;
-    flex-wrap: wrap;
+  .sideMenu {
+    position: static !important;
   }
 
-  .compactCtaActions a {
-    flex: 1;
-  }
-}
-
-/* Extra breathing room after compact CTA */
-.compactCta + .related {
-  padding-top: clamp(56px, 7vw, 96px);
-}
-
-/* Mobile refinement for service hero and compact CTA */
-@media (max-width: 760px) {
-  .heroContent h1 {
-    font-size: clamp(2.6rem, 14vw, 4.4rem);
-    line-height: 0.95;
-  }
-
-  .heroContent p {
-    max-width: 100%;
-    font-size: 0.95rem;
-    line-height: 1.55;
-  }
-
-  .actions {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .actions a {
-    min-height: 42px;
-    white-space: normal;
-    text-align: center;
-  }
-
-  .servicesPanel {
-    gap: 32px;
-  }
-
-  .servicesCopy h2 {
-    font-size: clamp(2.2rem, 12vw, 3.8rem);
-    line-height: 0.98;
-  }
-
-  .compactCta h2 {
-    font-size: clamp(1.55rem, 8vw, 2.2rem);
-    line-height: 1.05;
-  }
-
-  .compactCtaActions a {
-    min-width: min(100%, 180px);
-  }
-}
-
-/* Fix CTA buttons inside light content sections */
-.content .actions {
-  margin-top: 28px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.content .actions a {
-  min-height: 42px;
-  padding: 0 22px;
-  border-radius: 999px;
-  background: #d1113f;
-  color: #fff;
-  font-size: 0.86rem;
-  font-weight: 800;
-  text-decoration: none;
-  box-shadow: 0 14px 32px rgba(209, 17, 63, 0.18);
-}
-
-.content .actions a:nth-child(2) {
-  background: rgba(17, 17, 17, 0.08);
-  color: #171717;
-  box-shadow: none;
-}
-
-.content .actions a:hover {
-  transform: translateY(-1px);
-}
-
-@media (max-width: 760px) {
-  .content .actions {
-    width: 100%;
-    gap: 10px;
-  }
-
-  .content .actions a {
-    flex: 1;
-    min-width: min(100%, 180px);
-    justify-content: center;
-    text-align: center;
+  .serviceBody {
+    padding: 4rem 1.2rem !important;
   }
 }
 
-/* Inline CTA actions inside sector/service content blocks */
-.inlineCtaActions {
-  width: min(100%, 1180px);
-  margin: 0 auto clamp(42px, 6vw, 72px);
-  padding: 0 clamp(24px, 6vw, 72px);
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 14px;
-  flex-wrap: wrap;
+/* FIX ACORDEON + BODY PREMIUM */
+
+.serviceBody {
+  background:
+    radial-gradient(circle at 88% 0%, rgba(190,18,55,.16), transparent 34rem),
+    linear-gradient(180deg, #07080b 0%, #050608 100%) !important;
+  color: white !important;
+  display: grid !important;
+  grid-template-columns: 280px 1fr !important;
+  gap: 4rem !important;
+  padding: 6rem 5vw !important;
 }
 
-.inlineCtaActions a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 42px;
-  padding: 0 24px;
-  border-radius: 999px;
-  background: #d1113f;
-  color: #fff;
-  font-size: 0.86rem;
-  font-weight: 800;
-  line-height: 1;
-  text-decoration: none;
-  white-space: nowrap;
-  box-shadow: 0 14px 32px rgba(209, 17, 63, 0.2);
+.sideMenu {
+  position: sticky !important;
+  top: 8rem !important;
+  height: fit-content !important;
+  display: grid !important;
+  gap: .65rem !important;
+  padding: 1rem !important;
+  border-radius: 26px !important;
+  background: rgba(255,255,255,.045) !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
 }
 
-.inlineCtaActions a:nth-child(2) {
-  background: rgba(17, 17, 17, 0.08);
-  color: #171717;
-  box-shadow: none;
+.sideMenu a {
+  min-height: 48px !important;
+  padding: 0 1rem !important;
+  border-radius: 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  color: rgba(255,255,255,.72) !important;
+  text-decoration: none !important;
+  font-weight: 850 !important;
 }
 
-@media (max-width: 760px) {
-  .inlineCtaActions {
-    width: 100%;
-    padding: 0 18px;
-    gap: 10px;
+.sideMenu a:hover {
+  color: white !important;
+  background: rgba(255,35,82,.14) !important;
+}
+
+.content {
+  display: grid !important;
+  gap: 6rem !important;
+}
+
+.introBlock span,
+.solutions span,
+.cta span {
+  color: #d5a85b !important;
+  font-size: .76rem !important;
+  font-weight: 900 !important;
+  letter-spacing: .28em !important;
+  text-transform: uppercase !important;
+}
+
+.introBlock h2,
+.solutions h2,
+.cta h2 {
+  max-width: 940px !important;
+  margin: 1rem 0 0 !important;
+  font-family: var(--font-tight), system-ui, sans-serif !important;
+  font-size: clamp(3rem, 5vw, 6rem) !important;
+  font-weight: 300 !important;
+  line-height: .92 !important;
+  letter-spacing: -.08em !important;
+  color: white !important;
+}
+
+.introBlock p,
+.cta p {
+  max-width: 760px !important;
+  margin-top: 1.4rem !important;
+  color: rgba(255,255,255,.70) !important;
+  font-size: 1.08rem !important;
+  line-height: 1.85 !important;
+}
+
+.solutions {
+  display: grid !important;
+  grid-template-columns: .85fr 1.15fr !important;
+  gap: 3.5rem !important;
+  align-items: start !important;
+}
+
+.accordion {
+  display: grid !important;
+  border-top: 1px solid rgba(255,255,255,.12) !important;
+}
+
+.accordion article {
+  min-height: 82px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0 1.1rem !important;
+  border-bottom: 1px solid rgba(255,255,255,.12) !important;
+  background: rgba(255,255,255,.025) !important;
+  transition: background .25s ease, padding-left .25s ease;
+}
+
+.accordion article:hover {
+  padding-left: 1.6rem !important;
+  background:
+    linear-gradient(90deg, rgba(190,18,55,.18), rgba(255,255,255,.025)) !important;
+}
+
+.accordion strong {
+  color: white !important;
+  font-size: 1rem !important;
+  font-weight: 850 !important;
+}
+
+.accordion span {
+  width: 34px !important;
+  height: 34px !important;
+  display: grid !important;
+  place-items: center !important;
+  border-radius: 999px !important;
+  color: #ff315d !important;
+  background: rgba(255,49,93,.10) !important;
+  border: 1px solid rgba(255,49,93,.22) !important;
+  font-size: 1.2rem !important;
+}
+
+.cta {
+  padding: 4rem !important;
+  border-radius: 40px !important;
+  background:
+    radial-gradient(circle at 82% 12%, rgba(255,35,82,.22), transparent 24rem),
+    linear-gradient(145deg, rgba(18,18,24,.98), rgba(8,8,12,.95)) !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  box-shadow: 0 34px 100px rgba(0,0,0,.30) !important;
+}
+
+@media (max-width: 950px) {
+  .serviceBody,
+  .solutions {
+    grid-template-columns: 1fr !important;
   }
 
-  .inlineCtaActions a {
-    flex: 1;
-    min-width: min(100%, 180px);
-    white-space: normal;
-    text-align: center;
-  }
-}
-
-/* CTA buttons inside dark service/sector blocks */
-.block .inlineCtaActions {
-  width: auto;
-  max-width: none;
-  margin: 32px 0 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.block .inlineCtaActions a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 42px;
-  padding: 0 24px;
-  border-radius: 999px;
-  background: #d1113f;
-  color: #fff;
-  font-size: 0.86rem;
-  font-weight: 800;
-  line-height: 1;
-  text-decoration: none;
-  white-space: nowrap;
-  box-shadow: 0 16px 34px rgba(209, 17, 63, 0.24);
-}
-
-.block .inlineCtaActions a:nth-child(2) {
-  background: rgba(255, 255, 255, 0.12);
-  color: #fff;
-  box-shadow: none;
-}
-
-@media (max-width: 760px) {
-  .block .inlineCtaActions {
-    width: 100%;
-    gap: 10px;
+  .sideMenu {
+    position: static !important;
   }
 
-  .block .inlineCtaActions a {
-    flex: 1;
-    min-width: min(100%, 180px);
-    white-space: normal;
-    text-align: center;
+  .serviceBody {
+    padding: 4rem 1.2rem !important;
   }
 }

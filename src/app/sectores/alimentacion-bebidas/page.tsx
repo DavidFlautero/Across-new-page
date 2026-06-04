@@ -15,219 +15,215 @@ type Locale = "es" | "en" | "zh";
 const copy = {
   es: {
     eyebrow: "FOOD & BEVERAGE LOGISTICS",
-
-    title:
-      "Logística especializada para alimentación y bebidas.",
-
+    title: "Logística para alimentación y bebidas con control, trazabilidad y cumplimiento.",
     description:
-      "Coordinamos operaciones logísticas para productos alimentarios y bebidas con control operativo, trazabilidad y máxima eficiencia en almacenamiento, transporte y distribución.",
-
-    primary: "Solicitar cotización",
+      "Coordinamos operaciones nacionales e internacionales para productos alimentarios, bebidas, perecederos y cadenas de suministro que requieren control documental, eficiencia operativa y visibilidad desde origen hasta destino.",
+    primary: "Solicitar solución logística",
     secondary: "Hablar con un especialista",
 
-    blockEyebrow: "OPERACIÓN ALIMENTARIA INTERNACIONAL",
-
-    blockTitle:
-      "Control, trazabilidad y rapidez para productos sensibles.",
-
+    blockEyebrow: "OPERACIÓN ALIMENTARIA ESPECIALIZADA",
+    blockTitle: "Logística segura para productos que requieren precisión y cumplimiento.",
     blockText:
-      "Gestionamos operaciones logísticas para el sector alimentación y bebidas garantizando cumplimiento sanitario, control documental y coordinación eficiente desde origen hasta entrega final.",
+      "Diseñamos soluciones para empresas de alimentación y bebidas integrando transporte, almacenaje, distribución, control documental, trazabilidad y coordinación internacional.",
 
     servicesIntro:
-      "Soluciones diseñadas para cadenas de suministro que requieren continuidad, seguridad y precisión operativa.",
-
-    servicesTitle:
-      "Servicios logísticos para alimentación y bebidas.",
+      "Soluciones diseñadas para cadenas alimentarias que requieren continuidad operativa, control de producto, documentación precisa y capacidad de respuesta.",
+    servicesTitle: "Servicios logísticos para cadenas de alimentación y bebidas.",
 
     services: [
       [
         "Distribución alimentaria",
-        "Coordinación de entregas nacionales e internacionales con control de tiempos y trazabilidad.",
+        "Coordinación de entregas nacionales e internacionales con control de tiempos, trazabilidad y continuidad operativa.",
       ],
       [
         "Gestión de inventario",
-        "Supervisión de stock y rotación para optimizar disponibilidad y reducir pérdidas.",
+        "Supervisión de stock, rotación y disponibilidad para optimizar flujos logísticos y reducir pérdidas.",
       ],
       [
         "Control documental",
-        "Gestión de documentación sanitaria y operativa para importación y exportación.",
+        "Gestión de documentación sanitaria, operativa y de comercio exterior para importación y exportación.",
       ],
       [
         "Operación multimodal",
-        "Integración entre transporte terrestre, marítimo y aéreo según necesidades operativas.",
+        "Integración entre transporte terrestre, marítimo y aéreo según producto, destino y tiempos requeridos.",
       ],
       [
         "Picking & packing",
-        "Preparación eficiente de pedidos para retail, distribución y e-commerce alimentario.",
+        "Preparación eficiente de pedidos para retail, distribución mayorista y e-commerce alimentario.",
       ],
       [
         "Control de calidad",
-        "Procesos de supervisión y validación para proteger integridad del producto.",
+        "Procesos de supervisión y validación para proteger la integridad del producto durante la operación.",
       ],
     ],
 
-    ctaEyebrow: "Cotización express",
-
-    ctaTitle:
-      "Optimice su cadena logística alimentaria.",
-
+    ctaEyebrow: "ALIMENTACIÓN Y BEBIDAS",
+    ctaTitle: "Planifique su operación con un equipo especializado.",
     ctaText:
-      "Analizamos producto, volumen, destinos y operación requerida para construir una solución logística rápida, segura y escalable.",
-
-    ctaButton: "Solicitar propuesta →",
+      "Analizamos tipo de producto, volumen, origen, destino, requisitos documentales, temperatura, rotación y tiempos de entrega para construir una solución segura, eficiente y escalable.",
+    ctaPrimary: "Evaluar operación alimentaria",
+    ctaSecondary: "Ver oficinas",
   },
 
   en: {
     eyebrow: "FOOD & BEVERAGE LOGISTICS",
-
-    title:
-      "Specialized logistics for food and beverage operations.",
-
+    title: "Food and beverage logistics with control, traceability and compliance.",
     description:
-      "We coordinate logistics operations for food and beverage products with operational control, traceability and maximum efficiency in storage, transportation and distribution.",
-
-    primary: "Request quotation",
+      "We coordinate domestic and international operations for food products, beverages, perishables and supply chains requiring documentation control, operational efficiency and visibility from origin to destination.",
+    primary: "Request logistics solution",
     secondary: "Talk to a specialist",
 
-    blockEyebrow: "INTERNATIONAL FOOD OPERATIONS",
-
-    blockTitle:
-      "Control, traceability and speed for sensitive products.",
-
+    blockEyebrow: "SPECIALIZED FOOD OPERATIONS",
+    blockTitle: "Secure logistics for products requiring precision and compliance.",
     blockText:
-      "We manage logistics operations for the food and beverage sector ensuring sanitary compliance, documentation control and efficient coordination from origin to final delivery.",
+      "We design solutions for food and beverage companies by integrating transport, warehousing, distribution, documentation control, traceability and international coordination.",
 
     servicesIntro:
-      "Solutions designed for supply chains that require continuity, security and operational precision.",
-
-    servicesTitle:
-      "Food & beverage logistics services.",
+      "Solutions designed for food supply chains requiring operational continuity, product control, accurate documentation and responsiveness.",
+    servicesTitle: "Logistics services for food and beverage supply chains.",
 
     services: [
       [
         "Food distribution",
-        "Coordination of domestic and international deliveries with time control and traceability.",
+        "Coordination of domestic and international deliveries with time control, traceability and operational continuity.",
       ],
       [
         "Inventory management",
-        "Stock supervision and rotation optimization to reduce losses.",
+        "Stock supervision, rotation and availability control to optimize logistics flows and reduce losses.",
       ],
       [
         "Documentation control",
-        "Management of sanitary and operational documentation for imports and exports.",
+        "Management of sanitary, operational and foreign trade documentation for imports and exports.",
       ],
       [
         "Multimodal operations",
-        "Integration between road, maritime and air transport according to operational requirements.",
+        "Integration between road, ocean and air transport according to product, destination and required timing.",
       ],
       [
         "Picking & packing",
-        "Efficient order preparation for retail, distribution and food e-commerce.",
+        "Efficient order preparation for retail, wholesale distribution and food e-commerce.",
       ],
       [
         "Quality control",
-        "Supervision and validation processes to protect product integrity.",
+        "Supervision and validation processes to protect product integrity throughout the operation.",
       ],
     ],
 
-    ctaEyebrow: "Express quotation",
-
-    ctaTitle:
-      "Optimize your food supply chain.",
-
+    ctaEyebrow: "FOOD & BEVERAGE",
+    ctaTitle: "Plan your operation with a specialized team.",
     ctaText:
-      "We analyze product, volume, destinations and operational requirements to build a fast, secure and scalable logistics solution.",
-
-    ctaButton: "Request proposal →",
+      "We analyze product type, volume, origin, destination, documentation requirements, temperature, rotation and delivery times to build a secure, efficient and scalable solution.",
+    ctaPrimary: "Evaluate food operation",
+    ctaSecondary: "View offices",
   },
 
   zh: {
     eyebrow: "食品饮料物流",
-
-    title:
-      "食品与饮料行业专业物流解决方案。",
-
+    title: "具备控制、可追溯性与合规能力的食品饮料物流。",
     description:
-      "我们为食品与饮料行业提供高效物流运营，包括仓储、运输、配送与全流程可追溯管理。",
-
-    primary: "申请报价",
+      "我们为食品、饮料、易腐产品及需要文件控制、运营效率和全程可视化的供应链协调国内与国际物流业务。",
+    primary: "申请物流方案",
     secondary: "联系专家",
 
-    blockEyebrow: "国际食品物流运营",
-
-    blockTitle:
-      "为敏感产品提供更高的控制力与时效性。",
-
+    blockEyebrow: "专业食品物流运营",
+    blockTitle: "为需要精准与合规的产品提供安全物流。",
     blockText:
-      "我们为食品与饮料行业协调国际物流业务，确保卫生合规、文件控制以及从起点到最终交付的高效运营。",
+      "我们为食品与饮料企业设计物流方案，整合运输、仓储、配送、文件控制、可追溯性和国际协调。",
 
     servicesIntro:
-      "为需要稳定性、安全性与高精度运营的供应链打造的物流方案。",
-
-    servicesTitle:
-      "食品与饮料物流服务。",
+      "为需要运营连续性、产品控制、准确文件和快速响应能力的食品供应链打造物流方案。",
+    servicesTitle: "面向食品饮料供应链的物流服务。",
 
     services: [
       [
         "食品配送",
-        "协调国内与国际配送，确保时效与可追溯性。",
+        "协调国内与国际配送，确保时效、可追溯性和运营连续性。",
       ],
       [
         "库存管理",
-        "优化库存与周转，减少损耗。",
+        "监督库存、周转和可用性，以优化物流流程并减少损耗。",
       ],
       [
         "文件控制",
-        "管理进出口所需的卫生与运营文件。",
+        "管理进出口所需的卫生、运营与外贸文件。",
       ],
       [
         "多式联运",
-        "整合陆运、海运与空运解决方案。",
+        "根据产品、目的地和时效要求整合陆运、海运与空运方案。",
       ],
       [
         "订单分拣与包装",
-        "为零售、配送与食品电商提供高效备货。",
+        "为零售、批发配送和食品电商提供高效订单准备。",
       ],
       [
         "质量控制",
-        "通过监督与验证流程保障产品完整性。",
+        "通过监督与验证流程保障产品在整个操作中的完整性。",
       ],
     ],
 
-    ctaEyebrow: "快速报价",
-
-    ctaTitle:
-      "优化您的食品物流供应链。",
-
+    ctaEyebrow: "食品与饮料",
+    ctaTitle: "与专业团队一起规划您的物流操作。",
     ctaText:
-      "我们分析产品、运输量、目的地与运营需求，构建快速、安全且可扩展的物流方案。",
-
-    ctaButton: "申请方案 →",
+      "我们分析产品类型、货量、始发地、目的地、文件要求、温度、周转率和交付时效，为您构建安全、高效且可扩展的方案。",
+    ctaPrimary: "评估食品物流操作",
+    ctaSecondary: "查看办公室",
   },
 } as const;
+
+function getInitialLocale(): Locale {
+  if (typeof window === "undefined") return "es";
+
+  const saved =
+    window.localStorage.getItem("locale") ||
+    window.localStorage.getItem("across-locale");
+
+  if (saved === "en" || saved === "zh" || saved === "es") return saved;
+
+  const htmlLang = document.documentElement.lang;
+  if (htmlLang === "en" || htmlLang === "zh" || htmlLang === "es") return htmlLang;
+
+  return "es";
+}
 
 export default function AlimentacionBebidasPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
-    const saved = window.localStorage.getItem("across-locale") as Locale | null;
+    const updateLocale = (event?: Event) => {
+      const rawDetail = event instanceof CustomEvent ? event.detail : null;
 
-    if (saved && saved in copy) {
-      setLocale(saved);
-    }
+      const next =
+        typeof rawDetail === "string"
+          ? rawDetail
+          : rawDetail && typeof rawDetail === "object" && "locale" in rawDetail
+            ? String((rawDetail as { locale?: unknown }).locale)
+            : rawDetail && typeof rawDetail === "object" && "language" in rawDetail
+              ? String((rawDetail as { language?: unknown }).language)
+              : null;
 
-    const handler = (event: Event) => {
-      const next = (event as CustomEvent<Locale>).detail;
-
-      if (next && next in copy) {
+      if (next === "es" || next === "en" || next === "zh") {
         setLocale(next);
+        return;
       }
+
+      setLocale(getInitialLocale());
     };
 
-    window.addEventListener("across-locale-change", handler);
+    updateLocale();
 
-    return () =>
-      window.removeEventListener("across-locale-change", handler);
+    window.addEventListener("storage", updateLocale);
+    window.addEventListener("languagechange", updateLocale);
+    window.addEventListener("localechange", updateLocale);
+    window.addEventListener("across-language-change", updateLocale);
+    window.addEventListener("across-locale-change", updateLocale);
+
+    return () => {
+      window.removeEventListener("storage", updateLocale);
+      window.removeEventListener("languagechange", updateLocale);
+      window.removeEventListener("localechange", updateLocale);
+      window.removeEventListener("across-language-change", updateLocale);
+      window.removeEventListener("across-locale-change", updateLocale);
+    };
   }, []);
 
   const t = copy[locale];
@@ -239,7 +235,7 @@ export default function AlimentacionBebidasPage() {
       <section className={styles.hero}>
         <Image
           src="/images/sectores/alimentosybebidas.png"
-          alt="Food and beverage logistics"
+          alt={t.title}
           fill
           priority
           className={styles.heroImage}
@@ -256,13 +252,8 @@ export default function AlimentacionBebidasPage() {
           <p>{t.description}</p>
 
           <div className={styles.actions}>
-            <Link href="/cotizacion">
-              {t.primary}
-            </Link>
-
-            <Link href="/contacto">
-              {t.secondary}
-            </Link>
+            <Link href="/cotizacion">{t.primary}</Link>
+            <Link href="/contacto">{t.secondary}</Link>
           </div>
         </div>
       </section>
@@ -286,13 +277,9 @@ export default function AlimentacionBebidasPage() {
 
             <div className={styles.accordion}>
               {t.services.map(([title, description]) => (
-                <details
-                  key={title}
-                  className={styles.serviceItem}
-                >
+                <details key={title} className={styles.serviceItem}>
                   <summary>
                     <h3>{title}</h3>
-
                     <span>+</span>
                   </summary>
 
@@ -305,7 +292,7 @@ export default function AlimentacionBebidasPage() {
           <div className={styles.servicesImageWrap}>
             <Image
               src="/images/sectores/alimentosybebidas2.png"
-              alt="Food logistics operation"
+              alt={t.servicesTitle}
               fill
               className={styles.servicesImage}
               sizes="(max-width: 900px) 100vw, 50vw"
@@ -313,16 +300,17 @@ export default function AlimentacionBebidasPage() {
           </div>
         </section>
 
-        <section className={styles.cta}>
-          <span>{t.ctaEyebrow}</span>
+        <section className={styles.compactCta}>
+          <div>
+            <span>{t.ctaEyebrow}</span>
+            <h2>{t.ctaTitle}</h2>
+            <p>{t.ctaText}</p>
+          </div>
 
-          <h2>{t.ctaTitle}</h2>
-
-          <p>{t.ctaText}</p>
-
-          <Link href="/cotizacion">
-            {t.ctaButton}
-          </Link>
+          <div className={styles.compactCtaActions}>
+            <Link href="/cotizacion">{t.ctaPrimary}</Link>
+            <Link href="/empresa/oficinas">{t.ctaSecondary}</Link>
+          </div>
         </section>
       </main>
 

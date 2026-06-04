@@ -13,92 +13,215 @@ type Locale = "es" | "en" | "zh";
 const copy = {
   es: {
     eyebrow: "TECHNOLOGY LOGISTICS",
-    title: "Logística para tecnología, equipos sensibles y alto valor.",
-    description: "Coordinamos operaciones para mercancía tecnológica que exige seguridad, precisión, control documental y tiempos de entrega fiables.",
-    primary: "Solicitar cotización",
+    title: "Logística para tecnología con seguridad, trazabilidad y control operativo.",
+    description:
+      "Coordinamos operaciones nacionales e internacionales para equipos tecnológicos, electrónica, componentes sensibles, hardware, dispositivos y cadenas de suministro que requieren precisión, protección y visibilidad desde origen hasta destino.",
+    primary: "Solicitar solución tecnológica",
     secondary: "Hablar con un especialista",
-    blockEyebrow: "OPERACIÓN TECNOLÓGICA INTERNACIONAL",
-    blockTitle: "Protección, trazabilidad y control para carga tecnológica.",
-    blockText: "Gestionamos equipos electrónicos, componentes, dispositivos, maquinaria técnica y mercancía de alto valor con procesos diseñados para reducir riesgos, proteger el producto y mantener visibilidad operativa.",
-    servicesIntro: "Soluciones para empresas tecnológicas que necesitan mover mercancía sensible con seguridad, velocidad y control.",
-    servicesTitle: "Servicios logísticos para tecnología.",
+
+    blockEyebrow: "OPERACIÓN TECNOLÓGICA ESPECIALIZADA",
+    blockTitle: "Logística segura para mercancías sensibles y de alto valor.",
+    blockText:
+      "Diseñamos soluciones para empresas tecnológicas integrando transporte, almacenaje, distribución, control documental, manipulación especializada, entregas urgentes y trazabilidad operativa.",
+
+    servicesIntro:
+      "Soluciones para empresas tecnológicas que necesitan mover mercancía sensible, electrónica o de alto valor con seguridad, velocidad y control.",
+    servicesTitle: "Servicios logísticos para tecnología y equipos sensibles.",
+
     services: [
-      ["Carga tecnológica sensible", "Transporte y coordinación para equipos electrónicos, hardware y componentes delicados."],
-      ["Mercancía de alto valor", "Operaciones con protocolos de seguridad, trazabilidad y control documental."],
-      ["Distribución internacional", "Coordinación de entregas globales para fabricantes, distribuidores y operadores tecnológicos."],
-      ["Gestión aduanera", "Control documental para importación y exportación de productos tecnológicos."],
-      ["Almacenamiento seguro", "Gestión de stock y preparación de pedidos para equipos sensibles."],
-      ["Operaciones urgentes", "Soluciones rápidas para entregas críticas, lanzamientos o reposiciones estratégicas."]
+      [
+        "Carga tecnológica sensible",
+        "Transporte y coordinación para equipos electrónicos, hardware, dispositivos y componentes delicados.",
+      ],
+      [
+        "Mercancía de alto valor",
+        "Operaciones con protocolos de seguridad, trazabilidad, control documental y seguimiento operativo.",
+      ],
+      [
+        "Distribución internacional",
+        "Coordinación de entregas globales para fabricantes, distribuidores, integradores y operadores tecnológicos.",
+      ],
+      [
+        "Gestión aduanera",
+        "Control documental, clasificación y despacho para importación y exportación de productos tecnológicos.",
+      ],
+      [
+        "Almacenamiento seguro",
+        "Gestión de stock, preparación de pedidos y manipulación controlada para equipos sensibles.",
+      ],
+      [
+        "Operaciones urgentes",
+        "Soluciones rápidas para entregas críticas, lanzamientos, reposiciones estratégicas o proyectos tecnológicos.",
+      ],
     ],
-    ctaEyebrow: "Cotización express",
-    ctaTitle: "Protejamos su próxima operación tecnológica.",
-    ctaText: "Analizamos tipo de equipo, valor, urgencia, destino y requisitos de manipulación para crear una solución segura y eficiente.",
-    ctaButton: "Solicitar propuesta →"
+
+    ctaEyebrow: "TECNOLOGÍA",
+    ctaTitle: "Planifique su operación tecnológica con un equipo especializado.",
+    ctaText:
+      "Analizamos tipo de producto, valor, volumen, origen, destino, nivel de sensibilidad, requisitos documentales y tiempos de entrega para construir una solución segura, eficiente y trazable.",
+    ctaPrimary: "Evaluar operación tecnológica",
+    ctaSecondary: "Ver oficinas",
   },
+
   en: {
     eyebrow: "TECHNOLOGY LOGISTICS",
-    title: "Logistics for technology, sensitive equipment and high-value cargo.",
-    description: "We coordinate operations for technology cargo requiring security, precision, documentation control and reliable delivery times.",
-    primary: "Request quotation",
+    title: "Technology logistics with security, traceability and operational control.",
+    description:
+      "We coordinate domestic and international operations for technology equipment, electronics, sensitive components, hardware, devices and supply chains requiring precision, protection and visibility from origin to destination.",
+    primary: "Request technology solution",
     secondary: "Talk to a specialist",
-    blockEyebrow: "INTERNATIONAL TECHNOLOGY OPERATIONS",
-    blockTitle: "Protection, traceability and control for technology cargo.",
-    blockText: "We manage electronics, components, devices, technical machinery and high-value cargo through processes designed to reduce risks, protect the product and maintain operational visibility.",
-    servicesIntro: "Solutions for technology companies that need to move sensitive cargo with security, speed and control.",
-    servicesTitle: "Technology logistics services.",
+
+    blockEyebrow: "SPECIALIZED TECHNOLOGY OPERATIONS",
+    blockTitle: "Secure logistics for sensitive and high-value cargo.",
+    blockText:
+      "We design solutions for technology companies by integrating transport, warehousing, distribution, documentation control, specialized handling, urgent deliveries and operational traceability.",
+
+    servicesIntro:
+      "Solutions for technology companies that need to move sensitive, electronic or high-value cargo with security, speed and control.",
+    servicesTitle: "Logistics services for technology and sensitive equipment.",
+
     services: [
-      ["Sensitive technology cargo", "Transport and coordination for electronics, hardware and delicate components."],
-      ["High-value cargo", "Operations with security protocols, traceability and documentation control."],
-      ["International distribution", "Global delivery coordination for manufacturers, distributors and technology operators."],
-      ["Customs management", "Documentation control for imports and exports of technology products."],
-      ["Secure warehousing", "Stock management and order preparation for sensitive equipment."],
-      ["Urgent operations", "Fast solutions for critical deliveries, launches or strategic replenishment."]
+      [
+        "Sensitive technology cargo",
+        "Transport and coordination for electronics, hardware, devices and delicate components.",
+      ],
+      [
+        "High-value cargo",
+        "Operations with security protocols, traceability, documentation control and operational tracking.",
+      ],
+      [
+        "International distribution",
+        "Global delivery coordination for manufacturers, distributors, integrators and technology operators.",
+      ],
+      [
+        "Customs management",
+        "Documentation control, classification and clearance for imports and exports of technology products.",
+      ],
+      [
+        "Secure warehousing",
+        "Stock management, order preparation and controlled handling for sensitive equipment.",
+      ],
+      [
+        "Urgent operations",
+        "Fast solutions for critical deliveries, launches, strategic replenishment or technology projects.",
+      ],
     ],
-    ctaEyebrow: "Express quotation",
-    ctaTitle: "Let’s protect your next technology operation.",
-    ctaText: "We analyze equipment type, value, urgency, destination and handling requirements to create a secure and efficient solution.",
-    ctaButton: "Request proposal →"
+
+    ctaEyebrow: "TECHNOLOGY",
+    ctaTitle: "Plan your technology operation with a specialized team.",
+    ctaText:
+      "We analyze product type, value, volume, origin, destination, sensitivity level, documentation requirements and delivery timing to build a secure, efficient and traceable solution.",
+    ctaPrimary: "Evaluate technology operation",
+    ctaSecondary: "View offices",
   },
+
   zh: {
     eyebrow: "科技物流",
-    title: "面向科技产品、敏感设备与高价值货物的物流方案。",
-    description: "我们为需要安全、精度、文件控制与可靠时效的科技货物协调物流业务。",
-    primary: "申请报价",
+    title: "具备安全、可追溯性与运营控制的科技物流。",
+    description:
+      "我们为科技设备、电子产品、敏感组件、硬件、设备以及需要精准、防护和全程可视化的供应链协调国内与国际物流业务。",
+    primary: "申请科技物流方案",
     secondary: "联系专家",
-    blockEyebrow: "国际科技物流运营",
-    blockTitle: "为科技货物提供保护、追踪与控制。",
-    blockText: "我们管理电子设备、组件、技术机械和高价值货物，通过专业流程降低风险、保护产品并保持运营可视化。",
-    servicesIntro: "为需要安全、速度与控制的科技企业打造敏感货物物流方案。",
-    servicesTitle: "科技物流服务。",
+
+    blockEyebrow: "专业科技物流运营",
+    blockTitle: "面向敏感与高价值货物的安全物流。",
+    blockText:
+      "我们为科技企业设计物流方案，整合运输、仓储、配送、文件控制、专业装卸、紧急交付和运营可追溯性。",
+
+    servicesIntro:
+      "为需要安全、速度和控制的科技企业提供敏感、电子或高价值货物物流方案。",
+    servicesTitle: "面向科技产品与敏感设备的物流服务。",
+
     services: [
-      ["敏感科技货物", "电子设备、硬件与精密组件的运输协调。"],
-      ["高价值货物", "具备安全协议、追踪与文件控制的物流操作。"],
-      ["国际配送", "为制造商、分销商和科技运营商协调全球交付。"],
-      ["海关管理", "科技产品进出口文件控制。"],
-      ["安全仓储", "敏感设备库存管理与订单准备。"],
-      ["紧急运输", "面向关键交付、产品发布或战略补货的快速方案。"]
+      [
+        "敏感科技货物",
+        "为电子设备、硬件、设备和精密组件提供运输与协调。",
+      ],
+      [
+        "高价值货物",
+        "具备安全协议、可追溯性、文件控制和运营跟踪的物流操作。",
+      ],
+      [
+        "国际配送",
+        "为制造商、分销商、集成商和科技运营商协调全球交付。",
+      ],
+      [
+        "海关管理",
+        "为科技产品进出口提供文件控制、归类和清关支持。",
+      ],
+      [
+        "安全仓储",
+        "为敏感设备提供库存管理、订单准备和受控操作。",
+      ],
+      [
+        "紧急运输",
+        "为关键交付、产品发布、战略补货或科技项目提供快速方案。",
+      ],
     ],
-    ctaEyebrow: "快速报价",
-    ctaTitle: "保护您的下一次科技物流业务。",
-    ctaText: "我们分析设备类型、价值、紧急程度、目的地与操作要求，创建安全高效的解决方案。",
-    ctaButton: "申请方案 →"
-  }
+
+    ctaEyebrow: "科技行业",
+    ctaTitle: "与专业团队一起规划您的科技物流操作。",
+    ctaText:
+      "我们分析产品类型、价值、货量、始发地、目的地、敏感程度、文件要求和交付时效，为您构建安全、高效且可追溯的方案。",
+    ctaPrimary: "评估科技物流操作",
+    ctaSecondary: "查看办公室",
+  },
 } as const;
+
+function getInitialLocale(): Locale {
+  if (typeof window === "undefined") return "es";
+
+  const saved =
+    window.localStorage.getItem("locale") ||
+    window.localStorage.getItem("across-locale");
+
+  if (saved === "en" || saved === "zh" || saved === "es") return saved;
+
+  const htmlLang = document.documentElement.lang;
+  if (htmlLang === "en" || htmlLang === "zh" || htmlLang === "es") return htmlLang;
+
+  return "es";
+}
 
 export default function TecnologicoPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
-    const saved = window.localStorage.getItem("across-locale") as Locale | null;
-    if (saved && saved in copy) setLocale(saved);
+    const updateLocale = (event?: Event) => {
+      const rawDetail = event instanceof CustomEvent ? event.detail : null;
 
-    const handler = (event: Event) => {
-      const next = (event as CustomEvent<Locale>).detail;
-      if (next && next in copy) setLocale(next);
+      const next =
+        typeof rawDetail === "string"
+          ? rawDetail
+          : rawDetail && typeof rawDetail === "object" && "locale" in rawDetail
+            ? String((rawDetail as { locale?: unknown }).locale)
+            : rawDetail && typeof rawDetail === "object" && "language" in rawDetail
+              ? String((rawDetail as { language?: unknown }).language)
+              : null;
+
+      if (next === "es" || next === "en" || next === "zh") {
+        setLocale(next);
+        return;
+      }
+
+      setLocale(getInitialLocale());
     };
 
-    window.addEventListener("across-locale-change", handler);
-    return () => window.removeEventListener("across-locale-change", handler);
+    updateLocale();
+
+    window.addEventListener("storage", updateLocale);
+    window.addEventListener("languagechange", updateLocale);
+    window.addEventListener("localechange", updateLocale);
+    window.addEventListener("across-language-change", updateLocale);
+    window.addEventListener("across-locale-change", updateLocale);
+
+    return () => {
+      window.removeEventListener("storage", updateLocale);
+      window.removeEventListener("languagechange", updateLocale);
+      window.removeEventListener("localechange", updateLocale);
+      window.removeEventListener("across-language-change", updateLocale);
+      window.removeEventListener("across-locale-change", updateLocale);
+    };
   }, []);
 
   const t = copy[locale];
@@ -108,7 +231,14 @@ export default function TecnologicoPage() {
       <Header />
 
       <section className={styles.hero}>
-        <Image src="/images/sectores/transporte-logistica-tecnologia.png" alt="Technology logistics" fill priority className={styles.heroImage} sizes="100vw" />
+        <Image
+          src="/images/sectores/transporte-logistica-tecnologia.png"
+          alt={t.title}
+          fill
+          priority
+          className={styles.heroImage}
+          sizes="100vw"
+        />
         <div className={styles.heroOverlay} />
 
         <div className={styles.heroContent}>
@@ -140,7 +270,10 @@ export default function TecnologicoPage() {
             <div className={styles.accordion}>
               {t.services.map(([title, description]) => (
                 <details key={title} className={styles.serviceItem}>
-                  <summary><h3>{title}</h3><span>+</span></summary>
+                  <summary>
+                    <h3>{title}</h3>
+                    <span>+</span>
+                  </summary>
                   <p>{description}</p>
                 </details>
               ))}
@@ -148,15 +281,27 @@ export default function TecnologicoPage() {
           </div>
 
           <div className={styles.servicesImageWrap}>
-            <Image src="/images/sectores/tecnologico.png" alt="Technology logistics operation" fill className={styles.servicesImage} sizes="(max-width: 900px) 100vw, 50vw" />
+            <Image
+              src="/images/sectores/tecnologico.png"
+              alt={t.servicesTitle}
+              fill
+              className={styles.servicesImage}
+              sizes="(max-width: 900px) 100vw, 50vw"
+            />
           </div>
         </section>
 
-        <section className={styles.cta}>
-          <span>{t.ctaEyebrow}</span>
-          <h2>{t.ctaTitle}</h2>
-          <p>{t.ctaText}</p>
-          <Link href="/cotizacion">{t.ctaButton}</Link>
+        <section className={styles.compactCta}>
+          <div>
+            <span>{t.ctaEyebrow}</span>
+            <h2>{t.ctaTitle}</h2>
+            <p>{t.ctaText}</p>
+          </div>
+
+          <div className={styles.compactCtaActions}>
+            <Link href="/cotizacion">{t.ctaPrimary}</Link>
+            <Link href="/empresa/oficinas">{t.ctaSecondary}</Link>
+          </div>
         </section>
       </main>
 

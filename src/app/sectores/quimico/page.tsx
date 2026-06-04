@@ -13,110 +13,239 @@ type Locale = "es" | "en" | "zh";
 const copy = {
   es: {
     eyebrow: "CHEMICAL LOGISTICS",
-    title: "Transporte y logística para el sector químico.",
+    title: "Logística química con seguridad, cumplimiento y control operativo.",
     description:
-      "Diseñamos soluciones para productos químicos y mercancías peligrosas con control normativo, seguridad operativa y coordinación internacional de principio a fin.",
-    primary: "Solicitar cotización",
+      "Coordinamos operaciones nacionales e internacionales para productos químicos, mercancías reguladas, carga peligrosa, materias primas y cadenas de suministro que requieren gestión documental, trazabilidad, seguridad y cumplimiento normativo.",
+    primary: "Solicitar solución química",
     secondary: "Hablar con un especialista",
-    blockEyebrow: "OPERACIÓN QUÍMICA INTERNACIONAL",
-    blockTitle: "Seguridad, cumplimiento y precisión para cargas complejas.",
+
+    blockEyebrow: "OPERACIÓN QUÍMICA ESPECIALIZADA",
+    blockTitle: "Logística segura para mercancías reguladas y sensibles.",
     blockText:
-      "El sector químico exige procesos rigurosos: normas de seguridad, controles medioambientales, documentación técnica y manipulación especializada. Coordinamos importaciones y exportaciones para productos químicos en cualquier destino, reduciendo riesgos y manteniendo la operación bajo control.",
+      "Diseñamos soluciones para el sector químico integrando transporte, almacenamiento, gestión documental, mercancías peligrosas, control normativo, coordinación aduanera y trazabilidad operativa.",
+
     servicesIntro:
       "Soluciones para empresas químicas que necesitan mover mercancía regulada, sensible o peligrosa con seguridad, trazabilidad y cumplimiento.",
-    servicesTitle: "Servicios logísticos para el sector químico.",
+    servicesTitle: "Servicios logísticos para productos químicos y mercancías reguladas.",
+
     services: [
-      ["Servicios de aduanas", "Gestión documental y cumplimiento aduanero para importaciones y exportaciones de productos químicos."],
-      ["Carga de temperatura controlada", "Transporte para productos refrigerados, congelados, perecederos o sensibles a condiciones térmicas."],
-      ["Cargas especiales e industriales", "Coordinación de operaciones complejas para mercancía industrial, sobredimensionada o de manipulación crítica."],
-      ["Transporte aéreo", "Soluciones globales para envíos químicos donde el tiempo y la seguridad son prioritarios."],
-      ["Transporte marítimo", "Operaciones marítimas personalizadas para cargas químicas internacionales, FCL, LCL o proyectos especiales."],
-      ["Almacén y distribución", "Soluciones de almacenamiento flexible y distribución adaptadas a productos con requisitos específicos."],
-      ["Mercancías peligrosas", "Gestión especializada para cargas reguladas con protocolos de seguridad y trazabilidad."],
-      ["Control documental", "Revisión de documentación técnica, permisos, fichas y requisitos operativos para evitar bloqueos."]
+      [
+        "Servicios de aduanas",
+        "Gestión documental, clasificación, despacho y cumplimiento aduanero para importaciones y exportaciones de productos químicos.",
+      ],
+      [
+        "Carga de temperatura controlada",
+        "Transporte para productos refrigerados, congelados, perecederos o sensibles a condiciones térmicas específicas.",
+      ],
+      [
+        "Cargas especiales e industriales",
+        "Coordinación de operaciones complejas para mercancía industrial, sobredimensionada o de manipulación crítica.",
+      ],
+      [
+        "Transporte aéreo",
+        "Soluciones globales para envíos químicos donde el tiempo, la seguridad y el cumplimiento son prioritarios.",
+      ],
+      [
+        "Transporte marítimo",
+        "Operaciones marítimas para cargas químicas internacionales, FCL, LCL, IMO o proyectos especiales.",
+      ],
+      [
+        "Almacén y distribución",
+        "Soluciones de almacenamiento y distribución adaptadas a productos con requisitos técnicos o regulatorios.",
+      ],
+      [
+        "Mercancías peligrosas",
+        "Gestión especializada para cargas reguladas con protocolos de seguridad, documentación y trazabilidad.",
+      ],
+      [
+        "Control documental",
+        "Revisión de documentación técnica, permisos, fichas de seguridad y requisitos operativos para evitar bloqueos.",
+      ],
     ],
-    ctaEyebrow: "Cotización express",
-    ctaTitle: "Planifiquemos su próxima operación química con seguridad.",
+
+    ctaEyebrow: "SECTOR QUÍMICO",
+    ctaTitle: "Planifique su operación química con un equipo especializado.",
     ctaText:
-      "Analizamos producto, clasificación, riesgo, documentación, origen y destino para construir una solución logística segura, viable y competitiva.",
-    ctaButton: "Solicitar propuesta →",
+      "Analizamos tipo de producto, clasificación, origen, destino, documentación, requisitos de seguridad, normativa aplicable y tiempos operativos para construir una solución segura, eficiente y trazable.",
+    ctaPrimary: "Evaluar operación química",
+    ctaSecondary: "Ver oficinas",
   },
+
   en: {
     eyebrow: "CHEMICAL LOGISTICS",
-    title: "Transport and logistics for the chemical sector.",
+    title: "Chemical logistics with safety, compliance and operational control.",
     description:
-      "We design solutions for chemical products and dangerous goods with regulatory control, operational safety and end-to-end international coordination.",
-    primary: "Request quotation",
+      "We coordinate domestic and international operations for chemical products, regulated goods, dangerous cargo, raw materials and supply chains requiring documentation management, traceability, safety and regulatory compliance.",
+    primary: "Request chemical solution",
     secondary: "Talk to a specialist",
-    blockEyebrow: "INTERNATIONAL CHEMICAL OPERATIONS",
-    blockTitle: "Safety, compliance and precision for complex cargo.",
+
+    blockEyebrow: "SPECIALIZED CHEMICAL OPERATIONS",
+    blockTitle: "Secure logistics for regulated and sensitive goods.",
     blockText:
-      "The chemical sector requires rigorous processes: safety regulations, environmental controls, technical documentation and specialized handling. We coordinate imports and exports for chemical products to any destination, reducing risks and keeping the operation under control.",
+      "We design solutions for the chemical sector by integrating transport, warehousing, documentation management, dangerous goods, regulatory control, customs coordination and operational traceability.",
+
     servicesIntro:
       "Solutions for chemical companies that need to move regulated, sensitive or dangerous cargo with safety, traceability and compliance.",
-    servicesTitle: "Chemical sector logistics services.",
+    servicesTitle: "Logistics services for chemical products and regulated goods.",
+
     services: [
-      ["Customs services", "Documentation management and customs compliance for chemical imports and exports."],
-      ["Temperature-controlled cargo", "Transport for refrigerated, frozen, perishable or temperature-sensitive products."],
-      ["Special and industrial cargo", "Coordination of complex operations for industrial, oversized or critical-handling cargo."],
-      ["Air freight", "Global solutions for chemical shipments where time and safety are a priority."],
-      ["Ocean freight", "Tailored ocean operations for international chemical cargo, FCL, LCL or project cargo."],
-      ["Warehousing and distribution", "Flexible storage and distribution solutions adapted to products with specific requirements."],
-      ["Dangerous goods", "Specialized management for regulated cargo with safety protocols and traceability."],
-      ["Documentation control", "Review of technical documentation, permits, sheets and operational requirements to avoid delays."]
+      [
+        "Customs services",
+        "Documentation management, classification, clearance and customs compliance for chemical imports and exports.",
+      ],
+      [
+        "Temperature-controlled cargo",
+        "Transport for refrigerated, frozen, perishable or temperature-sensitive products under specific conditions.",
+      ],
+      [
+        "Special and industrial cargo",
+        "Coordination of complex operations for industrial, oversized or critical-handling cargo.",
+      ],
+      [
+        "Air freight",
+        "Global solutions for chemical shipments where time, safety and compliance are priorities.",
+      ],
+      [
+        "Ocean freight",
+        "Ocean freight operations for international chemical cargo, FCL, LCL, IMO or special projects.",
+      ],
+      [
+        "Warehousing and distribution",
+        "Storage and distribution solutions adapted to products with technical or regulatory requirements.",
+      ],
+      [
+        "Dangerous goods",
+        "Specialized management for regulated cargo with safety protocols, documentation and traceability.",
+      ],
+      [
+        "Documentation control",
+        "Review of technical documentation, permits, safety data sheets and operational requirements to avoid delays.",
+      ],
     ],
-    ctaEyebrow: "Express quotation",
-    ctaTitle: "Let’s plan your next chemical operation safely.",
+
+    ctaEyebrow: "CHEMICAL SECTOR",
+    ctaTitle: "Plan your chemical operation with a specialized team.",
     ctaText:
-      "We analyze product, classification, risk, documentation, origin and destination to build a secure, viable and competitive logistics solution.",
-    ctaButton: "Request proposal →",
+      "We analyze product type, classification, origin, destination, documentation, safety requirements, applicable regulations and operational timing to build a safe, efficient and traceable solution.",
+    ctaPrimary: "Evaluate chemical operation",
+    ctaSecondary: "View offices",
   },
+
   zh: {
     eyebrow: "化工物流",
-    title: "面向化工行业的运输与物流方案。",
+    title: "具备安全、合规与运营控制的化工物流。",
     description:
-      "我们为化工产品和危险品提供具备法规控制、运营安全与全流程国际协调的物流解决方案。",
-    primary: "申请报价",
+      "我们为化工产品、受监管货物、危险品、原材料以及需要文件管理、可追溯性、安全和法规合规的供应链协调国内与国际物流业务。",
+    primary: "申请化工物流方案",
     secondary: "联系专家",
-    blockEyebrow: "国际化工物流运营",
-    blockTitle: "为复杂货物提供安全、合规与精准控制。",
+
+    blockEyebrow: "专业化工物流运营",
+    blockTitle: "面向受监管与敏感货物的安全物流。",
     blockText:
-      "化工行业需要严格流程：安全规范、环保控制、技术文件与专业操作。我们协调化工产品进出口至全球目的地，降低风险并保持运营可控。",
+      "我们为化工行业设计物流方案，整合运输、仓储、文件管理、危险品、法规控制、海关协调和运营可追溯性。",
+
     servicesIntro:
-      "为需要安全、追踪与合规运输监管类、敏感类或危险类货物的化工企业提供解决方案。",
-    servicesTitle: "化工行业物流服务。",
+      "为需要安全、可追溯性和合规运输监管类、敏感类或危险类货物的化工企业提供解决方案。",
+    servicesTitle: "面向化工产品与受监管货物的物流服务。",
+
     services: [
-      ["海关服务", "化工产品进出口文件管理与海关合规。"],
-      ["温控货运", "冷藏、冷冻、易腐或温度敏感产品运输。"],
-      ["特殊与工业货物", "工业、超限或关键操作货物的复杂物流协调。"],
-      ["空运", "为时间与安全优先的化工货物提供全球运输方案。"],
-      ["海运", "面向 FCL、LCL 或项目货运的国际化工海运定制服务。"],
-      ["仓储与配送", "适用于特殊要求产品的灵活仓储与配送方案。"],
-      ["危险品", "按照安全协议与追踪要求管理受监管货物。"],
-      ["文件控制", "审查技术文件、许可、资料与运营要求，避免延误。"]
+      [
+        "海关服务",
+        "为化工产品进出口提供文件管理、归类、清关和海关合规支持。",
+      ],
+      [
+        "温控货运",
+        "在特定条件下运输冷藏、冷冻、易腐或温度敏感产品。",
+      ],
+      [
+        "特殊与工业货物",
+        "协调工业、超限或关键操作货物的复杂物流业务。",
+      ],
+      [
+        "空运",
+        "为时间、安全和合规优先的化工货物提供全球运输方案。",
+      ],
+      [
+        "海运",
+        "面向国际化工货物、FCL、LCL、IMO 或特殊项目的海运操作。",
+      ],
+      [
+        "仓储与配送",
+        "为具有技术或法规要求的产品提供仓储与配送解决方案。",
+      ],
+      [
+        "危险品",
+        "按照安全协议、文件要求和可追溯性管理受监管货物。",
+      ],
+      [
+        "文件控制",
+        "审查技术文件、许可、安全数据表和操作要求，避免延误。",
+      ],
     ],
-    ctaEyebrow: "快速报价",
-    ctaTitle: "安全规划您的下一次化工物流业务。",
+
+    ctaEyebrow: "化工行业",
+    ctaTitle: "与专业团队一起规划您的化工物流操作。",
     ctaText:
-      "我们分析产品、分类、风险、文件、起运地与目的地，构建安全、可行且有竞争力的物流方案。",
-    ctaButton: "申请方案 →",
+      "我们分析产品类型、分类、始发地、目的地、文件、安全要求、适用法规和操作时效，为您构建安全、高效且可追溯的方案。",
+    ctaPrimary: "评估化工物流操作",
+    ctaSecondary: "查看办公室",
   },
 } as const;
+
+function getInitialLocale(): Locale {
+  if (typeof window === "undefined") return "es";
+
+  const saved =
+    window.localStorage.getItem("locale") ||
+    window.localStorage.getItem("across-locale");
+
+  if (saved === "en" || saved === "zh" || saved === "es") return saved;
+
+  const htmlLang = document.documentElement.lang;
+  if (htmlLang === "en" || htmlLang === "zh" || htmlLang === "es") return htmlLang;
+
+  return "es";
+}
 
 export default function QuimicoPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
-    const saved = window.localStorage.getItem("across-locale") as Locale | null;
-    if (saved && saved in copy) setLocale(saved);
+    const updateLocale = (event?: Event) => {
+      const rawDetail = event instanceof CustomEvent ? event.detail : null;
 
-    const handler = (event: Event) => {
-      const next = (event as CustomEvent<Locale>).detail;
-      if (next && next in copy) setLocale(next);
+      const next =
+        typeof rawDetail === "string"
+          ? rawDetail
+          : rawDetail && typeof rawDetail === "object" && "locale" in rawDetail
+            ? String((rawDetail as { locale?: unknown }).locale)
+            : rawDetail && typeof rawDetail === "object" && "language" in rawDetail
+              ? String((rawDetail as { language?: unknown }).language)
+              : null;
+
+      if (next === "es" || next === "en" || next === "zh") {
+        setLocale(next);
+        return;
+      }
+
+      setLocale(getInitialLocale());
     };
 
-    window.addEventListener("across-locale-change", handler);
-    return () => window.removeEventListener("across-locale-change", handler);
+    updateLocale();
+
+    window.addEventListener("storage", updateLocale);
+    window.addEventListener("languagechange", updateLocale);
+    window.addEventListener("localechange", updateLocale);
+    window.addEventListener("across-language-change", updateLocale);
+    window.addEventListener("across-locale-change", updateLocale);
+
+    return () => {
+      window.removeEventListener("storage", updateLocale);
+      window.removeEventListener("languagechange", updateLocale);
+      window.removeEventListener("localechange", updateLocale);
+      window.removeEventListener("across-language-change", updateLocale);
+      window.removeEventListener("across-locale-change", updateLocale);
+    };
   }, []);
 
   const t = copy[locale];
@@ -128,7 +257,7 @@ export default function QuimicoPage() {
       <section className={styles.hero}>
         <Image
           src="/images/sectores/quimicohero.png"
-          alt="Chemical logistics"
+          alt={t.title}
           fill
           priority
           className={styles.heroImage}
@@ -179,7 +308,7 @@ export default function QuimicoPage() {
           <div className={styles.servicesImageWrap}>
             <Image
               src="/images/sectores/quimico2.png"
-              alt="Chemical logistics operation"
+              alt={t.servicesTitle}
               fill
               className={styles.servicesImage}
               sizes="(max-width: 900px) 100vw, 50vw"
@@ -187,11 +316,17 @@ export default function QuimicoPage() {
           </div>
         </section>
 
-        <section className={styles.cta}>
-          <span>{t.ctaEyebrow}</span>
-          <h2>{t.ctaTitle}</h2>
-          <p>{t.ctaText}</p>
-          <Link href="/cotizacion">{t.ctaButton}</Link>
+        <section className={styles.compactCta}>
+          <div>
+            <span>{t.ctaEyebrow}</span>
+            <h2>{t.ctaTitle}</h2>
+            <p>{t.ctaText}</p>
+          </div>
+
+          <div className={styles.compactCtaActions}>
+            <Link href="/cotizacion">{t.ctaPrimary}</Link>
+            <Link href="/empresa/oficinas">{t.ctaSecondary}</Link>
+          </div>
         </section>
       </main>
 

@@ -149,12 +149,12 @@ export default function EnergiasRenovablesPage() {
           <span>{t.blockEyebrow}</span>
           <h2>{t.blockTitle}</h2>
           <p>{t.blockText}</p>
-        </section>
 
-        <div className={styles.actions}>
-          <Link href="/cotizacion">Evaluar mi proyecto</Link>
-          <Link href="/contacto">Asesoría técnica</Link>
-        </div>
+          <div className={styles.inlineCtaActions}>
+            <Link href="/cotizacion">Evaluar mi proyecto</Link>
+            <Link href="/contacto">Asesoría técnica</Link>
+          </div>
+        </section>
 
         <section className={styles.servicesPanel}>
           <div className={styles.servicesCopy}>
@@ -184,10 +184,6 @@ export default function EnergiasRenovablesPage() {
             />
           </div>
         </section>
-
-        <div className={styles.actions}>
-          <Link href="/cotizacion">Cotizar ahora</Link>
-        </div>
 
         <section className={styles.cta}>
           <span>{t.ctaEyebrow}</span>

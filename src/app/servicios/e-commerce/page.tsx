@@ -13,23 +13,28 @@ type Locale = "es" | "en" | "zh";
 const copy = {
   es: {
     eyebrow: "E-COMMERCE LOGISTICS",
-    heroTitle: "Logística y almacén para e-commerce con gestión total.",
+    heroTitle: "Logística e-commerce para operaciones digitales escalables.",
     heroText:
-      "Conectamos almacenamiento, stock, pedidos, preparación y entrega para que su tienda online venda más rápido, reduzca costes y opere sin fricción.",
-    quote: "Solicitar cotización",
+      "Integramos almacenaje, preparación de pedidos, control de inventario, distribución, última milla y soluciones de valor añadido para marcas que necesitan operar con rapidez, trazabilidad y eficiencia.",
+    quote: "Solicitar solución e-commerce",
     specialist: "Hablar con un especialista",
-    blockEyebrow: "OPERACIÓN E-COMMERCE",
-    blockTitle: "Deje en nuestras manos la gestión del stock y la entrega.",
+
+    blockEyebrow: "OPERACIÓN E-COMMERCE INTEGRADA",
+    blockTitle: "Del pedido online a la entrega final, con control y trazabilidad.",
     blockText:
-      "Nos conectamos con su e-commerce y su ERP para gestionar pedidos de forma rápida y eficiente, coordinando inventario, preparación, distribución y última milla desde un mismo sistema operativo.",
+      "Diseñamos operaciones logísticas para e-commerce conectando stock, picking, packing, preparación de pedidos, distribución y seguimiento para mejorar tiempos, reducir errores y escalar ventas.",
+
     servicesIntro:
-      "Escalamos su operación digital con tecnología, integración entre sistemas y procesos logísticos diseñados para vender mejor.",
-    servicesTitle: "Nuestros servicios de gestión para e-Commerce.",
-    ctaEyebrow: "Cotización express",
-    ctaTitle: "Construyamos una operación e-commerce más rápida y rentable.",
+      "Conectamos sistemas, inventario, pedidos, preparación y transporte para que cada venta online avance con control operativo y visibilidad.",
+    servicesTitle: "Servicios logísticos para e-commerce y fulfillment.",
+
+    ctaEyebrow: "LOGÍSTICA PARA E-COMMERCE",
+    ctaTitle: "Escalemos su operación digital con un equipo especializado.",
     ctaText:
-      "Analizamos plataforma, volumen de pedidos, stock, destino y tiempos de entrega para diseñar una solución clara, integrada y escalable.",
-    ctaButton: "Solicitar propuesta →",
+      "Analizamos volumen de pedidos, rotación, canales de venta, necesidades de almacenaje, preparación, distribución y última milla para construir una solución eficiente y escalable.",
+    ctaPrimary: "Evaluar operación e-commerce",
+    ctaSecondary: "Ver oficinas",
+
     services: [
       [
         "Software de gestión de almacenes (SGA)",
@@ -57,25 +62,31 @@ const copy = {
       ],
     ],
   },
+
   en: {
     eyebrow: "E-COMMERCE LOGISTICS",
-    heroTitle: "E-commerce warehousing and logistics with full management.",
+    heroTitle: "E-commerce logistics for scalable digital operations.",
     heroText:
-      "We connect storage, stock, orders, preparation and delivery so your online store can sell faster, reduce costs and operate without friction.",
-    quote: "Request quotation",
+      "We integrate warehousing, order preparation, inventory control, distribution, last mile and value-added solutions for brands that need speed, traceability and operational efficiency.",
+    quote: "Request e-commerce solution",
     specialist: "Talk to a specialist",
-    blockEyebrow: "E-COMMERCE OPERATIONS",
-    blockTitle: "Leave stock management and delivery in our hands.",
+
+    blockEyebrow: "INTEGRATED E-COMMERCE OPERATIONS",
+    blockTitle: "From online order to final delivery, with control and traceability.",
     blockText:
-      "We connect with your e-commerce and ERP to manage orders quickly and efficiently, coordinating inventory, preparation, distribution and last mile from one operating system.",
+      "We design logistics operations for e-commerce by connecting stock, picking, packing, order preparation, distribution and tracking to improve times, reduce errors and scale sales.",
+
     servicesIntro:
-      "We scale your digital operation with technology, system integration and logistics processes designed to help you sell better.",
-    servicesTitle: "Our e-commerce management services.",
-    ctaEyebrow: "Express quotation",
-    ctaTitle: "Let’s build a faster and more profitable e-commerce operation.",
+      "We connect systems, inventory, orders, preparation and transport so every online sale moves forward with operational control and visibility.",
+    servicesTitle: "Logistics services for e-commerce and fulfillment.",
+
+    ctaEyebrow: "E-COMMERCE LOGISTICS",
+    ctaTitle: "Scale your digital operation with a specialized team.",
     ctaText:
-      "We analyze platform, order volume, stock, destination and delivery times to design a clear, integrated and scalable solution.",
-    ctaButton: "Request proposal →",
+      "We analyze order volume, rotation, sales channels, warehousing needs, preparation, distribution and last mile requirements to build an efficient and scalable solution.",
+    ctaPrimary: "Evaluate e-commerce operation",
+    ctaSecondary: "View offices",
+
     services: [
       [
         "Warehouse Management System (WMS)",
@@ -103,25 +114,31 @@ const copy = {
       ],
     ],
   },
+
   zh: {
     eyebrow: "电商物流",
-    heroTitle: "提供全流程管理的电商仓储与物流方案。",
+    heroTitle: "面向可扩展数字业务的电商物流解决方案。",
     heroText:
-      "我们连接仓储、库存、订单、备货与配送，帮助您的线上商店更快销售、降低成本并顺畅运营。",
-    quote: "申请报价",
+      "我们整合仓储、订单准备、库存控制、配送、最后一公里和增值服务，帮助品牌实现快速、可追溯且高效的运营。",
+    quote: "申请电商物流方案",
     specialist: "联系专家",
-    blockEyebrow: "电商运营",
-    blockTitle: "将库存管理与配送交给我们。",
+
+    blockEyebrow: "综合电商物流运营",
+    blockTitle: "从线上订单到最终交付，实现控制与可追溯。",
     blockText:
-      "我们可连接您的电商平台与 ERP，高效管理订单，并在同一运营体系下协调库存、备货、配送与最后一公里。",
+      "我们为电商设计物流操作，连接库存、拣货、包装、订单准备、配送和跟踪，以缩短时间、减少错误并支持销售增长。",
+
     servicesIntro:
-      "我们通过技术、系统集成与专业物流流程，帮助您的数字业务实现规模化增长。",
-    servicesTitle: "我们的电商管理服务。",
-    ctaEyebrow: "快速报价",
-    ctaTitle: "让我们打造更快、更高效的电商物流运营。",
+      "我们连接系统、库存、订单、准备和运输，让每一笔线上销售都具备运营控制和可视化能力。",
+    servicesTitle: "电商与履约物流服务。",
+
+    ctaEyebrow: "电商物流",
+    ctaTitle: "与专业团队一起扩展您的数字业务运营。",
     ctaText:
-      "我们会分析平台、订单量、库存、目的地与交付时效，设计清晰、集成且可扩展的解决方案。",
-    ctaButton: "申请方案 →",
+      "我们分析订单量、周转率、销售渠道、仓储需求、订单准备、配送和最后一公里要求，为您构建高效且可扩展的方案。",
+    ctaPrimary: "评估电商运营",
+    ctaSecondary: "查看办公室",
+
     services: [
       [
         "仓库管理系统（WMS）",
@@ -151,20 +168,60 @@ const copy = {
   },
 } as const;
 
+function getInitialLocale(): Locale {
+  if (typeof window === "undefined") return "es";
+
+  const saved =
+    window.localStorage.getItem("locale") ||
+    window.localStorage.getItem("across-locale");
+
+  if (saved === "en" || saved === "zh" || saved === "es") return saved;
+
+  const htmlLang = document.documentElement.lang;
+  if (htmlLang === "en" || htmlLang === "zh" || htmlLang === "es") return htmlLang;
+
+  return "es";
+}
+
 export default function EcommercePage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
-    const saved = window.localStorage.getItem("across-locale") as Locale | null;
-    if (saved && saved in copy) setLocale(saved);
+    const updateLocale = (event?: Event) => {
+      const rawDetail = event instanceof CustomEvent ? event.detail : null;
 
-    const handler = (event: Event) => {
-      const next = (event as CustomEvent<Locale>).detail;
-      if (next && next in copy) setLocale(next);
+      const next =
+        typeof rawDetail === "string"
+          ? rawDetail
+          : rawDetail && typeof rawDetail === "object" && "locale" in rawDetail
+            ? String((rawDetail as { locale?: unknown }).locale)
+            : rawDetail && typeof rawDetail === "object" && "language" in rawDetail
+              ? String((rawDetail as { language?: unknown }).language)
+              : null;
+
+      if (next === "es" || next === "en" || next === "zh") {
+        setLocale(next);
+        return;
+      }
+
+      setLocale(getInitialLocale());
     };
 
-    window.addEventListener("across-locale-change", handler);
-    return () => window.removeEventListener("across-locale-change", handler);
+    updateLocale();
+
+    window.addEventListener("storage", updateLocale);
+    window.addEventListener("languagechange", updateLocale);
+    window.addEventListener("localechange", updateLocale);
+    window.addEventListener("across-language-change", updateLocale);
+    window.addEventListener("across-locale-change", updateLocale);
+
+    return () => {
+      window.removeEventListener("storage", updateLocale);
+      window.removeEventListener("languagechange", updateLocale);
+      window.removeEventListener("localechange", updateLocale);
+      window.removeEventListener("across-language-change", updateLocale);
+      window.removeEventListener("across-locale-change", updateLocale);
+    };
   }, []);
 
   const t = copy[locale];
@@ -176,7 +233,7 @@ export default function EcommercePage() {
       <section className={styles.hero}>
         <Image
           src="/images/heroecommerce.png"
-          alt="Logística e-commerce"
+          alt={t.heroTitle}
           fill
           priority
           className={styles.heroImage}
@@ -227,7 +284,7 @@ export default function EcommercePage() {
           <div className={styles.servicesImageWrap}>
             <Image
               src="/images/segundaecommerce.png"
-              alt="Operación e-commerce"
+              alt={t.servicesTitle}
               fill
               className={styles.servicesImage}
               sizes="(max-width: 900px) 100vw, 50vw"
@@ -235,11 +292,17 @@ export default function EcommercePage() {
           </div>
         </section>
 
-        <section className={styles.cta}>
-          <span>{t.ctaEyebrow}</span>
-          <h2>{t.ctaTitle}</h2>
-          <p>{t.ctaText}</p>
-          <Link href="/cotizacion">{t.ctaButton}</Link>
+        <section className={styles.compactCta}>
+          <div>
+            <span>{t.ctaEyebrow}</span>
+            <h2>{t.ctaTitle}</h2>
+            <p>{t.ctaText}</p>
+          </div>
+
+          <div className={styles.compactCtaActions}>
+            <Link href="/cotizacion">{t.ctaPrimary}</Link>
+            <Link href="/empresa/oficinas">{t.ctaSecondary}</Link>
+          </div>
         </section>
       </main>
 

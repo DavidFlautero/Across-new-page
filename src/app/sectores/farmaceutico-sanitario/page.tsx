@@ -13,92 +13,215 @@ type Locale = "es" | "en" | "zh";
 const copy = {
   es: {
     eyebrow: "PHARMA & HEALTHCARE LOGISTICS",
-    title: "Logística farmacéutica y sanitaria con control crítico.",
-    description: "Coordinamos mercancía farmacéutica, sanitaria y sensible con trazabilidad, cumplimiento, control térmico y máxima seguridad operativa.",
-    primary: "Solicitar cotización",
+    title: "Logística farmacéutica y sanitaria con trazabilidad, cumplimiento y control operativo.",
+    description:
+      "Coordinamos operaciones nacionales e internacionales para productos farmacéuticos, sanitarios, dispositivos médicos, material sensible y cadenas de suministro que requieren control documental, temperatura, seguridad y visibilidad desde origen hasta destino.",
+    primary: "Solicitar solución farmacéutica",
     secondary: "Hablar con un especialista",
-    blockEyebrow: "OPERACIÓN SANITARIA INTERNACIONAL",
-    blockTitle: "Cumplimiento, temperatura y trazabilidad para carga sanitaria.",
-    blockText: "Gestionamos productos farmacéuticos, dispositivos médicos, material sanitario y mercancía sensible bajo procesos diseñados para proteger integridad, tiempos y cumplimiento regulatorio.",
-    servicesIntro: "Soluciones para operaciones sanitarias que requieren precisión, documentación, seguridad y control continuo.",
-    servicesTitle: "Servicios logísticos para farmacéutico y sanitario.",
+
+    blockEyebrow: "OPERACIÓN FARMACÉUTICA ESPECIALIZADA",
+    blockTitle: "Logística segura para productos críticos y regulados.",
+    blockText:
+      "Diseñamos soluciones para el sector farmacéutico y sanitario integrando transporte, temperatura controlada, almacenaje, distribución, gestión documental, trazabilidad y cumplimiento normativo.",
+
+    servicesIntro:
+      "Soluciones para operaciones sanitarias que requieren precisión, documentación, control térmico, seguridad y seguimiento continuo.",
+    servicesTitle: "Servicios logísticos para farmacéutico, sanitario y healthcare.",
+
     services: [
-      ["Carga farmacéutica", "Gestión especializada para productos médicos, farmacéuticos y sanitarios."],
-      ["Temperatura controlada", "Coordinación de cadena de frío para mercancía sensible."],
-      ["Dispositivos médicos", "Transporte y distribución de equipos sanitarios y material clínico."],
-      ["Cumplimiento documental", "Control de documentación, permisos y requisitos regulatorios."],
-      ["Trazabilidad operativa", "Seguimiento de mercancía crítica durante toda la operación."],
-      ["Operaciones urgentes", "Soluciones prioritarias para envíos sanitarios de alta criticidad."]
+      [
+        "Carga farmacéutica",
+        "Gestión especializada para productos médicos, farmacéuticos y sanitarios con requisitos operativos y documentales específicos.",
+      ],
+      [
+        "Temperatura controlada",
+        "Coordinación de cadena de frío y rangos térmicos para mercancía sensible o regulada.",
+      ],
+      [
+        "Dispositivos médicos",
+        "Transporte y distribución de equipos sanitarios, dispositivos médicos y material clínico.",
+      ],
+      [
+        "Cumplimiento documental",
+        "Control de documentación, permisos, requisitos regulatorios y trazabilidad asociada a cada operación.",
+      ],
+      [
+        "Trazabilidad operativa",
+        "Seguimiento de mercancía crítica, visibilidad logística y control durante toda la cadena.",
+      ],
+      [
+        "Operaciones urgentes",
+        "Soluciones prioritarias para envíos sanitarios de alta criticidad, reposiciones o entregas sensibles.",
+      ],
     ],
-    ctaEyebrow: "Cotización express",
-    ctaTitle: "Coordinemos su operación sanitaria con máxima seguridad.",
-    ctaText: "Analizamos producto, temperatura, urgencia, documentación y destino para diseñar una operación sanitaria segura y viable.",
-    ctaButton: "Solicitar propuesta →"
+
+    ctaEyebrow: "FARMACÉUTICO Y SANITARIO",
+    ctaTitle: "Planifique su operación sanitaria con un equipo especializado.",
+    ctaText:
+      "Analizamos tipo de producto, rango de temperatura, origen, destino, documentación, criticidad, normativa y tiempos de entrega para construir una solución segura, eficiente y trazable.",
+    ctaPrimary: "Evaluar operación sanitaria",
+    ctaSecondary: "Ver oficinas",
   },
+
   en: {
     eyebrow: "PHARMA & HEALTHCARE LOGISTICS",
-    title: "Pharmaceutical and healthcare logistics with critical control.",
-    description: "We coordinate pharmaceutical, healthcare and sensitive cargo with traceability, compliance, thermal control and maximum operational security.",
-    primary: "Request quotation",
+    title: "Pharma and healthcare logistics with traceability, compliance and operational control.",
+    description:
+      "We coordinate domestic and international operations for pharmaceutical products, healthcare goods, medical devices, sensitive materials and supply chains requiring documentation control, temperature, security and visibility from origin to destination.",
+    primary: "Request pharma solution",
     secondary: "Talk to a specialist",
-    blockEyebrow: "INTERNATIONAL HEALTHCARE OPERATIONS",
-    blockTitle: "Compliance, temperature and traceability for healthcare cargo.",
-    blockText: "We manage pharmaceutical products, medical devices, healthcare materials and sensitive cargo through processes designed to protect integrity, timing and regulatory compliance.",
-    servicesIntro: "Solutions for healthcare operations requiring precision, documentation, security and continuous control.",
-    servicesTitle: "Pharma and healthcare logistics services.",
+
+    blockEyebrow: "SPECIALIZED PHARMA OPERATIONS",
+    blockTitle: "Secure logistics for critical and regulated products.",
+    blockText:
+      "We design solutions for the pharmaceutical and healthcare sector by integrating transport, temperature control, warehousing, distribution, documentation management, traceability and regulatory compliance.",
+
+    servicesIntro:
+      "Solutions for healthcare operations requiring precision, documentation, thermal control, security and continuous tracking.",
+    servicesTitle: "Logistics services for pharma, healthcare and medical supply chains.",
+
     services: [
-      ["Pharmaceutical cargo", "Specialized management for medical, pharmaceutical and healthcare products."],
-      ["Temperature control", "Cold chain coordination for sensitive cargo."],
-      ["Medical devices", "Transport and distribution of healthcare equipment and clinical materials."],
-      ["Documentation compliance", "Control of documents, permits and regulatory requirements."],
-      ["Operational traceability", "Critical cargo tracking throughout the full operation."],
-      ["Urgent operations", "Priority solutions for highly critical healthcare shipments."]
+      [
+        "Pharmaceutical cargo",
+        "Specialized management for medical, pharmaceutical and healthcare products with specific operational and documentation requirements.",
+      ],
+      [
+        "Temperature control",
+        "Cold chain and temperature range coordination for sensitive or regulated cargo.",
+      ],
+      [
+        "Medical devices",
+        "Transport and distribution of healthcare equipment, medical devices and clinical materials.",
+      ],
+      [
+        "Documentation compliance",
+        "Control of documents, permits, regulatory requirements and traceability associated with each operation.",
+      ],
+      [
+        "Operational traceability",
+        "Critical cargo tracking, logistics visibility and control throughout the full chain.",
+      ],
+      [
+        "Urgent operations",
+        "Priority solutions for highly critical healthcare shipments, replenishments or sensitive deliveries.",
+      ],
     ],
-    ctaEyebrow: "Express quotation",
-    ctaTitle: "Let’s coordinate your healthcare operation with maximum security.",
-    ctaText: "We analyze product, temperature, urgency, documentation and destination to design a safe and viable healthcare operation.",
-    ctaButton: "Request proposal →"
+
+    ctaEyebrow: "PHARMA & HEALTHCARE",
+    ctaTitle: "Plan your healthcare operation with a specialized team.",
+    ctaText:
+      "We analyze product type, temperature range, origin, destination, documentation, criticality, regulations and delivery timing to build a safe, efficient and traceable solution.",
+    ctaPrimary: "Evaluate healthcare operation",
+    ctaSecondary: "View offices",
   },
+
   zh: {
     eyebrow: "医药与医疗物流",
-    title: "具备关键控制能力的医药与医疗物流。",
-    description: "我们为医药、医疗和敏感货物提供可追踪、合规、温控与高安全标准的物流协调。",
-    primary: "申请报价",
+    title: "具备可追溯性、合规能力与运营控制的医药医疗物流。",
+    description:
+      "我们为药品、医疗产品、医疗器械、敏感材料以及需要文件控制、温度、安全和全程可视化的供应链协调国内与国际物流业务。",
+    primary: "申请医药物流方案",
     secondary: "联系专家",
-    blockEyebrow: "国际医疗物流运营",
-    blockTitle: "为医疗货物提供合规、温控与追踪能力。",
-    blockText: "我们管理药品、医疗器械、医疗材料和敏感货物，通过专业流程保障完整性、时效与法规合规。",
-    servicesIntro: "为需要精度、文件、安全与持续控制的医疗物流业务设计方案。",
-    servicesTitle: "医药与医疗物流服务。",
+
+    blockEyebrow: "专业医药物流运营",
+    blockTitle: "面向关键与受监管产品的安全物流。",
+    blockText:
+      "我们为医药与医疗行业设计物流方案，整合运输、温控、仓储、配送、文件管理、可追溯性和法规合规。",
+
+    servicesIntro:
+      "为需要精准、文件、温控、安全和持续跟踪的医疗物流业务打造解决方案。",
+    servicesTitle: "面向医药、医疗和卫生供应链的物流服务。",
+
     services: [
-      ["医药货运", "医药、医疗与卫生产品的专业管理。"],
-      ["温度控制", "敏感货物的冷链协调。"],
-      ["医疗器械", "医疗设备与临床材料的运输配送。"],
-      ["文件合规", "文件、许可与监管要求控制。"],
-      ["运营追踪", "关键货物全流程追踪。"],
-      ["紧急运输", "高关键性医疗货物的优先物流方案。"]
+      [
+        "医药货运",
+        "为医疗、医药与卫生产品提供专业管理，满足特定运营和文件要求。",
+      ],
+      [
+        "温度控制",
+        "为敏感或受监管货物协调冷链与温度范围控制。",
+      ],
+      [
+        "医疗器械",
+        "运输和配送医疗设备、医疗器械与临床材料。",
+      ],
+      [
+        "文件合规",
+        "控制文件、许可、监管要求以及每项操作相关的可追溯性。",
+      ],
+      [
+        "运营追踪",
+        "在整个链路中对关键货物进行跟踪、物流可视化和控制。",
+      ],
+      [
+        "紧急运输",
+        "为高关键性医疗货物、补货或敏感交付提供优先解决方案。",
+      ],
     ],
-    ctaEyebrow: "快速报价",
-    ctaTitle: "以最高安全标准协调您的医疗物流业务。",
-    ctaText: "我们分析产品、温度、紧急程度、文件与目的地，设计安全可行的医疗物流方案。",
-    ctaButton: "申请方案 →"
-  }
+
+    ctaEyebrow: "医药与医疗",
+    ctaTitle: "与专业团队一起规划您的医疗物流操作。",
+    ctaText:
+      "我们分析产品类型、温度范围、始发地、目的地、文件、关键程度、法规和交付时效，为您构建安全、高效且可追溯的方案。",
+    ctaPrimary: "评估医疗物流操作",
+    ctaSecondary: "查看办公室",
+  },
 } as const;
+
+function getInitialLocale(): Locale {
+  if (typeof window === "undefined") return "es";
+
+  const saved =
+    window.localStorage.getItem("locale") ||
+    window.localStorage.getItem("across-locale");
+
+  if (saved === "en" || saved === "zh" || saved === "es") return saved;
+
+  const htmlLang = document.documentElement.lang;
+  if (htmlLang === "en" || htmlLang === "zh" || htmlLang === "es") return htmlLang;
+
+  return "es";
+}
 
 export default function FarmaceuticoSanitarioPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
-    const saved = window.localStorage.getItem("across-locale") as Locale | null;
-    if (saved && saved in copy) setLocale(saved);
+    const updateLocale = (event?: Event) => {
+      const rawDetail = event instanceof CustomEvent ? event.detail : null;
 
-    const handler = (event: Event) => {
-      const next = (event as CustomEvent<Locale>).detail;
-      if (next && next in copy) setLocale(next);
+      const next =
+        typeof rawDetail === "string"
+          ? rawDetail
+          : rawDetail && typeof rawDetail === "object" && "locale" in rawDetail
+            ? String((rawDetail as { locale?: unknown }).locale)
+            : rawDetail && typeof rawDetail === "object" && "language" in rawDetail
+              ? String((rawDetail as { language?: unknown }).language)
+              : null;
+
+      if (next === "es" || next === "en" || next === "zh") {
+        setLocale(next);
+        return;
+      }
+
+      setLocale(getInitialLocale());
     };
 
-    window.addEventListener("across-locale-change", handler);
-    return () => window.removeEventListener("across-locale-change", handler);
+    updateLocale();
+
+    window.addEventListener("storage", updateLocale);
+    window.addEventListener("languagechange", updateLocale);
+    window.addEventListener("localechange", updateLocale);
+    window.addEventListener("across-language-change", updateLocale);
+    window.addEventListener("across-locale-change", updateLocale);
+
+    return () => {
+      window.removeEventListener("storage", updateLocale);
+      window.removeEventListener("languagechange", updateLocale);
+      window.removeEventListener("localechange", updateLocale);
+      window.removeEventListener("across-language-change", updateLocale);
+      window.removeEventListener("across-locale-change", updateLocale);
+    };
   }, []);
 
   const t = copy[locale];
@@ -108,7 +231,14 @@ export default function FarmaceuticoSanitarioPage() {
       <Header />
 
       <section className={styles.hero}>
-        <Image src="/images/sectores/herofarmaceutico2.png" alt="Pharma healthcare logistics" fill priority className={styles.heroImage} sizes="100vw" />
+        <Image
+          src="/images/sectores/herofarmaceutico2.png"
+          alt={t.title}
+          fill
+          priority
+          className={styles.heroImage}
+          sizes="100vw"
+        />
         <div className={styles.heroOverlay} />
 
         <div className={styles.heroContent}>
@@ -140,7 +270,10 @@ export default function FarmaceuticoSanitarioPage() {
             <div className={styles.accordion}>
               {t.services.map(([title, description]) => (
                 <details key={title} className={styles.serviceItem}>
-                  <summary><h3>{title}</h3><span>+</span></summary>
+                  <summary>
+                    <h3>{title}</h3>
+                    <span>+</span>
+                  </summary>
                   <p>{description}</p>
                 </details>
               ))}
@@ -148,15 +281,27 @@ export default function FarmaceuticoSanitarioPage() {
           </div>
 
           <div className={styles.servicesImageWrap}>
-            <Image src="/images/sectores/herofarmaseutico.png" alt="Healthcare logistics operation" fill className={styles.servicesImage} sizes="(max-width: 900px) 100vw, 50vw" />
+            <Image
+              src="/images/sectores/herofarmaseutico.png"
+              alt={t.servicesTitle}
+              fill
+              className={styles.servicesImage}
+              sizes="(max-width: 900px) 100vw, 50vw"
+            />
           </div>
         </section>
 
-        <section className={styles.cta}>
-          <span>{t.ctaEyebrow}</span>
-          <h2>{t.ctaTitle}</h2>
-          <p>{t.ctaText}</p>
-          <Link href="/cotizacion">{t.ctaButton}</Link>
+        <section className={styles.compactCta}>
+          <div>
+            <span>{t.ctaEyebrow}</span>
+            <h2>{t.ctaTitle}</h2>
+            <p>{t.ctaText}</p>
+          </div>
+
+          <div className={styles.compactCtaActions}>
+            <Link href="/cotizacion">{t.ctaPrimary}</Link>
+            <Link href="/empresa/oficinas">{t.ctaSecondary}</Link>
+          </div>
         </section>
       </main>
 

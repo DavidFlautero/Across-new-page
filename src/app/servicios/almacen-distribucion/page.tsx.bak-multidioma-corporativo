@@ -13,20 +13,19 @@ type Locale = "es" | "en" | "zh";
 const copy = {
   es: {
     eyebrow: "WAREHOUSING & DISTRIBUTION",
-    heroTitle: "Almacenaje y distribución para operaciones logísticas eficientes.",
-    heroText: "Gestionamos mercancías, inventario, preparación de pedidos y distribución nacional e internacional con control operativo, trazabilidad y soluciones adaptadas a cada cadena de suministro.",
-    quote: "Solicitar solución logística",
+    heroTitle: "Almacén y distribución para operaciones que necesitan control.",
+    heroText: "Integramos almacenamiento, preparación de pedidos, gestión de inventario y distribución para empresas que necesitan eficiencia, visibilidad y capacidad operativa escalable.",
+    quote: "Solicitar cotización",
     specialist: "Hablar con un especialista",
-    blockEyebrow: "OPERACIÓN LOGÍSTICA INTEGRADA",
-    blockTitle: "Control, trazabilidad y eficiencia desde el almacén hasta la entrega.",
-    blockText: "Diseñamos soluciones de almacenaje y distribución para empresas que necesitan gestionar stock, preparar pedidos, optimizar flujos logísticos y asegurar entregas con visibilidad operativa.",
-    servicesIntro: "Centralizamos procesos de almacenaje, inventario, preparación y distribución para reducir tiempos, mejorar control y aumentar la capacidad de respuesta.",
-    servicesTitle: "Servicios de almacenaje y distribución para cadenas de suministro exigentes.",
-    ctaEyebrow: "ALMACENAJE Y DISTRIBUCIÓN",
-    ctaTitle: "Optimice su operación logística con un equipo especializado.",
-    ctaText: "Analizamos tipo de mercancía, volumen, rotación, necesidades de almacenaje, preparación de pedidos y distribución para construir una solución eficiente y escalable.",
-    ctaPrimary: "Evaluar operación logística",
-    ctaSecondary: "Ver oficinas",
+    blockEyebrow: "OPERACIÓN LOGÍSTICA INTEGRAL",
+    blockTitle: "Más visibilidad, menos fricción y entregas mejor coordinadas.",
+    blockText: "Diseñamos soluciones de almacenaje y distribución adaptadas a cada operación, conectando inventario, preparación, transporte y entrega final bajo un mismo estándar operativo.",
+    servicesIntro: "Centralice su operación logística con procesos diseñados para reducir tiempos, mejorar control y aumentar capacidad de respuesta.",
+    servicesTitle: "Nuestros servicios de almacén y distribución.",
+    ctaEyebrow: "Cotización express",
+    ctaTitle: "Diseñemos una operación de almacén y distribución a medida.",
+    ctaText: "Analizamos volumen, rotación, tipo de mercancía, destinos y tiempos de entrega para construir una solución clara, escalable y eficiente.",
+    ctaButton: "Solicitar propuesta →",
     services: [
       ["Depósito aduanero. DA, DDA y LAME", "Soluciones de depósito aduanero para operaciones que requieren control fiscal, documental y operativo."],
       ["Depósito de mercancía peligrosa (APQ)", "Almacenamiento especializado para mercancías peligrosas bajo protocolos de seguridad y cumplimiento."],
@@ -47,20 +46,19 @@ const copy = {
   },
   en: {
     eyebrow: "WAREHOUSING & DISTRIBUTION",
-    heroTitle: "Warehousing and distribution for efficient logistics operations.",
-    heroText: "We manage cargo, inventory, order preparation and domestic or international distribution with operational control, traceability and solutions adapted to each supply chain.",
-    quote: "Request logistics solution",
+    heroTitle: "Warehousing and distribution for operations that need control.",
+    heroText: "We integrate storage, order preparation, inventory management and distribution for companies that need efficiency, visibility and scalable operational capacity.",
+    quote: "Request quotation",
     specialist: "Talk to a specialist",
     blockEyebrow: "INTEGRATED LOGISTICS OPERATIONS",
-    blockTitle: "Control, traceability and efficiency from warehouse to delivery.",
-    blockText: "We design warehousing and distribution solutions for companies that need to manage stock, prepare orders, optimize logistics flows and secure deliveries with operational visibility.",
-    servicesIntro: "We centralize warehousing, inventory, order preparation and distribution processes to reduce times, improve control and increase responsiveness.",
-    servicesTitle: "Warehousing and distribution services for demanding supply chains.",
-    ctaEyebrow: "WAREHOUSING & DISTRIBUTION",
-    ctaTitle: "Optimize your logistics operation with a specialized team.",
-    ctaText: "We analyze cargo type, volume, rotation, storage needs, order preparation and distribution requirements to build an efficient and scalable solution.",
-    ctaPrimary: "Evaluate logistics operation",
-    ctaSecondary: "View offices",
+    blockTitle: "More visibility, less friction and better coordinated deliveries.",
+    blockText: "We design warehousing and distribution solutions adapted to each operation, connecting inventory, preparation, transport and final delivery under one operating standard.",
+    servicesIntro: "Centralize your logistics operation with processes designed to reduce times, improve control and increase responsiveness.",
+    servicesTitle: "Our warehousing and distribution services.",
+    ctaEyebrow: "Express quotation",
+    ctaTitle: "Let’s design a tailored warehousing and distribution operation.",
+    ctaText: "We analyze volume, rotation, cargo type, destinations and delivery times to build a clear, scalable and efficient solution.",
+    ctaButton: "Request proposal →",
     services: [
       ["Customs warehouse. DA, DDA and LAME", "Customs warehouse solutions for operations requiring fiscal, documentation and operational control."],
       ["Dangerous goods warehouse (APQ)", "Specialized storage for dangerous goods under safety and compliance protocols."],
@@ -81,20 +79,19 @@ const copy = {
   },
   zh: {
     eyebrow: "仓储与配送",
-    heroTitle: "面向高效物流运营的仓储与配送解决方案。",
-    heroText: "我们管理货物、库存、订单准备以及国内和国际配送，提供运营控制、可追溯性和适配供应链需求的解决方案。",
-    quote: "申请物流方案",
+    heroTitle: "为需要高度控制的业务提供仓储与配送方案。",
+    heroText: "我们整合仓储、订单准备、库存管理与配送服务，帮助企业提升效率、可视化能力与可扩展运营能力。",
+    quote: "申请报价",
     specialist: "联系专家",
     blockEyebrow: "综合物流运营",
-    blockTitle: "从仓储到交付，实现控制、可追溯性与效率。",
-    blockText: "我们为需要管理库存、准备订单、优化物流流程并确保可视化交付的企业设计仓储与配送解决方案。",
-    servicesIntro: "我们集中管理仓储、库存、订单准备和配送流程，以缩短时间、提升控制并增强响应能力。",
-    servicesTitle: "面向高要求供应链的仓储与配送服务。",
-    ctaEyebrow: "仓储与配送",
-    ctaTitle: "与专业团队一起优化您的物流运营。",
-    ctaText: "我们分析货物类型、货量、周转率、仓储需求、订单准备和配送要求，为您构建高效且可扩展的方案。",
-    ctaPrimary: "评估物流运营",
-    ctaSecondary: "查看办公室",
+    blockTitle: "更高可视化、更少摩擦，以及更协调的交付流程。",
+    blockText: "我们根据每项业务设计仓储与配送解决方案，将库存、备货、运输与最终交付连接在同一运营标准下。",
+    servicesIntro: "通过专业流程集中管理物流业务，缩短时间、提升控制并增强响应能力。",
+    servicesTitle: "我们的仓储与配送服务。",
+    ctaEyebrow: "快速报价",
+    ctaTitle: "让我们为您设计定制化仓储与配送方案。",
+    ctaText: "我们会分析货量、周转率、货物类型、目的地与交付时效，构建清晰、可扩展且高效的方案。",
+    ctaButton: "申请方案 →",
     services: [
       ["海关仓库 DA、DDA 与 LAME", "为需要税务、文件和运营控制的业务提供海关仓储方案。"],
       ["危险品仓储（APQ）", "按照安全与合规要求存储危险品货物。"],
@@ -119,54 +116,16 @@ export default function AlmacenDistribucionPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
-    const getInitialLocale = (): Locale => {
-      const saved =
-        window.localStorage.getItem("locale") ||
-        window.localStorage.getItem("across-locale");
+    const saved = window.localStorage.getItem("across-locale") as Locale | null;
+    if (saved && saved in copy) setLocale(saved);
 
-      if (saved === "en" || saved === "zh" || saved === "es") return saved;
-
-      const htmlLang = document.documentElement.lang;
-      if (htmlLang === "en" || htmlLang === "zh" || htmlLang === "es") return htmlLang;
-
-      return "es";
+    const handler = (event: Event) => {
+      const next = (event as CustomEvent<Locale>).detail;
+      if (next && next in copy) setLocale(next);
     };
 
-    const updateLocale = (event?: Event) => {
-      const rawDetail = event instanceof CustomEvent ? event.detail : null;
-
-      const next =
-        typeof rawDetail === "string"
-          ? rawDetail
-          : rawDetail && typeof rawDetail === "object" && "locale" in rawDetail
-            ? String((rawDetail as { locale?: unknown }).locale)
-            : rawDetail && typeof rawDetail === "object" && "language" in rawDetail
-              ? String((rawDetail as { language?: unknown }).language)
-              : null;
-
-      if (next === "es" || next === "en" || next === "zh") {
-        setLocale(next);
-        return;
-      }
-
-      setLocale(getInitialLocale());
-    };
-
-    updateLocale();
-
-    window.addEventListener("storage", updateLocale);
-    window.addEventListener("languagechange", updateLocale);
-    window.addEventListener("localechange", updateLocale);
-    window.addEventListener("across-language-change", updateLocale);
-    window.addEventListener("across-locale-change", updateLocale);
-
-    return () => {
-      window.removeEventListener("storage", updateLocale);
-      window.removeEventListener("languagechange", updateLocale);
-      window.removeEventListener("localechange", updateLocale);
-      window.removeEventListener("across-language-change", updateLocale);
-      window.removeEventListener("across-locale-change", updateLocale);
-    };
+    window.addEventListener("across-locale-change", handler);
+    return () => window.removeEventListener("across-locale-change", handler);
   }, []);
 
   const t = copy[locale];
@@ -178,7 +137,7 @@ export default function AlmacenDistribucionPage() {
       <Header />
 
       <section className={styles.hero}>
-        <Image src="/images/almacenHero.png" alt={t.heroTitle} fill priority className={styles.heroImage} sizes="100vw" />
+        <Image src="/images/almacenHero.png" alt="Almacén y distribución" fill priority className={styles.heroImage} sizes="100vw" />
         <div className={styles.heroOverlay} />
 
         <div className={styles.heroContent}>
@@ -221,13 +180,13 @@ export default function AlmacenDistribucionPage() {
           </div>
 
           <div className={styles.servicesImageWrap}>
-            <Image src="/images/almacensegunda.png" alt={t.servicesTitle} fill className={styles.servicesImage} sizes="(max-width: 900px) 100vw, 50vw" />
+            <Image src="/images/almacensegunda.png" alt="Operación de almacén" fill className={styles.servicesImage} sizes="(max-width: 900px) 100vw, 50vw" />
           </div>
         </section>
 
         <section className={`${styles.servicesPanel} ${styles.servicesPanelReverse}`}>
           <div className={styles.servicesImageWrap}>
-            <Image src="/images/almacentercer.png" alt={t.servicesTitle} fill className={styles.servicesImage} sizes="(max-width: 900px) 100vw, 50vw" />
+            <Image src="/images/almacentercer.png" alt="Gestión avanzada de almacén" fill className={styles.servicesImage} sizes="(max-width: 900px) 100vw, 50vw" />
           </div>
 
           <div className={styles.servicesCopy}>
@@ -248,17 +207,11 @@ export default function AlmacenDistribucionPage() {
           </div>
         </section>
 
-        <section className={styles.compactCta}>
-          <div>
-            <span>{t.ctaEyebrow}</span>
-            <h2>{t.ctaTitle}</h2>
-            <p>{t.ctaText}</p>
-          </div>
-
-          <div className={styles.compactCtaActions}>
-            <Link href="/cotizacion">{t.ctaPrimary}</Link>
-            <Link href="/empresa/oficinas">{t.ctaSecondary}</Link>
-          </div>
+        <section className={styles.cta}>
+          <span>{t.ctaEyebrow}</span>
+          <h2>{t.ctaTitle}</h2>
+          <p>{t.ctaText}</p>
+          <Link href="/cotizacion">{t.ctaButton}</Link>
         </section>
       </main>
 

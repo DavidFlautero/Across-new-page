@@ -233,25 +233,7 @@ export default function TransporteAereoPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
-    const updateLocale = (event?: Event) => {
-      const rawDetail = event instanceof CustomEvent ? event.detail : null;
-
-      const next =
-        typeof rawDetail === "string"
-          ? rawDetail
-          : rawDetail && typeof rawDetail === "object" && "locale" in rawDetail
-            ? String((rawDetail as { locale?: unknown }).locale)
-            : rawDetail && typeof rawDetail === "object" && "language" in rawDetail
-              ? String((rawDetail as { language?: unknown }).language)
-              : null;
-
-      if (next === "es" || next === "en" || next === "zh") {
-        setLocale(next);
-        return;
-      }
-
-      setLocale(getInitialLocale());
-    };
+    const updateLocale = () => setLocale(getInitialLocale());
 
     updateLocale();
 
@@ -259,14 +241,12 @@ export default function TransporteAereoPage() {
     window.addEventListener("languagechange", updateLocale);
     window.addEventListener("localechange", updateLocale);
     window.addEventListener("across-language-change", updateLocale);
-    window.addEventListener("across-locale-change", updateLocale);
 
     return () => {
       window.removeEventListener("storage", updateLocale);
       window.removeEventListener("languagechange", updateLocale);
       window.removeEventListener("localechange", updateLocale);
       window.removeEventListener("across-language-change", updateLocale);
-      window.removeEventListener("across-locale-change", updateLocale);
     };
   }, []);
 
