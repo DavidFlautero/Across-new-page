@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { readFile } from "node:fs/promises";
+import path from "node:path";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
-export const revalidate = 3600;
+export const revalidate = 1800;
 
 type Locale = "es" | "en" | "zh";
 
@@ -15,22 +16,25 @@ function clean(value = "") {
     .replace(/&#8217;/g, "'")
     .replace(/&#8220;/g, '"')
     .replace(/&#8221;/g, '"')
+    .replace(/<[^>]+>/g, "")
     .replace(/\s+/g, " ")
     .trim();
 }
 
-function getLocale(request: NextRequest): Locale {
-  const locale = request.nextUrl.searchParams.get("locale");
-
-  if (locale === "es" || locale === "en" || locale === "zh") {
-    return locale;
-  }
-
+function getLocale(value: string | null): Locale {
+  if (value === "en" || value === "zh") return value;
   return "es";
 }
 
-async function readUrlsFile(filename: string) {
-  const txt = await readFile(filename, "utf8");
+function localeFile(locale: Locale) {
+  if (locale === "en") return "blog-urls-en.txt";
+  if (locale === "zh") return "blog-urls-en.txt";
+  return "blog-urls-es.txt";
+}
+
+async function readUrlsFromFile(locale: Locale) {
+  const filePath = path.join(process.cwd(), localeFile(locale));
+  const txt = await readFile(filePath, "utf8");
 
   return txt
     .split("\n")
@@ -39,92 +43,90 @@ async function readUrlsFile(filename: string) {
 }
 
 async function getUrls(locale: Locale) {
-  if (locale === "en") {
-    return readUrlsFile("blog-urls-en.txt");
-  }
+  try {
+    return await readUrlsFromFile(locale);
+  } catch {}
 
-  if (locale === "zh") {
-    try {
-      return await readUrlsFile("blog-urls-zh.txt");
-    } catch {
-      return readUrlsFile("blog-urls-en.txt");
-    }
-  }
+  try {
+    const sitemapPath = path.join(process.cwd(), "sitemap.blog.xml");
+    const xml = await readFile(sitemapPath, "utf8");
 
-  return readUrlsFile("blog-urls-es.txt");
-}
+    return Array.from(xml.matchAll(/<loc>(.*?)<\/loc>/g))
+      .map((m) => m[1])
+      .filter((url) => {
+        if (!url.includes("/blog/")) return false;
+        if (locale === "en" || locale === "zh") return url.includes("/blog/en/");
+        return !url.includes("/blog/en/");
+      });
+  } catch {}
 
-function getSlugFromUrl(url: string) {
-  return url
-    .replace("https://acrosslogistics.com/blog/en/", "")
-    .replace("https://acrosslogistics.com/en/blog/", "")
-    .replace("https://acrosslogistics.com/blog/", "")
-    .replace(/\/$/, "");
-}
-
-function normalizeCategory(category: string) {
-  const value = clean(category).toLowerCase();
-
-  if (value.includes("air") || value.includes("aéreo") || value.includes("aereo")) return "Transporte Aéreo";
-  if (value.includes("custom") || value.includes("aduana")) return "Aduanas";
-  if (value.includes("warehouse") || value.includes("almac")) return "Almacén";
-  if (value.includes("sustain") || value.includes("sosten")) return "Sostenibilidad";
-  if (value.includes("maritime") || value.includes("ocean") || value.includes("marítimo") || value.includes("maritimo")) return "Transporte Marítimo";
-  if (value.includes("ground") || value.includes("road") || value.includes("terrestre")) return "Transporte terrestre";
-  if (value.includes("transport") || value.includes("logística") || value.includes("logistics")) return "Logística de Transporte";
-  if (value.includes("news") || value.includes("actualidad")) return "Actualidad";
-
-  return category || "Actualidad";
+  return [];
 }
 
 async function getPost(url: string) {
-  const html = await fetch(url, {
-    headers: { "user-agent": "Mozilla/5.0" },
-    next: { revalidate: 3600 },
-  }).then((r) => r.text());
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 7000);
 
-  const category =
-    clean(html.match(/article:section" content="([^"]+)"/i)?.[1]) ||
-    clean(html.match(/<meta name="article:section" content="([^"]+)"/i)?.[1]) ||
-    "Actualidad";
+  try {
+    const html = await fetch(url, {
+      signal: controller.signal,
+      headers: {
+        "user-agent": "Mozilla/5.0 Across Logistics Website",
+      },
+      cache: "no-store",
+    }).then((r) => r.text());
 
-  return {
-    slug: getSlugFromUrl(url),
-    url,
-    title:
-      clean(html.match(/<meta property="og:title" content="([^"]+)"/i)?.[1]) ||
-      clean(html.match(/<title>(.*?)<\/title>/i)?.[1]),
-    description:
-      clean(html.match(/<meta property="og:description" content="([^"]+)"/i)?.[1]) ||
-      clean(html.match(/<meta name="description" content="([^"]+)"/i)?.[1]),
-    image: html.match(/<meta property="og:image" content="([^"]+)"/i)?.[1] || "",
-    publishedAt: html.match(/article:published_time" content="([^"]+)"/i)?.[1] || "",
-    category: normalizeCategory(category),
-  };
+    return {
+      slug: url.replace("https://acrosslogistics.com/blog/", "").replace(/\/$/, ""),
+      url,
+      title:
+        clean(html.match(/<meta property="og:title" content="([^"]+)"/i)?.[1]) ||
+        clean(html.match(/<title>(.*?)<\/title>/i)?.[1]),
+      description:
+        clean(html.match(/<meta property="og:description" content="([^"]+)"/i)?.[1]) ||
+        clean(html.match(/<meta name="description" content="([^"]+)"/i)?.[1]),
+      image: html.match(/<meta property="og:image" content="([^"]+)"/i)?.[1] || "",
+      publishedAt: html.match(/article:published_time" content="([^"]+)"/i)?.[1] || "",
+      category:
+        clean(html.match(/article:section" content="([^"]+)"/i)?.[1]) ||
+        clean(html.match(/rel="category tag">([^<]+)<\/a>/i)?.[1]) ||
+        "News",
+    };
+  } finally {
+    clearTimeout(timeout);
+  }
 }
 
 export async function GET(request: NextRequest) {
   try {
-    const locale = getLocale(request);
-
-    const limitParam = Number(request.nextUrl.searchParams.get("limit") || "24");
-    const limit = Number.isFinite(limitParam)
-      ? Math.min(Math.max(limitParam, 4), 48)
-      : 24;
+    const locale = getLocale(request.nextUrl.searchParams.get("locale"));
+    const limitParam = Number(request.nextUrl.searchParams.get("limit") || "12");
+    const limit = Number.isFinite(limitParam) ? Math.min(Math.max(limitParam, 4), 24) : 12;
 
     const urls = (await getUrls(locale)).slice(0, limit);
+
+    if (!urls.length) {
+      return NextResponse.json({
+        ok: true,
+        source: "empty",
+        locale,
+        total: 0,
+        posts: [],
+      });
+    }
 
     const posts = await Promise.all(
       urls.map((url) => getPost(url).catch(() => null))
     );
 
+    const validPosts = posts.filter(Boolean);
+
     return NextResponse.json({
       ok: true,
+      source: "across-blog",
       locale,
-      limit,
-      source: locale === "en" ? "blog-urls-en.txt" : locale === "zh" ? "blog-urls-zh-fallback-en" : "blog-urls-es.txt",
-      total: posts.filter(Boolean).length,
-      posts: posts.filter(Boolean),
+      total: validPosts.length,
+      posts: validPosts,
     });
   } catch (error) {
     return NextResponse.json(

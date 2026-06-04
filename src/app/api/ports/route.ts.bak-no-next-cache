@@ -68,7 +68,7 @@ function parseCsv(text: string) {
 
 async function fetchCsv(url: string) {
   const response = await fetch(url, {
-    cache: "no-store",
+    next: { revalidate: 86400 },
     headers: { "user-agent": "Across Logistics Website" },
   });
 
