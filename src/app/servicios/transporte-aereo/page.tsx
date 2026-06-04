@@ -10,7 +10,7 @@ import styles from "../_shared/ServicePage.module.css";
 
 type Locale = "es" | "en" | "zh";
 
-const copy = {
+const copy: Record<Locale, any> = {
   es: {
     heroEyebrow: "Transporte Aéreo",
     heroTitle: "Transporte aéreo para cargas urgentes y operaciones críticas.",
@@ -323,7 +323,7 @@ export default function TransporteAereoPage() {
                 <h2>{t.servicesTitle}</h2>
 
                 <div className={styles.accordion}>
-                  {t.services.map((item) => (
+                  {t.services.map((item: { title: string; description?: string; text?: string; href?: string; label?: string }) => (
                     <details key={item.title} className={styles.serviceItem}>
                       <summary>
                         <h3>{item.title}</h3>
@@ -366,7 +366,7 @@ export default function TransporteAereoPage() {
                 <p>{t.capabilitiesText}</p>
 
                 <div className={styles.capabilityStats}>
-                  {t.stats.map(([value, label]) => (
+                  {t.stats.map(([value, label]: readonly string[]) => (
                     <div key={value}>
                       <strong>{value}</strong>
                       <small>{label}</small>

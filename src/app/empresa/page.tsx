@@ -109,7 +109,7 @@ export default function EmpresaPage() {
         </section>
 
         <section className={styles.cards}>
-          {t.cards.map(([title, text]) => (
+          {t.cards.map(([title, text]: readonly [string, string]) => (
             <article key={title}>
               <span />
               <h3>{title}</h3>

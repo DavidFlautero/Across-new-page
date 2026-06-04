@@ -10,7 +10,7 @@ import styles from "../_shared/ServicePage.module.css";
 
 type Locale = "es" | "en" | "zh";
 
-const copy = {
+const copy: Record<Locale, any> = {
   es: {
     eyebrow: "SEA FREIGHT",
     heroTitle: "Transporte marítimo internacional para cargas de gran volumen.",
@@ -249,7 +249,7 @@ export default function TransporteMaritimoPage() {
             <h2>{t.servicesTitle}</h2>
 
             <div className={styles.accordion}>
-              {t.services.map(([title, description]) => (
+              {t.services.map(([title, description]: readonly [string, string]) => (
                 <details key={title} className={styles.serviceItem}>
                   <summary>
                     <h3>{title}</h3>

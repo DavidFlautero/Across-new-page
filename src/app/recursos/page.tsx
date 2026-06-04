@@ -483,9 +483,9 @@ export default function RecursosPage() {
                   <a
                     key={resource.title}
                     href={resource.href}
-                    download={resource.download || undefined}
-                    target={resource.download ? undefined : "_blank"}
-                    rel={resource.download ? undefined : "noopener noreferrer"}
+                    download={"download" in resource && resource.download ? true : undefined}
+                    target={"download" in resource && resource.download ? undefined : "_blank"}
+                    rel={"download" in resource && resource.download ? undefined : "noopener noreferrer"}
                   >
                     <span>{resource.title}</span>
                     <strong>{resource.action}</strong>

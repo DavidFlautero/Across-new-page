@@ -10,7 +10,7 @@ import styles from "../_shared/ServicePage.module.css";
 
 type Locale = "es" | "en" | "zh";
 
-const copy = {
+const copy: Record<Locale, any> = {
   es: {
     eyebrow: "WAREHOUSING & DISTRIBUTION",
     heroTitle: "Almacenaje y distribución para operaciones logísticas eficientes.",
@@ -208,7 +208,7 @@ export default function AlmacenDistribucionPage() {
             <h2>{t.servicesTitle}</h2>
 
             <div className={styles.accordion}>
-              {firstServices.map(([title, description]) => (
+              {firstServices.map(([title, description]: readonly [string, string]) => (
                 <details key={title} className={styles.serviceItem}>
                   <summary>
                     <h3>{title}</h3>
@@ -235,7 +235,7 @@ export default function AlmacenDistribucionPage() {
             <h2>{t.servicesTitle}</h2>
 
             <div className={styles.accordion}>
-              {secondServices.map(([title, description]) => (
+              {secondServices.map(([title, description]: readonly [string, string]) => (
                 <details key={title} className={styles.serviceItem}>
                   <summary>
                     <h3>{title}</h3>

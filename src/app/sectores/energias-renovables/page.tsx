@@ -162,7 +162,7 @@ export default function EnergiasRenovablesPage() {
             <h2>{t.servicesTitle}</h2>
 
             <div className={styles.accordion}>
-              {t.services.map(([title, description]) => (
+              {t.services.map(([title, description]: readonly [string, string]) => (
                 <details key={title} className={styles.serviceItem}>
                   <summary>
                     <h3>{title}</h3>

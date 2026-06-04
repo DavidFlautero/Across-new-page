@@ -1506,3 +1506,146 @@
     text-align: center;
   }
 }
+
+/* Global hero refinement */
+.hero {
+  overflow: hidden;
+}
+
+.heroImage {
+  transform: scale(1.04);
+  transition: transform 1.4s ease, filter 1.4s ease;
+  filter: saturate(0.96) contrast(1.04);
+}
+
+.hero:hover .heroImage {
+  transform: scale(1.08);
+  filter: saturate(1.04) contrast(1.08);
+}
+
+.heroOverlay {
+  background:
+    linear-gradient(90deg, rgba(5, 7, 12, 0.88) 0%, rgba(5, 7, 12, 0.58) 48%, rgba(5, 7, 12, 0.16) 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.62) 100%);
+}
+
+.heroContent span {
+  letter-spacing: 0.18em;
+  font-weight: 900;
+}
+
+.heroContent h1 {
+  max-width: 1120px;
+  font-weight: 900;
+  letter-spacing: -0.075em;
+  text-wrap: balance;
+  text-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
+}
+
+.heroContent p {
+  max-width: 780px;
+  font-weight: 500;
+  text-wrap: pretty;
+}
+
+.heroContent {
+  animation: heroContentIn 0.9s ease both;
+}
+
+@keyframes heroContentIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.actions a {
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+}
+
+.actions a:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 760px) {
+  .heroContent h1 {
+    letter-spacing: -0.055em;
+  }
+
+  .heroImage {
+    transform: scale(1.02);
+  }
+
+  .hero:hover .heroImage {
+    transform: scale(1.04);
+  }
+}
+
+
+/* Hero fade refinement: keep buttons clear, start white transition lower */
+.hero {
+  position: relative;
+  min-height: clamp(720px, 88vh, 920px);
+  overflow: hidden;
+}
+
+.heroOverlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 4, 8, 0.92) 0%,
+      rgba(3, 4, 8, 0.72) 42%,
+      rgba(3, 4, 8, 0.24) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.12) 0%,
+      rgba(0, 0, 0, 0.34) 58%,
+      rgba(0, 0, 0, 0.58) 76%,
+      rgba(244, 241, 235, 0.04) 86%,
+      rgba(244, 241, 235, 0.72) 94%,
+      #f4f1eb 100%
+    );
+}
+
+.heroContent {
+  padding-bottom: clamp(120px, 15vh, 180px);
+}
+
+.heroContent .actions,
+.actions {
+  position: relative;
+  z-index: 3;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    min-height: 760px;
+  }
+
+  .heroContent {
+    padding-bottom: 140px;
+  }
+
+  .heroOverlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(3, 4, 8, 0.9) 0%,
+        rgba(3, 4, 8, 0.68) 62%,
+        rgba(3, 4, 8, 0.28) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.12) 0%,
+        rgba(0, 0, 0, 0.46) 68%,
+        rgba(244, 241, 235, 0.08) 88%,
+        #f4f1eb 100%
+      );
+  }
+}

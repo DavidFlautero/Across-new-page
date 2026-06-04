@@ -10,7 +10,7 @@ import styles from "../_shared/ServicePage.module.css";
 
 type Locale = "es" | "en" | "zh";
 
-const copy = {
+const copy: Record<Locale, any> = {
   es: {
     eyebrow: "E-COMMERCE LOGISTICS",
     heroTitle: "Logística e-commerce para operaciones digitales escalables.",
@@ -269,7 +269,7 @@ export default function EcommercePage() {
             <h2>{t.servicesTitle}</h2>
 
             <div className={styles.accordion}>
-              {t.services.map(([title, description]) => (
+              {t.services.map(([title, description]: readonly [string, string]) => (
                 <details key={title} className={styles.serviceItem}>
                   <summary>
                     <h3>{title}</h3>

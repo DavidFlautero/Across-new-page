@@ -197,7 +197,7 @@ export default function CotizacionPage() {
             </div>
 
             <div className={styles.optionGridFour}>
-              {cargoTypes.map(([title, text]) => (
+              {cargoTypes.map(([title, text]: readonly string[]) => (
                 <label key={title} className={styles.option}>
                   <input type="radio" name="cargo" />
                   <strong>{title}</strong>
