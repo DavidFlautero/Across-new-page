@@ -281,3 +281,51 @@ main:has(.contact-office-grid) section {
       rgba(0,0,0,.74) 100%
     ) !important;
 }
+
+
+/* Header contact button alignment fix */
+header a[href="/contacto"],
+header a[href="/contact"],
+nav a[href="/contacto"],
+nav a[href="/contact"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Cookie banner: force a real decision, no visual escape */
+[class*="cookie"] button[aria-label*="close" i],
+[class*="cookie"] button[aria-label*="cerrar" i],
+[class*="cookie"] .close,
+[class*="cookie"] .Close,
+[class*="cookie"] [class*="close"],
+[class*="cookie"] [class*="Close"] {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+[class*="cookie"] a,
+[class*="Cookie"] a {
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+}
+
+[class*="cookie"] button,
+[class*="Cookie"] button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+}
+
+/* Brand red for cookie buttons */
+[class*="cookie"] button,
+[class*="Cookie"] button {
+  background: #e11343f2 !important;
+  border-color: #e11343f2 !important;
+  color: #fff !important;
+}
