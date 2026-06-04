@@ -338,38 +338,3 @@
     transform: translateY(16px) scale(.96) !important;
   }
 }
-
-/* === MOBILE FLOATING BUTTON SAFE POSITION === */
-@media (max-width: 760px) {
-  .floating {
-    z-index: 5200 !important;
-    right: .9rem !important;
-    bottom: 8.8rem !important;
-  }
-
-  .chatBubble {
-    z-index: 5201 !important;
-    right: .2rem !important;
-  }
-
-  .callPill {
-    z-index: 5201 !important;
-  }
-}
-
-@media (max-width: 430px) {
-  .floating {
-    right: .75rem !important;
-    bottom: 8.3rem !important;
-  }
-}
-
-/* Si el drawer mobile está abierto, el botón flotante desaparece */
-@media (max-width: 1100px) {
-  body:has([class*="mobilePanelVisible"]) .floating {
-    opacity: 0 !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-    transform: translateY(16px) scale(.96) !important;
-  }
-}

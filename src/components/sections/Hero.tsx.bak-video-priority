@@ -204,23 +204,18 @@ export default function Hero() {
   return (
     <section className={styles.hero}>
       <video
+        ref={videoRef}
         className={styles.video}
+        src="/videos/Across-Demo.mp4"
         autoPlay
         muted
         loop
-        playsInline
+        playsInline suppressHydrationWarning
         preload="auto"
-        poster="/images/logisticahome.png"
+        controls={false}
         disablePictureInPicture
         aria-hidden="true"
-      >
-        <source
-          src="/videos/Across-Demo-mobile.mp4"
-          media="(max-width: 760px)"
-          type="video/mp4"
-        />
-        <source src="/videos/Across-Demo.mp4" type="video/mp4" />
-      </video>
+      />
 
       <div className={styles.overlay} />
       <div className={styles.redGlow} />

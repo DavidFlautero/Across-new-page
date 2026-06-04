@@ -31,21 +31,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <head>
-        <link
-          rel="preload"
-          as="video"
-          href="/videos/Across-Demo.mp4"
-          type="video/mp4"
-        />
-        <link
-          rel="preload"
-          as="video"
-          href="/videos/Across-Demo-mobile.mp4"
-          type="video/mp4"
-          media="(max-width: 760px)"
-        />
-      </head>
       <body
         className={`${manrope.variable} ${interTight.variable}`}
       >

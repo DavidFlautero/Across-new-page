@@ -16,7 +16,6 @@ const menuCopy = {
     services: [
       ["/servicios/transporte-aereo", "Transporte Aéreo"],
       ["/servicios/transporte-maritimo", "Transporte Marítimo"],
-      ["/servicios/transporte-terrestre", "Transporte Terrestre"],
       ["/servicios/cargas-especiales", "Cargas Especiales"],
       ["/servicios/temperatura-controlada", "Carga de Temperatura Controlada"],
       ["/servicios/almacen-distribucion", "Almacén y Distribución"],
@@ -44,7 +43,6 @@ const menuCopy = {
     services: [
       ["/servicios/transporte-aereo", "Air Freight"],
       ["/servicios/transporte-maritimo", "Ocean Freight"],
-      ["/servicios/transporte-terrestre", "Road Freight"],
       ["/servicios/cargas-especiales", "Special Cargo"],
       ["/servicios/temperatura-controlada", "Temperature-Controlled Cargo"],
       ["/servicios/almacen-distribucion", "Warehousing & Distribution"],
@@ -72,7 +70,6 @@ const menuCopy = {
     services: [
       ["/servicios/transporte-aereo", "空运"],
       ["/servicios/transporte-maritimo", "海运"],
-      ["/servicios/transporte-terrestre", "陆运"],
       ["/servicios/cargas-especiales", "特殊货运"],
       ["/servicios/temperatura-controlada", "温控货运"],
       ["/servicios/almacen-distribucion", "仓储与配送"],

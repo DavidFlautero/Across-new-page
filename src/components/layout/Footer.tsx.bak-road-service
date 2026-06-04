@@ -75,7 +75,6 @@ const copy = {
       ["/servicios/cargas-especiales", "Cargas Especiales e Industriales"],
       ["/servicios/transporte-aereo", "Transporte Aéreo"],
       ["/servicios/transporte-maritimo", "Transporte Marítimo"],
-      ["/servicios/transporte-terrestre", "Transporte Terrestre"],
     ],
     companyLinks: [
       ["/empresa/quienes-somos", "Quiénes somos"],
@@ -114,7 +113,6 @@ const copy = {
       ["/servicios/cargas-especiales", "Special & Industrial Cargo"],
       ["/servicios/transporte-aereo", "Air Freight"],
       ["/servicios/transporte-maritimo", "Ocean Freight"],
-      ["/servicios/transporte-terrestre", "Road Freight"],
     ],
     companyLinks: [
       ["/empresa/quienes-somos", "About us"],
@@ -153,7 +151,6 @@ const copy = {
       ["/servicios/cargas-especiales", "特殊与工业货物"],
       ["/servicios/transporte-aereo", "空运"],
       ["/servicios/transporte-maritimo", "海运"],
-      ["/servicios/transporte-terrestre", "陆运"],
     ],
     companyLinks: [
       ["/empresa/quienes-somos", "关于我们"],

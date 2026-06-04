@@ -329,3 +329,27 @@ nav a[href="/contact"] {
   border-color: #e11343f2 !important;
   color: #fff !important;
 }
+
+/* === HERO CTA ABOVE OVERLAYS === */
+[class*="heroContent"],
+[class*="Hero_heroContent"],
+[class*="heroInner"] {
+  position: relative;
+  z-index: 5;
+}
+
+[class*="heroContent"] a,
+[class*="heroContent"] button,
+[class*="Hero_heroContent"] a,
+[class*="Hero_heroContent"] button,
+[class*="actions"] a,
+[class*="actions"] button {
+  position: relative;
+  z-index: 6;
+}
+
+[class*="heroOverlay"],
+[class*="overlay"],
+[class*="redGlow"] {
+  pointer-events: none;
+}
