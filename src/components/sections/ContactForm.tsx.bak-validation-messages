@@ -133,60 +133,6 @@ export default function ContactForm() {
 
   const t = copy[locale];
 
-  const contactRequiredMessage = (label: string) => {
-    const field = label.replace("*", "").trim();
-
-    if (locale === "en") return `Please complete: ${field}.`;
-    if (locale === "zh") return `请填写：${field}。`;
-
-    return `Falta completar: ${field}.`;
-  };
-
-  const contactInvalidEmailMessage =
-    locale === "en"
-      ? "Please enter a valid email address."
-      : locale === "zh"
-        ? "请输入有效的电子邮件地址。"
-        : "Ingrese un correo electrónico válido.";
-
-  const contactInvalidPhoneMessage =
-    locale === "en"
-      ? "Please enter a valid phone number."
-      : locale === "zh"
-        ? "请输入有效的电话号码。"
-        : "Ingrese un número de teléfono válido.";
-
-  const contactPrivacyMessage =
-    locale === "en"
-      ? "You must accept the privacy policy before submitting."
-      : locale === "zh"
-        ? "提交前必须接受隐私政策。"
-        : "Debe aceptar la política de privacidad antes de enviar.";
-
-  function validateContactData(form: FormData) {
-    const name = String(form.get("name") || "").trim();
-    const company = String(form.get("company") || "").trim();
-    const email = String(form.get("email") || "").trim();
-    const phone = String(form.get("phone") || "").trim();
-    const country = String(form.get("country") || "").trim();
-    const message = String(form.get("message") || "").trim();
-    const privacyAccepted = form.get("privacyAccepted") === "on";
-    const digits = phone.replace(/\D/g, "");
-
-    if (!name) return contactRequiredMessage(t.name);
-    if (!company) return contactRequiredMessage(t.company);
-    if (!email) return contactRequiredMessage(t.email);
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) return contactInvalidEmailMessage;
-    if (!phone) return contactRequiredMessage(t.phone);
-    if (digits.length < 7 || digits.length > 18) return contactInvalidPhoneMessage;
-    if (!country) return contactRequiredMessage(t.country);
-    if (!message) return contactRequiredMessage(t.message);
-    if (message.length < 10) return contactRequiredMessage(t.message);
-    if (!privacyAccepted) return contactPrivacyMessage;
-
-    return "";
-  }
-
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const formEl = event.currentTarget;

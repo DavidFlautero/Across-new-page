@@ -8,34 +8,6 @@ import styles from "./Cotizacion.module.css";
 
 type Locale = "es" | "en" | "zh";
 
-type AirportCountry = {
-  code: string;
-  name: string;
-};
-
-type AirportOption = {
-  ident: string;
-  type: string;
-  name: string;
-  municipality: string;
-  iata: string;
-  icao: string;
-  country: string;
-  scheduled_service: string;
-  label: string;
-};
-
-type PortOption = {
-  code: string;
-  country: string;
-  location: string;
-  name: string;
-  subdivision: string;
-  functions: string;
-  status: string;
-  label: string;
-};
-
 const incoterms = [
   ["EXW", "Ex Works"],
   ["FCA", "Free Carrier"],
@@ -249,36 +221,17 @@ const copy = {
     originAddress: "Dirección de recogida",
     originAddressPlaceholder: "Dirección de recogida",
     originAirport: "Aeropuerto de origen",
-    originPort: "Puerto de origen",
-    originPoint: "Punto operativo de origen",
-    originPointAir: "Aeropuerto de origen",
-    originPointOcean: "Puerto de origen",
-    originPointDefault: "Punto operativo de origen",
     otherOriginAirport: "Otro aeropuerto de origen",
-    otherOriginPort: "Otro puerto de origen",
-    otherOriginPoint: "Otro punto de origen",
     destinationTitle: "Datos de destino",
     destinationText: "Seleccione país, dirección y aeropuerto de llegada.",
     destinationCountry: "País de destino*",
     destinationAddress: "Dirección de entrega",
     destinationAddressPlaceholder: "Dirección de entrega",
     destinationAirport: "Aeropuerto de destino",
-    destinationPort: "Puerto de destino",
-    destinationPoint: "Punto operativo de destino",
-    destinationPointAir: "Aeropuerto de destino",
-    destinationPointOcean: "Puerto de destino",
-    destinationPointDefault: "Punto operativo de destino",
     otherDestinationAirport: "Otro aeropuerto de destino",
-    otherDestinationPort: "Otro puerto de destino",
-    otherDestinationPoint: "Otro punto de destino",
     airportPlaceholder: "Seleccione aeropuerto",
-    portPlaceholder: "Seleccione puerto",
-    pointPlaceholder: "Indique ciudad, dirección o punto operativo",
-    loadingPoints: "Cargando opciones...",
     selectCountryFirst: "Seleccione primero el país",
     otherAirportPlaceholder: "Si no aparece, escríbalo aquí",
-    otherPortPlaceholder: "Si no aparece, escríbalo aquí",
-    otherPointPlaceholder: "Indique otro punto operativo",
     incotermTitle: "Incoterm",
     incotermText: "Seleccione la condición comercial aplicable a la operación.",
     cargoTitle: "Tipo de carga",
@@ -352,36 +305,17 @@ const copy = {
     originAddress: "Pickup address",
     originAddressPlaceholder: "Pickup address",
     originAirport: "Origin airport",
-    originPort: "Origin port",
-    originPoint: "Origin operating point",
-    originPointAir: "Origin airport",
-    originPointOcean: "Origin port",
-    originPointDefault: "Origin operating point",
     otherOriginAirport: "Other origin airport",
-    otherOriginPort: "Other origin port",
-    otherOriginPoint: "Other origin point",
     destinationTitle: "Destination details",
     destinationText: "Select country, delivery address and arrival airport.",
     destinationCountry: "Destination country*",
     destinationAddress: "Delivery address",
     destinationAddressPlaceholder: "Delivery address",
     destinationAirport: "Destination airport",
-    destinationPort: "Destination port",
-    destinationPoint: "Destination operating point",
-    destinationPointAir: "Destination airport",
-    destinationPointOcean: "Destination port",
-    destinationPointDefault: "Destination operating point",
     otherDestinationAirport: "Other destination airport",
-    otherDestinationPort: "Other destination port",
-    otherDestinationPoint: "Other destination point",
     airportPlaceholder: "Select airport",
-    portPlaceholder: "Select port",
-    pointPlaceholder: "Enter city, address or operating point",
-    loadingPoints: "Loading options...",
     selectCountryFirst: "Select country first",
     otherAirportPlaceholder: "If it is not listed, write it here",
-    otherPortPlaceholder: "If it is not listed, write it here",
-    otherPointPlaceholder: "Enter another operating point",
     incotermTitle: "Incoterm",
     incotermText: "Select the commercial condition applicable to the operation.",
     cargoTitle: "Cargo type",
@@ -455,36 +389,17 @@ const copy = {
     originAddress: "提货地址",
     originAddressPlaceholder: "提货地址",
     originAirport: "起运机场",
-    originPort: "起运港口",
-    originPoint: "起运操作点",
-    originPointAir: "起运机场",
-    originPointOcean: "起运港口",
-    originPointDefault: "起运操作点",
     otherOriginAirport: "其他起运机场",
-    otherOriginPort: "其他起运港口",
-    otherOriginPoint: "其他起运点",
     destinationTitle: "目的地信息",
     destinationText: "选择国家、送货地址和到达机场。",
     destinationCountry: "目的地国家*",
     destinationAddress: "送货地址",
     destinationAddressPlaceholder: "送货地址",
     destinationAirport: "目的地机场",
-    destinationPort: "目的地港口",
-    destinationPoint: "目的地操作点",
-    destinationPointAir: "目的地机场",
-    destinationPointOcean: "目的地港口",
-    destinationPointDefault: "目的地操作点",
     otherDestinationAirport: "其他目的地机场",
-    otherDestinationPort: "其他目的地港口",
-    otherDestinationPoint: "其他目的地点",
     airportPlaceholder: "选择机场",
-    portPlaceholder: "选择港口",
-    pointPlaceholder: "输入城市、地址或操作点",
-    loadingPoints: "正在加载选项...",
     selectCountryFirst: "请先选择国家",
     otherAirportPlaceholder: "如果未列出，请在此填写",
-    otherPortPlaceholder: "如果未列出，请在此填写",
-    otherPointPlaceholder: "填写其他操作点",
     incotermTitle: "Incoterm",
     incotermText: "选择适用于该操作的贸易条款。",
     cargoTitle: "货物类型",
@@ -583,13 +498,6 @@ export default function CotizacionPage() {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState("");
-  const [airportCountries, setAirportCountries] = useState<AirportCountry[]>([]);
-  const [originAirportOptions, setOriginAirportOptions] = useState<AirportOption[]>([]);
-  const [destinationAirportOptions, setDestinationAirportOptions] = useState<AirportOption[]>([]);
-  const [originPortOptions, setOriginPortOptions] = useState<PortOption[]>([]);
-  const [destinationPortOptions, setDestinationPortOptions] = useState<PortOption[]>([]);
-  const [airportsLoading, setAirportsLoading] = useState(false);
-  const [portsLoading, setPortsLoading] = useState(false);
   const [activeStep, setActiveStep] = useState(0);
   const [stepError, setStepError] = useState("");
 
@@ -631,144 +539,29 @@ export default function CotizacionPage() {
     };
   }, []);
 
-  useEffect(() => {
-    let alive = true;
-
-    fetch("/api/airports")
-      .then((response) => response.json())
-      .then((data) => {
-        if (!alive) return;
-
-        const countries = Array.isArray(data.countries) ? data.countries : [];
-        setAirportCountries(countries);
-      })
-      .catch(() => {
-        if (!alive) return;
-        setAirportCountries([]);
-      });
-
-    return () => {
-      alive = false;
-    };
-  }, []);
-
   const t = copy[locale];
 
-  const countryOptions = airportCountries;
+  const countryOptions = useMemo(() => getCountryOptions(locale), [locale]);
 
-  const countryLabel = (value: string) =>
-    countryOptions.find(
-      (country) => country.code === value || country.name.toLowerCase() === value.trim().toLowerCase()
-    )?.name || value;
+  const originAirportKey = useMemo(
+    () => getAirportCountryKey(form.originCountry, countryOptions),
+    [form.originCountry, countryOptions]
+  );
 
-  const getCountryCode = (value: string) =>
-    countryOptions.find(
-      (country) => country.code === value || country.name.toLowerCase() === value.trim().toLowerCase()
-    )?.code || "";
+  const destinationAirportKey = useMemo(
+    () => getAirportCountryKey(form.destinationCountry, countryOptions),
+    [form.destinationCountry, countryOptions]
+  );
 
-  const loadAirports = async (
-    countryValue: string,
-    setter: (airports: AirportOption[]) => void
-  ) => {
-    const countryCode = getCountryCode(countryValue);
+  const originAirports = useMemo(
+    () => airportsByCountry[originAirportKey] || [],
+    [originAirportKey]
+  );
 
-    if (!countryCode) {
-      setter([]);
-      return;
-    }
-
-    try {
-      setAirportsLoading(true);
-
-      const response = await fetch(`/api/airports?country=${encodeURIComponent(countryCode)}`);
-      const data = await response.json();
-
-      setter(Array.isArray(data.airports) ? data.airports : []);
-    } catch {
-      setter([]);
-    } finally {
-      setAirportsLoading(false);
-    }
-  };
-
-  const loadPorts = async (
-    countryValue: string,
-    setter: (ports: PortOption[]) => void
-  ) => {
-    const countryCode = getCountryCode(countryValue);
-
-    if (!countryCode) {
-      setter([]);
-      return;
-    }
-
-    try {
-      setPortsLoading(true);
-
-      const response = await fetch(`/api/ports?country=${encodeURIComponent(countryCode)}`);
-      const data = await response.json();
-
-      setter(Array.isArray(data.ports) ? data.ports : []);
-    } catch {
-      setter([]);
-    } finally {
-      setPortsLoading(false);
-    }
-  };
-
-
-  const normalizedService = form.service.toLowerCase();
-
-  const serviceMode =
-    ["aéreo", "air", "空运"].includes(normalizedService)
-      ? "air"
-      : ["marítimo", "ocean", "sea", "海运"].includes(normalizedService)
-        ? "ocean"
-        : normalizedService
-          ? "ground"
-          : "none";
-
-  const originPointLabel =
-    serviceMode === "air"
-      ? t.originPointAir
-      : serviceMode === "ocean"
-        ? t.originPointOcean
-        : t.originPointDefault;
-
-  const destinationPointLabel =
-    serviceMode === "air"
-      ? t.destinationPointAir
-      : serviceMode === "ocean"
-        ? t.destinationPointOcean
-        : t.destinationPointDefault;
-
-  const otherOriginPointLabel =
-    serviceMode === "air"
-      ? t.otherOriginAirport
-      : serviceMode === "ocean"
-        ? t.otherOriginPort
-        : t.otherOriginPoint;
-
-  const otherDestinationPointLabel =
-    serviceMode === "air"
-      ? t.otherDestinationAirport
-      : serviceMode === "ocean"
-        ? t.otherDestinationPort
-        : t.otherDestinationPoint;
-
-  const pointPlaceholder =
-    serviceMode === "air"
-      ? t.airportPlaceholder
-      : serviceMode === "ocean"
-        ? t.portPlaceholder
-        : t.pointPlaceholder;
-
-  const otherPointPlaceholder =
-    serviceMode === "air"
-      ? t.otherAirportPlaceholder
-      : serviceMode === "ocean"
-        ? t.otherPortPlaceholder
-        : t.otherPointPlaceholder;
+  const destinationAirports = useMemo(
+    () => airportsByCountry[destinationAirportKey] || [],
+    [destinationAirportKey]
+  );
 
   const selectedCargo = cargoTypes.find((item) => item.id === form.cargoType);
   const showMeasureBox =
@@ -777,40 +570,8 @@ export default function CotizacionPage() {
   const lengthUnit = form.units === "metric" ? "cm" : "inch";
   const weightUnit = form.units === "metric" ? "kg" : "lb";
 
-
-  useEffect(() => {
-    if (serviceMode === "air") {
-      loadAirports(form.originCountry, setOriginAirportOptions);
-      setOriginPortOptions([]);
-      return;
-    }
-
-    if (serviceMode === "ocean") {
-      loadPorts(form.originCountry, setOriginPortOptions);
-      setOriginAirportOptions([]);
-      return;
-    }
-
-    setOriginAirportOptions([]);
-    setOriginPortOptions([]);
-  }, [form.originCountry, airportCountries, serviceMode]);
-
-  useEffect(() => {
-    if (serviceMode === "air") {
-      loadAirports(form.destinationCountry, setDestinationAirportOptions);
-      setDestinationPortOptions([]);
-      return;
-    }
-
-    if (serviceMode === "ocean") {
-      loadPorts(form.destinationCountry, setDestinationPortOptions);
-      setDestinationAirportOptions([]);
-      return;
-    }
-
-    setDestinationAirportOptions([]);
-    setDestinationPortOptions([]);
-  }, [form.destinationCountry, airportCountries, serviceMode]);
+  const countryLabel = (value: string) =>
+    countryOptions.find((country) => country.id === value || country.label === value)?.label || value;
 
   const setValue = <K extends keyof typeof initialForm>(
     key: K,
@@ -1084,35 +845,6 @@ export default function CotizacionPage() {
           </aside>
 
           <form className={styles.formCard} onSubmit={submit}>
-            <datalist id="quote-countries">
-              {countryOptions.map((country) => (
-                <option key={country.code} value={country.name} />
-              ))}
-            </datalist>
-
-            <datalist id="quote-origin-airports">
-              {originAirportOptions.map((airport) => (
-                <option key={airport.ident} value={airport.label} />
-              ))}
-            </datalist>
-
-            <datalist id="quote-destination-airports">
-              {destinationAirportOptions.map((airport) => (
-                <option key={airport.ident} value={airport.label} />
-              ))}
-            </datalist>
-
-            <datalist id="quote-origin-ports">
-              {originPortOptions.map((port) => (
-                <option key={port.code} value={port.label} />
-              ))}
-            </datalist>
-
-            <datalist id="quote-destination-ports">
-              {destinationPortOptions.map((port) => (
-                <option key={port.code} value={port.label} />
-              ))}
-            </datalist>
             <section className={`${styles.accordionPanel} ${activeStep === 0 ? styles.accordionOpen : ""}`}>
               <div
                 className={styles.formHeader}
@@ -1214,20 +946,7 @@ export default function CotizacionPage() {
 
               <label>
                 {t.serviceRequired}
-                <select
-                  value={form.service}
-                  onChange={(e) =>
-                    setForm((prev) => ({
-                      ...prev,
-                      service: e.target.value,
-                      originAirport: "",
-                      originAirportOther: "",
-                      destinationAirport: "",
-                      destinationAirportOther: "",
-                    }))
-                  }
-                  required
-                >
+                <select value={form.service} onChange={(e) => setValue("service", e.target.value)} required>
                   <option value="">{t.servicePlaceholder}</option>
                   {t.services.map((service) => (
                     <option key={service}>{service}</option>
@@ -1267,28 +986,20 @@ export default function CotizacionPage() {
                   </label>
 
                   <label>
-                    {originPointLabel}
-                    <input
-                      type="text"
-                      list={serviceMode === "ocean" ? "quote-origin-ports" : "quote-origin-airports"}
-                      placeholder={
-                        form.originCountry
-                          ? serviceMode === "ground"
-                            ? t.pointPlaceholder
-                            : airportsLoading || portsLoading
-                              ? t.loadingPoints
-                              : pointPlaceholder
-                          : t.selectCountryFirst
-                      }
-                      value={form.originAirport}
-                      onChange={(e) => setValue("originAirport", e.target.value)}
-                      disabled={!form.originCountry}
-                    />
+                    {t.originAirport}
+                    <select value={form.originAirport} onChange={(e) => setValue("originAirport", e.target.value)} disabled={!form.originCountry}>
+                      <option value="">
+                        {form.originCountry ? t.airportPlaceholder : t.selectCountryFirst}
+                      </option>
+                      {originAirports.map((airport) => (
+                        <option key={airport}>{airport}</option>
+                      ))}
+                    </select>
                   </label>
 
                   <label>
-                    {otherOriginPointLabel}
-                    <input type="text" placeholder={otherPointPlaceholder} value={form.originAirportOther} onChange={(e) => setValue("originAirportOther", e.target.value)} />
+                    {t.otherOriginAirport}
+                    <input type="text" placeholder={t.otherAirportPlaceholder} value={form.originAirportOther} onChange={(e) => setValue("originAirportOther", e.target.value)} />
                   </label>
                 </div>
               </div>
@@ -1323,28 +1034,20 @@ export default function CotizacionPage() {
                   </label>
 
                   <label>
-                    {destinationPointLabel}
-                    <input
-                      type="text"
-                      list={serviceMode === "ocean" ? "quote-destination-ports" : "quote-destination-airports"}
-                      placeholder={
-                        form.destinationCountry
-                          ? serviceMode === "ground"
-                            ? t.pointPlaceholder
-                            : airportsLoading || portsLoading
-                              ? t.loadingPoints
-                              : pointPlaceholder
-                          : t.selectCountryFirst
-                      }
-                      value={form.destinationAirport}
-                      onChange={(e) => setValue("destinationAirport", e.target.value)}
-                      disabled={!form.destinationCountry}
-                    />
+                    {t.destinationAirport}
+                    <select value={form.destinationAirport} onChange={(e) => setValue("destinationAirport", e.target.value)} disabled={!form.destinationCountry}>
+                      <option value="">
+                        {form.destinationCountry ? t.airportPlaceholder : t.selectCountryFirst}
+                      </option>
+                      {destinationAirports.map((airport) => (
+                        <option key={airport}>{airport}</option>
+                      ))}
+                    </select>
                   </label>
 
                   <label>
-                    {otherDestinationPointLabel}
-                    <input type="text" placeholder={otherPointPlaceholder} value={form.destinationAirportOther} onChange={(e) => setValue("destinationAirportOther", e.target.value)} />
+                    {t.otherDestinationAirport}
+                    <input type="text" placeholder={t.otherAirportPlaceholder} value={form.destinationAirportOther} onChange={(e) => setValue("destinationAirportOther", e.target.value)} />
                   </label>
                 </div>
               </div>
