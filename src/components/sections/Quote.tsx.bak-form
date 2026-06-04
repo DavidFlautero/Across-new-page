@@ -13,7 +13,6 @@ export default function Quote() {
   const [step, setStep] = useState(0);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [error, setError] = useState("");
 
   const [form, setForm] = useState({
     name: "",
@@ -43,13 +42,8 @@ export default function Quote() {
 
   const submitQuote = async () => {
     if (!form.privacyAccepted || loading) return;
-
-    setError("");
-    setSuccess(false);
-
     try {
       setLoading(true);
-
       const response = await fetch("/api/cotizacion", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -63,12 +57,11 @@ export default function Quote() {
 
       if (response.ok) {
         setSuccess(true);
-        return;
+      } else {
+        alert("Error al enviar. Inténtelo nuevamente.");
       }
-
-      setError("Error al enviar. Inténtelo nuevamente.");
-    } catch {
-      setError("Error de conexión. Inténtelo nuevamente.");
+    } catch (error) {
+      alert("Error de conexión. Inténtelo nuevamente.");
     } finally {
       setLoading(false);
     }
@@ -150,18 +143,6 @@ export default function Quote() {
                   Acepto el tratamiento de mis datos para recibir respuesta comercial.
                 </label>
               </div>
-            )}
-
-            {success && (
-              <p style={{ color: "#087a3b", fontWeight: 900, marginTop: 10 }}>
-                Solicitud enviada correctamente. Nuestro equipo se pondrá en contacto.
-              </p>
-            )}
-
-            {error && (
-              <p style={{ color: "#c1121f", fontWeight: 900, marginTop: 10 }}>
-                {error}
-              </p>
             )}
 
             <div className={styles.actions}>

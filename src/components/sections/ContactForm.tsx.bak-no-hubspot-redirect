@@ -141,7 +141,6 @@ export default function ContactForm() {
       return;
     }
     setError("");
-    setSent(false);
     setSending(true);
     const form = new FormData(formEl);
     const res = await fetch("/api/contacto", {
@@ -156,7 +155,6 @@ export default function ContactForm() {
         message: form.get("message"),
         privacyAccepted: form.get("privacyAccepted") === "on",
         marketingAccepted: form.get("marketingAccepted") === "on",
-        website: window.location.origin,
         locale,
       }),
     });

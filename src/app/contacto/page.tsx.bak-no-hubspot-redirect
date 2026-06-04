@@ -136,7 +136,6 @@ export default function ContactoPage() {
     }
 
     setError("");
-    setSent(false);
     setSending(true);
 
     const form = new FormData(formEl);
@@ -153,7 +152,6 @@ export default function ContactoPage() {
         message: form.get("message"),
         privacyAccepted: form.get("privacyAccepted") === "on",
         marketingAccepted: form.get("marketingAccepted") === "on",
-        website: window.location.origin,
         locale,
       }),
     });

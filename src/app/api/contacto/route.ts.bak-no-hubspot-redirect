@@ -55,20 +55,17 @@ export async function POST(req: Request) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
-      redirect: "manual",
     });
 
-    const responseText = await response.text();
+    const text = await response.text();
 
-    if (response.status >= 400) {
+    if (!response.ok) {
       return NextResponse.json(
-        { ok: false, status: response.status, error: responseText },
+        { ok: false, status: response.status, error: text },
         { status: response.status }
       );
     }
 
-    // HubSpot puede tener páginas de gracias configuradas por idioma.
-    // La web no redirige allí: siempre responde JSON para mostrar éxito local.
     return NextResponse.json({ ok: true });
   } catch (error) {
     return NextResponse.json(

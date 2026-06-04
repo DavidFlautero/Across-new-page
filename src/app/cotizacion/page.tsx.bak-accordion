@@ -450,8 +450,6 @@ export default function CotizacionPage() {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState("");
-  const [activeStep, setActiveStep] = useState(0);
-  const [stepError, setStepError] = useState("");
 
   useEffect(() => {
     const updateLocale = (event?: Event) => {
@@ -518,98 +516,12 @@ export default function CotizacionPage() {
     value: (typeof initialForm)[K]
   ) => {
     setForm((prev) => ({ ...prev, [key]: value }));
-    setStepError("");
-  };
-
-  const continueLabel =
-    locale === "en" ? "Continue" : locale === "zh" ? "继续" : "Continuar";
-
-  const editLabel =
-    locale === "en" ? "Edit" : locale === "zh" ? "编辑" : "Editar";
-
-  const stepGuardMessage =
-    locale === "en"
-      ? "Complete the required fields before continuing."
-      : locale === "zh"
-        ? "请先填写必填字段，然后继续。"
-        : "Complete los campos obligatorios antes de continuar.";
-
-  const isFilled = (value: string) => value.trim().length > 0;
-
-  const isContactComplete = () =>
-    isFilled(form.name) &&
-    isFilled(form.company) &&
-    isFilled(form.email) &&
-    isFilled(form.phone) &&
-    isFilled(form.country) &&
-    isFilled(form.contractDate);
-
-  const isOperationComplete = () =>
-    isContactComplete() &&
-    isFilled(form.operation) &&
-    isFilled(form.service) &&
-    isFilled(form.originCountry) &&
-    isFilled(form.originAddress) &&
-    (isFilled(form.originAirport) || isFilled(form.originAirportOther)) &&
-    isFilled(form.destinationCountry) &&
-    isFilled(form.destinationAddress) &&
-    (isFilled(form.destinationAirport) || isFilled(form.destinationAirportOther));
-
-  const isCargoComplete = () => {
-    if (!isOperationComplete() || !isFilled(form.cargoType) || !isFilled(form.merchandise)) {
-      return false;
-    }
-
-    if (showMeasureBox) {
-      return (
-        isFilled(form.cargoQty) &&
-        isFilled(form.cargoLength) &&
-        isFilled(form.cargoWidth) &&
-        isFilled(form.cargoHeight) &&
-        isFilled(form.cargoWeight)
-      );
-    }
-
-    return true;
-  };
-
-  const canOpenStep = (step: number) => {
-    if (step <= 0) return true;
-    if (step === 1) return isContactComplete();
-    if (step === 2) return isOperationComplete();
-    if (step === 3) return isCargoComplete();
-    return isCargoComplete() && form.privacyAccepted;
-  };
-
-  const openStep = (step: number) => {
-    if (step <= activeStep || canOpenStep(step)) {
-      setActiveStep(step);
-      setStepError("");
-      return;
-    }
-
-    setStepError(stepGuardMessage);
-  };
-
-  const nextStep = (step: number) => {
-    const next = step + 1;
-
-    if (canOpenStep(next)) {
-      setActiveStep(next);
-      setStepError("");
-      return;
-    }
-
-    setStepError(stepGuardMessage);
   };
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    if (!canOpenStep(4) || sending) {
-      setStepError(stepGuardMessage);
-      return;
-    }
+    if (!form.privacyAccepted || sending) return;
 
     setSending(true);
     setSent(false);
@@ -688,39 +600,21 @@ export default function CotizacionPage() {
         <section className={styles.quoteShell}>
           <aside className={styles.steps}>
             {t.steps.map((step, index) => (
-              <button
-                key={step}
-                type="button"
-                className={index === activeStep ? styles.stepActive : ""}
-                onClick={() => openStep(index)}
-                disabled={index > activeStep && !canOpenStep(index)}
-              >
+              <div key={step} className={index === 0 ? styles.stepActive : ""}>
                 <b>{String(index + 1).padStart(2, "0")}</b>
                 <span>{step}</span>
-              </button>
+              </div>
             ))}
           </aside>
 
           <form className={styles.formCard} onSubmit={submit}>
-            <section className={`${styles.accordionPanel} ${activeStep === 0 ? styles.accordionOpen : ""}`}>
-              <div
-                className={styles.formHeader}
-                role="button"
-                tabIndex={0}
-                onClick={() => openStep(0)}
-                onKeyDown={(event) => {
-                  if (event.key === "Enter" || event.key === " ") openStep(0);
-                }}
-                aria-expanded={activeStep === 0}
-              >
-                <span>01</span>
-                <div>
-                  <h2>{t.contactTitle}</h2>
-                  <p>{t.contactText}</p>
-                </div>
-                <strong>{activeStep === 0 ? continueLabel : editLabel}</strong>
+            <div className={styles.formHeader}>
+              <span>01</span>
+              <div>
+                <h2>{t.contactTitle}</h2>
+                <p>{t.contactText}</p>
               </div>
-              <div className={styles.accordionBody}>
+            </div>
 
             <div className={styles.grid}>
               <label>
@@ -761,34 +655,15 @@ export default function CotizacionPage() {
               </label>
             </div>
 
-              <div className={styles.accordionActions}>
-                <button type="button" onClick={() => nextStep(0)}>
-                  {continueLabel}
-                </button>
-              </div>
-            </div>
-          </section>
             <div className={styles.divider} />
 
-            <section className={`${styles.accordionPanel} ${activeStep === 1 ? styles.accordionOpen : ""}`}>
-              <div
-                className={styles.formHeader}
-                role="button"
-                tabIndex={0}
-                onClick={() => openStep(1)}
-                onKeyDown={(event) => {
-                  if (event.key === "Enter" || event.key === " ") openStep(1);
-                }}
-                aria-expanded={activeStep === 1}
-              >
-                <span>02</span>
-                <div>
-                  <h2>{t.operationTitle}</h2>
-                  <p>{t.operationText}</p>
-                </div>
-                <strong>{activeStep === 1 ? continueLabel : editLabel}</strong>
+            <div className={styles.formHeader}>
+              <span>02</span>
+              <div>
+                <h2>{t.operationTitle}</h2>
+                <p>{t.operationText}</p>
               </div>
-              <div className={styles.accordionBody}>
+            </div>
 
             <div className={styles.grid}>
               <label>
@@ -933,34 +808,15 @@ export default function CotizacionPage() {
               </div>
             </div>
 
-              <div className={styles.accordionActions}>
-                <button type="button" onClick={() => nextStep(1)}>
-                  {continueLabel}
-                </button>
-              </div>
-            </div>
-          </section>
             <div className={styles.divider} />
 
-            <section className={`${styles.accordionPanel} ${activeStep === 2 ? styles.accordionOpen : ""}`}>
-              <div
-                className={styles.formHeader}
-                role="button"
-                tabIndex={0}
-                onClick={() => openStep(2)}
-                onKeyDown={(event) => {
-                  if (event.key === "Enter" || event.key === " ") openStep(2);
-                }}
-                aria-expanded={activeStep === 2}
-              >
-                <span>03</span>
-                <div>
-                  <h2>{t.cargoTitle}</h2>
-                  <p>{t.cargoText}</p>
-                </div>
-                <strong>{activeStep === 2 ? continueLabel : editLabel}</strong>
+            <div className={styles.formHeader}>
+              <span>03</span>
+              <div>
+                <h2>{t.cargoTitle}</h2>
+                <p>{t.cargoText}</p>
               </div>
-              <div className={styles.accordionBody}>
+            </div>
 
             <div className={styles.cargoGrid}>
               {cargoTypes.map((item) => {
@@ -1076,34 +932,15 @@ export default function CotizacionPage() {
               </div>
             </div>
 
-              <div className={styles.accordionActions}>
-                <button type="button" onClick={() => nextStep(2)}>
-                  {continueLabel}
-                </button>
-              </div>
-            </div>
-          </section>
             <div className={styles.divider} />
 
-            <section className={`${styles.accordionPanel} ${activeStep === 3 ? styles.accordionOpen : ""}`}>
-              <div
-                className={styles.formHeader}
-                role="button"
-                tabIndex={0}
-                onClick={() => openStep(3)}
-                onKeyDown={(event) => {
-                  if (event.key === "Enter" || event.key === " ") openStep(3);
-                }}
-                aria-expanded={activeStep === 3}
-              >
-                <span>04</span>
-                <div>
-                  <h2>{t.finalTitle}</h2>
-                  <p>{t.finalText}</p>
-                </div>
-                <strong>{activeStep === 3 ? continueLabel : editLabel}</strong>
+            <div className={styles.formHeader}>
+              <span>04</span>
+              <div>
+                <h2>{t.finalTitle}</h2>
+                <p>{t.finalText}</p>
               </div>
-              <div className={styles.accordionBody}>
+            </div>
 
             <label>
               {t.comments}
@@ -1124,15 +961,6 @@ export default function CotizacionPage() {
               </label>
             </div>
 
-              <div className={styles.accordionActions}>
-                <button type="button" onClick={() => nextStep(3)}>
-                  {continueLabel}
-                </button>
-              </div>
-            </div>
-          </section>
-
-            {stepError && <p className={styles.error}>{stepError}</p>}
             {sent && <p className={styles.success}>{t.success}</p>}
             {error && <p className={styles.error}>{error}</p>}
 
