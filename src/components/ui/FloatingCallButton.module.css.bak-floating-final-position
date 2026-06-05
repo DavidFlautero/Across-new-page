@@ -43,21 +43,23 @@
 }
 
 .callPill {
-  width: 62px;
-  min-width: 62px;
-  height: 62px;
+  min-width: 176px;
+  height: 58px;
 
-  display: inline-grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 
-  padding: 0;
+  padding: 0 18px 0 10px;
+
   border: 1px solid rgba(255,255,255,.16);
   border-radius: 999px;
 
   background:
     linear-gradient(145deg, rgba(122,9,28,.56), rgba(255,255,255,.08));
 
-  color: #fff;
+  color: rgba(255,255,255,.96);
   font-size: 13px;
   font-weight: 850;
   letter-spacing: -.01em;
@@ -81,14 +83,12 @@
 }
 
 .iconCircle {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 
   display: grid;
   place-items: center;
-  flex: 0 0 auto;
-  color: #fff;
 
   background:
     radial-gradient(circle at 35% 25%, rgba(255,255,255,.42), rgba(255,255,255,.10) 38%, rgba(135,9,31,.52) 100%);
@@ -99,18 +99,13 @@
 }
 
 .iconCircle svg {
-  display: block;
-  width: 22px;
-  height: 22px;
-  color: #fff;
-  opacity: 1;
-  overflow: visible;
-}
-
-.iconCircle svg path {
+  width: 18px;
+  height: 18px;
   fill: none;
-  stroke: #fff;
-  opacity: 1;
+  stroke: white;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .backdrop {
@@ -214,7 +209,12 @@
     padding: 0;
     z-index: 5201;
   }
-.iconCircle {
+
+  .callPill > span:last-child {
+    display: none;
+  }
+
+  .iconCircle {
     width: 48px;
     height: 48px;
   }
@@ -250,11 +250,6 @@
     width: 44px;
     height: 44px;
   }
-
-  .iconCircle svg {
-    width: 20px;
-    height: 20px;
-  }
 }
 
 /* MOBILE BAJITO: commandBar mide 68px, por eso usamos 5.05rem */
@@ -276,10 +271,5 @@
   .iconCircle {
     width: 40px;
     height: 40px;
-  }
-
-  .iconCircle svg {
-    width: 18px;
-    height: 18px;
   }
 }

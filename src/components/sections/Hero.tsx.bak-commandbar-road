@@ -48,18 +48,6 @@ function PlaneIcon() {
   );
 }
 
-function TruckIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M3 7h11v8H3z" />
-      <path d="M14 10h3.5l3.5 3.5V15h-7z" />
-      <path d="M6.5 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
-      <path d="M17.5 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
-      <path d="M8.5 16h7" />
-    </svg>
-  );
-}
-
 const copy = {
   es: {
     slides: [
@@ -89,7 +77,6 @@ sin fricción.`,
       { icon: WarehouseIcon, title: "Almacén", subtitle: "Almacenamiento y distribución", href: "/#servicios" },
       { icon: ShipIcon, title: "Marítimo", subtitle: "Transporte marítimo", href: "/servicios/transporte-maritimo" },
       { icon: PlaneIcon, title: "Aéreo", subtitle: "Carga aérea prioritaria", href: "/servicios/transporte-aereo" },
-      { icon: TruckIcon, title: "Terrestre", subtitle: "Transporte por carretera", href: "/servicios/transporte-terrestre" },
     ],
   },
   en: {
@@ -120,7 +107,6 @@ without friction.`,
       { icon: WarehouseIcon, title: "Warehouse", subtitle: "Storage & distribution", href: "/#servicios" },
       { icon: ShipIcon, title: "Ocean", subtitle: "Ocean freight", href: "/servicios/transporte-maritimo" },
       { icon: PlaneIcon, title: "Air", subtitle: "Priority air cargo", href: "/servicios/transporte-aereo" },
-      { icon: TruckIcon, title: "Road", subtitle: "Road freight", href: "/servicios/transporte-terrestre" },
     ],
   },
   zh: {
@@ -151,7 +137,6 @@ without friction.`,
       { icon: WarehouseIcon, title: "仓储", subtitle: "仓储与配送", href: "/#servicios" },
       { icon: ShipIcon, title: "海运", subtitle: "国际海运", href: "/servicios/transporte-maritimo" },
       { icon: PlaneIcon, title: "空运", subtitle: "优先空运货物", href: "/servicios/transporte-aereo" },
-      { icon: TruckIcon, title: "陆运", subtitle: "公路运输", href: "/servicios/transporte-terrestre" },
     ],
   },
 } as const;

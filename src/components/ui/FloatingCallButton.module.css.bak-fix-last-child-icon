@@ -214,7 +214,12 @@
     padding: 0;
     z-index: 5201;
   }
-.iconCircle {
+
+  .callPill > span:last-child {
+    display: none;
+  }
+
+  .iconCircle {
     width: 48px;
     height: 48px;
   }

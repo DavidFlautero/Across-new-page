@@ -46,14 +46,11 @@
   z-index: 10;
   left: clamp(2rem, 5vw, 5rem);
   right: clamp(2rem, 5vw, 5rem);
-  top: clamp(7.8rem, 15vh, 10.5rem);
-  bottom: clamp(7.6rem, 13vh, 9.5rem);
+  top: clamp(10rem, 28vh, 18rem);
   max-width: 980px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
-  transform: translateY(3.2vh);
 }
 
 .titleWrap {
@@ -66,8 +63,8 @@
   max-width: 980px;
   color: #fff;
   font-family: var(--font-tight), system-ui, sans-serif;
-  font-size: clamp(3.15rem, 4.75vw, 5.85rem);
-  line-height: 0.91;
+  font-size: clamp(3.2rem, 5.2vw, 6.2rem);
+  line-height: 0.9;
   font-weight: 300;
   letter-spacing: -0.058em;
   text-shadow: 0 16px 44px rgba(0, 0, 0, 0.46);
@@ -79,7 +76,7 @@
 
 .subtitle {
   max-width: 760px;
-  margin: 1.75rem 0 0;
+  margin: 1.45rem 0 0;
   color: rgba(255, 255, 255, 0.8);
   font-size: clamp(1rem, 1.05vw, 1.2rem);
   font-weight: 700;
@@ -90,7 +87,7 @@
 .line {
   width: min(720px, 48vw);
   height: 1px;
-  margin-top: 1.45rem;
+  margin-top: 1.35rem;
   background:
     linear-gradient(
       90deg,
@@ -111,7 +108,7 @@
   grid-template-columns: repeat(2, minmax(190px, 1fr));
   gap: 0.85rem;
   width: min(560px, 100%);
-  margin-top: 1.65rem;
+  margin-top: 1.45rem;
 }
 
 .primaryBtn,
@@ -176,7 +173,7 @@
   bottom: 1.45rem;
   height: 74px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(6, 6, 6, 0.66);
   backdrop-filter: blur(18px);
@@ -256,7 +253,7 @@
 
   .subtitle {
     max-width: 620px;
-    margin-top: 1.35rem;
+    margin-top: 1.1rem;
     font-size: clamp(0.96rem, 2vw, 1.15rem);
     line-height: 1.42;
   }
@@ -306,7 +303,7 @@
   }
 
   .subtitle {
-    margin-top: 0.9rem;
+    margin-top: 0.7rem;
     font-size: 0.82rem;
     line-height: 1.3;
   }
@@ -386,7 +383,7 @@
 
   .subtitle {
     max-width: 94vw;
-    margin-top: 0.82rem;
+    margin-top: 0.58rem;
     font-size: clamp(0.72rem, 3.08vw, 0.86rem);
     line-height: 1.28;
   }
@@ -419,43 +416,39 @@
     right: 0;
     bottom: 0;
     width: 100%;
-    max-width: 100%;
     height: 82px;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     border-left: 0;
     border-right: 0;
     border-bottom: 0;
     background: rgba(5, 5, 8, 0.94);
-    padding-right: 0;
-    transform: none;
+    padding-right: clamp(4.8rem, 17vw, 6rem);
   }
 
   .commandItem {
-    min-width: 0;
     min-height: 82px;
     padding: 9px 4px;
     gap: 6px;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    overflow: hidden;
   }
 
   .commandItem svg {
-    width: 18px;
-    height: 18px;
-    flex: 0 0 18px;
+    width: 19px;
+    height: 19px;
+    flex: 0 0 19px;
   }
 
   .commandItem span {
-    font-size: 0.62rem;
+    font-size: 0.67rem;
     line-height: 1;
     margin: 0;
   }
 
   .commandItem small {
-    font-size: 0.48rem;
-    line-height: 1.05;
+    font-size: 0.53rem;
+    line-height: 1.08;
   }
 }
 
@@ -475,7 +468,7 @@
   }
 
   .subtitle {
-    margin-top: 0.62rem;
+    margin-top: 0.42rem;
     font-size: clamp(0.6rem, 2.65vw, 0.7rem);
     line-height: 1.2;
   }
@@ -495,16 +488,12 @@
 
   .commandBar {
     height: 68px;
-    width: 100%;
-    max-width: 100%;
-    padding-right: 0;
+    padding-right: 4.9rem;
   }
 
   .commandItem {
-    min-width: 0;
     min-height: 68px;
     padding: 6px 3px;
-    overflow: hidden;
   }
 
   .commandItem svg {
@@ -514,11 +503,11 @@
   }
 
   .commandItem span {
-    font-size: 0.52rem;
+    font-size: 0.58rem;
   }
 
   .commandItem small {
-    font-size: 0.4rem;
+    font-size: 0.46rem;
   }
 }
 
@@ -542,29 +531,19 @@
 /* DESKTOP BAJO */
 @media (min-width: 1101px) and (max-height: 780px) {
   .content {
-    top: 6.4rem;
-    bottom: 6rem;
-    transform: translateY(2vh);
+    top: 7rem;
   }
 
   .title {
-    font-size: clamp(2.55rem, 3.75vw, 4.25rem);
-    line-height: 0.9;
+    font-size: clamp(2.7rem, 4vw, 4.5rem);
   }
 
   .subtitle {
-    margin-top: 1.15rem;
-    font-size: 0.94rem;
-    line-height: 1.42;
+    margin-top: 1rem;
   }
 
   .actions {
-    margin-top: 1.15rem;
-  }
-
-  .primaryBtn,
-  .secondaryBtn {
-    min-height: 48px;
+    margin-top: 1rem;
   }
 
   .commandBar {

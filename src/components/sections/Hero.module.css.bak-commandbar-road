@@ -176,7 +176,7 @@
   bottom: 1.45rem;
   height: 74px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(6, 6, 6, 0.66);
   backdrop-filter: blur(18px);
@@ -421,7 +421,7 @@
     width: 100%;
     max-width: 100%;
     height: 82px;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     border-left: 0;
     border-right: 0;
     border-bottom: 0;
@@ -442,20 +442,20 @@
   }
 
   .commandItem svg {
-    width: 18px;
-    height: 18px;
-    flex: 0 0 18px;
+    width: 19px;
+    height: 19px;
+    flex: 0 0 19px;
   }
 
   .commandItem span {
-    font-size: 0.62rem;
+    font-size: 0.67rem;
     line-height: 1;
     margin: 0;
   }
 
   .commandItem small {
-    font-size: 0.48rem;
-    line-height: 1.05;
+    font-size: 0.53rem;
+    line-height: 1.08;
   }
 }
 
@@ -514,11 +514,11 @@
   }
 
   .commandItem span {
-    font-size: 0.52rem;
+    font-size: 0.58rem;
   }
 
   .commandItem small {
-    font-size: 0.4rem;
+    font-size: 0.46rem;
   }
 }
 

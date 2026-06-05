@@ -55,7 +55,7 @@ export default function FloatingCallButton() {
         <span className={styles.chatBubble}>{t.bubble}</span>
 
         <span className={styles.callPill}>
-                              <span className={styles.iconCircle} aria-hidden="true">
+                    <span className={styles.iconCircle} aria-hidden="true">
             <svg
               viewBox="0 0 24 24"
               width="22"
