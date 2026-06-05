@@ -7,6 +7,7 @@ import Certifications from "@/components/sections/Certifications";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../_shared/ServicePage.module.css";
+import RelatedServices from "../_shared/RelatedServices";
 
 type Locale = "es" | "en" | "zh";
 
@@ -377,6 +378,9 @@ export default function AduanasPage() {
           </Link>
         </section>
       </main>
+
+
+      <RelatedServices current="aduanas" locale={locale} />
 
       <Footer />
     </div>

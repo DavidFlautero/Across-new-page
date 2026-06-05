@@ -7,6 +7,7 @@ import Certifications from "@/components/sections/Certifications";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../_shared/ServicePage.module.css";
+import RelatedServices from "../_shared/RelatedServices";
 
 type Locale = "es" | "en" | "zh";
 
@@ -305,6 +306,9 @@ export default function EcommercePage() {
           </div>
         </section>
       </main>
+
+
+      <RelatedServices current="e-commerce" locale={locale} />
 
       <Footer />
     </div>

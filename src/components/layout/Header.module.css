@@ -1201,3 +1201,65 @@
     z-index: 7001 !important;
   }
 }
+
+/* HEADER RESPONSIVE WIDTH FINAL */
+.wrapper {
+  left: clamp(.75rem, 2.1vw, 2.5rem) !important;
+  right: clamp(.75rem, 2.1vw, 2.5rem) !important;
+  width: auto !important;
+  max-width: none !important;
+  box-sizing: border-box !important;
+}
+
+/* En pantallas medianas, compactar para que no se salga */
+@media (min-width: 901px) and (max-width: 1280px) {
+  .wrapper {
+    left: 1rem !important;
+    right: 1rem !important;
+  }
+
+  .nav {
+    gap: clamp(.55rem, 1vw, 1rem) !important;
+  }
+
+  .nav a,
+  .nav button {
+    font-size: clamp(.72rem, .82vw, .86rem) !important;
+    white-space: nowrap !important;
+  }
+
+  .logo img,
+  .brand img {
+    max-width: clamp(150px, 16vw, 220px) !important;
+    height: auto !important;
+  }
+}
+
+/* En notebook/tablet horizontal, esconder menos aire y evitar overflow */
+@media (min-width: 901px) and (max-width: 1120px) {
+  .wrapper {
+    left: .75rem !important;
+    right: .75rem !important;
+  }
+
+  .nav {
+    gap: .65rem !important;
+  }
+
+  .nav a,
+  .nav button {
+    font-size: .72rem !important;
+  }
+}
+
+/* Mobile queda full width arriba */
+@media (max-width: 900px) {
+  .wrapper {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 0 0 18px 18px !important;
+  }
+}
+

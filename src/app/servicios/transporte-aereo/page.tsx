@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import styles from "../_shared/ServicePage.module.css";
+import RelatedServices from "../_shared/RelatedServices";
 
 type Locale = "es" | "en" | "zh";
 
@@ -279,12 +280,21 @@ export default function TransporteAereoPage() {
       <main className={styles.page}>
         <section className={styles.hero}>
           <Image
-            src="/images/hero/cargaAereahero.jpg"
+            src="/images/hero/cargaAereahero.png"
             alt={t.heroTitle}
             fill
             priority
-            sizes="100vw"
-            className={styles.heroImage}
+            sizes="(max-width: 900px) 0px, 100vw"
+            className={`${styles.heroImage} ${styles.heroImageDesktop}`}
+          />
+
+          <Image
+            src="/images/hero/cargaAereahero-mobile.png"
+            alt={t.heroTitle}
+            fill
+            priority
+            sizes="(max-width: 900px) 100vw, 0px"
+            className={`${styles.heroImage} ${styles.heroImageMobile}`}
           />
 
           <div className={styles.heroOverlay} />
@@ -337,7 +347,7 @@ export default function TransporteAereoPage() {
 
               <div className={styles.servicesImageWrap}>
                 <Image
-                  src="/images/hero/cargaAereahero.jpg"
+                  src="/images/cargaaerea.png"
                   alt={t.servicesTitle}
                   fill
                   sizes="(max-width: 900px) 100vw, 48vw"
@@ -385,47 +395,7 @@ export default function TransporteAereoPage() {
               </div>
             </section>
 
-            <section id="related" className={styles.related}>
-              <h2>{t.relatedTitle}</h2>
-
-              <div className={styles.relatedGrid}>
-                <Link href="/servicios/aduanas" className={styles.relatedCard}>
-                  <Image
-                    src="/images/caduana.png"
-                    alt={t.related.customs}
-                    fill
-                    sizes="(max-width: 900px) 100vw, 33vw"
-                  />
-                  <span>{t.related.customs}</span>
-                </Link>
-
-                <Link
-                  href="/servicios/temperatura-controlada"
-                  className={styles.relatedCard}
-                >
-                  <Image
-                    src="/images/controltemp.png"
-                    alt={t.related.temperature}
-                    fill
-                    sizes="(max-width: 900px) 100vw, 33vw"
-                  />
-                  <span>{t.related.temperature}</span>
-                </Link>
-
-                <Link
-                  href="/servicios/cargas-especiales"
-                  className={styles.relatedCard}
-                >
-                  <Image
-                    src="/images/cargaspecial.png"
-                    alt={t.related.special}
-                    fill
-                    sizes="(max-width: 900px) 100vw, 33vw"
-                  />
-                  <span>{t.related.special}</span>
-                </Link>
-              </div>
-            </section>
+            <RelatedServices current="transporte-aereo" locale={locale} />
           </div>
         </section>
       </main>

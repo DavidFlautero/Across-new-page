@@ -7,6 +7,7 @@ import Certifications from "@/components/sections/Certifications";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../_shared/ServicePage.module.css";
+import RelatedServices from "../_shared/RelatedServices";
 
 type Locale = "es" | "en" | "zh";
 
@@ -370,43 +371,7 @@ export default function CargasEspecialesPage() {
           </div>
         </section>
 
-        <section className={styles.related}>
-          <span>{t.relatedEyebrow}</span>
-
-          <h2>{t.relatedTitle}</h2>
-
-          <div className={styles.relatedGrid}>
-            <Link href="/servicios/aduanas" className={styles.relatedCard}>
-              <Image
-                src="/images/hero/hero-empresas.png"
-                alt={t.related.customs}
-                fill
-                sizes="(max-width: 900px) 100vw, 33vw"
-              />
-              <span>{t.related.customs}</span>
-            </Link>
-
-            <Link href="/servicios/transporte-aereo" className={styles.relatedCard}>
-              <Image
-                src="/images/hero/cargaAereahero.jpg"
-                alt={t.related.air}
-                fill
-                sizes="(max-width: 900px) 100vw, 33vw"
-              />
-              <span>{t.related.air}</span>
-            </Link>
-
-            <Link href="/servicios/transporte-maritimo" className={styles.relatedCard}>
-              <Image
-                src="/images/maritimo.png"
-                alt={t.related.sea}
-                fill
-                sizes="(max-width: 900px) 100vw, 33vw"
-              />
-              <span>{t.related.sea}</span>
-            </Link>
-          </div>
-        </section>
+        <RelatedServices current="cargas-especiales" locale={locale} />
       </main>
 
       <Footer />

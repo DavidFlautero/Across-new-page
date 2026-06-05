@@ -7,6 +7,7 @@ import Certifications from "@/components/sections/Certifications";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../_shared/ServicePage.module.css";
+import RelatedServices from "../_shared/RelatedServices";
 
 type Locale = "es" | "en" | "zh";
 
@@ -218,8 +219,17 @@ export default function TransporteMaritimoPage() {
           alt={t.heroTitle}
           fill
           priority
-          className={styles.heroImage}
-          sizes="100vw"
+          className={`${styles.heroImage} ${styles.heroImageDesktop}`}
+          sizes="(max-width: 900px) 0px, 100vw"
+        />
+
+        <Image
+          src="/images/maritimo-mobile.png"
+          alt={t.heroTitle}
+          fill
+          priority
+          className={`${styles.heroImage} ${styles.heroImageMobile}`}
+          sizes="(max-width: 900px) 100vw, 0px"
         />
         <div className={styles.heroOverlay} />
 
@@ -285,6 +295,9 @@ export default function TransporteMaritimoPage() {
           </div>
         </section>
       </main>
+
+
+      <RelatedServices current="transporte-maritimo" locale={locale} />
 
       <Footer />
     </div>
