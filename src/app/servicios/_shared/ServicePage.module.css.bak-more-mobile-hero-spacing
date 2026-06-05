@@ -1986,7 +1986,7 @@
   /* Texto */
   .heroContent p {
     max-width: 92vw !important;
-    margin: 1.55rem 0 0 !important;
+    margin: 1.25rem 0 0 !important;
     font-size: .92rem !important;
     line-height: 1.45 !important;
   }
@@ -2000,7 +2000,7 @@
   .heroContent .actions,
   .actions {
     width: 100% !important;
-    margin-top: 1.7rem !important;
+    margin-top: 1.35rem !important;
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
     gap: .7rem !important;
@@ -2036,14 +2036,14 @@
   }
 
   .heroContent p {
-    margin-top: 1.38rem !important;
+    margin-top: 1.1rem !important;
     font-size: .86rem !important;
     line-height: 1.42 !important;
   }
 
   .heroContent .actions,
   .actions {
-    margin-top: 1.55rem !important;
+    margin-top: 1.22rem !important;
     gap: .62rem !important;
   }
 
@@ -2064,7 +2064,7 @@
   }
 
   .heroContent p {
-    margin-top: 1.25rem !important;
+    margin-top: 1rem !important;
     font-size: .82rem !important;
   }
 
