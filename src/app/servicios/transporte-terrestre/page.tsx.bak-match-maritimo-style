@@ -258,25 +258,24 @@ export default function TransporteTerrestrePage() {
             </div>
           </div>
 
-          <div className={styles.servicesImageWrap}>
+          <div className={styles.servicesVisual}>
             <Image
               src="/images/sectores/transporteterrestre2.png"
               alt={t.servicesTitle}
-              fill
+              width={760}
+              height={920}
               className={styles.servicesImage}
-              sizes="(max-width: 900px) 100vw, 50vw"
+              sizes="(max-width: 900px) 100vw, 42vw"
             />
           </div>
         </section>
 
-        <section className={styles.compactCta}>
-          <div>
-            <span>{t.ctaEyebrow}</span>
-            <h2>{t.ctaTitle}</h2>
-            <p>{t.ctaText}</p>
-          </div>
+        <section className={styles.block}>
+          <span>{t.ctaEyebrow}</span>
+          <h2>{t.ctaTitle}</h2>
+          <p>{t.ctaText}</p>
 
-          <div className={styles.compactCtaActions}>
+          <div className={styles.actions}>
             <Link href="/cotizacion">{t.ctaPrimary}</Link>
             <Link href="/empresa/oficinas">{t.ctaSecondary}</Link>
           </div>
