@@ -204,6 +204,7 @@ export default function Hero() {
   return (
     <section className={styles.hero}>
       <video
+        ref={videoRef}
         className={styles.video}
         autoPlay
         muted
