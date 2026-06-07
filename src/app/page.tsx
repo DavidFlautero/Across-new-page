@@ -2,10 +2,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 import Hero from "@/components/sections/Hero";
-import Certifications from "@/components/sections/Certifications";
-import LogisticsIntro from "@/components/sections/LogisticsIntro";
-import ServicesOverview from "@/components/sections/ServicesOverview";
-import ContactForm from "@/components/sections/ContactForm";
+import HomeCorporateFinal from "@/components/sections/HomeCorporateFinal";
 
 export default function HomePage() {
   return (
@@ -14,10 +11,7 @@ export default function HomePage() {
 
       <main style={{ background: "#F3EFE8" }}>
         <Hero />
-        <Certifications />
-        <LogisticsIntro />
-        <ServicesOverview />
-        <ContactForm />
+        <HomeCorporateFinal />
       </main>
 
       <Footer />
