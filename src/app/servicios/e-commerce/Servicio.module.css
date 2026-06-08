@@ -4084,3 +4084,500 @@
   }
 }
 
+/* =====================================================
+   SERVICE MOBILE MASTER RESET V2
+   Corrige secciones partidas, imágenes sueltas y ancho roto.
+   Desktop/tablet intactos.
+   Página: e-commerce
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .page {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    background: #f4f1eb !important;
+  }
+
+  .hero,
+  .overview,
+  .services,
+  .process,
+  .darkBand,
+  .useCases,
+  .finalCta,
+  .trustBar,
+  .pillars {
+    width: 100vw !important;
+    max-width: none !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+    transform: none !important;
+  }
+
+  .heroImageDesktop {
+    display: none !important;
+  }
+
+  .heroImageMobile {
+    display: block !important;
+  }
+
+  .heroImage {
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  .services {
+    position: relative !important;
+    isolation: isolate !important;
+    display: block !important;
+    padding: 3.5rem 18px 3.8rem !important;
+    background: #050609 !important;
+    color: #fff !important;
+  }
+
+  .services::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    background-image: url("/images/ecommerce.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    opacity: .86 !important;
+    filter: brightness(.44) contrast(1.15) saturate(.96) !important;
+    pointer-events: none !important;
+  }
+
+  .services::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    background:
+      radial-gradient(circle at 22% 10%, rgba(237, 27, 47, .17), transparent 18rem),
+      linear-gradient(180deg, rgba(5,6,9,.92) 0%, rgba(5,6,9,.76) 44%, rgba(5,6,9,.97) 100%) !important;
+    pointer-events: none !important;
+  }
+
+  .services > *,
+  .services .sectionHead,
+  .services .serviceGrid,
+  .serviceGrid,
+  .serviceGrid > * {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  .services .sectionHead {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    margin: 0 0 1.8rem !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+
+  .services .sectionHead h2 {
+    width: 100% !important;
+    max-width: 430px !important;
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: clamp(2.05rem, 9.5vw, 3.15rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.055em !important;
+  }
+
+  .services .eyebrow {
+    color: #ed1b2f !important;
+  }
+
+  .serviceGrid {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: .85rem !important;
+  }
+
+  .serviceGrid article,
+  .operationCard {
+    width: 100% !important;
+    max-width: 100% !important;
+    background: rgba(7, 9, 14, .72) !important;
+    border: 1px solid rgba(255,255,255,.14) !important;
+    backdrop-filter: blur(6px) !important;
+  }
+
+  .darkBand {
+    position: relative !important;
+    isolation: isolate !important;
+    display: block !important;
+    padding: 3.2rem 18px !important;
+    background: #050609 !important;
+    color: #fff !important;
+  }
+
+  .darkBand::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    background-image: url("/images/ecommerce.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    opacity: .80 !important;
+    filter: brightness(.40) contrast(1.12) saturate(.96) !important;
+    pointer-events: none !important;
+  }
+
+  .darkBand::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    background:
+      radial-gradient(circle at 75% 18%, rgba(237, 27, 47, .14), transparent 20rem),
+      linear-gradient(180deg, rgba(5,6,9,.92) 0%, rgba(5,6,9,.80) 45%, rgba(5,6,9,.98) 100%) !important;
+    pointer-events: none !important;
+  }
+
+  .darkBandContent,
+  .darkBand .stats,
+  .darkBandActions {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  .darkBandContent {
+    width: 100% !important;
+    max-width: 430px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .darkBandContent h2 {
+    max-width: 430px !important;
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: clamp(2rem, 9.4vw, 3rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.055em !important;
+  }
+
+  .darkBandContent p {
+    max-width: 430px !important;
+    margin: 1rem 0 0 !important;
+    font-size: .9rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .darkBandActions {
+    width: 100% !important;
+    max-width: 430px !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: .75rem !important;
+    margin-top: 1.5rem !important;
+  }
+
+  .darkBandActions a {
+    width: 100% !important;
+    min-height: 46px !important;
+    border-radius: 999px !important;
+  }
+
+  .finalCta {
+    position: relative !important;
+    isolation: isolate !important;
+    display: block !important;
+    padding: 3.2rem 18px !important;
+    background: #050609 !important;
+    color: #fff !important;
+  }
+
+  .finalCta::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    background-image: url("/images/heroecommerce.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    opacity: .78 !important;
+    filter: brightness(.40) contrast(1.12) saturate(.96) !important;
+    pointer-events: none !important;
+  }
+
+  .finalCta::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    background:
+      radial-gradient(circle at 75% 18%, rgba(237, 27, 47, .14), transparent 20rem),
+      linear-gradient(180deg, rgba(5,6,9,.92) 0%, rgba(5,6,9,.80) 45%, rgba(5,6,9,.98) 100%) !important;
+    pointer-events: none !important;
+  }
+
+  .finalCta > *:not(.finalImage),
+  .finalActions {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  .finalCta h2 {
+    max-width: 430px !important;
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: clamp(2rem, 9.4vw, 3rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.055em !important;
+  }
+
+  .finalCta p {
+    max-width: 430px !important;
+    margin: 1rem 0 0 !important;
+    font-size: .9rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .finalActions {
+    width: 100% !important;
+    max-width: 430px !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: .75rem !important;
+    margin-top: 1.5rem !important;
+  }
+
+  .finalActions a {
+    width: 100% !important;
+    min-height: 46px !important;
+    border-radius: 999px !important;
+  }
+
+  .darkBandImage,
+  .finalImage {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    pointer-events: none !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .services {
+    padding: 3.2rem 14px 3.4rem !important;
+  }
+
+  .darkBand,
+  .finalCta {
+    padding: 2.8rem 14px !important;
+  }
+
+  .services .sectionHead h2,
+  .darkBandContent h2,
+  .finalCta h2 {
+    font-size: clamp(1.85rem, 9.6vw, 2.55rem) !important;
+  }
+}
+
+/* =====================================================
+   SERVICE MOBILE UNIFIED SYSTEM V3
+   Sistema mobile común para páginas de servicios.
+   - darkBand oculto en mobile
+   - services y finalCta usan --mobile-bg
+   - si no hay imagen mobile, usa imagen desktop detectada
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .page {
+    overflow-x: hidden !important;
+    background: #f4f1eb !important;
+  }
+
+  .heroImageDesktop {
+    display: none !important;
+  }
+
+  .heroImageMobile {
+    display: block !important;
+  }
+
+  .heroImage {
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  .darkBand {
+    display: none !important;
+  }
+
+  .services,
+  .finalCta {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+    display: block !important;
+    grid-template-columns: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+    background: #050609 !important;
+    color: #fff !important;
+  }
+
+  .services {
+    padding: 3.4rem 18px 3.8rem !important;
+  }
+
+  .finalCta {
+    padding: 4rem 24px 4.2rem !important;
+  }
+
+  .services::before,
+  .finalCta::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    background-image: var(--mobile-bg) !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    opacity: .92 !important;
+    filter: brightness(.44) contrast(1.14) saturate(.96) !important;
+    pointer-events: none !important;
+  }
+
+  .services::after,
+  .finalCta::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    background:
+      radial-gradient(circle at 72% 18%, rgba(237, 27, 47, .16), transparent 20rem),
+      linear-gradient(180deg, rgba(5,6,9,.90) 0%, rgba(5,6,9,.76) 44%, rgba(5,6,9,.97) 100%) !important;
+    pointer-events: none !important;
+  }
+
+  .services > *,
+  .services .sectionHead,
+  .services .serviceGrid,
+  .serviceGrid,
+  .serviceGrid > *,
+  .operationCard,
+  .finalCta > *:not(.finalImage),
+  .finalActions {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  .services .sectionHead {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 0 1.8rem !important;
+    padding: 0 !important;
+  }
+
+  .services .sectionHead h2,
+  .finalCta h2 {
+    max-width: 430px !important;
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: clamp(2rem, 9.4vw, 3.05rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.055em !important;
+  }
+
+  .services .eyebrow {
+    color: #ed1b2f !important;
+  }
+
+  .serviceGrid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: .85rem !important;
+    width: 100% !important;
+  }
+
+  .operationCard,
+  .serviceGrid article {
+    width: 100% !important;
+    background: rgba(7, 9, 14, .72) !important;
+    border: 1px solid rgba(255,255,255,.14) !important;
+    backdrop-filter: blur(6px) !important;
+  }
+
+  .finalCta > div:first-child {
+    width: 100% !important;
+    max-width: 430px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+
+  .finalCta p {
+    max-width: 430px !important;
+    margin: 1rem 0 0 !important;
+    color: rgba(255,255,255,.78) !important;
+    font-size: .92rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .finalActions {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: .8rem !important;
+    width: 100% !important;
+    max-width: 430px !important;
+    margin-top: 1.6rem !important;
+  }
+
+  .finalActions a {
+    width: 100% !important;
+    min-height: 48px !important;
+    border-radius: 999px !important;
+  }
+
+  .darkBandImage,
+  .finalImage {
+    display: none !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .services {
+    padding: 3.1rem 14px 3.4rem !important;
+  }
+
+  .finalCta {
+    padding: 3.4rem 18px 3.7rem !important;
+  }
+
+  .services .sectionHead h2,
+  .finalCta h2 {
+    font-size: clamp(1.85rem, 9.6vw, 2.55rem) !important;
+  }
+}
+
+/* END SERVICE MOBILE UNIFIED SYSTEM V3 */
+

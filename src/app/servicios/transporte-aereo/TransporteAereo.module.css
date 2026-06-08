@@ -4041,3 +4041,188 @@
   }
 }
 
+/* =====================================================
+   SERVICE MOBILE UNIFIED SYSTEM V3
+   Sistema mobile común para páginas de servicios.
+   - darkBand oculto en mobile
+   - services y finalCta usan --mobile-bg
+   - si no hay imagen mobile, usa imagen desktop detectada
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .page {
+    overflow-x: hidden !important;
+    background: #f4f1eb !important;
+  }
+
+  .heroImageDesktop {
+    display: none !important;
+  }
+
+  .heroImageMobile {
+    display: block !important;
+  }
+
+  .heroImage {
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  .darkBand {
+    display: none !important;
+  }
+
+  .services,
+  .finalCta {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+    display: block !important;
+    grid-template-columns: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+    background: #050609 !important;
+    color: #fff !important;
+  }
+
+  .services {
+    padding: 3.4rem 18px 3.8rem !important;
+  }
+
+  .finalCta {
+    padding: 4rem 24px 4.2rem !important;
+  }
+
+  .services::before,
+  .finalCta::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    background-image: var(--mobile-bg) !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    opacity: .92 !important;
+    filter: brightness(.44) contrast(1.14) saturate(.96) !important;
+    pointer-events: none !important;
+  }
+
+  .services::after,
+  .finalCta::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    background:
+      radial-gradient(circle at 72% 18%, rgba(237, 27, 47, .16), transparent 20rem),
+      linear-gradient(180deg, rgba(5,6,9,.90) 0%, rgba(5,6,9,.76) 44%, rgba(5,6,9,.97) 100%) !important;
+    pointer-events: none !important;
+  }
+
+  .services > *,
+  .services .sectionHead,
+  .services .serviceGrid,
+  .serviceGrid,
+  .serviceGrid > *,
+  .operationCard,
+  .finalCta > *:not(.finalImage),
+  .finalActions {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  .services .sectionHead {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 0 1.8rem !important;
+    padding: 0 !important;
+  }
+
+  .services .sectionHead h2,
+  .finalCta h2 {
+    max-width: 430px !important;
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: clamp(2rem, 9.4vw, 3.05rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.055em !important;
+  }
+
+  .services .eyebrow {
+    color: #ed1b2f !important;
+  }
+
+  .serviceGrid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: .85rem !important;
+    width: 100% !important;
+  }
+
+  .operationCard,
+  .serviceGrid article {
+    width: 100% !important;
+    background: rgba(7, 9, 14, .72) !important;
+    border: 1px solid rgba(255,255,255,.14) !important;
+    backdrop-filter: blur(6px) !important;
+  }
+
+  .finalCta > div:first-child {
+    width: 100% !important;
+    max-width: 430px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+
+  .finalCta p {
+    max-width: 430px !important;
+    margin: 1rem 0 0 !important;
+    color: rgba(255,255,255,.78) !important;
+    font-size: .92rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .finalActions {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: .8rem !important;
+    width: 100% !important;
+    max-width: 430px !important;
+    margin-top: 1.6rem !important;
+  }
+
+  .finalActions a {
+    width: 100% !important;
+    min-height: 48px !important;
+    border-radius: 999px !important;
+  }
+
+  .darkBandImage,
+  .finalImage {
+    display: none !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .services {
+    padding: 3.1rem 14px 3.4rem !important;
+  }
+
+  .finalCta {
+    padding: 3.4rem 18px 3.7rem !important;
+  }
+
+  .services .sectionHead h2,
+  .finalCta h2 {
+    font-size: clamp(1.85rem, 9.6vw, 2.55rem) !important;
+  }
+}
+
+/* END SERVICE MOBILE UNIFIED SYSTEM V3 */
+

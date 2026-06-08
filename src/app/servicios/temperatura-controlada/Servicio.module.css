@@ -2963,7 +2963,7 @@
       rgba(5, 6, 9, .55) 100%
     ),
     radial-gradient(circle at 18% 18%, rgba(237, 27, 47, .16), transparent 24rem),
-    url("/images/controltemp.png") !important;
+    url("/images/caduana.png") !important;
   background-size: cover !important;
   background-position: center 48% !important;
   background-repeat: no-repeat !important;
@@ -3065,7 +3065,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(237, 27, 47, .14), transparent 24rem),
-    url("/images/controltemp.png") !important;
+    url("/images/caduana.png") !important;
   background-size: cover !important;
   background-position: center 55% !important;
   background-repeat: no-repeat !important;
@@ -3104,7 +3104,7 @@
   .services {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.90)),
-      url("/images/controltemp.png") !important;
+      url("/images/caduana.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3116,7 +3116,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/controltemp.png") !important;
+      url("/images/caduana.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3134,7 +3134,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(237, 27, 47, .14), transparent 24rem),
-    url("/images/temperaturacontrolada.png") !important;
+    url("/images/aduanashero.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3144,7 +3144,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/temperaturacontrolada.png") !important;
+      url("/images/aduanashero.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3162,7 +3162,7 @@
       rgba(5, 6, 9, .44) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(237, 27, 47, .14), transparent 24rem),
-    url("/images/temperaturacontrolada.png") !important;
+    url("/images/segundaaduana.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3172,7 +3172,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/temperaturacontrolada.png") !important;
+      url("/images/segundaaduana.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -4041,13 +4041,20 @@
   }
 }
 
-
 /* =====================================================
-   GLOBAL SERVICE FIX - MOBILE USA IMÁGENES DESKTOP
-   Evita crear imágenes dobles por cada sección.
+   SERVICE MOBILE UNIFIED SYSTEM V3
+   Sistema mobile común para páginas de servicios.
+   - darkBand oculto en mobile
+   - services y finalCta usan --mobile-bg
+   - si no hay imagen mobile, usa imagen desktop detectada
    ===================================================== */
 
 @media (max-width: 760px) {
+  .page {
+    overflow-x: hidden !important;
+    background: #f4f1eb !important;
+  }
+
   .heroImageDesktop {
     display: none !important;
   }
@@ -4061,117 +4068,89 @@
     object-position: center center !important;
   }
 
-  .darkBandImage,
-  .finalImage {
-    display: block !important;
+  .darkBand {
+    display: none !important;
   }
 
-  .darkBandImage img,
-  .finalImage img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-    display: block !important;
-  }
-}
-
-@media (max-width: 380px) {
-  .heroImage,
-  .darkBandImage img,
-  .finalImage img {
-    object-position: center center !important;
-  }
-}
-
-
-/* =====================================================
-   TEMPERATURA CONTROLADA - MOBILE BACKGROUND FIX REAL
-   Imagen detrás del texto/cards. Sin imágenes sueltas.
-   Desktop/tablet intacto.
-   ===================================================== */
-
-@media (max-width: 760px) {
-  html,
-  body {
-    overflow-x: hidden !important;
-  }
-
-  .page {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-    background: #f4f1eb !important;
-  }
-
-  /* Primera sección después del hero: cards/servicios */
-  .services {
+  .services,
+  .finalCta {
     position: relative !important;
     isolation: isolate !important;
     overflow: hidden !important;
-
+    display: block !important;
+    grid-template-columns: none !important;
     width: 100% !important;
     max-width: 100% !important;
+    min-width: 0 !important;
     margin: 0 !important;
-    padding: 3.6rem 18px 3.8rem !important;
-
+    transform: none !important;
+    box-sizing: border-box !important;
     background: #050609 !important;
     color: #fff !important;
   }
 
-  .services::before {
+  .services {
+    padding: 3.4rem 18px 3.8rem !important;
+  }
+
+  .finalCta {
+    padding: 4rem 24px 4.2rem !important;
+  }
+
+  .services::before,
+  .finalCta::before {
     content: "" !important;
     position: absolute !important;
     inset: 0 !important;
     z-index: 0 !important;
-    pointer-events: none !important;
-
-    background-image: url("/images/controltemp.png") !important;
+    background-image: var(--mobile-bg) !important;
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
-
-    opacity: .86 !important;
-    filter: brightness(.42) contrast(1.14) saturate(.96) !important;
+    opacity: .92 !important;
+    filter: brightness(.44) contrast(1.14) saturate(.96) !important;
+    pointer-events: none !important;
   }
 
-  .services::after {
+  .services::after,
+  .finalCta::after {
     content: "" !important;
     position: absolute !important;
     inset: 0 !important;
     z-index: 1 !important;
-    pointer-events: none !important;
-
     background:
-      radial-gradient(circle at 22% 8%, rgba(237, 27, 47, .16), transparent 18rem),
-      linear-gradient(180deg, rgba(5,6,9,.92) 0%, rgba(5,6,9,.78) 42%, rgba(5,6,9,.97) 100%) !important;
+      radial-gradient(circle at 72% 18%, rgba(237, 27, 47, .16), transparent 20rem),
+      linear-gradient(180deg, rgba(5,6,9,.90) 0%, rgba(5,6,9,.76) 44%, rgba(5,6,9,.97) 100%) !important;
+    pointer-events: none !important;
   }
 
   .services > *,
   .services .sectionHead,
   .services .serviceGrid,
   .serviceGrid,
-  .serviceGrid > * {
+  .serviceGrid > *,
+  .operationCard,
+  .finalCta > *:not(.finalImage),
+  .finalActions {
     position: relative !important;
     z-index: 2 !important;
   }
 
   .services .sectionHead {
-    width: 100% !important;
-    max-width: 100% !important;
     display: block !important;
+    width: 100% !important;
     margin: 0 0 1.8rem !important;
     padding: 0 !important;
   }
 
-  .services .sectionHead h2 {
-    width: 100% !important;
-    max-width: 420px !important;
+  .services .sectionHead h2,
+  .finalCta h2 {
+    max-width: 430px !important;
     margin: 0 !important;
-    font-size: clamp(2.1rem, 10vw, 3.15rem) !important;
+    color: #fff !important;
+    font-size: clamp(2rem, 9.4vw, 3.05rem) !important;
     line-height: .96 !important;
     letter-spacing: -.055em !important;
-    color: #fff !important;
   }
 
   .services .eyebrow {
@@ -4179,149 +4158,71 @@
   }
 
   .serviceGrid {
-    width: 100% !important;
-    max-width: 100% !important;
     display: grid !important;
     grid-template-columns: 1fr !important;
     gap: .85rem !important;
+    width: 100% !important;
   }
 
-  .serviceGrid article,
-  .operationCard {
+  .operationCard,
+  .serviceGrid article {
     width: 100% !important;
-    max-width: 100% !important;
-    position: relative !important;
-    z-index: 2 !important;
-    background: rgba(7, 9, 14, .70) !important;
+    background: rgba(7, 9, 14, .72) !important;
     border: 1px solid rgba(255,255,255,.14) !important;
     backdrop-filter: blur(6px) !important;
   }
 
-  /* Bloque oscuro posterior: imagen como fondo, no como bloque suelto */
-  .darkBand {
-    position: relative !important;
-    isolation: isolate !important;
-    overflow: hidden !important;
-
+  .finalCta > div:first-child {
     width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 3.2rem 18px !important;
-
-    display: block !important;
-    background: #050609 !important;
-    color: #fff !important;
-  }
-
-  .darkBand::before {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 0 !important;
-    pointer-events: none !important;
-
-    background-image: url("/images/temperaturacontrolada.png") !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-
-    opacity: .78 !important;
-    filter: brightness(.40) contrast(1.12) saturate(.96) !important;
-  }
-
-  .darkBand::after {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 1 !important;
-    pointer-events: none !important;
-    background:
-      radial-gradient(circle at 75% 18%, rgba(237, 27, 47, .14), transparent 20rem),
-      linear-gradient(180deg, rgba(5,6,9,.92) 0%, rgba(5,6,9,.80) 45%, rgba(5,6,9,.98) 100%) !important;
-  }
-
-  .darkBandContent,
-  .darkBand .stats,
-  .darkBandActions {
-    position: relative !important;
-    z-index: 2 !important;
-  }
-
-  .darkBandContent {
-    width: 100% !important;
-    max-width: 420px !important;
+    max-width: 430px !important;
     margin: 0 !important;
     padding: 0 !important;
-    display: block !important;
+    transform: none !important;
   }
 
-  .darkBandContent h2 {
-    max-width: 420px !important;
-    margin: 0 !important;
-    font-size: clamp(2rem, 9.4vw, 3rem) !important;
-    line-height: .96 !important;
-    letter-spacing: -.055em !important;
-  }
-
-  .darkBandContent p {
-    max-width: 420px !important;
+  .finalCta p {
+    max-width: 430px !important;
     margin: 1rem 0 0 !important;
-    font-size: .9rem !important;
+    color: rgba(255,255,255,.78) !important;
+    font-size: .92rem !important;
     line-height: 1.55 !important;
   }
 
-  .darkBandActions {
-    width: 100% !important;
-    max-width: 420px !important;
+  .finalActions {
     display: grid !important;
     grid-template-columns: 1fr !important;
-    gap: .75rem !important;
-    margin-top: 1.5rem !important;
+    gap: .8rem !important;
+    width: 100% !important;
+    max-width: 430px !important;
+    margin-top: 1.6rem !important;
   }
 
-  .darkBandActions a {
+  .finalActions a {
     width: 100% !important;
-    min-height: 46px !important;
+    min-height: 48px !important;
     border-radius: 999px !important;
   }
 
-  /* Apagamos las imágenes sueltas que estaban rompiendo el layout */
   .darkBandImage,
   .finalImage {
     display: none !important;
-    visibility: hidden !important;
-    width: 0 !important;
-    height: 0 !important;
-    min-height: 0 !important;
-    max-height: 0 !important;
-    overflow: hidden !important;
-    position: absolute !important;
-    pointer-events: none !important;
-  }
-
-  /* Evita que finalCta se meta como columna rota */
-  .finalCta {
-    position: relative !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow: hidden !important;
-    margin: 0 !important;
-    background: #050609 !important;
   }
 }
 
 @media (max-width: 380px) {
   .services {
-    padding: 3.2rem 14px 3.4rem !important;
+    padding: 3.1rem 14px 3.4rem !important;
+  }
+
+  .finalCta {
+    padding: 3.4rem 18px 3.7rem !important;
   }
 
   .services .sectionHead h2,
-  .darkBandContent h2 {
-    font-size: clamp(1.9rem, 9.8vw, 2.55rem) !important;
-  }
-
-  .darkBand {
-    padding: 2.8rem 14px !important;
+  .finalCta h2 {
+    font-size: clamp(1.85rem, 9.6vw, 2.55rem) !important;
   }
 }
+
+/* END SERVICE MOBILE UNIFIED SYSTEM V3 */
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import type { CSSProperties } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Image from "next/image";
@@ -654,7 +655,7 @@ export default function TransporteAereoPage() {
           </div>
         </section>
 
-        <section className={styles.services}>
+        <section className={styles.services} style={{ "--mobile-bg": "url('/images/cargaaerea.png')" } as CSSProperties}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -754,7 +755,7 @@ export default function TransporteAereoPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta}>
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/hero/cargaAereahero.png')" } as CSSProperties}>
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>
