@@ -1,0 +1,185 @@
+.page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 85% 10%, rgba(225, 19, 67, 0.12), transparent 28rem),
+    #f4f1eb;
+  color: #111;
+  overflow-x: hidden;
+}
+
+.hero {
+  position: relative;
+  min-height: clamp(520px, 66vh, 760px);
+  display: flex;
+  align-items: center;
+  padding: 9.5rem 5vw 8rem;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(3, 4, 8, 0.96), rgba(3, 4, 8, 0.7), rgba(44, 4, 18, 0.28)),
+    url("/images/hero/contactoimagen.png") center / cover no-repeat;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  background: url("/images/hero/contactoimagen.png") center / cover no-repeat;
+  filter: blur(2px) saturate(0.92) contrast(1.05);
+  transform: scale(1.035);
+  opacity: 0.48;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 82% 20%, rgba(225, 19, 67, 0.25), transparent 32rem),
+    linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.78));
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  width: min(980px, 100%);
+  color: #fff;
+}
+
+.heroContent span {
+  color: #ff405e;
+  font-size: 0.75rem;
+  font-weight: 950;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.heroContent h1 {
+  max-width: 960px;
+  margin: 1rem 0 0;
+  font-family: var(--font-tight), system-ui, sans-serif;
+  font-size: clamp(3rem, 6.4vw, 7rem);
+  font-weight: 360;
+  line-height: 0.96;
+  letter-spacing: -0.048em;
+}
+
+.heroContent p {
+  max-width: 700px;
+  margin: 1.35rem 0 0;
+  color: rgba(255,255,255,0.76);
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.trackingShell {
+  position: relative;
+  z-index: 5;
+  width: min(1420px, calc(100% - 7vw));
+  margin: -5.5rem auto 6rem;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.mapCard {
+  min-height: 620px;
+  border-radius: 36px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow:
+    0 42px 120px rgba(20, 16, 12, 0.24),
+    0 14px 42px rgba(225, 19, 67, 0.09);
+}
+
+.mapCard iframe {
+  display: block;
+  width: 100%;
+  height: 660px;
+  border: 0;
+}
+
+.noticeCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.35rem;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(225, 19, 67, 0.09), transparent 18rem),
+    rgba(255,255,255,0.92);
+  border: 1px solid rgba(0,0,0,0.07);
+  box-shadow: 0 22px 70px rgba(0,0,0,0.09);
+}
+
+.noticeCard p {
+  margin: 0;
+  color: rgba(0,0,0,0.66);
+  font-size: 0.98rem;
+  line-height: 1.55;
+  font-weight: 750;
+}
+
+.noticeCard a {
+  min-height: 48px;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0 1.15rem;
+  color: #fff;
+  font-weight: 950;
+  text-decoration: none;
+  background: #e11343f2;
+  box-shadow: 0 18px 42px rgba(225, 19, 67, 0.24);
+}
+
+@media (max-width: 820px) {
+  .hero {
+    min-height: 620px;
+    padding: 8rem 1.15rem 7rem;
+  }
+
+  .heroContent h1 {
+    font-size: clamp(2.65rem, 13vw, 4.5rem);
+    letter-spacing: -0.036em;
+  }
+
+  .trackingShell {
+    width: calc(100% - 1.2rem);
+    margin-top: -4.2rem;
+  }
+
+  .mapCard {
+    min-height: 560px;
+    border-radius: 26px;
+  }
+
+  .mapCard iframe {
+    height: 600px;
+  }
+
+  .noticeCard {
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 24px;
+  }
+
+  .noticeCard a {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero {
+    padding-inline: 0.9rem;
+  }
+
+  .heroContent h1 {
+    font-size: clamp(2.35rem, 14vw, 3.8rem);
+  }
+
+  .mapCard iframe {
+    height: 560px;
+  }
+}
