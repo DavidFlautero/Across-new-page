@@ -1,0 +1,383 @@
+@import "../styles/reset.css";
+@import "../styles/tokens.css";
+@import "../styles/utilities.css";
+
+body {
+  overflow-x: hidden;
+  font-family: var(--font-body);
+}
+
+main {
+  isolation: isolate;
+}
+
+/* === Across premium mobile fixes === */
+
+@media (max-width: 900px) {
+  .heroServices,
+  .serviceGrid {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    width: calc(100% - 24px) !important;
+    margin: 28px auto 0 !important;
+    border-radius: 26px !important;
+    background: linear-gradient(180deg, rgba(7,8,12,.92), rgba(7,8,12,.98)) !important;
+    border: 1px solid rgba(255,255,255,.08) !important;
+    backdrop-filter: blur(18px) !important;
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+  }
+
+  .heroServices::-webkit-scrollbar,
+  .serviceGrid::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .heroService,
+  .serviceCard {
+    min-width: 238px !important;
+    max-width: 238px !important;
+    min-height: 92px !important;
+    padding: 18px 20px !important;
+    border-right: 1px solid rgba(255,255,255,.07) !important;
+    border-bottom: 0 !important;
+  }
+
+  .heroService:last-child,
+  .serviceCard:last-child {
+    border-right: 0 !important;
+  }
+}
+
+@media (max-width: 720px) {
+  
+
+  
+}
+
+
+/* Hide decorative big numbers that cheapen premium cards */
+[class*="number"],
+[class*="Number"],
+[class*="index"],
+[class*="Index"] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* === FIX GLOBAL MOBILE OVERFLOW === */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* === FIX GLOBAL MOBILE OVERFLOW === */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* FIX CONTACTO: oficinas sobre fondo marfil, no negro */
+main:has(.contact-office-grid) {
+  background: #f4f1eb !important;
+}
+
+main:has(.contact-office-grid) section {
+  background: #f4f1eb !important;
+  background-color: #f4f1eb !important;
+  background-image: none !important;
+}
+
+.contact-office-grid {
+  background: #f4f1eb !important;
+  background-color: #f4f1eb !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  padding-top: 18px !important;
+}
+
+.contact-office-grid::before,
+.contact-office-grid::after {
+  display: none !important;
+  content: none !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.contact-office-grid > a {
+  background: #111 !important;
+  border: 1px solid rgba(0,0,0,.08) !important;
+  box-shadow: 0 22px 60px rgba(0,0,0,.14) !important;
+}
+
+.contact-office-grid [class*="cardOverlay"] {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.04) 0%,
+      rgba(0,0,0,.16) 45%,
+      rgba(0,0,0,.74) 100%
+    ) !important;
+}
+
+/* FIX CONTACTO: oficinas sobre fondo marfil, no negro */
+main:has(.contact-office-grid) {
+  background: #f4f1eb !important;
+}
+
+main:has(.contact-office-grid) section {
+  background: #f4f1eb !important;
+  background-color: #f4f1eb !important;
+  background-image: none !important;
+}
+
+.contact-office-grid {
+  background: #f4f1eb !important;
+  background-color: #f4f1eb !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  padding-top: 18px !important;
+}
+
+.contact-office-grid::before,
+.contact-office-grid::after {
+  display: none !important;
+  content: none !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.contact-office-grid > a {
+  background: #111 !important;
+  border: 1px solid rgba(0,0,0,.08) !important;
+  box-shadow: 0 22px 60px rgba(0,0,0,.14) !important;
+}
+
+.contact-office-grid [class*="cardOverlay"] {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.04) 0%,
+      rgba(0,0,0,.16) 45%,
+      rgba(0,0,0,.74) 100%
+    ) !important;
+}
+
+/* FIX CONTACTO: oficinas sobre fondo marfil, no negro */
+main:has(.contact-office-grid) {
+  background: #f4f1eb !important;
+}
+
+main:has(.contact-office-grid) section {
+  background: #f4f1eb !important;
+  background-color: #f4f1eb !important;
+  background-image: none !important;
+}
+
+.contact-office-grid {
+  background: #f4f1eb !important;
+  background-color: #f4f1eb !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  padding-top: 18px !important;
+}
+
+.contact-office-grid::before,
+.contact-office-grid::after {
+  display: none !important;
+  content: none !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.contact-office-grid > a {
+  background: #111 !important;
+  border: 1px solid rgba(0,0,0,.08) !important;
+  box-shadow: 0 22px 60px rgba(0,0,0,.14) !important;
+}
+
+.contact-office-grid [class*="cardOverlay"] {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.04) 0%,
+      rgba(0,0,0,.16) 45%,
+      rgba(0,0,0,.74) 100%
+    ) !important;
+}
+
+/* FIX CONTACTO: oficinas sobre fondo marfil, no negro */
+main:has(.contact-office-grid) {
+  background: #f4f1eb !important;
+}
+
+main:has(.contact-office-grid) section {
+  background: #f4f1eb !important;
+  background-color: #f4f1eb !important;
+  background-image: none !important;
+}
+
+.contact-office-grid {
+  background: #f4f1eb !important;
+  background-color: #f4f1eb !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  padding-top: 18px !important;
+}
+
+.contact-office-grid::before,
+.contact-office-grid::after {
+  display: none !important;
+  content: none !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.contact-office-grid > a {
+  background: #111 !important;
+  border: 1px solid rgba(0,0,0,.08) !important;
+  box-shadow: 0 22px 60px rgba(0,0,0,.14) !important;
+}
+
+.contact-office-grid [class*="cardOverlay"] {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.04) 0%,
+      rgba(0,0,0,.16) 45%,
+      rgba(0,0,0,.74) 100%
+    ) !important;
+}
+
+
+/* Header contact button alignment fix */
+header a[href="/contacto"],
+header a[href="/contact"],
+nav a[href="/contacto"],
+nav a[href="/contact"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Cookie banner: force a real decision, no visual escape */
+[class*="cookie"] button[aria-label*="close" i],
+[class*="cookie"] button[aria-label*="cerrar" i],
+[class*="cookie"] .close,
+[class*="cookie"] .Close,
+[class*="cookie"] [class*="close"],
+[class*="cookie"] [class*="Close"] {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+[class*="cookie"] a,
+[class*="Cookie"] a {
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+}
+
+[class*="cookie"] button,
+[class*="Cookie"] button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+}
+
+/* Brand red for cookie buttons */
+[class*="cookie"] button,
+[class*="Cookie"] button {
+  background: #e11343f2 !important;
+  border-color: #e11343f2 !important;
+  color: #fff !important;
+}
+
+/* === HERO CTA ABOVE OVERLAYS === */
+[class*="heroContent"],
+[class*="Hero_heroContent"],
+[class*="heroInner"] {
+  position: relative;
+  z-index: 5;
+}
+
+[class*="heroContent"] a,
+[class*="heroContent"] button,
+[class*="Hero_heroContent"] a,
+[class*="Hero_heroContent"] button,
+[class*="actions"] a,
+[class*="actions"] button {
+  position: relative;
+  z-index: 6;
+}
+
+[class*="heroOverlay"],
+[class*="overlay"],
+[class*="redGlow"] {
+  pointer-events: none;
+}
+
+/* === FLOATING CALL BUTTON FINAL POSITION === */
+@media (max-width: 1100px) {
+  [class*="FloatingCallButton_floating"] {
+    right: clamp(.75rem, 2.4vw, 1.2rem) !important;
+    bottom: calc(7rem + env(safe-area-inset-bottom)) !important;
+    z-index: 5200 !important;
+  }
+
+  [class*="FloatingCallButton_chatBubble"] {
+    right: 0 !important;
+    bottom: calc(100% + .42rem) !important;
+    z-index: 5201 !important;
+  }
+
+  [class*="FloatingCallButton_callPill"] {
+    z-index: 5201 !important;
+  }
+}
+
+@media (max-width: 760px) {
+  [class*="FloatingCallButton_floating"] {
+    right: .72rem !important;
+    bottom: calc(7.15rem + env(safe-area-inset-bottom)) !important;
+  }
+}
+
+@media (max-width: 760px) and (max-height: 720px) {
+  [class*="FloatingCallButton_floating"] {
+    right: .58rem !important;
+    bottom: calc(5.75rem + env(safe-area-inset-bottom)) !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  body:has([class*="mobilePanelVisible"]) [class*="FloatingCallButton_floating"] {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateY(16px) scale(.96) !important;
+  }
+}
+

@@ -1,0 +1,831 @@
+"use client";
+
+import { FormEvent, useMemo, useState } from "react";
+import Image from "next/image";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import styles from "./Cotizacion.module.css";
+
+const incoterms = [
+  ["EXW", "Ex Works"],
+  ["FCA", "Free Carrier"],
+  ["CPT", "Carriage Paid To"],
+  ["CIP", "Carriage and Insurance Paid To"],
+  ["DAP", "Delivered At Place"],
+  ["DPU", "Delivered At Place Unloaded"],
+  ["DDP", "Delivered Duty Paid"],
+  ["FAS", "Free Alongside Ship"],
+  ["FOB", "Free On Board"],
+  ["CFR", "Cost and Freight"],
+  ["CIF", "Cost, Insurance and Freight"],
+];
+
+const airportsByCountry: Record<string, string[]> = {
+  España: [
+    "Madrid-Barajas (MAD)",
+    "Barcelona-El Prat (BCN)",
+    "Valencia (VLC)",
+    "Zaragoza (ZAZ)",
+    "Málaga-Costa del Sol (AGP)",
+  ],
+  Colombia: [
+    "El Dorado Bogotá (BOG)",
+    "José María Córdova Medellín (MDE)",
+    "Alfonso Bonilla Aragón Cali (CLO)",
+    "Rafael Núñez Cartagena (CTG)",
+  ],
+  Argentina: [
+    "Ezeiza Buenos Aires (EZE)",
+    "Aeroparque Jorge Newbery (AEP)",
+    "Córdoba (COR)",
+    "Rosario (ROS)",
+  ],
+  México: [
+    "Ciudad de México (MEX)",
+    "Felipe Ángeles (NLU)",
+    "Guadalajara (GDL)",
+    "Monterrey (MTY)",
+    "Cancún (CUN)",
+  ],
+  "Estados Unidos": [
+    "Miami (MIA)",
+    "Houston George Bush (IAH)",
+    "Dallas/Fort Worth (DFW)",
+    "Los Angeles (LAX)",
+    "New York JFK (JFK)",
+    "Chicago O'Hare (ORD)",
+  ],
+  China: [
+    "Shenzhen Bao'an (SZX)",
+    "Hong Kong (HKG)",
+    "Shanghai Pudong (PVG)",
+    "Guangzhou Baiyun (CAN)",
+    "Beijing Capital (PEK)",
+  ],
+  "Países Bajos": [
+    "Amsterdam Schiphol (AMS)",
+    "Rotterdam The Hague (RTM)",
+    "Maastricht Aachen (MST)",
+  ],
+  Portugal: [
+    "Porto (OPO)",
+    "Lisboa (LIS)",
+    "Faro (FAO)",
+  ],
+  "Emiratos Árabes Unidos": [
+    "Dubai (DXB)",
+    "Dubai World Central (DWC)",
+    "Abu Dhabi (AUH)",
+  ],
+};
+
+const countries = Object.keys(airportsByCountry);
+
+const cargoTypes = [
+  {
+    id: "pallet_europeo",
+    title: "Pallet Europeo",
+    subtitle: "120 × 80 cm",
+    image: "/images/pallets/European_pallet.png",
+  },
+  {
+    id: "pallet_americano",
+    title: "Pallet Americano",
+    subtitle: "120 × 100 cm",
+    image: "/images/pallets/American_pallet.png",
+  },
+  {
+    id: "pallets_otros",
+    title: "Pallets Otros",
+    subtitle: "a determinar",
+    image: "/images/pallets/otros_pallets.png",
+  },
+  {
+    id: "cajas_bultos",
+    title: "Cajas o bultos",
+    subtitle: "sueltos",
+    image: "/images/pallets/cajas.png",
+  },
+] as const;
+
+type CargoType = (typeof cargoTypes)[number]["id"];
+
+const initialForm = {
+  name: "",
+  company: "",
+  email: "",
+  phone: "",
+  country: "",
+  contractDate: "",
+
+  operation: "",
+  service: "",
+  originCountry: "",
+  originAddress: "",
+  originAirport: "",
+  originAirportOther: "",
+  destinationCountry: "",
+  destinationAddress: "",
+  destinationAirport: "",
+  destinationAirportOther: "",
+
+  incoterm: "",
+  cargoType: "" as CargoType | "",
+  units: "metric" as "metric" | "imperial",
+  cargoQty: "",
+  cargoLength: "",
+  cargoWidth: "",
+  cargoHeight: "",
+  cargoWeight: "",
+  cargoInfo: "",
+
+  merchandise: "",
+  stackable: "",
+  handling: "",
+  comments: "",
+  privacyAccepted: false,
+  marketingAccepted: false,
+};
+
+export default function CotizacionPage() {
+  const [form, setForm] = useState(initialForm);
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [error, setError] = useState("");
+
+  const originAirports = useMemo(
+    () => airportsByCountry[form.originCountry] || [],
+    [form.originCountry]
+  );
+
+  const destinationAirports = useMemo(
+    () => airportsByCountry[form.destinationCountry] || [],
+    [form.destinationCountry]
+  );
+
+  const selectedCargo = cargoTypes.find((item) => item.id === form.cargoType);
+  const showMeasureBox =
+    form.cargoType === "pallets_otros" || form.cargoType === "cajas_bultos";
+
+  const lengthUnit = form.units === "metric" ? "cm" : "inch";
+  const weightUnit = form.units === "metric" ? "kg" : "lb";
+
+  const setValue = <K extends keyof typeof initialForm>(
+    key: K,
+    value: (typeof initialForm)[K]
+  ) => {
+    setForm((prev) => ({ ...prev, [key]: value }));
+  };
+
+  async function submit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (!form.privacyAccepted || sending) return;
+
+    setSending(true);
+    setSent(false);
+    setError("");
+
+    try {
+      const response = await fetch("/api/cotizacion", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...form,
+          origin:
+            [form.originCountry, form.originAddress, form.originAirportOther || form.originAirport]
+              .filter(Boolean)
+              .join(" | "),
+          destination:
+            [
+              form.destinationCountry,
+              form.destinationAddress,
+              form.destinationAirportOther || form.destinationAirport,
+            ]
+              .filter(Boolean)
+              .join(" | "),
+          cargo: selectedCargo
+            ? `${selectedCargo.title} - ${selectedCargo.subtitle}`
+            : "",
+          weight: form.cargoWeight ? `${form.cargoWeight} ${weightUnit}` : "",
+          dimensions:
+            form.cargoLength || form.cargoWidth || form.cargoHeight
+              ? `${form.cargoLength || "-"} × ${form.cargoWidth || "-"} × ${
+                  form.cargoHeight || "-"
+                } ${lengthUnit}`
+              : "",
+          website: window.location.origin,
+        }),
+      });
+
+      if (!response.ok) {
+        setError("No se pudo enviar la solicitud. Revise los datos e inténtelo nuevamente.");
+        return;
+      }
+
+      setSent(true);
+      setForm(initialForm);
+    } catch {
+      setError("Error de conexión. Inténtelo nuevamente.");
+    } finally {
+      setSending(false);
+    }
+  }
+
+  return (
+    <div className="page-shell">
+      <Header />
+
+      <main className={styles.page}>
+        <section className={styles.hero}>
+          <div className={styles.heroOverlay} />
+          <div className={styles.heroContent}>
+            <span>Cotizador Express</span>
+            <h1>Configure su operación logística con precisión.</h1>
+            <p>
+              Complete los datos de su requerimiento y nuestro equipo preparará una
+              propuesta ajustada a su carga, destino, urgencia y tipo de operación.
+            </p>
+          </div>
+        </section>
+
+        <section className={styles.quoteShell}>
+          <aside className={styles.steps}>
+            <div className={styles.stepActive}>
+              <b>01</b>
+              <span>Datos de contacto</span>
+            </div>
+            <div>
+              <b>02</b>
+              <span>Operación</span>
+            </div>
+            <div>
+              <b>03</b>
+              <span>Tipo de carga</span>
+            </div>
+            <div>
+              <b>04</b>
+              <span>Requerimientos</span>
+            </div>
+            <div>
+              <b>05</b>
+              <span>Confirmación</span>
+            </div>
+          </aside>
+
+          <form className={styles.formCard} onSubmit={submit}>
+            <div className={styles.formHeader}>
+              <span>01</span>
+              <div>
+                <h2>Datos de contacto</h2>
+                <p>Información básica para gestionar su solicitud comercial.</p>
+              </div>
+            </div>
+
+            <div className={styles.grid}>
+              <label>
+                Nombre*
+                <input
+                  type="text"
+                  placeholder="Nombre completo"
+                  value={form.name}
+                  onChange={(e) => setValue("name", e.target.value)}
+                  required
+                />
+              </label>
+
+              <label>
+                Empresa*
+                <input
+                  type="text"
+                  placeholder="Nombre de la empresa"
+                  value={form.company}
+                  onChange={(e) => setValue("company", e.target.value)}
+                  required
+                />
+              </label>
+
+              <label>
+                Email*
+                <input
+                  type="email"
+                  placeholder="empresa@dominio.com"
+                  value={form.email}
+                  onChange={(e) => setValue("email", e.target.value)}
+                  required
+                />
+              </label>
+
+              <label>
+                Teléfono*
+                <input
+                  type="tel"
+                  placeholder="+34 000 000 000"
+                  value={form.phone}
+                  onChange={(e) => setValue("phone", e.target.value)}
+                  required
+                />
+              </label>
+
+              <label>
+                País*
+                <select
+                  value={form.country}
+                  onChange={(e) => setValue("country", e.target.value)}
+                  required
+                >
+                  <option value="">Seleccione país</option>
+                  {countries.map((country) => (
+                    <option key={country}>{country}</option>
+                  ))}
+                </select>
+              </label>
+
+              <label>
+                Fecha de contrato de servicio*
+                <input
+                  type="date"
+                  min={new Date().toISOString().split("T")[0]}
+                  value={form.contractDate}
+                  onChange={(e) => setValue("contractDate", e.target.value)}
+                  required
+                />
+              </label>
+            </div>
+
+            <div className={styles.divider} />
+
+            <div className={styles.formHeader}>
+              <span>02</span>
+              <div>
+                <h2>Operación</h2>
+                <p>Origen, destino, modalidad e Incoterm de la operación.</p>
+              </div>
+            </div>
+
+            <div className={styles.grid}>
+              <label>
+                Tipo de operación requerida*
+                <select
+                  value={form.operation}
+                  onChange={(e) => setValue("operation", e.target.value)}
+                  required
+                >
+                  <option value="">Seleccione operación</option>
+                  <option>Exportación</option>
+                  <option>Importación</option>
+                  <option>Nacional</option>
+                </select>
+              </label>
+
+              <label>
+                Servicio requerido*
+                <select
+                  value={form.service}
+                  onChange={(e) => setValue("service", e.target.value)}
+                  required
+                >
+                  <option value="">Seleccione servicio</option>
+                  <option>Aéreo</option>
+                  <option>Marítimo</option>
+                  <option>Terrestre</option>
+                  <option>Aduanas</option>
+                  <option>Almacén y distribución</option>
+                  <option>e-Commerce</option>
+                </select>
+              </label>
+            </div>
+
+            <div className={styles.originDestination}>
+              <div className={styles.subBlock}>
+                <h3>Datos de origen</h3>
+                <p>Seleccione país, dirección y aeropuerto de salida.</p>
+
+                <div className={styles.grid}>
+                  <label>
+                    País de origen*
+                    <select
+                      value={form.originCountry}
+                      onChange={(e) =>
+                        setForm((prev) => ({
+                          ...prev,
+                          originCountry: e.target.value,
+                          originAirport: "",
+                          originAirportOther: "",
+                        }))
+                      }
+                      required
+                    >
+                      <option value="">Seleccione país</option>
+                      {countries.map((country) => (
+                        <option key={country}>{country}</option>
+                      ))}
+                    </select>
+                  </label>
+
+                  <label>
+                    Dirección de recogida
+                    <input
+                      type="text"
+                      placeholder="Dirección de recogida"
+                      value={form.originAddress}
+                      onChange={(e) => setValue("originAddress", e.target.value)}
+                    />
+                  </label>
+
+                  <label>
+                    Aeropuerto de origen
+                    <select
+                      value={form.originAirport}
+                      onChange={(e) => setValue("originAirport", e.target.value)}
+                      disabled={!form.originCountry}
+                    >
+                      <option value="">
+                        {form.originCountry
+                          ? "Seleccione aeropuerto"
+                          : "Seleccione primero el país"}
+                      </option>
+                      {originAirports.map((airport) => (
+                        <option key={airport}>{airport}</option>
+                      ))}
+                    </select>
+                  </label>
+
+                  <label>
+                    Otro aeropuerto de origen
+                    <input
+                      type="text"
+                      placeholder="Si no aparece, escríbalo aquí"
+                      value={form.originAirportOther}
+                      onChange={(e) => setValue("originAirportOther", e.target.value)}
+                    />
+                  </label>
+                </div>
+              </div>
+
+              <div className={styles.subBlock}>
+                <h3>Datos de destino</h3>
+                <p>Seleccione país, dirección y aeropuerto de llegada.</p>
+
+                <div className={styles.grid}>
+                  <label>
+                    País de destino*
+                    <select
+                      value={form.destinationCountry}
+                      onChange={(e) =>
+                        setForm((prev) => ({
+                          ...prev,
+                          destinationCountry: e.target.value,
+                          destinationAirport: "",
+                          destinationAirportOther: "",
+                        }))
+                      }
+                      required
+                    >
+                      <option value="">Seleccione país</option>
+                      {countries.map((country) => (
+                        <option key={country}>{country}</option>
+                      ))}
+                    </select>
+                  </label>
+
+                  <label>
+                    Dirección de entrega
+                    <input
+                      type="text"
+                      placeholder="Dirección de entrega"
+                      value={form.destinationAddress}
+                      onChange={(e) => setValue("destinationAddress", e.target.value)}
+                    />
+                  </label>
+
+                  <label>
+                    Aeropuerto de destino
+                    <select
+                      value={form.destinationAirport}
+                      onChange={(e) => setValue("destinationAirport", e.target.value)}
+                      disabled={!form.destinationCountry}
+                    >
+                      <option value="">
+                        {form.destinationCountry
+                          ? "Seleccione aeropuerto"
+                          : "Seleccione primero el país"}
+                      </option>
+                      {destinationAirports.map((airport) => (
+                        <option key={airport}>{airport}</option>
+                      ))}
+                    </select>
+                  </label>
+
+                  <label>
+                    Otro aeropuerto de destino
+                    <input
+                      type="text"
+                      placeholder="Si no aparece, escríbalo aquí"
+                      value={form.destinationAirportOther}
+                      onChange={(e) =>
+                        setValue("destinationAirportOther", e.target.value)
+                      }
+                    />
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.block}>
+              <h3>Incoterm</h3>
+              <p>Seleccione la condición comercial aplicable a la operación.</p>
+
+              <div className={styles.optionGrid}>
+                {incoterms.map(([code, text]) => (
+                  <label key={code} className={styles.option}>
+                    <input
+                      type="radio"
+                      name="incoterm"
+                      value={code}
+                      checked={form.incoterm === code}
+                      onChange={(e) => setValue("incoterm", e.target.value)}
+                    />
+                    <strong>{code}</strong>
+                    <small>{text}</small>
+                  </label>
+                ))}
+              </div>
+            </div>
+
+            <div className={styles.divider} />
+
+            <div className={styles.formHeader}>
+              <span>03</span>
+              <div>
+                <h2>Tipo de carga</h2>
+                <p>Seleccione según corresponda.</p>
+              </div>
+            </div>
+
+            <div className={styles.cargoGrid}>
+              {cargoTypes.map((item) => (
+                <label key={item.id} className={styles.cargoOption}>
+                  <input
+                    type="radio"
+                    name="cargoType"
+                    value={item.id}
+                    checked={form.cargoType === item.id}
+                    onChange={() => setValue("cargoType", item.id)}
+                  />
+
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={120}
+                    height={80}
+                    className={styles.cargoImage}
+                  />
+
+                  <span className={styles.cargoText}>
+                    <strong>{item.title}</strong>
+                    <small>{item.subtitle}</small>
+                  </span>
+                </label>
+              ))}
+            </div>
+
+            {showMeasureBox && (
+              <div className={styles.measureBox}>
+                <div className={styles.measureHead}>
+                  <h3>
+                    {form.cargoType === "pallets_otros"
+                      ? "Pallets otros a determinar"
+                      : "Cajas o bultos sueltos"}
+                  </h3>
+
+                  <div className={styles.unitToggle}>
+                    <label>
+                      <input
+                        type="radio"
+                        name="units"
+                        checked={form.units === "metric"}
+                        onChange={() => setValue("units", "metric")}
+                      />
+                      Kg / Cm
+                    </label>
+
+                    <label>
+                      <input
+                        type="radio"
+                        name="units"
+                        checked={form.units === "imperial"}
+                        onChange={() => setValue("units", "imperial")}
+                      />
+                      Lb / Inch
+                    </label>
+                  </div>
+                </div>
+
+                <div className={styles.measureGrid}>
+                  <label>
+                    Cant.
+                    <input
+                      type="number"
+                      min="1"
+                      placeholder="1"
+                      value={form.cargoQty}
+                      onChange={(e) => setValue("cargoQty", e.target.value)}
+                    />
+                  </label>
+
+                  <label>
+                    Largo
+                    <div className={styles.unitInput}>
+                      <input
+                        type="number"
+                        min="0"
+                        placeholder="Completar"
+                        value={form.cargoLength}
+                        onChange={(e) => setValue("cargoLength", e.target.value)}
+                      />
+                      <span>{lengthUnit}</span>
+                    </div>
+                  </label>
+
+                  <label>
+                    Ancho
+                    <div className={styles.unitInput}>
+                      <input
+                        type="number"
+                        min="0"
+                        placeholder="Completar"
+                        value={form.cargoWidth}
+                        onChange={(e) => setValue("cargoWidth", e.target.value)}
+                      />
+                      <span>{lengthUnit}</span>
+                    </div>
+                  </label>
+
+                  <label>
+                    Altura
+                    <div className={styles.unitInput}>
+                      <input
+                        type="number"
+                        min="0"
+                        placeholder="Completar"
+                        value={form.cargoHeight}
+                        onChange={(e) => setValue("cargoHeight", e.target.value)}
+                      />
+                      <span>{lengthUnit}</span>
+                    </div>
+                  </label>
+
+                  <label>
+                    Peso
+                    <div className={styles.unitInput}>
+                      <input
+                        type="number"
+                        min="0"
+                        placeholder="Completar"
+                        value={form.cargoWeight}
+                        onChange={(e) => setValue("cargoWeight", e.target.value)}
+                      />
+                      <span>{weightUnit}</span>
+                    </div>
+                  </label>
+
+                  <label className={styles.fullWidth}>
+                    Información adicional
+                    <textarea
+                      placeholder="Indique detalles técnicos, referencias, restricciones o instrucciones especiales."
+                      value={form.cargoInfo}
+                      onChange={(e) => setValue("cargoInfo", e.target.value)}
+                    />
+                  </label>
+                </div>
+              </div>
+            )}
+
+            <div className={styles.block}>
+              <label>
+                Descripción de mercadería a transportar*
+                <textarea
+                  placeholder="Ej: comida, maquinaria, productos farmacéuticos, repuestos, equipos tecnológicos..."
+                  value={form.merchandise}
+                  onChange={(e) => setValue("merchandise", e.target.value)}
+                  required
+                />
+              </label>
+
+              <div className={styles.optionGridFour}>
+                <label className={styles.option}>
+                  <input
+                    type="radio"
+                    name="stackable"
+                    value="Apilable"
+                    checked={form.stackable === "Apilable"}
+                    onChange={(e) => setValue("stackable", e.target.value)}
+                  />
+                  <strong>Apilable</strong>
+                  <small>La carga permite apilamiento.</small>
+                </label>
+
+                <label className={styles.option}>
+                  <input
+                    type="radio"
+                    name="stackable"
+                    value="No apilable"
+                    checked={form.stackable === "No apilable"}
+                    onChange={(e) => setValue("stackable", e.target.value)}
+                  />
+                  <strong>No apilable</strong>
+                  <small>Requiere manipulación individual.</small>
+                </label>
+
+                <label className={styles.option}>
+                  <input
+                    type="radio"
+                    name="handling"
+                    value="Carga general"
+                    checked={form.handling === "Carga general"}
+                    onChange={(e) => setValue("handling", e.target.value)}
+                  />
+                  <strong>Carga general</strong>
+                  <small>Sin requerimientos especiales.</small>
+                </label>
+
+                <label className={styles.option}>
+                  <input
+                    type="radio"
+                    name="handling"
+                    value="Manipulación especial"
+                    checked={form.handling === "Manipulación especial"}
+                    onChange={(e) => setValue("handling", e.target.value)}
+                  />
+                  <strong>Manipulación especial</strong>
+                  <small>Requiere cuidado operativo.</small>
+                </label>
+              </div>
+            </div>
+
+            <div className={styles.divider} />
+
+            <div className={styles.formHeader}>
+              <span>04</span>
+              <div>
+                <h2>Requerimientos finales</h2>
+                <p>Comentarios, privacidad y autorización de contacto.</p>
+              </div>
+            </div>
+
+            <label>
+              Comentarios o requerimientos adicionales
+              <textarea
+                placeholder="Complete cualquier información adicional de la operación."
+                value={form.comments}
+                onChange={(e) => setValue("comments", e.target.value)}
+              />
+            </label>
+
+            <div className={styles.legal}>
+              <p>
+                ACROSS LOGISTICS, S.L.U. tratará sus datos con la finalidad de
+                responder a su consulta o petición. Puede acceder, rectificar y
+                suprimir sus datos consultando nuestra Política de Privacidad Web.
+              </p>
+
+              <label>
+                <input
+                  type="checkbox"
+                  checked={form.privacyAccepted}
+                  onChange={(e) => setValue("privacyAccepted", e.target.checked)}
+                  required
+                />
+                Acepto política de privacidad
+              </label>
+
+              <label>
+                <input
+                  type="checkbox"
+                  checked={form.marketingAccepted}
+                  onChange={(e) => setValue("marketingAccepted", e.target.checked)}
+                />
+                Acepto recibir información comercial
+              </label>
+            </div>
+
+            {sent && (
+              <p className={styles.success}>
+                Solicitud enviada correctamente. Nuestro equipo se pondrá en contacto.
+              </p>
+            )}
+
+            {error && <p className={styles.error}>{error}</p>}
+
+            <button type="submit" className={styles.submit} disabled={sending}>
+              {sending ? "Enviando..." : "Solicitar presupuesto"}
+            </button>
+          </form>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
