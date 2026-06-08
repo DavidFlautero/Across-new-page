@@ -569,7 +569,7 @@ export default function TransporteAereoPage() {
           />
 
           <Image
-            src="/images/hero/cargaAereahero-mobile.png"
+            src="/images/hero/cargaAereahero.png"
             alt={t.heroTitle}
             fill
             priority

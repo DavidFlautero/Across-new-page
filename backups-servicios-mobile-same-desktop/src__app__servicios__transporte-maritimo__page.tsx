@@ -13,260 +13,260 @@ type Locale = "es" | "en" | "zh";
 
 const copy = {
   es: {
-    heroEyebrow: "Cargas especiales e industriales",
-    heroTitle: "Ingeniería logística para cargas que no encajan en lo estándar.",
+    heroEyebrow: "Transporte marítimo internacional",
+    heroTitle: "Capacidad global para cargas que cruzan océanos.",
     heroText:
-      "Coordinamos operaciones especiales para cargas sobredimensionadas, industriales, sensibles o de alto valor, integrando análisis técnico, permisos, rutas, manipulación y seguimiento operativo.",
+      "Coordinamos embarques marítimos internacionales con control documental, seguimiento operativo y soluciones adaptadas a cargas FCL, LCL, proyectos especiales o de alto valor.",
     primaryCta: "Solicitar cotización",
     secondaryCta: "Hablar con un especialista",
 
-    activeLabel: "Operación especial activa",
-    activeRoute: "Puerto → Obra",
-    activeCargo: "Carga sobredimensionada",
+    activeLabel: "Operación marítima activa",
+    activeRoute: "Madrid → Bogotá",
+    activeCargo: "Carga crítica",
     activeStatusLabel: "Estado:",
-    activeStatus: "En planificación",
-    activeEtaLabel: "Prioridad:",
-    activeEta: "Alta complejidad",
+    activeStatus: "En coordinación",
+    activeEtaLabel: "ETA:",
+    activeEta: "Prioritario",
 
     trust: [
-      ["Sobredimensionadas", "Cargas fuera de estándar"],
-      ["Ingeniería logística", "Análisis técnico"],
-      ["Permisos y rutas", "Gestión operativa"],
-      ["Seguimiento", "Control de principio a fin"],
+      ["Carga FCL", "Operaciones críticas"],
+      ["Carga especial", "Control y trazabilidad"],
+      ["Documentación", "Gestión aduanera"],
+      ["Seguimiento operativo", "Trazabilidad operativa"],
     ],
 
-    overviewEyebrow: "Operaciones especiales",
-    overviewTitle: "Planificación precisa para cargas que requieren más que transporte.",
+    overviewEyebrow: "Operaciones confiables",
+    overviewTitle: "Velocidad, precisión y control en cada etapa del embarque marítimo.",
     overviewText:
-      "Las cargas especiales exigen análisis, coordinación y control. Diseñamos soluciones para mercancías que requieren permisos, manipulación especializada, rutas estudiadas y equipos adaptados.",
-    overviewButton: "Conocer más sobre cargas especiales",
+      "El transporte marítimo exige coordinación exacta entre origen, naviera, aduana y destino final. En Across Logistics gestionamos cada etapa para reducir tiempos, evitar errores documentales y mantener visibilidad sobre la operación.",
+    overviewButton: "Conocer más sobre marítimo",
 
     pillars: [
-      ["Análisis técnico", "Evaluamos dimensiones, peso, centro de gravedad, ruta, manipulación y restricciones."],
-      ["Gestión de permisos", "Coordinamos autorizaciones, documentación y requisitos operativos."],
-      ["Manipulación especializada", "Integramos equipos, operadores y procedimientos adecuados para cada carga."],
-      ["Seguimiento operativo", "Monitoreamos cada etapa para reducir riesgos y mantener control."],
+      ["Coordinación portuaria", "Gestión con navieras, agentes y operadores logísticos."],
+      ["Control documental", "Revisión de documentos comerciales, aduaneros y operativos."],
+      ["Seguimiento de operación", "Monitoreo del avance desde origen hasta destino."],
+      ["Soluciones puerta a puerta", "Integración con transporte terrestre y entrega final."],
     ],
 
-    servicesEyebrow: "Nuestros servicios especiales",
-    servicesTitle: "Soluciones diseñadas para cargas de alta complejidad.",
+    servicesEyebrow: "Nuestros servicios marítimos",
+    servicesTitle: "Soluciones marítimas para cada tipo de embarque.",
     services: [
-      ["Carga sobredimensionada", "Operaciones para mercancías que superan medidas o pesos convencionales."],
-      ["Carga industrial", "Transporte y coordinación para maquinaria, equipos y componentes productivos."],
-      ["Proyectos especiales", "Planificación integral para cargas críticas, obras e infraestructuras."],
-      ["Permisos y escoltas", "Gestión de autorizaciones, rutas especiales y acompañamiento cuando corresponde."],
-      ["Multimodal especial", "Integración terrestre, marítima o aérea según la complejidad de la operación."],
-      ["Door to door", "Coordinación completa desde origen hasta destino final."],
+      ["Carga marítima FCL", "Para envíos donde el tiempo define la operación."],
+      ["Carga LCL consolidada", "Optimización de costos mediante espacios compartidos."],
+      ["Carga de alto valor", "Coordinación segura para productos sensibles o estratégicos."],
+      ["Proyectos marítimos", "Soluciones dedicadas para operaciones especiales o cargas críticas."],
+      ["Cross trade marítimo", "Operaciones internacionales entre terceros países."],
+      ["Door to door", "Desde retiro en origen hasta entrega final en destino."],
     ],
 
-    useCasesEyebrow: "Cuándo requiere una operación especial",
-    useCasesTitle: "Cuando la carga no puede tratarse como estándar.",
+    useCasesEyebrow: "Cuándo conviene usar transporte marítimo",
+    useCasesTitle: "El transporte marítimo marca la diferencia.",
     useCases: [
-      ["Maquinaria pesada", "Equipos industriales que requieren planificación y manipulación específica."],
-      ["Componentes de obra", "Elementos para infraestructuras, energía o construcción."],
-      ["Carga sobredimensionada", "Mercancías con dimensiones o pesos fuera de operación regular."],
-      ["Carga sensible", "Bienes que requieren control, seguridad y procedimientos especiales."],
-      ["Proyectos llave en mano", "Coordinación integral para operaciones de alta complejidad."],
-      ["Operaciones multimodales", "Movimientos que combinan diferentes modos de transporte."],
+      ["Repuestos industriales urgentes", "Evite detener una línea de producción por falta de componentes."],
+      ["Productos tecnológicos", "Ideal para cargas de alto valor, sensibles o con rápida rotación."],
+      ["Muestras comerciales", "Envíos rápidos para ferias, clientes o validaciones internacionales."],
+      ["Carga médica o sensible", "Coordinación especial para productos que requieren mayor control."],
+      ["E-commerce internacional", "Movimientos rápidos para operaciones comerciales globales."],
+      ["Documentación crítica", "Soluciones para envíos donde el plazo no admite demoras."],
     ],
 
     processEyebrow: "Nuestro proceso operativo",
-    processTitle: "Una operación especial diseñada antes de mover la carga.",
+    processTitle: "Una operación marítima clara desde el primer contacto.",
     process: [
-      ["Análisis de carga", "Revisamos dimensiones, peso, fragilidad, requisitos y destino final."],
-      ["Estudio de ruta", "Evaluamos restricciones, accesos, permisos y viabilidad operativa."],
-      ["Plan documental", "Coordinamos autorizaciones, seguros y documentación requerida."],
-      ["Equipo y manipulación", "Definimos medios, operadores y procedimientos de carga."],
-      ["Seguimiento", "Monitoreamos hitos críticos durante todo el movimiento."],
-      ["Entrega final", "Coordinamos descarga, recepción y cierre seguro de la operación."],
+      ["Análisis de carga", "Revisamos peso, volumen, origen, destino y urgencia."],
+      ["Selección de ruta", "Buscamos la alternativa marítima más eficiente."],
+      ["Coordinación documental", "Validamos requisitos comerciales y aduaneros."],
+      ["Booking y despacho", "Coordinamos naviera, puerto y operación de salida."],
+      ["Seguimiento", "Monitoreamos el avance de la carga."],
+      ["Entrega final", "Gestionamos conexión terrestre y entrega en destino."],
     ],
 
-    bandTitle: "Operaciones especiales diseñadas para cargas que no admiten improvisación.",
+    bandTitle: "Operaciones marítimas diseñadas para cargas que no pueden detenerse.",
     bandText:
-      "Nuestro equipo coordina cargas industriales y especiales para empresas que necesitan planificación técnica, control operativo y respuesta profesional ante movimientos complejos.",
+      "Nuestro equipo coordina soluciones marítimas internacionales para empresas que necesitan rapidez, trazabilidad y respuesta profesional ante operaciones sensibles.",
     stats: [
-      ["Alta complejidad", "Operaciones fuera de estándar"],
-      ["Permisos", "Gestión documental y rutas"],
-      ["Multimodal", "Integración logística"],
-      ["Soporte experto", "Especialistas dedicados"],
+      ["Cobertura global", "Principales rutas globales"],
+      ["Envíos urgentes", "Coordinación portuaria"],
+      ["Seguridad y control", "Documentación y compliance"],
+      ["Soporte especializado", "Especialistas marítimos"],
     ],
 
-    finalTitle: "Coordinemos su próxima carga especial.",
+    finalTitle: "Coordinemos su próximo embarque marítimo internacional.",
     finalText:
-      "Cuéntenos dimensiones, peso, origen, destino y restricciones. Nuestro equipo analizará la viabilidad y la mejor solución operativa.",
-    finalPrimary: "Solicitar cotización especial",
+      "Cuéntenos origen, destino, tipo de carga y urgencia. Nuestro equipo analizará la mejor alternativa marítima para su operación.",
+    finalPrimary: "Solicitar cotización marítima",
     finalSecondary: "Hablar con un especialista",
   },
 
   en: {
-    heroEyebrow: "Special and industrial cargo",
-    heroTitle: "Logistics engineering for cargo that does not fit the standard.",
+    heroEyebrow: "International ocean freight",
+    heroTitle: "Global capacity for cargo crossing oceans.",
     heroText:
-      "We coordinate special operations for oversized, industrial, sensitive or high-value cargo, integrating technical analysis, permits, routes, handling and operational tracking.",
+      "We coordinate international ocean shipments with document control, operational tracking and solutions adapted to sensitive, urgent or high-value cargo.",
     primaryCta: "Request quotation",
     secondaryCta: "Talk to a specialist",
 
-    activeLabel: "Active special operation",
-    activeRoute: "Port → Site",
-    activeCargo: "Oversized cargo",
+    activeLabel: "Active air operation",
+    activeRoute: "Madrid → Bogotá",
+    activeCargo: "Critical cargo",
     activeStatusLabel: "Status:",
-    activeStatus: "In planning",
-    activeEtaLabel: "Priority:",
-    activeEta: "High complexity",
+    activeStatus: "In coordination",
+    activeEtaLabel: "ETA:",
+    activeEta: "Priority",
 
     trust: [
-      ["Oversized", "Non-standard cargo"],
-      ["Logistics engineering", "Technical analysis"],
-      ["Permits and routes", "Operational management"],
-      ["Tracking", "End-to-end control"],
+      ["Urgent cargo", "Critical operations"],
+      ["High value", "Maximum security"],
+      ["Documentation", "International control"],
+      ["Operational tracking", "Real-time visibility"],
     ],
 
-    overviewEyebrow: "Special operations",
-    overviewTitle: "Precise planning for cargo that requires more than transport.",
+    overviewEyebrow: "Reliable operations",
+    overviewTitle: "Speed, precision and control at every stage of air shipping.",
     overviewText:
-      "Special cargo requires analysis, coordination and control. We design solutions for goods that require permits, specialized handling, studied routes and adapted equipment.",
-    overviewButton: "Learn more about special cargo",
+      "Ocean freight requires exact coordination between origin, airline, customs and final destination. At Across Logistics, we manage each stage to reduce times, avoid documentation errors and maintain visibility over the operation.",
+    overviewButton: "Learn more about ocean freight",
 
     pillars: [
-      ["Technical analysis", "We assess dimensions, weight, center of gravity, route, handling and restrictions."],
-      ["Permit management", "We coordinate authorizations, documentation and operational requirements."],
-      ["Specialized handling", "We integrate equipment, operators and procedures adapted to each cargo."],
-      ["Operational tracking", "We monitor every stage to reduce risk and maintain control."],
+      ["Airport coordination", "Management with airlines, agents and logistics operators."],
+      ["Document control", "Review of commercial, customs and operational documents."],
+      ["Operational tracking", "Monitoring from origin to destination."],
+      ["Door-to-door solutions", "Integration with road transport and final delivery."],
     ],
 
-    servicesEyebrow: "Our special services",
-    servicesTitle: "Solutions designed for high-complexity cargo.",
+    servicesEyebrow: "Our air services",
+    servicesTitle: "Air solutions for every type of operation.",
     services: [
-      ["Oversized cargo", "Operations for goods exceeding conventional dimensions or weights."],
-      ["Industrial cargo", "Transport and coordination for machinery, equipment and productive components."],
-      ["Special projects", "End-to-end planning for critical cargo, sites and infrastructure."],
-      ["Permits and escorts", "Management of authorizations, special routes and escort when required."],
-      ["Special multimodal", "Road, ocean or air integration according to operational complexity."],
-      ["Door to door", "Complete coordination from origin to final destination."],
+      ["Urgent air cargo", "For shipments where time defines the operation."],
+      ["Consolidated cargo", "Cost optimization through shared spaces."],
+      ["High-value cargo", "Secure coordination for sensitive or strategic products."],
+      ["Air charter", "Dedicated solutions for special operations or critical cargo."],
+      ["Cross trade marítimo", "International operations between third countries."],
+      ["Door to door", "From pickup at origin to final delivery at destination."],
     ],
 
-    useCasesEyebrow: "When a special operation is required",
-    useCasesTitle: "When cargo cannot be treated as standard.",
+    useCasesEyebrow: "When to use ocean freight",
+    useCasesTitle: "Ocean freight makes the difference.",
     useCases: [
-      ["Heavy machinery", "Industrial equipment requiring planning and specific handling."],
-      ["Site components", "Elements for infrastructure, energy or construction."],
-      ["Oversized cargo", "Goods with dimensions or weights outside regular operation."],
-      ["Sensitive cargo", "Goods requiring control, security and special procedures."],
-      ["Turnkey projects", "End-to-end coordination for high-complexity operations."],
-      ["Multimodal operations", "Movements combining different transport modes."],
+      ["Urgent industrial spare parts", "Avoid stopping a production line due to missing components."],
+      ["Technology products", "Ideal for high-value, sensitive or fast-moving cargo."],
+      ["Commercial samples", "Fast shipments for fairs, clients or international validations."],
+      ["Medical or sensitive cargo", "Special coordination for products requiring greater control."],
+      ["International e-commerce", "Fast movements for global commercial operations."],
+      ["Critical documentation", "Solutions for shipments where deadlines cannot be delayed."],
     ],
 
     processEyebrow: "Our operational process",
-    processTitle: "A special operation designed before moving the cargo.",
+    processTitle: "A clear air operation from the first contact.",
     process: [
-      ["Cargo analysis", "We review dimensions, weight, fragility, requirements and final destination."],
-      ["Route study", "We assess restrictions, access, permits and operational viability."],
-      ["Document plan", "We coordinate authorizations, insurance and required documentation."],
-      ["Equipment and handling", "We define resources, operators and loading procedures."],
-      ["Tracking", "We monitor critical milestones throughout the movement."],
-      ["Final delivery", "We coordinate unloading, reception and secure operation closure."],
+      ["Cargo analysis", "We review weight, volume, origin, destination and urgency."],
+      ["Route selection", "We look for the most efficient air alternative."],
+      ["Document coordination", "We validate commercial and customs requirements."],
+      ["Booking and dispatch", "We coordinate airline, airport and departure operation."],
+      ["Tracking", "We monitor cargo progress."],
+      ["Final delivery", "We manage road connection and delivery at destination."],
     ],
 
-    bandTitle: "Special operations designed for cargo that cannot be improvised.",
+    bandTitle: "Air operations designed for cargo that cannot wait.",
     bandText:
-      "Our team coordinates industrial and special cargo for companies that need technical planning, operational control and professional response for complex movements.",
+      "Our team coordinates international air solutions for companies that need speed, traceability and professional response for sensitive operations.",
     stats: [
-      ["High complexity", "Non-standard operations"],
-      ["Permits", "Documents and route management"],
-      ["Multimodal", "Logistics integration"],
-      ["Expert support", "Dedicated specialists"],
+      ["Global coverage", "More than 120 countries"],
+      ["Urgent shipments", "Priority response"],
+      ["Security and control", "International standards"],
+      ["Specialized support", "Dedicated specialists"],
     ],
 
-    finalTitle: "Let’s coordinate your next special cargo.",
+    finalTitle: "Let’s coordinate your next international air shipment.",
     finalText:
-      "Tell us dimensions, weight, origin, destination and restrictions. Our team will analyze feasibility and the best operational solution.",
-    finalPrimary: "Request special quotation",
+      "Tell us origin, destination, cargo type and urgency. Our team will analyze the best air alternative for your operation.",
+    finalPrimary: "Request air quotation",
     finalSecondary: "Talk to a specialist",
   },
 
   zh: {
-    heroEyebrow: "特殊与工业货物",
-    heroTitle: "为非标准货物提供物流工程方案。",
+    heroEyebrow: "国际空运",
+    heroTitle: "面向紧急货物和关键业务的国际空运服务。",
     heroText:
-      "我们协调超限、工业、敏感或高价值货物的特殊运输，整合技术分析、许可、路线、装卸和运营跟踪。",
+      "我们协调国际空运业务，提供文件控制、运营跟踪以及适用于敏感、紧急或高价值货物的定制方案。",
     primaryCta: "申请报价",
     secondaryCta: "联系专家",
 
-    activeLabel: "进行中的特殊操作",
-    activeRoute: "港口 → 工地",
-    activeCargo: "超限货物",
+    activeLabel: "进行中的空运操作",
+    activeRoute: "马德里 → 波哥大",
+    activeCargo: "关键货物",
     activeStatusLabel: "状态：",
-    activeStatus: "规划中",
-    activeEtaLabel: "优先级：",
-    activeEta: "高复杂度",
+    activeStatus: "协调中",
+    activeEtaLabel: "ETA：",
+    activeEta: "优先",
 
     trust: [
-      ["超限货物", "非标准货物"],
-      ["物流工程", "技术分析"],
-      ["许可与路线", "运营管理"],
-      ["跟踪", "全流程控制"],
+      ["紧急货物", "关键业务"],
+      ["高价值", "最高安全标准"],
+      ["文件管理", "国际控制"],
+      ["运营跟踪", "实时可视化"],
     ],
 
-    overviewEyebrow: "特殊操作",
-    overviewTitle: "为需要超越普通运输的货物提供精准规划。",
+    overviewEyebrow: "可靠运营",
+    overviewTitle: "在空运每个阶段实现速度、精准与控制。",
     overviewText:
-      "特殊货物需要分析、协调和控制。我们为需要许可、专业装卸、路线研究和适配设备的货物设计解决方案。",
-    overviewButton: "了解特殊货物服务",
+      "空运需要始发地、航空公司、海关和最终目的地之间的精准协调。Across Logistics 管理每个阶段，以缩短时间、避免文件错误并保持运营可视化。",
+    overviewButton: "了解空运服务",
 
     pillars: [
-      ["技术分析", "评估尺寸、重量、重心、路线、装卸和限制。"],
-      ["许可管理", "协调授权、文件和运营要求。"],
-      ["专业装卸", "整合适合每批货物的设备、操作人员和流程。"],
-      ["运营跟踪", "监控每个阶段以降低风险并保持控制。"],
+      ["机场协调", "与航空公司、代理和物流运营商协调。"],
+      ["文件控制", "审核商业、海关和运营文件。"],
+      ["运营跟踪", "从始发地到目的地进行监控。"],
+      ["门到门方案", "整合陆运和最终交付。"],
     ],
 
-    servicesEyebrow: "我们的特殊服务",
-    servicesTitle: "为高复杂度货物设计的解决方案。",
+    servicesEyebrow: "我们的空运服务",
+    servicesTitle: "适用于不同业务类型的空运解决方案。",
     services: [
-      ["超限货物", "为超过常规尺寸或重量的货物提供运输操作。"],
-      ["工业货物", "为机械、设备和生产组件提供运输与协调。"],
-      ["特殊项目", "为关键货物、工地和基础设施提供整体规划。"],
-      ["许可与护送", "管理授权、特殊路线和必要时的护送。"],
-      ["特殊多式联运", "根据操作复杂度整合陆运、海运或空运。"],
-      ["门到门", "从始发地到最终目的地的完整协调。"],
+      ["紧急空运", "适用于时间决定成败的运输。"],
+      ["拼箱空运", "通过共享舱位优化成本。"],
+      ["高价值货物", "为敏感或战略产品提供安全协调。"],
+      ["包机服务", "为特殊业务或关键货物提供专属方案。"],
+      ["第三国贸易", "第三国之间的国际业务。"],
+      ["门到门", "从始发地提货到目的地最终交付。"],
     ],
 
-    useCasesEyebrow: "何时需要特殊操作",
-    useCasesTitle: "当货物不能按标准方式处理时。",
+    useCasesEyebrow: "何时选择空运",
+    useCasesTitle: "空运能够创造关键差异。",
     useCases: [
-      ["重型机械", "需要规划和特定装卸的工业设备。"],
-      ["工程组件", "用于基础设施、能源或建筑的部件。"],
-      ["超限货物", "尺寸或重量超出常规操作的货物。"],
-      ["敏感货物", "需要控制、安全和特殊流程的货物。"],
-      ["交钥匙项目", "为高复杂度业务提供整体协调。"],
-      ["多式联运", "结合不同运输方式的操作。"],
+      ["紧急工业备件", "避免因零部件缺失导致生产线停工。"],
+      ["科技产品", "适合高价值、敏感或快速流转货物。"],
+      ["商业样品", "用于展会、客户或国际验证的快速运输。"],
+      ["医疗或敏感货物", "为需要更高控制的产品提供特殊协调。"],
+      ["国际电商", "支持全球商业业务的快速流转。"],
+      ["关键文件", "适用于交期不允许延误的文件运输。"],
     ],
 
     processEyebrow: "我们的运营流程",
-    processTitle: "在移动货物之前设计特殊操作。",
+    processTitle: "从第一次联系开始，空运操作清晰可控。",
     process: [
-      ["货物分析", "审核尺寸、重量、易损性、要求和最终目的地。"],
-      ["路线研究", "评估限制、通行、许可和操作可行性。"],
-      ["文件计划", "协调授权、保险和所需文件。"],
-      ["设备与装卸", "确定资源、操作人员和装载程序。"],
-      ["跟踪", "监控运输过程中的关键节点。"],
-      ["最终交付", "协调卸货、接收和安全关闭操作。"],
+      ["货物分析", "审核重量、体积、始发地、目的地和紧急程度。"],
+      ["路线选择", "寻找最高效的空运方案。"],
+      ["文件协调", "验证商业和海关要求。"],
+      ["订舱与派送", "协调航空公司、机场和出运操作。"],
+      ["跟踪", "监控货物运输进度。"],
+      ["最终交付", "管理陆运衔接和目的地交付。"],
     ],
 
-    bandTitle: "为不能即兴处理的货物设计特殊操作。",
+    bandTitle: "为空运不能等待的货物设计的运营方案。",
     bandText:
-      "我们的团队为需要技术规划、运营控制和专业响应的企业协调工业和特殊货物。",
+      "我们的团队为需要速度、可追溯性和专业响应的企业协调国际空运解决方案。",
     stats: [
-      ["高复杂度", "非标准操作"],
-      ["许可", "文件和路线管理"],
-      ["多式联运", "物流整合"],
-      ["专家支持", "专属专家"],
+      ["全球覆盖", "超过120个国家"],
+      ["紧急运输", "优先响应"],
+      ["安全与控制", "国际标准"],
+      ["专业支持", "专属专家"],
     ],
 
-    finalTitle: "让我们协调您的下一批特殊货物。",
+    finalTitle: "让我们协调您的下一次国际空运。",
     finalText:
-      "告诉我们尺寸、重量、始发地、目的地和限制。我们的团队将分析可行性和最佳操作方案。",
-    finalPrimary: "申请特殊报价",
+      "告诉我们始发地、目的地、货物类型和紧急程度。我们的团队将为您的业务分析最佳空运方案。",
+    finalPrimary: "申请空运报价",
     finalSecondary: "联系专家",
   },
 } satisfies Record<Locale, any>;
@@ -510,7 +510,7 @@ function Icon({ name }: { name: IconName }) {
   }
 }
 
-export default function CargasEspecialesPage() {
+export default function TransporteMaritimoPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
@@ -560,7 +560,7 @@ export default function CargasEspecialesPage() {
       <main className={styles.page}>
         <section className={styles.hero}>
           <Image
-            src="/images/cargas-especiales-desktop/transporte-especial-hero.png"
+            src="/images/maritimo.png"
             alt={t.heroTitle}
             fill
             priority
@@ -569,7 +569,7 @@ export default function CargasEspecialesPage() {
           />
 
           <Image
-            src="/images/cargas-especiales-desktop/transporte-especial-hero.png"
+            src="/images/maritimo-mobile.png"
             alt={t.heroTitle}
             fill
             priority
@@ -662,7 +662,7 @@ export default function CargasEspecialesPage() {
 
           <div className={styles.serviceGrid}>
             {t.services.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["gear", "package", "shield", "route", "globe", "truck"];
+              const icons: IconName[] = ["plane", "box", "diamond", "charter", "globe", "door"];
 
               return (
                 <article key={title}>
@@ -708,7 +708,7 @@ export default function CargasEspecialesPage() {
 
           <div className={styles.processGrid}>
             {t.process.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["search", "package", "document", "route", "tracking", "truck"];
+              const icons: IconName[] = ["search", "route", "document", "plane", "tracking", "truck"];
 
               return (
                 <article key={title}>
@@ -727,7 +727,7 @@ export default function CargasEspecialesPage() {
         <section className={styles.darkBand}>
           <div className={styles.darkBandImage}>
             <Image
-              src="/images/sectores/transportemaritimo.png"
+              src="/images/transporte-maritimo-mobile/maritimo-mobile.png"
               alt={t.bandTitle}
               fill
               sizes="(max-width: 900px) 100vw, 42vw"
@@ -767,7 +767,7 @@ export default function CargasEspecialesPage() {
 
           <div className={styles.finalImage}>
             <Image
-              src="/images/sectores/transportemaritimo.png"
+              src="/images/transporte-maritimo-mobile/maritimo2-mobile.png"
               alt={t.finalTitle}
               fill
               sizes="(max-width: 900px) 100vw, 44vw"
@@ -775,7 +775,7 @@ export default function CargasEspecialesPage() {
           </div>
         </section>
 
-        <RelatedServices current="cargas-especiales" locale={locale} />
+        <RelatedServices current="transporte-maritimo" locale={locale} />
       </main>
 
       <Footer />

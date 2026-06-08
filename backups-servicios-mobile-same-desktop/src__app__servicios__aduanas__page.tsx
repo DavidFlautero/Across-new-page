@@ -12,263 +12,492 @@ import styles from "./Servicio.module.css";
 type Locale = "es" | "en" | "zh";
 
 const copy = {
-  es: {
-    heroEyebrow: "Transporte marítimo internacional",
-    heroTitle: "Capacidad global para cargas que cruzan océanos.",
-    heroText:
-      "Coordinamos embarques marítimos internacionales con control documental, seguimiento operativo y soluciones adaptadas a cargas FCL, LCL, proyectos especiales o de alto valor.",
-    primaryCta: "Solicitar cotización",
-    secondaryCta: "Hablar con un especialista",
-
-    activeLabel: "Operación marítima activa",
-    activeRoute: "Madrid → Bogotá",
-    activeCargo: "Carga crítica",
-    activeStatusLabel: "Estado:",
-    activeStatus: "En coordinación",
-    activeEtaLabel: "ETA:",
-    activeEta: "Prioritario",
-
-    trust: [
-      ["Carga FCL", "Operaciones críticas"],
-      ["Carga especial", "Control y trazabilidad"],
-      ["Documentación", "Gestión aduanera"],
-      ["Seguimiento operativo", "Trazabilidad operativa"],
+  "es": {
+    "heroEyebrow": "Servicios de aduanas",
+    "heroTitle": "Despacho aduanero para operaciones que no pueden quedar detenidas.",
+    "heroText": "Gestionamos documentación, clasificación, cumplimiento y coordinación aduanera para importaciones y exportaciones, reduciendo riesgos operativos y tiempos de liberación.",
+    "primaryCta": "Solicitar cotización",
+    "secondaryCta": "Hablar con un especialista",
+    "activeLabel": "Gestión aduanera activa",
+    "activeRoute": "Origen → Aduana → Destino",
+    "activeCargo": "Importación / Exportación",
+    "activeStatusLabel": "Estado:",
+    "activeStatus": "En revisión",
+    "activeEtaLabel": "Prioridad:",
+    "activeEta": "Liberación",
+    "trust": [
+      [
+        "Documentación",
+        "Control aduanero"
+      ],
+      [
+        "Clasificación",
+        "Partidas arancelarias"
+      ],
+      [
+        "Cumplimiento",
+        "Normativa vigente"
+      ],
+      [
+        "Liberación",
+        "Gestión operativa"
+      ]
     ],
-
-    overviewEyebrow: "Operaciones confiables",
-    overviewTitle: "Velocidad, precisión y control en cada etapa del embarque marítimo.",
-    overviewText:
-      "El transporte marítimo exige coordinación exacta entre origen, naviera, aduana y destino final. En Across Logistics gestionamos cada etapa para reducir tiempos, evitar errores documentales y mantener visibilidad sobre la operación.",
-    overviewButton: "Conocer más sobre marítimo",
-
-    pillars: [
-      ["Coordinación portuaria", "Gestión con navieras, agentes y operadores logísticos."],
-      ["Control documental", "Revisión de documentos comerciales, aduaneros y operativos."],
-      ["Seguimiento de operación", "Monitoreo del avance desde origen hasta destino."],
-      ["Soluciones puerta a puerta", "Integración con transporte terrestre y entrega final."],
+    "overviewEyebrow": "Cumplimiento aduanero",
+    "overviewTitle": "Gestión documental y operativa para mover carga sin fricciones.",
+    "overviewText": "Una operación internacional puede detenerse por un documento incompleto, una clasificación incorrecta o una gestión tardía. Nuestro equipo coordina el proceso aduanero para reducir riesgos y mantener continuidad.",
+    "overviewButton": "Conocer más sobre aduanas",
+    "pillars": [
+      [
+        "Revisión documental",
+        "Control de facturas, packing list, certificados y documentos requeridos."
+      ],
+      [
+        "Clasificación arancelaria",
+        "Soporte para identificar partidas y requisitos aplicables."
+      ],
+      [
+        "Gestión de despacho",
+        "Coordinación del proceso de importación o exportación con operadores y autoridades."
+      ],
+      [
+        "Cumplimiento normativo",
+        "Apoyo para reducir riesgos, errores y demoras operativas."
+      ]
     ],
-
-    servicesEyebrow: "Nuestros servicios marítimos",
-    servicesTitle: "Soluciones marítimas para cada tipo de embarque.",
-    services: [
-      ["Carga marítima FCL", "Para envíos donde el tiempo define la operación."],
-      ["Carga LCL consolidada", "Optimización de costos mediante espacios compartidos."],
-      ["Carga de alto valor", "Coordinación segura para productos sensibles o estratégicos."],
-      ["Proyectos marítimos", "Soluciones dedicadas para operaciones especiales o cargas críticas."],
-      ["Cross trade marítimo", "Operaciones internacionales entre terceros países."],
-      ["Door to door", "Desde retiro en origen hasta entrega final en destino."],
+    "servicesEyebrow": "Nuestros servicios aduaneros",
+    "servicesTitle": "Soluciones para importaciones y exportaciones con control.",
+    "services": [
+      [
+        "Despacho de importación",
+        "Gestión documental y operativa para ingreso de mercancía."
+      ],
+      [
+        "Despacho de exportación",
+        "Coordinación para salida internacional de carga."
+      ],
+      [
+        "Clasificación arancelaria",
+        "Soporte para partidas, requisitos y tratamiento documental."
+      ],
+      [
+        "Revisión documental",
+        "Validación de documentos comerciales y operativos."
+      ],
+      [
+        "Asesoría aduanera",
+        "Acompañamiento para operaciones complejas o recurrentes."
+      ],
+      [
+        "Coordinación integral",
+        "Integración con transporte, almacén y entrega final."
+      ]
     ],
-
-    useCasesEyebrow: "Cuándo conviene usar transporte marítimo",
-    useCasesTitle: "El transporte marítimo marca la diferencia.",
-    useCases: [
-      ["Repuestos industriales urgentes", "Evite detener una línea de producción por falta de componentes."],
-      ["Productos tecnológicos", "Ideal para cargas de alto valor, sensibles o con rápida rotación."],
-      ["Muestras comerciales", "Envíos rápidos para ferias, clientes o validaciones internacionales."],
-      ["Carga médica o sensible", "Coordinación especial para productos que requieren mayor control."],
-      ["E-commerce internacional", "Movimientos rápidos para operaciones comerciales globales."],
-      ["Documentación crítica", "Soluciones para envíos donde el plazo no admite demoras."],
+    "useCasesEyebrow": "Cuándo necesita soporte aduanero",
+    "useCasesTitle": "Cuando la documentación define el avance de la operación.",
+    "useCases": [
+      [
+        "Importaciones",
+        "Ingreso de mercancía con control documental."
+      ],
+      [
+        "Exportaciones",
+        "Salida internacional con coordinación aduanera."
+      ],
+      [
+        "Carga sensible",
+        "Mercancías con requisitos específicos."
+      ],
+      [
+        "Operaciones recurrentes",
+        "Procesos continuos que requieren orden y seguimiento."
+      ],
+      [
+        "Proyectos internacionales",
+        "Cargas con documentación compleja."
+      ],
+      [
+        "Multimodal",
+        "Operaciones que combinan transporte y despacho."
+      ]
     ],
-
-    processEyebrow: "Nuestro proceso operativo",
-    processTitle: "Una operación marítima clara desde el primer contacto.",
-    process: [
-      ["Análisis de carga", "Revisamos peso, volumen, origen, destino y urgencia."],
-      ["Selección de ruta", "Buscamos la alternativa marítima más eficiente."],
-      ["Coordinación documental", "Validamos requisitos comerciales y aduaneros."],
-      ["Booking y despacho", "Coordinamos naviera, puerto y operación de salida."],
-      ["Seguimiento", "Monitoreamos el avance de la carga."],
-      ["Entrega final", "Gestionamos conexión terrestre y entrega en destino."],
+    "processEyebrow": "Nuestro proceso operativo",
+    "processTitle": "Una gestión aduanera clara desde la revisión documental.",
+    "process": [
+      [
+        "Análisis inicial",
+        "Revisamos tipo de operación, carga y documentación disponible."
+      ],
+      [
+        "Validación documental",
+        "Controlamos requisitos, certificados y datos comerciales."
+      ],
+      [
+        "Clasificación",
+        "Apoyamos la identificación arancelaria y requisitos aplicables."
+      ],
+      [
+        "Coordinación de despacho",
+        "Gestionamos el avance con operadores y autoridades."
+      ],
+      [
+        "Seguimiento",
+        "Monitoreamos estados y posibles observaciones."
+      ],
+      [
+        "Liberación",
+        "Coordinamos cierre aduanero y continuidad logística."
+      ]
     ],
-
-    bandTitle: "Operaciones marítimas diseñadas para cargas que no pueden detenerse.",
-    bandText:
-      "Nuestro equipo coordina soluciones marítimas internacionales para empresas que necesitan rapidez, trazabilidad y respuesta profesional ante operaciones sensibles.",
-    stats: [
-      ["Cobertura global", "Principales rutas globales"],
-      ["Envíos urgentes", "Coordinación portuaria"],
-      ["Seguridad y control", "Documentación y compliance"],
-      ["Soporte especializado", "Especialistas marítimos"],
+    "bandTitle": "Gestión aduanera diseñada para que la carga siga avanzando.",
+    "bandText": "Nuestro equipo coordina procesos aduaneros para empresas que necesitan cumplimiento, precisión documental y continuidad operativa en comercio internacional.",
+    "stats": [
+      [
+        "Documentación",
+        "Revisión y control"
+      ],
+      [
+        "Clasificación",
+        "Soporte arancelario"
+      ],
+      [
+        "Despacho",
+        "Importación y exportación"
+      ],
+      [
+        "Soporte experto",
+        "Especialistas dedicados"
+      ]
     ],
-
-    finalTitle: "Coordinemos su próximo embarque marítimo internacional.",
-    finalText:
-      "Cuéntenos origen, destino, tipo de carga y urgencia. Nuestro equipo analizará la mejor alternativa marítima para su operación.",
-    finalPrimary: "Solicitar cotización marítima",
-    finalSecondary: "Hablar con un especialista",
+    "finalTitle": "Coordinemos su próxima operación aduanera.",
+    "finalText": "Cuéntenos tipo de operación, mercancía, origen, destino y documentación disponible. Nuestro equipo analizará el mejor camino para avanzar.",
+    "finalPrimary": "Solicitar soporte aduanero",
+    "finalSecondary": "Hablar con un especialista"
   },
-
-  en: {
-    heroEyebrow: "International ocean freight",
-    heroTitle: "Global capacity for cargo crossing oceans.",
-    heroText:
-      "We coordinate international ocean shipments with document control, operational tracking and solutions adapted to sensitive, urgent or high-value cargo.",
-    primaryCta: "Request quotation",
-    secondaryCta: "Talk to a specialist",
-
-    activeLabel: "Active air operation",
-    activeRoute: "Madrid → Bogotá",
-    activeCargo: "Critical cargo",
-    activeStatusLabel: "Status:",
-    activeStatus: "In coordination",
-    activeEtaLabel: "ETA:",
-    activeEta: "Priority",
-
-    trust: [
-      ["Urgent cargo", "Critical operations"],
-      ["High value", "Maximum security"],
-      ["Documentation", "International control"],
-      ["Operational tracking", "Real-time visibility"],
+  "en": {
+    "heroEyebrow": "Customs services",
+    "heroTitle": "Customs clearance for operations that cannot remain stopped.",
+    "heroText": "We manage documentation, classification, compliance and customs coordination for imports and exports, reducing operational risks and release times.",
+    "primaryCta": "Request quotation",
+    "secondaryCta": "Talk to a specialist",
+    "activeLabel": "Active customs management",
+    "activeRoute": "Origin → Customs → Destination",
+    "activeCargo": "Import / Export",
+    "activeStatusLabel": "Status:",
+    "activeStatus": "Under review",
+    "activeEtaLabel": "Priority:",
+    "activeEta": "Release",
+    "trust": [
+      [
+        "Documentation",
+        "Customs control"
+      ],
+      [
+        "Classification",
+        "Tariff codes"
+      ],
+      [
+        "Compliance",
+        "Current regulation"
+      ],
+      [
+        "Release",
+        "Operational management"
+      ]
     ],
-
-    overviewEyebrow: "Reliable operations",
-    overviewTitle: "Speed, precision and control at every stage of air shipping.",
-    overviewText:
-      "Ocean freight requires exact coordination between origin, airline, customs and final destination. At Across Logistics, we manage each stage to reduce times, avoid documentation errors and maintain visibility over the operation.",
-    overviewButton: "Learn more about ocean freight",
-
-    pillars: [
-      ["Airport coordination", "Management with airlines, agents and logistics operators."],
-      ["Document control", "Review of commercial, customs and operational documents."],
-      ["Operational tracking", "Monitoring from origin to destination."],
-      ["Door-to-door solutions", "Integration with road transport and final delivery."],
+    "overviewEyebrow": "Customs compliance",
+    "overviewTitle": "Documentary and operational management to move cargo without friction.",
+    "overviewText": "An international operation can be stopped by an incomplete document, an incorrect classification or late management. Our team coordinates the customs process to reduce risks and maintain continuity.",
+    "overviewButton": "Learn more about customs",
+    "pillars": [
+      [
+        "Document review",
+        "Control of invoices, packing lists, certificates and required documents."
+      ],
+      [
+        "Tariff classification",
+        "Support to identify codes and applicable requirements."
+      ],
+      [
+        "Clearance management",
+        "Coordination of import or export processes with operators and authorities."
+      ],
+      [
+        "Regulatory compliance",
+        "Support to reduce risks, errors and operational delays."
+      ]
     ],
-
-    servicesEyebrow: "Our air services",
-    servicesTitle: "Air solutions for every type of operation.",
-    services: [
-      ["Urgent air cargo", "For shipments where time defines the operation."],
-      ["Consolidated cargo", "Cost optimization through shared spaces."],
-      ["High-value cargo", "Secure coordination for sensitive or strategic products."],
-      ["Air charter", "Dedicated solutions for special operations or critical cargo."],
-      ["Cross trade marítimo", "International operations between third countries."],
-      ["Door to door", "From pickup at origin to final delivery at destination."],
+    "servicesEyebrow": "Our customs services",
+    "servicesTitle": "Solutions for imports and exports with control.",
+    "services": [
+      [
+        "Import clearance",
+        "Documentary and operational management for goods entry."
+      ],
+      [
+        "Export clearance",
+        "Coordination for international cargo departure."
+      ],
+      [
+        "Tariff classification",
+        "Support for codes, requirements and document treatment."
+      ],
+      [
+        "Document review",
+        "Validation of commercial and operational documents."
+      ],
+      [
+        "Customs advisory",
+        "Support for complex or recurring operations."
+      ],
+      [
+        "Integrated coordination",
+        "Integration with transport, warehousing and final delivery."
+      ]
     ],
-
-    useCasesEyebrow: "When to use ocean freight",
-    useCasesTitle: "Ocean freight makes the difference.",
-    useCases: [
-      ["Urgent industrial spare parts", "Avoid stopping a production line due to missing components."],
-      ["Technology products", "Ideal for high-value, sensitive or fast-moving cargo."],
-      ["Commercial samples", "Fast shipments for fairs, clients or international validations."],
-      ["Medical or sensitive cargo", "Special coordination for products requiring greater control."],
-      ["International e-commerce", "Fast movements for global commercial operations."],
-      ["Critical documentation", "Solutions for shipments where deadlines cannot be delayed."],
+    "useCasesEyebrow": "When customs support is needed",
+    "useCasesTitle": "When documentation defines operational progress.",
+    "useCases": [
+      [
+        "Imports",
+        "Goods entry with document control."
+      ],
+      [
+        "Exports",
+        "International departure with customs coordination."
+      ],
+      [
+        "Sensitive cargo",
+        "Goods with specific requirements."
+      ],
+      [
+        "Recurring operations",
+        "Continuous processes requiring order and tracking."
+      ],
+      [
+        "International projects",
+        "Cargo with complex documentation."
+      ],
+      [
+        "Multimodal",
+        "Operations combining transport and clearance."
+      ]
     ],
-
-    processEyebrow: "Our operational process",
-    processTitle: "A clear air operation from the first contact.",
-    process: [
-      ["Cargo analysis", "We review weight, volume, origin, destination and urgency."],
-      ["Route selection", "We look for the most efficient air alternative."],
-      ["Document coordination", "We validate commercial and customs requirements."],
-      ["Booking and dispatch", "We coordinate airline, airport and departure operation."],
-      ["Tracking", "We monitor cargo progress."],
-      ["Final delivery", "We manage road connection and delivery at destination."],
+    "processEyebrow": "Our operational process",
+    "processTitle": "Clear customs management from document review.",
+    "process": [
+      [
+        "Initial analysis",
+        "We review operation type, cargo and available documentation."
+      ],
+      [
+        "Document validation",
+        "We control requirements, certificates and commercial data."
+      ],
+      [
+        "Classification",
+        "We support tariff identification and applicable requirements."
+      ],
+      [
+        "Clearance coordination",
+        "We manage progress with operators and authorities."
+      ],
+      [
+        "Tracking",
+        "We monitor statuses and possible observations."
+      ],
+      [
+        "Release",
+        "We coordinate customs closure and logistics continuity."
+      ]
     ],
-
-    bandTitle: "Air operations designed for cargo that cannot wait.",
-    bandText:
-      "Our team coordinates international air solutions for companies that need speed, traceability and professional response for sensitive operations.",
-    stats: [
-      ["Global coverage", "More than 120 countries"],
-      ["Urgent shipments", "Priority response"],
-      ["Security and control", "International standards"],
-      ["Specialized support", "Dedicated specialists"],
+    "bandTitle": "Customs management designed to keep cargo moving.",
+    "bandText": "Our team coordinates customs processes for companies that need compliance, documentary precision and operational continuity in international trade.",
+    "stats": [
+      [
+        "Documentation",
+        "Review and control"
+      ],
+      [
+        "Classification",
+        "Tariff support"
+      ],
+      [
+        "Clearance",
+        "Import and export"
+      ],
+      [
+        "Expert support",
+        "Dedicated specialists"
+      ]
     ],
-
-    finalTitle: "Let’s coordinate your next international air shipment.",
-    finalText:
-      "Tell us origin, destination, cargo type and urgency. Our team will analyze the best air alternative for your operation.",
-    finalPrimary: "Request air quotation",
-    finalSecondary: "Talk to a specialist",
+    "finalTitle": "Let’s coordinate your next customs operation.",
+    "finalText": "Tell us operation type, goods, origin, destination and available documentation. Our team will analyze the best path forward.",
+    "finalPrimary": "Request customs support",
+    "finalSecondary": "Talk to a specialist"
   },
-
-  zh: {
-    heroEyebrow: "国际空运",
-    heroTitle: "面向紧急货物和关键业务的国际空运服务。",
-    heroText:
-      "我们协调国际空运业务，提供文件控制、运营跟踪以及适用于敏感、紧急或高价值货物的定制方案。",
-    primaryCta: "申请报价",
-    secondaryCta: "联系专家",
-
-    activeLabel: "进行中的空运操作",
-    activeRoute: "马德里 → 波哥大",
-    activeCargo: "关键货物",
-    activeStatusLabel: "状态：",
-    activeStatus: "协调中",
-    activeEtaLabel: "ETA：",
-    activeEta: "优先",
-
-    trust: [
-      ["紧急货物", "关键业务"],
-      ["高价值", "最高安全标准"],
-      ["文件管理", "国际控制"],
-      ["运营跟踪", "实时可视化"],
+  "zh": {
+    "heroEyebrow": "海关服务",
+    "heroTitle": "为不能停滞的业务提供清关服务。",
+    "heroText": "我们为进出口业务管理文件、归类、合规和海关协调，降低运营风险并缩短放行时间。",
+    "primaryCta": "申请报价",
+    "secondaryCta": "联系专家",
+    "activeLabel": "进行中的海关管理",
+    "activeRoute": "始发地 → 海关 → 目的地",
+    "activeCargo": "进口 / 出口",
+    "activeStatusLabel": "状态：",
+    "activeStatus": "审核中",
+    "activeEtaLabel": "优先级：",
+    "activeEta": "放行",
+    "trust": [
+      [
+        "文件",
+        "海关控制"
+      ],
+      [
+        "归类",
+        "税则编码"
+      ],
+      [
+        "合规",
+        "现行法规"
+      ],
+      [
+        "放行",
+        "运营管理"
+      ]
     ],
-
-    overviewEyebrow: "可靠运营",
-    overviewTitle: "在空运每个阶段实现速度、精准与控制。",
-    overviewText:
-      "空运需要始发地、航空公司、海关和最终目的地之间的精准协调。Across Logistics 管理每个阶段，以缩短时间、避免文件错误并保持运营可视化。",
-    overviewButton: "了解空运服务",
-
-    pillars: [
-      ["机场协调", "与航空公司、代理和物流运营商协调。"],
-      ["文件控制", "审核商业、海关和运营文件。"],
-      ["运营跟踪", "从始发地到目的地进行监控。"],
-      ["门到门方案", "整合陆运和最终交付。"],
+    "overviewEyebrow": "海关合规",
+    "overviewTitle": "通过文件和运营管理让货物顺畅流动。",
+    "overviewText": "国际业务可能因文件不完整、归类错误或管理延迟而停滞。我们的团队协调海关流程以降低风险并保持连续性。",
+    "overviewButton": "了解海关服务",
+    "pillars": [
+      [
+        "文件审核",
+        "控制发票、装箱单、证书和所需文件。"
+      ],
+      [
+        "税则归类",
+        "支持识别编码和适用要求。"
+      ],
+      [
+        "清关管理",
+        "与运营商和主管部门协调进口或出口流程。"
+      ],
+      [
+        "法规合规",
+        "帮助降低风险、错误和运营延误。"
+      ]
     ],
-
-    servicesEyebrow: "我们的空运服务",
-    servicesTitle: "适用于不同业务类型的空运解决方案。",
-    services: [
-      ["紧急空运", "适用于时间决定成败的运输。"],
-      ["拼箱空运", "通过共享舱位优化成本。"],
-      ["高价值货物", "为敏感或战略产品提供安全协调。"],
-      ["包机服务", "为特殊业务或关键货物提供专属方案。"],
-      ["第三国贸易", "第三国之间的国际业务。"],
-      ["门到门", "从始发地提货到目的地最终交付。"],
+    "servicesEyebrow": "我们的海关服务",
+    "servicesTitle": "为进出口提供可控解决方案。",
+    "services": [
+      [
+        "进口清关",
+        "为货物进口提供文件和运营管理。"
+      ],
+      [
+        "出口清关",
+        "协调国际货物出口。"
+      ],
+      [
+        "税则归类",
+        "支持编码、要求和文件处理。"
+      ],
+      [
+        "文件审核",
+        "验证商业和运营文件。"
+      ],
+      [
+        "海关咨询",
+        "为复杂或重复业务提供支持。"
+      ],
+      [
+        "综合协调",
+        "与运输、仓储和最终交付整合。"
+      ]
     ],
-
-    useCasesEyebrow: "何时选择空运",
-    useCasesTitle: "空运能够创造关键差异。",
-    useCases: [
-      ["紧急工业备件", "避免因零部件缺失导致生产线停工。"],
-      ["科技产品", "适合高价值、敏感或快速流转货物。"],
-      ["商业样品", "用于展会、客户或国际验证的快速运输。"],
-      ["医疗或敏感货物", "为需要更高控制的产品提供特殊协调。"],
-      ["国际电商", "支持全球商业业务的快速流转。"],
-      ["关键文件", "适用于交期不允许延误的文件运输。"],
+    "useCasesEyebrow": "何时需要海关支持",
+    "useCasesTitle": "当文件决定操作进度时。",
+    "useCases": [
+      [
+        "进口",
+        "带有文件控制的货物入境。"
+      ],
+      [
+        "出口",
+        "带有海关协调的国际出运。"
+      ],
+      [
+        "敏感货物",
+        "具有特定要求的货物。"
+      ],
+      [
+        "重复业务",
+        "需要秩序和跟踪的连续流程。"
+      ],
+      [
+        "国际项目",
+        "文件复杂的货物。"
+      ],
+      [
+        "多式联运",
+        "结合运输和清关的业务。"
+      ]
     ],
-
-    processEyebrow: "我们的运营流程",
-    processTitle: "从第一次联系开始，空运操作清晰可控。",
-    process: [
-      ["货物分析", "审核重量、体积、始发地、目的地和紧急程度。"],
-      ["路线选择", "寻找最高效的空运方案。"],
-      ["文件协调", "验证商业和海关要求。"],
-      ["订舱与派送", "协调航空公司、机场和出运操作。"],
-      ["跟踪", "监控货物运输进度。"],
-      ["最终交付", "管理陆运衔接和目的地交付。"],
+    "processEyebrow": "我们的运营流程",
+    "processTitle": "从文件审核开始，海关管理清晰可控。",
+    "process": [
+      [
+        "初步分析",
+        "审核业务类型、货物和现有文件。"
+      ],
+      [
+        "文件验证",
+        "控制要求、证书和商业数据。"
+      ],
+      [
+        "归类",
+        "支持税则识别和适用要求。"
+      ],
+      [
+        "清关协调",
+        "与运营商和主管部门推动流程。"
+      ],
+      [
+        "跟踪",
+        "监控状态和可能的问题。"
+      ],
+      [
+        "放行",
+        "协调海关关闭和物流连续性。"
+      ]
     ],
-
-    bandTitle: "为空运不能等待的货物设计的运营方案。",
-    bandText:
-      "我们的团队为需要速度、可追溯性和专业响应的企业协调国际空运解决方案。",
-    stats: [
-      ["全球覆盖", "超过120个国家"],
-      ["紧急运输", "优先响应"],
-      ["安全与控制", "国际标准"],
-      ["专业支持", "专属专家"],
+    "bandTitle": "为保持货物流动而设计的海关管理。",
+    "bandText": "我们的团队为需要合规、文件精准和国际贸易运营连续性的企业协调海关流程。",
+    "stats": [
+      [
+        "文件",
+        "审核与控制"
+      ],
+      [
+        "归类",
+        "税则支持"
+      ],
+      [
+        "清关",
+        "进口与出口"
+      ],
+      [
+        "专家支持",
+        "专属专家"
+      ]
     ],
-
-    finalTitle: "让我们协调您的下一次国际空运。",
-    finalText:
-      "告诉我们始发地、目的地、货物类型和紧急程度。我们的团队将为您的业务分析最佳空运方案。",
-    finalPrimary: "申请空运报价",
-    finalSecondary: "联系专家",
-  },
+    "finalTitle": "让我们协调您的下一次海关操作。",
+    "finalText": "告诉我们业务类型、货物、始发地、目的地和现有文件。我们的团队将分析最佳推进路径。",
+    "finalPrimary": "申请海关支持",
+    "finalSecondary": "联系专家"
+  }
 } satisfies Record<Locale, any>;
 
 function getInitialLocale(): Locale {
@@ -510,7 +739,7 @@ function Icon({ name }: { name: IconName }) {
   }
 }
 
-export default function TransporteMaritimoPage() {
+export default function AduanasPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
@@ -560,7 +789,7 @@ export default function TransporteMaritimoPage() {
       <main className={styles.page}>
         <section className={styles.hero}>
           <Image
-            src="/images/maritimo.png"
+            src="/images/aduanashero.png"
             alt={t.heroTitle}
             fill
             priority
@@ -569,7 +798,7 @@ export default function TransporteMaritimoPage() {
           />
 
           <Image
-            src="/images/maritimo.png"
+            src="/images/aduanashero.png"
             alt={t.heroTitle}
             fill
             priority
@@ -727,7 +956,7 @@ export default function TransporteMaritimoPage() {
         <section className={styles.darkBand}>
           <div className={styles.darkBandImage}>
             <Image
-              src="/images/transporte-maritimo-mobile/maritimo-mobile.png"
+              src="/images/caduana.png"
               alt={t.bandTitle}
               fill
               sizes="(max-width: 900px) 100vw, 42vw"
@@ -767,7 +996,7 @@ export default function TransporteMaritimoPage() {
 
           <div className={styles.finalImage}>
             <Image
-              src="/images/transporte-maritimo-mobile/maritimo2-mobile.png"
+              src="/images/aduanashero.png"
               alt={t.finalTitle}
               fill
               sizes="(max-width: 900px) 100vw, 44vw"
@@ -775,7 +1004,7 @@ export default function TransporteMaritimoPage() {
           </div>
         </section>
 
-        <RelatedServices current="transporte-maritimo" locale={locale} />
+        <RelatedServices current="aduanas" locale={locale} />
       </main>
 
       <Footer />

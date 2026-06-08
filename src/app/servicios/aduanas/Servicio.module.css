@@ -4041,3 +4041,46 @@
   }
 }
 
+
+/* =====================================================
+   GLOBAL SERVICE FIX - MOBILE USA IMÁGENES DESKTOP
+   Evita crear imágenes dobles por cada sección.
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .heroImageDesktop {
+    display: none !important;
+  }
+
+  .heroImageMobile {
+    display: block !important;
+  }
+
+  .heroImage {
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  .darkBandImage,
+  .finalImage {
+    display: block !important;
+  }
+
+  .darkBandImage img,
+  .finalImage img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    display: block !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .heroImage,
+  .darkBandImage img,
+  .finalImage img {
+    object-position: center center !important;
+  }
+}
+

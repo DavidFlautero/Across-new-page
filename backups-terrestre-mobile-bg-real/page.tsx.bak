@@ -13,260 +13,260 @@ type Locale = "es" | "en" | "zh";
 
 const copy = {
   es: {
-    heroEyebrow: "Cargas especiales e industriales",
-    heroTitle: "Ingeniería logística para cargas que no encajan en lo estándar.",
+    heroEyebrow: "Transporte terrestre internacional",
+    heroTitle: "Rutas terrestres que conectan operaciones críticas.",
     heroText:
-      "Coordinamos operaciones especiales para cargas sobredimensionadas, industriales, sensibles o de alto valor, integrando análisis técnico, permisos, rutas, manipulación y seguimiento operativo.",
+      "Coordinamos transporte terrestre nacional e internacional para cargas completas, grupaje, distribución y operaciones especiales, con seguimiento operativo y control documental de origen a destino.",
     primaryCta: "Solicitar cotización",
     secondaryCta: "Hablar con un especialista",
 
-    activeLabel: "Operación especial activa",
-    activeRoute: "Puerto → Obra",
-    activeCargo: "Carga sobredimensionada",
+    activeLabel: "Operación terrestre activa",
+    activeRoute: "Madrid → Valencia",
+    activeCargo: "Carga FTL / LTL",
     activeStatusLabel: "Estado:",
-    activeStatus: "En planificación",
-    activeEtaLabel: "Prioridad:",
-    activeEta: "Alta complejidad",
+    activeStatus: "En coordinación",
+    activeEtaLabel: "Entrega:",
+    activeEta: "Programada",
 
     trust: [
-      ["Sobredimensionadas", "Cargas fuera de estándar"],
-      ["Ingeniería logística", "Análisis técnico"],
-      ["Permisos y rutas", "Gestión operativa"],
-      ["Seguimiento", "Control de principio a fin"],
+      ["Carga completa", "FTL / LTL"],
+      ["Distribución", "Red terrestre"],
+      ["Documentación", "Control fronterizo"],
+      ["Seguimiento", "Trazabilidad operativa"],
     ],
 
-    overviewEyebrow: "Operaciones especiales",
-    overviewTitle: "Planificación precisa para cargas que requieren más que transporte.",
+    overviewEyebrow: "Operaciones por carretera",
+    overviewTitle: "Control, continuidad y precisión en cada tramo terrestre.",
     overviewText:
-      "Las cargas especiales exigen análisis, coordinación y control. Diseñamos soluciones para mercancías que requieren permisos, manipulación especializada, rutas estudiadas y equipos adaptados.",
-    overviewButton: "Conocer más sobre cargas especiales",
+      "El transporte terrestre exige planificación de rutas, coordinación documental, visibilidad operativa y capacidad de respuesta. Diseñamos operaciones nacionales e internacionales para cargas que requieren puntualidad, seguridad y control.",
+    overviewButton: "Conocer más sobre terrestre",
 
     pillars: [
-      ["Análisis técnico", "Evaluamos dimensiones, peso, centro de gravedad, ruta, manipulación y restricciones."],
-      ["Gestión de permisos", "Coordinamos autorizaciones, documentación y requisitos operativos."],
-      ["Manipulación especializada", "Integramos equipos, operadores y procedimientos adecuados para cada carga."],
-      ["Seguimiento operativo", "Monitoreamos cada etapa para reducir riesgos y mantener control."],
+      ["Planificación de rutas", "Diseño de trayectos eficientes según origen, destino, urgencia y tipo de carga."],
+      ["Control documental", "Gestión de documentación comercial, aduanera y operativa para tránsitos nacionales e internacionales."],
+      ["Seguimiento operativo", "Monitoreo de la operación para mantener visibilidad sobre cada movimiento."],
+      ["Entrega puerta a puerta", "Integración de retiro, transporte, conexión logística y entrega final."],
     ],
 
-    servicesEyebrow: "Nuestros servicios especiales",
-    servicesTitle: "Soluciones diseñadas para cargas de alta complejidad.",
+    servicesEyebrow: "Nuestros servicios terrestres",
+    servicesTitle: "Soluciones terrestres para cada necesidad logística.",
     services: [
-      ["Carga sobredimensionada", "Operaciones para mercancías que superan medidas o pesos convencionales."],
-      ["Carga industrial", "Transporte y coordinación para maquinaria, equipos y componentes productivos."],
-      ["Proyectos especiales", "Planificación integral para cargas críticas, obras e infraestructuras."],
-      ["Permisos y escoltas", "Gestión de autorizaciones, rutas especiales y acompañamiento cuando corresponde."],
-      ["Multimodal especial", "Integración terrestre, marítima o aérea según la complejidad de la operación."],
-      ["Door to door", "Coordinación completa desde origen hasta destino final."],
+      ["Carga completa FTL", "Transporte dedicado para operaciones que requieren capacidad exclusiva y control directo."],
+      ["Carga parcial LTL", "Optimización de costos mediante consolidación y rutas compartidas."],
+      ["Distribución nacional", "Movimientos regionales y nacionales con coordinación operativa y trazabilidad."],
+      ["Cargas especiales", "Soluciones por carretera para mercancías sensibles, industriales o de manejo particular."],
+      ["Cross-border", "Coordinación terrestre internacional con soporte documental y control fronterizo."],
+      ["Door to door", "Desde retiro en origen hasta entrega final en destino con un solo flujo operativo."],
     ],
 
-    useCasesEyebrow: "Cuándo requiere una operación especial",
-    useCasesTitle: "Cuando la carga no puede tratarse como estándar.",
+    useCasesEyebrow: "Cuándo conviene usar transporte terrestre",
+    useCasesTitle: "Cuando la operación necesita cercanía, control y continuidad.",
     useCases: [
-      ["Maquinaria pesada", "Equipos industriales que requieren planificación y manipulación específica."],
-      ["Componentes de obra", "Elementos para infraestructuras, energía o construcción."],
-      ["Carga sobredimensionada", "Mercancías con dimensiones o pesos fuera de operación regular."],
-      ["Carga sensible", "Bienes que requieren control, seguridad y procedimientos especiales."],
-      ["Proyectos llave en mano", "Coordinación integral para operaciones de alta complejidad."],
-      ["Operaciones multimodales", "Movimientos que combinan diferentes modos de transporte."],
+      ["Distribución comercial", "Movimientos frecuentes para cadenas de suministro y entregas programadas."],
+      ["Carga industrial", "Transporte para componentes, maquinaria, repuestos y mercancías productivas."],
+      ["Conexión multimodal", "Integración con operaciones marítimas, aéreas o logísticas de almacén."],
+      ["Última milla B2B", "Entrega final coordinada para clientes corporativos y operaciones comerciales."],
+      ["Cross-border", "Operaciones terrestres entre países con documentación y seguimiento."],
+      ["Carga sensible", "Movimientos que requieren control, coordinación y visibilidad."],
     ],
 
     processEyebrow: "Nuestro proceso operativo",
-    processTitle: "Una operación especial diseñada antes de mover la carga.",
+    processTitle: "Una operación terrestre clara desde el primer contacto.",
     process: [
-      ["Análisis de carga", "Revisamos dimensiones, peso, fragilidad, requisitos y destino final."],
-      ["Estudio de ruta", "Evaluamos restricciones, accesos, permisos y viabilidad operativa."],
-      ["Plan documental", "Coordinamos autorizaciones, seguros y documentación requerida."],
-      ["Equipo y manipulación", "Definimos medios, operadores y procedimientos de carga."],
-      ["Seguimiento", "Monitoreamos hitos críticos durante todo el movimiento."],
-      ["Entrega final", "Coordinamos descarga, recepción y cierre seguro de la operación."],
+      ["Análisis de carga", "Revisamos tipo de mercancía, volumen, peso, origen, destino y urgencia."],
+      ["Diseño de ruta", "Definimos la alternativa terrestre más eficiente y segura."],
+      ["Documentación", "Coordinamos requisitos comerciales, aduaneros y operativos."],
+      ["Asignación de transporte", "Gestionamos capacidad, unidad y coordinación de salida."],
+      ["Seguimiento", "Monitoreamos el avance y los hitos de la operación."],
+      ["Entrega final", "Coordinamos recepción, descarga y cierre operativo."],
     ],
 
-    bandTitle: "Operaciones especiales diseñadas para cargas que no admiten improvisación.",
+    bandTitle: "Operaciones terrestres diseñadas para cargas que no pueden detenerse.",
     bandText:
-      "Nuestro equipo coordina cargas industriales y especiales para empresas que necesitan planificación técnica, control operativo y respuesta profesional ante movimientos complejos.",
+      "Nuestro equipo coordina transporte terrestre para empresas que necesitan continuidad, trazabilidad y respuesta profesional en cada tramo de la cadena logística.",
     stats: [
-      ["Alta complejidad", "Operaciones fuera de estándar"],
-      ["Permisos", "Gestión documental y rutas"],
-      ["Multimodal", "Integración logística"],
+      ["Rutas terrestres", "Cobertura nacional e internacional"],
+      ["FTL / LTL", "Carga completa y consolidada"],
+      ["Control operativo", "Seguimiento de origen a destino"],
       ["Soporte experto", "Especialistas dedicados"],
     ],
 
-    finalTitle: "Coordinemos su próxima carga especial.",
+    finalTitle: "Coordinemos su próxima operación terrestre.",
     finalText:
-      "Cuéntenos dimensiones, peso, origen, destino y restricciones. Nuestro equipo analizará la viabilidad y la mejor solución operativa.",
-    finalPrimary: "Solicitar cotización especial",
+      "Cuéntenos origen, destino, tipo de carga y urgencia. Nuestro equipo analizará la mejor solución terrestre para su operación.",
+    finalPrimary: "Solicitar cotización terrestre",
     finalSecondary: "Hablar con un especialista",
   },
 
   en: {
-    heroEyebrow: "Special and industrial cargo",
-    heroTitle: "Logistics engineering for cargo that does not fit the standard.",
+    heroEyebrow: "International road freight",
+    heroTitle: "Road routes that connect critical operations.",
     heroText:
-      "We coordinate special operations for oversized, industrial, sensitive or high-value cargo, integrating technical analysis, permits, routes, handling and operational tracking.",
+      "We coordinate domestic and international road freight for full loads, partial loads, distribution and special operations, with operational tracking and document control from origin to destination.",
     primaryCta: "Request quotation",
     secondaryCta: "Talk to a specialist",
 
-    activeLabel: "Active special operation",
-    activeRoute: "Port → Site",
-    activeCargo: "Oversized cargo",
+    activeLabel: "Active road operation",
+    activeRoute: "Madrid → Valencia",
+    activeCargo: "FTL / LTL cargo",
     activeStatusLabel: "Status:",
-    activeStatus: "In planning",
-    activeEtaLabel: "Priority:",
-    activeEta: "High complexity",
+    activeStatus: "In coordination",
+    activeEtaLabel: "Delivery:",
+    activeEta: "Scheduled",
 
     trust: [
-      ["Oversized", "Non-standard cargo"],
-      ["Logistics engineering", "Technical analysis"],
-      ["Permits and routes", "Operational management"],
-      ["Tracking", "End-to-end control"],
+      ["Full load", "FTL / LTL"],
+      ["Distribution", "Road network"],
+      ["Documentation", "Border control"],
+      ["Tracking", "Operational visibility"],
     ],
 
-    overviewEyebrow: "Special operations",
-    overviewTitle: "Precise planning for cargo that requires more than transport.",
+    overviewEyebrow: "Road operations",
+    overviewTitle: "Control, continuity and precision across every road segment.",
     overviewText:
-      "Special cargo requires analysis, coordination and control. We design solutions for goods that require permits, specialized handling, studied routes and adapted equipment.",
-    overviewButton: "Learn more about special cargo",
+      "Road freight requires route planning, document coordination, operational visibility and response capacity. We design domestic and international operations for cargo that requires punctuality, security and control.",
+    overviewButton: "Learn more about road freight",
 
     pillars: [
-      ["Technical analysis", "We assess dimensions, weight, center of gravity, route, handling and restrictions."],
-      ["Permit management", "We coordinate authorizations, documentation and operational requirements."],
-      ["Specialized handling", "We integrate equipment, operators and procedures adapted to each cargo."],
-      ["Operational tracking", "We monitor every stage to reduce risk and maintain control."],
+      ["Route planning", "Efficient route design according to origin, destination, urgency and cargo type."],
+      ["Document control", "Commercial, customs and operational document management."],
+      ["Operational tracking", "Monitoring to maintain visibility over every movement."],
+      ["Door-to-door delivery", "Integrated pickup, transport, logistics connection and final delivery."],
     ],
 
-    servicesEyebrow: "Our special services",
-    servicesTitle: "Solutions designed for high-complexity cargo.",
+    servicesEyebrow: "Our road services",
+    servicesTitle: "Road solutions for every logistics requirement.",
     services: [
-      ["Oversized cargo", "Operations for goods exceeding conventional dimensions or weights."],
-      ["Industrial cargo", "Transport and coordination for machinery, equipment and productive components."],
-      ["Special projects", "End-to-end planning for critical cargo, sites and infrastructure."],
-      ["Permits and escorts", "Management of authorizations, special routes and escort when required."],
-      ["Special multimodal", "Road, ocean or air integration according to operational complexity."],
-      ["Door to door", "Complete coordination from origin to final destination."],
+      ["FTL full load", "Dedicated transport for operations requiring exclusive capacity and direct control."],
+      ["LTL partial load", "Cost optimization through consolidation and shared routes."],
+      ["Domestic distribution", "Regional and national movements with operational coordination."],
+      ["Special road cargo", "Road solutions for sensitive, industrial or special-handling goods."],
+      ["Cross-border", "International road coordination with document support and border control."],
+      ["Door to door", "From origin pickup to final delivery under one operational flow."],
     ],
 
-    useCasesEyebrow: "When a special operation is required",
-    useCasesTitle: "When cargo cannot be treated as standard.",
+    useCasesEyebrow: "When to use road freight",
+    useCasesTitle: "When the operation needs proximity, control and continuity.",
     useCases: [
-      ["Heavy machinery", "Industrial equipment requiring planning and specific handling."],
-      ["Site components", "Elements for infrastructure, energy or construction."],
-      ["Oversized cargo", "Goods with dimensions or weights outside regular operation."],
-      ["Sensitive cargo", "Goods requiring control, security and special procedures."],
-      ["Turnkey projects", "End-to-end coordination for high-complexity operations."],
-      ["Multimodal operations", "Movements combining different transport modes."],
+      ["Commercial distribution", "Frequent movements for supply chains and scheduled deliveries."],
+      ["Industrial cargo", "Transport for components, machinery, spare parts and productive goods."],
+      ["Multimodal connection", "Integration with ocean, air or warehousing operations."],
+      ["B2B last mile", "Final delivery for corporate clients and commercial operations."],
+      ["Cross-border", "International road operations with documentation and tracking."],
+      ["Sensitive cargo", "Movements requiring control, coordination and visibility."],
     ],
 
     processEyebrow: "Our operational process",
-    processTitle: "A special operation designed before moving the cargo.",
+    processTitle: "A clear road operation from the first contact.",
     process: [
-      ["Cargo analysis", "We review dimensions, weight, fragility, requirements and final destination."],
-      ["Route study", "We assess restrictions, access, permits and operational viability."],
-      ["Document plan", "We coordinate authorizations, insurance and required documentation."],
-      ["Equipment and handling", "We define resources, operators and loading procedures."],
-      ["Tracking", "We monitor critical milestones throughout the movement."],
-      ["Final delivery", "We coordinate unloading, reception and secure operation closure."],
+      ["Cargo analysis", "We review goods type, volume, weight, origin, destination and urgency."],
+      ["Route design", "We define the most efficient and secure road alternative."],
+      ["Documentation", "We coordinate commercial, customs and operational requirements."],
+      ["Transport allocation", "We manage capacity, vehicle and departure coordination."],
+      ["Tracking", "We monitor progress and operational milestones."],
+      ["Final delivery", "We coordinate reception, unloading and operation closure."],
     ],
 
-    bandTitle: "Special operations designed for cargo that cannot be improvised.",
+    bandTitle: "Road operations designed for cargo that cannot stop.",
     bandText:
-      "Our team coordinates industrial and special cargo for companies that need technical planning, operational control and professional response for complex movements.",
+      "Our team coordinates road transport for companies that need continuity, traceability and professional response across every segment of the logistics chain.",
     stats: [
-      ["High complexity", "Non-standard operations"],
-      ["Permits", "Documents and route management"],
-      ["Multimodal", "Logistics integration"],
+      ["Road routes", "Domestic and international coverage"],
+      ["FTL / LTL", "Full and consolidated cargo"],
+      ["Operational control", "Tracking from origin to destination"],
       ["Expert support", "Dedicated specialists"],
     ],
 
-    finalTitle: "Let’s coordinate your next special cargo.",
+    finalTitle: "Let’s coordinate your next road operation.",
     finalText:
-      "Tell us dimensions, weight, origin, destination and restrictions. Our team will analyze feasibility and the best operational solution.",
-    finalPrimary: "Request special quotation",
+      "Tell us origin, destination, cargo type and urgency. Our team will analyze the best road solution for your operation.",
+    finalPrimary: "Request road quotation",
     finalSecondary: "Talk to a specialist",
   },
 
   zh: {
-    heroEyebrow: "特殊与工业货物",
-    heroTitle: "为非标准货物提供物流工程方案。",
+    heroEyebrow: "国际陆运",
+    heroTitle: "连接关键业务的陆运路线。",
     heroText:
-      "我们协调超限、工业、敏感或高价值货物的特殊运输，整合技术分析、许可、路线、装卸和运营跟踪。",
+      "我们协调国内及国际陆运，包括整车、零担、配送和特殊运输，并提供从始发地到目的地的运营跟踪和文件控制。",
     primaryCta: "申请报价",
     secondaryCta: "联系专家",
 
-    activeLabel: "进行中的特殊操作",
-    activeRoute: "港口 → 工地",
-    activeCargo: "超限货物",
+    activeLabel: "进行中的陆运操作",
+    activeRoute: "马德里 → 瓦伦西亚",
+    activeCargo: "FTL / LTL 货物",
     activeStatusLabel: "状态：",
-    activeStatus: "规划中",
-    activeEtaLabel: "优先级：",
-    activeEta: "高复杂度",
+    activeStatus: "协调中",
+    activeEtaLabel: "交付：",
+    activeEta: "已安排",
 
     trust: [
-      ["超限货物", "非标准货物"],
-      ["物流工程", "技术分析"],
-      ["许可与路线", "运营管理"],
-      ["跟踪", "全流程控制"],
+      ["整车运输", "FTL / LTL"],
+      ["配送服务", "陆运网络"],
+      ["文件管理", "边境控制"],
+      ["运输跟踪", "运营可视化"],
     ],
 
-    overviewEyebrow: "特殊操作",
-    overviewTitle: "为需要超越普通运输的货物提供精准规划。",
+    overviewEyebrow: "陆运运营",
+    overviewTitle: "在每一个陆运环节实现控制、连续性与精准。",
     overviewText:
-      "特殊货物需要分析、协调和控制。我们为需要许可、专业装卸、路线研究和适配设备的货物设计解决方案。",
-    overviewButton: "了解特殊货物服务",
+      "陆运需要路线规划、文件协调、运营可视化和响应能力。我们为需要准时、安全和控制的货物设计国内及国际运输方案。",
+    overviewButton: "了解陆运服务",
 
     pillars: [
-      ["技术分析", "评估尺寸、重量、重心、路线、装卸和限制。"],
-      ["许可管理", "协调授权、文件和运营要求。"],
-      ["专业装卸", "整合适合每批货物的设备、操作人员和流程。"],
-      ["运营跟踪", "监控每个阶段以降低风险并保持控制。"],
+      ["路线规划", "根据始发地、目的地、紧急程度和货物类型设计高效路线。"],
+      ["文件控制", "管理商业、海关和运营文件。"],
+      ["运营跟踪", "监控每次运输以保持可视化。"],
+      ["门到门交付", "整合提货、运输、物流衔接和最终交付。"],
     ],
 
-    servicesEyebrow: "我们的特殊服务",
-    servicesTitle: "为高复杂度货物设计的解决方案。",
+    servicesEyebrow: "我们的陆运服务",
+    servicesTitle: "适用于不同物流需求的陆运解决方案。",
     services: [
-      ["超限货物", "为超过常规尺寸或重量的货物提供运输操作。"],
-      ["工业货物", "为机械、设备和生产组件提供运输与协调。"],
-      ["特殊项目", "为关键货物、工地和基础设施提供整体规划。"],
-      ["许可与护送", "管理授权、特殊路线和必要时的护送。"],
-      ["特殊多式联运", "根据操作复杂度整合陆运、海运或空运。"],
-      ["门到门", "从始发地到最终目的地的完整协调。"],
+      ["FTL 整车", "为需要专属运力和直接控制的业务提供专车运输。"],
+      ["LTL 零担", "通过拼载和共享路线优化成本。"],
+      ["国内配送", "区域和全国运输，配合运营协调。"],
+      ["特殊陆运货物", "为敏感、工业或特殊处理货物提供道路运输方案。"],
+      ["跨境陆运", "提供文件支持和边境控制的国际陆运协调。"],
+      ["门到门", "从始发地提货到目的地最终交付的一体化流程。"],
     ],
 
-    useCasesEyebrow: "何时需要特殊操作",
-    useCasesTitle: "当货物不能按标准方式处理时。",
+    useCasesEyebrow: "何时选择陆运",
+    useCasesTitle: "当运营需要接近性、控制和连续性时。",
     useCases: [
-      ["重型机械", "需要规划和特定装卸的工业设备。"],
-      ["工程组件", "用于基础设施、能源或建筑的部件。"],
-      ["超限货物", "尺寸或重量超出常规操作的货物。"],
-      ["敏感货物", "需要控制、安全和特殊流程的货物。"],
-      ["交钥匙项目", "为高复杂度业务提供整体协调。"],
-      ["多式联运", "结合不同运输方式的操作。"],
+      ["商业配送", "供应链和计划交付的高频运输。"],
+      ["工业货物", "零部件、机械、备件和生产货物运输。"],
+      ["多式联运衔接", "与海运、空运或仓储业务衔接。"],
+      ["B2B 最后一公里", "为企业客户和商业业务协调最终交付。"],
+      ["跨境运输", "带有文件和跟踪支持的国际陆运。"],
+      ["敏感货物", "需要控制、协调和可视化的运输。"],
     ],
 
     processEyebrow: "我们的运营流程",
-    processTitle: "在移动货物之前设计特殊操作。",
+    processTitle: "从首次联系开始，陆运操作清晰可控。",
     process: [
-      ["货物分析", "审核尺寸、重量、易损性、要求和最终目的地。"],
-      ["路线研究", "评估限制、通行、许可和操作可行性。"],
-      ["文件计划", "协调授权、保险和所需文件。"],
-      ["设备与装卸", "确定资源、操作人员和装载程序。"],
-      ["跟踪", "监控运输过程中的关键节点。"],
-      ["最终交付", "协调卸货、接收和安全关闭操作。"],
+      ["货物分析", "审核货物类型、体积、重量、始发地、目的地和紧急程度。"],
+      ["路线设计", "确定最高效且安全的陆运方案。"],
+      ["文件管理", "协调商业、海关和运营要求。"],
+      ["车辆安排", "管理运力、车辆和发运协调。"],
+      ["跟踪", "监控运输进度和运营节点。"],
+      ["最终交付", "协调收货、卸货和运营关闭。"],
     ],
 
-    bandTitle: "为不能即兴处理的货物设计特殊操作。",
+    bandTitle: "为不能停止的货物设计的陆运操作。",
     bandText:
-      "我们的团队为需要技术规划、运营控制和专业响应的企业协调工业和特殊货物。",
+      "我们的团队为需要连续性、可追溯性和专业响应的企业协调陆运服务。",
     stats: [
-      ["高复杂度", "非标准操作"],
-      ["许可", "文件和路线管理"],
-      ["多式联运", "物流整合"],
+      ["陆运路线", "国内及国际覆盖"],
+      ["FTL / LTL", "整车与拼载货物"],
+      ["运营控制", "从始发地到目的地跟踪"],
       ["专家支持", "专属专家"],
     ],
 
-    finalTitle: "让我们协调您的下一批特殊货物。",
+    finalTitle: "让我们协调您的下一次陆运操作。",
     finalText:
-      "告诉我们尺寸、重量、始发地、目的地和限制。我们的团队将分析可行性和最佳操作方案。",
-    finalPrimary: "申请特殊报价",
+      "告诉我们始发地、目的地、货物类型和紧急程度。我们的团队将分析最合适的陆运方案。",
+    finalPrimary: "申请陆运报价",
     finalSecondary: "联系专家",
   },
 } satisfies Record<Locale, any>;
@@ -510,7 +510,7 @@ function Icon({ name }: { name: IconName }) {
   }
 }
 
-export default function CargasEspecialesPage() {
+export default function TransporteTerrestrePage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
@@ -560,7 +560,7 @@ export default function CargasEspecialesPage() {
       <main className={styles.page}>
         <section className={styles.hero}>
           <Image
-            src="/images/cargas-especiales-desktop/transporte-especial-hero.png"
+            src="/images/sectores/transporteterrestre.png"
             alt={t.heroTitle}
             fill
             priority
@@ -569,7 +569,7 @@ export default function CargasEspecialesPage() {
           />
 
           <Image
-            src="/images/cargas-especiales-desktop/transporte-especial-hero.png"
+            src="/images/sectores/transporteterrestre.png"
             alt={t.heroTitle}
             fill
             priority
@@ -662,7 +662,7 @@ export default function CargasEspecialesPage() {
 
           <div className={styles.serviceGrid}>
             {t.services.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["gear", "package", "shield", "route", "globe", "truck"];
+              const icons: IconName[] = ["truck", "package", "shield", "route", "globe", "door"];
 
               return (
                 <article key={title}>
@@ -708,7 +708,7 @@ export default function CargasEspecialesPage() {
 
           <div className={styles.processGrid}>
             {t.process.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["search", "package", "document", "route", "tracking", "truck"];
+              const icons: IconName[] = ["search", "route", "document", "truck", "tracking", "door"];
 
               return (
                 <article key={title}>
@@ -727,7 +727,7 @@ export default function CargasEspecialesPage() {
         <section className={styles.darkBand}>
           <div className={styles.darkBandImage}>
             <Image
-              src="/images/sectores/transportemaritimo.png"
+              src="/images/sectores/transporteterrestre2.png"
               alt={t.bandTitle}
               fill
               sizes="(max-width: 900px) 100vw, 42vw"
@@ -767,7 +767,7 @@ export default function CargasEspecialesPage() {
 
           <div className={styles.finalImage}>
             <Image
-              src="/images/sectores/transportemaritimo.png"
+              src="/images/sectores/transporteterrestre.png"
               alt={t.finalTitle}
               fill
               sizes="(max-width: 900px) 100vw, 44vw"
@@ -775,7 +775,7 @@ export default function CargasEspecialesPage() {
           </div>
         </section>
 
-        <RelatedServices current="cargas-especiales" locale={locale} />
+        <RelatedServices current="transporte-terrestre" locale={locale} />
       </main>
 
       <Footer />

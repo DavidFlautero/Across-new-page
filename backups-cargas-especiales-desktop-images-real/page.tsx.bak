@@ -560,7 +560,7 @@ export default function CargasEspecialesPage() {
       <main className={styles.page}>
         <section className={styles.hero}>
           <Image
-            src="/images/cargas-especiales-desktop/transporte-especial-hero.png"
+            src="/images/sectores/transportemaritimo.png"
             alt={t.heroTitle}
             fill
             priority
@@ -569,7 +569,7 @@ export default function CargasEspecialesPage() {
           />
 
           <Image
-            src="/images/cargas-especiales-desktop/transporte-especial-hero.png"
+            src="/images/sectores/transportemaritimo.png"
             alt={t.heroTitle}
             fill
             priority

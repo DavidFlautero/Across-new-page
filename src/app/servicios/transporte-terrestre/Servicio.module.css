@@ -4041,3 +4041,180 @@
   }
 }
 
+
+/* =====================================================
+   TERRESTRE - FONDO VISIBLE DETRÁS DE SERVICES/CARDS
+   Usa las imágenes reales con typo trannsporte.
+   ===================================================== */
+
+.services {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background: #050609 !important;
+  color: #fff !important;
+}
+
+.services::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  background-image: url("/images/transporte-terrestre-mobile/trannsporte-terrestre1.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  opacity: .78 !important;
+  filter: brightness(.52) contrast(1.12) saturate(.98) !important;
+}
+
+.services::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(237, 27, 47, .16), transparent 24rem),
+    linear-gradient(90deg, rgba(5,6,9,.96) 0%, rgba(5,6,9,.82) 48%, rgba(5,6,9,.64) 100%),
+    linear-gradient(180deg, rgba(5,6,9,.70) 0%, rgba(5,6,9,.96) 100%) !important;
+}
+
+.services > *,
+.services .serviceGrid,
+.serviceGrid,
+.serviceGrid > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.services article,
+.serviceGrid article,
+.operationCard {
+  position: relative !important;
+  z-index: 2 !important;
+  background: rgba(7, 9, 14, .70) !important;
+  border: 1px solid rgba(255,255,255,.14) !important;
+  backdrop-filter: blur(6px) !important;
+}
+
+/* Bloques internos con imagen detrás */
+.darkBand,
+.finalCta {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background: #050609 !important;
+}
+
+.darkBandImage,
+.finalImage {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -3 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  pointer-events: none !important;
+}
+
+.darkBandImage img,
+.finalImage img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  display: block !important;
+  filter: brightness(.46) contrast(1.1) saturate(.96) !important;
+}
+
+.darkBand::before,
+.finalCta::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -2 !important;
+  pointer-events: none !important;
+  background:
+    radial-gradient(circle at 75% 24%, rgba(237, 27, 47, .16), transparent 24rem),
+    linear-gradient(90deg, rgba(5,6,9,.97) 0%, rgba(5,6,9,.84) 46%, rgba(5,6,9,.62) 100%),
+    linear-gradient(180deg, rgba(5,6,9,.70) 0%, rgba(5,6,9,.96) 100%) !important;
+}
+
+.darkBandContent,
+.finalCta > *:not(.finalImage) {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+@media (max-width: 900px) {
+  .services::before {
+    opacity: .84 !important;
+    background-position: center center !important;
+    filter: brightness(.50) contrast(1.14) saturate(.98) !important;
+  }
+
+  .services::after {
+    background:
+      radial-gradient(circle at 22% 10%, rgba(237, 27, 47, .17), transparent 18rem),
+      linear-gradient(180deg, rgba(5,6,9,.90) 0%, rgba(5,6,9,.74) 44%, rgba(5,6,9,.96) 100%) !important;
+  }
+
+  .darkBandImage img,
+  .finalImage img {
+    filter: brightness(.42) contrast(1.12) saturate(.96) !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .services::before {
+    opacity: .88 !important;
+    filter: brightness(.46) contrast(1.16) saturate(.98) !important;
+  }
+}
+
+
+/* =====================================================
+   GLOBAL SERVICE FIX - MOBILE USA IMÁGENES DESKTOP
+   Evita crear imágenes dobles por cada sección.
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .heroImageDesktop {
+    display: none !important;
+  }
+
+  .heroImageMobile {
+    display: block !important;
+  }
+
+  .heroImage {
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  .darkBandImage,
+  .finalImage {
+    display: block !important;
+  }
+
+  .darkBandImage img,
+  .finalImage img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    display: block !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .heroImage,
+  .darkBandImage img,
+  .finalImage img {
+    object-position: center center !important;
+  }
+}
+

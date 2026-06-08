@@ -2963,7 +2963,7 @@
       rgba(5, 6, 9, .55) 100%
     ),
     radial-gradient(circle at 18% 18%, rgba(237, 27, 47, .16), transparent 24rem),
-    url("/images/transportemaritimo.png") !important;
+    url("/images/sectores/transportemaritimo.png") !important;
   background-size: cover !important;
   background-position: center 48% !important;
   background-repeat: no-repeat !important;
@@ -3065,7 +3065,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(237, 27, 47, .14), transparent 24rem),
-    url("/images/transportemaritimo.png") !important;
+    url("/images/sectores/transportemaritimo.png") !important;
   background-size: cover !important;
   background-position: center 55% !important;
   background-repeat: no-repeat !important;
@@ -3104,7 +3104,7 @@
   .services {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.90)),
-      url("/images/transportemaritimo.png") !important;
+      url("/images/sectores/transportemaritimo.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3116,7 +3116,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/transportemaritimo.png") !important;
+      url("/images/sectores/transportemaritimo.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3134,7 +3134,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(237, 27, 47, .14), transparent 24rem),
-    url("/images/maritimo.png") !important;
+    url("/images/cargaspecial.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3144,7 +3144,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/maritimo.png") !important;
+      url("/images/cargaspecial.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3162,7 +3162,7 @@
       rgba(5, 6, 9, .44) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(237, 27, 47, .14), transparent 24rem),
-    url("/images/maritimo.png") !important;
+    url("/images/sectores/transportemaritimo.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3172,7 +3172,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/maritimo.png") !important;
+      url("/images/sectores/transportemaritimo.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -4038,428 +4038,6 @@
 
   .actions a {
     min-height: 42px !important;
-  }
-}
-
-
-/* =====================================================
-   MARÍTIMO - FIX IMÁGENES INTERNAS MOBILE/TABLET
-   Mantiene hero intacto y muestra imágenes nuevas en secciones internas.
-   ===================================================== */
-
-.darkBandImage,
-.finalImage {
-  position: relative !important;
-  overflow: hidden !important;
-  background: #050609 !important;
-}
-
-.darkBandImage img,
-.finalImage img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center center !important;
-  display: block !important;
-  filter: brightness(.82) contrast(1.08) saturate(1.02) !important;
-}
-
-/* Desktop / tablet */
-@media (min-width: 761px) {
-  .darkBandImage {
-    display: block !important;
-    min-height: 420px !important;
-  }
-
-  .finalImage {
-    display: block !important;
-    min-height: 420px !important;
-  }
-}
-
-/* Tablet y mobile */
-@media (max-width: 900px) {
-  .darkBandImage {
-    display: block !important;
-    min-height: 420px !important;
-    height: 420px !important;
-  }
-
-  .finalImage {
-    display: block !important;
-    min-height: 420px !important;
-    height: 420px !important;
-  }
-
-  .darkBandImage img,
-  .finalImage img {
-    object-position: center center !important;
-  }
-}
-
-/* Mobile común */
-@media (max-width: 760px) {
-  .darkBandImage {
-    display: block !important;
-    min-height: 520px !important;
-    height: 520px !important;
-  }
-
-  .finalImage {
-    display: block !important;
-    min-height: 520px !important;
-    height: 520px !important;
-  }
-
-  .darkBandImage img,
-  .finalImage img {
-    object-position: center center !important;
-  }
-}
-
-/* iPhone SE */
-@media (max-width: 380px) {
-  .darkBandImage {
-    min-height: 460px !important;
-    height: 460px !important;
-  }
-
-  .finalImage {
-    min-height: 460px !important;
-    height: 460px !important;
-  }
-}
-
-
-/* =====================================================
-   MARÍTIMO - IMÁGENES DETRÁS DEL TEXTO
-   Las imágenes internas pasan a fondo visual, no bloque separado.
-   ===================================================== */
-
-/* Sección oscura principal */
-.darkBand {
-  position: relative !important;
-  overflow: hidden !important;
-  isolation: isolate !important;
-  background: #050609 !important;
-}
-
-.darkBandImage {
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -3 !important;
-  display: block !important;
-  width: 100% !important;
-  height: 100% !important;
-  min-height: 100% !important;
-  pointer-events: none !important;
-}
-
-.darkBandImage img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center center !important;
-  display: block !important;
-  filter: brightness(.52) contrast(1.08) saturate(.95) !important;
-}
-
-.darkBand::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -2 !important;
-  pointer-events: none !important;
-  background:
-    radial-gradient(circle at 78% 24%, rgba(237, 27, 47, .14), transparent 24rem),
-    linear-gradient(90deg, rgba(5,6,9,.96) 0%, rgba(5,6,9,.82) 42%, rgba(5,6,9,.58) 100%),
-    linear-gradient(180deg, rgba(5,6,9,.74) 0%, rgba(5,6,9,.94) 100%) !important;
-}
-
-.darkBandContent {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-/* CTA / sección final con imagen detrás */
-.finalCta {
-  position: relative !important;
-  overflow: hidden !important;
-  isolation: isolate !important;
-  background: #050609 !important;
-}
-
-.finalImage {
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -3 !important;
-  display: block !important;
-  width: 100% !important;
-  height: 100% !important;
-  min-height: 100% !important;
-  pointer-events: none !important;
-}
-
-.finalImage img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center center !important;
-  display: block !important;
-  filter: brightness(.48) contrast(1.08) saturate(.95) !important;
-}
-
-.finalCta::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -2 !important;
-  pointer-events: none !important;
-  background:
-    radial-gradient(circle at 75% 24%, rgba(237, 27, 47, .16), transparent 24rem),
-    linear-gradient(90deg, rgba(5,6,9,.97) 0%, rgba(5,6,9,.84) 46%, rgba(5,6,9,.62) 100%),
-    linear-gradient(180deg, rgba(5,6,9,.70) 0%, rgba(5,6,9,.96) 100%) !important;
-}
-
-/* Por si el contenido final tiene wrapper interno */
-.finalCta > *:not(.finalImage) {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-/* Mobile: mantener imagen detrás, más oscura para lectura */
-@media (max-width: 760px) {
-  .darkBandImage,
-  .finalImage {
-    position: absolute !important;
-    inset: 0 !important;
-    height: 100% !important;
-    min-height: 100% !important;
-  }
-
-  .darkBandImage img,
-  .finalImage img {
-    object-position: center center !important;
-    filter: brightness(.42) contrast(1.1) saturate(.95) !important;
-  }
-
-  .darkBand::before,
-  .finalCta::before {
-    background:
-      radial-gradient(circle at 80% 18%, rgba(237, 27, 47, .16), transparent 20rem),
-      linear-gradient(180deg, rgba(5,6,9,.92) 0%, rgba(5,6,9,.78) 42%, rgba(5,6,9,.96) 100%) !important;
-  }
-}
-
-
-/* =====================================================
-   MARÍTIMO - FONDO DETRÁS DE "SERVICES" / CARDS
-   Esta es la sección que aparece como "Air solutions..."
-   ===================================================== */
-
-.services {
-  position: relative !important;
-  isolation: isolate !important;
-  overflow: hidden !important;
-  background:
-    linear-gradient(180deg, rgba(5,6,9,.92) 0%, rgba(5,6,9,.86) 48%, rgba(5,6,9,.96) 100%),
-    url("/images/transporte-maritimo-mobile/maritimo-mobile.png") center center / cover no-repeat !important;
-  color: #fff !important;
-}
-
-.services::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -2 !important;
-  pointer-events: none !important;
-  background:
-    radial-gradient(circle at 18% 12%, rgba(237, 27, 47, .15), transparent 24rem),
-    linear-gradient(90deg, rgba(5,6,9,.96) 0%, rgba(5,6,9,.82) 48%, rgba(5,6,9,.70) 100%) !important;
-}
-
-.services::after {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -3 !important;
-  pointer-events: none !important;
-  background: url("/images/transporte-maritimo-mobile/maritimo-mobile.png") center center / cover no-repeat !important;
-  filter: brightness(.48) contrast(1.12) saturate(.95) !important;
-}
-
-/* Asegurar que todo el contenido quede encima */
-.services > *,
-.sectionHead,
-.serviceGrid,
-.serviceGrid > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-/* Cards más legibles sobre imagen */
-.serviceGrid article,
-.operationCard {
-  background: rgba(7, 9, 14, .72) !important;
-  border: 1px solid rgba(255,255,255,.13) !important;
-  backdrop-filter: blur(6px) !important;
-}
-
-/* Mobile / tablet */
-@media (max-width: 900px) {
-  .services {
-    background:
-      linear-gradient(180deg, rgba(5,6,9,.92) 0%, rgba(5,6,9,.84) 44%, rgba(5,6,9,.96) 100%),
-      url("/images/transporte-maritimo-mobile/maritimo-mobile.png") center center / cover no-repeat !important;
-  }
-
-  .services::before {
-    background:
-      radial-gradient(circle at 22% 10%, rgba(237, 27, 47, .16), transparent 18rem),
-      linear-gradient(180deg, rgba(5,6,9,.93) 0%, rgba(5,6,9,.78) 45%, rgba(5,6,9,.97) 100%) !important;
-  }
-
-  .services::after {
-    background: url("/images/transporte-maritimo-mobile/maritimo-mobile.png") center center / cover no-repeat !important;
-    filter: brightness(.42) contrast(1.12) saturate(.95) !important;
-  }
-}
-
-/* iPhone SE */
-@media (max-width: 380px) {
-  .services::after {
-    background-position: center center !important;
-    filter: brightness(.38) contrast(1.14) saturate(.95) !important;
-  }
-}
-
-
-/* =====================================================
-   MARÍTIMO - FIX REAL FONDO SERVICES VISIBLE
-   Evita z-index negativo. Imagen visible detrás del texto/cards.
-   ===================================================== */
-
-.services {
-  position: relative !important;
-  isolation: isolate !important;
-  overflow: hidden !important;
-  background: #050609 !important;
-  color: #fff !important;
-}
-
-/* Imagen real visible */
-.services::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: 0 !important;
-  pointer-events: none !important;
-  background-image: url("/images/transporte-maritimo-mobile/maritimo-mobile.png") !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  opacity: .72 !important;
-  filter: brightness(.58) contrast(1.12) saturate(.95) !important;
-}
-
-/* Overlay de lectura */
-.services::after {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: 1 !important;
-  pointer-events: none !important;
-  background:
-    radial-gradient(circle at 18% 12%, rgba(237, 27, 47, .18), transparent 24rem),
-    linear-gradient(90deg, rgba(5,6,9,.96) 0%, rgba(5,6,9,.82) 48%, rgba(5,6,9,.64) 100%),
-    linear-gradient(180deg, rgba(5,6,9,.70) 0%, rgba(5,6,9,.96) 100%) !important;
-}
-
-/* Todo el contenido arriba */
-.services > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-/* Cards sobre fondo */
-.services .serviceGrid,
-.serviceGrid {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-.services article,
-.serviceGrid article,
-.operationCard {
-  position: relative !important;
-  z-index: 2 !important;
-  background: rgba(7, 9, 14, .70) !important;
-  border: 1px solid rgba(255,255,255,.14) !important;
-  backdrop-filter: blur(6px) !important;
-}
-
-/* Mobile/tablet: que se note más la imagen pero sin matar lectura */
-@media (max-width: 900px) {
-  .services::before {
-    opacity: .82 !important;
-    background-position: center center !important;
-    filter: brightness(.54) contrast(1.14) saturate(.96) !important;
-  }
-
-  .services::after {
-    background:
-      radial-gradient(circle at 22% 10%, rgba(237, 27, 47, .18), transparent 18rem),
-      linear-gradient(180deg, rgba(5,6,9,.88) 0%, rgba(5,6,9,.74) 44%, rgba(5,6,9,.96) 100%) !important;
-  }
-}
-
-@media (max-width: 380px) {
-  .services::before {
-    opacity: .86 !important;
-    filter: brightness(.50) contrast(1.16) saturate(.96) !important;
-  }
-}
-
-
-/* =====================================================
-   GLOBAL SERVICE FIX - MOBILE USA IMÁGENES DESKTOP
-   Evita crear imágenes dobles por cada sección.
-   ===================================================== */
-
-@media (max-width: 760px) {
-  .heroImageDesktop {
-    display: none !important;
-  }
-
-  .heroImageMobile {
-    display: block !important;
-  }
-
-  .heroImage {
-    object-fit: cover !important;
-    object-position: center center !important;
-  }
-
-  .darkBandImage,
-  .finalImage {
-    display: block !important;
-  }
-
-  .darkBandImage img,
-  .finalImage img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-    display: block !important;
-  }
-}
-
-@media (max-width: 380px) {
-  .heroImage,
-  .darkBandImage img,
-  .finalImage img {
-    object-position: center center !important;
   }
 }
 

@@ -4041,3 +4041,287 @@
   }
 }
 
+
+/* =====================================================
+   GLOBAL SERVICE FIX - MOBILE USA IMÁGENES DESKTOP
+   Evita crear imágenes dobles por cada sección.
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .heroImageDesktop {
+    display: none !important;
+  }
+
+  .heroImageMobile {
+    display: block !important;
+  }
+
+  .heroImage {
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  .darkBandImage,
+  .finalImage {
+    display: block !important;
+  }
+
+  .darkBandImage img,
+  .finalImage img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    display: block !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .heroImage,
+  .darkBandImage img,
+  .finalImage img {
+    object-position: center center !important;
+  }
+}
+
+
+/* =====================================================
+   TEMPERATURA CONTROLADA - MOBILE BACKGROUND FIX REAL
+   Imagen detrás del texto/cards. Sin imágenes sueltas.
+   Desktop/tablet intacto.
+   ===================================================== */
+
+@media (max-width: 760px) {
+  html,
+  body {
+    overflow-x: hidden !important;
+  }
+
+  .page {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    background: #f4f1eb !important;
+  }
+
+  /* Primera sección después del hero: cards/servicios */
+  .services {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 3.6rem 18px 3.8rem !important;
+
+    background: #050609 !important;
+    color: #fff !important;
+  }
+
+  .services::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+
+    background-image: url("/images/controltemp.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+
+    opacity: .86 !important;
+    filter: brightness(.42) contrast(1.14) saturate(.96) !important;
+  }
+
+  .services::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+
+    background:
+      radial-gradient(circle at 22% 8%, rgba(237, 27, 47, .16), transparent 18rem),
+      linear-gradient(180deg, rgba(5,6,9,.92) 0%, rgba(5,6,9,.78) 42%, rgba(5,6,9,.97) 100%) !important;
+  }
+
+  .services > *,
+  .services .sectionHead,
+  .services .serviceGrid,
+  .serviceGrid,
+  .serviceGrid > * {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  .services .sectionHead {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    margin: 0 0 1.8rem !important;
+    padding: 0 !important;
+  }
+
+  .services .sectionHead h2 {
+    width: 100% !important;
+    max-width: 420px !important;
+    margin: 0 !important;
+    font-size: clamp(2.1rem, 10vw, 3.15rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.055em !important;
+    color: #fff !important;
+  }
+
+  .services .eyebrow {
+    color: #ed1b2f !important;
+  }
+
+  .serviceGrid {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: .85rem !important;
+  }
+
+  .serviceGrid article,
+  .operationCard {
+    width: 100% !important;
+    max-width: 100% !important;
+    position: relative !important;
+    z-index: 2 !important;
+    background: rgba(7, 9, 14, .70) !important;
+    border: 1px solid rgba(255,255,255,.14) !important;
+    backdrop-filter: blur(6px) !important;
+  }
+
+  /* Bloque oscuro posterior: imagen como fondo, no como bloque suelto */
+  .darkBand {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 3.2rem 18px !important;
+
+    display: block !important;
+    background: #050609 !important;
+    color: #fff !important;
+  }
+
+  .darkBand::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+
+    background-image: url("/images/temperaturacontrolada.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+
+    opacity: .78 !important;
+    filter: brightness(.40) contrast(1.12) saturate(.96) !important;
+  }
+
+  .darkBand::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    background:
+      radial-gradient(circle at 75% 18%, rgba(237, 27, 47, .14), transparent 20rem),
+      linear-gradient(180deg, rgba(5,6,9,.92) 0%, rgba(5,6,9,.80) 45%, rgba(5,6,9,.98) 100%) !important;
+  }
+
+  .darkBandContent,
+  .darkBand .stats,
+  .darkBandActions {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  .darkBandContent {
+    width: 100% !important;
+    max-width: 420px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+
+  .darkBandContent h2 {
+    max-width: 420px !important;
+    margin: 0 !important;
+    font-size: clamp(2rem, 9.4vw, 3rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.055em !important;
+  }
+
+  .darkBandContent p {
+    max-width: 420px !important;
+    margin: 1rem 0 0 !important;
+    font-size: .9rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .darkBandActions {
+    width: 100% !important;
+    max-width: 420px !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: .75rem !important;
+    margin-top: 1.5rem !important;
+  }
+
+  .darkBandActions a {
+    width: 100% !important;
+    min-height: 46px !important;
+    border-radius: 999px !important;
+  }
+
+  /* Apagamos las imágenes sueltas que estaban rompiendo el layout */
+  .darkBandImage,
+  .finalImage {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    pointer-events: none !important;
+  }
+
+  /* Evita que finalCta se meta como columna rota */
+  .finalCta {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    background: #050609 !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .services {
+    padding: 3.2rem 14px 3.4rem !important;
+  }
+
+  .services .sectionHead h2,
+  .darkBandContent h2 {
+    font-size: clamp(1.9rem, 9.8vw, 2.55rem) !important;
+  }
+
+  .darkBand {
+    padding: 2.8rem 14px !important;
+  }
+}
+
