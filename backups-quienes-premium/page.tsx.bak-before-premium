@@ -6,7 +6,7 @@ import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Certifications from "@/components/sections/Certifications";
-import styles from "./QuienesSomos.module.css";
+import styles from "../../servicios/_shared/ServicePage.module.css";
 
 type Locale = "es" | "en" | "zh";
 
