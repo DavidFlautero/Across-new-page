@@ -1,172 +1,504 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import Image from "next/image";
+import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
-import styles from "../../servicios/_shared/ServicePage.module.css";
+import RelatedServices from "@/app/servicios/_shared/RelatedServices";
+import styles from "./Servicio.module.css";
 
 type Locale = "es" | "en" | "zh";
 
 const copy = {
-  es: {
-    eyebrow: "PHARMA & HEALTHCARE LOGISTICS",
-    title: "Logística farmacéutica y sanitaria con trazabilidad, cumplimiento y control operativo.",
-    description:
-      "Coordinamos operaciones nacionales e internacionales para productos farmacéuticos, sanitarios, dispositivos médicos, material sensible y cadenas de suministro que requieren control documental, temperatura, seguridad y visibilidad desde origen hasta destino.",
-    primary: "Solicitar solución farmacéutica",
-    secondary: "Hablar con un especialista",
-
-    blockEyebrow: "OPERACIÓN FARMACÉUTICA ESPECIALIZADA",
-    blockTitle: "Logística segura para productos críticos y regulados.",
-    blockText:
-      "Diseñamos soluciones para el sector farmacéutico y sanitario integrando transporte, temperatura controlada, almacenaje, distribución, gestión documental, trazabilidad y cumplimiento normativo.",
-
-    servicesIntro:
-      "Soluciones para operaciones sanitarias que requieren precisión, documentación, control térmico, seguridad y seguimiento continuo.",
-    servicesTitle: "Servicios logísticos para farmacéutico, sanitario y healthcare.",
-
-    services: [
+  "es": {
+    "heroEyebrow": "Sector farmacéutico y sanitario",
+    "heroTitle": "Logística sanitaria para productos que no admiten errores.",
+    "heroText": "Coordinamos operaciones para productos farmacéuticos, sanitarios, médicos y sensibles, integrando control documental, trazabilidad, cadena de frío cuando aplica y seguimiento operativo.",
+    "primaryCta": "Solicitar cotización",
+    "secondaryCta": "Hablar con un especialista",
+    "activeLabel": "Operación sanitaria activa",
+    "activeRoute": "Laboratorio → Destino",
+    "activeCargo": "Producto sensible",
+    "activeStatusLabel": "Estado:",
+    "activeStatus": "En control",
+    "activeEtaLabel": "Prioridad:",
+    "activeEta": "Alta seguridad",
+    "trust": [
       [
-        "Carga farmacéutica",
-        "Gestión especializada para productos médicos, farmacéuticos y sanitarios con requisitos operativos y documentales específicos.",
+        "Trazabilidad",
+        "Control operativo"
+      ],
+      [
+        "Cadena de frío",
+        "Cuando aplica"
+      ],
+      [
+        "Documentación",
+        "Cumplimiento"
+      ],
+      [
+        "Carga sensible",
+        "Manejo especializado"
+      ]
+    ],
+    "overviewEyebrow": "Logística sanitaria",
+    "overviewTitle": "Control, cumplimiento y trazabilidad para mercancía sensible.",
+    "overviewText": "El sector farmacéutico y sanitario exige precisión documental, seguridad, control de condiciones y continuidad. Diseñamos operaciones para proteger productos críticos de origen a destino.",
+    "overviewButton": "Conocer más sobre sanitario",
+    "pillars": [
+      [
+        "Cumplimiento documental",
+        "Gestión de requisitos comerciales, sanitarios y aduaneros."
+      ],
+      [
+        "Control de condiciones",
+        "Coordinación de temperatura, manipulación y tiempos cuando aplica."
+      ],
+      [
+        "Trazabilidad",
+        "Seguimiento operativo para mantener visibilidad en cada etapa."
+      ],
+      [
+        "Entrega segura",
+        "Coordinación final para reducir riesgos y asegurar recepción."
+      ]
+    ],
+    "servicesEyebrow": "Soluciones farmacéuticas y sanitarias",
+    "servicesTitle": "Operaciones para productos críticos y sensibles.",
+    "services": [
+      [
+        "Carga pharma",
+        "Transporte para productos farmacéuticos y sanitarios."
       ],
       [
         "Temperatura controlada",
-        "Coordinación de cadena de frío y rangos térmicos para mercancía sensible o regulada.",
+        "Soluciones para productos que requieren rangos térmicos."
       ],
       [
         "Dispositivos médicos",
-        "Transporte y distribución de equipos sanitarios, dispositivos médicos y material clínico.",
+        "Coordinación para equipos, insumos y productos sanitarios."
       ],
+      [
+        "Importación y exportación",
+        "Soporte documental y aduanero para comercio sanitario."
+      ],
+      [
+        "Almacenaje sensible",
+        "Gestión de stock y preparación bajo control operativo."
+      ],
+      [
+        "Door to door",
+        "Coordinación completa hasta entrega final."
+      ]
+    ],
+    "useCasesEyebrow": "Cuándo necesita logística sanitaria",
+    "useCasesTitle": "Cuando el producto exige control, cumplimiento y cuidado.",
+    "useCases": [
+      [
+        "Productos farmacéuticos",
+        "Mercancía crítica con requisitos específicos."
+      ],
+      [
+        "Dispositivos médicos",
+        "Equipos, insumos y productos sanitarios."
+      ],
+      [
+        "Muestras clínicas",
+        "Envíos sensibles con trazabilidad."
+      ],
+      [
+        "Cadena de frío",
+        "Productos que requieren control térmico."
+      ],
+      [
+        "Importadores sanitarios",
+        "Operaciones internacionales reguladas."
+      ],
+      [
+        "Distribución sanitaria",
+        "Entregas a centros, laboratorios o clientes B2B."
+      ]
+    ],
+    "processEyebrow": "Nuestro proceso operativo",
+    "processTitle": "Una operación sanitaria clara desde la validación inicial.",
+    "process": [
+      [
+        "Análisis del producto",
+        "Revisamos sensibilidad, requisitos y condiciones."
+      ],
+      [
+        "Diseño logístico",
+        "Definimos modalidad, tiempos y controles."
+      ],
+      [
+        "Documentación",
+        "Coordinamos requisitos sanitarios, comerciales y aduaneros."
+      ],
+      [
+        "Preparación",
+        "Gestionamos retiro, acondicionamiento y salida."
+      ],
+      [
+        "Seguimiento",
+        "Monitoreamos avance y condiciones operativas."
+      ],
+      [
+        "Entrega final",
+        "Coordinamos recepción y cierre seguro."
+      ]
+    ],
+    "bandTitle": "Logística sanitaria diseñada para productos que no pueden perder control.",
+    "bandText": "Nuestro equipo coordina operaciones para empresas que necesitan cumplimiento, trazabilidad y respuesta profesional en productos farmacéuticos y sanitarios.",
+    "stats": [
+      [
+        "Cumplimiento",
+        "Documentación y control"
+      ],
+      [
+        "Trazabilidad",
+        "Seguimiento operativo"
+      ],
+      [
+        "Carga sensible",
+        "Manejo especializado"
+      ],
+      [
+        "Soporte experto",
+        "Especialistas dedicados"
+      ]
+    ],
+    "finalTitle": "Coordinemos su próxima operación sanitaria.",
+    "finalText": "Cuéntenos tipo de producto, requisitos, origen, destino y urgencia. Nuestro equipo analizará la mejor solución logística.",
+    "finalPrimary": "Solicitar propuesta sanitaria",
+    "finalSecondary": "Hablar con un especialista"
+  },
+  "en": {
+    "heroEyebrow": "Sector farmacéutico y sanitario",
+    "heroTitle": "Logística sanitaria para productos que no admiten errores.",
+    "heroText": "Coordinamos operaciones para productos farmacéuticos, sanitarios, médicos y sensibles, integrando control documental, trazabilidad, cadena de frío cuando aplica y seguimiento operativo.",
+    "primaryCta": "Solicitar cotización",
+    "secondaryCta": "Hablar con un especialista",
+    "activeLabel": "Operación sanitaria activa",
+    "activeRoute": "Laboratorio → Destino",
+    "activeCargo": "Producto sensible",
+    "activeStatusLabel": "Estado:",
+    "activeStatus": "En control",
+    "activeEtaLabel": "Prioridad:",
+    "activeEta": "Alta seguridad",
+    "trust": [
+      [
+        "Trazabilidad",
+        "Control operativo"
+      ],
+      [
+        "Cadena de frío",
+        "Cuando aplica"
+      ],
+      [
+        "Documentación",
+        "Cumplimiento"
+      ],
+      [
+        "Carga sensible",
+        "Manejo especializado"
+      ]
+    ],
+    "overviewEyebrow": "Logística sanitaria",
+    "overviewTitle": "Control, cumplimiento y trazabilidad para mercancía sensible.",
+    "overviewText": "El sector farmacéutico y sanitario exige precisión documental, seguridad, control de condiciones y continuidad. Diseñamos operaciones para proteger productos críticos de origen a destino.",
+    "overviewButton": "Conocer más sobre sanitario",
+    "pillars": [
       [
         "Cumplimiento documental",
-        "Control de documentación, permisos, requisitos regulatorios y trazabilidad asociada a cada operación.",
+        "Gestión de requisitos comerciales, sanitarios y aduaneros."
       ],
       [
-        "Trazabilidad operativa",
-        "Seguimiento de mercancía crítica, visibilidad logística y control durante toda la cadena.",
+        "Control de condiciones",
+        "Coordinación de temperatura, manipulación y tiempos cuando aplica."
       ],
       [
-        "Operaciones urgentes",
-        "Soluciones prioritarias para envíos sanitarios de alta criticidad, reposiciones o entregas sensibles.",
+        "Trazabilidad",
+        "Seguimiento operativo para mantener visibilidad en cada etapa."
       ],
+      [
+        "Entrega segura",
+        "Coordinación final para reducir riesgos y asegurar recepción."
+      ]
     ],
-
-    ctaEyebrow: "FARMACÉUTICO Y SANITARIO",
-    ctaTitle: "Planifique su operación sanitaria con un equipo especializado.",
-    ctaText:
-      "Analizamos tipo de producto, rango de temperatura, origen, destino, documentación, criticidad, normativa y tiempos de entrega para construir una solución segura, eficiente y trazable.",
-    ctaPrimary: "Evaluar operación sanitaria",
-    ctaSecondary: "Ver oficinas",
-  },
-
-  en: {
-    eyebrow: "PHARMA & HEALTHCARE LOGISTICS",
-    title: "Pharma and healthcare logistics with traceability, compliance and operational control.",
-    description:
-      "We coordinate domestic and international operations for pharmaceutical products, healthcare goods, medical devices, sensitive materials and supply chains requiring documentation control, temperature, security and visibility from origin to destination.",
-    primary: "Request pharma solution",
-    secondary: "Talk to a specialist",
-
-    blockEyebrow: "SPECIALIZED PHARMA OPERATIONS",
-    blockTitle: "Secure logistics for critical and regulated products.",
-    blockText:
-      "We design solutions for the pharmaceutical and healthcare sector by integrating transport, temperature control, warehousing, distribution, documentation management, traceability and regulatory compliance.",
-
-    servicesIntro:
-      "Solutions for healthcare operations requiring precision, documentation, thermal control, security and continuous tracking.",
-    servicesTitle: "Logistics services for pharma, healthcare and medical supply chains.",
-
-    services: [
+    "servicesEyebrow": "Soluciones farmacéuticas y sanitarias",
+    "servicesTitle": "Operaciones para productos críticos y sensibles.",
+    "services": [
       [
-        "Pharmaceutical cargo",
-        "Specialized management for medical, pharmaceutical and healthcare products with specific operational and documentation requirements.",
+        "Carga pharma",
+        "Transporte para productos farmacéuticos y sanitarios."
       ],
       [
-        "Temperature control",
-        "Cold chain and temperature range coordination for sensitive or regulated cargo.",
+        "Temperatura controlada",
+        "Soluciones para productos que requieren rangos térmicos."
       ],
       [
-        "Medical devices",
-        "Transport and distribution of healthcare equipment, medical devices and clinical materials.",
+        "Dispositivos médicos",
+        "Coordinación para equipos, insumos y productos sanitarios."
       ],
       [
-        "Documentation compliance",
-        "Control of documents, permits, regulatory requirements and traceability associated with each operation.",
+        "Importación y exportación",
+        "Soporte documental y aduanero para comercio sanitario."
       ],
       [
-        "Operational traceability",
-        "Critical cargo tracking, logistics visibility and control throughout the full chain.",
+        "Almacenaje sensible",
+        "Gestión de stock y preparación bajo control operativo."
       ],
       [
-        "Urgent operations",
-        "Priority solutions for highly critical healthcare shipments, replenishments or sensitive deliveries.",
-      ],
+        "Door to door",
+        "Coordinación completa hasta entrega final."
+      ]
     ],
-
-    ctaEyebrow: "PHARMA & HEALTHCARE",
-    ctaTitle: "Plan your healthcare operation with a specialized team.",
-    ctaText:
-      "We analyze product type, temperature range, origin, destination, documentation, criticality, regulations and delivery timing to build a safe, efficient and traceable solution.",
-    ctaPrimary: "Evaluate healthcare operation",
-    ctaSecondary: "View offices",
-  },
-
-  zh: {
-    eyebrow: "医药与医疗物流",
-    title: "具备可追溯性、合规能力与运营控制的医药医疗物流。",
-    description:
-      "我们为药品、医疗产品、医疗器械、敏感材料以及需要文件控制、温度、安全和全程可视化的供应链协调国内与国际物流业务。",
-    primary: "申请医药物流方案",
-    secondary: "联系专家",
-
-    blockEyebrow: "专业医药物流运营",
-    blockTitle: "面向关键与受监管产品的安全物流。",
-    blockText:
-      "我们为医药与医疗行业设计物流方案，整合运输、温控、仓储、配送、文件管理、可追溯性和法规合规。",
-
-    servicesIntro:
-      "为需要精准、文件、温控、安全和持续跟踪的医疗物流业务打造解决方案。",
-    servicesTitle: "面向医药、医疗和卫生供应链的物流服务。",
-
-    services: [
+    "useCasesEyebrow": "Cuándo necesita logística sanitaria",
+    "useCasesTitle": "Cuando el producto exige control, cumplimiento y cuidado.",
+    "useCases": [
       [
-        "医药货运",
-        "为医疗、医药与卫生产品提供专业管理，满足特定运营和文件要求。",
+        "Productos farmacéuticos",
+        "Mercancía crítica con requisitos específicos."
       ],
       [
-        "温度控制",
-        "为敏感或受监管货物协调冷链与温度范围控制。",
+        "Dispositivos médicos",
+        "Equipos, insumos y productos sanitarios."
       ],
       [
-        "医疗器械",
-        "运输和配送医疗设备、医疗器械与临床材料。",
+        "Muestras clínicas",
+        "Envíos sensibles con trazabilidad."
       ],
       [
-        "文件合规",
-        "控制文件、许可、监管要求以及每项操作相关的可追溯性。",
+        "Cadena de frío",
+        "Productos que requieren control térmico."
       ],
       [
-        "运营追踪",
-        "在整个链路中对关键货物进行跟踪、物流可视化和控制。",
+        "Importadores sanitarios",
+        "Operaciones internacionales reguladas."
       ],
       [
-        "紧急运输",
-        "为高关键性医疗货物、补货或敏感交付提供优先解决方案。",
-      ],
+        "Distribución sanitaria",
+        "Entregas a centros, laboratorios o clientes B2B."
+      ]
     ],
-
-    ctaEyebrow: "医药与医疗",
-    ctaTitle: "与专业团队一起规划您的医疗物流操作。",
-    ctaText:
-      "我们分析产品类型、温度范围、始发地、目的地、文件、关键程度、法规和交付时效，为您构建安全、高效且可追溯的方案。",
-    ctaPrimary: "评估医疗物流操作",
-    ctaSecondary: "查看办公室",
+    "processEyebrow": "Nuestro proceso operativo",
+    "processTitle": "Una operación sanitaria clara desde la validación inicial.",
+    "process": [
+      [
+        "Análisis del producto",
+        "Revisamos sensibilidad, requisitos y condiciones."
+      ],
+      [
+        "Diseño logístico",
+        "Definimos modalidad, tiempos y controles."
+      ],
+      [
+        "Documentación",
+        "Coordinamos requisitos sanitarios, comerciales y aduaneros."
+      ],
+      [
+        "Preparación",
+        "Gestionamos retiro, acondicionamiento y salida."
+      ],
+      [
+        "Seguimiento",
+        "Monitoreamos avance y condiciones operativas."
+      ],
+      [
+        "Entrega final",
+        "Coordinamos recepción y cierre seguro."
+      ]
+    ],
+    "bandTitle": "Logística sanitaria diseñada para productos que no pueden perder control.",
+    "bandText": "Nuestro equipo coordina operaciones para empresas que necesitan cumplimiento, trazabilidad y respuesta profesional en productos farmacéuticos y sanitarios.",
+    "stats": [
+      [
+        "Cumplimiento",
+        "Documentación y control"
+      ],
+      [
+        "Trazabilidad",
+        "Seguimiento operativo"
+      ],
+      [
+        "Carga sensible",
+        "Manejo especializado"
+      ],
+      [
+        "Soporte experto",
+        "Especialistas dedicados"
+      ]
+    ],
+    "finalTitle": "Coordinemos su próxima operación sanitaria.",
+    "finalText": "Cuéntenos tipo de producto, requisitos, origen, destino y urgencia. Nuestro equipo analizará la mejor solución logística.",
+    "finalPrimary": "Solicitar propuesta sanitaria",
+    "finalSecondary": "Hablar con un especialista"
   },
-} as const;
+  "zh": {
+    "heroEyebrow": "Sector farmacéutico y sanitario",
+    "heroTitle": "Logística sanitaria para productos que no admiten errores.",
+    "heroText": "Coordinamos operaciones para productos farmacéuticos, sanitarios, médicos y sensibles, integrando control documental, trazabilidad, cadena de frío cuando aplica y seguimiento operativo.",
+    "primaryCta": "Solicitar cotización",
+    "secondaryCta": "Hablar con un especialista",
+    "activeLabel": "Operación sanitaria activa",
+    "activeRoute": "Laboratorio → Destino",
+    "activeCargo": "Producto sensible",
+    "activeStatusLabel": "Estado:",
+    "activeStatus": "En control",
+    "activeEtaLabel": "Prioridad:",
+    "activeEta": "Alta seguridad",
+    "trust": [
+      [
+        "Trazabilidad",
+        "Control operativo"
+      ],
+      [
+        "Cadena de frío",
+        "Cuando aplica"
+      ],
+      [
+        "Documentación",
+        "Cumplimiento"
+      ],
+      [
+        "Carga sensible",
+        "Manejo especializado"
+      ]
+    ],
+    "overviewEyebrow": "Logística sanitaria",
+    "overviewTitle": "Control, cumplimiento y trazabilidad para mercancía sensible.",
+    "overviewText": "El sector farmacéutico y sanitario exige precisión documental, seguridad, control de condiciones y continuidad. Diseñamos operaciones para proteger productos críticos de origen a destino.",
+    "overviewButton": "Conocer más sobre sanitario",
+    "pillars": [
+      [
+        "Cumplimiento documental",
+        "Gestión de requisitos comerciales, sanitarios y aduaneros."
+      ],
+      [
+        "Control de condiciones",
+        "Coordinación de temperatura, manipulación y tiempos cuando aplica."
+      ],
+      [
+        "Trazabilidad",
+        "Seguimiento operativo para mantener visibilidad en cada etapa."
+      ],
+      [
+        "Entrega segura",
+        "Coordinación final para reducir riesgos y asegurar recepción."
+      ]
+    ],
+    "servicesEyebrow": "Soluciones farmacéuticas y sanitarias",
+    "servicesTitle": "Operaciones para productos críticos y sensibles.",
+    "services": [
+      [
+        "Carga pharma",
+        "Transporte para productos farmacéuticos y sanitarios."
+      ],
+      [
+        "Temperatura controlada",
+        "Soluciones para productos que requieren rangos térmicos."
+      ],
+      [
+        "Dispositivos médicos",
+        "Coordinación para equipos, insumos y productos sanitarios."
+      ],
+      [
+        "Importación y exportación",
+        "Soporte documental y aduanero para comercio sanitario."
+      ],
+      [
+        "Almacenaje sensible",
+        "Gestión de stock y preparación bajo control operativo."
+      ],
+      [
+        "Door to door",
+        "Coordinación completa hasta entrega final."
+      ]
+    ],
+    "useCasesEyebrow": "Cuándo necesita logística sanitaria",
+    "useCasesTitle": "Cuando el producto exige control, cumplimiento y cuidado.",
+    "useCases": [
+      [
+        "Productos farmacéuticos",
+        "Mercancía crítica con requisitos específicos."
+      ],
+      [
+        "Dispositivos médicos",
+        "Equipos, insumos y productos sanitarios."
+      ],
+      [
+        "Muestras clínicas",
+        "Envíos sensibles con trazabilidad."
+      ],
+      [
+        "Cadena de frío",
+        "Productos que requieren control térmico."
+      ],
+      [
+        "Importadores sanitarios",
+        "Operaciones internacionales reguladas."
+      ],
+      [
+        "Distribución sanitaria",
+        "Entregas a centros, laboratorios o clientes B2B."
+      ]
+    ],
+    "processEyebrow": "Nuestro proceso operativo",
+    "processTitle": "Una operación sanitaria clara desde la validación inicial.",
+    "process": [
+      [
+        "Análisis del producto",
+        "Revisamos sensibilidad, requisitos y condiciones."
+      ],
+      [
+        "Diseño logístico",
+        "Definimos modalidad, tiempos y controles."
+      ],
+      [
+        "Documentación",
+        "Coordinamos requisitos sanitarios, comerciales y aduaneros."
+      ],
+      [
+        "Preparación",
+        "Gestionamos retiro, acondicionamiento y salida."
+      ],
+      [
+        "Seguimiento",
+        "Monitoreamos avance y condiciones operativas."
+      ],
+      [
+        "Entrega final",
+        "Coordinamos recepción y cierre seguro."
+      ]
+    ],
+    "bandTitle": "Logística sanitaria diseñada para productos que no pueden perder control.",
+    "bandText": "Nuestro equipo coordina operaciones para empresas que necesitan cumplimiento, trazabilidad y respuesta profesional en productos farmacéuticos y sanitarios.",
+    "stats": [
+      [
+        "Cumplimiento",
+        "Documentación y control"
+      ],
+      [
+        "Trazabilidad",
+        "Seguimiento operativo"
+      ],
+      [
+        "Carga sensible",
+        "Manejo especializado"
+      ],
+      [
+        "Soporte experto",
+        "Especialistas dedicados"
+      ]
+    ],
+    "finalTitle": "Coordinemos su próxima operación sanitaria.",
+    "finalText": "Cuéntenos tipo de producto, requisitos, origen, destino y urgencia. Nuestro equipo analizará la mejor solución logística.",
+    "finalPrimary": "Solicitar propuesta sanitaria",
+    "finalSecondary": "Hablar con un especialista"
+  }
+} satisfies Record<Locale, any>;
 
 function getInitialLocale(): Locale {
   if (typeof window === "undefined") return "es";
@@ -181,6 +513,230 @@ function getInitialLocale(): Locale {
   if (htmlLang === "en" || htmlLang === "zh" || htmlLang === "es") return htmlLang;
 
   return "es";
+}
+
+type IconName =
+  | "timer"
+  | "shield"
+  | "document"
+  | "tracking"
+  | "airport"
+  | "box"
+  | "plane"
+  | "diamond"
+  | "charter"
+  | "globe"
+  | "door"
+  | "gear"
+  | "laptop"
+  | "medical"
+  | "cart"
+  | "search"
+  | "route"
+  | "package"
+  | "truck"
+  | "headset";
+
+function Icon({ name }: { name: IconName }) {
+  const common = {
+    width: 38,
+    height: 38,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 1.7,
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
+    "aria-hidden": true,
+  };
+
+  switch (name) {
+    case "timer":
+      return (
+        <svg {...common}>
+          <path d="M12 8v5l3 2" />
+          <path d="M9 2h6" />
+          <path d="M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16Z" />
+        </svg>
+      );
+
+    case "shield":
+      return (
+        <svg {...common}>
+          <path d="M12 3 5 6v5c0 4.4 2.8 8.3 7 10 4.2-1.7 7-5.6 7-10V6l-7-3Z" />
+          <path d="m9.5 12 1.8 1.8 3.7-4" />
+        </svg>
+      );
+
+    case "document":
+      return (
+        <svg {...common}>
+          <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z" />
+          <path d="M14 3v5h5" />
+          <path d="M8 13h8" />
+          <path d="M8 17h6" />
+        </svg>
+      );
+
+    case "tracking":
+      return (
+        <svg {...common}>
+          <path d="M12 21s7-5.2 7-11a7 7 0 0 0-14 0c0 5.8 7 11 7 11Z" />
+          <circle cx="12" cy="10" r="2.3" />
+        </svg>
+      );
+
+    case "airport":
+      return (
+        <svg {...common}>
+          <path d="M3 19h18" />
+          <path d="M5 19V9h14v10" />
+          <path d="M7 12h2" />
+          <path d="M11 12h2" />
+          <path d="M15 12h2" />
+          <path d="M8 19v-4h8v4" />
+          <path d="M4 9h16" />
+          <path d="M9 6h6" />
+          <path d="M12 3v3" />
+          <path d="M2.8 6.8 8.5 5.2" />
+          <path d="m15.5 5.2 5.7 1.6" />
+        </svg>
+      );
+
+    case "box":
+      return (
+        <svg {...common}>
+          <path d="m21 8-9-5-9 5 9 5 9-5Z" />
+          <path d="M3 8v8l9 5 9-5V8" />
+          <path d="M12 13v8" />
+        </svg>
+      );
+
+    case "plane":
+      return (
+        <svg {...common}>
+          <path d="M10.5 13.5 3 21l2.8-8.2L3 10l9 1 5.7-5.7a2.1 2.1 0 0 1 3 3L15 14l1 9-2.8-2.8L5 23l7.5-7.5" />
+        </svg>
+      );
+
+    case "diamond":
+      return (
+        <svg {...common}>
+          <path d="M6 3h12l4 6-10 12L2 9l4-6Z" />
+          <path d="M2 9h20" />
+          <path d="m9 3 3 6 3-6" />
+          <path d="m8 9 4 12 4-12" />
+        </svg>
+      );
+
+    case "charter":
+      return (
+        <svg {...common}>
+          <path d="M2 16 22 7l-7 10-4-4-4 7-2-2 3-6-6 4Z" />
+        </svg>
+      );
+
+    case "globe":
+      return (
+        <svg {...common}>
+          <circle cx="12" cy="12" r="9" />
+          <path d="M3 12h18" />
+          <path d="M12 3c2.3 2.5 3.5 5.5 3.5 9S14.3 18.5 12 21" />
+          <path d="M12 3c-2.3 2.5-3.5 5.5-3.5 9s1.2 6.5 3.5 9" />
+        </svg>
+      );
+
+    case "door":
+      return (
+        <svg {...common}>
+          <path d="M6 21V4a1 1 0 0 1 1-1h10v18" />
+          <path d="M10 12h.01" />
+          <path d="M4 21h16" />
+        </svg>
+      );
+
+    case "gear":
+      return (
+        <svg {...common}>
+          <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" />
+          <path d="M19.4 15a1.8 1.8 0 0 0 .36 2l.05.05a2 2 0 1 1-2.83 2.83l-.05-.05a1.8 1.8 0 0 0-2-.36 1.8 1.8 0 0 0-1 1.63V21a2 2 0 1 1-4 0v-.07a1.8 1.8 0 0 0-1-1.63 1.8 1.8 0 0 0-2 .36l-.05.05a2 2 0 1 1-2.83-2.83l.05-.05a1.8 1.8 0 0 0 .36-2 1.8 1.8 0 0 0-1.63-1H3a2 2 0 1 1 0-4h.07a1.8 1.8 0 0 0 1.63-1 1.8 1.8 0 0 0-.36-2l-.05-.05A2 2 0 1 1 7.12 3.95l.05.05a1.8 1.8 0 0 0 2 .36 1.8 1.8 0 0 0 1-1.63V3a2 2 0 1 1 4 0v.07a1.8 1.8 0 0 0 1 1.63 1.8 1.8 0 0 0 2-.36l.05-.05a2 2 0 1 1 2.83 2.83l-.05.05a1.8 1.8 0 0 0-.36 2 1.8 1.8 0 0 0 1.63 1H21a2 2 0 1 1 0 4h-.07a1.8 1.8 0 0 0-1.53 1Z" />
+        </svg>
+      );
+
+    case "laptop":
+      return (
+        <svg {...common}>
+          <path d="M5 5h14v10H5z" />
+          <path d="M3 19h18" />
+          <path d="M8 19h8" />
+        </svg>
+      );
+
+    case "medical":
+      return (
+        <svg {...common}>
+          <path d="M12 5v14" />
+          <path d="M5 12h14" />
+          <path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z" />
+        </svg>
+      );
+
+    case "cart":
+      return (
+        <svg {...common}>
+          <path d="M6 6h15l-2 8H8L6 3H3" />
+          <circle cx="9" cy="20" r="1" />
+          <circle cx="18" cy="20" r="1" />
+        </svg>
+      );
+
+    case "search":
+      return (
+        <svg {...common}>
+          <circle cx="10.5" cy="10.5" r="6.5" />
+          <path d="m16 16 5 5" />
+        </svg>
+      );
+
+    case "route":
+      return (
+        <svg {...common}>
+          <path d="M4 6h8a4 4 0 0 1 0 8H9a4 4 0 0 0 0 8h11" />
+          <path d="M4 6l3-3" />
+          <path d="M4 6l3 3" />
+        </svg>
+      );
+
+    case "package":
+      return (
+        <svg {...common}>
+          <path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5v-9Z" />
+          <path d="M12 12 4 7.5" />
+          <path d="M12 12v9" />
+          <path d="m12 12 8-4.5" />
+        </svg>
+      );
+
+    case "truck":
+      return (
+        <svg {...common}>
+          <path d="M3 7h11v9H3z" />
+          <path d="M14 10h4l3 3v3h-7z" />
+          <circle cx="7" cy="18" r="2" />
+          <circle cx="18" cy="18" r="2" />
+        </svg>
+      );
+
+    case "headset":
+      return (
+        <svg {...common}>
+          <path d="M4 13a8 8 0 0 1 16 0" />
+          <path d="M4 13v4a2 2 0 0 0 2 2h2v-7H6a2 2 0 0 0-2 2Z" />
+          <path d="M20 13v4a2 2 0 0 1-2 2h-2v-7h2a2 2 0 0 1 2 2Z" />
+          <path d="M16 19c0 1.1-.9 2-2 2h-2" />
+        </svg>
+      );
+  }
 }
 
 export default function FarmaceuticoSanitarioPage() {
@@ -227,82 +783,228 @@ export default function FarmaceuticoSanitarioPage() {
   const t = copy[locale];
 
   return (
-    <div className={styles.page}>
+    <div className="page-shell">
       <Header />
 
-      <section className={styles.hero}>
-        <Image
-          src="/images/sectores/herofarmaceutico2.png"
-          alt={t.title}
-          fill
-          priority
-          className={styles.heroImage}
-          sizes="100vw"
-        />
-        <div className={styles.heroOverlay} />
+      <main className={styles.page}>
+        <section className={styles.hero}>
+          <Image
+            src="/images/sectores/herofarmaseutico.png"
+            alt={t.heroTitle}
+            fill
+            priority
+            sizes="(max-width: 900px) 0px, 100vw"
+            className={`${styles.heroImage} ${styles.heroImageDesktop}`}
+          />
 
-        <div className={styles.heroContent}>
-          <span>{t.eyebrow}</span>
-          <h1>{t.title}</h1>
-          <p>{t.description}</p>
+          <Image
+            src="/images/sectores/herofarmaceutico2.png"
+            alt={t.heroTitle}
+            fill
+            priority
+            sizes="(max-width: 900px) 100vw, 0px"
+            className={`${styles.heroImage} ${styles.heroImageMobile}`}
+          />
 
-          <div className={styles.actions}>
-            <Link href="/cotizacion">{t.primary}</Link>
-            <Link href="/contacto">{t.secondary}</Link>
+          <div className={styles.heroOverlay} />
+
+          <div className={styles.heroInner}>
+            <div className={styles.heroContent}>
+              <span className={styles.eyebrow}>{t.heroEyebrow}</span>
+              <h1>{t.heroTitle}</h1>
+              <p>{t.heroText}</p>
+
+              <div className={styles.actions}>
+                <Link href="/cotizacion">{t.primaryCta}</Link>
+                <Link href="/contacto">{t.secondaryCta}</Link>
+              </div>
+            </div>
+
+            <div className={styles.operationCard}>
+              <span>{t.activeLabel}</span>
+              <strong>{t.activeRoute}</strong>
+              <p>{t.activeCargo}</p>
+
+              <div>
+                <small>{t.activeStatusLabel}</small>
+                <b>{t.activeStatus}</b>
+              </div>
+
+              <div>
+                <small>{t.activeEtaLabel}</small>
+                <em>{t.activeEta}</em>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <Certifications />
-
-      <main className={styles.content}>
-        <section className={styles.block}>
-          <span>{t.blockEyebrow}</span>
-          <h2>{t.blockTitle}</h2>
-          <p>{t.blockText}</p>
         </section>
 
-        <section className={styles.servicesPanel}>
-          <div className={styles.servicesCopy}>
-            <p>{t.servicesIntro}</p>
-            <h2>{t.servicesTitle}</h2>
+        <section className={styles.trustBar}>
+          {t.trust.map(([title, text]: string[], index: number) => {
+            const icons: IconName[] = ["shield", "package", "document", "tracking", "globe", "door"];
 
-            <div className={styles.accordion}>
-              {t.services.map(([title, description]: readonly [string, string]) => (
-                <details key={title} className={styles.serviceItem}>
-                  <summary>
-                    <h3>{title}</h3>
-                    <span>+</span>
-                  </summary>
-                  <p>{description}</p>
-                </details>
+            return (
+              <div key={title}>
+                <i>
+                  <Icon name={icons[index]} />
+                </i>
+                <span>
+                  <strong>{title}</strong>
+                  <small>{text}</small>
+                </span>
+              </div>
+            );
+          })}
+        </section>
+
+        <Certifications />
+
+        <section className={styles.overview}>
+          <div className={styles.overviewCopy}>
+            <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
+            <h2>{t.overviewTitle}</h2>
+            <p>{t.overviewText}</p>
+            <Link href="/contacto">{t.overviewButton}</Link>
+          </div>
+
+          <div className={styles.pillars}>
+            {t.pillars.map(([title, text]: string[], index: number) => {
+              const icons: IconName[] = ["search", "package", "document", "route", "tracking", "truck"];
+
+              return (
+                <article key={title}>
+                  <i>
+                    <Icon name={icons[index]} />
+                  </i>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
+        <section className={styles.services}>
+          <div className={styles.sectionHead}>
+            <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
+            <h2>{t.servicesTitle}</h2>
+          </div>
+
+          <div className={styles.serviceGrid}>
+            {t.services.map(([title, text]: string[], index: number) => {
+              const icons: IconName[] = ["plane", "box", "diamond", "charter", "globe", "door"];
+
+              return (
+                <article key={title}>
+                  <i>
+                    <Icon name={icons[index]} />
+                  </i>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
+        <section className={styles.useCases}>
+          <div className={styles.sectionHead}>
+            <span className={styles.eyebrow}>{t.useCasesEyebrow}</span>
+            <h2>{t.useCasesTitle}</h2>
+          </div>
+
+          <div className={styles.useCaseGrid}>
+            {t.useCases.map(([title, text]: string[], index: number) => {
+              const icons: IconName[] = ["gear", "laptop", "package", "medical", "cart", "document"];
+
+              return (
+                <article key={title}>
+                  <i>
+                    <Icon name={icons[index]} />
+                  </i>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
+        <section className={styles.process}>
+          <div className={styles.sectionHead}>
+            <span className={styles.eyebrow}>{t.processEyebrow}</span>
+            <h2>{t.processTitle}</h2>
+          </div>
+
+          <div className={styles.processGrid}>
+            {t.process.map(([title, text]: string[], index: number) => {
+              const icons: IconName[] = ["search", "route", "document", "plane", "tracking", "truck"];
+
+              return (
+                <article key={title}>
+                  <strong>{index + 1}</strong>
+                  <i>
+                    <Icon name={icons[index]} />
+                  </i>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
+        <section className={styles.darkBand}>
+          <div className={styles.darkBandImage}>
+            <Image
+              src="/images/sectores/herofarmaceutico2.png"
+              alt={t.bandTitle}
+              fill
+              sizes="(max-width: 900px) 100vw, 42vw"
+            />
+          </div>
+
+          <div className={styles.darkBandContent}>
+            <h2>{t.bandTitle}</h2>
+            <p>{t.bandText}</p>
+
+            <div className={styles.stats}>
+              {t.stats.map(([value, label]: string[]) => (
+                <article key={value}>
+                  <strong>{value}</strong>
+                  <span>{label}</span>
+                </article>
               ))}
+            </div>
+
+            <div className={styles.darkBandActions}>
+              <Link href="/cotizacion">{t.finalPrimary}</Link>
+              <Link href="/contacto">{t.finalSecondary}</Link>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.finalCta}>
+          <div>
+            <h2>{t.finalTitle}</h2>
+            <p>{t.finalText}</p>
+
+            <div className={styles.finalActions}>
+              <Link href="/cotizacion">{t.finalPrimary}</Link>
+              <Link href="/contacto">{t.finalSecondary}</Link>
             </div>
           </div>
 
-          <div className={styles.servicesImageWrap}>
+          <div className={styles.finalImage}>
             <Image
               src="/images/sectores/herofarmaseutico.png"
-              alt={t.servicesTitle}
+              alt={t.finalTitle}
               fill
-              className={styles.servicesImage}
-              sizes="(max-width: 900px) 100vw, 50vw"
+              sizes="(max-width: 900px) 100vw, 44vw"
             />
           </div>
         </section>
 
-        <section className={styles.compactCta}>
-          <div>
-            <span>{t.ctaEyebrow}</span>
-            <h2>{t.ctaTitle}</h2>
-            <p>{t.ctaText}</p>
-          </div>
-
-          <div className={styles.compactCtaActions}>
-            <Link href="/cotizacion">{t.ctaPrimary}</Link>
-            <Link href="/empresa/oficinas">{t.ctaSecondary}</Link>
-          </div>
-        </section>
+        <RelatedServices current="e-commerce" locale={locale} />
       </main>
 
       <Footer />

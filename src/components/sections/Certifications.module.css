@@ -1,7 +1,7 @@
 .section{
   position:relative;
   margin:0;
-  padding:6px 0 0;
+  padding:4px 0 0;
   background:#fbfaf7;
   overflow:hidden;
 }
@@ -9,14 +9,14 @@
 .head{
   width:100%;
   margin:0;
-  padding:0 12px 3px;
+  padding:0 12px 1px;
   text-align:center;
 }
 
 .head span{
   display:block;
   color:#b68a42;
-  font-size:.58rem;
+  font-size:.50rem;
   font-weight:700;
   letter-spacing:.30em;
   text-transform:uppercase;
@@ -31,7 +31,7 @@
 .imageWrap{
   position:relative;
   width:100%;
-  height:96px;
+  height:64px;
   margin:0;
   padding:0;
   overflow:hidden;
@@ -72,20 +72,20 @@
 
 @media (min-width: 769px){
   .section{
-    padding-top:8px;
+    padding-top:6px;
   }
 
   .head{
-    padding-bottom:4px;
+    padding-bottom:2px;
   }
 
   .head span{
-    font-size:.68rem;
+    font-size:.50rem;
     letter-spacing:.34em;
   }
 
   .imageWrap{
-    height:164px;
+    height:72px;
   }
 
   .image{
@@ -101,6 +101,6 @@
   }
 
   .imageWrap{
-    height: 72px !important;
+    height: 54px !important;
   }
 }

@@ -1,196 +1,504 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import Image from "next/image";
+import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
-import styles from "../../servicios/_shared/ServicePage.module.css";
+import RelatedServices from "@/app/servicios/_shared/RelatedServices";
+import styles from "./Servicio.module.css";
 
 type Locale = "es" | "en" | "zh";
 
 const copy = {
-  es: {
-    eyebrow: "CONSUMER & RETAIL LOGISTICS",
-    title: "Logística para consumo y distribución con eficiencia, control y escalabilidad.",
-    description:
-      "Coordinamos operaciones nacionales e internacionales para productos de consumo, retail, distribución mayorista, e-commerce y cadenas comerciales que requieren rapidez, visibilidad operativa y capacidad de respuesta.",
-    primary: "Solicitar solución de distribución",
-    secondary: "Hablar con un especialista",
-
-    blockEyebrow: "OPERACIÓN DE CONSUMO Y RETAIL",
-    blockTitle: "Logística flexible para cadenas de distribución exigentes.",
-    blockText:
-      "Diseñamos soluciones para empresas de consumo y distribución integrando almacenaje, preparación de pedidos, transporte, última milla, control de inventario, trazabilidad y coordinación nacional e internacional.",
-
-    servicesIntro:
-      "Integramos soluciones logísticas para cadenas comerciales que necesitan disponibilidad, velocidad, control operativo y cumplimiento en cada etapa.",
-    servicesTitle: "Servicios logísticos para consumo, retail y distribución.",
-
-    services: [
+  "es": {
+    "heroEyebrow": "Sector consumo y distribución",
+    "heroTitle": "Logística para productos de consumo que necesitan llegar a tiempo.",
+    "heroText": "Coordinamos transporte, almacenaje, preparación, distribución y trazabilidad para productos de consumo, retail, e-commerce y operaciones comerciales.",
+    "primaryCta": "Solicitar cotización",
+    "secondaryCta": "Hablar con un especialista",
+    "activeLabel": "Operación de distribución activa",
+    "activeRoute": "Almacén → Cliente",
+    "activeCargo": "Productos de consumo",
+    "activeStatusLabel": "Estado:",
+    "activeStatus": "En distribución",
+    "activeEtaLabel": "Salida:",
+    "activeEta": "Programada",
+    "trust": [
+      [
+        "Distribución",
+        "Entregas coordinadas"
+      ],
+      [
+        "Stock",
+        "Control operativo"
+      ],
+      [
+        "Retail",
+        "Puntos de venta"
+      ],
+      [
+        "Trazabilidad",
+        "Seguimiento"
+      ]
+    ],
+    "overviewEyebrow": "Logística de consumo",
+    "overviewTitle": "Operaciones flexibles para marcas, retail y distribución comercial.",
+    "overviewText": "El consumo exige velocidad, cobertura, preparación eficiente y capacidad para responder a picos de demanda. Diseñamos operaciones para mover mercancía con orden y visibilidad.",
+    "overviewButton": "Conocer más sobre consumo",
+    "pillars": [
+      [
+        "Gestión de stock",
+        "Control de inventario, entradas, salidas y disponibilidad."
+      ],
+      [
+        "Preparación de pedidos",
+        "Picking, packing y acondicionamiento según canal."
+      ],
+      [
+        "Distribución",
+        "Entregas a clientes, tiendas, centros o puntos de venta."
+      ],
+      [
+        "Trazabilidad",
+        "Seguimiento de estados, tiempos y avance operativo."
+      ]
+    ],
+    "servicesEyebrow": "Soluciones para consumo y distribución",
+    "servicesTitle": "Logística para productos que se mueven todos los días.",
+    "services": [
+      [
+        "Distribución nacional",
+        "Entregas regionales o nacionales para productos de consumo."
+      ],
+      [
+        "Almacenaje",
+        "Gestión de stock y disponibilidad."
+      ],
+      [
+        "Picking y packing",
+        "Preparación de pedidos para retail, B2B o e-commerce."
+      ],
+      [
+        "Retail logistics",
+        "Abastecimiento hacia puntos de venta y cadenas comerciales."
+      ],
       [
         "E-commerce",
-        "Almacenamiento, preparación de pedidos, envío y entrega apoyados en tecnología para mejorar tiempos, reducir costes y escalar operaciones.",
+        "Flujos de preparación y entrega para canal online."
       ],
       [
-        "Servicios de aduanas",
-        "Gestión documental, cumplimiento normativo y soporte operativo para importaciones y exportaciones.",
-      ],
-      [
-        "Carga de temperatura controlada",
-        "Transporte de productos refrigerados, congelados o perecederos bajo condiciones controladas.",
-      ],
-      [
-        "Cargas especiales e industriales",
-        "Gestión de operaciones complejas para mercancías que requieren planificación, manipulación o coordinación especializada.",
-      ],
-      [
-        "Transporte aéreo",
-        "Soluciones globales para envíos urgentes o de alta prioridad donde el tiempo es determinante.",
-      ],
-      [
-        "Transporte marítimo",
-        "Servicios marítimos para operaciones internacionales de alto volumen, distribución mayorista y cadenas de suministro globales.",
-      ],
-      [
-        "Transporte terrestre",
-        "Distribución terrestre flexible para entregas nacionales e internacionales con seguimiento operativo.",
-      ],
-      [
-        "Almacén y distribución",
-        "Soluciones de almacenamiento, gestión de stock, preparación de pedidos y distribución adaptadas a cada operación.",
-      ],
+        "Door to door",
+        "Coordinación completa hasta destino final."
+      ]
     ],
-
-    ctaEyebrow: "CONSUMO Y DISTRIBUCIÓN",
-    ctaTitle: "Escalemos su operación comercial con un equipo especializado.",
-    ctaText:
-      "Analizamos tipo de producto, volumen, rotación, canales de venta, destinos, tiempos de entrega y necesidades de distribución para construir una solución eficiente, medible y escalable.",
-    ctaPrimary: "Evaluar operación de distribución",
-    ctaSecondary: "Ver oficinas",
-  },
-
-  en: {
-    eyebrow: "CONSUMER & RETAIL LOGISTICS",
-    title: "Consumer and distribution logistics with efficiency, control and scalability.",
-    description:
-      "We coordinate domestic and international operations for consumer goods, retail, wholesale distribution, e-commerce and commercial supply chains requiring speed, operational visibility and responsiveness.",
-    primary: "Request distribution solution",
-    secondary: "Talk to a specialist",
-
-    blockEyebrow: "CONSUMER & RETAIL OPERATIONS",
-    blockTitle: "Flexible logistics for demanding distribution chains.",
-    blockText:
-      "We design solutions for consumer and distribution companies by integrating warehousing, order preparation, transport, last mile, inventory control, traceability and domestic or international coordination.",
-
-    servicesIntro:
-      "We integrate logistics solutions for commercial supply chains that need availability, speed, operational control and compliance at every stage.",
-    servicesTitle: "Logistics services for consumer goods, retail and distribution.",
-
-    services: [
+    "useCasesEyebrow": "Cuándo necesita logística de consumo",
+    "useCasesTitle": "Cuando la demanda exige orden, velocidad y cobertura.",
+    "useCases": [
+      [
+        "Retail",
+        "Entregas hacia tiendas y puntos comerciales."
+      ],
       [
         "E-commerce",
-        "Storage, order preparation, shipping and delivery supported by technology to improve speed, reduce costs and scale operations.",
+        "Preparación y distribución de pedidos online."
       ],
       [
-        "Customs services",
-        "Documentation management, regulatory compliance and operational support for imports and exports.",
+        "Campañas",
+        "Picos de demanda y promociones."
       ],
       [
-        "Temperature-controlled cargo",
-        "Transport of refrigerated, frozen or perishable goods under controlled conditions.",
+        "Stock estacional",
+        "Gestión de inventario por temporada."
       ],
       [
-        "Special and industrial cargo",
-        "Management of complex operations for goods requiring planning, handling or specialized coordination.",
+        "Distribución B2B",
+        "Entregas a clientes corporativos o mayoristas."
       ],
       [
-        "Air freight",
-        "Global solutions for urgent or high-priority shipments where time is decisive.",
-      ],
-      [
-        "Ocean freight",
-        "Ocean freight services for high-volume international operations, wholesale distribution and global supply chains.",
-      ],
-      [
-        "Road transport",
-        "Flexible road distribution for domestic and international deliveries with operational tracking.",
-      ],
-      [
-        "Warehousing and distribution",
-        "Storage, stock management, order preparation and distribution solutions adapted to each operation.",
-      ],
+        "Productos de alta rotación",
+        "Movimientos frecuentes y controlados."
+      ]
     ],
-
-    ctaEyebrow: "CONSUMER & DISTRIBUTION",
-    ctaTitle: "Scale your commercial operation with a specialized team.",
-    ctaText:
-      "We analyze product type, volume, rotation, sales channels, destinations, delivery timing and distribution needs to build an efficient, measurable and scalable solution.",
-    ctaPrimary: "Evaluate distribution operation",
-    ctaSecondary: "View offices",
-  },
-
-  zh: {
-    eyebrow: "消费品与零售物流",
-    title: "具备效率、控制力与可扩展性的消费品与配送物流。",
-    description:
-      "我们为消费品、零售、批发配送、电商和商业供应链协调国内与国际物流业务，满足其对速度、运营可视化和响应能力的要求。",
-    primary: "申请配送物流方案",
-    secondary: "联系专家",
-
-    blockEyebrow: "消费品与零售运营",
-    blockTitle: "面向高要求配送链的灵活物流。",
-    blockText:
-      "我们为消费品与配送企业设计物流方案，整合仓储、订单准备、运输、最后一公里、库存控制、可追溯性以及国内和国际协调。",
-
-    servicesIntro:
-      "我们为需要可用性、速度、运营控制和全流程合规的商业供应链整合物流方案。",
-    servicesTitle: "面向消费品、零售与配送的物流服务。",
-
-    services: [
+    "processEyebrow": "Nuestro proceso operativo",
+    "processTitle": "Una operación de consumo clara desde el stock hasta la entrega.",
+    "process": [
       [
-        "电商物流",
-        "通过技术支持仓储、订单准备、发货与交付，以提升速度、降低成本并扩展运营。",
+        "Análisis operativo",
+        "Revisamos producto, volumen, frecuencia y destinos."
       ],
       [
-        "海关服务",
-        "为进出口提供文件管理、法规合规和运营支持。",
+        "Diseño logístico",
+        "Definimos almacenamiento, preparación y distribución."
       ],
       [
-        "温控货运",
-        "在受控条件下运输冷藏、冷冻或易腐货物。",
+        "Documentación",
+        "Coordinamos requisitos comerciales y operativos."
       ],
       [
-        "特殊与工业货物",
-        "为需要规划、装卸或专业协调的货物管理复杂物流操作。",
+        "Preparación",
+        "Gestionamos picking, packing y salida."
       ],
       [
-        "空运",
-        "为时间关键的紧急或高优先级货物提供全球运输方案。",
+        "Seguimiento",
+        "Monitoreamos estados y entregas."
       ],
       [
-        "海运",
-        "面向高容量国际业务、批发配送和全球供应链的海运服务。",
-      ],
-      [
-        "陆运",
-        "为国内与国际交付提供灵活陆路配送和运营跟踪。",
-      ],
-      [
-        "仓储与配送",
-        "根据不同业务需求提供仓储、库存管理、订单准备和配送解决方案。",
-      ],
+        "Entrega final",
+        "Coordinamos recepción y cierre operativo."
+      ]
     ],
-
-    ctaEyebrow: "消费品与配送",
-    ctaTitle: "与专业团队一起扩展您的商业运营。",
-    ctaText:
-      "我们分析产品类型、货量、周转率、销售渠道、目的地、交付时效和配送需求，为您构建高效、可衡量且可扩展的方案。",
-    ctaPrimary: "评估配送运营",
-    ctaSecondary: "查看办公室",
+    "bandTitle": "Logística de consumo diseñada para mantener la mercancía en movimiento.",
+    "bandText": "Nuestro equipo coordina operaciones para marcas y distribuidores que necesitan stock visible, preparación eficiente y entregas confiables.",
+    "stats": [
+      [
+        "Distribución",
+        "Cobertura operativa"
+      ],
+      [
+        "Stock",
+        "Control y visibilidad"
+      ],
+      [
+        "Retail",
+        "Puntos de venta"
+      ],
+      [
+        "Soporte experto",
+        "Especialistas dedicados"
+      ]
+    ],
+    "finalTitle": "Coordinemos su operación de consumo y distribución.",
+    "finalText": "Cuéntenos tipo de producto, volumen, frecuencia de salidas y destinos. Nuestro equipo analizará la mejor solución logística.",
+    "finalPrimary": "Solicitar propuesta logística",
+    "finalSecondary": "Hablar con un especialista"
   },
-} as const;
+  "en": {
+    "heroEyebrow": "Sector consumo y distribución",
+    "heroTitle": "Logística para productos de consumo que necesitan llegar a tiempo.",
+    "heroText": "Coordinamos transporte, almacenaje, preparación, distribución y trazabilidad para productos de consumo, retail, e-commerce y operaciones comerciales.",
+    "primaryCta": "Solicitar cotización",
+    "secondaryCta": "Hablar con un especialista",
+    "activeLabel": "Operación de distribución activa",
+    "activeRoute": "Almacén → Cliente",
+    "activeCargo": "Productos de consumo",
+    "activeStatusLabel": "Estado:",
+    "activeStatus": "En distribución",
+    "activeEtaLabel": "Salida:",
+    "activeEta": "Programada",
+    "trust": [
+      [
+        "Distribución",
+        "Entregas coordinadas"
+      ],
+      [
+        "Stock",
+        "Control operativo"
+      ],
+      [
+        "Retail",
+        "Puntos de venta"
+      ],
+      [
+        "Trazabilidad",
+        "Seguimiento"
+      ]
+    ],
+    "overviewEyebrow": "Logística de consumo",
+    "overviewTitle": "Operaciones flexibles para marcas, retail y distribución comercial.",
+    "overviewText": "El consumo exige velocidad, cobertura, preparación eficiente y capacidad para responder a picos de demanda. Diseñamos operaciones para mover mercancía con orden y visibilidad.",
+    "overviewButton": "Conocer más sobre consumo",
+    "pillars": [
+      [
+        "Gestión de stock",
+        "Control de inventario, entradas, salidas y disponibilidad."
+      ],
+      [
+        "Preparación de pedidos",
+        "Picking, packing y acondicionamiento según canal."
+      ],
+      [
+        "Distribución",
+        "Entregas a clientes, tiendas, centros o puntos de venta."
+      ],
+      [
+        "Trazabilidad",
+        "Seguimiento de estados, tiempos y avance operativo."
+      ]
+    ],
+    "servicesEyebrow": "Soluciones para consumo y distribución",
+    "servicesTitle": "Logística para productos que se mueven todos los días.",
+    "services": [
+      [
+        "Distribución nacional",
+        "Entregas regionales o nacionales para productos de consumo."
+      ],
+      [
+        "Almacenaje",
+        "Gestión de stock y disponibilidad."
+      ],
+      [
+        "Picking y packing",
+        "Preparación de pedidos para retail, B2B o e-commerce."
+      ],
+      [
+        "Retail logistics",
+        "Abastecimiento hacia puntos de venta y cadenas comerciales."
+      ],
+      [
+        "E-commerce",
+        "Flujos de preparación y entrega para canal online."
+      ],
+      [
+        "Door to door",
+        "Coordinación completa hasta destino final."
+      ]
+    ],
+    "useCasesEyebrow": "Cuándo necesita logística de consumo",
+    "useCasesTitle": "Cuando la demanda exige orden, velocidad y cobertura.",
+    "useCases": [
+      [
+        "Retail",
+        "Entregas hacia tiendas y puntos comerciales."
+      ],
+      [
+        "E-commerce",
+        "Preparación y distribución de pedidos online."
+      ],
+      [
+        "Campañas",
+        "Picos de demanda y promociones."
+      ],
+      [
+        "Stock estacional",
+        "Gestión de inventario por temporada."
+      ],
+      [
+        "Distribución B2B",
+        "Entregas a clientes corporativos o mayoristas."
+      ],
+      [
+        "Productos de alta rotación",
+        "Movimientos frecuentes y controlados."
+      ]
+    ],
+    "processEyebrow": "Nuestro proceso operativo",
+    "processTitle": "Una operación de consumo clara desde el stock hasta la entrega.",
+    "process": [
+      [
+        "Análisis operativo",
+        "Revisamos producto, volumen, frecuencia y destinos."
+      ],
+      [
+        "Diseño logístico",
+        "Definimos almacenamiento, preparación y distribución."
+      ],
+      [
+        "Documentación",
+        "Coordinamos requisitos comerciales y operativos."
+      ],
+      [
+        "Preparación",
+        "Gestionamos picking, packing y salida."
+      ],
+      [
+        "Seguimiento",
+        "Monitoreamos estados y entregas."
+      ],
+      [
+        "Entrega final",
+        "Coordinamos recepción y cierre operativo."
+      ]
+    ],
+    "bandTitle": "Logística de consumo diseñada para mantener la mercancía en movimiento.",
+    "bandText": "Nuestro equipo coordina operaciones para marcas y distribuidores que necesitan stock visible, preparación eficiente y entregas confiables.",
+    "stats": [
+      [
+        "Distribución",
+        "Cobertura operativa"
+      ],
+      [
+        "Stock",
+        "Control y visibilidad"
+      ],
+      [
+        "Retail",
+        "Puntos de venta"
+      ],
+      [
+        "Soporte experto",
+        "Especialistas dedicados"
+      ]
+    ],
+    "finalTitle": "Coordinemos su operación de consumo y distribución.",
+    "finalText": "Cuéntenos tipo de producto, volumen, frecuencia de salidas y destinos. Nuestro equipo analizará la mejor solución logística.",
+    "finalPrimary": "Solicitar propuesta logística",
+    "finalSecondary": "Hablar con un especialista"
+  },
+  "zh": {
+    "heroEyebrow": "Sector consumo y distribución",
+    "heroTitle": "Logística para productos de consumo que necesitan llegar a tiempo.",
+    "heroText": "Coordinamos transporte, almacenaje, preparación, distribución y trazabilidad para productos de consumo, retail, e-commerce y operaciones comerciales.",
+    "primaryCta": "Solicitar cotización",
+    "secondaryCta": "Hablar con un especialista",
+    "activeLabel": "Operación de distribución activa",
+    "activeRoute": "Almacén → Cliente",
+    "activeCargo": "Productos de consumo",
+    "activeStatusLabel": "Estado:",
+    "activeStatus": "En distribución",
+    "activeEtaLabel": "Salida:",
+    "activeEta": "Programada",
+    "trust": [
+      [
+        "Distribución",
+        "Entregas coordinadas"
+      ],
+      [
+        "Stock",
+        "Control operativo"
+      ],
+      [
+        "Retail",
+        "Puntos de venta"
+      ],
+      [
+        "Trazabilidad",
+        "Seguimiento"
+      ]
+    ],
+    "overviewEyebrow": "Logística de consumo",
+    "overviewTitle": "Operaciones flexibles para marcas, retail y distribución comercial.",
+    "overviewText": "El consumo exige velocidad, cobertura, preparación eficiente y capacidad para responder a picos de demanda. Diseñamos operaciones para mover mercancía con orden y visibilidad.",
+    "overviewButton": "Conocer más sobre consumo",
+    "pillars": [
+      [
+        "Gestión de stock",
+        "Control de inventario, entradas, salidas y disponibilidad."
+      ],
+      [
+        "Preparación de pedidos",
+        "Picking, packing y acondicionamiento según canal."
+      ],
+      [
+        "Distribución",
+        "Entregas a clientes, tiendas, centros o puntos de venta."
+      ],
+      [
+        "Trazabilidad",
+        "Seguimiento de estados, tiempos y avance operativo."
+      ]
+    ],
+    "servicesEyebrow": "Soluciones para consumo y distribución",
+    "servicesTitle": "Logística para productos que se mueven todos los días.",
+    "services": [
+      [
+        "Distribución nacional",
+        "Entregas regionales o nacionales para productos de consumo."
+      ],
+      [
+        "Almacenaje",
+        "Gestión de stock y disponibilidad."
+      ],
+      [
+        "Picking y packing",
+        "Preparación de pedidos para retail, B2B o e-commerce."
+      ],
+      [
+        "Retail logistics",
+        "Abastecimiento hacia puntos de venta y cadenas comerciales."
+      ],
+      [
+        "E-commerce",
+        "Flujos de preparación y entrega para canal online."
+      ],
+      [
+        "Door to door",
+        "Coordinación completa hasta destino final."
+      ]
+    ],
+    "useCasesEyebrow": "Cuándo necesita logística de consumo",
+    "useCasesTitle": "Cuando la demanda exige orden, velocidad y cobertura.",
+    "useCases": [
+      [
+        "Retail",
+        "Entregas hacia tiendas y puntos comerciales."
+      ],
+      [
+        "E-commerce",
+        "Preparación y distribución de pedidos online."
+      ],
+      [
+        "Campañas",
+        "Picos de demanda y promociones."
+      ],
+      [
+        "Stock estacional",
+        "Gestión de inventario por temporada."
+      ],
+      [
+        "Distribución B2B",
+        "Entregas a clientes corporativos o mayoristas."
+      ],
+      [
+        "Productos de alta rotación",
+        "Movimientos frecuentes y controlados."
+      ]
+    ],
+    "processEyebrow": "Nuestro proceso operativo",
+    "processTitle": "Una operación de consumo clara desde el stock hasta la entrega.",
+    "process": [
+      [
+        "Análisis operativo",
+        "Revisamos producto, volumen, frecuencia y destinos."
+      ],
+      [
+        "Diseño logístico",
+        "Definimos almacenamiento, preparación y distribución."
+      ],
+      [
+        "Documentación",
+        "Coordinamos requisitos comerciales y operativos."
+      ],
+      [
+        "Preparación",
+        "Gestionamos picking, packing y salida."
+      ],
+      [
+        "Seguimiento",
+        "Monitoreamos estados y entregas."
+      ],
+      [
+        "Entrega final",
+        "Coordinamos recepción y cierre operativo."
+      ]
+    ],
+    "bandTitle": "Logística de consumo diseñada para mantener la mercancía en movimiento.",
+    "bandText": "Nuestro equipo coordina operaciones para marcas y distribuidores que necesitan stock visible, preparación eficiente y entregas confiables.",
+    "stats": [
+      [
+        "Distribución",
+        "Cobertura operativa"
+      ],
+      [
+        "Stock",
+        "Control y visibilidad"
+      ],
+      [
+        "Retail",
+        "Puntos de venta"
+      ],
+      [
+        "Soporte experto",
+        "Especialistas dedicados"
+      ]
+    ],
+    "finalTitle": "Coordinemos su operación de consumo y distribución.",
+    "finalText": "Cuéntenos tipo de producto, volumen, frecuencia de salidas y destinos. Nuestro equipo analizará la mejor solución logística.",
+    "finalPrimary": "Solicitar propuesta logística",
+    "finalSecondary": "Hablar con un especialista"
+  }
+} satisfies Record<Locale, any>;
 
 function getInitialLocale(): Locale {
   if (typeof window === "undefined") return "es";
@@ -205,6 +513,230 @@ function getInitialLocale(): Locale {
   if (htmlLang === "en" || htmlLang === "zh" || htmlLang === "es") return htmlLang;
 
   return "es";
+}
+
+type IconName =
+  | "timer"
+  | "shield"
+  | "document"
+  | "tracking"
+  | "airport"
+  | "box"
+  | "plane"
+  | "diamond"
+  | "charter"
+  | "globe"
+  | "door"
+  | "gear"
+  | "laptop"
+  | "medical"
+  | "cart"
+  | "search"
+  | "route"
+  | "package"
+  | "truck"
+  | "headset";
+
+function Icon({ name }: { name: IconName }) {
+  const common = {
+    width: 38,
+    height: 38,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 1.7,
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
+    "aria-hidden": true,
+  };
+
+  switch (name) {
+    case "timer":
+      return (
+        <svg {...common}>
+          <path d="M12 8v5l3 2" />
+          <path d="M9 2h6" />
+          <path d="M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16Z" />
+        </svg>
+      );
+
+    case "shield":
+      return (
+        <svg {...common}>
+          <path d="M12 3 5 6v5c0 4.4 2.8 8.3 7 10 4.2-1.7 7-5.6 7-10V6l-7-3Z" />
+          <path d="m9.5 12 1.8 1.8 3.7-4" />
+        </svg>
+      );
+
+    case "document":
+      return (
+        <svg {...common}>
+          <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z" />
+          <path d="M14 3v5h5" />
+          <path d="M8 13h8" />
+          <path d="M8 17h6" />
+        </svg>
+      );
+
+    case "tracking":
+      return (
+        <svg {...common}>
+          <path d="M12 21s7-5.2 7-11a7 7 0 0 0-14 0c0 5.8 7 11 7 11Z" />
+          <circle cx="12" cy="10" r="2.3" />
+        </svg>
+      );
+
+    case "airport":
+      return (
+        <svg {...common}>
+          <path d="M3 19h18" />
+          <path d="M5 19V9h14v10" />
+          <path d="M7 12h2" />
+          <path d="M11 12h2" />
+          <path d="M15 12h2" />
+          <path d="M8 19v-4h8v4" />
+          <path d="M4 9h16" />
+          <path d="M9 6h6" />
+          <path d="M12 3v3" />
+          <path d="M2.8 6.8 8.5 5.2" />
+          <path d="m15.5 5.2 5.7 1.6" />
+        </svg>
+      );
+
+    case "box":
+      return (
+        <svg {...common}>
+          <path d="m21 8-9-5-9 5 9 5 9-5Z" />
+          <path d="M3 8v8l9 5 9-5V8" />
+          <path d="M12 13v8" />
+        </svg>
+      );
+
+    case "plane":
+      return (
+        <svg {...common}>
+          <path d="M10.5 13.5 3 21l2.8-8.2L3 10l9 1 5.7-5.7a2.1 2.1 0 0 1 3 3L15 14l1 9-2.8-2.8L5 23l7.5-7.5" />
+        </svg>
+      );
+
+    case "diamond":
+      return (
+        <svg {...common}>
+          <path d="M6 3h12l4 6-10 12L2 9l4-6Z" />
+          <path d="M2 9h20" />
+          <path d="m9 3 3 6 3-6" />
+          <path d="m8 9 4 12 4-12" />
+        </svg>
+      );
+
+    case "charter":
+      return (
+        <svg {...common}>
+          <path d="M2 16 22 7l-7 10-4-4-4 7-2-2 3-6-6 4Z" />
+        </svg>
+      );
+
+    case "globe":
+      return (
+        <svg {...common}>
+          <circle cx="12" cy="12" r="9" />
+          <path d="M3 12h18" />
+          <path d="M12 3c2.3 2.5 3.5 5.5 3.5 9S14.3 18.5 12 21" />
+          <path d="M12 3c-2.3 2.5-3.5 5.5-3.5 9s1.2 6.5 3.5 9" />
+        </svg>
+      );
+
+    case "door":
+      return (
+        <svg {...common}>
+          <path d="M6 21V4a1 1 0 0 1 1-1h10v18" />
+          <path d="M10 12h.01" />
+          <path d="M4 21h16" />
+        </svg>
+      );
+
+    case "gear":
+      return (
+        <svg {...common}>
+          <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" />
+          <path d="M19.4 15a1.8 1.8 0 0 0 .36 2l.05.05a2 2 0 1 1-2.83 2.83l-.05-.05a1.8 1.8 0 0 0-2-.36 1.8 1.8 0 0 0-1 1.63V21a2 2 0 1 1-4 0v-.07a1.8 1.8 0 0 0-1-1.63 1.8 1.8 0 0 0-2 .36l-.05.05a2 2 0 1 1-2.83-2.83l.05-.05a1.8 1.8 0 0 0 .36-2 1.8 1.8 0 0 0-1.63-1H3a2 2 0 1 1 0-4h.07a1.8 1.8 0 0 0 1.63-1 1.8 1.8 0 0 0-.36-2l-.05-.05A2 2 0 1 1 7.12 3.95l.05.05a1.8 1.8 0 0 0 2 .36 1.8 1.8 0 0 0 1-1.63V3a2 2 0 1 1 4 0v.07a1.8 1.8 0 0 0 1 1.63 1.8 1.8 0 0 0 2-.36l.05-.05a2 2 0 1 1 2.83 2.83l-.05.05a1.8 1.8 0 0 0-.36 2 1.8 1.8 0 0 0 1.63 1H21a2 2 0 1 1 0 4h-.07a1.8 1.8 0 0 0-1.53 1Z" />
+        </svg>
+      );
+
+    case "laptop":
+      return (
+        <svg {...common}>
+          <path d="M5 5h14v10H5z" />
+          <path d="M3 19h18" />
+          <path d="M8 19h8" />
+        </svg>
+      );
+
+    case "medical":
+      return (
+        <svg {...common}>
+          <path d="M12 5v14" />
+          <path d="M5 12h14" />
+          <path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z" />
+        </svg>
+      );
+
+    case "cart":
+      return (
+        <svg {...common}>
+          <path d="M6 6h15l-2 8H8L6 3H3" />
+          <circle cx="9" cy="20" r="1" />
+          <circle cx="18" cy="20" r="1" />
+        </svg>
+      );
+
+    case "search":
+      return (
+        <svg {...common}>
+          <circle cx="10.5" cy="10.5" r="6.5" />
+          <path d="m16 16 5 5" />
+        </svg>
+      );
+
+    case "route":
+      return (
+        <svg {...common}>
+          <path d="M4 6h8a4 4 0 0 1 0 8H9a4 4 0 0 0 0 8h11" />
+          <path d="M4 6l3-3" />
+          <path d="M4 6l3 3" />
+        </svg>
+      );
+
+    case "package":
+      return (
+        <svg {...common}>
+          <path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5v-9Z" />
+          <path d="M12 12 4 7.5" />
+          <path d="M12 12v9" />
+          <path d="m12 12 8-4.5" />
+        </svg>
+      );
+
+    case "truck":
+      return (
+        <svg {...common}>
+          <path d="M3 7h11v9H3z" />
+          <path d="M14 10h4l3 3v3h-7z" />
+          <circle cx="7" cy="18" r="2" />
+          <circle cx="18" cy="18" r="2" />
+        </svg>
+      );
+
+    case "headset":
+      return (
+        <svg {...common}>
+          <path d="M4 13a8 8 0 0 1 16 0" />
+          <path d="M4 13v4a2 2 0 0 0 2 2h2v-7H6a2 2 0 0 0-2 2Z" />
+          <path d="M20 13v4a2 2 0 0 1-2 2h-2v-7h2a2 2 0 0 1 2 2Z" />
+          <path d="M16 19c0 1.1-.9 2-2 2h-2" />
+        </svg>
+      );
+  }
 }
 
 export default function ConsumoDistribucionPage() {
@@ -251,83 +783,228 @@ export default function ConsumoDistribucionPage() {
   const t = copy[locale];
 
   return (
-    <div className={styles.page}>
+    <div className="page-shell">
       <Header />
 
-      <section className={styles.hero}>
-        <Image
-          src="/images/sectores/consumo1.png"
-          alt={t.title}
-          fill
-          priority
-          className={styles.heroImage}
-          sizes="100vw"
-        />
+      <main className={styles.page}>
+        <section className={styles.hero}>
+          <Image
+            src="/images/sectores/consumo1.png"
+            alt={t.heroTitle}
+            fill
+            priority
+            sizes="(max-width: 900px) 0px, 100vw"
+            className={`${styles.heroImage} ${styles.heroImageDesktop}`}
+          />
 
-        <div className={styles.heroOverlay} />
+          <Image
+            src="/images/sectores/consumo2.png"
+            alt={t.heroTitle}
+            fill
+            priority
+            sizes="(max-width: 900px) 100vw, 0px"
+            className={`${styles.heroImage} ${styles.heroImageMobile}`}
+          />
 
-        <div className={styles.heroContent}>
-          <span>{t.eyebrow}</span>
-          <h1>{t.title}</h1>
-          <p>{t.description}</p>
+          <div className={styles.heroOverlay} />
 
-          <div className={styles.actions}>
-            <Link href="/cotizacion">{t.primary}</Link>
-            <Link href="/contacto">{t.secondary}</Link>
+          <div className={styles.heroInner}>
+            <div className={styles.heroContent}>
+              <span className={styles.eyebrow}>{t.heroEyebrow}</span>
+              <h1>{t.heroTitle}</h1>
+              <p>{t.heroText}</p>
+
+              <div className={styles.actions}>
+                <Link href="/cotizacion">{t.primaryCta}</Link>
+                <Link href="/contacto">{t.secondaryCta}</Link>
+              </div>
+            </div>
+
+            <div className={styles.operationCard}>
+              <span>{t.activeLabel}</span>
+              <strong>{t.activeRoute}</strong>
+              <p>{t.activeCargo}</p>
+
+              <div>
+                <small>{t.activeStatusLabel}</small>
+                <b>{t.activeStatus}</b>
+              </div>
+
+              <div>
+                <small>{t.activeEtaLabel}</small>
+                <em>{t.activeEta}</em>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <Certifications />
-
-      <main className={styles.content}>
-        <section className={styles.block}>
-          <span>{t.blockEyebrow}</span>
-          <h2>{t.blockTitle}</h2>
-          <p>{t.blockText}</p>
         </section>
 
-        <section className={styles.servicesPanel}>
-          <div className={styles.servicesCopy}>
-            <p>{t.servicesIntro}</p>
-            <h2>{t.servicesTitle}</h2>
+        <section className={styles.trustBar}>
+          {t.trust.map(([title, text]: string[], index: number) => {
+            const icons: IconName[] = ["package", "truck", "tracking", "door", "globe", "document"];
 
-            <div className={styles.accordion}>
-              {t.services.map(([title, description]: readonly [string, string]) => (
-                <details key={title} className={styles.serviceItem}>
-                  <summary>
-                    <h3>{title}</h3>
-                    <span>+</span>
-                  </summary>
-                  <p>{description}</p>
-                </details>
+            return (
+              <div key={title}>
+                <i>
+                  <Icon name={icons[index]} />
+                </i>
+                <span>
+                  <strong>{title}</strong>
+                  <small>{text}</small>
+                </span>
+              </div>
+            );
+          })}
+        </section>
+
+        <Certifications />
+
+        <section className={styles.overview}>
+          <div className={styles.overviewCopy}>
+            <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
+            <h2>{t.overviewTitle}</h2>
+            <p>{t.overviewText}</p>
+            <Link href="/contacto">{t.overviewButton}</Link>
+          </div>
+
+          <div className={styles.pillars}>
+            {t.pillars.map(([title, text]: string[], index: number) => {
+              const icons: IconName[] = ["search", "package", "document", "route", "tracking", "truck"];
+
+              return (
+                <article key={title}>
+                  <i>
+                    <Icon name={icons[index]} />
+                  </i>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
+        <section className={styles.services}>
+          <div className={styles.sectionHead}>
+            <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
+            <h2>{t.servicesTitle}</h2>
+          </div>
+
+          <div className={styles.serviceGrid}>
+            {t.services.map(([title, text]: string[], index: number) => {
+              const icons: IconName[] = ["plane", "box", "diamond", "charter", "globe", "door"];
+
+              return (
+                <article key={title}>
+                  <i>
+                    <Icon name={icons[index]} />
+                  </i>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
+        <section className={styles.useCases}>
+          <div className={styles.sectionHead}>
+            <span className={styles.eyebrow}>{t.useCasesEyebrow}</span>
+            <h2>{t.useCasesTitle}</h2>
+          </div>
+
+          <div className={styles.useCaseGrid}>
+            {t.useCases.map(([title, text]: string[], index: number) => {
+              const icons: IconName[] = ["gear", "laptop", "package", "medical", "cart", "document"];
+
+              return (
+                <article key={title}>
+                  <i>
+                    <Icon name={icons[index]} />
+                  </i>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
+        <section className={styles.process}>
+          <div className={styles.sectionHead}>
+            <span className={styles.eyebrow}>{t.processEyebrow}</span>
+            <h2>{t.processTitle}</h2>
+          </div>
+
+          <div className={styles.processGrid}>
+            {t.process.map(([title, text]: string[], index: number) => {
+              const icons: IconName[] = ["search", "route", "document", "plane", "tracking", "truck"];
+
+              return (
+                <article key={title}>
+                  <strong>{index + 1}</strong>
+                  <i>
+                    <Icon name={icons[index]} />
+                  </i>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
+        <section className={styles.darkBand}>
+          <div className={styles.darkBandImage}>
+            <Image
+              src="/images/sectores/consumo2.png"
+              alt={t.bandTitle}
+              fill
+              sizes="(max-width: 900px) 100vw, 42vw"
+            />
+          </div>
+
+          <div className={styles.darkBandContent}>
+            <h2>{t.bandTitle}</h2>
+            <p>{t.bandText}</p>
+
+            <div className={styles.stats}>
+              {t.stats.map(([value, label]: string[]) => (
+                <article key={value}>
+                  <strong>{value}</strong>
+                  <span>{label}</span>
+                </article>
               ))}
+            </div>
+
+            <div className={styles.darkBandActions}>
+              <Link href="/cotizacion">{t.finalPrimary}</Link>
+              <Link href="/contacto">{t.finalSecondary}</Link>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.finalCta}>
+          <div>
+            <h2>{t.finalTitle}</h2>
+            <p>{t.finalText}</p>
+
+            <div className={styles.finalActions}>
+              <Link href="/cotizacion">{t.finalPrimary}</Link>
+              <Link href="/contacto">{t.finalSecondary}</Link>
             </div>
           </div>
 
-          <div className={styles.servicesImageWrap}>
+          <div className={styles.finalImage}>
             <Image
-              src="/images/sectores/consumo2.png"
-              alt={t.servicesTitle}
+              src="/images/sectores/consumo1.png"
+              alt={t.finalTitle}
               fill
-              className={styles.servicesImage}
-              sizes="(max-width: 900px) 100vw, 50vw"
+              sizes="(max-width: 900px) 100vw, 44vw"
             />
           </div>
         </section>
 
-        <section className={styles.compactCta}>
-          <div>
-            <span>{t.ctaEyebrow}</span>
-            <h2>{t.ctaTitle}</h2>
-            <p>{t.ctaText}</p>
-          </div>
-
-          <div className={styles.compactCtaActions}>
-            <Link href="/cotizacion">{t.ctaPrimary}</Link>
-            <Link href="/empresa/oficinas">{t.ctaSecondary}</Link>
-          </div>
-        </section>
+        <RelatedServices current="e-commerce" locale={locale} />
       </main>
 
       <Footer />
