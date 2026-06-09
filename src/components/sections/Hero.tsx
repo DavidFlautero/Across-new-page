@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import {useEffect, useRef, useState} from "react";
 import { locales, type Locale } from "@/i18n/across";
 import styles from "./Hero.module.css";
 
@@ -168,6 +168,53 @@ without friction.`,
 } as const;
 
 export default function Hero() {
+  const desktopVideoRef = useRef<HTMLVideoElement | null>(null);
+  const mobileVideoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const videos = [desktopVideoRef.current, mobileVideoRef.current].filter(Boolean) as HTMLVideoElement[];
+
+    const forcePlay = () => {
+      videos.forEach((video) => {
+        video.muted = true;
+        video.defaultMuted = true;
+        video.playsInline = true;
+        video.autoplay = true;
+        video.loop = true;
+        video.preload = "auto";
+        video.playbackRate = 0.72;
+
+        const attempt = video.play();
+        if (attempt && typeof attempt.catch === "function") {
+          attempt.catch(() => {
+            // Algunos navegadores bloquean hasta primer gesto del usuario.
+          });
+        }
+      });
+    };
+
+    forcePlay();
+
+    const timers = [
+      window.setTimeout(forcePlay, 250),
+      window.setTimeout(forcePlay, 900),
+      window.setTimeout(forcePlay, 1800),
+    ];
+
+    window.addEventListener("touchstart", forcePlay, { passive: true });
+    window.addEventListener("pointerdown", forcePlay, { passive: true });
+    window.addEventListener("scroll", forcePlay, { passive: true });
+    document.addEventListener("visibilitychange", forcePlay);
+
+    return () => {
+      timers.forEach(window.clearTimeout);
+      window.removeEventListener("touchstart", forcePlay);
+      window.removeEventListener("pointerdown", forcePlay);
+      window.removeEventListener("scroll", forcePlay);
+      document.removeEventListener("visibilitychange", forcePlay);
+    };
+  }, []);
+
   const [locale, setLocale] = useState<Locale>("es");
   const [activeSlide, setActiveSlide] = useState(0);
   const videoRef = useRef<HTMLVideoElement | null>(null);
