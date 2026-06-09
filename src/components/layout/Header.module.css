@@ -2283,3 +2283,64 @@
     padding-right: 10px !important;
   }
 }
+
+/* =====================================================
+   LOGO DOUBLE SIZE FINAL
+   Logo más grande, sin cápsula negra.
+   ===================================================== */
+
+.logo,
+:global(body:not(.across-header-solid)) .logo,
+:global(body.across-header-solid) .logo {
+  height: 76px !important;
+  min-height: 76px !important;
+  width: auto !important;
+  min-width: auto !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+.logo img,
+:global(body:not(.across-header-solid)) .logo img,
+:global(body.across-header-solid) .logo img {
+  height: 68px !important;
+  max-height: 68px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  filter:
+    drop-shadow(0 4px 10px rgba(0,0,0,.32))
+    drop-shadow(0 0 1px rgba(0,0,0,.28)) !important;
+}
+
+.header {
+  min-height: 72px !important;
+  height: 72px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+@media (max-width: 760px) {
+  .header {
+    min-height: 68px !important;
+    height: 68px !important;
+    padding-left: 14px !important;
+    padding-right: 10px !important;
+  }
+
+  .logo,
+  :global(body:not(.across-header-solid)) .logo,
+  :global(body.across-header-solid) .logo {
+    height: 68px !important;
+    min-height: 68px !important;
+  }
+
+  .logo img,
+  :global(body:not(.across-header-solid)) .logo img,
+  :global(body.across-header-solid) .logo img {
+    height: 60px !important;
+    max-height: 60px !important;
+  }
+}
