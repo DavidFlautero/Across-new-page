@@ -3174,3 +3174,49 @@
     max-height: 108px !important;
   }
 }
+
+/* =====================================================
+   SERVICES CARDS PREMIUM DEPTH
+   Sombra suave + hover elegante estilo corporativo.
+   ===================================================== */
+
+@media (min-width: 761px) {
+  .serviceRow {
+    transition:
+      transform .4s cubic-bezier(.4, 0, .2, 1),
+      box-shadow .4s cubic-bezier(.4, 0, .2, 1),
+      border-color .4s cubic-bezier(.4, 0, .2, 1),
+      background .4s cubic-bezier(.4, 0, .2, 1) !important;
+
+    box-shadow:
+      0 4px 20px rgba(0, 0, 0, .06),
+      0 1px 0 rgba(255,255,255,.72) inset !important;
+
+    border: 1px solid rgba(7, 17, 29, .10) !important;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.98), rgba(255,255,255,.91)) !important;
+  }
+
+  .serviceRow:hover {
+    transform: translateY(-3px) !important;
+
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, .10),
+      0 18px 42px rgba(23, 50, 71, .10),
+      0 1px 0 rgba(255,255,255,.90) inset !important;
+
+    border-color: rgba(23, 50, 71, .24) !important;
+  }
+
+  .serviceRow:hover .serviceArrow {
+    background:
+      linear-gradient(135deg, #07111d 0%, #173247 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 10px 22px rgba(23, 50, 71, .20) !important;
+  }
+
+  .serviceRow:hover .serviceIcon {
+    background: rgba(23, 50, 71, .055) !important;
+    border-color: rgba(23, 50, 71, .22) !important;
+  }
+}

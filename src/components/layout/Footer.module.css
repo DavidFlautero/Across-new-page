@@ -573,3 +573,131 @@
     line-height: 1.45 !important;
   }
 }
+
+/* =====================================================
+   FOOTER FINAL MOBILE REFINEMENT
+   Ajuste fino: menos peso visual, transición más premium.
+   ===================================================== */
+
+.footer {
+  border-top: 1px solid rgba(205,187,141,.16) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.035) !important;
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding-top: 1.45rem !important;
+  }
+
+  .brand {
+    gap: .8rem !important;
+    padding-bottom: 1rem !important;
+    margin-bottom: .95rem !important;
+  }
+
+  .brand img {
+    width: 138px !important;
+  }
+
+  .email {
+    font-size: .82rem !important;
+    color: rgba(255,255,255,.68) !important;
+  }
+
+  .section {
+    border-radius: 13px !important;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.060), rgba(255,255,255,.028)) !important;
+    border-color: rgba(255,255,255,.105) !important;
+    box-shadow:
+      0 10px 24px rgba(0,0,0,.14),
+      inset 0 1px 0 rgba(255,255,255,.06) !important;
+  }
+
+  .section h3 {
+    min-height: 48px !important;
+    font-size: .70rem !important;
+    letter-spacing: .17em !important;
+  }
+
+  .section h3 {
+    border-bottom: 1px solid rgba(205,187,141,.25) !important;
+  }
+
+  .section h3::after {
+    width: 30px !important;
+    height: 30px !important;
+    flex-basis: 30px !important;
+    background: rgba(255,255,255,.07) !important;
+  }
+
+  .bottom {
+    margin-top: 1.6rem !important;
+    padding-top: 1.05rem !important;
+    color: rgba(255,255,255,.43) !important;
+  }
+}
+
+/* =====================================================
+   FOOTER FINAL MOBILE REFINEMENT
+   Ajuste fino: menos peso visual, transición más premium.
+   ===================================================== */
+
+.footer {
+  border-top: 1px solid rgba(205,187,141,.16) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.035) !important;
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding-top: 1.45rem !important;
+  }
+
+  .brand {
+    gap: .8rem !important;
+    padding-bottom: 1rem !important;
+    margin-bottom: .95rem !important;
+  }
+
+  .brand img {
+    width: 138px !important;
+  }
+
+  .email {
+    font-size: .82rem !important;
+    color: rgba(255,255,255,.68) !important;
+  }
+
+  .section {
+    border-radius: 13px !important;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.060), rgba(255,255,255,.028)) !important;
+    border-color: rgba(255,255,255,.105) !important;
+    box-shadow:
+      0 10px 24px rgba(0,0,0,.14),
+      inset 0 1px 0 rgba(255,255,255,.06) !important;
+  }
+
+  .section h3 {
+    min-height: 48px !important;
+    font-size: .70rem !important;
+    letter-spacing: .17em !important;
+  }
+
+  .section h3 {
+    border-bottom: 1px solid rgba(205,187,141,.25) !important;
+  }
+
+  .section h3::after {
+    width: 30px !important;
+    height: 30px !important;
+    flex-basis: 30px !important;
+    background: rgba(255,255,255,.07) !important;
+  }
+
+  .bottom {
+    margin-top: 1.6rem !important;
+    padding-top: 1.05rem !important;
+    color: rgba(255,255,255,.43) !important;
+  }
+}
