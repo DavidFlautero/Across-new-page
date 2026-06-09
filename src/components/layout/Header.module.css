@@ -2489,3 +2489,124 @@
     display: flex !important;
   }
 }
+
+/* =====================================================
+   HEADER MENU COLOR POLISH
+   Ajuste visual: botones, letras y menú más corporativo.
+   ===================================================== */
+
+/* Desktop */
+@media (min-width: 761px) {
+  .header {
+    background: rgba(8, 10, 14, .76) !important;
+    border: 1px solid rgba(255,255,255,.16) !important;
+    box-shadow: 0 18px 48px rgba(0,0,0,.18) !important;
+  }
+
+  .nav a,
+  .nav button,
+  .actions a,
+  .actions button {
+    color: rgba(255,255,255,.88) !important;
+    font-weight: 850 !important;
+    letter-spacing: .035em !important;
+  }
+
+  .nav a:hover,
+  .nav button:hover,
+  .actions a:hover,
+  .actions button:hover {
+    color: #fff !important;
+    background: rgba(255,255,255,.08) !important;
+  }
+
+  .nav a[aria-current="page"],
+  .nav button[aria-expanded="true"] {
+    color: #fff !important;
+  }
+
+  .contactButton,
+  .cta,
+  .contactLink {
+    background: #b40032 !important;
+    color: #fff !important;
+    border: 1px solid #b40032 !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+  }
+
+  .languageButton,
+  .localeButton {
+    background: rgba(255,255,255,.08) !important;
+    border: 1px solid rgba(255,255,255,.18) !important;
+    color: #fff !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  .header {
+    background: rgba(8, 10, 14, .88) !important;
+    border: 1px solid rgba(255,255,255,.14) !important;
+    box-shadow: 0 16px 42px rgba(0,0,0,.22) !important;
+  }
+
+  .brand,
+  .logo {
+    color: #fff !important;
+  }
+
+  .languageButton,
+  .localeButton {
+    background: rgba(255,255,255,.10) !important;
+    border: 1px solid rgba(255,255,255,.18) !important;
+    color: #fff !important;
+    box-shadow: none !important;
+  }
+
+  .menuButton,
+  .mobileToggle {
+    background: #111 !important;
+    color: #fff !important;
+    border: 1px solid rgba(255,255,255,.18) !important;
+    box-shadow: none !important;
+  }
+
+  .menuButton svg,
+  .mobileToggle svg {
+    stroke: #fff !important;
+  }
+
+  .mobilePanel,
+  .mobilePanelVisible,
+  .mobileMenu,
+  .panel {
+    background: #fff !important;
+    color: #111 !important;
+  }
+
+  .mobilePanel a,
+  .mobilePanel button,
+  .mobilePanelVisible a,
+  .mobilePanelVisible button,
+  .mobileMenu a,
+  .mobileMenu button,
+  .panel a,
+  .panel button {
+    color: #111 !important;
+    font-weight: 850 !important;
+    letter-spacing: -.01em !important;
+  }
+
+  .mobilePanel a:hover,
+  .mobilePanel button:hover,
+  .mobilePanelVisible a:hover,
+  .mobilePanelVisible button:hover,
+  .mobileMenu a:hover,
+  .mobileMenu button:hover,
+  .panel a:hover,
+  .panel button:hover {
+    background: #f3f3f3 !important;
+    color: #b40032 !important;
+  }
+}

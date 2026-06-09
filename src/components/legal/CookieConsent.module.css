@@ -2,83 +2,209 @@
   position: fixed;
   inset: 0;
   z-index: 9999;
-  pointer-events: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, .34);
 }
 
 .banner {
-  position: fixed;
-  left: 18px;
-  bottom: 18px;
-  width: min(420px, calc(100vw - 36px));
-  padding: 22px;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.98);
-  color: #151515;
-  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.22);
-  pointer-events: auto;
-}
-
-.copy span {
-  display: inline-block;
-  margin-bottom: 8px;
+  width: min(1040px, calc(100vw - 2rem));
+  padding: 1.35rem 1.45rem 1.18rem;
+  border-radius: 6px;
+  background: #fff;
+  color: #1d252d;
+  border: 1px solid rgba(17, 24, 39, .12);
+  box-shadow:
+    0 22px 60px rgba(0, 0, 0, .24),
+    0 8px 22px rgba(0, 0, 0, .12);
+  font-family: var(--font-manrope), Arial, Helvetica, sans-serif;
 }
 
 .copy h2 {
-  margin: 0 0 8px;
-  font-size: 1rem;
-  font-weight: 900;
-  letter-spacing: -0.02em;
+  margin: 0 0 .75rem;
+  color: #111827;
+  font-size: 1.12rem;
+  line-height: 1.25;
+  font-weight: 760;
+  letter-spacing: -0.025em;
 }
 
 .copy p {
   margin: 0;
-  color: rgba(0, 0, 0, 0.72);
-  font-size: 0.86rem;
-  line-height: 1.5;
+  max-width: 950px;
+  color: rgba(17, 24, 39, .72);
+  font-size: .86rem;
+  line-height: 1.52;
+  font-weight: 500;
 }
 
-.links {
-  margin-top: 10px !important;
+.copy p + p {
+  margin-top: .85rem;
 }
 
-.links a {
-  color: #e11343f2;
-  font-weight: 800;
+.copy a {
+  color: #006cae;
+  font-weight: 750;
   text-decoration: underline;
-  text-underline-offset: 3px;
+  text-underline-offset: 2px;
 }
 
 .actions {
-  margin-top: 18px;
+  margin-top: 1.15rem;
   display: flex;
-  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  gap: .9rem;
 }
 
-.actions button {
-  flex: 1;
-  min-height: 42px;
+.preferences {
+  color: #006cae;
+  font-size: .83rem;
+  font-weight: 780;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.buttons button {
+  appearance: none;
   border: 0;
-  border-radius: 10px;
-  background: #e11343f2;
+  border-radius: 4px;
+  min-height: 34px;
+  padding: 0 .95rem;
   color: #fff;
-  font-weight: 900;
+  background: #08283f;
+  font-size: .78rem;
+  line-height: 1;
+  font-weight: 850;
   cursor: pointer;
+  box-shadow: 0 6px 16px rgba(8, 40, 63, .16);
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease,
+    background .18s ease;
 }
 
-.actions button:nth-child(2) {
-  background: rgba(17, 17, 17, 0.08);
-  color: #111;
+.buttons button:hover {
+  transform: translateY(-1px);
+  background: #061d31;
+  box-shadow: 0 8px 20px rgba(8, 40, 63, .22);
 }
 
-@media (max-width: 560px) {
+@media (max-width: 760px) {
+  .backdrop {
+    padding: .8rem;
+    align-items: flex-end;
+  }
+
   .banner {
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
-    width: auto;
+    width: 100%;
+    padding: 1.05rem 1rem 1rem;
+    border-radius: 8px;
+  }
+
+  .copy h2 {
+    margin-bottom: .65rem;
+    font-size: .98rem;
+    line-height: 1.25;
+  }
+
+  .copy p {
+    font-size: .78rem;
+    line-height: 1.48;
   }
 
   .actions {
+    margin-top: 1rem;
     flex-direction: column;
+    align-items: stretch;
+    gap: .75rem;
+  }
+
+  .preferences {
+    width: fit-content;
+    font-size: .78rem;
+  }
+
+  .buttons {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .buttons button {
+    min-height: 34px;
+    padding: 0 .8rem;
+    font-size: .72rem;
+  }
+}
+
+/* =====================================================
+   COOKIE TYPOGRAPHY MAERSK STYLE
+   Tipografía sobria, chica y corporativa.
+   ===================================================== */
+
+.banner {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.copy h2 {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 1.02rem !important;
+  line-height: 1.28 !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.015em !important;
+  color: #1f2933 !important;
+}
+
+.copy p {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: .82rem !important;
+  line-height: 1.48 !important;
+  font-weight: 400 !important;
+  color: rgba(31, 41, 51, .76) !important;
+}
+
+.copy a,
+.preferences {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: .82rem !important;
+  font-weight: 600 !important;
+  color: #006cae !important;
+}
+
+.buttons button {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: .76rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+}
+
+@media (max-width: 760px) {
+  .copy h2 {
+    font-size: .92rem !important;
+    line-height: 1.28 !important;
+    font-weight: 600 !important;
+  }
+
+  .copy p {
+    font-size: .74rem !important;
+    line-height: 1.46 !important;
+  }
+
+  .copy a,
+  .preferences {
+    font-size: .74rem !important;
+  }
+
+  .buttons button {
+    font-size: .70rem !important;
+    font-weight: 700 !important;
   }
 }

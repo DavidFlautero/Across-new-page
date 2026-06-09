@@ -310,8 +310,8 @@ nav a[href="/contact"] {
 /* Brand red for cookie buttons */
 [class*="cookie"] button,
 [class*="Cookie"] button {
-  background: #e11343f2 !important;
-  border-color: #e11343f2 !important;
+  background: #173247f2 !important;
+  border-color: #173247f2 !important;
   color: #fff !important;
 }
 
@@ -485,15 +485,15 @@ nav a[href="/contact"] {
   [class*="Header_nav"] button:hover,
   [class*="Header_actions"] a:hover,
   [class*="Header_actions"] button:hover {
-    background: rgba(180, 0, 50, .07) !important;
-    color: #b40032 !important;
+    background: rgba(23, 50, 71, .07) !important;
+    color: #173247 !important;
   }
 
   [class*="Header_contact"],
   [class*="Header_cta"] {
-    background: #b40032 !important;
+    background: #173247 !important;
     color: #fff !important;
-    border: 1px solid #b40032 !important;
+    border: 1px solid #173247 !important;
     border-radius: 8px !important;
     box-shadow: none !important;
   }
@@ -604,7 +604,7 @@ nav a[href="/contact"] {
   [class*="Header_panel"] a:hover,
   [class*="Header_panel"] button:hover {
     background: #f7f5f0 !important;
-    color: #b40032 !important;
+    color: #173247 !important;
   }
 }
 
@@ -655,19 +655,19 @@ footer a,
 
 footer a:hover,
 [class*="Footer_footer"] a:hover {
-  color: #b40032 !important;
+  color: #173247 !important;
 }
 
 footer [class*="social"] a,
 [class*="Footer_footer"] [class*="social"] a {
-  border: 1px solid rgba(180, 0, 50, .22) !important;
-  color: #b40032 !important;
+  border: 1px solid rgba(23, 50, 71, .22) !important;
+  color: #173247 !important;
   background: #fff !important;
 }
 
 footer [class*="social"] a:hover,
 [class*="Footer_footer"] [class*="social"] a:hover {
-  background: #b40032 !important;
+  background: #173247 !important;
   color: #fff !important;
 }
 
@@ -878,8 +878,8 @@ footer [class*="social"] a:hover,
 
   body.across-header-solid [class*="Header_nav"] a:hover,
   body.across-header-solid [class*="Header_nav"] button:hover {
-    color: #b40032 !important;
-    background: rgba(180,0,50,.07) !important;
+    color: #173247 !important;
+    background: rgba(23,50,71,.07) !important;
   }
 
   body.across-header-solid [class*="Header_brand"],
@@ -1190,4 +1190,153 @@ body.across-header-solid [class*="Header_burger"] svg {
 
 ::selection {
   background: rgba(15, 61, 94, .22);
+}
+
+/* =====================================================
+   GLOBAL TYPOGRAPHY SYSTEM — PREMIUM LOGISTICS
+   Estilo más FedEx / Maersk:
+   títulos menos pesados, más aire, texto corporativo.
+   ===================================================== */
+
+:root {
+  --font-corporate: Arial, Helvetica, sans-serif;
+  --color-ink: #101820;
+  --color-ink-soft: rgba(16, 24, 32, .72);
+  --color-accent: #173247;
+  --color-accent-soft: #214a64;
+  --color-champagne: #cdbb8d;
+}
+
+/* Base global */
+html,
+body {
+  font-family: var(--font-corporate) !important;
+  color: var(--color-ink);
+  font-weight: 400;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Títulos globales */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-corporate) !important;
+  color: var(--color-ink);
+  font-weight: 650 !important;
+  letter-spacing: -0.045em !important;
+  line-height: 1.02 !important;
+}
+
+/* Tamaños más sobrios */
+h1 {
+  font-size: clamp(3rem, 6.2vw, 5.8rem) !important;
+}
+
+h2 {
+  font-size: clamp(2.3rem, 4.8vw, 4.4rem) !important;
+}
+
+h3 {
+  font-size: clamp(1.45rem, 2.6vw, 2.3rem) !important;
+}
+
+h4 {
+  font-size: clamp(1.1rem, 1.8vw, 1.45rem) !important;
+}
+
+/* Párrafos globales */
+p {
+  font-family: var(--font-corporate) !important;
+  color: var(--color-ink-soft);
+  font-size: 1rem;
+  line-height: 1.68;
+  font-weight: 400;
+}
+
+/* Links */
+a {
+  font-family: var(--font-corporate) !important;
+}
+
+/* Botones */
+button,
+[role="button"] {
+  font-family: var(--font-corporate) !important;
+}
+
+/* Eyebrows / labels comunes */
+[class*="eyebrow"],
+[class*="Eyebrow"],
+[class*="kicker"],
+[class*="Kicker"],
+[class*="badge"],
+[class*="Badge"],
+[class*="label"],
+[class*="Label"] {
+  font-family: var(--font-corporate) !important;
+  font-weight: 800 !important;
+  letter-spacing: .22em !important;
+  text-transform: uppercase !important;
+}
+
+/* Cards y textos internos */
+[class*="card"] h3,
+[class*="Card"] h3,
+[class*="panel"] h3,
+[class*="Panel"] h3,
+[class*="row"] h3,
+[class*="Row"] h3 {
+  font-weight: 650 !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.12 !important;
+}
+
+[class*="card"] p,
+[class*="Card"] p,
+[class*="panel"] p,
+[class*="Panel"] p,
+[class*="row"] p,
+[class*="Row"] p {
+  font-weight: 400 !important;
+  line-height: 1.58 !important;
+}
+
+/* Mobile: títulos menos gigantes */
+@media (max-width: 760px) {
+  h1 {
+    font-size: clamp(2.65rem, 11vw, 4rem) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -0.052em !important;
+  }
+
+  h2 {
+    font-size: clamp(2.05rem, 9.2vw, 3.05rem) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -0.052em !important;
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 5.6vw, 1.85rem) !important;
+    line-height: 1.12 !important;
+  }
+
+  p {
+    font-size: .94rem;
+    line-height: 1.62;
+  }
+
+  [class*="eyebrow"],
+  [class*="Eyebrow"],
+  [class*="kicker"],
+  [class*="Kicker"],
+  [class*="badge"],
+  [class*="Badge"],
+  [class*="label"],
+  [class*="Label"] {
+    font-size: .68rem !important;
+    letter-spacing: .22em !important;
+  }
 }

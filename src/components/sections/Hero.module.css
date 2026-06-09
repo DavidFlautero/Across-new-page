@@ -2812,3 +2812,36 @@
     border-color: rgba(214, 192, 141, .26) !important;
   }
 }
+
+/* =====================================================
+   MOBILE HERO VIDEO LIGHT POLISH
+   El video mobile ya está bien compuesto.
+   Bajamos oscuridad para que se vea más blanco/corporativo.
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .mobileVideo {
+    filter: brightness(1.16) contrast(1.03) saturate(1.06) !important;
+    opacity: .96 !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    transform: scale(1) !important;
+  }
+
+  .overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(5, 6, 9, .48) 0%,
+        rgba(5, 6, 9, .34) 38%,
+        rgba(5, 6, 9, .16) 72%,
+        rgba(5, 6, 9, .06) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(5, 6, 9, .05) 0%,
+        rgba(5, 6, 9, .12) 45%,
+        rgba(5, 6, 9, .30) 100%
+      ) !important;
+  }
+}
