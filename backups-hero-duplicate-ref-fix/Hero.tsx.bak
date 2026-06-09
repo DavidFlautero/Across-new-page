@@ -264,8 +264,6 @@ export default function Hero() {
     };
   }, []);
 
-  const desktopVideoRef = useRef<HTMLVideoElement | null>(null);
-  const mobileVideoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
     const videos = [desktopVideoRef.current, mobileVideoRef.current].filter(Boolean) as HTMLVideoElement[];
