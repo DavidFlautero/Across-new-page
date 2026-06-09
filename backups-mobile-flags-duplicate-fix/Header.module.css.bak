@@ -2455,37 +2455,3 @@
     padding-right: 7px !important;
   }
 }
-
-/* =====================================================
-   MOBILE FLAGS DUPLICATE FIX
-   En mobile solo se muestra mobileLang.
-   Oculta language para evitar banderas repetidas.
-   ===================================================== */
-
-@media (max-width: 760px) {
-  .language {
-    display: none !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-  }
-
-  .mobileLang {
-    display: flex !important;
-    visibility: visible !important;
-    pointer-events: auto !important;
-    margin-left: auto !important;
-    align-items: center !important;
-    gap: 5px !important;
-    flex-shrink: 0 !important;
-  }
-}
-
-@media (min-width: 761px) {
-  .mobileLang {
-    display: none !important;
-  }
-
-  .language {
-    display: flex !important;
-  }
-}
