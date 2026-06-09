@@ -608,6 +608,30 @@ export default function TransporteAereoPage() {
               </div>
             </div>
           </div>
+        
+          <nav className={styles.commandBar} aria-label="Servicios principales">
+            <Link href="/tracking" className={styles.commandItem}>
+              <span>Tracking</span>
+              <small>Seguimiento</small>
+            </Link>
+            <Link href="/servicios/almacen-distribucion" className={styles.commandItem}>
+              <span>Almacén</span>
+              <small>Distribución</small>
+            </Link>
+            <Link href="/servicios/transporte-maritimo" className={styles.commandItem}>
+              <span>Marítimo</span>
+              <small>FCL / LCL</small>
+            </Link>
+            <Link href="/servicios/transporte-aereo" className={styles.commandItem}>
+              <span>Aéreo</span>
+              <small>Carga crítica</small>
+            </Link>
+            <Link href="/servicios/transporte-terrestre" className={styles.commandItem}>
+              <span>Terrestre</span>
+              <small>Última milla</small>
+            </Link>
+          </nav>
+
         </section>
 
         <section className={styles.trustBar}>

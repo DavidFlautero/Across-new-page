@@ -570,7 +570,7 @@ export default function TransporteMaritimoPage() {
           />
 
           <Image
-            src="/images/maritimo.png"
+            src="/images/maritimo-mobile.png"
             alt={t.heroTitle}
             fill
             priority
@@ -608,6 +608,30 @@ export default function TransporteMaritimoPage() {
               </div>
             </div>
           </div>
+        
+          <nav className={styles.commandBar} aria-label="Servicios principales">
+            <Link href="/tracking" className={styles.commandItem}>
+              <span>Tracking</span>
+              <small>Seguimiento</small>
+            </Link>
+            <Link href="/servicios/almacen-distribucion" className={styles.commandItem}>
+              <span>Almacén</span>
+              <small>Distribución</small>
+            </Link>
+            <Link href="/servicios/transporte-maritimo" className={styles.commandItem}>
+              <span>Marítimo</span>
+              <small>FCL / LCL</small>
+            </Link>
+            <Link href="/servicios/transporte-aereo" className={styles.commandItem}>
+              <span>Aéreo</span>
+              <small>Carga crítica</small>
+            </Link>
+            <Link href="/servicios/transporte-terrestre" className={styles.commandItem}>
+              <span>Terrestre</span>
+              <small>Última milla</small>
+            </Link>
+          </nav>
+
         </section>
 
         <section className={styles.trustBar}>

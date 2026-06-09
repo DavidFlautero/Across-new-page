@@ -61,7 +61,7 @@
 .eyebrow {
   display: inline-flex;
   margin-bottom: 1rem;
-  color: #173247;
+  color: #ed1b2f;
   font-size: .78rem;
   font-weight: 950;
   letter-spacing: .16em;
@@ -111,9 +111,9 @@
 .actions a:first-child,
 .finalActions a:first-child,
 .overviewCopy a {
-  background: #173247;
+  background: #ed1b2f;
   color: #fff;
-  box-shadow: 0 18px 42px rgba(23, 50, 71, .28);
+  box-shadow: 0 18px 42px rgba(237, 27, 47, .28);
 }
 
 .actions a:first-child::after,
@@ -144,7 +144,7 @@
 .operationCard > span {
   display: inline-flex;
   margin-bottom: 1rem;
-  color: #173247;
+  color: #ed1b2f;
   font-size: .7rem;
   font-weight: 950;
   letter-spacing: .12em;
@@ -195,7 +195,7 @@
 }
 
 .operationCard b {
-  background: #173247;
+  background: #ed1b2f;
   color: #fff;
 }
 
@@ -231,8 +231,8 @@
   place-items: center;
   width: 36px;
   height: 36px;
-  color: #173247;
-  border: 1px solid rgba(23, 50, 71, .55);
+  color: #ed1b2f;
+  border: 1px solid rgba(237, 27, 47, .55);
   border-radius: 999px;
   font-style: normal;
   font-weight: 900;
@@ -309,8 +309,8 @@
   width: 48px;
   height: 48px;
   margin-bottom: 1.1rem;
-  color: #173247;
-  border: 1px solid rgba(23, 50, 71, .5);
+  color: #ed1b2f;
+  border: 1px solid rgba(237, 27, 47, .5);
   border-radius: 999px;
   font-style: normal;
   font-size: 1.3rem;
@@ -425,10 +425,10 @@
   height: 56px;
   margin-bottom: 1rem;
   border-radius: 999px;
-  background: #173247;
+  background: #ed1b2f;
   color: #fff;
   font-weight: 950;
-  box-shadow: 0 14px 38px rgba(23, 50, 71, .24);
+  box-shadow: 0 14px 38px rgba(237, 27, 47, .24);
 }
 
 .darkBand {
@@ -491,7 +491,7 @@
 
 .stats strong {
   display: block;
-  color: #173247;
+  color: #ed1b2f;
   text-transform: uppercase;
   font-size: .86rem;
   line-height: 1.15;
@@ -727,11 +727,11 @@
 .pillars i,
 .serviceGrid i,
 .useCaseGrid i {
-  background: rgba(23, 50, 71, .035);
+  background: rgba(237, 27, 47, .035);
 }
 
 .trustBar i {
-  background: rgba(23, 50, 71, .06);
+  background: rgba(237, 27, 47, .06);
 }
 
 .processGrid i {
@@ -799,7 +799,7 @@
     width: 28px;
     height: 28px;
     margin: 0 0 .45rem;
-    color: #173247;
+    color: #ed1b2f;
   }
 
   .processGrid article {
@@ -836,7 +836,7 @@
         circle at 72% 42%,
         rgba(255, 190, 118, .34) 0%,
         rgba(255, 120, 70, .16) 18%,
-        rgba(23, 50, 71, .10) 32%,
+        rgba(237, 27, 47, .10) 32%,
         transparent 52%
       ),
       radial-gradient(
@@ -870,7 +870,7 @@
     border-radius: 999px !important;
     background:
       radial-gradient(circle, rgba(255, 255, 255, .20), transparent 26%),
-      radial-gradient(circle, rgba(23, 50, 71, .16), transparent 58%) !important;
+      radial-gradient(circle, rgba(237, 27, 47, .16), transparent 58%) !important;
     filter: blur(28px) !important;
     opacity: .72 !important;
     z-index: -1 !important;
@@ -900,7 +900,7 @@
   }
 
   .eyebrow {
-    color: #173247 !important;
+    color: #ed1b2f !important;
     margin-bottom: 1rem !important;
     font-size: .76rem !important;
     letter-spacing: .2em !important;
@@ -916,7 +916,7 @@
 
   .heroContent h1::after {
     content: "." !important;
-    color: #173247 !important;
+    color: #ed1b2f !important;
   }
 
   .heroContent p {
@@ -980,7 +980,7 @@
         circle at 70% 42%,
         rgba(255, 196, 120, .38) 0%,
         rgba(255, 120, 70, .18) 18%,
-        rgba(23, 50, 71, .10) 32%,
+        rgba(237, 27, 47, .10) 32%,
         transparent 54%
       ),
       radial-gradient(
@@ -1026,7 +1026,7 @@
       radial-gradient(
         circle at 72% 46%,
         rgba(255, 178, 96, .26) 0%,
-        rgba(23, 50, 71, .08) 28%,
+        rgba(237, 27, 47, .08) 28%,
         transparent 52%
       ),
       linear-gradient(
@@ -1287,7 +1287,7 @@
   transform: translateX(-50%) !important;
   padding: clamp(4rem, 6vw, 6rem) max(24px, calc((100vw - 1180px) / 2)) !important;
   background:
-    radial-gradient(circle at 78% 18%, rgba(23, 50, 71, .14), transparent 28rem),
+    radial-gradient(circle at 78% 18%, rgba(237, 27, 47, .14), transparent 28rem),
     linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
   color: #fff !important;
 }
@@ -1304,7 +1304,7 @@
 }
 
 .services .eyebrow {
-  color: #173247 !important;
+  color: #ed1b2f !important;
 }
 
 /* Cards de servicios oscuras, no cajitas blancas */
@@ -1331,9 +1331,9 @@
   width: 46px !important;
   height: 46px !important;
   margin-bottom: 1rem !important;
-  color: #173247 !important;
-  background: rgba(23, 50, 71, .07) !important;
-  border: 1px solid rgba(23, 50, 71, .32) !important;
+  color: #ed1b2f !important;
+  background: rgba(237, 27, 47, .07) !important;
+  border: 1px solid rgba(237, 27, 47, .32) !important;
 }
 
 .serviceGrid i svg {
@@ -1368,7 +1368,7 @@
 
 .darkBandContent {
   background:
-    radial-gradient(circle at 78% 18%, rgba(23, 50, 71, .12), transparent 24rem),
+    radial-gradient(circle at 78% 18%, rgba(237, 27, 47, .12), transparent 24rem),
     #050609 !important;
 }
 
@@ -1443,7 +1443,7 @@
   transform: translateX(-50%) !important;
   padding: clamp(4rem, 6vw, 6rem) max(24px, calc((100vw - 1180px) / 2)) !important;
   background:
-    radial-gradient(circle at 78% 18%, rgba(23, 50, 71, .14), transparent 28rem),
+    radial-gradient(circle at 78% 18%, rgba(237, 27, 47, .14), transparent 28rem),
     linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
   color: #fff !important;
 }
@@ -1460,7 +1460,7 @@
 }
 
 .services .eyebrow {
-  color: #173247 !important;
+  color: #ed1b2f !important;
 }
 
 /* Cards de servicios oscuras, no cajitas blancas */
@@ -1487,9 +1487,9 @@
   width: 46px !important;
   height: 46px !important;
   margin-bottom: 1rem !important;
-  color: #173247 !important;
-  background: rgba(23, 50, 71, .07) !important;
-  border: 1px solid rgba(23, 50, 71, .32) !important;
+  color: #ed1b2f !important;
+  background: rgba(237, 27, 47, .07) !important;
+  border: 1px solid rgba(237, 27, 47, .32) !important;
 }
 
 .serviceGrid i svg {
@@ -1524,7 +1524,7 @@
 
 .darkBandContent {
   background:
-    radial-gradient(circle at 78% 18%, rgba(23, 50, 71, .12), transparent 24rem),
+    radial-gradient(circle at 78% 18%, rgba(237, 27, 47, .12), transparent 24rem),
     #050609 !important;
 }
 
@@ -1705,7 +1705,7 @@
     margin-bottom: .45rem !important;
     font-size: .66rem !important;
     letter-spacing: .22em !important;
-    color: #173247 !important;
+    color: #ed1b2f !important;
   }
 
   .process .sectionHead h2 {
@@ -1757,7 +1757,7 @@
     display: grid !important;
     place-items: center !important;
     border-radius: 999px !important;
-    background: #173247 !important;
+    background: #ed1b2f !important;
     color: #fff !important;
     font-size: .82rem !important;
     font-weight: 950 !important;
@@ -1886,7 +1886,7 @@
   justify-content: center !important;
   padding: clamp(3rem, 5vw, 5rem) max(36px, 7vw) !important;
   background:
-    radial-gradient(circle at 86% 18%, rgba(23, 50, 71, .12), transparent 24rem),
+    radial-gradient(circle at 86% 18%, rgba(237, 27, 47, .12), transparent 24rem),
     linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
 }
 
@@ -1926,7 +1926,7 @@
 }
 
 .stats strong {
-  color: #173247 !important;
+  color: #ed1b2f !important;
   font-size: .82rem !important;
   letter-spacing: .12em !important;
 }
@@ -1986,7 +1986,7 @@
 }
 
 .finalActions a:first-child {
-  background: #173247 !important;
+  background: #ed1b2f !important;
   color: #fff !important;
 }
 
@@ -2087,7 +2087,7 @@
   position: relative !important;
   overflow: hidden !important;
   background:
-    radial-gradient(circle at 82% 28%, rgba(23, 50, 71, .10), transparent 26rem),
+    radial-gradient(circle at 82% 28%, rgba(237, 27, 47, .10), transparent 26rem),
     linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
   color: #fff !important;
   border-top: 1px solid rgba(255,255,255,.08) !important;
@@ -2158,7 +2158,7 @@
 
 .stats strong {
   display: block !important;
-  color: #173247 !important;
+  color: #ed1b2f !important;
   font-size: .76rem !important;
   line-height: 1.12 !important;
   font-weight: 950 !important;
@@ -2198,9 +2198,9 @@
 }
 
 .darkBandActions a:first-child {
-  background: #173247 !important;
+  background: #ed1b2f !important;
   color: #fff !important;
-  box-shadow: 0 16px 36px rgba(23, 50, 71, .22) !important;
+  box-shadow: 0 16px 36px rgba(237, 27, 47, .22) !important;
 }
 
 .darkBandActions a:first-child::after {
@@ -2293,7 +2293,7 @@
   position: relative !important;
   overflow: hidden !important;
   background:
-    radial-gradient(circle at 82% 28%, rgba(23, 50, 71, .10), transparent 26rem),
+    radial-gradient(circle at 82% 28%, rgba(237, 27, 47, .10), transparent 26rem),
     linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
   color: #fff !important;
   border-top: 1px solid rgba(255,255,255,.08) !important;
@@ -2364,7 +2364,7 @@
 
 .stats strong {
   display: block !important;
-  color: #173247 !important;
+  color: #ed1b2f !important;
   font-size: .76rem !important;
   line-height: 1.12 !important;
   font-weight: 950 !important;
@@ -2404,9 +2404,9 @@
 }
 
 .darkBandActions a:first-child {
-  background: #173247 !important;
+  background: #ed1b2f !important;
   color: #fff !important;
-  box-shadow: 0 16px 36px rgba(23, 50, 71, .22) !important;
+  box-shadow: 0 16px 36px rgba(237, 27, 47, .22) !important;
 }
 
 .darkBandActions a:first-child::after {
@@ -2558,7 +2558,7 @@
 }
 
 .darkBandActions a:first-child {
-  background: #173247 !important;
+  background: #ed1b2f !important;
   color: #fff !important;
 }
 
@@ -2604,7 +2604,7 @@
 /* === FINAL CTA BALANCED: TITLE + COPY + ACTION CARD === */
 .darkBand {
   background:
-    radial-gradient(circle at 84% 24%, rgba(23, 50, 71, .12), transparent 24rem),
+    radial-gradient(circle at 84% 24%, rgba(237, 27, 47, .12), transparent 24rem),
     linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
 }
 
@@ -2627,8 +2627,8 @@
   width: 3px !important;
   height: 68% !important;
   transform: translateY(-50%) !important;
-  background: #173247 !important;
-  box-shadow: 0 0 24px rgba(23,50,71,.28) !important;
+  background: #ed1b2f !important;
+  box-shadow: 0 0 24px rgba(237,27,47,.28) !important;
 }
 
 .darkBandContent h2 {
@@ -2672,7 +2672,7 @@
 }
 
 .darkBand .stats strong {
-  color: #173247 !important;
+  color: #ed1b2f !important;
   font-size: .72rem !important;
   letter-spacing: .14em !important;
 }
@@ -2750,7 +2750,7 @@
 .services {
   position: relative !important;
   background:
-    radial-gradient(circle at 18% 20%, rgba(23, 50, 71, .14), transparent 24rem),
+    radial-gradient(circle at 18% 20%, rgba(237, 27, 47, .14), transparent 24rem),
     radial-gradient(circle at 92% 72%, rgba(255, 255, 255, .055), transparent 26rem),
     linear-gradient(180deg, #08090e 0%, #050609 100%) !important;
   overflow: hidden !important;
@@ -2805,16 +2805,16 @@
   position: absolute !important;
   right: 1.25rem !important;
   bottom: 1.05rem !important;
-  color: #173247 !important;
+  color: #ed1b2f !important;
   font-size: 1.1rem !important;
   opacity: .85 !important;
 }
 
 .serviceGrid article:hover {
   transform: translateY(-4px) !important;
-  border-color: rgba(23,50,71,.45) !important;
+  border-color: rgba(237,27,47,.45) !important;
   background:
-    linear-gradient(145deg, rgba(23,50,71,.12), rgba(255,255,255,.035)) !important;
+    linear-gradient(145deg, rgba(237,27,47,.12), rgba(255,255,255,.035)) !important;
 }
 
 .serviceGrid i {
@@ -2839,7 +2839,7 @@
 .darkBand {
   position: relative !important;
   background:
-    radial-gradient(circle at 82% 28%, rgba(23, 50, 71, .16), transparent 22rem),
+    radial-gradient(circle at 82% 28%, rgba(237, 27, 47, .16), transparent 22rem),
     radial-gradient(circle at 8% 80%, rgba(255,255,255,.045), transparent 20rem),
     linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
   overflow: hidden !important;
@@ -2962,8 +2962,8 @@
       rgba(5, 6, 9, .78) 62%,
       rgba(5, 6, 9, .55) 100%
     ),
-    radial-gradient(circle at 18% 18%, rgba(23, 50, 71, .16), transparent 24rem),
-    url("/images/sectores/transporteterrestre2.png") !important;
+    radial-gradient(circle at 18% 18%, rgba(237, 27, 47, .16), transparent 24rem),
+    url("/images/ecommerce.png") !important;
   background-size: cover !important;
   background-position: center 48% !important;
   background-repeat: no-repeat !important;
@@ -3030,16 +3030,16 @@
 
 .serviceGrid article:hover {
   transform: translateY(-4px) !important;
-  border-color: rgba(23,50,71,.55) !important;
+  border-color: rgba(237,27,47,.55) !important;
   background:
-    linear-gradient(145deg, rgba(23,50,71,.16), rgba(10, 12, 18, .58)) !important;
+    linear-gradient(145deg, rgba(237,27,47,.16), rgba(10, 12, 18, .58)) !important;
 }
 
 .serviceGrid i {
   width: 40px !important;
   height: 40px !important;
-  background: rgba(23, 50, 71, .10) !important;
-  border-color: rgba(23, 50, 71, .42) !important;
+  background: rgba(237, 27, 47, .10) !important;
+  border-color: rgba(237, 27, 47, .42) !important;
 }
 
 .serviceGrid h3 {
@@ -3064,8 +3064,8 @@
       rgba(5, 6, 9, .76) 68%,
       rgba(5, 6, 9, .42) 100%
     ),
-    radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/sectores/transporteterrestre2.png") !important;
+    radial-gradient(circle at 82% 30%, rgba(237, 27, 47, .14), transparent 24rem),
+    url("/images/ecommerce.png") !important;
   background-size: cover !important;
   background-position: center 55% !important;
   background-repeat: no-repeat !important;
@@ -3104,7 +3104,7 @@
   .services {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.90)),
-      url("/images/sectores/transporteterrestre2.png") !important;
+      url("/images/ecommerce.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3116,7 +3116,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/transporteterrestre2.png") !important;
+      url("/images/ecommerce.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3133,8 +3133,8 @@
       rgba(5, 6, 9, .76) 68%,
       rgba(5, 6, 9, .42) 100%
     ),
-    radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/sectores/transporteterrestre.png") !important;
+    radial-gradient(circle at 82% 30%, rgba(237, 27, 47, .14), transparent 24rem),
+    url("/images/heroecommerce.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3144,7 +3144,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/transporteterrestre.png") !important;
+      url("/images/heroecommerce.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3161,8 +3161,8 @@
       rgba(5, 6, 9, .76) 68%,
       rgba(5, 6, 9, .44) 100%
     ),
-    radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/logisticahome.png") !important;
+    radial-gradient(circle at 82% 30%, rgba(237, 27, 47, .14), transparent 24rem),
+    url("/images/segundaecommerce.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3172,7 +3172,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/logisticahome.png") !important;
+      url("/images/segundaecommerce.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3755,13 +3755,13 @@
     height: 34px !important;
     margin: 0 !important;
     border-radius: 999px !important;
-    background: #173247 !important;
+    background: #ed1b2f !important;
     color: #fff !important;
     display: grid !important;
     place-items: center !important;
     font-size: .78rem !important;
     font-weight: 950 !important;
-    box-shadow: 0 10px 24px rgba(23,50,71,.18) !important;
+    box-shadow: 0 10px 24px rgba(237,27,47,.18) !important;
   }
 
   .processGrid i {
@@ -3770,7 +3770,7 @@
     width: 24px !important;
     height: 24px !important;
     margin: 0 0 .35rem !important;
-    color: #173247 !important;
+    color: #ed1b2f !important;
     background: transparent !important;
     border: 0 !important;
   }
@@ -3875,8 +3875,8 @@
     width: 64px !important;
     height: 3px !important;
     transform: none !important;
-    background: #173247 !important;
-    box-shadow: 0 0 18px rgba(23, 50, 71, .28) !important;
+    background: #ed1b2f !important;
+    box-shadow: 0 0 18px rgba(237, 27, 47, .28) !important;
   }
 
   .darkBandContent h2 {
@@ -4043,140 +4043,6 @@
 
 
 /* =====================================================
-   TERRESTRE - FONDO VISIBLE DETRÁS DE SERVICES/CARDS
-   Usa las imágenes reales con typo trannsporte.
-   ===================================================== */
-
-.services {
-  position: relative !important;
-  isolation: isolate !important;
-  overflow: hidden !important;
-  background: #050609 !important;
-  color: #fff !important;
-}
-
-.services::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: 0 !important;
-  pointer-events: none !important;
-  background-image: url("/images/transporte-terrestre-mobile/trannsporte-terrestre1.png") !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  opacity: .78 !important;
-  filter: brightness(.52) contrast(1.12) saturate(.98) !important;
-}
-
-.services::after {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: 1 !important;
-  pointer-events: none !important;
-  background:
-    radial-gradient(circle at 18% 12%, rgba(23, 50, 71, .16), transparent 24rem),
-    linear-gradient(90deg, rgba(5,6,9,.96) 0%, rgba(5,6,9,.82) 48%, rgba(5,6,9,.64) 100%),
-    linear-gradient(180deg, rgba(5,6,9,.70) 0%, rgba(5,6,9,.96) 100%) !important;
-}
-
-.services > *,
-.services .serviceGrid,
-.serviceGrid,
-.serviceGrid > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-.services article,
-.serviceGrid article,
-.operationCard {
-  position: relative !important;
-  z-index: 2 !important;
-  background: rgba(7, 9, 14, .70) !important;
-  border: 1px solid rgba(255,255,255,.14) !important;
-  backdrop-filter: blur(6px) !important;
-}
-
-/* Bloques internos con imagen detrás */
-.darkBand,
-.finalCta {
-  position: relative !important;
-  overflow: hidden !important;
-  isolation: isolate !important;
-  background: #050609 !important;
-}
-
-.darkBandImage,
-.finalImage {
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -3 !important;
-  display: block !important;
-  width: 100% !important;
-  height: 100% !important;
-  min-height: 100% !important;
-  pointer-events: none !important;
-}
-
-.darkBandImage img,
-.finalImage img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center center !important;
-  display: block !important;
-  filter: brightness(.46) contrast(1.1) saturate(.96) !important;
-}
-
-.darkBand::before,
-.finalCta::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -2 !important;
-  pointer-events: none !important;
-  background:
-    radial-gradient(circle at 75% 24%, rgba(23, 50, 71, .16), transparent 24rem),
-    linear-gradient(90deg, rgba(5,6,9,.97) 0%, rgba(5,6,9,.84) 46%, rgba(5,6,9,.62) 100%),
-    linear-gradient(180deg, rgba(5,6,9,.70) 0%, rgba(5,6,9,.96) 100%) !important;
-}
-
-.darkBandContent,
-.finalCta > *:not(.finalImage) {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-@media (max-width: 900px) {
-  .services::before {
-    opacity: .84 !important;
-    background-position: center center !important;
-    filter: brightness(.50) contrast(1.14) saturate(.98) !important;
-  }
-
-  .services::after {
-    background:
-      radial-gradient(circle at 22% 10%, rgba(23, 50, 71, .17), transparent 18rem),
-      linear-gradient(180deg, rgba(5,6,9,.90) 0%, rgba(5,6,9,.74) 44%, rgba(5,6,9,.96) 100%) !important;
-  }
-
-  .darkBandImage img,
-  .finalImage img {
-    filter: brightness(.42) contrast(1.12) saturate(.96) !important;
-  }
-}
-
-@media (max-width: 380px) {
-  .services::before {
-    opacity: .88 !important;
-    filter: brightness(.46) contrast(1.16) saturate(.98) !important;
-  }
-}
-
-
-/* =====================================================
    GLOBAL SERVICE FIX - MOBILE USA IMÁGENES DESKTOP
    Evita crear imágenes dobles por cada sección.
    ===================================================== */
@@ -4222,7 +4088,7 @@
    SERVICE MOBILE MASTER RESET V2
    Corrige secciones partidas, imágenes sueltas y ancho roto.
    Desktop/tablet intactos.
-   Página: transporte-terrestre
+   Página: e-commerce
    ===================================================== */
 
 @media (max-width: 760px) {
@@ -4278,7 +4144,7 @@
     position: absolute !important;
     inset: 0 !important;
     z-index: 0 !important;
-    background-image: url("/images/transporte-terrestre-mobile/trannsporte-terrestre1.png") !important;
+    background-image: url("/images/ecommerce.png") !important;
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
@@ -4293,7 +4159,7 @@
     inset: 0 !important;
     z-index: 1 !important;
     background:
-      radial-gradient(circle at 22% 10%, rgba(23, 50, 71, .17), transparent 18rem),
+      radial-gradient(circle at 22% 10%, rgba(237, 27, 47, .17), transparent 18rem),
       linear-gradient(180deg, rgba(5,6,9,.92) 0%, rgba(5,6,9,.76) 44%, rgba(5,6,9,.97) 100%) !important;
     pointer-events: none !important;
   }
@@ -4327,7 +4193,7 @@
   }
 
   .services .eyebrow {
-    color: #173247 !important;
+    color: #ed1b2f !important;
   }
 
   .serviceGrid {
@@ -4361,7 +4227,7 @@
     position: absolute !important;
     inset: 0 !important;
     z-index: 0 !important;
-    background-image: url("/images/transporte-terrestre-mobile/trannsporte-terrestre1.png") !important;
+    background-image: url("/images/ecommerce.png") !important;
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
@@ -4376,7 +4242,7 @@
     inset: 0 !important;
     z-index: 1 !important;
     background:
-      radial-gradient(circle at 75% 18%, rgba(23, 50, 71, .14), transparent 20rem),
+      radial-gradient(circle at 75% 18%, rgba(237, 27, 47, .14), transparent 20rem),
       linear-gradient(180deg, rgba(5,6,9,.92) 0%, rgba(5,6,9,.80) 45%, rgba(5,6,9,.98) 100%) !important;
     pointer-events: none !important;
   }
@@ -4442,7 +4308,7 @@
     position: absolute !important;
     inset: 0 !important;
     z-index: 0 !important;
-    background-image: url("/images/transporte-terrestre-mobile/trannsporte-terrestre2.png") !important;
+    background-image: url("/images/heroecommerce.png") !important;
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
@@ -4457,7 +4323,7 @@
     inset: 0 !important;
     z-index: 1 !important;
     background:
-      radial-gradient(circle at 75% 18%, rgba(23, 50, 71, .14), transparent 20rem),
+      radial-gradient(circle at 75% 18%, rgba(237, 27, 47, .14), transparent 20rem),
       linear-gradient(180deg, rgba(5,6,9,.92) 0%, rgba(5,6,9,.80) 45%, rgba(5,6,9,.98) 100%) !important;
     pointer-events: none !important;
   }
@@ -4608,7 +4474,7 @@
     inset: 0 !important;
     z-index: 1 !important;
     background:
-      radial-gradient(circle at 72% 18%, rgba(23, 50, 71, .16), transparent 20rem),
+      radial-gradient(circle at 72% 18%, rgba(237, 27, 47, .16), transparent 20rem),
       linear-gradient(180deg, rgba(5,6,9,.90) 0%, rgba(5,6,9,.76) 44%, rgba(5,6,9,.97) 100%) !important;
     pointer-events: none !important;
   }
@@ -4643,7 +4509,7 @@
   }
 
   .services .eyebrow {
-    color: #173247 !important;
+    color: #ed1b2f !important;
   }
 
   .serviceGrid {
@@ -4757,10 +4623,10 @@
 
 .actions a:first-child {
   color: #fff !important;
-  background: linear-gradient(135deg, #173247 0%, #c90027 100%) !important;
-  border: 1px solid rgba(23, 50, 71, .9) !important;
+  background: linear-gradient(135deg, #ed1b2f 0%, #c90027 100%) !important;
+  border: 1px solid rgba(237, 27, 47, .9) !important;
   box-shadow:
-    0 18px 44px rgba(23, 50, 71, .27),
+    0 18px 44px rgba(237, 27, 47, .27),
     inset 0 1px 0 rgba(255,255,255,.18) !important;
 }
 
@@ -4780,7 +4646,7 @@
 
 .actions a:first-child:hover {
   box-shadow:
-    0 24px 58px rgba(23, 50, 71, .34),
+    0 24px 58px rgba(237, 27, 47, .34),
     inset 0 1px 0 rgba(255,255,255,.22) !important;
 }
 
@@ -4815,1013 +4681,3 @@
 }
 
 /* END HERO CTA BUTTONS PILL SYSTEM V2 */
-
-/* =====================================================
-   INTERNAL SERVICE HERO — GLOBAL PREMIUM LIGHT SYSTEM
-   Unifica heroes internos con estética clara/premium de Across.
-   ===================================================== */
-
-.hero {
-  position: relative !important;
-  isolation: isolate !important;
-  overflow: hidden !important;
-  min-height: 84vh !important;
-  background: #eef2f5 !important;
-}
-
-/* Imagen base: clara, premium, sin zoom artificial */
-.heroImage {
-  position: absolute !important;
-  inset: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center right !important;
-  transform: none !important;
-  scale: 1 !important;
-  filter:
-    brightness(1.10)
-    contrast(1.02)
-    saturate(1.03) !important;
-  z-index: -3 !important;
-}
-
-/* Desktop: sujeto hacia la derecha, aire para texto a la izquierda */
-.heroImageDesktop {
-  display: block !important;
-  object-position: center right !important;
-}
-
-.heroImageMobile {
-  display: none !important;
-}
-
-/* Overlay más claro que antes: lectura sin matar la imagen */
-.heroOverlay {
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -2 !important;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5, 11, 18, .66) 0%,
-      rgba(7, 17, 29, .50) 34%,
-      rgba(7, 17, 29, .22) 63%,
-      rgba(255, 255, 255, .04) 100%
-    ) !important;
-}
-
-/* Capa final estilo hero principal: profundidad, no oscuridad pesada */
-.hero::after {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -1 !important;
-  pointer-events: none !important;
-  background:
-    radial-gradient(circle at 78% 18%, rgba(205,187,141,.18), transparent 24rem),
-    linear-gradient(180deg, rgba(255,255,255,.04) 0%, rgba(5,11,18,.10) 72%, rgba(5,11,18,.20) 100%) !important;
-}
-
-/* Evita nieblas oscuras heredadas de parches viejos */
-.hero::before {
-  opacity: .35 !important;
-}
-
-.heroInner {
-  position: relative !important;
-  z-index: 2 !important;
-  min-height: 84vh !important;
-  display: flex !important;
-  align-items: center !important;
-  padding-top: clamp(7rem, 10vh, 10rem) !important;
-  padding-bottom: clamp(4rem, 8vh, 7rem) !important;
-}
-
-.heroContent {
-  max-width: 760px !important;
-}
-
-.heroContent h1 {
-  color: #ffffff !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-weight: 700 !important;
-  letter-spacing: -.055em !important;
-  line-height: .96 !important;
-  text-shadow: 0 18px 42px rgba(0,0,0,.26) !important;
-}
-
-.heroContent p {
-  color: rgba(255,255,255,.82) !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-weight: 400 !important;
-  line-height: 1.7 !important;
-  text-shadow: 0 10px 28px rgba(0,0,0,.20) !important;
-}
-
-.eyebrow {
-  color: #d6c08d !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-weight: 800 !important;
-  letter-spacing: .24em !important;
-  text-shadow: 0 8px 20px rgba(0,0,0,.20) !important;
-}
-
-/* Mobile: imagen sin zoom exagerado, overlay más suave y texto arriba */
-@media (max-width: 760px) {
-  .hero {
-    min-height: 88vh !important;
-    background: #eef2f5 !important;
-  }
-
-  .heroImageDesktop {
-    display: none !important;
-  }
-
-  .heroImageMobile {
-    display: block !important;
-  }
-
-  .heroImage {
-    object-fit: cover !important;
-    object-position: 64% center !important;
-    transform: none !important;
-    scale: 1 !important;
-    filter:
-      brightness(1.12)
-      contrast(1.01)
-      saturate(1.02) !important;
-  }
-
-  .heroOverlay {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(5, 11, 18, .56) 0%,
-        rgba(7, 17, 29, .42) 35%,
-        rgba(7, 17, 29, .18) 64%,
-        rgba(5, 11, 18, .30) 100%
-      ) !important;
-  }
-
-  .hero::after {
-    background:
-      radial-gradient(circle at 78% 26%, rgba(205,187,141,.12), transparent 16rem),
-      linear-gradient(180deg, rgba(255,255,255,.035) 0%, rgba(5,11,18,.10) 68%, rgba(5,11,18,.22) 100%) !important;
-  }
-
-  .heroInner {
-    min-height: 88vh !important;
-    align-items: flex-start !important;
-    padding-top: calc(env(safe-area-inset-top) + 8.8rem) !important;
-    padding-bottom: 4.6rem !important;
-  }
-
-  .heroContent {
-    max-width: 94% !important;
-  }
-
-  .heroContent h1 {
-    font-size: clamp(2.35rem, 11.4vw, 4.15rem) !important;
-    line-height: .96 !important;
-    letter-spacing: -.058em !important;
-  }
-
-  .heroContent p {
-    max-width: 92% !important;
-    font-size: clamp(.96rem, 4vw, 1.15rem) !important;
-    line-height: 1.62 !important;
-  }
-
-  .eyebrow {
-    font-size: .68rem !important;
-    letter-spacing: .22em !important;
-  }
-}
-
-/* iPhone SE / pantallas chicas */
-@media (max-width: 390px) {
-  .heroImage {
-    object-position: 66% center !important;
-  }
-
-  .heroInner {
-    padding-top: calc(env(safe-area-inset-top) + 8.2rem) !important;
-  }
-
-  .heroContent h1 {
-    font-size: clamp(2.12rem, 10.8vw, 3.35rem) !important;
-  }
-
-  .heroContent p {
-    font-size: .94rem !important;
-  }
-}
-
-/* =====================================================
-   MOBILE HERO NO ZOOM FINAL
-   Muestra la imagen mobile completa, con distancia original.
-   ===================================================== */
-
-@media (max-width: 760px) {
-  .hero {
-    background: #07111d !important;
-  }
-
-  .heroImageMobile {
-    display: block !important;
-    object-fit: contain !important;
-    object-position: center center !important;
-    width: 100% !important;
-    height: 100% !important;
-    transform: none !important;
-    scale: 1 !important;
-    background: #07111d !important;
-  }
-
-  .heroImage {
-    object-fit: contain !important;
-    object-position: center center !important;
-    transform: none !important;
-    scale: 1 !important;
-  }
-
-  .heroOverlay {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(5, 11, 18, .58) 0%,
-        rgba(7, 17, 29, .36) 36%,
-        rgba(7, 17, 29, .16) 62%,
-        rgba(5, 11, 18, .34) 100%
-      ) !important;
-  }
-}
-
-@media (max-width: 390px) {
-  .heroImage,
-  .heroImageMobile {
-    object-fit: contain !important;
-    object-position: center center !important;
-    transform: none !important;
-    scale: 1 !important;
-  }
-}
-
-/* =====================================================
-   MOBILE HERO NO ZOOM FINAL
-   Muestra la imagen mobile completa, con distancia original.
-   ===================================================== */
-
-@media (max-width: 760px) {
-  .hero {
-    background: #07111d !important;
-  }
-
-  .heroImageMobile {
-    display: block !important;
-    object-fit: contain !important;
-    object-position: center center !important;
-    width: 100% !important;
-    height: 100% !important;
-    transform: none !important;
-    scale: 1 !important;
-    background: #07111d !important;
-  }
-
-  .heroImage {
-    object-fit: contain !important;
-    object-position: center center !important;
-    transform: none !important;
-    scale: 1 !important;
-  }
-
-  .heroOverlay {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(5, 11, 18, .58) 0%,
-        rgba(7, 17, 29, .36) 36%,
-        rgba(7, 17, 29, .16) 62%,
-        rgba(5, 11, 18, .34) 100%
-      ) !important;
-  }
-}
-
-@media (max-width: 390px) {
-  .heroImage,
-  .heroImageMobile {
-    object-fit: contain !important;
-    object-position: center center !important;
-    transform: none !important;
-    scale: 1 !important;
-  }
-}
-
-/* =====================================================
-   SERVICE HERO FINAL SYSTEM — MATCH HOME HERO
-   Misma estética para todos los heroes internos.
-   ===================================================== */
-
-.hero {
-  position: relative !important;
-  width: 100% !important;
-  min-height: 92vh !important;
-  overflow: hidden !important;
-  isolation: isolate !important;
-  background: #07111d !important;
-  margin: 0 !important;
-}
-
-/* Imagen hero */
-.heroImage {
-  position: absolute !important;
-  inset: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  min-width: 100% !important;
-  min-height: 100% !important;
-  object-fit: cover !important;
-  object-position: center center !important;
-  transform: none !important;
-  scale: 1 !important;
-  filter:
-    brightness(1.08)
-    contrast(1.03)
-    saturate(1.04) !important;
-  z-index: -4 !important;
-}
-
-.heroImageDesktop {
-  display: block !important;
-  object-fit: cover !important;
-  object-position: center right !important;
-}
-
-.heroImageMobile {
-  display: none !important;
-}
-
-/* Overlay azul tinta, no negro pesado */
-.heroOverlay {
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -3 !important;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5, 11, 18, .74) 0%,
-      rgba(7, 17, 29, .58) 36%,
-      rgba(7, 17, 29, .26) 66%,
-      rgba(7, 17, 29, .08) 100%
-    ) !important;
-}
-
-/* Luz premium champagne */
-.hero::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -2 !important;
-  pointer-events: none !important;
-  opacity: 1 !important;
-  background:
-    radial-gradient(circle at 78% 20%, rgba(214, 192, 141, .17), transparent 25rem),
-    radial-gradient(circle at 10% 18%, rgba(255,255,255,.07), transparent 20rem) !important;
-}
-
-/* Profundidad inferior */
-.hero::after {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -1 !important;
-  pointer-events: none !important;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,.02) 0%,
-      rgba(5,11,18,.04) 46%,
-      rgba(5,11,18,.28) 100%
-    ) !important;
-}
-
-.heroInner {
-  position: relative !important;
-  z-index: 2 !important;
-  width: 100% !important;
-  min-height: 92vh !important;
-  display: flex !important;
-  align-items: center !important;
-  padding-top: clamp(7.2rem, 11vh, 10rem) !important;
-  padding-bottom: clamp(4rem, 8vh, 7rem) !important;
-}
-
-.heroContent {
-  max-width: 780px !important;
-}
-
-.eyebrow {
-  display: block !important;
-  margin-bottom: 1.05rem !important;
-  color: #d6c08d !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: .72rem !important;
-  font-weight: 800 !important;
-  line-height: 1.15 !important;
-  letter-spacing: .26em !important;
-  text-transform: uppercase !important;
-  text-shadow: 0 10px 26px rgba(0,0,0,.22) !important;
-}
-
-.heroContent h1 {
-  max-width: 860px !important;
-  margin: 0 !important;
-  color: #ffffff !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: clamp(4.4rem, 7.6vw, 8.8rem) !important;
-  font-weight: 750 !important;
-  line-height: .90 !important;
-  letter-spacing: -.07em !important;
-  text-wrap: balance !important;
-  text-shadow:
-    0 22px 54px rgba(0,0,0,.34),
-    0 2px 8px rgba(0,0,0,.18) !important;
-}
-
-.heroContent h1::after {
-  display: none !important;
-}
-
-.heroContent p {
-  max-width: 630px !important;
-  margin-top: 1.25rem !important;
-  color: rgba(255,255,255,.84) !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: clamp(1.05rem, 1.35vw, 1.28rem) !important;
-  font-weight: 400 !important;
-  line-height: 1.72 !important;
-  text-shadow: 0 14px 34px rgba(0,0,0,.24) !important;
-}
-
-/* Botones: azul tinta, no rojo */
-.heroContent a,
-.heroContent button {
-  border-radius: 999px !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-weight: 800 !important;
-  letter-spacing: .08em !important;
-  text-transform: uppercase !important;
-  transition:
-    transform .28s cubic-bezier(.22,.61,.36,1),
-    box-shadow .28s cubic-bezier(.22,.61,.36,1),
-    background .28s ease,
-    border-color .28s ease !important;
-}
-
-.heroContent a:first-of-type {
-  background:
-    radial-gradient(circle at 18% 0%, rgba(255,255,255,.18), transparent 36%),
-    linear-gradient(135deg, #07111d 0%, #0d1c2b 46%, #173247 100%) !important;
-  color: #ffffff !important;
-  border: 1px solid rgba(214,192,141,.34) !important;
-  box-shadow:
-    0 20px 44px rgba(7,17,29,.34),
-    0 6px 18px rgba(23,50,71,.24),
-    inset 0 1px 0 rgba(255,255,255,.18) !important;
-}
-
-.heroContent a:first-of-type:hover {
-  transform: translateY(-2px) !important;
-  box-shadow:
-    0 24px 54px rgba(7,17,29,.40),
-    0 8px 22px rgba(23,50,71,.28),
-    inset 0 1px 0 rgba(255,255,255,.22) !important;
-}
-
-.heroContent a:nth-of-type(2) {
-  background: rgba(255,255,255,.16) !important;
-  color: #ffffff !important;
-  border: 1px solid rgba(255,255,255,.28) !important;
-  backdrop-filter: blur(16px) !important;
-  box-shadow:
-    0 14px 34px rgba(0,0,0,.22),
-    inset 0 1px 0 rgba(255,255,255,.18) !important;
-}
-
-/* Mobile: mismo consumo visual que home */
-@media (max-width: 760px) {
-  .hero {
-    min-height: 100svh !important;
-    height: 100svh !important;
-    padding: 0 !important;
-  }
-
-  .heroImageDesktop {
-    display: none !important;
-  }
-
-  .heroImageMobile {
-    display: block !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-  }
-
-  .heroImage {
-    object-fit: cover !important;
-    object-position: center center !important;
-    filter:
-      brightness(1.08)
-      contrast(1.03)
-      saturate(1.04) !important;
-  }
-
-  .heroOverlay {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(5, 11, 18, .42) 0%,
-        rgba(7, 17, 29, .34) 30%,
-        rgba(7, 17, 29, .25) 58%,
-        rgba(5, 11, 18, .48) 100%
-      ),
-      linear-gradient(
-        90deg,
-        rgba(5, 11, 18, .58) 0%,
-        rgba(7, 17, 29, .32) 54%,
-        rgba(7, 17, 29, .08) 100%
-      ) !important;
-  }
-
-  .heroInner {
-    min-height: 100svh !important;
-    height: 100svh !important;
-    align-items: center !important;
-    padding:
-      calc(env(safe-area-inset-top) + 6.6rem)
-      1.25rem
-      3.8rem !important;
-  }
-
-  .heroContent {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  .eyebrow {
-    margin-bottom: .92rem !important;
-    font-size: .66rem !important;
-    letter-spacing: .22em !important;
-  }
-
-  .heroContent h1 {
-    max-width: 94% !important;
-    font-size: clamp(2.62rem, 11.6vw, 4.25rem) !important;
-    line-height: .92 !important;
-    letter-spacing: -.065em !important;
-  }
-
-  .heroContent p {
-    max-width: 92% !important;
-    margin-top: 1.05rem !important;
-    font-size: clamp(.96rem, 4vw, 1.12rem) !important;
-    line-height: 1.62 !important;
-  }
-}
-
-@media (max-width: 390px) {
-  .heroInner {
-    padding:
-      calc(env(safe-area-inset-top) + 6.25rem)
-      1.05rem
-      3.4rem !important;
-  }
-
-  .heroContent h1 {
-    font-size: clamp(2.35rem, 11.2vw, 3.65rem) !important;
-  }
-
-  .heroContent p {
-    font-size: .94rem !important;
-    line-height: 1.58 !important;
-  }
-}
-
-/* =====================================================
-   EXPORT CLASSES FOR GLOBAL HERO COMMAND BAR
-   Necesarias para que CSS Modules exporte styles.commandBar/item.
-   El estilo real lo toma globals.css.
-   ===================================================== */
-
-.commandBar {}
-
-.commandItem {}
-
-/* =====================================================
-   LOCAL SERVICE COMMAND BAR FIX
-   CSS real dentro del module, no depende de globals.
-   ===================================================== */
-
-.commandBar {
-  position: absolute !important;
-  left: 50% !important;
-  right: auto !important;
-  top: auto !important;
-  bottom: clamp(1rem, 2.2vh, 1.6rem) !important;
-  z-index: 50 !important;
-  transform: translateX(-50%) !important;
-  width: min(1120px, calc(100% - 2rem)) !important;
-  min-height: 82px !important;
-  display: grid !important;
-  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-  overflow: hidden !important;
-  border-radius: 24px !important;
-  background: rgba(255, 255, 255, .94) !important;
-  border: 1px solid rgba(255, 255, 255, .50) !important;
-  backdrop-filter: blur(20px) saturate(1.15) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(1.15) !important;
-  box-shadow:
-    0 24px 70px rgba(5, 11, 18, .25),
-    inset 0 1px 0 rgba(255, 255, 255, .75) !important;
-}
-
-.commandItem {
-  min-width: 0 !important;
-  padding: 1rem 1.1rem !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-  justify-content: center !important;
-  gap: .22rem !important;
-  color: #101820 !important;
-  text-decoration: none !important;
-  border-right: 1px solid rgba(16, 24, 32, .10) !important;
-  transition:
-    background .25s ease,
-    transform .25s ease,
-    color .25s ease !important;
-}
-
-.commandItem:last-child {
-  border-right: 0 !important;
-}
-
-.commandItem:hover {
-  background: rgba(23, 50, 71, .065) !important;
-}
-
-.commandItem span {
-  display: block !important;
-  color: #101820 !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: .88rem !important;
-  font-weight: 800 !important;
-  line-height: 1.1 !important;
-  letter-spacing: -.02em !important;
-  white-space: nowrap !important;
-}
-
-.commandItem small {
-  display: block !important;
-  color: rgba(16, 24, 32, .56) !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: .70rem !important;
-  font-weight: 500 !important;
-  line-height: 1.1 !important;
-  white-space: nowrap !important;
-}
-
-/* Mobile igual a la home: abajo, compacto, sin texto encimado arriba */
-@media (max-width: 760px) {
-  .commandBar {
-    position: absolute !important;
-    left: 50% !important;
-    top: auto !important;
-    bottom: calc(env(safe-area-inset-bottom) + .82rem) !important;
-    transform: translateX(-50%) !important;
-    width: calc(100% - 1.5rem) !important;
-    min-height: 76px !important;
-    display: grid !important;
-    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-    border-radius: 22px !important;
-    background: rgba(255, 255, 255, .94) !important;
-    overflow: hidden !important;
-  }
-
-  .commandItem {
-    padding: .72rem .32rem !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    gap: 0 !important;
-  }
-
-  .commandItem span {
-    font-size: .64rem !important;
-    line-height: 1.05 !important;
-    white-space: normal !important;
-  }
-
-  .commandItem small {
-    display: none !important;
-  }
-}
-
-@media (max-width: 390px) {
-  .commandBar {
-    width: calc(100% - 1.1rem) !important;
-    min-height: 72px !important;
-  }
-
-  .commandItem span {
-    font-size: .58rem !important;
-  }
-}
-
-/* =====================================================
-   FINAL SERVICE HERO RESET — SAME RHYTHM AS HOME
-   Corrige hero revuelto: altura real, texto debajo del header,
-   CTA limpio, command bar abajo, nada de secciones metidas.
-   ===================================================== */
-
-@media (max-width: 760px) {
-  .hero {
-    position: relative !important;
-    width: 100% !important;
-    height: 100svh !important;
-    min-height: 100svh !important;
-    max-height: 100svh !important;
-    overflow: hidden !important;
-    isolation: isolate !important;
-    background: #07111d !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .heroImageDesktop {
-    display: none !important;
-  }
-
-  .heroImageMobile {
-    display: block !important;
-  }
-
-  .heroImage,
-  .heroImageMobile {
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-    transform: none !important;
-    scale: 1 !important;
-    filter:
-      brightness(1.07)
-      contrast(1.03)
-      saturate(1.04) !important;
-    z-index: -4 !important;
-  }
-
-  .heroOverlay {
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: -3 !important;
-    background:
-      linear-gradient(
-        180deg,
-        rgba(5, 11, 18, .46) 0%,
-        rgba(7, 17, 29, .35) 32%,
-        rgba(7, 17, 29, .24) 58%,
-        rgba(5, 11, 18, .52) 100%
-      ),
-      linear-gradient(
-        90deg,
-        rgba(5, 11, 18, .58) 0%,
-        rgba(7, 17, 29, .30) 58%,
-        rgba(7, 17, 29, .08) 100%
-      ) !important;
-  }
-
-  .hero::before {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: -2 !important;
-    pointer-events: none !important;
-    background:
-      radial-gradient(circle at 78% 22%, rgba(214, 192, 141, .14), transparent 16rem),
-      radial-gradient(circle at 12% 18%, rgba(255,255,255,.06), transparent 14rem) !important;
-  }
-
-  .hero::after {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: -1 !important;
-    pointer-events: none !important;
-    background:
-      linear-gradient(
-        180deg,
-        rgba(255,255,255,.02) 0%,
-        rgba(5,11,18,.04) 48%,
-        rgba(5,11,18,.32) 100%
-      ) !important;
-  }
-
-  .heroInner {
-    position: relative !important;
-    z-index: 2 !important;
-    width: 100% !important;
-    height: 100svh !important;
-    min-height: 100svh !important;
-    display: flex !important;
-    align-items: flex-start !important;
-    justify-content: flex-start !important;
-    padding:
-      calc(env(safe-area-inset-top) + 8.15rem)
-      1.15rem
-      8.7rem !important;
-    margin: 0 !important;
-  }
-
-  .heroContent {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .operationCard {
-    display: none !important;
-  }
-
-  .eyebrow {
-    display: block !important;
-    margin: 0 0 .72rem !important;
-    color: #d6c08d !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: .62rem !important;
-    font-weight: 850 !important;
-    line-height: 1.16 !important;
-    letter-spacing: .20em !important;
-    text-transform: uppercase !important;
-    text-shadow: 0 10px 26px rgba(0,0,0,.24) !important;
-  }
-
-  .heroContent h1 {
-    max-width: 96% !important;
-    margin: 0 !important;
-    color: #ffffff !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: clamp(2.18rem, 10.1vw, 3.45rem) !important;
-    font-weight: 760 !important;
-    line-height: .93 !important;
-    letter-spacing: -.065em !important;
-    text-wrap: balance !important;
-    text-shadow:
-      0 22px 54px rgba(0,0,0,.34),
-      0 2px 8px rgba(0,0,0,.18) !important;
-  }
-
-  .heroContent h1::after {
-    display: none !important;
-  }
-
-  .heroContent p {
-    max-width: 92% !important;
-    margin: .92rem 0 0 !important;
-    color: rgba(255,255,255,.84) !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: .92rem !important;
-    font-weight: 400 !important;
-    line-height: 1.55 !important;
-    text-shadow: 0 14px 34px rgba(0,0,0,.24) !important;
-  }
-
-  .actions {
-    display: flex !important;
-    width: 100% !important;
-    margin-top: 1.15rem !important;
-    gap: .6rem !important;
-  }
-
-  .actions a {
-    min-height: 42px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 0 1rem !important;
-    border-radius: 999px !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: .56rem !important;
-    font-weight: 850 !important;
-    letter-spacing: .08em !important;
-    text-transform: uppercase !important;
-    text-decoration: none !important;
-  }
-
-  .actions a:first-child {
-    width: min(100%, 245px) !important;
-    background:
-      radial-gradient(circle at 18% 0%, rgba(255,255,255,.18), transparent 36%),
-      linear-gradient(135deg, #07111d 0%, #0d1c2b 46%, #173247 100%) !important;
-    color: #ffffff !important;
-    border: 1px solid rgba(214,192,141,.34) !important;
-    box-shadow:
-      0 20px 44px rgba(7,17,29,.34),
-      0 6px 18px rgba(23,50,71,.24),
-      inset 0 1px 0 rgba(255,255,255,.18) !important;
-  }
-
-  .actions a:nth-child(2) {
-    display: none !important;
-  }
-
-  .commandBar {
-    position: absolute !important;
-    left: 50% !important;
-    top: auto !important;
-    right: auto !important;
-    bottom: calc(env(safe-area-inset-bottom) + .78rem) !important;
-    transform: translateX(-50%) !important;
-    z-index: 60 !important;
-    width: calc(100% - 1.5rem) !important;
-    height: 72px !important;
-    min-height: 72px !important;
-    display: grid !important;
-    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-    overflow: hidden !important;
-    border-radius: 20px !important;
-    background: rgba(255,255,255,.94) !important;
-    border: 1px solid rgba(255,255,255,.52) !important;
-    backdrop-filter: blur(20px) saturate(1.15) !important;
-    -webkit-backdrop-filter: blur(20px) saturate(1.15) !important;
-    box-shadow:
-      0 24px 70px rgba(5,11,18,.25),
-      inset 0 1px 0 rgba(255,255,255,.75) !important;
-  }
-
-  .commandItem {
-    min-width: 0 !important;
-    height: 100% !important;
-    padding: .62rem .22rem !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    text-decoration: none !important;
-    border-right: 1px solid rgba(16,24,32,.10) !important;
-    color: #101820 !important;
-  }
-
-  .commandItem:last-child {
-    border-right: 0 !important;
-  }
-
-  .commandItem span {
-    display: block !important;
-    color: #101820 !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: .58rem !important;
-    font-weight: 850 !important;
-    line-height: 1.05 !important;
-    letter-spacing: -.02em !important;
-  }
-
-  .commandItem small {
-    display: none !important;
-  }
-}
-
-@media (max-width: 390px) {
-  .heroInner {
-    padding:
-      calc(env(safe-area-inset-top) + 7.9rem)
-      1.05rem
-      8.4rem !important;
-  }
-
-  .heroContent h1 {
-    font-size: clamp(2.02rem, 9.65vw, 3.12rem) !important;
-  }
-
-  .heroContent p {
-    font-size: .88rem !important;
-    line-height: 1.50 !important;
-  }
-
-  .actions a:first-child {
-    width: 225px !important;
-  }
-
-  .commandBar {
-    width: calc(100% - 1.05rem) !important;
-    height: 68px !important;
-    min-height: 68px !important;
-  }
-
-  .commandItem span {
-    font-size: .52rem !important;
-  }
-}
