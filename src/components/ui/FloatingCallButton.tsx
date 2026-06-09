@@ -1,11 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import styles from "./FloatingCallButton.module.css";
-
-type Locale = "es" | "en" | "zh";
-
-const LOCALE_KEY = "across-locale";
 
 const copy = {
   es: {
@@ -19,92 +16,72 @@ const copy = {
     aria: "Schedule a commercial call",
   },
   zh: {
-    bubble: "预约电话",
-    label: "预约电话",
-    aria: "预约商务电话",
+    bubble: "预约通话",
+    label: "预约通话",
+    aria: "预约商务通话",
   },
-} as const;
+};
+
+type Locale = keyof typeof copy;
+
+function getLocaleFromPath(pathname: string): Locale {
+  if (pathname.startsWith("/en")) return "en";
+  if (pathname.startsWith("/zh")) return "zh";
+  return "es";
+}
+
+function PhoneIcon() {
+  return (
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.19 18 19.5 19.5 0 0 1 6 12.81 19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.91.33 1.8.62 2.65a2 2 0 0 1-.45 2.11L8 9.72a16 16 0 0 0 6.28 6.28l1.24-1.23a2 2 0 0 1 2.11-.45c.85.29 1.74.5 2.65.62A2 2 0 0 1 22 16.92Z"
+        stroke="currentColor"
+        strokeWidth="2.1"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
 export default function FloatingCallButton() {
-  const [locale, setLocale] = useState<Locale>("es");
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    const saved = window.localStorage.getItem(LOCALE_KEY) as Locale | null;
-    if (saved && saved in copy) setLocale(saved);
-
-    const onChange = (event: Event) => {
-      const next = (event as CustomEvent<Locale>).detail;
-      if (next in copy) setLocale(next);
-    };
-
-    window.addEventListener("across-locale-change", onChange);
-    return () => window.removeEventListener("across-locale-change", onChange);
-  }, []);
-
+  const pathname = usePathname();
+  const locale = getLocaleFromPath(pathname || "");
   const t = copy[locale];
 
+  const [isMobile, setIsMobile] = useState(true);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.matchMedia("(max-width: 760px)").matches);
+    };
+
+    checkMobile();
+
+    window.addEventListener("resize", checkMobile);
+    window.addEventListener("orientationchange", checkMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+      window.removeEventListener("orientationchange", checkMobile);
+    };
+  }, []);
+
+  if (isMobile) return null;
+
   return (
-    <>
-      <button
-        type="button"
-        className={styles.floating}
-        aria-label={t.aria}
-        onClick={() => setOpen(true)}
-      >
-        <span className={styles.chatBubble}>{t.bubble}</span>
-
-        <span className={styles.callPill}>
-                              <span className={styles.iconCircle} aria-hidden="true">
-            <svg
-              viewBox="0 0 24 24"
-              width="22"
-              height="22"
-              fill="none"
-              stroke="white"
-              strokeWidth="2.1"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              focusable="false"
-            >
-              <path
-                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.48 19.48 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.92.33 1.82.63 2.68a2 2 0 0 1-.45 2.11L8.1 9.7a16 16 0 0 0 6.2 6.2l1.19-1.19a2 2 0 0 1 2.11-.45c.86.3 1.76.51 2.68.63A2 2 0 0 1 22 16.92Z"
-                fill="none"
-                stroke="white"
-              />
-            </svg>
-          </span>
-        </span>
-      </button>
-
-      {open ? (
-        <div className={styles.backdrop} onClick={() => setOpen(false)}>
-          <div className={styles.modal} onClick={(event) => event.stopPropagation()}>
-            <button
-              type="button"
-              className={styles.close}
-              onClick={() => setOpen(false)}
-              aria-label="Cerrar"
-            >
-              ×
-            </button>
-
-            <span className={styles.modalEyebrow}>{t.label}</span>
-            <h2>{locale === "en" ? "Commercial assistance" : locale === "zh" ? "商务咨询" : "Asesoría comercial"}</h2>
-            <p>
-              {locale === "en"
-                ? "Leave your details and our team will contact you."
-                : locale === "zh"
-                  ? "留下您的信息，我们的团队会与您联系。"
-                  : "Deje sus datos y nuestro equipo comercial se comunicará con usted."}
-            </p>
-
-            <a href="/contacto" className={styles.modalCta}>
-              {t.label}
-            </a>
-          </div>
-        </div>
-      ) : null}
-    </>
+    <a href="/contacto" className={styles.floating} aria-label={t.aria}>
+      <span className={styles.chatBubble}>{t.bubble}</span>
+      <span className={styles.callPill}>{t.label}</span>
+      <span className={styles.callButton}>
+        <PhoneIcon />
+      </span>
+    </a>
   );
 }

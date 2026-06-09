@@ -1,6 +1,5 @@
 import "./globals.css";
 import CookieConsent from "@/components/legal/CookieConsent";
-import FloatingCallButton from "@/components/ui/FloatingCallButton";
 import { Manrope, Inter_Tight } from "next/font/google";
 
 export const metadata = {
@@ -50,7 +49,6 @@ export default function RootLayout({
         className={`${manrope.variable} ${interTight.variable}`}
       >
         {children}
-      <FloatingCallButton />
         <CookieConsent />
       </body>
     </html>

@@ -572,3 +572,1250 @@
     bottom: 1rem;
   }
 }
+
+/* =====================================================
+   HOME MOBILE PHASE 1 — HERO TYPOGRAPHY + SPACING
+   Ajuste puntual pedido por cliente:
+   versión móvil / letras / respiración visual
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .hero {
+    min-height: 100svh !important;
+  }
+
+  .content {
+    top: calc(76px + env(safe-area-inset-top)) !important;
+    bottom: calc(92px + env(safe-area-inset-bottom)) !important;
+    padding-inline: 22px !important;
+    transform: translateY(3.2svh) !important;
+    max-width: 100% !important;
+  }
+
+  .titleWrap {
+    max-width: 340px !important;
+  }
+
+  .title {
+    max-width: 340px !important;
+    font-size: clamp(2.05rem, 9.2vw, 3.05rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.052em !important;
+    margin-bottom: .82rem !important;
+  }
+
+  .subtitle {
+    max-width: 315px !important;
+    margin-top: .72rem !important;
+    font-size: clamp(.84rem, 3.35vw, .96rem) !important;
+    line-height: 1.55 !important;
+    color: rgba(255,255,255,.78) !important;
+  }
+
+  .actions {
+    max-width: 330px !important;
+    margin-top: 1rem !important;
+  }
+
+  .commandBar {
+    height: 78px !important;
+  }
+
+  .commandItem {
+    min-height: 78px !important;
+  }
+
+  .commandItem span {
+    font-size: 9.5px !important;
+    line-height: 1.08 !important;
+  }
+
+  .commandItem small {
+    font-size: 7.5px !important;
+    line-height: 1.05 !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .content {
+    padding-inline: 20px !important;
+    transform: translateY(2.7svh) !important;
+  }
+
+  .titleWrap {
+    max-width: 320px !important;
+  }
+
+  .title {
+    max-width: 320px !important;
+    font-size: clamp(1.92rem, 8.8vw, 2.72rem) !important;
+    line-height: 1 !important;
+  }
+
+  .subtitle {
+    max-width: 300px !important;
+    font-size: clamp(.8rem, 3.2vw, .9rem) !important;
+    line-height: 1.52 !important;
+  }
+
+  .actions {
+    max-width: 315px !important;
+  }
+}
+
+@media (max-width: 380px), (max-height: 720px) {
+  .content {
+    top: calc(66px + env(safe-area-inset-top)) !important;
+    bottom: calc(78px + env(safe-area-inset-bottom)) !important;
+    padding-inline: 18px !important;
+    transform: translateY(1.6svh) !important;
+  }
+
+  .titleWrap {
+    max-width: 292px !important;
+  }
+
+  .title {
+    max-width: 292px !important;
+    font-size: clamp(1.72rem, 8.1vw, 2.25rem) !important;
+    line-height: 1 !important;
+    margin-bottom: .58rem !important;
+  }
+
+  .subtitle {
+    max-width: 282px !important;
+    margin-top: .52rem !important;
+    font-size: clamp(.72rem, 2.9vw, .82rem) !important;
+    line-height: 1.45 !important;
+  }
+
+  .actions {
+    max-width: 292px !important;
+    margin-top: .72rem !important;
+  }
+
+  .commandBar {
+    height: 66px !important;
+  }
+
+  .commandItem {
+    min-height: 66px !important;
+    padding: 5px 3px !important;
+  }
+
+  .commandItem svg {
+    width: 15px !important;
+    height: 15px !important;
+    flex-basis: 15px !important;
+  }
+
+  .commandItem span {
+    font-size: 8.5px !important;
+  }
+
+  .commandItem small {
+    font-size: 6.8px !important;
+  }
+}
+
+/* =====================================================
+   HOME MOBILE PHASE 2 — CTA + SHADOW POLISH
+   Ajuste puntual pedido por cliente:
+   llamados de acción / botones / sombras
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .actions {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: .72rem !important;
+    width: 100% !important;
+    max-width: 330px !important;
+    margin-top: 1.12rem !important;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100% !important;
+    min-height: 50px !important;
+    padding: 0 1rem !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 999px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+
+    font-size: .72rem !important;
+    font-weight: 950 !important;
+    letter-spacing: .065em !important;
+    line-height: 1.1 !important;
+
+    backdrop-filter: blur(14px) saturate(1.08) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(1.08) !important;
+
+    transition:
+      transform .22s ease,
+      box-shadow .22s ease,
+      border-color .22s ease,
+      background .22s ease !important;
+  }
+
+  .primaryBtn {
+    color: #fff !important;
+    background:
+      linear-gradient(135deg, #b40032 0%, #ed1b2f 52%, #980027 100%) !important;
+    border: 1px solid rgba(255,255,255,.16) !important;
+    box-shadow:
+      0 16px 34px rgba(180,0,50,.24),
+      0 4px 12px rgba(0,0,0,.20),
+      inset 0 1px 0 rgba(255,255,255,.18) !important;
+  }
+
+  .secondaryBtn {
+    color: rgba(255,255,255,.94) !important;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.105), rgba(255,255,255,.052)) !important;
+    border: 1px solid rgba(255,255,255,.24) !important;
+    box-shadow:
+      0 14px 32px rgba(0,0,0,.24),
+      inset 0 1px 0 rgba(255,255,255,.10) !important;
+  }
+
+  .primaryBtn:active,
+  .secondaryBtn:active {
+    transform: translateY(1px) scale(.99) !important;
+  }
+
+  .commandBar {
+    border-top: 1px solid rgba(255,255,255,.12) !important;
+    border-bottom: 1px solid rgba(255,255,255,.08) !important;
+    background: rgba(5,6,9,.91) !important;
+    box-shadow:
+      0 -18px 42px rgba(0,0,0,.28),
+      inset 0 1px 0 rgba(255,255,255,.045) !important;
+    backdrop-filter: blur(18px) saturate(1.12) !important;
+    -webkit-backdrop-filter: blur(18px) saturate(1.12) !important;
+  }
+
+  .commandItem {
+    border-right: 1px solid rgba(255,255,255,.075) !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .actions {
+    max-width: 315px !important;
+    gap: .66rem !important;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    min-height: 48px !important;
+    font-size: .68rem !important;
+    letter-spacing: .055em !important;
+  }
+}
+
+@media (max-width: 380px), (max-height: 720px) {
+  .actions {
+    max-width: 292px !important;
+    gap: .56rem !important;
+    margin-top: .78rem !important;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    min-height: 44px !important;
+    font-size: .62rem !important;
+    letter-spacing: .048em !important;
+  }
+}
+
+/* =====================================================
+   HOME MOBILE PHASE 2 — CTA + SHADOW POLISH
+   Ajuste puntual pedido por cliente:
+   llamados de acción / botones / sombras
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .actions {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: .72rem !important;
+    width: 100% !important;
+    max-width: 330px !important;
+    margin-top: 1.12rem !important;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100% !important;
+    min-height: 50px !important;
+    padding: 0 1rem !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 999px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+
+    font-size: .72rem !important;
+    font-weight: 950 !important;
+    letter-spacing: .065em !important;
+    line-height: 1.1 !important;
+
+    backdrop-filter: blur(14px) saturate(1.08) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(1.08) !important;
+
+    transition:
+      transform .22s ease,
+      box-shadow .22s ease,
+      border-color .22s ease,
+      background .22s ease !important;
+  }
+
+  .primaryBtn {
+    color: #fff !important;
+    background:
+      linear-gradient(135deg, #b40032 0%, #ed1b2f 52%, #980027 100%) !important;
+    border: 1px solid rgba(255,255,255,.16) !important;
+    box-shadow:
+      0 16px 34px rgba(180,0,50,.24),
+      0 4px 12px rgba(0,0,0,.20),
+      inset 0 1px 0 rgba(255,255,255,.18) !important;
+  }
+
+  .secondaryBtn {
+    color: rgba(255,255,255,.94) !important;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.105), rgba(255,255,255,.052)) !important;
+    border: 1px solid rgba(255,255,255,.24) !important;
+    box-shadow:
+      0 14px 32px rgba(0,0,0,.24),
+      inset 0 1px 0 rgba(255,255,255,.10) !important;
+  }
+
+  .primaryBtn:active,
+  .secondaryBtn:active {
+    transform: translateY(1px) scale(.99) !important;
+  }
+
+  .commandBar {
+    border-top: 1px solid rgba(255,255,255,.12) !important;
+    border-bottom: 1px solid rgba(255,255,255,.08) !important;
+    background: rgba(5,6,9,.91) !important;
+    box-shadow:
+      0 -18px 42px rgba(0,0,0,.28),
+      inset 0 1px 0 rgba(255,255,255,.045) !important;
+    backdrop-filter: blur(18px) saturate(1.12) !important;
+    -webkit-backdrop-filter: blur(18px) saturate(1.12) !important;
+  }
+
+  .commandItem {
+    border-right: 1px solid rgba(255,255,255,.075) !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .actions {
+    max-width: 315px !important;
+    gap: .66rem !important;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    min-height: 48px !important;
+    font-size: .68rem !important;
+    letter-spacing: .055em !important;
+  }
+}
+
+@media (max-width: 380px), (max-height: 720px) {
+  .actions {
+    max-width: 292px !important;
+    gap: .56rem !important;
+    margin-top: .78rem !important;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    min-height: 44px !important;
+    font-size: .62rem !important;
+    letter-spacing: .048em !important;
+  }
+}
+
+/* =====================================================
+   HOME MOBILE PHASE 2.1 — SAFE EDGES FIX
+   Corrige cortes laterales en mobile:
+   header visual, texto hero, CTAs y command bar
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .hero {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow: hidden !important;
+  }
+
+  .content {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .titleWrap,
+  .title,
+  .subtitle,
+  .actions {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  .titleWrap {
+    width: 100% !important;
+    max-width: 325px !important;
+  }
+
+  .title {
+    max-width: 325px !important;
+  }
+
+  .subtitle {
+    max-width: 305px !important;
+  }
+
+  .actions {
+    width: 100% !important;
+    max-width: 310px !important;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100% !important;
+    max-width: 310px !important;
+  }
+
+  .commandBar {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    overflow: hidden !important;
+  }
+
+  .commandItem {
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .commandItem span,
+  .commandItem small {
+    max-width: 100% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .content {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .titleWrap,
+  .title {
+    max-width: 315px !important;
+  }
+
+  .subtitle {
+    max-width: 295px !important;
+  }
+
+  .actions,
+  .primaryBtn,
+  .secondaryBtn {
+    max-width: 300px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .content {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .titleWrap,
+  .title {
+    max-width: 292px !important;
+  }
+
+  .subtitle {
+    max-width: 278px !important;
+  }
+
+  .actions,
+  .primaryBtn,
+  .secondaryBtn {
+    max-width: 292px !important;
+  }
+}
+
+/* =====================================================
+   HOME MOBILE PHASE 2.2 — FLOATING CTA CLEANUP
+   Limpieza visual mobile: evita CTA flotante compitiendo
+   con botones principales y command bar
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .hero :global(.floatingCall),
+  .hero :global(.floating-call),
+  .hero :global([class*="floating"]),
+  .hero :global([class*="Floating"]),
+  .hero :global([class*="whatsapp"]),
+  .hero :global([class*="Whatsapp"]) {
+    display: none !important;
+  }
+
+  .commandItem span {
+    font-size: 8.8px !important;
+    letter-spacing: -.02em !important;
+  }
+
+  .commandItem small {
+    font-size: 6.8px !important;
+    letter-spacing: -.02em !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .commandItem span {
+    font-size: 8px !important;
+  }
+
+  .commandItem small {
+    font-size: 6.2px !important;
+  }
+}
+
+/* =====================================================
+   HOME MOBILE ROUND 3 — MAERSK CORPORATE MOBILE STYLE
+   Dirección: menos landing oscura, más portal corporativo.
+   - Botones sobrios
+   - Menos glow
+   - Mejor lectura
+   - Quick access más institucional
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .hero {
+    background: #f7f5f0 !important;
+  }
+
+  .overlay {
+    background:
+      linear-gradient(180deg, rgba(5, 6, 9, .52) 0%, rgba(5, 6, 9, .36) 36%, rgba(5, 6, 9, .60) 100%),
+      linear-gradient(90deg, rgba(5, 6, 9, .58), rgba(5, 6, 9, .16)) !important;
+  }
+
+  .redGlow {
+    opacity: .22 !important;
+    filter: blur(34px) !important;
+  }
+
+  .content {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+
+  .title {
+    color: #fff !important;
+    text-shadow: 0 4px 18px rgba(0,0,0,.32) !important;
+  }
+
+  .subtitle {
+    color: rgba(255,255,255,.86) !important;
+    font-weight: 750 !important;
+    text-shadow: 0 3px 12px rgba(0,0,0,.24) !important;
+  }
+
+  .actions {
+    grid-template-columns: 1fr !important;
+    gap: .72rem !important;
+    max-width: 315px !important;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    border-radius: 6px !important;
+    min-height: 48px !important;
+    font-size: .68rem !important;
+    letter-spacing: .045em !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .primaryBtn {
+    background: #b40032 !important;
+    border: 1px solid #b40032 !important;
+    color: #fff !important;
+  }
+
+  .secondaryBtn {
+    background: #151515 !important;
+    border: 1px solid #151515 !important;
+    color: #fff !important;
+  }
+
+  .commandBar {
+    height: 76px !important;
+    background: #111 !important;
+    border-top: 1px solid rgba(255,255,255,.14) !important;
+    border-bottom: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .commandItem {
+    background: transparent !important;
+    border-right: 1px solid rgba(255,255,255,.12) !important;
+  }
+
+  .commandItem svg {
+    stroke: rgba(255,255,255,.9) !important;
+  }
+
+  .commandItem span {
+    color: #fff !important;
+    font-weight: 900 !important;
+  }
+
+  .commandItem small {
+    color: rgba(255,255,255,.64) !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .content {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .actions {
+    max-width: 305px !important;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    min-height: 46px !important;
+    font-size: .64rem !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .content {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .actions {
+    max-width: 292px !important;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    min-height: 44px !important;
+    font-size: .6rem !important;
+  }
+
+  .commandBar {
+    height: 68px !important;
+  }
+
+  .commandItem {
+    min-height: 68px !important;
+  }
+}
+
+/* =====================================================
+   HERO WHITE CORPORATE DIRECTION
+   Menos oscuro/cinemático, más corporativo.
+   ===================================================== */
+
+@media (min-width: 761px) {
+  .hero {
+    background: #f7f5f0 !important;
+  }
+
+  .video {
+    filter: brightness(.82) contrast(1.02) saturate(.92) !important;
+  }
+
+  .overlay {
+    background:
+      linear-gradient(90deg, rgba(5,6,9,.72) 0%, rgba(5,6,9,.40) 46%, rgba(5,6,9,.12) 100%),
+      linear-gradient(180deg, rgba(5,6,9,.10), rgba(5,6,9,.30)) !important;
+  }
+
+  .redGlow {
+    opacity: .18 !important;
+  }
+
+  .primaryBtn {
+    background: #b40032 !important;
+    border: 1px solid #b40032 !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+  }
+
+  .secondaryBtn {
+    background: #111 !important;
+    border: 1px solid #111 !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    color: #fff !important;
+  }
+
+  .commandBar {
+    background: #fff !important;
+    border: 1px solid rgba(0,0,0,.10) !important;
+    box-shadow: 0 18px 48px rgba(0,0,0,.10) !important;
+  }
+
+  .commandItem {
+    color: #111 !important;
+    border-right: 1px solid rgba(0,0,0,.10) !important;
+  }
+
+  .commandItem span {
+    color: #111 !important;
+  }
+
+  .commandItem small {
+    color: rgba(17,17,17,.62) !important;
+  }
+
+  .commandItem svg {
+    stroke: #111 !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .primaryBtn {
+    background: #b40032 !important;
+    border-color: #b40032 !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+  }
+
+  .secondaryBtn {
+    background: #111 !important;
+    border-color: #111 !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+  }
+
+  .commandBar {
+    background: #fff !important;
+    border-top: 1px solid rgba(0,0,0,.12) !important;
+    box-shadow: none !important;
+  }
+
+  .commandItem {
+    border-right: 1px solid rgba(0,0,0,.10) !important;
+  }
+
+  .commandItem span {
+    color: #111 !important;
+  }
+
+  .commandItem small {
+    color: rgba(17,17,17,.62) !important;
+  }
+
+  .commandItem svg {
+    stroke: #111 !important;
+  }
+}
+
+/* =====================================================
+   DESKTOP HERO HYBRID FIX
+   Corrige mezcla rara: hero oscuro + commandBar blanca.
+   Mantiene desktop elegante y deja blanco para secciones.
+   ===================================================== */
+
+@media (min-width: 761px) {
+  .commandBar {
+    background: rgba(6, 6, 6, 0.76) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow:
+      0 -20px 50px rgba(0, 0, 0, 0.28),
+      inset 0 1px 0 rgba(255, 255, 255, 0.04) !important;
+    backdrop-filter: blur(18px) !important;
+    -webkit-backdrop-filter: blur(18px) !important;
+  }
+
+  .commandItem {
+    color: #fff !important;
+    border-right: 1px solid rgba(255,255,255,.10) !important;
+  }
+
+  .commandItem span {
+    color: #fff !important;
+  }
+
+  .commandItem small {
+    color: rgba(255,255,255,.62) !important;
+  }
+
+  .commandItem svg {
+    stroke: rgba(255,255,255,.86) !important;
+  }
+
+  .primaryBtn {
+    background: #b40032 !important;
+    border: 1px solid #b40032 !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+  }
+
+  .secondaryBtn {
+    background: #111 !important;
+    border: 1px solid #111 !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    color: #fff !important;
+  }
+}
+
+/* =====================================================
+   HERO MOBILE CLEAN ACCESS ROUND
+   Objetivo:
+   - título más corporativo y menos gigante
+   - CTAs claros
+   - barra inferior blanca limpia tipo accesos rápidos
+   - sin textos microscópicos ni elementos rotos
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .content {
+    top: calc(78px + env(safe-area-inset-top)) !important;
+    bottom: calc(82px + env(safe-area-inset-bottom)) !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    transform: translateY(1.2svh) !important;
+  }
+
+  .titleWrap {
+    max-width: 305px !important;
+  }
+
+  .title {
+    max-width: 305px !important;
+    font-size: clamp(2rem, 8.2vw, 2.82rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.052em !important;
+    margin-bottom: .75rem !important;
+  }
+
+  .subtitle {
+    max-width: 305px !important;
+    margin-top: .68rem !important;
+    font-size: .86rem !important;
+    line-height: 1.48 !important;
+    font-weight: 750 !important;
+  }
+
+  .actions {
+    max-width: 292px !important;
+    gap: .64rem !important;
+    margin-top: 1rem !important;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    min-height: 46px !important;
+    border-radius: 6px !important;
+    font-size: .62rem !important;
+    letter-spacing: .045em !important;
+  }
+
+  .commandBar {
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    height: 72px !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+
+    background: #fff !important;
+    border-top: 1px solid rgba(0,0,0,.12) !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: 0 -8px 24px rgba(0,0,0,.10) !important;
+    overflow: hidden !important;
+  }
+
+  .commandItem {
+    min-width: 0 !important;
+    min-height: 72px !important;
+    padding: 7px 2px 6px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 5px !important;
+
+    background: #fff !important;
+    border-right: 1px solid rgba(0,0,0,.10) !important;
+    color: #111 !important;
+    text-align: center !important;
+    overflow: hidden !important;
+  }
+
+  .commandItem:last-child {
+    border-right: 0 !important;
+  }
+
+  .commandItem svg {
+    width: 17px !important;
+    height: 17px !important;
+    flex: 0 0 17px !important;
+    stroke: #111 !important;
+  }
+
+  .commandItem span {
+    max-width: 100% !important;
+    display: block !important;
+    color: #111 !important;
+    font-size: 9px !important;
+    line-height: 1.05 !important;
+    font-weight: 950 !important;
+    letter-spacing: -.02em !important;
+    white-space: normal !important;
+    overflow: hidden !important;
+  }
+
+  .commandItem small {
+    display: none !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .content {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .titleWrap,
+  .title {
+    max-width: 292px !important;
+  }
+
+  .title {
+    font-size: clamp(1.86rem, 7.8vw, 2.48rem) !important;
+  }
+
+  .subtitle {
+    max-width: 285px !important;
+    font-size: .82rem !important;
+  }
+
+  .actions {
+    max-width: 280px !important;
+  }
+
+  .commandItem span {
+    font-size: 8.4px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .content {
+    top: calc(70px + env(safe-area-inset-top)) !important;
+    bottom: calc(70px + env(safe-area-inset-bottom)) !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+    transform: translateY(.4svh) !important;
+  }
+
+  .titleWrap,
+  .title {
+    max-width: 270px !important;
+  }
+
+  .title {
+    font-size: clamp(1.62rem, 7.3vw, 2.08rem) !important;
+    margin-bottom: .52rem !important;
+  }
+
+  .subtitle {
+    max-width: 265px !important;
+    font-size: .76rem !important;
+    line-height: 1.42 !important;
+  }
+
+  .actions {
+    max-width: 265px !important;
+    margin-top: .72rem !important;
+    gap: .52rem !important;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    min-height: 42px !important;
+    font-size: .56rem !important;
+  }
+
+  .commandBar {
+    height: 64px !important;
+  }
+
+  .commandItem {
+    min-height: 64px !important;
+    padding: 5px 1px !important;
+  }
+
+  .commandItem svg {
+    width: 15px !important;
+    height: 15px !important;
+    flex-basis: 15px !important;
+  }
+
+  .commandItem span {
+    font-size: 7.7px !important;
+  }
+}
+
+/* =====================================================
+   HERO VIDEO LIGHT RIGHT POLISH
+   Más vida visual al video sin perder lectura del texto.
+   Izquierda protegida / derecha con más luz y color.
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .video {
+    filter: brightness(1.08) contrast(1.08) saturate(1.18) !important;
+  }
+
+  .overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(5, 6, 9, .78) 0%,
+        rgba(5, 6, 9, .58) 34%,
+        rgba(5, 6, 9, .28) 66%,
+        rgba(5, 6, 9, .12) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(5, 6, 9, .18) 0%,
+        rgba(5, 6, 9, .26) 44%,
+        rgba(5, 6, 9, .58) 100%
+      ) !important;
+  }
+
+  .redGlow {
+    opacity: .18 !important;
+  }
+}
+
+@media (min-width: 761px) {
+  .video {
+    filter: brightness(1.03) contrast(1.05) saturate(1.12) !important;
+  }
+
+  .overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(5, 6, 9, .76) 0%,
+        rgba(5, 6, 9, .54) 34%,
+        rgba(5, 6, 9, .24) 68%,
+        rgba(5, 6, 9, .10) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(5, 6, 9, .12) 0%,
+        rgba(5, 6, 9, .24) 48%,
+        rgba(5, 6, 9, .48) 100%
+      ) !important;
+  }
+}
+
+/* =====================================================
+   HERO MOBILE FINAL POLISH
+   Más luz controlada + command bar consistente
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .video {
+    filter: brightness(1.14) contrast(1.07) saturate(1.16) !important;
+  }
+
+  .overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(5, 6, 9, .70) 0%,
+        rgba(5, 6, 9, .52) 34%,
+        rgba(5, 6, 9, .25) 66%,
+        rgba(5, 6, 9, .10) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(5, 6, 9, .12) 0%,
+        rgba(5, 6, 9, .20) 42%,
+        rgba(5, 6, 9, .50) 100%
+      ) !important;
+  }
+
+  .commandItem,
+  .commandItem:first-child {
+    background: #fff !important;
+    color: #111 !important;
+  }
+
+  .commandItem::before,
+  .commandItem::after,
+  .commandItem:first-child::before,
+  .commandItem:first-child::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  .commandItem svg {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+}
+
+/* =====================================================
+   HERO VIDEO RESPONSIVE FIT
+   Nuevo video: avión / barco / camión / descarga.
+   Ajusta recorte desktop y mobile.
+   ===================================================== */
+
+.video {
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+/* Desktop: composición amplia, acción a la derecha, texto protegido */
+@media (min-width: 761px) {
+  .video {
+    object-position: center center !important;
+    transform: scale(1.01) !important;
+  }
+
+  .overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(5, 6, 9, .54) 0%,
+        rgba(5, 6, 9, .40) 32%,
+        rgba(5, 6, 9, .18) 62%,
+        rgba(5, 6, 9, .05) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(5, 6, 9, .08) 0%,
+        rgba(5, 6, 9, .14) 52%,
+        rgba(5, 6, 9, .32) 100%
+      ) !important;
+  }
+}
+
+/* Mobile: el viewport es angosto, empujamos el video hacia la derecha */
+@media (max-width: 760px) {
+  .hero {
+    min-height: 100svh !important;
+  }
+
+  .video {
+    object-position: 64% center !important;
+    transform: scale(1.04) !important;
+  }
+
+  .overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(5, 6, 9, .62) 0%,
+        rgba(5, 6, 9, .46) 38%,
+        rgba(5, 6, 9, .22) 72%,
+        rgba(5, 6, 9, .08) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(5, 6, 9, .08) 0%,
+        rgba(5, 6, 9, .18) 48%,
+        rgba(5, 6, 9, .38) 100%
+      ) !important;
+  }
+}
+
+/* iPhone chico: menos zoom para que no se coma el video */
+@media (max-width: 430px) {
+  .video {
+    object-position: 66% center !important;
+    transform: scale(1.025) !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .video {
+    object-position: 68% center !important;
+    transform: scale(1.015) !important;
+  }
+}
+
+/* =====================================================
+   HERO DESKTOP ZOOM OUT
+   Aleja un poco el video en desktop para ver más escena.
+   ===================================================== */
+
+@media (min-width: 761px) {
+  .video {
+    object-fit: cover !important;
+    object-position: center center !important;
+    transform: scale(1) !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .video {
+    object-position: center center !important;
+    transform: scale(1) !important;
+  }
+}
+
+@media (min-width: 1600px) {
+  .video {
+    object-position: center center !important;
+    transform: scale(1) !important;
+  }
+}

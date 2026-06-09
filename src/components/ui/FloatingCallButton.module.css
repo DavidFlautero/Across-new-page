@@ -304,3 +304,31 @@
   }
 }
 
+
+/* =====================================================
+   MOBILE CLEANUP — HIDE FLOATING CALL BUTTON
+   En mobile ya existen CTAs principales y barra inferior.
+   Este flotante compite visualmente y ensucia la home.
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .floating {
+    display: none !important;
+  }
+}
+
+/* =====================================================
+   IPHONE SE / SMALL MOBILE — LOCAL OMIT
+   ===================================================== */
+
+@media (max-width: 430px), (max-height: 760px) {
+  .floating,
+  .callPill,
+  .callButton,
+  .chatBubble {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+}

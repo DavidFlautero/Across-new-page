@@ -7,6 +7,17 @@ import styles from "./Hero.module.css";
 const LOCALE_KEY = "across-locale";
 
 function TrackingIcon() {
+
+  useEffect(() => {
+    const videos = document.querySelectorAll("video");
+    videos.forEach((video) => {
+      if (video instanceof HTMLVideoElement) {
+        video.playbackRate = 0.72;
+      }
+    });
+  }, []);
+
+  /* HERO VIDEO PLAYBACK RATE */
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path d="M4 6.5h10v7H4z" />
@@ -220,7 +231,7 @@ export default function Hero() {
     <section className={styles.hero}>
       <video
         ref={videoRef}
-        className={styles.video}
+        className={`${styles.video} ${styles.desktopVideo}`}
         autoPlay
         muted
         loop
@@ -235,6 +246,25 @@ export default function Hero() {
           type="video/mp4"
         />
         <source src="/videos/Across-Demo.mp4" type="video/mp4" />
+      </video>
+
+      <video
+        ref={videoRef}
+        className={`${styles.video} ${styles.mobileVideo}`}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        disablePictureInPicture
+        aria-hidden="true"
+      >
+        <source
+          src="/videos/Across-Demo-mobile.mp4"
+          media="(max-width: 760px)"
+          type="video/mp4"
+        />
+        <source src="/videos/Across-Demo-mobile.mp4" type="video/mp4" />
       </video>
 
       <div className={styles.overlay} />
