@@ -1695,14 +1695,3 @@
     border-radius: 8px !important;
   }
 }
-
-/* =====================================================
-   HOME PREMIUM BLUE ACCENT
-   Quita rojo visual y lo reemplaza por azul corporativo.
-   ===================================================== */
-
-:root {
-  --across-premium-blue: #0f3d5e;
-  --across-premium-blue-soft: #1f6f94;
-}
-

@@ -1176,18 +1176,3 @@ body.across-header-solid [class*="Header_burger"] svg {
     color: #111 !important;
   }
 }
-
-/* =====================================================
-   GLOBAL PREMIUM BLUE ACCENT
-   Nueva dirección visual: azul petróleo / logística premium.
-   ===================================================== */
-
-:root {
-  --across-accent: #0f3d5e;
-  --across-accent-soft: #1f6f94;
-  --across-accent-light: #8ecae6;
-}
-
-::selection {
-  background: rgba(15, 61, 94, .22);
-}
