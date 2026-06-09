@@ -3026,3 +3026,151 @@
     padding-top: 6.8rem !important;
   }
 }
+
+/* =====================================================
+   MOBILE TITLE WEIGHT FINAL BALANCE
+   Menos pesado en mobile, más FedEx/Maersk.
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .integrated h2,
+  .services h2,
+  .globalTrust h2,
+  .homeOffices h2,
+  .homeFinalCta h2 {
+    font-weight: 600 !important;
+    letter-spacing: -0.045em !important;
+    line-height: 1.05 !important;
+  }
+
+  .services h2,
+  .homeOffices h2 {
+    font-size: clamp(2rem, 8.4vw, 2.65rem) !important;
+  }
+
+  .globalTrust h2,
+  .homeFinalCta h2 {
+    font-size: clamp(2rem, 8.5vw, 2.7rem) !important;
+  }
+
+  .integrated h2 {
+    font-size: clamp(2.05rem, 8.8vw, 2.85rem) !important;
+  }
+}
+
+/* =====================================================
+   GLOBAL TRUST HEADER SAFE TOP
+   Evita que el header fijo tape el título en mobile.
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .globalTrust {
+    padding-top: 7.4rem !important;
+  }
+
+  .globalContent {
+    padding-top: .4rem !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .globalTrust {
+    padding-top: 7.8rem !important;
+  }
+}
+
+/* =====================================================
+   MOBILE SECTION SPACING AFTER AUTO-HIDE HEADER
+   Espaciado sano; el header ya no tapa al bajar.
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .services,
+  .globalTrust,
+  .homeOffices,
+  .homeFinalCta {
+    scroll-margin-top: 6rem !important;
+  }
+
+  .globalTrust {
+    padding-top: 5.6rem !important;
+  }
+
+  .services,
+  .homeOffices,
+  .homeFinalCta {
+    padding-top: 5.4rem !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .globalTrust {
+    padding-top: 5.8rem !important;
+  }
+
+  .services,
+  .homeOffices,
+  .homeFinalCta {
+    padding-top: 5.6rem !important;
+  }
+}
+
+
+/* =====================================================
+   CERTIFICATIONS HEIGHT ONLY FIX
+   Aumenta la presencia vertical sin recortar ni perder logos.
+   ===================================================== */
+
+.mobileCertifications {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  transform: none !important;
+  padding: 0 !important;
+  background: #f7f4ee !important;
+}
+
+.certificationsImage {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+  background: #f7f4ee !important;
+}
+
+.certificationsImage img {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 92px !important;
+  max-height: 112px !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  display: block !important;
+  border-radius: 0 !important;
+}
+
+@media (max-width: 760px) {
+  .mobileCertifications {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    transform: none !important;
+  }
+
+  .certificationsImage img {
+    width: 100% !important;
+    min-height: 96px !important;
+    max-height: 116px !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .certificationsImage img {
+    min-height: 90px !important;
+    max-height: 108px !important;
+  }
+}

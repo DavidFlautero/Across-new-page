@@ -2610,3 +2610,69 @@
     color: #b40032 !important;
   }
 }
+
+/* =====================================================
+   MOBILE SCROLLED HEADER COMPACT
+   Cuando sale del hero, el header ocupa menos alto.
+   ===================================================== */
+
+@media (max-width: 760px) {
+  :global(body.across-header-solid) .wrapper {
+    top: calc(env(safe-area-inset-top) + 10px) !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  :global(body.across-header-solid) .header {
+    height: 54px !important;
+    min-height: 54px !important;
+    border-radius: 18px !important;
+    padding-left: 10px !important;
+    padding-right: 7px !important;
+  }
+
+  :global(body.across-header-solid) .logo img {
+    height: 26px !important;
+    max-height: 26px !important;
+  }
+
+  :global(body.across-header-solid) .mobileButton {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+  }
+
+  :global(body.across-header-solid) .mobileLang button {
+    width: 25px !important;
+    height: 25px !important;
+  }
+}
+
+/* =====================================================
+   MOBILE AUTO-HIDE HEADER PROFESSIONAL
+   El header no tapa secciones: se oculta al bajar y vuelve al subir.
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .wrapper {
+    transition:
+      transform .28s cubic-bezier(.22, .61, .36, 1),
+      opacity .22s ease,
+      filter .22s ease !important;
+    will-change: transform, opacity !important;
+  }
+
+  :global(body.across-header-hidden) .wrapper {
+    transform: translateY(calc(-100% - 22px)) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    filter: blur(2px) !important;
+  }
+
+  :global(body:not(.across-header-hidden)) .wrapper {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    filter: none !important;
+  }
+}
