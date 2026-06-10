@@ -3559,3 +3559,325 @@
     min-width: 280px !important;
   }
 }
+
+/* =====================================================
+   ACROSS FINAL HERO SYSTEM
+   Azul tinta + champagne + marfil.
+   Único override final del hero.
+   ===================================================== */
+
+.title {
+  color: #f4efe4 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.068em !important;
+  line-height: .94 !important;
+  text-shadow:
+    0 26px 58px rgba(0,0,0,.40),
+    0 2px 8px rgba(0,0,0,.22) !important;
+}
+
+.subtitle {
+  color: rgba(244,239,228,.86) !important;
+  font-weight: 420 !important;
+  line-height: 1.55 !important;
+  letter-spacing: -.015em !important;
+}
+
+.primaryBtn {
+  color: #ffffff !important;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255,255,255,.16), transparent 34%),
+    linear-gradient(135deg, #07111d 0%, #0d1c2b 48%, #173247 100%) !important;
+  border: 1px solid rgba(214,192,141,.42) !important;
+  box-shadow:
+    0 20px 46px rgba(7,17,29,.42),
+    0 6px 16px rgba(214,192,141,.08),
+    inset 0 1px 0 rgba(255,255,255,.16) !important;
+}
+
+.primaryBtn:hover {
+  border-color: rgba(241,221,176,.78) !important;
+}
+
+.secondaryBtn {
+  color: #09233a !important;
+  background:
+    linear-gradient(180deg, rgba(247,243,234,.94), rgba(221,231,236,.86)) !important;
+  border: 1px solid rgba(214,192,141,.34) !important;
+  box-shadow:
+    0 18px 42px rgba(5,11,18,.18),
+    0 6px 18px rgba(214,192,141,.08),
+    inset 0 1px 0 rgba(255,255,255,.70) !important;
+}
+
+.secondaryBtn:hover {
+  color: #07111d !important;
+  background:
+    linear-gradient(180deg, rgba(247,243,234,.98), rgba(210,224,231,.92)) !important;
+  border-color: rgba(241,221,176,.62) !important;
+}
+
+.commandBar {
+  background:
+    linear-gradient(180deg, rgba(7,17,29,.90), rgba(5,11,18,.82)) !important;
+  border: 1px solid rgba(214,192,141,.28) !important;
+  box-shadow:
+    0 26px 76px rgba(0,0,0,.38),
+    0 8px 22px rgba(214,192,141,.07),
+    inset 0 1px 0 rgba(255,255,255,.11) !important;
+  backdrop-filter: blur(22px) saturate(1.15) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(1.15) !important;
+}
+
+.commandItem {
+  background: transparent !important;
+  border-right: 1px solid rgba(214,192,141,.10) !important;
+  color: #f4efe4 !important;
+}
+
+.commandItem:last-child {
+  border-right: 0 !important;
+}
+
+.commandItem svg {
+  stroke: #d6c08d !important;
+  color: #d6c08d !important;
+  opacity: .92 !important;
+}
+
+.commandItem span {
+  color: rgba(244,239,228,.96) !important;
+}
+
+.commandItem small {
+  color: rgba(244,239,228,.52) !important;
+}
+
+.commandItem:hover {
+  background:
+    linear-gradient(180deg, rgba(214,192,141,.09), rgba(255,255,255,.02)) !important;
+}
+
+.commandItem:hover svg {
+  stroke: #f1ddb0 !important;
+  color: #f1ddb0 !important;
+  opacity: 1 !important;
+}
+
+@media (min-width: 761px) and (max-width: 1180px) {
+  .actions {
+    gap: .9rem !important;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    min-height: 48px !important;
+    border-radius: 999px !important;
+    font-size: .66rem !important;
+    letter-spacing: .075em !important;
+    padding: 0 1.55rem !important;
+  }
+
+  .primaryBtn {
+    min-width: 255px !important;
+  }
+
+  .secondaryBtn {
+    min-width: 245px !important;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 840px) {
+  .secondaryBtn {
+    display: none !important;
+  }
+
+  .primaryBtn {
+    min-width: 280px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .title {
+    font-size: clamp(2.18rem, 9.6vw, 3.35rem) !important;
+    line-height: .94 !important;
+    letter-spacing: -0.068em !important;
+    max-width: 92% !important;
+  }
+
+  .subtitle {
+    margin-top: .95rem !important;
+    font-size: .88rem !important;
+    line-height: 1.52 !important;
+    max-width: 86% !important;
+  }
+
+  .secondaryBtn {
+    display: none !important;
+  }
+
+  .commandBar {
+    left: 50% !important;
+    width: calc(100% - 2.2rem) !important;
+    min-height: 68px !important;
+    bottom: calc(env(safe-area-inset-bottom) + .85rem) !important;
+    transform: translateX(-50%) !important;
+    border-radius: 20px !important;
+  }
+
+  .commandItem {
+    padding: .52rem .2rem .44rem !important;
+  }
+
+  .commandItem svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  .commandItem span {
+    font-size: .54rem !important;
+    line-height: 1 !important;
+  }
+
+  .commandItem small {
+    display: none !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .title {
+    font-size: clamp(2rem, 9vw, 3rem) !important;
+    line-height: .95 !important;
+  }
+
+  .subtitle {
+    font-size: .84rem !important;
+    line-height: 1.48 !important;
+  }
+
+  .commandBar {
+    width: calc(100% - 1.6rem) !important;
+    min-height: 66px !important;
+  }
+
+  .commandItem span {
+    font-size: .51rem !important;
+  }
+}
+
+/* =====================================================
+   HERO MEDIA POSITION FINAL
+   Desktop limpio. Ajustes de encuadre solo en tablet/mobile.
+   ===================================================== */
+
+/* Desktop: no mover video hacia abajo */
+.video,
+.desktopVideo {
+  object-position: center center !important;
+}
+
+/* Tablet: podemos bajar/acomodar apenas sin afectar desktop grande */
+@media (min-width: 761px) and (max-width: 1180px) {
+  .video,
+  .desktopVideo {
+    object-position: center 58% !important;
+  }
+}
+
+/* Mobile: encuadre propio */
+@media (max-width: 760px) {
+  .video,
+  .mobileVideo {
+    object-position: center center !important;
+  }
+}
+
+/* =====================================================
+   HERO VIDEO OBJECT POSITION EXACT
+   Desktop centrado. Ajustes solo tablet/mobile.
+   ===================================================== */
+
+.video,
+.desktopVideo {
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+@media (min-width: 761px) and (max-width: 1180px) {
+  .video,
+  .desktopVideo {
+    object-position: center 56% !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .video,
+  .mobileVideo {
+    object-fit: cover !important;
+    object-position: center 54% !important;
+  }
+}
+
+/* =====================================================
+   ZZZ HERO VIDEO POSITION ABSOLUTE FINAL
+   Desktop NO se mueve. Ajustes solo mobile/tablet.
+   ===================================================== */
+
+/* Desktop real */
+@media (min-width: 1181px) {
+  .video,
+  .desktopVideo {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    transform: none !important;
+    scale: 1 !important;
+  }
+
+  .desktopVideo {
+    display: block !important;
+  }
+
+  .mobileVideo {
+    display: none !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 761px) and (max-width: 1180px) {
+  .video,
+  .desktopVideo {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    transform: none !important;
+    scale: 1 !important;
+  }
+
+  .desktopVideo {
+    display: block !important;
+  }
+
+  .mobileVideo {
+    display: none !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  .desktopVideo {
+    display: none !important;
+  }
+
+  .mobileVideo {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    transform: none !important;
+    scale: 1 !important;
+  }
+}

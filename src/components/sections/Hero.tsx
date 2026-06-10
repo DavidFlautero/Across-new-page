@@ -381,11 +381,6 @@ export default function Hero() {
         disablePictureInPicture
         aria-hidden="true"
       >
-        <source
-          src="/videos/Across-Demo-mobile.mp4"
-          media="(max-width: 760px)"
-          type="video/mp4"
-        />
         <source src="/videos/Across-Demo.mp4" type="video/mp4" />
       </video>
 
@@ -400,11 +395,6 @@ export default function Hero() {
         disablePictureInPicture
         aria-hidden="true"
       >
-        <source
-          src="/videos/Across-Demo-mobile.mp4"
-          media="(max-width: 760px)"
-          type="video/mp4"
-        />
         <source src="/videos/Across-Demo-mobile.mp4" type="video/mp4" />
       </video>
 

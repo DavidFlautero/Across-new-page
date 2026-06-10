@@ -4013,3 +4013,331 @@
     letter-spacing: -.055em !important;
   }
 }
+
+/* =====================================================
+   ACROSS FINAL HOME CORPORATE SYSTEM
+   Superficies marfil + paneles azul tinta + champagne.
+   Único override final de la home corporativa.
+   ===================================================== */
+
+.integrated,
+.services,
+.homeOffices,
+.mobileCertifications {
+  background:
+    radial-gradient(circle at 8% 0%, rgba(214,192,141,.13), transparent 24rem),
+    radial-gradient(circle at 88% 16%, rgba(142,177,203,.10), transparent 26rem),
+    linear-gradient(180deg, #f7f3ea 0%, #f3eee4 48%, #efe8dc 100%) !important;
+  color: #07111d !important;
+}
+
+.integratedInner,
+.servicesInner,
+.homeOfficesInner {
+  color: #07111d !important;
+}
+
+.integrated span,
+.servicesHead span,
+.homeOfficesHead span {
+  color: #09233a !important;
+  font-weight: 900 !important;
+  letter-spacing: .24em !important;
+  text-transform: uppercase !important;
+}
+
+.integrated h2,
+.servicesHead h2,
+.homeOfficesHead h2 {
+  color: #07111d !important;
+  font-weight: 760 !important;
+  letter-spacing: -.065em !important;
+  line-height: .96 !important;
+}
+
+.integrated p,
+.serviceRow p,
+.homeOfficeCard p {
+  color: rgba(7,17,29,.72) !important;
+}
+
+.integrated a[href],
+.homeOffices a[href] {
+  color: #09233a !important;
+  font-weight: 900 !important;
+  letter-spacing: .18em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+}
+
+.heroImage,
+.integratedImage {
+  border: 1px solid rgba(7,17,29,.12) !important;
+  box-shadow:
+    0 28px 80px rgba(7,17,29,.12),
+    0 10px 28px rgba(214,192,141,.08) !important;
+}
+
+.serviceRow,
+.homeOfficeCard {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.78), rgba(247,243,234,.82)) !important;
+  border: 1px solid rgba(7,17,29,.09) !important;
+  box-shadow:
+    0 18px 48px rgba(7,17,29,.075),
+    inset 0 1px 0 rgba(255,255,255,.70) !important;
+}
+
+.serviceRow:hover,
+.homeOfficeCard:hover {
+  transform: translateY(-3px) !important;
+  border-color: rgba(214,192,141,.26) !important;
+  box-shadow:
+    0 24px 58px rgba(7,17,29,.12),
+    0 8px 24px rgba(214,192,141,.09),
+    inset 0 1px 0 rgba(255,255,255,.82) !important;
+}
+
+.serviceIcon,
+.serviceRow i {
+  color: #09233a !important;
+  border-color: rgba(7,17,29,.10) !important;
+  background: rgba(255,255,255,.46) !important;
+}
+
+/* Panel derecho de servicios */
+.solutionsPanel {
+  color: #f4efe4 !important;
+  overflow: hidden !important;
+  border-radius: 12px !important;
+  background:
+    linear-gradient(135deg, rgba(5,11,18,.90) 0%, rgba(7,17,29,.76) 42%, rgba(7,17,29,.50) 100%),
+    url("/images/logisticahome.png") center / cover no-repeat !important;
+  border: 1px solid rgba(214,192,141,.18) !important;
+  box-shadow:
+    0 24px 70px rgba(7,17,29,.18),
+    inset 0 1px 0 rgba(255,255,255,.10) !important;
+}
+
+.solutionsPanel::before {
+  background:
+    linear-gradient(90deg, rgba(5,11,18,.86) 0%, rgba(5,11,18,.70) 48%, rgba(5,11,18,.38) 100%),
+    radial-gradient(circle at 20% 18%, rgba(214,192,141,.18), transparent 13rem),
+    radial-gradient(circle at 85% 12%, rgba(142,177,203,.15), transparent 14rem) !important;
+}
+
+.solutionsPanel span {
+  color: #d6c08d !important;
+  font-weight: 900 !important;
+  letter-spacing: .18em !important;
+  text-transform: uppercase !important;
+}
+
+.solutionsPanel h3 {
+  color: #ffffff !important;
+  font-weight: 760 !important;
+  letter-spacing: -.045em !important;
+  line-height: 1.05 !important;
+}
+
+.solutionsPanel p {
+  color: rgba(244,239,228,.76) !important;
+  font-weight: 430 !important;
+  line-height: 1.58 !important;
+}
+
+.panelStats {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: .75rem !important;
+  width: 100% !important;
+  margin-top: auto !important;
+}
+
+.panelStats > div {
+  position: relative !important;
+  min-width: 0 !important;
+  padding: .82rem .78rem .82rem 2.05rem !important;
+  border-radius: 14px !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.035)) !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.10),
+    0 12px 28px rgba(0,0,0,.14) !important;
+}
+
+.panelStats > div::before {
+  content: "" !important;
+  position: absolute !important;
+  left: .82rem !important;
+  top: .9rem !important;
+  width: .58rem !important;
+  height: .58rem !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(214,192,141,.78) !important;
+}
+
+.panelStats strong {
+  display: block !important;
+  color: #ffffff !important;
+  font-weight: 850 !important;
+  font-size: clamp(.86rem, .95vw, 1.08rem) !important;
+  line-height: 1.05 !important;
+}
+
+.panelStats small {
+  display: block !important;
+  margin-top: .24rem !important;
+  color: rgba(244,239,228,.66) !important;
+  font-size: clamp(.54rem, .58vw, .66rem) !important;
+  line-height: 1.25 !important;
+  font-weight: 650 !important;
+}
+
+/* Desktop posicionamiento panel */
+@media (min-width: 900px) {
+  .solutionsPanel {
+    align-self: start !important;
+    margin-top: 2.15rem !important;
+    height: 470px !important;
+    min-height: 470px !important;
+    max-height: 470px !important;
+    transform: translateY(-65px) !important;
+    transform-origin: bottom center !important;
+    padding: 1.65rem 1.55rem 1.35rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+}
+
+@media (min-width: 1100px) {
+  .solutionsPanel {
+    margin-top: 2.25rem !important;
+    height: 490px !important;
+    min-height: 490px !important;
+    max-height: 490px !important;
+    transform: translateY(-70px) !important;
+  }
+}
+
+/* Espaciados mobile */
+@media (max-width: 760px) {
+  .integrated,
+  .services,
+  .homeOffices,
+  .mobileCertifications {
+    background:
+      radial-gradient(circle at 12% 0%, rgba(214,192,141,.12), transparent 18rem),
+      linear-gradient(180deg, #f7f3ea 0%, #f2ecdf 100%) !important;
+  }
+
+  .services {
+    padding-bottom: 1.25rem !important;
+    margin-bottom: 0 !important;
+  }
+
+  .servicesInner,
+  .servicesLayout,
+  .serviceList {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .globalTrust {
+    margin-top: 0 !important;
+    padding-top: 3.25rem !important;
+  }
+
+  .homeOffices {
+    padding-bottom: 1.4rem !important;
+    margin-bottom: 0 !important;
+  }
+
+  .homeOfficesInner,
+  .homeOfficesGrid {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .homeOffices + section {
+    margin-top: 0 !important;
+    padding-top: 3.2rem !important;
+  }
+
+  .solutionsPanel {
+    min-height: auto !important;
+    height: auto !important;
+    max-height: none !important;
+    transform: none !important;
+    padding: 1.6rem 1.25rem !important;
+  }
+
+  .panelStats {
+    grid-template-columns: 1fr !important;
+    gap: .7rem !important;
+    margin-top: 1.35rem !important;
+  }
+}
+
+/* =====================================================
+   FINAL CTA OPERATOR FACE POSITION
+   Prioriza la cara del operador. Si se recorta, que sea cuerpo.
+   ===================================================== */
+
+.finalCta img,
+.finalCTA img,
+.ctaFinal img,
+.contactCta img,
+.contactCTA img {
+  object-fit: cover !important;
+  object-position: center 28% !important;
+}
+
+/* Si la imagen está como background */
+.finalCta,
+.finalCTA,
+.ctaFinal,
+.contactCta,
+.contactCTA {
+  background-position: center 28% !important;
+}
+
+/* Desktop: cara visible, cuerpo puede perderse */
+@media (min-width: 900px) {
+  .finalCta img,
+  .finalCTA img,
+  .ctaFinal img,
+  .contactCta img,
+  .contactCTA img {
+    object-position: center 22% !important;
+  }
+
+  .finalCta,
+  .finalCTA,
+  .ctaFinal,
+  .contactCta,
+  .contactCTA {
+    background-position: center 22% !important;
+  }
+}
+
+/* Mobile: subir más la imagen para no cortar rostro */
+@media (max-width: 760px) {
+  .finalCta img,
+  .finalCTA img,
+  .ctaFinal img,
+  .contactCta img,
+  .contactCTA img {
+    object-position: center 18% !important;
+  }
+
+  .finalCta,
+  .finalCTA,
+  .ctaFinal,
+  .contactCta,
+  .contactCTA {
+    background-position: center 18% !important;
+  }
+}
