@@ -2201,3 +2201,684 @@ button,
     display: none !important;
   }
 }
+
+/* =====================================================
+   ACROSS DESIGN SYSTEM GLOBAL
+   Sistema visual compartido para todas las páginas.
+   ===================================================== */
+
+:root {
+  --across-ink: #07111d;
+  --across-ink-2: #0d1c2b;
+  --across-ink-3: #173247;
+
+  --across-champagne: #d6c08d;
+  --across-champagne-light: #f1ddb0;
+
+  --across-ivory: #f4efe4;
+  --across-ivory-2: #f7f3ea;
+  --across-warm: #efe8dc;
+
+  --across-slate: #09233a;
+  --across-muted: rgba(7, 17, 29, .72);
+
+  --across-radius-pill: 999px;
+  --across-radius-card: 18px;
+
+  --across-shadow-strong:
+    0 24px 54px rgba(7,17,29,.42),
+    0 8px 22px rgba(214,192,141,.10),
+    inset 0 1px 0 rgba(255,255,255,.16);
+
+  --across-shadow-soft:
+    0 18px 48px rgba(7,17,29,.075),
+    inset 0 1px 0 rgba(255,255,255,.70);
+}
+
+/* Superficies claras premium */
+.across-surface-light {
+  background:
+    radial-gradient(circle at 8% 0%, rgba(214,192,141,.13), transparent 24rem),
+    radial-gradient(circle at 88% 16%, rgba(142,177,203,.10), transparent 26rem),
+    linear-gradient(180deg, var(--across-ivory-2) 0%, #f3eee4 48%, var(--across-warm) 100%);
+  color: var(--across-ink);
+}
+
+/* Superficies oscuras premium */
+.across-surface-dark {
+  background:
+    radial-gradient(circle at 70% 18%, rgba(142,202,230,.12), transparent 18rem),
+    linear-gradient(180deg, #07111d 0%, #030a12 100%);
+  color: var(--across-ivory);
+}
+
+/* Botón principal global */
+.across-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 1.45rem;
+  border-radius: var(--across-radius-pill);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .075em;
+  font-size: .68rem;
+  font-weight: 900;
+  color: var(--across-ivory);
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255,255,255,.16), transparent 34%),
+    linear-gradient(135deg, var(--across-ink) 0%, var(--across-ink-2) 48%, var(--across-ink-3) 100%);
+  border: 1px solid rgba(214,192,141,.42);
+  box-shadow: var(--across-shadow-strong);
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    border-color .22s ease,
+    background .22s ease;
+}
+
+.across-btn-primary:hover {
+  transform: translateY(-2px);
+  border-color: rgba(241,221,176,.78);
+  color: #ffffff;
+}
+
+/* Botón secundario global */
+.across-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 1.45rem;
+  border-radius: var(--across-radius-pill);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .075em;
+  font-size: .68rem;
+  font-weight: 900;
+  color: var(--across-slate);
+  background:
+    linear-gradient(180deg, rgba(247,243,234,.94), rgba(221,231,236,.86));
+  border: 1px solid rgba(214,192,141,.34);
+  box-shadow:
+    0 18px 42px rgba(5,11,18,.18),
+    0 6px 18px rgba(214,192,141,.08),
+    inset 0 1px 0 rgba(255,255,255,.70);
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    border-color .22s ease;
+}
+
+.across-btn-secondary:hover {
+  transform: translateY(-2px);
+  color: var(--across-ink);
+  border-color: rgba(241,221,176,.62);
+}
+
+/* Cards claras globales */
+.across-card-light {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.78), rgba(247,243,234,.82));
+  border: 1px solid rgba(7,17,29,.09);
+  border-radius: var(--across-radius-card);
+  box-shadow: var(--across-shadow-soft);
+  transition:
+    transform .24s ease,
+    box-shadow .24s ease,
+    border-color .24s ease;
+}
+
+.across-card-light:hover {
+  transform: translateY(-3px);
+  border-color: rgba(214,192,141,.26);
+  box-shadow:
+    0 24px 58px rgba(7,17,29,.12),
+    0 8px 24px rgba(214,192,141,.09),
+    inset 0 1px 0 rgba(255,255,255,.82);
+}
+
+/* Cards oscuras glass */
+.across-card-dark {
+  background:
+    linear-gradient(180deg, rgba(244,239,228,.075), rgba(244,239,228,.035));
+  border: 1px solid rgba(244,239,228,.14);
+  border-radius: var(--across-radius-card);
+  color: var(--across-ivory);
+  backdrop-filter: blur(16px) saturate(1.1);
+  -webkit-backdrop-filter: blur(16px) saturate(1.1);
+}
+
+/* Títulos */
+.across-kicker {
+  color: var(--across-champagne);
+  font-weight: 900;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+
+.across-title-dark {
+  color: var(--across-ink);
+  font-weight: 760;
+  letter-spacing: -.065em;
+  line-height: .96;
+}
+
+.across-title-light {
+  color: var(--across-ivory);
+  font-weight: 760;
+  letter-spacing: -.065em;
+  line-height: .96;
+}
+
+/* Links premium */
+.across-link {
+  color: var(--across-slate);
+  font-weight: 900;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+@media (max-width: 760px) {
+  .across-btn-primary,
+  .across-btn-secondary {
+    min-height: 42px;
+    padding: 0 1.1rem;
+    font-size: .56rem;
+  }
+}
+
+/* =====================================================
+   ACROSS GLOBAL PAGE SYSTEM
+   Sistema compartido para servicios, sectores y tracking.
+   Mismo hero, botones, tipografía y comportamiento responsive.
+   ===================================================== */
+
+:root {
+  --across-ink: #07111d;
+  --across-ink-2: #0d1c2b;
+  --across-ink-3: #173247;
+  --across-champagne: #d6c08d;
+  --across-champagne-light: #f1ddb0;
+  --across-ivory: #f4efe4;
+  --across-ivory-2: #f7f3ea;
+  --across-warm: #efe8dc;
+  --across-slate: #09233a;
+}
+
+/* HERO GLOBAL PARA PÁGINAS INTERNAS */
+.acrossPageHero {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background: var(--across-ink) !important;
+  color: var(--across-ivory) !important;
+}
+
+/* Media del hero: imágenes/videos */
+.acrossPageHero img,
+.acrossPageHero video {
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+/* Overlay elegante universal */
+.acrossPageHero::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 11, 18, .68) 0%,
+      rgba(7, 17, 29, .42) 46%,
+      rgba(7, 17, 29, .18) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(5, 11, 18, .40) 0%,
+      rgba(5, 11, 18, .10) 42%,
+      rgba(5, 11, 18, .50) 100%
+    ) !important;
+}
+
+/* Todo contenido del hero por encima del overlay */
+.acrossPageHero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Tipografía hero compartida */
+.acrossPageHero h1 {
+  color: var(--across-ivory) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.068em !important;
+  line-height: .94 !important;
+  text-shadow:
+    0 26px 58px rgba(0,0,0,.40),
+    0 2px 8px rgba(0,0,0,.22) !important;
+}
+
+.acrossPageHero p {
+  color: rgba(244,239,228,.84) !important;
+  font-weight: 420 !important;
+  line-height: 1.55 !important;
+}
+
+.acrossPageHero span,
+.acrossPageHero small {
+  color: var(--across-champagne) !important;
+}
+
+/* Botones dentro de heroes */
+.acrossPageHero a[href="/cotizacion"],
+.acrossPageHero a[href="/contacto"]:first-of-type,
+.acrossPageHero a:first-of-type {
+  color: var(--across-ivory) !important;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255,255,255,.16), transparent 34%),
+    linear-gradient(135deg, var(--across-ink) 0%, var(--across-ink-2) 48%, var(--across-ink-3) 100%) !important;
+  border: 1px solid rgba(214,192,141,.42) !important;
+  box-shadow:
+    0 20px 46px rgba(7,17,29,.42),
+    0 6px 16px rgba(214,192,141,.08),
+    inset 0 1px 0 rgba(255,255,255,.16) !important;
+}
+
+/* Segundo botón si existe */
+.acrossPageHero a:nth-of-type(2) {
+  color: var(--across-slate) !important;
+  background:
+    linear-gradient(180deg, rgba(247,243,234,.94), rgba(221,231,236,.86)) !important;
+  border: 1px solid rgba(214,192,141,.34) !important;
+  box-shadow:
+    0 18px 42px rgba(5,11,18,.18),
+    0 6px 18px rgba(214,192,141,.08),
+    inset 0 1px 0 rgba(255,255,255,.70) !important;
+}
+
+/* Superficies claras compartidas */
+.acrossSurfaceLight {
+  background:
+    radial-gradient(circle at 8% 0%, rgba(214,192,141,.13), transparent 24rem),
+    radial-gradient(circle at 88% 16%, rgba(142,177,203,.10), transparent 26rem),
+    linear-gradient(180deg, var(--across-ivory-2) 0%, #f3eee4 48%, var(--across-warm) 100%) !important;
+  color: var(--across-ink) !important;
+}
+
+/* Cards globales */
+.acrossCardLight {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.78), rgba(247,243,234,.82)) !important;
+  border: 1px solid rgba(7,17,29,.09) !important;
+  box-shadow:
+    0 18px 48px rgba(7,17,29,.075),
+    inset 0 1px 0 rgba(255,255,255,.70) !important;
+}
+
+.acrossCardLight:hover {
+  transform: translateY(-3px) !important;
+  border-color: rgba(214,192,141,.26) !important;
+  box-shadow:
+    0 24px 58px rgba(7,17,29,.12),
+    0 8px 24px rgba(214,192,141,.09),
+    inset 0 1px 0 rgba(255,255,255,.82) !important;
+}
+
+/* DESKTOP */
+@media (min-width: 1181px) {
+  .acrossPageHero {
+    height: 100vh !important;
+    min-height: 760px !important;
+    max-height: 980px !important;
+  }
+
+  .acrossPageHero h1 {
+    max-width: 760px !important;
+    font-size: clamp(4.2rem, 5.4vw, 6.4rem) !important;
+  }
+
+  .acrossPageHero p {
+    max-width: 760px !important;
+    font-size: clamp(1rem, 1.05vw, 1.18rem) !important;
+  }
+}
+
+/* TABLET */
+@media (min-width: 761px) and (max-width: 1180px) {
+  .acrossPageHero {
+    height: 100dvh !important;
+    min-height: 720px !important;
+    max-height: 900px !important;
+  }
+
+  .acrossPageHero h1 {
+    max-width: 680px !important;
+    font-size: clamp(3rem, 6.2vw, 4.6rem) !important;
+  }
+
+  .acrossPageHero p {
+    max-width: 620px !important;
+    font-size: .96rem !important;
+  }
+
+  .acrossPageHero a:nth-of-type(2) {
+    display: none !important;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 760px) {
+  .acrossPageHero {
+    height: 100dvh !important;
+    min-height: 100dvh !important;
+    max-height: 100dvh !important;
+  }
+
+  .acrossPageHero h1 {
+    max-width: 92% !important;
+    font-size: clamp(2.18rem, 9.6vw, 3.35rem) !important;
+    line-height: .94 !important;
+  }
+
+  .acrossPageHero p {
+    max-width: 88% !important;
+    font-size: .88rem !important;
+    line-height: 1.52 !important;
+  }
+
+  .acrossPageHero a {
+    min-height: 42px !important;
+    font-size: .56rem !important;
+    padding: 0 1.1rem !important;
+  }
+
+  .acrossPageHero a:nth-of-type(2) {
+    display: none !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .acrossPageHero h1 {
+    font-size: clamp(2rem, 9vw, 3rem) !important;
+  }
+
+  .acrossPageHero p {
+    font-size: .84rem !important;
+  }
+}
+
+/* =====================================================
+   ZZZ ACROSS INTERNAL HERO MASTER OVERRIDE
+   Fuerza tracking, sectores y servicios a consumir el sistema visual principal.
+   ===================================================== */
+
+section.acrossPageHero.acrossPageHero {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  background: #07111d !important;
+  color: #f4efe4 !important;
+}
+
+/* Imágenes / mapas / media dentro del hero */
+section.acrossPageHero.acrossPageHero img,
+section.acrossPageHero.acrossPageHero video,
+section.acrossPageHero.acrossPageHero [class*="heroImage"],
+section.acrossPageHero.acrossPageHero [class*="heroMap"] {
+  object-fit: cover !important;
+  object-position: center center !important;
+  transform: none !important;
+  scale: 1 !important;
+}
+
+/* Overlay único premium */
+section.acrossPageHero.acrossPageHero [class*="heroOverlay"] {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 11, 18, .70) 0%,
+      rgba(7, 17, 29, .44) 48%,
+      rgba(7, 17, 29, .18) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(5, 11, 18, .44) 0%,
+      rgba(5, 11, 18, .12) 45%,
+      rgba(5, 11, 18, .52) 100%
+    ) !important;
+}
+
+/* Contenedor interno */
+section.acrossPageHero.acrossPageHero [class*="heroInner"],
+section.acrossPageHero.acrossPageHero [class*="heroContent"] {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Eyebrow */
+section.acrossPageHero.acrossPageHero [class*="eyebrow"],
+section.acrossPageHero.acrossPageHero [class*="kicker"],
+section.acrossPageHero.acrossPageHero > span {
+  color: #d6c08d !important;
+  font-weight: 900 !important;
+  letter-spacing: .22em !important;
+  text-transform: uppercase !important;
+}
+
+/* Título */
+section.acrossPageHero.acrossPageHero h1 {
+  color: #f4efe4 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.068em !important;
+  line-height: .94 !important;
+  text-shadow:
+    0 26px 58px rgba(0,0,0,.40),
+    0 2px 8px rgba(0,0,0,.22) !important;
+}
+
+/* Texto */
+section.acrossPageHero.acrossPageHero p {
+  color: rgba(244,239,228,.84) !important;
+  font-weight: 420 !important;
+  line-height: 1.55 !important;
+}
+
+/* Botones / links / submit */
+section.acrossPageHero.acrossPageHero a,
+section.acrossPageHero.acrossPageHero button[type="submit"],
+section.acrossPageHero.acrossPageHero button:not([aria-label]) {
+  min-height: 46px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 999px !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  letter-spacing: .075em !important;
+  font-size: .68rem !important;
+  font-weight: 900 !important;
+  color: #f4efe4 !important;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255,255,255,.16), transparent 34%),
+    linear-gradient(135deg, #07111d 0%, #0d1c2b 48%, #173247 100%) !important;
+  border: 1px solid rgba(214,192,141,.42) !important;
+  box-shadow:
+    0 20px 46px rgba(7,17,29,.42),
+    0 6px 16px rgba(214,192,141,.08),
+    inset 0 1px 0 rgba(255,255,255,.16) !important;
+}
+
+/* Formularios en tracking */
+section.acrossPageHero.acrossPageHero input,
+section.acrossPageHero.acrossPageHero textarea {
+  color: #07111d !important;
+  background:
+    linear-gradient(180deg, rgba(247,243,234,.96), rgba(221,231,236,.90)) !important;
+  border: 1px solid rgba(214,192,141,.34) !important;
+  border-radius: 18px !important;
+}
+
+section.acrossPageHero.acrossPageHero input::placeholder {
+  color: rgba(7,17,29,.55) !important;
+}
+
+/* Desktop */
+@media (min-width: 1181px) {
+  section.acrossPageHero.acrossPageHero {
+    height: 100vh !important;
+    min-height: 760px !important;
+    max-height: 980px !important;
+  }
+
+  section.acrossPageHero.acrossPageHero [class*="heroInner"],
+  section.acrossPageHero.acrossPageHero [class*="heroContent"] {
+    min-height: 100% !important;
+  }
+
+  section.acrossPageHero.acrossPageHero h1 {
+    max-width: 760px !important;
+    font-size: clamp(4.2rem, 5.4vw, 6.4rem) !important;
+  }
+
+  section.acrossPageHero.acrossPageHero p {
+    max-width: 760px !important;
+    font-size: clamp(1rem, 1.05vw, 1.18rem) !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 761px) and (max-width: 1180px) {
+  section.acrossPageHero.acrossPageHero {
+    height: 100dvh !important;
+    min-height: 720px !important;
+    max-height: 900px !important;
+  }
+
+  section.acrossPageHero.acrossPageHero h1 {
+    max-width: 680px !important;
+    font-size: clamp(3rem, 6.2vw, 4.6rem) !important;
+  }
+
+  section.acrossPageHero.acrossPageHero p {
+    max-width: 620px !important;
+    font-size: .96rem !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  section.acrossPageHero.acrossPageHero {
+    height: 100dvh !important;
+    min-height: 100dvh !important;
+    max-height: 100dvh !important;
+  }
+
+  section.acrossPageHero.acrossPageHero [class*="heroInner"],
+  section.acrossPageHero.acrossPageHero [class*="heroContent"] {
+    min-height: 100dvh !important;
+  }
+
+  section.acrossPageHero.acrossPageHero h1 {
+    max-width: 92% !important;
+    font-size: clamp(2.18rem, 9.6vw, 3.35rem) !important;
+    line-height: .94 !important;
+  }
+
+  section.acrossPageHero.acrossPageHero p {
+    max-width: 88% !important;
+    font-size: .88rem !important;
+    line-height: 1.52 !important;
+  }
+
+  section.acrossPageHero.acrossPageHero a,
+  section.acrossPageHero.acrossPageHero button[type="submit"] {
+    min-height: 42px !important;
+    font-size: .56rem !important;
+    padding: 0 1.1rem !important;
+  }
+}
+
+@media (max-width: 390px) {
+  section.acrossPageHero.acrossPageHero h1 {
+    font-size: clamp(2rem, 9vw, 3rem) !important;
+  }
+
+  section.acrossPageHero.acrossPageHero p {
+    font-size: .84rem !important;
+  }
+}
+
+/* =====================================================
+   ZZZ ACROSS GLOBAL BUTTON OVERRIDE
+   Elimina botones rojos en tracking, sectores y servicios.
+   ===================================================== */
+
+.acrossPageHero a,
+.acrossPageHero button,
+main a[href*="contacto"],
+main a[href*="cotizacion"],
+main a[href*="tracking"],
+main button[type="submit"] {
+  border-radius: 999px !important;
+  text-decoration: none !important;
+  font-weight: 900 !important;
+}
+
+/* Botón principal Across */
+.acrossPageHero a:first-of-type,
+.acrossPageHero button[type="submit"],
+main a[href*="cotizacion"],
+main a[href*="contacto"].primary,
+main button[type="submit"] {
+  color: #f4efe4 !important;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255,255,255,.16), transparent 34%),
+    linear-gradient(135deg, #07111d 0%, #0d1c2b 48%, #173247 100%) !important;
+  border: 1px solid rgba(214,192,141,.42) !important;
+  box-shadow:
+    0 20px 46px rgba(7,17,29,.42),
+    0 6px 16px rgba(214,192,141,.08),
+    inset 0 1px 0 rgba(255,255,255,.16) !important;
+}
+
+/* Botón secundario Across */
+.acrossPageHero a:nth-of-type(2) {
+  color: #09233a !important;
+  background:
+    linear-gradient(180deg, rgba(247,243,234,.94), rgba(221,231,236,.86)) !important;
+  border: 1px solid rgba(214,192,141,.34) !important;
+  box-shadow:
+    0 18px 42px rgba(5,11,18,.18),
+    0 6px 18px rgba(214,192,141,.08),
+    inset 0 1px 0 rgba(255,255,255,.70) !important;
+}
+
+/* Íconos/acento: nada rojo, champagne */
+.acrossPageHero svg,
+main [class*="Icon"] svg,
+main [class*="icon"] svg {
+  stroke: #d6c08d !important;
+}
+
+main [class*="eyebrow"],
+main [class*="kicker"],
+main [class*="Badge"],
+main [class*="badge"] {
+  color: #d6c08d !important;
+}
+
+/* Mobile: un solo CTA */
+@media (max-width: 760px) {
+  .acrossPageHero a:nth-of-type(2) {
+    display: none !important;
+  }
+}
