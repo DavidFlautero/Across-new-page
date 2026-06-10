@@ -2676,3 +2676,105 @@
     filter: none !important;
   }
 }
+
+/* =====================================================
+   MOBILE HEADER HERO ALIGNMENT
+   Mismo ancho visual que el menú inferior del hero.
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .wrapper {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  .header {
+    width: 100% !important;
+    border-radius: 20px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .wrapper {
+    padding-left: 1.1rem !important;
+    padding-right: 1.1rem !important;
+  }
+}
+
+/* =====================================================
+   HEADER PREMIUM BLUE + GOLD EDGE
+   Borde azul tinta + luz champagne sutil.
+   ===================================================== */
+
+.header {
+  border: 1px solid rgba(142, 177, 203, .24) !important;
+  box-shadow:
+    0 22px 58px rgba(5, 11, 18, .24),
+    inset 0 1px 0 rgba(255,255,255,.22),
+    inset 0 -1px 0 rgba(214,192,141,.18) !important;
+}
+
+.header::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 1.15rem !important;
+  right: 1.15rem !important;
+  bottom: 0 !important;
+  height: 1px !important;
+  pointer-events: none !important;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(214,192,141,.46),
+    rgba(142,177,203,.26),
+    transparent
+  ) !important;
+}
+
+@media (max-width: 760px) {
+  .header {
+    border-color: rgba(142,177,203,.28) !important;
+    box-shadow:
+      0 20px 54px rgba(5, 11, 18, .25),
+      inset 0 1px 0 rgba(255,255,255,.24),
+      inset 0 -1px 0 rgba(214,192,141,.20) !important;
+  }
+
+  .header::after {
+    left: 1rem !important;
+    right: 1rem !important;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(214,192,141,.42),
+      rgba(142,177,203,.24),
+      transparent
+    ) !important;
+  }
+}
+
+/* =====================================================
+   HEADER CLEAN GLASS OVERRIDE
+   Quita línea dorada/azul y deja header más limpio.
+   ===================================================== */
+
+.header {
+  border: 1px solid rgba(255, 255, 255, .24) !important;
+  box-shadow:
+    0 20px 54px rgba(5, 11, 18, .22),
+    inset 0 1px 0 rgba(255,255,255,.22) !important;
+}
+
+.header::after {
+  display: none !important;
+  content: none !important;
+}
+
+@media (max-width: 760px) {
+  .header {
+    border: 1px solid rgba(255, 255, 255, .25) !important;
+    box-shadow:
+      0 20px 54px rgba(5, 11, 18, .24),
+      inset 0 1px 0 rgba(255,255,255,.22) !important;
+  }
+}

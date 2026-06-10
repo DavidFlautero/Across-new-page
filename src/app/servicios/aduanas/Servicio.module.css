@@ -5279,83 +5279,18 @@
    El estilo real lo toma globals.css.
    ===================================================== */
 
-.commandBar {}
 
-.commandItem {}
 
 /* =====================================================
    LOCAL SERVICE COMMAND BAR FIX
    CSS real dentro del module, no depende de globals.
    ===================================================== */
 
-.commandBar {
-  position: absolute !important;
-  left: 50% !important;
-  right: auto !important;
-  top: auto !important;
-  bottom: clamp(1rem, 2.2vh, 1.6rem) !important;
-  z-index: 50 !important;
-  transform: translateX(-50%) !important;
-  width: min(1120px, calc(100% - 2rem)) !important;
-  min-height: 82px !important;
-  display: grid !important;
-  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-  overflow: hidden !important;
-  border-radius: 24px !important;
-  background: rgba(255, 255, 255, .94) !important;
-  border: 1px solid rgba(255, 255, 255, .50) !important;
-  backdrop-filter: blur(20px) saturate(1.15) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(1.15) !important;
-  box-shadow:
-    0 24px 70px rgba(5, 11, 18, .25),
-    inset 0 1px 0 rgba(255, 255, 255, .75) !important;
-}
 
-.commandItem {
-  min-width: 0 !important;
-  padding: 1rem 1.1rem !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-  justify-content: center !important;
-  gap: .22rem !important;
-  color: #101820 !important;
-  text-decoration: none !important;
-  border-right: 1px solid rgba(16, 24, 32, .10) !important;
-  transition:
-    background .25s ease,
-    transform .25s ease,
-    color .25s ease !important;
-}
 
-.commandItem:last-child {
-  border-right: 0 !important;
-}
 
-.commandItem:hover {
-  background: rgba(23, 50, 71, .065) !important;
-}
 
-.commandItem span {
-  display: block !important;
-  color: #101820 !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: .88rem !important;
-  font-weight: 800 !important;
-  line-height: 1.1 !important;
-  letter-spacing: -.02em !important;
-  white-space: nowrap !important;
-}
 
-.commandItem small {
-  display: block !important;
-  color: rgba(16, 24, 32, .56) !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: .70rem !important;
-  font-weight: 500 !important;
-  line-height: 1.1 !important;
-  white-space: nowrap !important;
-}
 
 /* Mobile igual a la home: abajo, compacto, sin texto encimado arriba */
 @media (max-width: 760px) {
@@ -5689,5 +5624,240 @@
 
   .commandItem span {
     font-size: .52rem !important;
+  }
+}
+
+/* =====================================================
+   SERVICE HERO MOBILE FINAL SIZE
+   Igual ritmo que la home, sin espacio reservado para menú inferior.
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .hero {
+    min-height: 100svh !important;
+    height: 100svh !important;
+    max-height: 100svh !important;
+    overflow: hidden !important;
+  }
+
+  .heroInner {
+    min-height: 100svh !important;
+    height: 100svh !important;
+    max-height: 100svh !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+
+    /* Antes tenía mucho padding-bottom por el menú que borramos */
+    padding:
+      calc(env(safe-area-inset-top) + 7.05rem)
+      1.25rem
+      2.8rem !important;
+  }
+
+  .heroContent {
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .eyebrow {
+    margin-bottom: .78rem !important;
+  }
+
+  .heroContent h1 {
+    max-width: 96% !important;
+    font-size: clamp(2.38rem, 10.7vw, 3.85rem) !important;
+    line-height: .93 !important;
+  }
+
+  .heroContent p {
+    max-width: 92% !important;
+    margin-top: .95rem !important;
+    font-size: clamp(.94rem, 3.9vw, 1.08rem) !important;
+    line-height: 1.58 !important;
+  }
+
+  .actions {
+    margin-top: 1.15rem !important;
+  }
+
+  .actions a:first-child {
+    width: 235px !important;
+    min-height: 42px !important;
+  }
+
+  .actions a:nth-child(2) {
+    display: none !important;
+  }
+
+  .operationCard,
+  .commandBar {
+    display: none !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .heroInner {
+    padding:
+      calc(env(safe-area-inset-top) + 6.75rem)
+      1.05rem
+      2.5rem !important;
+  }
+
+  .heroContent h1 {
+    font-size: clamp(2.18rem, 10.2vw, 3.35rem) !important;
+  }
+
+  .heroContent p {
+    font-size: .91rem !important;
+    line-height: 1.52 !important;
+  }
+
+  .actions a:first-child {
+    width: 220px !important;
+  }
+}
+
+/* =====================================================
+   SERVICE HERO TRUE FIRST VIEWPORT
+   El hero completo debe verse al entrar, sin scroll interno.
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .hero {
+    height: 100dvh !important;
+    min-height: 100dvh !important;
+    max-height: 100dvh !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  @supports not (height: 100dvh) {
+    .hero {
+      height: 100vh !important;
+      min-height: 100vh !important;
+      max-height: 100vh !important;
+    }
+  }
+
+  .heroInner {
+    height: 100dvh !important;
+    min-height: 100dvh !important;
+    max-height: 100dvh !important;
+    overflow: hidden !important;
+
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+
+    /*
+      Mismo ritmo que la principal:
+      header arriba + texto visible + CTA visible
+      sin reservar espacio para menú inferior.
+    */
+    padding:
+      calc(env(safe-area-inset-top) + 7rem)
+      1.25rem
+      1.35rem !important;
+  }
+
+  @supports not (height: 100dvh) {
+    .heroInner {
+      height: 100vh !important;
+      min-height: 100vh !important;
+      max-height: 100vh !important;
+    }
+  }
+
+  .heroContent {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .eyebrow {
+    margin: 0 0 .62rem !important;
+    font-size: .58rem !important;
+    line-height: 1.12 !important;
+    letter-spacing: .20em !important;
+  }
+
+  .heroContent h1 {
+    max-width: 94% !important;
+    margin: 0 !important;
+    font-size: clamp(2.05rem, 9.5vw, 3.15rem) !important;
+    line-height: .92 !important;
+    letter-spacing: -.064em !important;
+  }
+
+  .heroContent p {
+    max-width: 91% !important;
+    margin-top: .78rem !important;
+    font-size: .86rem !important;
+    line-height: 1.46 !important;
+  }
+
+  .actions {
+    margin-top: .95rem !important;
+    gap: 0 !important;
+  }
+
+  .actions a:first-child {
+    width: 218px !important;
+    min-height: 40px !important;
+    padding: 0 .95rem !important;
+    font-size: .52rem !important;
+  }
+
+  .actions a:nth-child(2) {
+    display: none !important;
+  }
+
+  .operationCard,
+  .commandBar {
+    display: none !important;
+  }
+
+  .heroImage,
+  .heroImageMobile {
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .heroInner {
+    padding:
+      calc(env(safe-area-inset-top) + 6.55rem)
+      1.05rem
+      1.15rem !important;
+  }
+
+  .eyebrow {
+    font-size: .54rem !important;
+    margin-bottom: .55rem !important;
+  }
+
+  .heroContent h1 {
+    font-size: clamp(1.92rem, 9.1vw, 2.82rem) !important;
+    line-height: .92 !important;
+  }
+
+  .heroContent p {
+    margin-top: .7rem !important;
+    font-size: .82rem !important;
+    line-height: 1.42 !important;
+  }
+
+  .actions {
+    margin-top: .82rem !important;
+  }
+
+  .actions a:first-child {
+    width: 205px !important;
+    min-height: 38px !important;
+    font-size: .50rem !important;
   }
 }

@@ -3220,3 +3220,221 @@
     border-color: rgba(23, 50, 71, .22) !important;
   }
 }
+
+/* =====================================================
+   SOLUTIONS RIGHT PANEL IMAGE RESTORE
+   Imagen premium detrás del panel derecho de soluciones.
+   ===================================================== */
+
+.solutionsPanel {
+  position: relative !important;
+  overflow: hidden !important;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(7, 17, 29, .88) 0%,
+      rgba(7, 17, 29, .70) 46%,
+      rgba(7, 17, 29, .42) 100%
+    ),
+    url("/images/logisticahome.png") center / cover no-repeat !important;
+  border: 1px solid rgba(214, 192, 141, .18) !important;
+  box-shadow:
+    0 24px 70px rgba(7, 17, 29, .18),
+    inset 0 1px 0 rgba(255,255,255,.10) !important;
+}
+
+.solutionsPanel::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  background:
+    radial-gradient(circle at 76% 22%, rgba(214,192,141,.18), transparent 18rem),
+    linear-gradient(180deg, rgba(255,255,255,.04), rgba(5,11,18,.20)) !important;
+  z-index: 0 !important;
+}
+
+.solutionsPanel > * {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* =====================================================
+   SOLUTIONS PANEL VERTICAL ALIGNMENT
+   Centra el cuadro derecho respecto a la lista de servicios.
+   ===================================================== */
+
+@media (min-width: 900px) {
+  .solutionsGrid,
+  .solutionsLayout,
+  .servicesGrid {
+    align-items: center !important;
+  }
+
+  .solutionsPanel {
+    align-self: center !important;
+    margin-top: 3.4rem !important;
+    min-height: 330px !important;
+  }
+}
+
+/* =====================================================
+   SOLUTIONS PANEL POSITION FINAL
+   Sube el cuadro derecho para que termine antes de Cargas Especiales.
+   ===================================================== */
+
+@media (min-width: 900px) {
+  .solutionsPanel {
+    align-self: start !important;
+    margin-top: 1.35rem !important;
+    min-height: 300px !important;
+    max-height: 330px !important;
+  }
+}
+
+@media (min-width: 1100px) {
+  .solutionsPanel {
+    margin-top: 1.65rem !important;
+    min-height: 310px !important;
+    max-height: 340px !important;
+  }
+}
+
+/* =====================================================
+   SOLUTIONS PANEL POSITION MICRO ADJUST
+   Sube un poco más el cuadro derecho.
+   ===================================================== */
+
+@media (min-width: 900px) {
+  .solutionsPanel {
+    align-self: start !important;
+    margin-top: .65rem !important;
+    min-height: 300px !important;
+    max-height: 330px !important;
+  }
+}
+
+@media (min-width: 1100px) {
+  .solutionsPanel {
+    margin-top: .85rem !important;
+  }
+}
+
+/* =====================================================
+   SOLUTIONS PANEL HEIGHT EXPANSION
+   Hace crecer el cuadro derecho hacia arriba y hacia abajo.
+   ===================================================== */
+
+@media (min-width: 900px) {
+  .solutionsPanel {
+    align-self: start !important;
+
+    /* lo sube un poco para que al crecer no se vaya solo hacia abajo */
+    margin-top: .25rem !important;
+
+    /* más alto: crece visualmente arriba y abajo */
+    min-height: 355px !important;
+    max-height: 370px !important;
+    height: 355px !important;
+  }
+}
+
+@media (min-width: 1100px) {
+  .solutionsPanel {
+    margin-top: .35rem !important;
+    min-height: 375px !important;
+    max-height: 390px !important;
+    height: 375px !important;
+  }
+}
+
+/* =====================================================
+   SOLUTIONS PANEL MATCH SERVICES LIST HEIGHT
+   El cuadro derecho va desde mitad del primer item
+   hasta mitad del último item.
+   ===================================================== */
+
+@media (min-width: 900px) {
+  .solutionsPanel {
+    align-self: start !important;
+
+    /* Arranca cerca de la mitad de Transporte Aéreo */
+    margin-top: 2.15rem !important;
+
+    /* Llega aprox hasta mitad de Cargas Especiales */
+    height: 405px !important;
+    min-height: 405px !important;
+    max-height: 405px !important;
+  }
+}
+
+@media (min-width: 1100px) {
+  .solutionsPanel {
+    margin-top: 2.25rem !important;
+    height: 420px !important;
+    min-height: 420px !important;
+    max-height: 420px !important;
+  }
+}
+
+/* =====================================================
+   SOLUTIONS PANEL EXTEND UPWARD
+   Mantiene el final inferior como está, pero hace crecer
+   el panel hacia arriba para alinearlo mejor con Transporte Aéreo.
+   ===================================================== */
+
+@media (min-width: 900px) {
+  .solutionsPanel {
+    align-self: start !important;
+
+    /* Antes el final quedó bien; ahora subimos el inicio */
+    margin-top: 1.35rem !important;
+
+    /* Compensamos aumentando altura para que el final no se suba */
+    height: 455px !important;
+    min-height: 455px !important;
+    max-height: 455px !important;
+  }
+}
+
+@media (min-width: 1100px) {
+  .solutionsPanel {
+    margin-top: 1.45rem !important;
+    height: 470px !important;
+    min-height: 470px !important;
+    max-height: 470px !important;
+  }
+}
+
+/* =====================================================
+   SOLUTIONS PANEL GROW UPWARD FIX
+   Hace que el panel crezca hacia arriba, manteniendo abajo.
+   ===================================================== */
+
+@media (min-width: 900px) {
+  .solutionsPanel {
+    align-self: start !important;
+
+    /* dejamos el punto base donde estaba */
+    margin-top: 2.15rem !important;
+
+    /* crece */
+    height: 470px !important;
+    min-height: 470px !important;
+    max-height: 470px !important;
+
+    /* sube visualmente lo mismo que creció */
+    transform: translateY(-65px) !important;
+    transform-origin: bottom center !important;
+  }
+}
+
+@media (min-width: 1100px) {
+  .solutionsPanel {
+    margin-top: 2.25rem !important;
+    height: 490px !important;
+    min-height: 490px !important;
+    max-height: 490px !important;
+    transform: translateY(-70px) !important;
+  }
+}
