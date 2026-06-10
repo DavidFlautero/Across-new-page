@@ -6471,3 +6471,53 @@
     font-size: .50rem !important;
   }
 }
+
+/* =====================================================
+   ZZZ MARITIMO HERO IMAGE FINAL SYSTEM
+   Desktop usa marítimo desktop. Mobile usa marítimo mobile.
+   Sin contain, sin scale raro, sin encuadres viejos.
+   ===================================================== */
+
+/* Base */
+.heroImage {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transform: none !important;
+  scale: 1 !important;
+}
+
+/* Desktop */
+@media (min-width: 761px) {
+  .heroImageDesktop {
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  .heroImageMobile {
+    display: none !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  .heroImageDesktop {
+    display: none !important;
+  }
+
+  .heroImageMobile {
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    transform: none !important;
+    scale: 1 !important;
+  }
+
+  .heroImage {
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+}
