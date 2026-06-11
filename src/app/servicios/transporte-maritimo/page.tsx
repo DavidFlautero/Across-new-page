@@ -559,7 +559,7 @@ export default function TransporteMaritimoPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={`${styles.hero} acrossPageHero`}>
+        <section className={`${styles.hero} acrossPageHero`} data-service-hero="compact">
           <Image
             src="/images/maritimo.png"
             alt={t.heroTitle}

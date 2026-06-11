@@ -559,7 +559,7 @@ export default function CargasEspecialesPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={`${styles.hero} acrossPageHero`}>
+        <section className={`${styles.hero} acrossPageHero`} data-service-hero="compact">
           <Image
             src="/images/cargas-especiales-desktop/transporte-especial-hero.png"
             alt={t.heroTitle}

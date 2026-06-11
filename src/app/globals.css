@@ -3008,3 +3008,393 @@ header [class*="Contact"] {
   }
 }
 
+
+/* =====================================================
+   SERVICE HERO MOBILE COMPACT UNIVERSAL
+   Para páginas de servicios marcadas con data-service-hero="compact".
+   Solo mobile / menores que tablet.
+   ===================================================== */
+
+@media (max-width: 700px) {
+  html body main section[data-service-hero="compact"] {
+    position: relative !important;
+    height: 465px !important;
+    min-height: 465px !important;
+    max-height: 465px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    background: #07111d !important;
+    color: #fff !important;
+  }
+
+  html body main section[data-service-hero="compact"] img,
+  html body main section[data-service-hero="compact"] video,
+  html body main section[data-service-hero="compact"] [class*="heroImage"],
+  html body main section[data-service-hero="compact"] [class*="airMedia"],
+  html body main section[data-service-hero="compact"] [class*="media"] {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    z-index: -4 !important;
+    filter: brightness(.82) contrast(1.06) saturate(1.12) !important;
+  }
+
+  html body main section[data-service-hero="compact"] [class*="overlay"],
+  html body main section[data-service-hero="compact"] [class*="Layer"] {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: -3 !important;
+    pointer-events: none !important;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(3, 7, 13, .84) 0%,
+        rgba(3, 7, 13, .58) 48%,
+        rgba(3, 7, 13, .18) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(3, 7, 13, .10) 0%,
+        rgba(3, 7, 13, .16) 46%,
+        rgba(3, 7, 13, .48) 100%
+      ) !important;
+  }
+
+  html body main section[data-service-hero="compact"] > [class*="heroInner"],
+  html body main section[data-service-hero="compact"] > [class*="airShell"],
+  html body main section[data-service-hero="compact"] > [class*="content"] {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 104px !important;
+    left: clamp(24px, 7vw, 36px) !important;
+    right: clamp(24px, 7vw, 36px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  html body main section[data-service-hero="compact"] [class*="heroContent"],
+  html body main section[data-service-hero="compact"] [class*="airCopy"],
+  html body main section[data-service-hero="compact"] [class*="titleWrap"] {
+    max-width: 315px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  html body main section[data-service-hero="compact"] [class*="eyebrow"],
+  html body main section[data-service-hero="compact"] [class*="Kicker"] {
+    display: block !important;
+    margin: 0 0 .48rem !important;
+    color: #d6c08d !important;
+    font-size: .52rem !important;
+    line-height: 1 !important;
+    letter-spacing: .15em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+  }
+
+  html body main section[data-service-hero="compact"] h1,
+  html body main section[data-service-hero="compact"] [class*="title"] {
+    max-width: 315px !important;
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: clamp(1.74rem, 8.4vw, 2.18rem) !important;
+    line-height: .95 !important;
+    letter-spacing: -.045em !important;
+    font-weight: 950 !important;
+    text-shadow: 0 14px 36px rgba(0,0,0,.42) !important;
+  }
+
+  html body main section[data-service-hero="compact"] p,
+  html body main section[data-service-hero="compact"] [class*="subtitle"] {
+    max-width: 300px !important;
+    margin: .72rem 0 0 !important;
+    color: rgba(255,255,255,.9) !important;
+    font-size: .68rem !important;
+    line-height: 1.34 !important;
+    font-weight: 650 !important;
+    text-shadow: 0 10px 28px rgba(0,0,0,.38) !important;
+  }
+
+  html body main section[data-service-hero="compact"] [class*="actions"],
+  html body main section[data-service-hero="compact"] [class*="Ctas"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    max-width: 250px !important;
+    gap: .5rem !important;
+    margin-top: 1rem !important;
+  }
+
+  html body main section[data-service-hero="compact"] [class*="actions"] a,
+  html body main section[data-service-hero="compact"] [class*="Ctas"] a {
+    width: 100% !important;
+    min-height: 34px !important;
+    padding: 0 .8rem !important;
+    border-radius: 999px !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    font-size: .52rem !important;
+    line-height: 1.05 !important;
+    letter-spacing: .045em !important;
+    font-weight: 950 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+  }
+
+  /* En mobile dejamos un solo botón, como en aéreo */
+  html body main section[data-service-hero="compact"] [class*="actions"] a:nth-of-type(2),
+  html body main section[data-service-hero="compact"] [class*="Ctas"] a:nth-of-type(2),
+  html body main section[data-service-hero="compact"] [class*="secondary"] {
+    display: none !important;
+  }
+
+  html body main section[data-service-hero="compact"] [class*="operationCard"],
+  html body main section[data-service-hero="compact"] [class*="statusCard"],
+  html body main section[data-service-hero="compact"] [class*="airStatusCard"] {
+    display: none !important;
+  }
+}
+
+/* Mobile chico */
+@media (max-width: 390px) {
+  html body main section[data-service-hero="compact"] {
+    height: 455px !important;
+    min-height: 455px !important;
+    max-height: 455px !important;
+  }
+
+  html body main section[data-service-hero="compact"] > [class*="heroInner"],
+  html body main section[data-service-hero="compact"] > [class*="airShell"],
+  html body main section[data-service-hero="compact"] > [class*="content"] {
+    top: 98px !important;
+    left: 24px !important;
+    right: 22px !important;
+  }
+
+  html body main section[data-service-hero="compact"] h1,
+  html body main section[data-service-hero="compact"] [class*="title"] {
+    max-width: 300px !important;
+    font-size: 1.78rem !important;
+  }
+
+  html body main section[data-service-hero="compact"] p,
+  html body main section[data-service-hero="compact"] [class*="subtitle"] {
+    max-width: 285px !important;
+    font-size: .64rem !important;
+  }
+}
+
+
+/* =====================================================
+   SERVICE HERO MOBILE SAME AS AEREO
+   Misma medida compacta que funcionó en transporte aéreo.
+   Aplica a pages con data-service-hero="compact".
+   ===================================================== */
+
+@media (max-width: 700px) {
+  html body .page-shell main section[data-service-hero="compact"] {
+    position: relative !important;
+    height: 470px !important;
+    min-height: 470px !important;
+    max-height: 470px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    background: #07111d !important;
+    color: #fff !important;
+  }
+
+  html body .page-shell main section[data-service-hero="compact"] img,
+  html body .page-shell main section[data-service-hero="compact"] video,
+  html body .page-shell main section[data-service-hero="compact"] [class*="heroImage"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="HeroImage"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="airMedia"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="AirMedia"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="media"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="Media"] {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    max-height: 100% !important;
+    object-fit: cover !important;
+
+    /* clave: no perder la parte de abajo */
+    object-position: center bottom !important;
+
+    z-index: -4 !important;
+    filter: brightness(.88) contrast(1.06) saturate(1.12) !important;
+  }
+
+  html body .page-shell main section[data-service-hero="compact"] [class*="overlay"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="Overlay"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="layer"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="Layer"] {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: -3 !important;
+    pointer-events: none !important;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(3, 7, 13, .84) 0%,
+        rgba(3, 7, 13, .58) 48%,
+        rgba(3, 7, 13, .18) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(3, 7, 13, .08) 0%,
+        rgba(3, 7, 13, .14) 46%,
+        rgba(3, 7, 13, .42) 100%
+      ) !important;
+  }
+
+  html body .page-shell main section[data-service-hero="compact"] [class*="heroInner"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="HeroInner"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="airShell"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="AirShell"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="content"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="Content"] {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 100px !important;
+    left: clamp(26px, 7vw, 38px) !important;
+    right: clamp(26px, 7vw, 38px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+    display: block !important;
+  }
+
+  html body .page-shell main section[data-service-hero="compact"] [class*="heroContent"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="HeroContent"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="airCopy"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="AirCopy"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="titleWrap"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="TitleWrap"] {
+    max-width: 315px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  html body .page-shell main section[data-service-hero="compact"] [class*="eyebrow"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="Eyebrow"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="kicker"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="Kicker"] {
+    display: block !important;
+    margin: 0 0 .52rem !important;
+    color: #d6c08d !important;
+    font-size: .52rem !important;
+    line-height: 1 !important;
+    letter-spacing: .15em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+  }
+
+  html body .page-shell main section[data-service-hero="compact"] h1,
+  html body .page-shell main section[data-service-hero="compact"] [class*="title"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="Title"] {
+    max-width: 315px !important;
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: clamp(1.72rem, 8.4vw, 2.18rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.045em !important;
+    font-weight: 950 !important;
+    text-shadow: 0 14px 36px rgba(0,0,0,.42) !important;
+  }
+
+  html body .page-shell main section[data-service-hero="compact"] p,
+  html body .page-shell main section[data-service-hero="compact"] [class*="subtitle"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="Subtitle"] {
+    max-width: 300px !important;
+    margin: .72rem 0 0 !important;
+    color: rgba(255,255,255,.9) !important;
+    font-size: .66rem !important;
+    line-height: 1.34 !important;
+    font-weight: 650 !important;
+    text-shadow: 0 10px 28px rgba(0,0,0,.38) !important;
+  }
+
+  html body .page-shell main section[data-service-hero="compact"] [class*="actions"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="Actions"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="ctas"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="Ctas"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    max-width: 250px !important;
+    gap: .5rem !important;
+    margin-top: 1rem !important;
+  }
+
+  html body .page-shell main section[data-service-hero="compact"] [class*="actions"] a,
+  html body .page-shell main section[data-service-hero="compact"] [class*="Actions"] a,
+  html body .page-shell main section[data-service-hero="compact"] [class*="ctas"] a,
+  html body .page-shell main section[data-service-hero="compact"] [class*="Ctas"] a {
+    width: 100% !important;
+    min-height: 34px !important;
+    padding: 0 .8rem !important;
+    border-radius: 999px !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    font-size: .52rem !important;
+    line-height: 1.05 !important;
+    letter-spacing: .045em !important;
+    font-weight: 950 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+  }
+
+  /* mismo comportamiento que aéreo: solo un botón en mobile */
+  html body .page-shell main section[data-service-hero="compact"] [class*="actions"] a:nth-of-type(2),
+  html body .page-shell main section[data-service-hero="compact"] [class*="Actions"] a:nth-of-type(2),
+  html body .page-shell main section[data-service-hero="compact"] [class*="ctas"] a:nth-of-type(2),
+  html body .page-shell main section[data-service-hero="compact"] [class*="Ctas"] a:nth-of-type(2),
+  html body .page-shell main section[data-service-hero="compact"] [class*="secondary"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="Secondary"] {
+    display: none !important;
+  }
+
+  html body .page-shell main section[data-service-hero="compact"] [class*="operationCard"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="OperationCard"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="statusCard"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="StatusCard"] {
+    display: none !important;
+  }
+}
+
+/* igual que aéreo en pantallas muy chicas */
+@media (max-width: 390px) {
+  html body .page-shell main section[data-service-hero="compact"] {
+    height: 460px !important;
+    min-height: 460px !important;
+    max-height: 460px !important;
+  }
+
+  html body .page-shell main section[data-service-hero="compact"] [class*="heroInner"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="HeroInner"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="airShell"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="AirShell"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="content"],
+  html body .page-shell main section[data-service-hero="compact"] [class*="Content"] {
+    top: 98px !important;
+    left: 24px !important;
+    right: 22px !important;
+  }
+}
+

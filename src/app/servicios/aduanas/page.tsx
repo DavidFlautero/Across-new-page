@@ -788,7 +788,7 @@ export default function AduanasPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={`${styles.hero} acrossPageHero`}>
+        <section className={`${styles.hero} acrossPageHero`} data-service-hero="compact">
           <Image
             src="/images/aduanashero.png"
             alt={t.heroTitle}
