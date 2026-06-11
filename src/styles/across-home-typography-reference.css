@@ -1,0 +1,123 @@
+/* =====================================================
+   ACROSS HOME TYPOGRAPHY REFERENCE
+   Referencia visual tomada de la home.
+   NO se importa todavía.
+   Sirve para copiar medidas con control.
+   ===================================================== */
+
+:root {
+  --across-font-main: inherit;
+
+  --across-ink: #07111d;
+  --across-text: rgba(5, 12, 22, .78);
+  --across-white: #ffffff;
+  --across-white-soft: rgba(255, 255, 255, .90);
+
+  --across-blue: #123f59;
+  --across-blue-dark: #082234;
+  --across-gold: #c7a96b;
+
+  /* Hero */
+  --home-hero-eyebrow-size: .62rem;
+  --home-hero-eyebrow-weight: 950;
+  --home-hero-eyebrow-spacing: .17em;
+
+  --home-hero-title-desktop: clamp(2.7rem, 3.35vw, 3.85rem);
+  --home-hero-title-mobile: clamp(1.68rem, 8.1vw, 2.08rem);
+  --home-hero-title-weight: 950;
+  --home-hero-title-line: .98;
+  --home-hero-title-spacing: -.05em;
+
+  --home-hero-text-desktop: .88rem;
+  --home-hero-text-mobile: .62rem;
+  --home-hero-text-line-desktop: 1.44;
+  --home-hero-text-line-mobile: 1.36;
+  --home-hero-text-weight: 650;
+
+  --home-hero-title-text-gap: .95rem;
+  --home-hero-text-button-gap: 1.2rem;
+
+  /* Section claro */
+  --home-section-eyebrow-size: .62rem;
+  --home-section-title-desktop: clamp(2.55rem, 3.45vw, 3.85rem);
+  --home-section-title-mobile: clamp(1.9rem, 8.2vw, 2.35rem);
+  --home-section-title-line: .98;
+  --home-section-title-spacing: -.055em;
+
+  --home-section-text-desktop: .95rem;
+  --home-section-text-mobile: .95rem;
+  --home-section-text-line: 1.58;
+
+  /* Botones */
+  --home-button-height-desktop: 40px;
+  --home-button-height-mobile: 52px;
+  --home-button-radius: 999px;
+  --home-button-font-desktop: .62rem;
+  --home-button-font-mobile: .64rem;
+  --home-button-weight: 950;
+  --home-button-spacing: .045em;
+}
+
+/* Plantilla para hero de servicios/sectores */
+.acrossHeroType {
+  font-family: var(--across-font-main);
+}
+
+.acrossHeroEyebrow {
+  color: var(--across-gold);
+  font-size: var(--home-hero-eyebrow-size);
+  font-weight: var(--home-hero-eyebrow-weight);
+  letter-spacing: var(--home-hero-eyebrow-spacing);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.acrossHeroTitle {
+  color: var(--across-white);
+  font-size: var(--home-hero-title-desktop);
+  font-weight: var(--home-hero-title-weight);
+  line-height: var(--home-hero-title-line);
+  letter-spacing: var(--home-hero-title-spacing);
+  text-wrap: balance;
+}
+
+.acrossHeroText {
+  color: var(--across-white-soft);
+  font-size: var(--home-hero-text-desktop);
+  font-weight: var(--home-hero-text-weight);
+  line-height: var(--home-hero-text-line-desktop);
+}
+
+.acrossButton {
+  min-height: var(--home-button-height-desktop);
+  border-radius: var(--home-button-radius);
+  font-size: var(--home-button-font-desktop);
+  font-weight: var(--home-button-weight);
+  letter-spacing: var(--home-button-spacing);
+  text-transform: uppercase;
+  background: linear-gradient(135deg, var(--across-blue-dark), var(--across-blue));
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .acrossHeroEyebrow {
+    font-size: .5rem;
+    letter-spacing: .15em;
+  }
+
+  .acrossHeroTitle {
+    font-size: var(--home-hero-title-mobile);
+    line-height: .96;
+    letter-spacing: -.045em;
+  }
+
+  .acrossHeroText {
+    font-size: var(--home-hero-text-mobile);
+    line-height: var(--home-hero-text-line-mobile);
+  }
+
+  .acrossButton {
+    min-height: var(--home-button-height-mobile);
+    font-size: var(--home-button-font-mobile);
+  }
+}

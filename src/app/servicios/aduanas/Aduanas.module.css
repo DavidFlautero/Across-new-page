@@ -6814,4 +6814,393 @@
   }
 }
 
+/* =====================================================
+   ZZZ MOBILE OVERVIEW LIGHT TYPOGRAPHY LOCK
+   Después de certificaciones:
+   - fondo claro
+   - títulos oscuros
+   - sin imagen/overlay oscuro
+   - coherente con la home y servicios ya corregidos
+   ===================================================== */
+
+@media (max-width: 900px) {
+  .page .overview,
+  .page .overviewMobileBg,
+  .page section[class*="overview"],
+  .page section[class*="Overview"] {
+    background: #f4f1eb !important;
+    background-image: none !important;
+    color: #07111d !important;
+    position: relative !important;
+    isolation: auto !important;
+    overflow: hidden !important;
+  }
+
+  .page .overview::before,
+  .page .overview::after,
+  .page .overviewMobileBg::before,
+  .page .overviewMobileBg::after,
+  .page section[class*="overview"]::before,
+  .page section[class*="overview"]::after,
+  .page section[class*="Overview"]::before,
+  .page section[class*="Overview"]::after {
+    content: none !important;
+    display: none !important;
+    opacity: 0 !important;
+    background: transparent !important;
+    background-image: none !important;
+  }
+
+  .page .overview h1,
+  .page .overview h2,
+  .page .overview h3,
+  .page .overviewMobileBg h1,
+  .page .overviewMobileBg h2,
+  .page .overviewMobileBg h3,
+  .page section[class*="overview"] h1,
+  .page section[class*="overview"] h2,
+  .page section[class*="overview"] h3,
+  .page section[class*="Overview"] h1,
+  .page section[class*="Overview"] h2,
+  .page section[class*="Overview"] h3 {
+    color: #07111d !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+    mix-blend-mode: normal !important;
+  }
+
+  .page .overview p,
+  .page .overviewMobileBg p,
+  .page section[class*="overview"] p,
+  .page section[class*="Overview"] p {
+    color: rgba(5, 12, 22, .78) !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+  }
+
+  .page .overview .eyebrow,
+  .page .overviewMobileBg .eyebrow,
+  .page .overview [class*="eyebrow"],
+  .page .overviewMobileBg [class*="eyebrow"],
+  .page section[class*="overview"] [class*="eyebrow"],
+  .page section[class*="Overview"] [class*="Eyebrow"] {
+    color: #c7a96b !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* =====================================================
+   ZZZ MOBILE OVERVIEW FORCE DARK TEXT FINAL
+   Mata blanco heredado en títulos del overview mobile:
+   color, text-fill, background-clip, blend y filtros.
+   ===================================================== */
+
+@media (max-width: 900px) {
+  .page .overview,
+  .page .overviewMobileBg {
+    background: #f4f1eb !important;
+    background-image: none !important;
+  }
+
+  .page .overview *,
+  .page .overviewMobileBg * {
+    mix-blend-mode: normal !important;
+    filter: none !important;
+  }
+
+  .page .overview h1,
+  .page .overview h2,
+  .page .overview h3,
+  .page .overviewCopy h1,
+  .page .overviewCopy h2,
+  .page .overviewCopy h3,
+  .page .overviewMobileBg h1,
+  .page .overviewMobileBg h2,
+  .page .overviewMobileBg h3 {
+    color: #07111d !important;
+    -webkit-text-fill-color: #07111d !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+    background: transparent !important;
+    background-image: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+    mix-blend-mode: normal !important;
+    filter: none !important;
+  }
+
+  .page .overview p,
+  .page .overviewCopy p,
+  .page .overviewMobileBg p {
+    color: rgba(5, 12, 22, .78) !important;
+    -webkit-text-fill-color: rgba(5, 12, 22, .78) !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+    background: transparent !important;
+    background-image: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+  }
+
+  .page .overview .eyebrow,
+  .page .overviewCopy .eyebrow,
+  .page .overviewMobileBg .eyebrow,
+  .page .overview [class*="eyebrow"],
+  .page .overviewCopy [class*="eyebrow"],
+  .page .overviewMobileBg [class*="eyebrow"] {
+    color: #c7a96b !important;
+    -webkit-text-fill-color: #c7a96b !important;
+    background: transparent !important;
+    background-image: none !important;
+    text-shadow: none !important;
+  }
+}
+
+/* =====================================================
+   ZZZ MOBILE CLEAR SECTIONS TYPOGRAPHY FINAL
+   Secciones claras después de certificaciones:
+   mismo negro, tamaño, peso y espaciado.
+   No toca hero.
+   ===================================================== */
+
+@media (max-width: 900px) {
+  .page .overview,
+  .page .overviewMobileBg,
+  .page .process {
+    background: #f4f1eb !important;
+    background-image: none !important;
+    color: #07111d !important;
+  }
+
+  .page .overview h1,
+  .page .overview h2,
+  .page .overview h3,
+  .page .overviewCopy h1,
+  .page .overviewCopy h2,
+  .page .overviewCopy h3,
+  .page .overviewMobileBg h1,
+  .page .overviewMobileBg h2,
+  .page .overviewMobileBg h3,
+  .page .process h1,
+  .page .process h2,
+  .page .process h3 {
+    color: #07111d !important;
+    -webkit-text-fill-color: #07111d !important;
+    font-family: inherit !important;
+    font-weight: 950 !important;
+    font-size: clamp(1.9rem, 8.2vw, 2.35rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.055em !important;
+    text-align: left !important;
+    text-wrap: balance !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+    background: transparent !important;
+    background-image: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+    mix-blend-mode: normal !important;
+    filter: none !important;
+  }
+
+  .page .overview p,
+  .page .overviewCopy p,
+  .page .overviewMobileBg p,
+  .page .process p {
+    color: rgba(5, 12, 22, .78) !important;
+    -webkit-text-fill-color: rgba(5, 12, 22, .78) !important;
+    font-family: inherit !important;
+    font-weight: 450 !important;
+    font-size: .95rem !important;
+    line-height: 1.62 !important;
+    letter-spacing: 0 !important;
+    text-align: left !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+    background: transparent !important;
+    background-image: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+  }
+
+  .page .overview .eyebrow,
+  .page .overviewCopy .eyebrow,
+  .page .overviewMobileBg .eyebrow,
+  .page .process .eyebrow,
+  .page .overview [class*="eyebrow"],
+  .page .overviewCopy [class*="eyebrow"],
+  .page .overviewMobileBg [class*="eyebrow"],
+  .page .process [class*="eyebrow"] {
+    color: #c7a96b !important;
+    -webkit-text-fill-color: #c7a96b !important;
+    font-family: inherit !important;
+    font-weight: 950 !important;
+    font-size: .55rem !important;
+    line-height: 1 !important;
+    letter-spacing: .17em !important;
+    text-transform: uppercase !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    background-image: none !important;
+  }
+
+  .page .overview,
+  .page .overviewMobileBg {
+    padding-top: 1.45rem !important;
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  .page .process {
+    padding-top: 2.2rem !important;
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+    padding-bottom: 2.8rem !important;
+  }
+
+  .page .overview h2,
+  .page .overviewCopy h2,
+  .page .overviewMobileBg h2,
+  .page .process h2 {
+    max-width: 330px !important;
+    margin: 0 !important;
+  }
+
+  .page .overview p,
+  .page .overviewCopy p,
+  .page .overviewMobileBg p,
+  .page .process p {
+    max-width: 320px !important;
+    margin-top: 1.15rem !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .page .overview,
+  .page .overviewMobileBg,
+  .page .process {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .page .overview h2,
+  .page .overviewCopy h2,
+  .page .overviewMobileBg h2,
+  .page .process h2 {
+    max-width: 300px !important;
+    font-size: 1.95rem !important;
+  }
+
+  .page .overview p,
+  .page .overviewCopy p,
+  .page .overviewMobileBg p,
+  .page .process p {
+    max-width: 295px !important;
+    font-size: .9rem !important;
+  }
+}
+
+/* =====================================================
+   ZZZ HERO IVORY TYPOGRAPHY FINAL
+   Los textos del HERO no son blanco puro.
+   Across usa marfil / blanco cálido premium.
+   Solo afecta hero, no overview ni process.
+   ===================================================== */
+
+.page > .hero {
+  --hero-ivory: #f4efe5;
+  --hero-ivory-soft: rgba(244, 239, 229, .88);
+  --hero-ivory-muted: rgba(244, 239, 229, .74);
+  --hero-gold: #c7a96b;
+}
+
+/* Título hero */
+.page > .hero h1,
+.page > .hero [data-hero-role="title"],
+.page > .hero .title,
+.page > .hero [class*="title"],
+.page > .hero [class*="Title"] {
+  color: var(--hero-ivory) !important;
+  -webkit-text-fill-color: var(--hero-ivory) !important;
+  text-shadow: 0 18px 44px rgba(0, 0, 0, .36) !important;
+  background: transparent !important;
+  background-image: none !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+}
+
+/* Texto/subtítulo hero */
+.page > .hero p,
+.page > .hero [data-hero-role="text"],
+.page > .hero .subtitle,
+.page > .hero [class*="subtitle"],
+.page > .hero [class*="Subtitle"] {
+  color: var(--hero-ivory-soft) !important;
+  -webkit-text-fill-color: var(--hero-ivory-soft) !important;
+  text-shadow: 0 12px 30px rgba(0, 0, 0, .28) !important;
+}
+
+/* Eyebrow hero */
+.page > .hero .eyebrow,
+.page > .hero [data-hero-role="eyebrow"],
+.page > .hero [class*="eyebrow"],
+.page > .hero [class*="Eyebrow"] {
+  color: var(--hero-gold) !important;
+  -webkit-text-fill-color: var(--hero-gold) !important;
+  text-shadow: 0 10px 26px rgba(0, 0, 0, .28) !important;
+}
+
+/* Botones hero: texto marfil */
+.page > .hero a,
+.page > .hero button,
+.page > .hero [data-hero-role="actions"] a,
+.page > .hero .actions a {
+  color: var(--hero-ivory) !important;
+  -webkit-text-fill-color: var(--hero-ivory) !important;
+}
+
+/* =====================================================
+   ZZZ PROCESS EYEBROW CLEAN FINAL
+   Quita sombra/fondo azul del eyebrow del proceso.
+   Debe quedar dorado limpio sobre fondo claro.
+   ===================================================== */
+
+.page .process .eyebrow,
+.page .process [class*="eyebrow"],
+.page .process [class*="Eyebrow"],
+.page section[class*="process"] .eyebrow,
+.page section[class*="process"] [class*="eyebrow"],
+.page section[class*="Process"] .eyebrow,
+.page section[class*="Process"] [class*="Eyebrow"] {
+  color: #c7a96b !important;
+  -webkit-text-fill-color: #c7a96b !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  border: 0 !important;
+  outline: 0 !important;
+  padding: 0 !important;
+  display: inline-block !important;
+  mix-blend-mode: normal !important;
+  filter: none !important;
+}
+
+.page .process .eyebrow::before,
+.page .process .eyebrow::after,
+.page .process [class*="eyebrow"]::before,
+.page .process [class*="eyebrow"]::after,
+.page section[class*="process"] [class*="eyebrow"]::before,
+.page section[class*="process"] [class*="eyebrow"]::after,
+.page section[class*="Process"] [class*="Eyebrow"]::before,
+.page section[class*="Process"] [class*="Eyebrow"]::after {
+  content: none !important;
+  display: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
 
