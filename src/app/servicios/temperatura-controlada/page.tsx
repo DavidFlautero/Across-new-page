@@ -886,7 +886,7 @@ export default function TemperaturaControladaPage() {
           </div>
         </section>
 
-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/controltemp.png')" } as CSSProperties}>
+        <section className={styles.services} data-dark-overlay="services" data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/controltemp.png')" } as CSSProperties}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -956,7 +956,7 @@ export default function TemperaturaControladaPage() {
           </div>
         </section>
 
-        <section className={styles.darkBand} data-mobile-hide-after-cert="true" data-temp-extra-cta="true">
+        <section className={styles.darkBand} data-dark-overlay="darkBand" data-mobile-hide-after-cert="true" data-temp-extra-cta="true">
           <div className={styles.darkBandImage}>
             <Image
               src="/images/controltemp.png"
@@ -986,7 +986,7 @@ export default function TemperaturaControladaPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/temperaturacontrolada.png')" } as CSSProperties} data-temp-cta="true" data-across-final-cta="true">
+        <section className={styles.finalCta} data-dark-overlay="finalCta" style={{ "--mobile-bg": "url('/images/temperaturacontrolada.png')" } as CSSProperties} data-temp-cta="true" data-across-final-cta="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>

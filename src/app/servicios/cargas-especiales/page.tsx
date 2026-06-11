@@ -657,7 +657,7 @@ export default function CargasEspecialesPage() {
           </div>
         </section>
 
-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/cargas-especiales-mobile/carga-especial1.png')" } as CSSProperties}>
+        <section className={styles.services} data-dark-overlay="services" data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/cargas-especiales-mobile/carga-especial1.png')" } as CSSProperties}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -727,7 +727,7 @@ export default function CargasEspecialesPage() {
           </div>
         </section>
 
-        <section className={styles.darkBand} data-mobile-hide-after-cert="true">
+        <section className={styles.darkBand} data-dark-overlay="darkBand" data-mobile-hide-after-cert="true">
           <div className={styles.darkBandImage}>
             <Image
               src="/images/sectores/transportemaritimo.png"
@@ -757,7 +757,7 @@ export default function CargasEspecialesPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/cargas-especiales-mobile/carga-especial2.png')" } as CSSProperties} data-across-final-cta="true">
+        <section className={styles.finalCta} data-dark-overlay="finalCta" style={{ "--mobile-bg": "url('/images/cargas-especiales-mobile/carga-especial2.png')" } as CSSProperties} data-across-final-cta="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>

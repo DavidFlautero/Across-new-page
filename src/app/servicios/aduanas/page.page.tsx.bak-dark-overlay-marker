@@ -7,496 +7,496 @@ import Footer from "@/components/layout/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
-import RelatedServices from "@/app/servicios/_shared/RelatedServices";
-import styles from "./AlimentacionBebidas.module.css";
+import RelatedServices from "../_shared/RelatedServices";
+import styles from "./Aduanas.module.css";
 
 type Locale = "es" | "en" | "zh";
 
 const copy = {
   "es": {
-    "heroEyebrow": "Sector alimentación y bebidas",
-    "heroTitle": "Logística para productos que exigen tiempo, control y confianza.",
-    "heroText": "Diseñamos operaciones logísticas para alimentos, bebidas, perecederos y productos de consumo, integrando transporte, almacenaje, distribución, trazabilidad y control operativo.",
+    "heroEyebrow": "Servicios de aduanas",
+    "heroTitle": "Despacho aduanero para operaciones que no pueden quedar detenidas.",
+    "heroText": "Gestionamos documentación, clasificación, cumplimiento y coordinación aduanera para importaciones y exportaciones, reduciendo riesgos operativos y tiempos de liberación.",
     "primaryCta": "Planificar mi operación",
     "secondaryCta": "Hablar con nuestro equipo",
-    "activeLabel": "Operación alimentaria activa",
-    "activeRoute": "Proveedor → Distribución",
-    "activeCargo": "Alimentos y bebidas",
+    "activeLabel": "Gestión aduanera activa",
+    "activeRoute": "Origen → Aduana → Destino",
+    "activeCargo": "Importación / Exportación",
     "activeStatusLabel": "Estado:",
-    "activeStatus": "En coordinación",
+    "activeStatus": "En revisión",
     "activeEtaLabel": "Prioridad:",
-    "activeEta": "Entrega segura",
+    "activeEta": "Liberación",
     "trust": [
       [
-        "Trazabilidad",
-        "Control operativo"
+        "Documentación",
+        "Control aduanero"
       ],
       [
-        "Distribución",
-        "Entregas coordinadas"
-      ],
-      [
-        "Cadena de frío",
-        "Cuando aplica"
+        "Clasificación",
+        "Partidas arancelarias"
       ],
       [
         "Cumplimiento",
-        "Documentación y control"
+        "Normativa vigente"
+      ],
+      [
+        "Liberación",
+        "Gestión operativa"
       ]
     ],
-    "overviewEyebrow": "Logística sectorial",
-    "overviewTitle": "Soluciones logísticas para cadenas alimentarias que no pueden fallar.",
-    "overviewText": "El sector de alimentación y bebidas exige velocidad, cuidado del producto, cumplimiento documental y continuidad. Coordinamos operaciones diseñadas para proteger mercancía, reducir riesgos y mantener la cadena en movimiento.",
-    "overviewButton": "Conocer más sobre alimentación y bebidas",
+    "overviewEyebrow": "Cumplimiento aduanero",
+    "overviewTitle": "Gestión documental y operativa para mover carga sin fricciones.",
+    "overviewText": "Una operación internacional puede detenerse por un documento incompleto, una clasificación incorrecta o una gestión tardía. Nuestro equipo coordina el proceso aduanero para reducir riesgos y mantener continuidad.",
+    "overviewButton": "Conocer más sobre aduanas",
     "pillars": [
       [
-        "Control de producto",
-        "Coordinación según tipo de mercancía, sensibilidad, rotación y requisitos de entrega."
+        "Revisión documental",
+        "Control de facturas, packing list, certificados y documentos requeridos."
       ],
       [
-        "Distribución eficiente",
-        "Planificación de salidas, rutas y entregas para clientes, retail o puntos de venta."
+        "Clasificación arancelaria",
+        "Soporte para identificar partidas y requisitos aplicables."
       ],
       [
-        "Trazabilidad",
-        "Seguimiento operativo para mantener visibilidad de la mercancía."
+        "Gestión de despacho",
+        "Coordinación del proceso de importación o exportación con operadores y autoridades."
       ],
       [
-        "Cadena de frío",
-        "Soluciones con control térmico cuando el producto lo requiere."
+        "Cumplimiento normativo",
+        "Apoyo para reducir riesgos, errores y demoras operativas."
       ]
     ],
-    "servicesEyebrow": "Soluciones para alimentación y bebidas",
-    "servicesTitle": "Operaciones diseñadas para productos de consumo.",
+    "servicesEyebrow": "Nuestros servicios aduaneros",
+    "servicesTitle": "Soluciones para importaciones y exportaciones con control.",
     "services": [
       [
-        "Transporte nacional e internacional",
-        "Coordinación de movimientos terrestres, marítimos o aéreos según urgencia y volumen."
+        "Despacho de importación",
+        "Gestión documental y operativa para ingreso de mercancía."
       ],
       [
-        "Distribución comercial",
-        "Entregas a clientes, cadenas, puntos de venta o centros de distribución."
+        "Despacho de exportación",
+        "Coordinación para salida internacional de carga."
       ],
       [
-        "Carga refrigerada",
-        "Soluciones para productos perecederos o sensibles a temperatura."
+        "Clasificación arancelaria",
+        "Soporte para partidas, requisitos y tratamiento documental."
       ],
       [
-        "Almacenaje y preparación",
-        "Gestión de stock, picking, packing y salidas programadas."
+        "Revisión documental",
+        "Validación de documentos comerciales y operativos."
       ],
       [
-        "Importación y exportación",
-        "Soporte documental, aduanero y operativo para comercio internacional."
+        "Asesoría aduanera",
+        "Acompañamiento para operaciones complejas o recurrentes."
       ],
       [
-        "Door to door",
-        "Coordinación completa desde origen hasta entrega final."
+        "Coordinación integral",
+        "Integración con transporte, almacén y entrega final."
       ]
     ],
-    "useCasesEyebrow": "Cuándo necesita logística especializada",
-    "useCasesTitle": "Cuando el producto debe llegar bien, a tiempo y bajo control.",
+    "useCasesEyebrow": "Cuándo necesita soporte aduanero",
+    "useCasesTitle": "Cuando la documentación define el avance de la operación.",
     "useCases": [
       [
-        "Alimentos perecederos",
-        "Operaciones que requieren tiempos precisos y control de condiciones."
+        "Importaciones",
+        "Ingreso de mercancía con control documental."
       ],
       [
-        "Bebidas",
-        "Distribución de productos embotellados, envasados o de alto volumen."
+        "Exportaciones",
+        "Salida internacional con coordinación aduanera."
       ],
       [
-        "Retail y supermercados",
-        "Entregas programadas hacia cadenas y puntos de venta."
+        "Carga sensible",
+        "Mercancías con requisitos específicos."
       ],
       [
-        "Importadores",
-        "Gestión integral para productos alimentarios internacionales."
+        "Operaciones recurrentes",
+        "Procesos continuos que requieren orden y seguimiento."
       ],
       [
-        "Campañas comerciales",
-        "Picos de demanda y entregas de alta rotación."
+        "Proyectos internacionales",
+        "Cargas con documentación compleja."
       ],
       [
-        "Productos sensibles",
-        "Mercancía que requiere cuidado, trazabilidad o control térmico."
+        "Multimodal",
+        "Operaciones que combinan transporte y despacho."
       ]
     ],
     "processEyebrow": "Nuestro proceso operativo",
-    "processTitle": "Una operación alimentaria clara desde la planificación hasta la entrega.",
+    "processTitle": "Una gestión aduanera clara desde la revisión documental.",
     "process": [
       [
-        "Análisis del producto",
-        "Revisamos tipo de mercancía, sensibilidad, volumen y requisitos."
+        "Análisis inicial",
+        "Revisamos tipo de operación, carga y documentación disponible."
       ],
       [
-        "Diseño logístico",
-        "Definimos transporte, almacenamiento, distribución y tiempos."
+        "Validación documental",
+        "Controlamos requisitos, certificados y datos comerciales."
       ],
       [
-        "Documentación",
-        "Coordinamos requisitos comerciales, sanitarios o aduaneros cuando aplica."
+        "Clasificación",
+        "Apoyamos la identificación arancelaria y requisitos aplicables."
       ],
       [
-        "Preparación operativa",
-        "Gestionamos retiro, carga, acondicionamiento y salida."
+        "Coordinación de despacho",
+        "Gestionamos el avance con operadores y autoridades."
       ],
       [
         "Seguimiento",
-        "Monitoreamos avance, hitos y trazabilidad."
+        "Monitoreamos estados y posibles observaciones."
       ],
       [
-        "Entrega final",
-        "Coordinamos recepción, descarga y cierre operativo."
+        "Liberación",
+        "Coordinamos cierre aduanero y continuidad logística."
       ]
     ],
-    "bandTitle": "Logística alimentaria diseñada para proteger producto y continuidad.",
-    "bandText": "Nuestro equipo coordina operaciones para empresas que necesitan puntualidad, trazabilidad y respuesta profesional en alimentos, bebidas y productos de consumo.",
+    "bandTitle": "Gestión aduanera diseñada para que la carga siga avanzando.",
+    "bandText": "Nuestro equipo coordina procesos aduaneros para empresas que necesitan cumplimiento, precisión documental y continuidad operativa en comercio internacional.",
     "stats": [
       [
-        "Trazabilidad",
-        "Seguimiento operativo"
+        "Documentación",
+        "Revisión y control"
       ],
       [
-        "Distribución",
-        "Entregas coordinadas"
+        "Clasificación",
+        "Soporte arancelario"
       ],
       [
-        "Cadena de frío",
-        "Cuando aplica"
+        "Despacho",
+        "Importación y exportación"
       ],
       [
         "Soporte experto",
         "Especialistas dedicados"
       ]
     ],
-    "finalTitle": "Coordinemos su próxima operación de alimentación y bebidas.",
-    "finalText": "Cuéntenos tipo de producto, volumen, origen, destino y requisitos. Nuestro equipo analizará la mejor solución logística.",
-    "finalPrimary": "Solicitar propuesta logística",
+    "finalTitle": "Coordinemos su próxima operación aduanera.",
+    "finalText": "Cuéntenos tipo de operación, mercancía, origen, destino y documentación disponible. Nuestro equipo analizará el mejor camino para avanzar.",
+    "finalPrimary": "Solicitar soporte aduanero",
     "finalSecondary": "Hablar con un especialista"
   },
   "en": {
-    "heroEyebrow": "Food and beverage sector",
-    "heroTitle": "Logistics for products that demand timing, control and trust.",
-    "heroText": "We design logistics operations for food, beverages, perishables and consumer products, integrating transport, warehousing, distribution, traceability and operational control.",
+    "heroEyebrow": "Customs services",
+    "heroTitle": "Customs clearance for operations that cannot remain stopped.",
+    "heroText": "We manage documentation, classification, compliance and customs coordination for imports and exports, reducing operational risks and release times.",
     "primaryCta": "Plan my operation",
     "secondaryCta": "Talk to our team",
-    "activeLabel": "Active food operation",
-    "activeRoute": "Supplier → Distribution",
-    "activeCargo": "Food and beverages",
+    "activeLabel": "Active customs management",
+    "activeRoute": "Origin → Customs → Destination",
+    "activeCargo": "Import / Export",
     "activeStatusLabel": "Status:",
-    "activeStatus": "In coordination",
+    "activeStatus": "Under review",
     "activeEtaLabel": "Priority:",
-    "activeEta": "Safe delivery",
+    "activeEta": "Release",
     "trust": [
       [
-        "Traceability",
-        "Operational control"
+        "Documentation",
+        "Customs control"
       ],
       [
-        "Distribution",
-        "Coordinated deliveries"
-      ],
-      [
-        "Cold chain",
-        "When required"
+        "Classification",
+        "Tariff codes"
       ],
       [
         "Compliance",
-        "Documentation and control"
+        "Current regulation"
+      ],
+      [
+        "Release",
+        "Operational management"
       ]
     ],
-    "overviewEyebrow": "Sector logistics",
-    "overviewTitle": "Logistics solutions for food supply chains that cannot fail.",
-    "overviewText": "The food and beverage sector requires speed, product care, document compliance and continuity. We coordinate operations designed to protect goods, reduce risks and keep the chain moving.",
-    "overviewButton": "Learn more about food and beverages",
+    "overviewEyebrow": "Customs compliance",
+    "overviewTitle": "Documentary and operational management to move cargo without friction.",
+    "overviewText": "An international operation can be stopped by an incomplete document, an incorrect classification or late management. Our team coordinates the customs process to reduce risks and maintain continuity.",
+    "overviewButton": "Learn more about customs",
     "pillars": [
       [
-        "Product control",
-        "Coordination according to goods type, sensitivity, rotation and delivery requirements."
+        "Document review",
+        "Control of invoices, packing lists, certificates and required documents."
       ],
       [
-        "Efficient distribution",
-        "Planning of dispatches, routes and deliveries for clients, retail or points of sale."
+        "Tariff classification",
+        "Support to identify codes and applicable requirements."
       ],
       [
-        "Traceability",
-        "Operational tracking to maintain cargo visibility."
+        "Clearance management",
+        "Coordination of import or export processes with operators and authorities."
       ],
       [
-        "Cold chain",
-        "Temperature-controlled solutions when the product requires it."
+        "Regulatory compliance",
+        "Support to reduce risks, errors and operational delays."
       ]
     ],
-    "servicesEyebrow": "Food and beverage solutions",
-    "servicesTitle": "Operations designed for consumer products.",
+    "servicesEyebrow": "Our customs services",
+    "servicesTitle": "Solutions for imports and exports with control.",
     "services": [
       [
-        "Domestic and international transport",
-        "Road, ocean or air movements according to urgency and volume."
+        "Import clearance",
+        "Documentary and operational management for goods entry."
       ],
       [
-        "Commercial distribution",
-        "Deliveries to clients, chains, points of sale or distribution centers."
+        "Export clearance",
+        "Coordination for international cargo departure."
       ],
       [
-        "Refrigerated cargo",
-        "Solutions for perishable or temperature-sensitive products."
+        "Tariff classification",
+        "Support for codes, requirements and document treatment."
       ],
       [
-        "Warehousing and preparation",
-        "Stock management, picking, packing and scheduled dispatches."
+        "Document review",
+        "Validation of commercial and operational documents."
       ],
       [
-        "Import and export",
-        "Document, customs and operational support for international trade."
+        "Customs advisory",
+        "Support for complex or recurring operations."
       ],
       [
-        "Door to door",
-        "Complete coordination from origin to final delivery."
+        "Integrated coordination",
+        "Integration with transport, warehousing and final delivery."
       ]
     ],
-    "useCasesEyebrow": "When specialized logistics is needed",
-    "useCasesTitle": "When the product must arrive properly, on time and under control.",
+    "useCasesEyebrow": "When customs support is needed",
+    "useCasesTitle": "When documentation defines operational progress.",
     "useCases": [
       [
-        "Perishable food",
-        "Operations requiring precise timing and condition control."
+        "Imports",
+        "Goods entry with document control."
       ],
       [
-        "Beverages",
-        "Distribution of bottled, packaged or high-volume products."
+        "Exports",
+        "International departure with customs coordination."
       ],
       [
-        "Retail and supermarkets",
-        "Scheduled deliveries to chains and points of sale."
+        "Sensitive cargo",
+        "Goods with specific requirements."
       ],
       [
-        "Importers",
-        "Integrated management for international food products."
+        "Recurring operations",
+        "Continuous processes requiring order and tracking."
       ],
       [
-        "Commercial campaigns",
-        "Demand peaks and high-rotation deliveries."
+        "International projects",
+        "Cargo with complex documentation."
       ],
       [
-        "Sensitive products",
-        "Goods requiring care, traceability or thermal control."
+        "Multimodal",
+        "Operations combining transport and clearance."
       ]
     ],
     "processEyebrow": "Our operational process",
-    "processTitle": "A clear food logistics operation from planning to delivery.",
+    "processTitle": "Clear customs management from document review.",
     "process": [
       [
-        "Product analysis",
-        "We review goods type, sensitivity, volume and requirements."
+        "Initial analysis",
+        "We review operation type, cargo and available documentation."
       ],
       [
-        "Logistics design",
-        "We define transport, warehousing, distribution and timing."
+        "Document validation",
+        "We control requirements, certificates and commercial data."
       ],
       [
-        "Documentation",
-        "We coordinate commercial, sanitary or customs requirements when applicable."
+        "Classification",
+        "We support tariff identification and applicable requirements."
       ],
       [
-        "Operational setup",
-        "We manage pickup, loading, conditioning and dispatch."
+        "Clearance coordination",
+        "We manage progress with operators and authorities."
       ],
       [
         "Tracking",
-        "We monitor progress, milestones and traceability."
+        "We monitor statuses and possible observations."
       ],
       [
-        "Final delivery",
-        "We coordinate reception, unloading and operational closure."
+        "Release",
+        "We coordinate customs closure and logistics continuity."
       ]
     ],
-    "bandTitle": "Food logistics designed to protect product and continuity.",
-    "bandText": "Our team coordinates operations for companies that need punctuality, traceability and professional response in food, beverages and consumer products.",
+    "bandTitle": "Customs management designed to keep cargo moving.",
+    "bandText": "Our team coordinates customs processes for companies that need compliance, documentary precision and operational continuity in international trade.",
     "stats": [
       [
-        "Traceability",
-        "Operational tracking"
+        "Documentation",
+        "Review and control"
       ],
       [
-        "Distribution",
-        "Coordinated deliveries"
+        "Classification",
+        "Tariff support"
       ],
       [
-        "Cold chain",
-        "When required"
+        "Clearance",
+        "Import and export"
       ],
       [
         "Expert support",
         "Dedicated specialists"
       ]
     ],
-    "finalTitle": "Let’s coordinate your next food and beverage operation.",
-    "finalText": "Tell us product type, volume, origin, destination and requirements. Our team will analyze the best logistics solution.",
-    "finalPrimary": "Request logistics proposal",
+    "finalTitle": "Let’s coordinate your next customs operation.",
+    "finalText": "Tell us operation type, goods, origin, destination and available documentation. Our team will analyze the best path forward.",
+    "finalPrimary": "Request customs support",
     "finalSecondary": "Talk to a specialist"
   },
   "zh": {
-    "heroEyebrow": "食品与饮料行业",
-    "heroTitle": "为需要时间、控制和信任的产品提供物流。",
-    "heroText": "我们为食品、饮料、易腐品和消费品设计物流运营，整合运输、仓储、配送、可追溯性和运营控制。",
+    "heroEyebrow": "海关服务",
+    "heroTitle": "为不能停滞的业务提供清关服务。",
+    "heroText": "我们为进出口业务管理文件、归类、合规和海关协调，降低运营风险并缩短放行时间。",
     "primaryCta": "规划物流操作",
     "secondaryCta": "联系我们的团队",
-    "activeLabel": "进行中的食品操作",
-    "activeRoute": "供应商 → 配送",
-    "activeCargo": "食品与饮料",
+    "activeLabel": "进行中的海关管理",
+    "activeRoute": "始发地 → 海关 → 目的地",
+    "activeCargo": "进口 / 出口",
     "activeStatusLabel": "状态：",
-    "activeStatus": "协调中",
+    "activeStatus": "审核中",
     "activeEtaLabel": "优先级：",
-    "activeEta": "安全交付",
+    "activeEta": "放行",
     "trust": [
       [
-        "可追溯性",
-        "运营控制"
+        "文件",
+        "海关控制"
       ],
       [
-        "配送",
-        "协调交付"
-      ],
-      [
-        "冷链",
-        "按需提供"
+        "归类",
+        "税则编码"
       ],
       [
         "合规",
-        "文件与控制"
+        "现行法规"
+      ],
+      [
+        "放行",
+        "运营管理"
       ]
     ],
-    "overviewEyebrow": "行业物流",
-    "overviewTitle": "为不能失败的食品供应链提供物流解决方案。",
-    "overviewText": "食品与饮料行业需要速度、产品保护、文件合规和连续性。我们协调运营以保护货物、降低风险并保持供应链流动。",
-    "overviewButton": "了解食品与饮料物流",
+    "overviewEyebrow": "海关合规",
+    "overviewTitle": "通过文件和运营管理让货物顺畅流动。",
+    "overviewText": "国际业务可能因文件不完整、归类错误或管理延迟而停滞。我们的团队协调海关流程以降低风险并保持连续性。",
+    "overviewButton": "了解海关服务",
     "pillars": [
       [
-        "产品控制",
-        "根据货物类型、敏感性、周转和交付要求进行协调。"
+        "文件审核",
+        "控制发票、装箱单、证书和所需文件。"
       ],
       [
-        "高效配送",
-        "为客户、零售或销售点规划出库、路线和交付。"
+        "税则归类",
+        "支持识别编码和适用要求。"
       ],
       [
-        "可追溯性",
-        "通过运营跟踪保持货物可视化。"
+        "清关管理",
+        "与运营商和主管部门协调进口或出口流程。"
       ],
       [
-        "冷链",
-        "当产品需要时提供温控解决方案。"
+        "法规合规",
+        "帮助降低风险、错误和运营延误。"
       ]
     ],
-    "servicesEyebrow": "食品与饮料解决方案",
-    "servicesTitle": "为消费品设计的物流运营。",
+    "servicesEyebrow": "我们的海关服务",
+    "servicesTitle": "为进出口提供可控解决方案。",
     "services": [
       [
-        "国内和国际运输",
-        "根据紧急程度和体量协调陆运、海运或空运。"
+        "进口清关",
+        "为货物进口提供文件和运营管理。"
       ],
       [
-        "商业配送",
-        "配送到客户、连锁、销售点或配送中心。"
+        "出口清关",
+        "协调国际货物出口。"
       ],
       [
-        "冷藏货物",
-        "为易腐或温度敏感产品提供解决方案。"
+        "税则归类",
+        "支持编码、要求和文件处理。"
       ],
       [
-        "仓储与准备",
-        "库存管理、拣货、包装和计划出库。"
+        "文件审核",
+        "验证商业和运营文件。"
       ],
       [
-        "进出口",
-        "为国际贸易提供文件、海关和运营支持。"
+        "海关咨询",
+        "为复杂或重复业务提供支持。"
       ],
       [
-        "门到门",
-        "从始发地到最终交付的完整协调。"
+        "综合协调",
+        "与运输、仓储和最终交付整合。"
       ]
     ],
-    "useCasesEyebrow": "何时需要专业物流",
-    "useCasesTitle": "当产品必须完好、准时且受控到达时。",
+    "useCasesEyebrow": "何时需要海关支持",
+    "useCasesTitle": "当文件决定操作进度时。",
     "useCases": [
       [
-        "易腐食品",
-        "需要精准时间和条件控制的操作。"
+        "进口",
+        "带有文件控制的货物入境。"
       ],
       [
-        "饮料",
-        "瓶装、包装或大批量产品配送。"
+        "出口",
+        "带有海关协调的国际出运。"
       ],
       [
-        "零售与超市",
-        "向连锁和销售点进行计划交付。"
+        "敏感货物",
+        "具有特定要求的货物。"
       ],
       [
-        "进口商",
-        "为国际食品提供综合管理。"
+        "重复业务",
+        "需要秩序和跟踪的连续流程。"
       ],
       [
-        "商业活动",
-        "需求高峰和高周转交付。"
+        "国际项目",
+        "文件复杂的货物。"
       ],
       [
-        "敏感产品",
-        "需要保护、可追溯或温控的货物。"
+        "多式联运",
+        "结合运输和清关的业务。"
       ]
     ],
     "processEyebrow": "我们的运营流程",
-    "processTitle": "从规划到交付，食品物流清晰可控。",
+    "processTitle": "从文件审核开始，海关管理清晰可控。",
     "process": [
       [
-        "产品分析",
-        "审核货物类型、敏感性、体量和要求。"
+        "初步分析",
+        "审核业务类型、货物和现有文件。"
       ],
       [
-        "物流设计",
-        "确定运输、仓储、配送和时间安排。"
+        "文件验证",
+        "控制要求、证书和商业数据。"
       ],
       [
-        "文件管理",
-        "按需协调商业、卫生或海关要求。"
+        "归类",
+        "支持税则识别和适用要求。"
       ],
       [
-        "操作准备",
-        "管理提货、装载、处理和出库。"
+        "清关协调",
+        "与运营商和主管部门推动流程。"
       ],
       [
         "跟踪",
-        "监控进度、节点和可追溯性。"
+        "监控状态和可能的问题。"
       ],
       [
-        "最终交付",
-        "协调收货、卸货和运营关闭。"
+        "放行",
+        "协调海关关闭和物流连续性。"
       ]
     ],
-    "bandTitle": "为保护产品和连续性而设计的食品物流。",
-    "bandText": "我们的团队为食品、饮料和消费品企业协调需要准时、可追溯和专业响应的运营。",
+    "bandTitle": "为保持货物流动而设计的海关管理。",
+    "bandText": "我们的团队为需要合规、文件精准和国际贸易运营连续性的企业协调海关流程。",
     "stats": [
       [
-        "可追溯性",
-        "运营跟踪"
+        "文件",
+        "审核与控制"
       ],
       [
-        "配送",
-        "协调交付"
+        "归类",
+        "税则支持"
       ],
       [
-        "冷链",
-        "按需提供"
+        "清关",
+        "进口与出口"
       ],
       [
         "专家支持",
         "专属专家"
       ]
     ],
-    "finalTitle": "让我们协调您的下一次食品与饮料操作。",
-    "finalText": "告诉我们产品类型、数量、始发地、目的地和要求。我们的团队将分析最佳物流方案。",
-    "finalPrimary": "申请物流方案",
+    "finalTitle": "让我们协调您的下一次海关操作。",
+    "finalText": "告诉我们业务类型、货物、始发地、目的地和现有文件。我们的团队将分析最佳推进路径。",
+    "finalPrimary": "申请海关支持",
     "finalSecondary": "联系专家"
   }
 } satisfies Record<Locale, any>;
@@ -740,7 +740,7 @@ function Icon({ name }: { name: IconName }) {
   }
 }
 
-export default function AlimentacionBebidasPage() {
+export default function AduanasPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
@@ -788,9 +788,9 @@ export default function AlimentacionBebidasPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={`${styles.hero} acrossPageHero`} data-sector-hero="true" data-standard-service-hero="true" data-sector-name="alimentacion-bebidas">
+        <section className={`${styles.hero} acrossPageHero`} data-service-hero="compact" data-standard-service-hero="true" data-service-name="aduanas">
           <Image
-            src="/images/sectores/alimentosybebidas.png"
+            src="/images/aduanashero.png"
             alt={t.heroTitle}
             fill
             priority
@@ -800,7 +800,7 @@ export default function AlimentacionBebidasPage() {
           />
 
           <Image
-            src="/images/sectores/alimentosybebidas.png"
+            src="/images/aduanashero.png"
             alt={t.heroTitle}
             fill
             priority
@@ -861,7 +861,7 @@ export default function AlimentacionBebidasPage() {
 
         <Certifications />
 
-        <section className={`${styles.overview} ${styles.overviewMobileBg}`} data-after-cert-overview="true" style={{ "--sector-overview-bg": "url('/images/sectores/alimentosybebidas.png')" } as CSSProperties}>
+        <section className={styles.overview}>
           <div className={styles.overviewCopy}>
             <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
             <h2>{t.overviewTitle}</h2>
@@ -886,7 +886,7 @@ export default function AlimentacionBebidasPage() {
           </div>
         </section>
 
-        <section className={styles.services} data-dark-overlay="services" data-mobile-hide-after-cert="true">
+        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/caduana.png')" } as CSSProperties}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -894,7 +894,7 @@ export default function AlimentacionBebidasPage() {
 
           <div className={styles.serviceGrid}>
             {t.services.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["package", "shield", "truck", "tracking", "door", "document"];
+              const icons: IconName[] = ["plane", "box", "diamond", "charter", "globe", "door"];
 
               return (
                 <article key={title}>
@@ -940,7 +940,7 @@ export default function AlimentacionBebidasPage() {
 
           <div className={styles.processGrid}>
             {t.process.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["search", "package", "document", "route", "tracking", "truck"];
+              const icons: IconName[] = ["search", "route", "document", "plane", "tracking", "truck"];
 
               return (
                 <article key={title}>
@@ -956,10 +956,10 @@ export default function AlimentacionBebidasPage() {
           </div>
         </section>
 
-        <section className={styles.darkBand} data-dark-overlay="darkBand" data-mobile-hide-after-cert="true" data-sector-dark-band="true">
+        <section className={styles.darkBand} data-mobile-hide-after-cert="true" data-aduanas-extra-cta="true">
           <div className={styles.darkBandImage}>
             <Image
-              src="/images/sectores/alimentosybebidas2.png"
+              src="/images/caduana.png"
               alt={t.bandTitle}
               fill
               sizes="(max-width: 900px) 100vw, 42vw"
@@ -986,7 +986,7 @@ export default function AlimentacionBebidasPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} data-dark-overlay="finalCta" data-sector-final-cta="true" data-across-final-cta="true">
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/aduanashero.png')" } as CSSProperties} data-aduanas-cta="true" data-across-final-cta="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>
@@ -999,7 +999,7 @@ export default function AlimentacionBebidasPage() {
 
           <div className={styles.finalImage}>
             <Image
-              src="/images/sectores/alimentosybebidas.png"
+              src="/images/aduanashero.png"
               alt={t.finalTitle}
               fill
               sizes="(max-width: 900px) 100vw, 44vw"
@@ -1007,7 +1007,7 @@ export default function AlimentacionBebidasPage() {
           </div>
         </section>
 
-        <RelatedServices current="e-commerce" locale={locale} />
+        <RelatedServices current="aduanas" locale={locale} />
       </main>
 
       <Footer />

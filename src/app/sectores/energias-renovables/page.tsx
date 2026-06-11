@@ -942,7 +942,7 @@ export default function EnergiasRenovablesPage() {
           </div>
         </section>
 
-        <section className={styles.services} data-energy-services-bg="true" data-mobile-hide-after-cert="true">
+        <section className={styles.services} data-dark-overlay="services" data-energy-services-bg="true" data-mobile-hide-after-cert="true">
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -1012,7 +1012,7 @@ export default function EnergiasRenovablesPage() {
           </div>
         </section>
 
-        <section className={styles.darkBand} data-mobile-hide-after-cert="true" data-sector-dark-band="true">
+        <section className={styles.darkBand} data-dark-overlay="darkBand" data-mobile-hide-after-cert="true" data-sector-dark-band="true">
           <div className={styles.darkBandVideoLayer} aria-hidden="true">
             <video
               ref={darkBandVideoRef}
@@ -1047,7 +1047,7 @@ export default function EnergiasRenovablesPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} data-energy-final-video="true" data-sector-final-cta="true" data-across-final-cta="true">
+        <section className={styles.finalCta} data-dark-overlay="finalCta" data-energy-final-video="true" data-sector-final-cta="true" data-across-final-cta="true">
           <div className={styles.finalCtaVideoLayer} aria-hidden="true">
             <video
               ref={finalCtaVideoRef}

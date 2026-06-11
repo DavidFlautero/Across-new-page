@@ -2963,7 +2963,7 @@
       rgba(5, 6, 9, .55) 100%
     ),
     radial-gradient(circle at 18% 18%, rgba(18, 63, 89, .16), transparent 24rem),
-    url("/images/sectores/quimico2.png") !important;
+    none !important;
   background-size: cover !important;
   background-position: center 48% !important;
   background-repeat: no-repeat !important;
@@ -3065,7 +3065,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(18, 63, 89, .14), transparent 24rem),
-    url("/images/sectores/quimico2.png") !important;
+    none !important;
   background-size: cover !important;
   background-position: center 55% !important;
   background-repeat: no-repeat !important;
@@ -3104,7 +3104,7 @@
   .services {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.90)),
-      url("/images/sectores/quimico2.png") !important;
+      none !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3116,7 +3116,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/quimico2.png") !important;
+      none !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3134,7 +3134,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(18, 63, 89, .14), transparent 24rem),
-    url("/images/sectores/quimicohero.png") !important;
+    url("/images/sectores/energiasrenovables1.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3144,7 +3144,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/quimicohero.png") !important;
+      url("/images/sectores/energiasrenovables1.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3162,7 +3162,7 @@
       rgba(5, 6, 9, .44) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(18, 63, 89, .14), transparent 24rem),
-    url("/images/sectores/quimicohero.png") !important;
+    url("/images/sectores/energiasrenovables1.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3172,7 +3172,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/quimicohero.png") !important;
+      url("/images/sectores/energiasrenovables1.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -4321,7 +4321,7 @@
 /* END HERO IMAGE STARTS AT TOP UNDER HEADER */
 
 /* =====================================================
-   ZZZ SECTOR QUIMICO FINAL SYSTEM
+   ZZZ SECTOR ENERGIAS-RENOVABLES FINAL SYSTEM
    Replica sistema aprobado de Alimentación & Bebidas.
    - Hero compacto
    - Azul Across
@@ -4412,25 +4412,25 @@
 }
 
 /* HERO */
-.page > .hero[data-sector-hero="true"][data-sector-name="quimico"] {
+.page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] {
   position: relative !important;
   overflow: hidden !important;
   isolation: isolate !important;
   background: #07111d !important;
 }
 
-.page > .hero[data-sector-hero="true"][data-sector-name="quimico"]::before,
-.page > .hero[data-sector-hero="true"][data-sector-name="quimico"]::after,
-.page > .hero[data-sector-hero="true"][data-sector-name="quimico"] .heroInner::before,
-.page > .hero[data-sector-hero="true"][data-sector-name="quimico"] .heroInner::after,
-.page > .hero[data-sector-hero="true"][data-sector-name="quimico"] .heroContent::before,
-.page > .hero[data-sector-hero="true"][data-sector-name="quimico"] .heroContent::after {
+.page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"]::before,
+.page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"]::after,
+.page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] .heroInner::before,
+.page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] .heroInner::after,
+.page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] .heroContent::before,
+.page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] .heroContent::after {
   content: none !important;
   display: none !important;
 }
 
-.page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="desktop-image"],
-.page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="mobile-image"] {
+.page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="desktop-image"],
+.page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="mobile-image"] {
   position: absolute !important;
   inset: 0 !important;
   width: 100% !important;
@@ -4442,7 +4442,7 @@
   filter: brightness(1.08) contrast(1.06) saturate(1.12) !important;
 }
 
-.page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="overlay"] {
+.page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="overlay"] {
   position: absolute !important;
   inset: 0 !important;
   z-index: -3 !important;
@@ -4453,29 +4453,29 @@
 }
 
 @media (max-width: 1200px) {
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="card"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="card"] {
     display: none !important;
   }
 }
 
 @media (min-width: 1201px) {
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] {
     height: clamp(640px, calc(100svh - 92px), 760px) !important;
     min-height: 640px !important;
     max-height: 760px !important;
     padding: 0 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="desktop-image"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="desktop-image"] {
     display: block !important;
     object-position: center center !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="mobile-image"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="mobile-image"] {
     display: none !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="inner"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="inner"] {
     position: absolute !important;
     top: 150px !important;
     left: clamp(72px, 6.8vw, 118px) !important;
@@ -4486,11 +4486,11 @@
     display: block !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="content"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="content"] {
     max-width: 620px !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="title"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="title"] {
     max-width: 620px !important;
     margin: 0 !important;
     font-size: clamp(2.9rem, 3.5vw, 4rem) !important;
@@ -4499,7 +4499,7 @@
     font-weight: 950 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="text"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="text"] {
     max-width: 520px !important;
     margin-top: .95rem !important;
     font-size: .9rem !important;
@@ -4507,30 +4507,30 @@
     font-weight: 650 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="actions"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="actions"] {
     margin-top: 1.2rem !important;
     gap: .75rem !important;
   }
 }
 
 @media (min-width: 901px) and (max-width: 1200px) {
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] {
     height: 500px !important;
     min-height: 500px !important;
     max-height: 500px !important;
     padding: 0 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="desktop-image"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="desktop-image"] {
     display: block !important;
     object-position: center center !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="mobile-image"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="mobile-image"] {
     display: none !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="inner"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="inner"] {
     position: absolute !important;
     top: 140px !important;
     left: clamp(46px, 5.8vw, 64px) !important;
@@ -4540,17 +4540,17 @@
     padding: 0 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="content"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="content"] {
     max-width: 520px !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="title"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="title"] {
     max-width: 520px !important;
     font-size: clamp(2.35rem, 4vw, 2.85rem) !important;
     line-height: .98 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="text"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="text"] {
     max-width: 445px !important;
     font-size: .76rem !important;
     line-height: 1.42 !important;
@@ -4558,7 +4558,7 @@
 }
 
 @media (max-width: 700px) {
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] {
     height: 465px !important;
     min-height: 465px !important;
     max-height: 465px !important;
@@ -4566,16 +4566,16 @@
     margin: 0 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="desktop-image"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="desktop-image"] {
     display: none !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="mobile-image"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="mobile-image"] {
     display: block !important;
     object-position: center center !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="inner"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="inner"] {
     position: absolute !important;
     top: 86px !important;
     left: 20px !important;
@@ -4585,25 +4585,25 @@
     padding: 0 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="content"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="content"] {
     max-width: 318px !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="title"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="title"] {
     max-width: 318px !important;
     font-size: clamp(1.68rem, 8.1vw, 2.08rem) !important;
     line-height: .96 !important;
     letter-spacing: -.045em !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="text"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="text"] {
     max-width: 292px !important;
     margin-top: .68rem !important;
     font-size: .62rem !important;
     line-height: 1.36 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="actions"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="actions"] {
     display: grid !important;
     grid-template-columns: 1fr !important;
     max-width: 250px !important;
@@ -4611,7 +4611,7 @@
     gap: .5rem !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="quimico"] [data-hero-role="actions"] a:nth-of-type(2) {
+  .page > .hero[data-sector-hero="true"][data-sector-name="energias-renovables"] [data-hero-role="actions"] a:nth-of-type(2) {
     display: none !important;
   }
 }
@@ -4700,7 +4700,7 @@
   overflow: hidden !important;
   background:
     linear-gradient(90deg, rgba(5,20,34,.54) 0%, rgba(8,37,56,.42) 48%, rgba(10,55,78,.30) 100%),
-    url("/images/sectores/quimico2.png") center center / cover no-repeat !important;
+    none center center / cover no-repeat !important;
 }
 
 .page section[data-sector-dark-band="true"] > *,
@@ -4754,7 +4754,7 @@
 .page [data-across-final-cta="true"] {
   background:
     linear-gradient(90deg, rgba(5,20,34,.50) 0%, rgba(8,37,56,.42) 48%, rgba(10,55,78,.28) 100%),
-    url("/images/sectores/quimico2.png") center center / cover no-repeat !important;
+    none center center / cover no-repeat !important;
 }
 
 /* =====================================================
@@ -7133,6 +7133,687 @@
 }
 
 /* =====================================================
+   ZZZ ENERGIAS OVERVIEW AFTER CERT EXACT FINAL v2
+   Fix fuerte para Mobile + Tablet + Desktop
+   Mantiene mismas dimensiones y estructura que la imagen original
+   ===================================================== */
+
+/* DESKTOP */
+.page section[data-after-cert-overview="true"] {
+  background: #f4f1eb !important;
+  background-image: none !important;
+  color: #07111d !important;
+  padding: clamp(2.6rem, 4vw, 4rem) clamp(42px, 7vw, 110px) clamp(3rem, 4.5vw, 4.4rem) !important;
+  margin: 0 !important;
+  display: grid !important;
+  grid-template-columns: minmax(280px, 390px) minmax(0, 1fr) !important;
+  gap: clamp(2rem, 5vw, 4.5rem) !important;
+  align-items: start !important;
+  overflow: hidden !important;
+}
+
+.page section[data-after-cert-overview="true"]::before,
+.page section[data-after-cert-overview="true"]::after { content: none !important; display: none !important; }
+
+.page section[data-after-cert-overview="true"] .overviewCopy { max-width: 390px !important; margin: 0 !important; padding: 0 !important; }
+
+.page section[data-after-cert-overview="true"] .eyebrow,
+.page section[data-after-cert-overview="true"] [class*="eyebrow"] {
+  color: #c7a96b !important; -webkit-text-fill-color: #c7a96b !important;
+  font-size: .62rem !important; letter-spacing: .18em !important; font-weight: 950 !important;
+  text-transform: uppercase !important; margin: 0 0 .75rem !important;
+}
+
+.page section[data-after-cert-overview="true"] h2 {
+  color: #07111d !important; -webkit-text-fill-color: #07111d !important;
+  font-size: clamp(2.05rem, 2.7vw, 2.85rem) !important; line-height: .98 !important;
+  letter-spacing: -.052em !important; font-weight: 950 !important; max-width: 390px !important;
+}
+
+.page section[data-after-cert-overview="true"] p {
+  color: rgba(7,17,29,.72) !important; -webkit-text-fill-color: rgba(7,17,29,.72) !important;
+  font-size: .92rem !important; line-height: 1.58 !important; max-width: 360px !important;
+}
+
+.page section[data-after-cert-overview="true"] a {
+  background: #123f59 !important; color: #f4efe5 !important;
+  min-width: 250px !important; min-height: 48px !important; width: fit-content !important;
+  font-size: .62rem !important; font-weight: 950 !important; letter-spacing: .045em !important;
+  text-transform: uppercase !important; border-radius: 999px !important;
+  box-shadow: 0 16px 34px rgba(18, 63, 89, .14) !important;
+}
+
+/* Pillars */
+.page section[data-after-cert-overview="true"] .pillars {
+  display: grid !important; grid-template-columns: repeat(4, minmax(0,1fr)) !important;
+  gap: 0 !important; border-left: 1px solid rgba(7,17,29,.09) !important;
+}
+.page section[data-after-cert-overview="true"] .pillars article {
+  min-height: 180px !important; padding: 1.25rem 1.05rem !important;
+  border-right: 1px solid rgba(7,17,29,.09) !important; text-align: center !important;
+}
+.page section[data-after-cert-overview="true"] .pillars i { width:34px !important; height:34px !important; border:1px solid rgba(18,63,89,.32) !important; }
+.page section[data-after-cert-overview="true"] .pillars h3 { font-size: clamp(1rem,1.25vw,1.18rem) !important; color:#07111d !important; }
+.page section[data-after-cert-overview="true"] .pillars p { font-size:.78rem !important; color:rgba(7,17,29,.62) !important; }
+
+/* TABLET */
+@media (min-width:701px) and (max-width:1024px) {
+  .page section[data-after-cert-overview="true"] {
+    grid-template-columns: 1fr !important; gap:1.9rem !important; padding:2.6rem 42px 3rem !important;
+    background:#f4f1eb !important; background-image:none !important;
+  }
+  .page section[data-after-cert-overview="true"] .pillars {
+    grid-template-columns: repeat(2,minmax(0,1fr)) !important; border-top:1px solid rgba(7,17,29,.09) !important;
+  }
+  .page section[data-after-cert-overview="true"] .pillars article { min-height:145px !important; }
+}
+
+/* MOBILE - REFORZADO */
+@media (max-width:700px) {
+  .page section[data-after-cert-overview="true"] {
+    display:block !important;
+    padding:1.55rem 20px 2.05rem !important;
+    background:#f4f1eb !important;
+    background-image:none !important;
+    background-color:#f4f1eb !important;
+    color:#07111d !important;
+    margin:0 !important;
+    box-shadow:none !important;
+  }
+  .page section[data-after-cert-overview="true"] .overviewCopy,
+  .page section[data-after-cert-overview="true"] h2,
+  .page section[data-after-cert-overview="true"] p {
+    max-width:100% !important; width:100% !important;
+  }
+  .page section[data-after-cert-overview="true"] h2 {
+    font-size:clamp(1.38rem,5.8vw,1.62rem) !important; line-height:1.02 !important;
+  }
+  .page section[data-after-cert-overview="true"] p { font-size:.8rem !important; margin-top:.95rem !important; }
+  .page section[data-after-cert-overview="true"] a {
+    width:100% !important; max-width:300px !important; display:flex !important;
+  }
+  .page section[data-after-cert-overview="true"] .pillars { display:none !important; }
+}
+
+/* Seguridad extra */
+.page section[data-after-cert-overview="true"] { --sector-overview-bg: none !important; }
+
+/* =====================================================
+   ZZZ ENERGIAS MP4 REAL BACKGROUND FINAL
+   El fondo de darkBand es el mp4 real.
+   No depende de energiasrenovables2.png.
+   Mantiene la estructura original de la sección.
+   ===================================================== */
+
+.page .darkBand {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background: #07111d !important;
+  background-image: none !important;
+}
+
+/* La imagen vieja no existe más y no debe pintar nada */
+.page .darkBandImage,
+.page .darkBandImage img,
+.page .darkBandImage picture {
+  display: none !important;
+}
+
+/* Video de fondo real */
+.page .darkBandVideoLayer {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+  background: #07111d !important;
+}
+
+.page .darkBandVideo {
+  position: absolute !important;
+  inset: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  opacity: 1 !important;
+  filter: brightness(.68) contrast(1.05) saturate(1.05) !important;
+}
+
+/* Overlay encima del mp4 */
+.page .darkBand::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 10, 18, .88) 0%,
+      rgba(3, 10, 18, .74) 38%,
+      rgba(7, 21, 34, .56) 68%,
+      rgba(7, 21, 34, .44) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 10, 18, .20) 0%,
+      rgba(3, 10, 18, .72) 100%
+    ) !important;
+}
+
+/* Contenido siempre arriba */
+.page .darkBand > *:not(.darkBandVideoLayer):not(.darkBandImage),
+.page .darkBandContent,
+.page .darkBandGrid,
+.page .darkBandActions,
+.page .darkBand .sectionHead,
+.page .darkBand article {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* No ocultar en desktop/tablet grande */
+@media (min-width: 901px) {
+  .page .darkBandVideoLayer,
+  .page .darkBandVideo {
+    display: block !important;
+  }
+}
+
+/* Si en mobile la darkBand está oculta, el video también */
+@media (max-width: 900px) {
+  .page .darkBandVideoLayer,
+  .page .darkBandVideo {
+    display: none !important;
+  }
+}
+
+/* =====================================================
+   ZZZ ENERGIAS FINAL CTA VIDEO REAL VISIBLE FINAL
+   Fuerza energiasrenovables2.mp4 como fondo visible del CTA final.
+   Sección: Planifiquemos su próxima operación renovable.
+   ===================================================== */
+
+.page section[data-energy-final-video="true"] {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background: #07111d !important;
+  background-image: none !important;
+}
+
+/* Matar cualquier fondo viejo de imagen */
+.page section[data-energy-final-video="true"]::after {
+  content: none !important;
+  display: none !important;
+}
+
+.page section[data-energy-final-video="true"] .finalCtaVideoLayer {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+  background: #07111d !important;
+}
+
+.page section[data-energy-final-video="true"] .finalCtaVideo {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  filter: brightness(.62) contrast(1.08) saturate(1.05) !important;
+}
+
+/* Overlay encima del video, pero debajo del texto */
+.page section[data-energy-final-video="true"]::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  display: block !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 10, 18, .88) 0%,
+      rgba(3, 10, 18, .72) 48%,
+      rgba(7, 21, 34, .52) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 10, 18, .18) 0%,
+      rgba(3, 10, 18, .72) 100%
+    ) !important;
+}
+
+/* Todo el contenido arriba */
+.page section[data-energy-final-video="true"] > *:not(.finalCtaVideoLayer) {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* En mobile también debe verse */
+@media (max-width: 900px) {
+  .page section[data-energy-final-video="true"] .finalCtaVideoLayer,
+  .page section[data-energy-final-video="true"] .finalCtaVideo {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .page section[data-energy-final-video="true"] {
+    min-height: 500px !important;
+  }
+
+  .page section[data-energy-final-video="true"] .finalCtaVideo {
+    object-position: center center !important;
+    filter: brightness(.50) contrast(1.08) saturate(1.05) !important;
+  }
+}
+
+/* Debug visual temporal: borde azul si el CTA correcto fue marcado */
+.page section[data-energy-final-video="true"] {
+  outline: 1px solid rgba(0, 164, 220, .35) !important;
+}
+
+/* =====================================================
+   ZZZ ENERGIAS FINAL CTA VIDEO FULL WIDTH FIX
+   Corrige el video del CTA final:
+   - ocupa todo el ancho de la sección
+   - no queda limitado por columnas/wrappers
+   - no deja franja azul a la derecha
+   ===================================================== */
+
+.page section[data-energy-final-video="true"] {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background: #07111d !important;
+  background-image: none !important;
+}
+
+/* La capa del video debe cubrir TODA la sección */
+.page section[data-energy-final-video="true"] .finalCtaVideoLayer {
+  position: absolute !important;
+  inset: 0 !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 100% !important;
+
+  height: 100% !important;
+  max-height: none !important;
+  min-height: 100% !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+
+  z-index: 1 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+
+  grid-column: 1 / -1 !important;
+  grid-row: 1 / -1 !important;
+  align-self: stretch !important;
+  justify-self: stretch !important;
+
+  background: transparent !important;
+}
+
+/* El video también debe llenar toda la capa */
+.page section[data-energy-final-video="true"] .finalCtaVideo {
+  position: absolute !important;
+  inset: 0 !important;
+
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 100% !important;
+
+  height: 100% !important;
+  max-height: none !important;
+  min-height: 100% !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+
+  object-fit: cover !important;
+  object-position: center center !important;
+
+  z-index: 1 !important;
+  filter: brightness(.72) contrast(1.06) saturate(1.08) !important;
+}
+
+/* Overlay completo encima del video */
+.page section[data-energy-final-video="true"]::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+  display: block !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 10, 18, .82) 0%,
+      rgba(3, 10, 18, .66) 45%,
+      rgba(7, 21, 34, .44) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 10, 18, .12) 0%,
+      rgba(3, 10, 18, .62) 100%
+    ) !important;
+}
+
+/* Nada encima puede pintar un fondo sólido */
+.page section[data-energy-final-video="true"]::after {
+  content: none !important;
+  display: none !important;
+}
+
+.page section[data-energy-final-video="true"] > *:not(.finalCtaVideoLayer) {
+  position: relative !important;
+  z-index: 3 !important;
+  background: transparent !important;
+}
+
+/* Mobile exacto */
+@media (max-width: 700px) {
+  .page section[data-energy-final-video="true"] {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 500px !important;
+    overflow: hidden !important;
+  }
+
+  .page section[data-energy-final-video="true"] .finalCtaVideoLayer {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+
+  .page section[data-energy-final-video="true"] .finalCtaVideo {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    filter: brightness(.62) contrast(1.08) saturate(1.08) !important;
+  }
+}
+
+/* =====================================================
+   ZZZ ENERGIAS SERVICES IMAGE BG FINAL
+   energiasrenovables1.png va en la sección:
+   "Soluciones diseñadas para operaciones energéticas."
+   NO en el overview claro post-certificaciones.
+   ===================================================== */
+
+/* El overview de arriba vuelve a ser claro */
+.page section[data-after-cert-overview="true"] {
+  background: #f4f1eb !important;
+  background-image: none !important;
+}
+
+.page section[data-after-cert-overview="true"]::before,
+.page section[data-after-cert-overview="true"]::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Sección correcta: services */
+.page section[data-energy-services-bg="true"] {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 10, 18, .94) 0%,
+      rgba(3, 10, 18, .88) 34%,
+      rgba(5, 18, 31, .66) 64%,
+      rgba(5, 18, 31, .46) 100%
+    ),
+    url('/images/sectores/energiasrenovables1.png') center right / cover no-repeat !important;
+}
+
+/* Overlay para que tenga el mismo mood oscuro del video */
+.page section[data-energy-services-bg="true"]::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  display: block !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 10, 18, .92) 0%,
+      rgba(3, 10, 18, .80) 42%,
+      rgba(7, 21, 34, .56) 72%,
+      rgba(7, 21, 34, .38) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 10, 18, .16) 0%,
+      rgba(3, 10, 18, .70) 100%
+    ) !important;
+}
+
+/* El contenido arriba */
+.page section[data-energy-services-bg="true"] > * {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Cards más legibles sobre imagen */
+.page section[data-energy-services-bg="true"] article {
+  background: rgba(3, 10, 18, .34) !important;
+  border-color: rgba(244, 239, 229, .16) !important;
+  backdrop-filter: blur(2px) !important;
+}
+
+.page section[data-energy-services-bg="true"] h2,
+.page section[data-energy-services-bg="true"] h3 {
+  color: #f4efe5 !important;
+  -webkit-text-fill-color: #f4efe5 !important;
+}
+
+.page section[data-energy-services-bg="true"] p {
+  color: rgba(244, 239, 229, .78) !important;
+  -webkit-text-fill-color: rgba(244, 239, 229, .78) !important;
+}
+
+.page section[data-energy-services-bg="true"] .eyebrow,
+.page section[data-energy-services-bg="true"] [class*="eyebrow"] {
+  color: #c7a96b !important;
+  -webkit-text-fill-color: #c7a96b !important;
+}
+
+.page section[data-energy-services-bg="true"] i {
+  border-color: rgba(118, 188, 215, .38) !important;
+  background: rgba(18, 63, 89, .30) !important;
+  color: #76bcd7 !important;
+}
+
+.page section[data-energy-services-bg="true"] svg {
+  stroke: #76bcd7 !important;
+}
+
+/* Mobile: esa sección suele estar oculta por flujo mobile.
+   Si aparece, mantener fondo oscuro consistente. */
+@media (max-width: 900px) {
+  .page section[data-energy-services-bg="true"] {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(3, 10, 18, .90) 0%,
+        rgba(3, 10, 18, .78) 100%
+      ),
+      url('/images/sectores/energiasrenovables1.png') center center / cover no-repeat !important;
+  }
+}
+
+/* =====================================================
+   ZZZ ENERGIAS AFTER CERT TITLE FINAL FIX
+   Corrige el h2 del bloque post-certificaciones.
+   No puede competir con el hero.
+   ===================================================== */
+
+/* Desktop */
+@media (min-width: 901px) {
+  .page section[data-after-cert-overview="true"] h2,
+  .page section[data-after-cert-overview="true"] .overviewCopy h2 {
+    max-width: 420px !important;
+    margin: 0 !important;
+
+    color: #07111d !important;
+    -webkit-text-fill-color: #07111d !important;
+
+    font-family: inherit !important;
+    font-size: clamp(2rem, 2.35vw, 2.65rem) !important;
+    line-height: 1 !important;
+    letter-spacing: -.048em !important;
+    font-weight: 950 !important;
+
+    text-shadow: none !important;
+    background: transparent !important;
+    background-image: none !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 701px) and (max-width: 900px) {
+  .page section[data-after-cert-overview="true"] h2,
+  .page section[data-after-cert-overview="true"] .overviewCopy h2 {
+    max-width: 360px !important;
+
+    color: #07111d !important;
+    -webkit-text-fill-color: #07111d !important;
+
+    font-family: inherit !important;
+    font-size: clamp(1.65rem, 4vw, 2rem) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -.044em !important;
+    font-weight: 950 !important;
+
+    text-shadow: none !important;
+    background: transparent !important;
+    background-image: none !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .page section[data-after-cert-overview="true"] {
+    padding: 1.45rem 20px 1.9rem !important;
+    background: #f4f1eb !important;
+    background-image: none !important;
+  }
+
+  .page section[data-after-cert-overview="true"] h2,
+  .page section[data-after-cert-overview="true"] .overviewCopy h2 {
+    max-width: 300px !important;
+    margin: 0 !important;
+
+    color: #07111d !important;
+    -webkit-text-fill-color: #07111d !important;
+
+    font-family: inherit !important;
+    font-size: clamp(1.34rem, 5.65vw, 1.58rem) !important;
+    line-height: 1.03 !important;
+    letter-spacing: -.04em !important;
+    font-weight: 950 !important;
+
+    text-wrap: balance !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    background-image: none !important;
+  }
+
+  .page section[data-after-cert-overview="true"] p,
+  .page section[data-after-cert-overview="true"] .overviewCopy p {
+    max-width: 300px !important;
+    margin-top: .85rem !important;
+
+    color: rgba(7, 17, 29, .72) !important;
+    -webkit-text-fill-color: rgba(7, 17, 29, .72) !important;
+
+    font-family: inherit !important;
+    font-size: .78rem !important;
+    line-height: 1.48 !important;
+    font-weight: 450 !important;
+  }
+
+  .page section[data-after-cert-overview="true"] .eyebrow,
+  .page section[data-after-cert-overview="true"] [class*="eyebrow"] {
+    margin-bottom: .62rem !important;
+    color: #c7a96b !important;
+    -webkit-text-fill-color: #c7a96b !important;
+    font-size: .52rem !important;
+    line-height: 1 !important;
+    letter-spacing: .18em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  .page section[data-after-cert-overview="true"] a {
+    max-width: 300px !important;
+    min-height: 48px !important;
+    margin-top: 1.15rem !important;
+    font-size: .56rem !important;
+  }
+}
+
+/* Mobile chico */
+@media (max-width: 390px) {
+  .page section[data-after-cert-overview="true"] h2,
+  .page section[data-after-cert-overview="true"] .overviewCopy h2 {
+    font-size: 1.38rem !important;
+    max-width: 286px !important;
+  }
+
+  .page section[data-after-cert-overview="true"] p,
+  .page section[data-after-cert-overview="true"] .overviewCopy p {
+    font-size: .76rem !important;
+  }
+}
+
+/* =====================================================
    ZZZ ALL SECTORS AFTER CERT TYPOGRAPHY HARD LOCK FINAL
    Post-certificaciones en TODOS los sectores:
    - misma letra que energías renovables
@@ -7321,48 +8002,33 @@
 }
 
 /* =====================================================
-   ZZZ DARK OVERLAY EXACT SECTIONS FINAL
-   Overlay unificado SOLO para secciones marcadas:
-   services / darkBand / finalCta.
-   No toca hero ni overview.
+   ZZZ UNIFIED DARK IMAGE OVERLAY FINAL
+   Oscurecido uniforme para secciones internas con imagen/video.
+   NO toca el hero.
+   Mood: imagen visible + velo azul oscuro premium.
    ===================================================== */
 
-.page section[data-dark-overlay="services"],
-.page section[data-dark-overlay="darkBand"],
-.page section[data-dark-overlay="finalCta"] {
+/* Secciones oscuras internas */
+.page .services,
+.page .darkBand,
+.page .finalCta,
+.page section[data-across-final-cta="true"],
+.page section[data-sector-final-cta="true"],
+.page section[data-energy-services-bg="true"],
+.page section[data-energy-final-video="true"] {
   position: relative !important;
   overflow: hidden !important;
   isolation: isolate !important;
-  background-color: #07111d !important;
 }
 
-/* Capa de imagen/video siempre debajo */
-.page section[data-dark-overlay] .darkBandImage,
-.page section[data-dark-overlay] .darkBandImage img,
-.page section[data-dark-overlay] .finalCtaImage,
-.page section[data-dark-overlay] .finalCtaImage img,
-.page section[data-dark-overlay] .darkBandVideoLayer,
-.page section[data-dark-overlay] .finalCtaVideoLayer {
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-}
-
-.page section[data-dark-overlay] .darkBandImage img,
-.page section[data-dark-overlay] .finalCtaImage img,
-.page section[data-dark-overlay] .darkBandVideo,
-.page section[data-dark-overlay] .finalCtaVideo {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center center !important;
-  display: block !important;
-}
-
-/* Overlay exacto: como la sección buena de consumo/distribución */
-.page section[data-dark-overlay]::before {
+/* Overlay estándar: igual al look correcto de consumo/distribución */
+.page .services::before,
+.page .darkBand::before,
+.page .finalCta::before,
+.page section[data-across-final-cta="true"]::before,
+.page section[data-sector-final-cta="true"]::before,
+.page section[data-energy-services-bg="true"]::before,
+.page section[data-energy-final-video="true"]::before {
   content: "" !important;
   position: absolute !important;
   inset: 0 !important;
@@ -7372,79 +8038,123 @@
   background:
     linear-gradient(
       90deg,
-      rgba(3, 10, 18, .94) 0%,
-      rgba(3, 10, 18, .88) 34%,
-      rgba(5, 18, 31, .68) 66%,
-      rgba(7, 21, 34, .46) 100%
+      rgba(3, 10, 18, .92) 0%,
+      rgba(3, 10, 18, .86) 30%,
+      rgba(5, 18, 31, .68) 62%,
+      rgba(7, 21, 34, .48) 100%
     ),
     linear-gradient(
       180deg,
-      rgba(3, 10, 18, .16) 0%,
+      rgba(3, 10, 18, .18) 0%,
       rgba(3, 10, 18, .72) 100%
     ) !important;
 }
 
-/* No dejar otra capa encima */
-.page section[data-dark-overlay]::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* Todo el contenido arriba */
-.page section[data-dark-overlay] > *:not(.darkBandImage):not(.finalCtaImage):not(.darkBandVideoLayer):not(.finalCtaVideoLayer) {
+/* Contenido siempre por encima del oscurecido */
+.page .services > *,
+.page .darkBand > *,
+.page .finalCta > *,
+.page section[data-across-final-cta="true"] > *,
+.page section[data-sector-final-cta="true"] > *,
+.page section[data-energy-services-bg="true"] > *,
+.page section[data-energy-final-video="true"] > * {
   position: relative !important;
   z-index: 2 !important;
 }
 
-/* Cards sobre imagen oscura */
-.page section[data-dark-overlay="services"] article,
-.page section[data-dark-overlay="darkBand"] article {
+/* Videos o imágenes de fondo quedan debajo del overlay */
+.page .darkBandVideoLayer,
+.page .darkBandVideo,
+.page .finalCtaVideoLayer,
+.page .finalCtaVideo {
+  z-index: 0 !important;
+}
+
+/* Evita capas sólidas encima de imagen/video */
+.page .services::after,
+.page .darkBand::after,
+.page .finalCta::after,
+.page section[data-across-final-cta="true"]::after,
+.page section[data-sector-final-cta="true"]::after,
+.page section[data-energy-services-bg="true"]::after,
+.page section[data-energy-final-video="true"]::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Textos en secciones oscuras: marfil */
+.page .services h2,
+.page .services h3,
+.page .darkBand h2,
+.page .darkBand h3,
+.page .finalCta h2,
+.page .finalCta h3,
+.page section[data-across-final-cta="true"] h2,
+.page section[data-across-final-cta="true"] h3,
+.page section[data-sector-final-cta="true"] h2,
+.page section[data-sector-final-cta="true"] h3 {
+  color: #f4efe5 !important;
+  -webkit-text-fill-color: #f4efe5 !important;
+}
+
+.page .services p,
+.page .darkBand p,
+.page .finalCta p,
+.page section[data-across-final-cta="true"] p,
+.page section[data-sector-final-cta="true"] p {
+  color: rgba(244, 239, 229, .78) !important;
+  -webkit-text-fill-color: rgba(244, 239, 229, .78) !important;
+}
+
+/* Eyebrow dorado */
+.page .services .eyebrow,
+.page .darkBand .eyebrow,
+.page .finalCta .eyebrow,
+.page .services [class*="eyebrow"],
+.page .darkBand [class*="eyebrow"],
+.page .finalCta [class*="eyebrow"],
+.page section[data-across-final-cta="true"] [class*="eyebrow"],
+.page section[data-sector-final-cta="true"] [class*="eyebrow"] {
+  color: #c7a96b !important;
+  -webkit-text-fill-color: #c7a96b !important;
+}
+
+/* Cards internas sobre imagen oscura */
+.page .services article,
+.page .darkBand article {
   background: rgba(3, 10, 18, .34) !important;
   border-color: rgba(244, 239, 229, .16) !important;
   backdrop-filter: blur(2px) !important;
 }
 
-/* Texto marfil en secciones oscuras */
-.page section[data-dark-overlay] h2,
-.page section[data-dark-overlay] h3,
-.page section[data-dark-overlay] strong {
-  color: #f4efe5 !important;
-  -webkit-text-fill-color: #f4efe5 !important;
-}
-
-.page section[data-dark-overlay] p,
-.page section[data-dark-overlay] span,
-.page section[data-dark-overlay] small {
-  color: rgba(244, 239, 229, .78) !important;
-  -webkit-text-fill-color: rgba(244, 239, 229, .78) !important;
-}
-
-.page section[data-dark-overlay] .eyebrow,
-.page section[data-dark-overlay] [class*="eyebrow"] {
-  color: #c7a96b !important;
-  -webkit-text-fill-color: #c7a96b !important;
-}
-
 /* Iconos */
-.page section[data-dark-overlay] i {
+.page .services i,
+.page .darkBand i {
   border-color: rgba(118, 188, 215, .38) !important;
   background: rgba(18, 63, 89, .30) !important;
   color: #76bcd7 !important;
 }
 
-.page section[data-dark-overlay] svg {
+.page .services svg,
+.page .darkBand svg {
   stroke: #76bcd7 !important;
 }
 
-/* Mobile: mismo tono, más vertical */
+/* Mobile: mantener el mismo tono cuando la sección aparezca */
 @media (max-width: 900px) {
-  .page section[data-dark-overlay]::before {
+  .page .services::before,
+  .page .darkBand::before,
+  .page .finalCta::before,
+  .page section[data-across-final-cta="true"]::before,
+  .page section[data-sector-final-cta="true"]::before,
+  .page section[data-energy-services-bg="true"]::before,
+  .page section[data-energy-final-video="true"]::before {
     background:
       linear-gradient(
         180deg,
-        rgba(3, 10, 18, .88) 0%,
+        rgba(3, 10, 18, .86) 0%,
         rgba(5, 18, 31, .76) 48%,
-        rgba(3, 10, 18, .90) 100%
+        rgba(3, 10, 18, .88) 100%
       ) !important;
   }
 }

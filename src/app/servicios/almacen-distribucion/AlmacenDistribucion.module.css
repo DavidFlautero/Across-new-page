@@ -8589,4 +8589,133 @@
   }
 }
 
+/* =====================================================
+   ZZZ DARK OVERLAY EXACT SECTIONS FINAL
+   Overlay unificado SOLO para secciones marcadas:
+   services / darkBand / finalCta.
+   No toca hero ni overview.
+   ===================================================== */
+
+.page section[data-dark-overlay="services"],
+.page section[data-dark-overlay="darkBand"],
+.page section[data-dark-overlay="finalCta"] {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background-color: #07111d !important;
+}
+
+/* Capa de imagen/video siempre debajo */
+.page section[data-dark-overlay] .darkBandImage,
+.page section[data-dark-overlay] .darkBandImage img,
+.page section[data-dark-overlay] .finalCtaImage,
+.page section[data-dark-overlay] .finalCtaImage img,
+.page section[data-dark-overlay] .darkBandVideoLayer,
+.page section[data-dark-overlay] .finalCtaVideoLayer {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.page section[data-dark-overlay] .darkBandImage img,
+.page section[data-dark-overlay] .finalCtaImage img,
+.page section[data-dark-overlay] .darkBandVideo,
+.page section[data-dark-overlay] .finalCtaVideo {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  display: block !important;
+}
+
+/* Overlay exacto: como la sección buena de consumo/distribución */
+.page section[data-dark-overlay]::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  display: block !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 10, 18, .94) 0%,
+      rgba(3, 10, 18, .88) 34%,
+      rgba(5, 18, 31, .68) 66%,
+      rgba(7, 21, 34, .46) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 10, 18, .16) 0%,
+      rgba(3, 10, 18, .72) 100%
+    ) !important;
+}
+
+/* No dejar otra capa encima */
+.page section[data-dark-overlay]::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Todo el contenido arriba */
+.page section[data-dark-overlay] > *:not(.darkBandImage):not(.finalCtaImage):not(.darkBandVideoLayer):not(.finalCtaVideoLayer) {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Cards sobre imagen oscura */
+.page section[data-dark-overlay="services"] article,
+.page section[data-dark-overlay="darkBand"] article {
+  background: rgba(3, 10, 18, .34) !important;
+  border-color: rgba(244, 239, 229, .16) !important;
+  backdrop-filter: blur(2px) !important;
+}
+
+/* Texto marfil en secciones oscuras */
+.page section[data-dark-overlay] h2,
+.page section[data-dark-overlay] h3,
+.page section[data-dark-overlay] strong {
+  color: #f4efe5 !important;
+  -webkit-text-fill-color: #f4efe5 !important;
+}
+
+.page section[data-dark-overlay] p,
+.page section[data-dark-overlay] span,
+.page section[data-dark-overlay] small {
+  color: rgba(244, 239, 229, .78) !important;
+  -webkit-text-fill-color: rgba(244, 239, 229, .78) !important;
+}
+
+.page section[data-dark-overlay] .eyebrow,
+.page section[data-dark-overlay] [class*="eyebrow"] {
+  color: #c7a96b !important;
+  -webkit-text-fill-color: #c7a96b !important;
+}
+
+/* Iconos */
+.page section[data-dark-overlay] i {
+  border-color: rgba(118, 188, 215, .38) !important;
+  background: rgba(18, 63, 89, .30) !important;
+  color: #76bcd7 !important;
+}
+
+.page section[data-dark-overlay] svg {
+  stroke: #76bcd7 !important;
+}
+
+/* Mobile: mismo tono, más vertical */
+@media (max-width: 900px) {
+  .page section[data-dark-overlay]::before {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(3, 10, 18, .88) 0%,
+        rgba(5, 18, 31, .76) 48%,
+        rgba(3, 10, 18, .90) 100%
+      ) !important;
+  }
+}
+
 

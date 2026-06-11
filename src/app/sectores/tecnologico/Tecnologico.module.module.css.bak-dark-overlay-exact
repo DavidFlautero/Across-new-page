@@ -61,7 +61,7 @@
 .eyebrow {
   display: inline-flex;
   margin-bottom: 1rem;
-  color: #173247;
+  color: #123f59;
   font-size: .78rem;
   font-weight: 950;
   letter-spacing: .16em;
@@ -111,9 +111,9 @@
 .actions a:first-child,
 .finalActions a:first-child,
 .overviewCopy a {
-  background: #173247;
+  background: #123f59;
   color: #fff;
-  box-shadow: 0 18px 42px rgba(23, 50, 71, .28);
+  box-shadow: 0 18px 42px rgba(18, 63, 89, .28);
 }
 
 .actions a:first-child::after,
@@ -144,7 +144,7 @@
 .operationCard > span {
   display: inline-flex;
   margin-bottom: 1rem;
-  color: #173247;
+  color: #123f59;
   font-size: .7rem;
   font-weight: 950;
   letter-spacing: .12em;
@@ -195,7 +195,7 @@
 }
 
 .operationCard b {
-  background: #173247;
+  background: #123f59;
   color: #fff;
 }
 
@@ -231,8 +231,8 @@
   place-items: center;
   width: 36px;
   height: 36px;
-  color: #173247;
-  border: 1px solid rgba(23, 50, 71, .55);
+  color: #123f59;
+  border: 1px solid rgba(18, 63, 89, .55);
   border-radius: 999px;
   font-style: normal;
   font-weight: 900;
@@ -309,8 +309,8 @@
   width: 48px;
   height: 48px;
   margin-bottom: 1.1rem;
-  color: #173247;
-  border: 1px solid rgba(23, 50, 71, .5);
+  color: #123f59;
+  border: 1px solid rgba(18, 63, 89, .5);
   border-radius: 999px;
   font-style: normal;
   font-size: 1.3rem;
@@ -425,10 +425,10 @@
   height: 56px;
   margin-bottom: 1rem;
   border-radius: 999px;
-  background: #173247;
+  background: #123f59;
   color: #fff;
   font-weight: 950;
-  box-shadow: 0 14px 38px rgba(23, 50, 71, .24);
+  box-shadow: 0 14px 38px rgba(18, 63, 89, .24);
 }
 
 .darkBand {
@@ -491,7 +491,7 @@
 
 .stats strong {
   display: block;
-  color: #173247;
+  color: #123f59;
   text-transform: uppercase;
   font-size: .86rem;
   line-height: 1.15;
@@ -727,11 +727,11 @@
 .pillars i,
 .serviceGrid i,
 .useCaseGrid i {
-  background: rgba(23, 50, 71, .035);
+  background: rgba(18, 63, 89, .035);
 }
 
 .trustBar i {
-  background: rgba(23, 50, 71, .06);
+  background: rgba(18, 63, 89, .06);
 }
 
 .processGrid i {
@@ -799,7 +799,7 @@
     width: 28px;
     height: 28px;
     margin: 0 0 .45rem;
-    color: #173247;
+    color: #123f59;
   }
 
   .processGrid article {
@@ -836,7 +836,7 @@
         circle at 72% 42%,
         rgba(255, 190, 118, .34) 0%,
         rgba(255, 120, 70, .16) 18%,
-        rgba(23, 50, 71, .10) 32%,
+        rgba(18, 63, 89, .10) 32%,
         transparent 52%
       ),
       radial-gradient(
@@ -870,7 +870,7 @@
     border-radius: 999px !important;
     background:
       radial-gradient(circle, rgba(255, 255, 255, .20), transparent 26%),
-      radial-gradient(circle, rgba(23, 50, 71, .16), transparent 58%) !important;
+      radial-gradient(circle, rgba(18, 63, 89, .16), transparent 58%) !important;
     filter: blur(28px) !important;
     opacity: .72 !important;
     z-index: -1 !important;
@@ -900,7 +900,7 @@
   }
 
   .eyebrow {
-    color: #173247 !important;
+    color: #123f59 !important;
     margin-bottom: 1rem !important;
     font-size: .76rem !important;
     letter-spacing: .2em !important;
@@ -916,7 +916,7 @@
 
   .heroContent h1::after {
     content: "." !important;
-    color: #173247 !important;
+    color: #123f59 !important;
   }
 
   .heroContent p {
@@ -980,7 +980,7 @@
         circle at 70% 42%,
         rgba(255, 196, 120, .38) 0%,
         rgba(255, 120, 70, .18) 18%,
-        rgba(23, 50, 71, .10) 32%,
+        rgba(18, 63, 89, .10) 32%,
         transparent 54%
       ),
       radial-gradient(
@@ -1026,7 +1026,7 @@
       radial-gradient(
         circle at 72% 46%,
         rgba(255, 178, 96, .26) 0%,
-        rgba(23, 50, 71, .08) 28%,
+        rgba(18, 63, 89, .08) 28%,
         transparent 52%
       ),
       linear-gradient(
@@ -1287,7 +1287,7 @@
   transform: translateX(-50%) !important;
   padding: clamp(4rem, 6vw, 6rem) max(24px, calc((100vw - 1180px) / 2)) !important;
   background:
-    radial-gradient(circle at 78% 18%, rgba(23, 50, 71, .14), transparent 28rem),
+    radial-gradient(circle at 78% 18%, rgba(18, 63, 89, .14), transparent 28rem),
     linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
   color: #fff !important;
 }
@@ -1304,7 +1304,7 @@
 }
 
 .services .eyebrow {
-  color: #173247 !important;
+  color: #123f59 !important;
 }
 
 /* Cards de servicios oscuras, no cajitas blancas */
@@ -1331,9 +1331,9 @@
   width: 46px !important;
   height: 46px !important;
   margin-bottom: 1rem !important;
-  color: #173247 !important;
-  background: rgba(23, 50, 71, .07) !important;
-  border: 1px solid rgba(23, 50, 71, .32) !important;
+  color: #123f59 !important;
+  background: rgba(18, 63, 89, .07) !important;
+  border: 1px solid rgba(18, 63, 89, .32) !important;
 }
 
 .serviceGrid i svg {
@@ -1368,7 +1368,7 @@
 
 .darkBandContent {
   background:
-    radial-gradient(circle at 78% 18%, rgba(23, 50, 71, .12), transparent 24rem),
+    radial-gradient(circle at 78% 18%, rgba(18, 63, 89, .12), transparent 24rem),
     #050609 !important;
 }
 
@@ -1443,7 +1443,7 @@
   transform: translateX(-50%) !important;
   padding: clamp(4rem, 6vw, 6rem) max(24px, calc((100vw - 1180px) / 2)) !important;
   background:
-    radial-gradient(circle at 78% 18%, rgba(23, 50, 71, .14), transparent 28rem),
+    radial-gradient(circle at 78% 18%, rgba(18, 63, 89, .14), transparent 28rem),
     linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
   color: #fff !important;
 }
@@ -1460,7 +1460,7 @@
 }
 
 .services .eyebrow {
-  color: #173247 !important;
+  color: #123f59 !important;
 }
 
 /* Cards de servicios oscuras, no cajitas blancas */
@@ -1487,9 +1487,9 @@
   width: 46px !important;
   height: 46px !important;
   margin-bottom: 1rem !important;
-  color: #173247 !important;
-  background: rgba(23, 50, 71, .07) !important;
-  border: 1px solid rgba(23, 50, 71, .32) !important;
+  color: #123f59 !important;
+  background: rgba(18, 63, 89, .07) !important;
+  border: 1px solid rgba(18, 63, 89, .32) !important;
 }
 
 .serviceGrid i svg {
@@ -1524,7 +1524,7 @@
 
 .darkBandContent {
   background:
-    radial-gradient(circle at 78% 18%, rgba(23, 50, 71, .12), transparent 24rem),
+    radial-gradient(circle at 78% 18%, rgba(18, 63, 89, .12), transparent 24rem),
     #050609 !important;
 }
 
@@ -1705,7 +1705,7 @@
     margin-bottom: .45rem !important;
     font-size: .66rem !important;
     letter-spacing: .22em !important;
-    color: #173247 !important;
+    color: #123f59 !important;
   }
 
   .process .sectionHead h2 {
@@ -1757,7 +1757,7 @@
     display: grid !important;
     place-items: center !important;
     border-radius: 999px !important;
-    background: #173247 !important;
+    background: #123f59 !important;
     color: #fff !important;
     font-size: .82rem !important;
     font-weight: 950 !important;
@@ -1886,7 +1886,7 @@
   justify-content: center !important;
   padding: clamp(3rem, 5vw, 5rem) max(36px, 7vw) !important;
   background:
-    radial-gradient(circle at 86% 18%, rgba(23, 50, 71, .12), transparent 24rem),
+    radial-gradient(circle at 86% 18%, rgba(18, 63, 89, .12), transparent 24rem),
     linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
 }
 
@@ -1926,7 +1926,7 @@
 }
 
 .stats strong {
-  color: #173247 !important;
+  color: #123f59 !important;
   font-size: .82rem !important;
   letter-spacing: .12em !important;
 }
@@ -1986,7 +1986,7 @@
 }
 
 .finalActions a:first-child {
-  background: #173247 !important;
+  background: #123f59 !important;
   color: #fff !important;
 }
 
@@ -2087,7 +2087,7 @@
   position: relative !important;
   overflow: hidden !important;
   background:
-    radial-gradient(circle at 82% 28%, rgba(23, 50, 71, .10), transparent 26rem),
+    radial-gradient(circle at 82% 28%, rgba(18, 63, 89, .10), transparent 26rem),
     linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
   color: #fff !important;
   border-top: 1px solid rgba(255,255,255,.08) !important;
@@ -2158,7 +2158,7 @@
 
 .stats strong {
   display: block !important;
-  color: #173247 !important;
+  color: #123f59 !important;
   font-size: .76rem !important;
   line-height: 1.12 !important;
   font-weight: 950 !important;
@@ -2198,9 +2198,9 @@
 }
 
 .darkBandActions a:first-child {
-  background: #173247 !important;
+  background: #123f59 !important;
   color: #fff !important;
-  box-shadow: 0 16px 36px rgba(23, 50, 71, .22) !important;
+  box-shadow: 0 16px 36px rgba(18, 63, 89, .22) !important;
 }
 
 .darkBandActions a:first-child::after {
@@ -2293,7 +2293,7 @@
   position: relative !important;
   overflow: hidden !important;
   background:
-    radial-gradient(circle at 82% 28%, rgba(23, 50, 71, .10), transparent 26rem),
+    radial-gradient(circle at 82% 28%, rgba(18, 63, 89, .10), transparent 26rem),
     linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
   color: #fff !important;
   border-top: 1px solid rgba(255,255,255,.08) !important;
@@ -2364,7 +2364,7 @@
 
 .stats strong {
   display: block !important;
-  color: #173247 !important;
+  color: #123f59 !important;
   font-size: .76rem !important;
   line-height: 1.12 !important;
   font-weight: 950 !important;
@@ -2404,9 +2404,9 @@
 }
 
 .darkBandActions a:first-child {
-  background: #173247 !important;
+  background: #123f59 !important;
   color: #fff !important;
-  box-shadow: 0 16px 36px rgba(23, 50, 71, .22) !important;
+  box-shadow: 0 16px 36px rgba(18, 63, 89, .22) !important;
 }
 
 .darkBandActions a:first-child::after {
@@ -2558,7 +2558,7 @@
 }
 
 .darkBandActions a:first-child {
-  background: #173247 !important;
+  background: #123f59 !important;
   color: #fff !important;
 }
 
@@ -2604,7 +2604,7 @@
 /* === FINAL CTA BALANCED: TITLE + COPY + ACTION CARD === */
 .darkBand {
   background:
-    radial-gradient(circle at 84% 24%, rgba(23, 50, 71, .12), transparent 24rem),
+    radial-gradient(circle at 84% 24%, rgba(18, 63, 89, .12), transparent 24rem),
     linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
 }
 
@@ -2627,8 +2627,8 @@
   width: 3px !important;
   height: 68% !important;
   transform: translateY(-50%) !important;
-  background: #173247 !important;
-  box-shadow: 0 0 24px rgba(23,50,71,.28) !important;
+  background: #123f59 !important;
+  box-shadow: 0 0 24px rgba(18, 63, 89, .28) !important;
 }
 
 .darkBandContent h2 {
@@ -2672,7 +2672,7 @@
 }
 
 .darkBand .stats strong {
-  color: #173247 !important;
+  color: #123f59 !important;
   font-size: .72rem !important;
   letter-spacing: .14em !important;
 }
@@ -2750,7 +2750,7 @@
 .services {
   position: relative !important;
   background:
-    radial-gradient(circle at 18% 20%, rgba(23, 50, 71, .14), transparent 24rem),
+    radial-gradient(circle at 18% 20%, rgba(18, 63, 89, .14), transparent 24rem),
     radial-gradient(circle at 92% 72%, rgba(255, 255, 255, .055), transparent 26rem),
     linear-gradient(180deg, #08090e 0%, #050609 100%) !important;
   overflow: hidden !important;
@@ -2805,16 +2805,16 @@
   position: absolute !important;
   right: 1.25rem !important;
   bottom: 1.05rem !important;
-  color: #173247 !important;
+  color: #123f59 !important;
   font-size: 1.1rem !important;
   opacity: .85 !important;
 }
 
 .serviceGrid article:hover {
   transform: translateY(-4px) !important;
-  border-color: rgba(23,50,71,.45) !important;
+  border-color: rgba(18, 63, 89, .45) !important;
   background:
-    linear-gradient(145deg, rgba(23,50,71,.12), rgba(255,255,255,.035)) !important;
+    linear-gradient(145deg, rgba(18, 63, 89, .12), rgba(255,255,255,.035)) !important;
 }
 
 .serviceGrid i {
@@ -2839,7 +2839,7 @@
 .darkBand {
   position: relative !important;
   background:
-    radial-gradient(circle at 82% 28%, rgba(23, 50, 71, .16), transparent 22rem),
+    radial-gradient(circle at 82% 28%, rgba(18, 63, 89, .16), transparent 22rem),
     radial-gradient(circle at 8% 80%, rgba(255,255,255,.045), transparent 20rem),
     linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
   overflow: hidden !important;
@@ -2962,8 +2962,8 @@
       rgba(5, 6, 9, .78) 62%,
       rgba(5, 6, 9, .55) 100%
     ),
-    radial-gradient(circle at 18% 18%, rgba(23, 50, 71, .16), transparent 24rem),
-    url("/images/cargaaerea.png") !important;
+    radial-gradient(circle at 18% 18%, rgba(18, 63, 89, .16), transparent 24rem),
+    url("/images/sectores/tecnologico.png") !important;
   background-size: cover !important;
   background-position: center 48% !important;
   background-repeat: no-repeat !important;
@@ -3030,16 +3030,16 @@
 
 .serviceGrid article:hover {
   transform: translateY(-4px) !important;
-  border-color: rgba(23,50,71,.55) !important;
+  border-color: rgba(18, 63, 89, .55) !important;
   background:
-    linear-gradient(145deg, rgba(23,50,71,.16), rgba(10, 12, 18, .58)) !important;
+    linear-gradient(145deg, rgba(18, 63, 89, .16), rgba(10, 12, 18, .58)) !important;
 }
 
 .serviceGrid i {
   width: 40px !important;
   height: 40px !important;
-  background: rgba(23, 50, 71, .10) !important;
-  border-color: rgba(23, 50, 71, .42) !important;
+  background: rgba(18, 63, 89, .10) !important;
+  border-color: rgba(18, 63, 89, .42) !important;
 }
 
 .serviceGrid h3 {
@@ -3064,8 +3064,8 @@
       rgba(5, 6, 9, .76) 68%,
       rgba(5, 6, 9, .42) 100%
     ),
-    radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/cargaaerea.png") !important;
+    radial-gradient(circle at 82% 30%, rgba(18, 63, 89, .14), transparent 24rem),
+    url("/images/sectores/tecnologico.png") !important;
   background-size: cover !important;
   background-position: center 55% !important;
   background-repeat: no-repeat !important;
@@ -3104,7 +3104,7 @@
   .services {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.90)),
-      url("/images/cargaaerea.png") !important;
+      url("/images/sectores/tecnologico.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3116,7 +3116,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/cargaaerea.png") !important;
+      url("/images/sectores/tecnologico.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3133,8 +3133,8 @@
       rgba(5, 6, 9, .76) 68%,
       rgba(5, 6, 9, .42) 100%
     ),
-    radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/hero/cargaAereahero.png") !important;
+    radial-gradient(circle at 82% 30%, rgba(18, 63, 89, .14), transparent 24rem),
+    url("/images/sectores/transporte-logistica-tecnologia.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3144,7 +3144,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/hero/cargaAereahero.png") !important;
+      url("/images/sectores/transporte-logistica-tecnologia.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3161,8 +3161,8 @@
       rgba(5, 6, 9, .76) 68%,
       rgba(5, 6, 9, .44) 100%
     ),
-    radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/cargaaerea1.png") !important;
+    radial-gradient(circle at 82% 30%, rgba(18, 63, 89, .14), transparent 24rem),
+    url("/images/sectores/transporte-logistica-tecnologia.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3172,7 +3172,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/cargaaerea1.png") !important;
+      url("/images/sectores/transporte-logistica-tecnologia.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3755,13 +3755,13 @@
     height: 34px !important;
     margin: 0 !important;
     border-radius: 999px !important;
-    background: #173247 !important;
+    background: #123f59 !important;
     color: #fff !important;
     display: grid !important;
     place-items: center !important;
     font-size: .78rem !important;
     font-weight: 950 !important;
-    box-shadow: 0 10px 24px rgba(23,50,71,.18) !important;
+    box-shadow: 0 10px 24px rgba(18, 63, 89, .18) !important;
   }
 
   .processGrid i {
@@ -3770,7 +3770,7 @@
     width: 24px !important;
     height: 24px !important;
     margin: 0 0 .35rem !important;
-    color: #173247 !important;
+    color: #123f59 !important;
     background: transparent !important;
     border: 0 !important;
   }
@@ -3875,8 +3875,8 @@
     width: 64px !important;
     height: 3px !important;
     transform: none !important;
-    background: #173247 !important;
-    box-shadow: 0 0 18px rgba(23, 50, 71, .28) !important;
+    background: #123f59 !important;
+    box-shadow: 0 0 18px rgba(18, 63, 89, .28) !important;
   }
 
   .darkBandContent h2 {
@@ -4042,192 +4042,6 @@
 }
 
 /* =====================================================
-   SERVICE MOBILE UNIFIED SYSTEM V3
-   Sistema mobile común para páginas de servicios.
-   - darkBand oculto en mobile
-   - services y finalCta usan --mobile-bg
-   - si no hay imagen mobile, usa imagen desktop detectada
-   ===================================================== */
-
-@media (max-width: 760px) {
-  .page {
-    overflow-x: hidden !important;
-    background: #f4f1eb !important;
-  }
-
-  .heroImageDesktop {
-    display: none !important;
-  }
-
-  .heroImageMobile {
-    display: block !important;
-  }
-
-  .heroImage {
-    object-fit: cover !important;
-    object-position: center center !important;
-  }
-
-  .darkBand {
-    display: none !important;
-  }
-
-  .services,
-  .finalCta {
-    position: relative !important;
-    isolation: isolate !important;
-    overflow: hidden !important;
-    display: block !important;
-    grid-template-columns: none !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    margin: 0 !important;
-    transform: none !important;
-    box-sizing: border-box !important;
-    background: #050609 !important;
-    color: #fff !important;
-  }
-
-  .services {
-    padding: 3.4rem 18px 3.8rem !important;
-  }
-
-  .finalCta {
-    padding: 4rem 24px 4.2rem !important;
-  }
-
-  .services::before,
-  .finalCta::before {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 0 !important;
-    background-image: var(--mobile-bg) !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    opacity: .92 !important;
-    filter: brightness(.44) contrast(1.14) saturate(.96) !important;
-    pointer-events: none !important;
-  }
-
-  .services::after,
-  .finalCta::after {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 1 !important;
-    background:
-      radial-gradient(circle at 72% 18%, rgba(23, 50, 71, .16), transparent 20rem),
-      linear-gradient(180deg, rgba(5,6,9,.90) 0%, rgba(5,6,9,.76) 44%, rgba(5,6,9,.97) 100%) !important;
-    pointer-events: none !important;
-  }
-
-  .services > *,
-  .services .sectionHead,
-  .services .serviceGrid,
-  .serviceGrid,
-  .serviceGrid > *,
-  .operationCard,
-  .finalCta > *:not(.finalImage),
-  .finalActions {
-    position: relative !important;
-    z-index: 2 !important;
-  }
-
-  .services .sectionHead {
-    display: block !important;
-    width: 100% !important;
-    margin: 0 0 1.8rem !important;
-    padding: 0 !important;
-  }
-
-  .services .sectionHead h2,
-  .finalCta h2 {
-    max-width: 430px !important;
-    margin: 0 !important;
-    color: #fff !important;
-    font-size: clamp(2rem, 9.4vw, 3.05rem) !important;
-    line-height: .96 !important;
-    letter-spacing: -.055em !important;
-  }
-
-  .services .eyebrow {
-    color: #173247 !important;
-  }
-
-  .serviceGrid {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: .85rem !important;
-    width: 100% !important;
-  }
-
-  .operationCard,
-  .serviceGrid article {
-    width: 100% !important;
-    background: rgba(7, 9, 14, .72) !important;
-    border: 1px solid rgba(255,255,255,.14) !important;
-    backdrop-filter: blur(6px) !important;
-  }
-
-  .finalCta > div:first-child {
-    width: 100% !important;
-    max-width: 430px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    transform: none !important;
-  }
-
-  .finalCta p {
-    max-width: 430px !important;
-    margin: 1rem 0 0 !important;
-    color: rgba(255,255,255,.78) !important;
-    font-size: .92rem !important;
-    line-height: 1.55 !important;
-  }
-
-  .finalActions {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: .8rem !important;
-    width: 100% !important;
-    max-width: 430px !important;
-    margin-top: 1.6rem !important;
-  }
-
-  .finalActions a {
-    width: 100% !important;
-    min-height: 48px !important;
-    border-radius: 999px !important;
-  }
-
-  .darkBandImage,
-  .finalImage {
-    display: none !important;
-  }
-}
-
-@media (max-width: 380px) {
-  .services {
-    padding: 3.1rem 14px 3.4rem !important;
-  }
-
-  .finalCta {
-    padding: 3.4rem 18px 3.7rem !important;
-  }
-
-  .services .sectionHead h2,
-  .finalCta h2 {
-    font-size: clamp(1.85rem, 9.6vw, 2.55rem) !important;
-  }
-}
-
-/* END SERVICE MOBILE UNIFIED SYSTEM V3 */
-
-
-/* =====================================================
    HERO CTA BUTTONS PILL SYSTEM V2
    Botones del hero: mismo lenguaje visual en desktop y mobile.
    ===================================================== */
@@ -4268,10 +4082,10 @@
 
 .actions a:first-child {
   color: #fff !important;
-  background: linear-gradient(135deg, #173247 0%, #c90027 100%) !important;
-  border: 1px solid rgba(23, 50, 71, .9) !important;
+  background: linear-gradient(135deg, #123f59 0%, #123f59 100%) !important;
+  border: 1px solid rgba(18, 63, 89, .9) !important;
   box-shadow:
-    0 18px 44px rgba(23, 50, 71, .27),
+    0 18px 44px rgba(18, 63, 89, .27),
     inset 0 1px 0 rgba(255,255,255,.18) !important;
 }
 
@@ -4291,7 +4105,7 @@
 
 .actions a:first-child:hover {
   box-shadow:
-    0 24px 58px rgba(23, 50, 71, .34),
+    0 24px 58px rgba(18, 63, 89, .34),
     inset 0 1px 0 rgba(255,255,255,.22) !important;
 }
 
@@ -4328,2685 +4142,697 @@
 /* END HERO CTA BUTTONS PILL SYSTEM V2 */
 
 /* =====================================================
-   INTERNAL SERVICE HERO — GLOBAL PREMIUM LIGHT SYSTEM
-   Unifica heroes internos con estética clara/premium de Across.
-   ===================================================== */
-
-.hero {
-  position: relative !important;
-  isolation: isolate !important;
-  overflow: hidden !important;
-  min-height: 84vh !important;
-  background: #eef2f5 !important;
-}
-
-/* Imagen base: clara, premium, sin zoom artificial */
-.heroImage {
-  position: absolute !important;
-  inset: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center right !important;
-  transform: none !important;
-  scale: 1 !important;
-  filter:
-    brightness(1.10)
-    contrast(1.02)
-    saturate(1.03) !important;
-  z-index: -3 !important;
-}
-
-/* Desktop: sujeto hacia la derecha, aire para texto a la izquierda */
-.heroImageDesktop {
-  display: block !important;
-  object-position: center right !important;
-}
-
-.heroImageMobile {
-  display: none !important;
-}
-
-/* Overlay más claro que antes: lectura sin matar la imagen */
-.heroOverlay {
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -2 !important;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5, 11, 18, .66) 0%,
-      rgba(7, 17, 29, .50) 34%,
-      rgba(7, 17, 29, .22) 63%,
-      rgba(255, 255, 255, .04) 100%
-    ) !important;
-}
-
-/* Capa final estilo hero principal: profundidad, no oscuridad pesada */
-.hero::after {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -1 !important;
-  pointer-events: none !important;
-  background:
-    radial-gradient(circle at 78% 18%, rgba(205,187,141,.18), transparent 24rem),
-    linear-gradient(180deg, rgba(255,255,255,.04) 0%, rgba(5,11,18,.10) 72%, rgba(5,11,18,.20) 100%) !important;
-}
-
-/* Evita nieblas oscuras heredadas de parches viejos */
-.hero::before {
-  opacity: .35 !important;
-}
-
-.heroInner {
-  position: relative !important;
-  z-index: 2 !important;
-  min-height: 84vh !important;
-  display: flex !important;
-  align-items: center !important;
-  padding-top: clamp(7rem, 10vh, 10rem) !important;
-  padding-bottom: clamp(4rem, 8vh, 7rem) !important;
-}
-
-.heroContent {
-  max-width: 760px !important;
-}
-
-.heroContent h1 {
-  color: #ffffff !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-weight: 700 !important;
-  letter-spacing: -.055em !important;
-  line-height: .96 !important;
-  text-shadow: 0 18px 42px rgba(0,0,0,.26) !important;
-}
-
-.heroContent p {
-  color: rgba(255,255,255,.82) !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-weight: 400 !important;
-  line-height: 1.7 !important;
-  text-shadow: 0 10px 28px rgba(0,0,0,.20) !important;
-}
-
-.eyebrow {
-  color: #d6c08d !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-weight: 800 !important;
-  letter-spacing: .24em !important;
-  text-shadow: 0 8px 20px rgba(0,0,0,.20) !important;
-}
-
-/* Mobile: imagen sin zoom exagerado, overlay más suave y texto arriba */
-@media (max-width: 760px) {
-  .hero {
-    min-height: 88vh !important;
-    background: #eef2f5 !important;
-  }
-
-  .heroImageDesktop {
-    display: none !important;
-  }
-
-  .heroImageMobile {
-    display: block !important;
-  }
-
-  .heroImage {
-    object-fit: cover !important;
-    object-position: 64% center !important;
-    transform: none !important;
-    scale: 1 !important;
-    filter:
-      brightness(1.12)
-      contrast(1.01)
-      saturate(1.02) !important;
-  }
-
-  .heroOverlay {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(5, 11, 18, .56) 0%,
-        rgba(7, 17, 29, .42) 35%,
-        rgba(7, 17, 29, .18) 64%,
-        rgba(5, 11, 18, .30) 100%
-      ) !important;
-  }
-
-  .hero::after {
-    background:
-      radial-gradient(circle at 78% 26%, rgba(205,187,141,.12), transparent 16rem),
-      linear-gradient(180deg, rgba(255,255,255,.035) 0%, rgba(5,11,18,.10) 68%, rgba(5,11,18,.22) 100%) !important;
-  }
-
-  .heroInner {
-    min-height: 88vh !important;
-    align-items: flex-start !important;
-    padding-top: calc(env(safe-area-inset-top) + 8.8rem) !important;
-    padding-bottom: 4.6rem !important;
-  }
-
-  .heroContent {
-    max-width: 94% !important;
-  }
-
-  .heroContent h1 {
-    font-size: clamp(2.35rem, 11.4vw, 4.15rem) !important;
-    line-height: .96 !important;
-    letter-spacing: -.058em !important;
-  }
-
-  .heroContent p {
-    max-width: 92% !important;
-    font-size: clamp(.96rem, 4vw, 1.15rem) !important;
-    line-height: 1.62 !important;
-  }
-
-  .eyebrow {
-    font-size: .68rem !important;
-    letter-spacing: .22em !important;
-  }
-}
-
-/* iPhone SE / pantallas chicas */
-@media (max-width: 390px) {
-  .heroImage {
-    object-position: 66% center !important;
-  }
-
-  .heroInner {
-    padding-top: calc(env(safe-area-inset-top) + 8.2rem) !important;
-  }
-
-  .heroContent h1 {
-    font-size: clamp(2.12rem, 10.8vw, 3.35rem) !important;
-  }
-
-  .heroContent p {
-    font-size: .94rem !important;
-  }
-}
-
-/* =====================================================
-   MOBILE HERO NO ZOOM FINAL
-   Muestra la imagen mobile completa, con distancia original.
+   SECTORES OVERVIEW REAL MOBILE FIX
+   Aplica imagen detrás SOLO a overview en mobile.
+   No depende de services ni finalCta.
    ===================================================== */
 
 @media (max-width: 760px) {
-  .hero {
-    background: #07111d !important;
-  }
+  .page .overviewMobileBg {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
 
-  .heroImageMobile {
     display: block !important;
-    object-fit: contain !important;
-    object-position: center center !important;
-    width: 100% !important;
-    height: 100% !important;
-    transform: none !important;
-    scale: 1 !important;
-    background: #07111d !important;
-  }
-
-  .heroImage {
-    object-fit: contain !important;
-    object-position: center center !important;
-    transform: none !important;
-    scale: 1 !important;
-  }
-
-  .heroOverlay {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(5, 11, 18, .58) 0%,
-        rgba(7, 17, 29, .36) 36%,
-        rgba(7, 17, 29, .16) 62%,
-        rgba(5, 11, 18, .34) 100%
-      ) !important;
-  }
-}
-
-@media (max-width: 390px) {
-  .heroImage,
-  .heroImageMobile {
-    object-fit: contain !important;
-    object-position: center center !important;
-    transform: none !important;
-    scale: 1 !important;
-  }
-}
-
-/* =====================================================
-   MOBILE HERO NO ZOOM FINAL
-   Muestra la imagen mobile completa, con distancia original.
-   ===================================================== */
-
-@media (max-width: 760px) {
-  .hero {
-    background: #07111d !important;
-  }
-
-  .heroImageMobile {
-    display: block !important;
-    object-fit: contain !important;
-    object-position: center center !important;
-    width: 100% !important;
-    height: 100% !important;
-    transform: none !important;
-    scale: 1 !important;
-    background: #07111d !important;
-  }
-
-  .heroImage {
-    object-fit: contain !important;
-    object-position: center center !important;
-    transform: none !important;
-    scale: 1 !important;
-  }
-
-  .heroOverlay {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(5, 11, 18, .58) 0%,
-        rgba(7, 17, 29, .36) 36%,
-        rgba(7, 17, 29, .16) 62%,
-        rgba(5, 11, 18, .34) 100%
-      ) !important;
-  }
-}
-
-@media (max-width: 390px) {
-  .heroImage,
-  .heroImageMobile {
-    object-fit: contain !important;
-    object-position: center center !important;
-    transform: none !important;
-    scale: 1 !important;
-  }
-}
-
-/* =====================================================
-   SERVICE HERO FINAL SYSTEM — MATCH HOME HERO
-   Misma estética para todos los heroes internos.
-   ===================================================== */
-
-.hero {
-  position: relative !important;
-  width: 100% !important;
-  min-height: 92vh !important;
-  overflow: hidden !important;
-  isolation: isolate !important;
-  background: #07111d !important;
-  margin: 0 !important;
-}
-
-/* Imagen hero */
-.heroImage {
-  position: absolute !important;
-  inset: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  min-width: 100% !important;
-  min-height: 100% !important;
-  object-fit: cover !important;
-  object-position: center center !important;
-  transform: none !important;
-  scale: 1 !important;
-  filter:
-    brightness(1.08)
-    contrast(1.03)
-    saturate(1.04) !important;
-  z-index: -4 !important;
-}
-
-.heroImageDesktop {
-  display: block !important;
-  object-fit: cover !important;
-  object-position: center right !important;
-}
-
-.heroImageMobile {
-  display: none !important;
-}
-
-/* Overlay azul tinta, no negro pesado */
-.heroOverlay {
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -3 !important;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5, 11, 18, .74) 0%,
-      rgba(7, 17, 29, .58) 36%,
-      rgba(7, 17, 29, .26) 66%,
-      rgba(7, 17, 29, .08) 100%
-    ) !important;
-}
-
-/* Luz premium champagne */
-.hero::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -2 !important;
-  pointer-events: none !important;
-  opacity: 1 !important;
-  background:
-    radial-gradient(circle at 78% 20%, rgba(214, 192, 141, .17), transparent 25rem),
-    radial-gradient(circle at 10% 18%, rgba(255,255,255,.07), transparent 20rem) !important;
-}
-
-/* Profundidad inferior */
-.hero::after {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -1 !important;
-  pointer-events: none !important;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,.02) 0%,
-      rgba(5,11,18,.04) 46%,
-      rgba(5,11,18,.28) 100%
-    ) !important;
-}
-
-.heroInner {
-  position: relative !important;
-  z-index: 2 !important;
-  width: 100% !important;
-  min-height: 92vh !important;
-  display: flex !important;
-  align-items: center !important;
-  padding-top: clamp(7.2rem, 11vh, 10rem) !important;
-  padding-bottom: clamp(4rem, 8vh, 7rem) !important;
-}
-
-.heroContent {
-  max-width: 780px !important;
-}
-
-.eyebrow {
-  display: block !important;
-  margin-bottom: 1.05rem !important;
-  color: #d6c08d !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: .72rem !important;
-  font-weight: 800 !important;
-  line-height: 1.15 !important;
-  letter-spacing: .26em !important;
-  text-transform: uppercase !important;
-  text-shadow: 0 10px 26px rgba(0,0,0,.22) !important;
-}
-
-.heroContent h1 {
-  max-width: 860px !important;
-  margin: 0 !important;
-  color: #ffffff !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: clamp(4.4rem, 7.6vw, 8.8rem) !important;
-  font-weight: 750 !important;
-  line-height: .90 !important;
-  letter-spacing: -.07em !important;
-  text-wrap: balance !important;
-  text-shadow:
-    0 22px 54px rgba(0,0,0,.34),
-    0 2px 8px rgba(0,0,0,.18) !important;
-}
-
-.heroContent h1::after {
-  display: none !important;
-}
-
-.heroContent p {
-  max-width: 630px !important;
-  margin-top: 1.25rem !important;
-  color: rgba(255,255,255,.84) !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: clamp(1.05rem, 1.35vw, 1.28rem) !important;
-  font-weight: 400 !important;
-  line-height: 1.72 !important;
-  text-shadow: 0 14px 34px rgba(0,0,0,.24) !important;
-}
-
-/* Botones: azul tinta, no rojo */
-.heroContent a,
-.heroContent button {
-  border-radius: 999px !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-weight: 800 !important;
-  letter-spacing: .08em !important;
-  text-transform: uppercase !important;
-  transition:
-    transform .28s cubic-bezier(.22,.61,.36,1),
-    box-shadow .28s cubic-bezier(.22,.61,.36,1),
-    background .28s ease,
-    border-color .28s ease !important;
-}
-
-.heroContent a:first-of-type {
-  background:
-    radial-gradient(circle at 18% 0%, rgba(255,255,255,.18), transparent 36%),
-    linear-gradient(135deg, #07111d 0%, #0d1c2b 46%, #173247 100%) !important;
-  color: #ffffff !important;
-  border: 1px solid rgba(214,192,141,.34) !important;
-  box-shadow:
-    0 20px 44px rgba(7,17,29,.34),
-    0 6px 18px rgba(23,50,71,.24),
-    inset 0 1px 0 rgba(255,255,255,.18) !important;
-}
-
-.heroContent a:first-of-type:hover {
-  transform: translateY(-2px) !important;
-  box-shadow:
-    0 24px 54px rgba(7,17,29,.40),
-    0 8px 22px rgba(23,50,71,.28),
-    inset 0 1px 0 rgba(255,255,255,.22) !important;
-}
-
-.heroContent a:nth-of-type(2) {
-  background: rgba(255,255,255,.16) !important;
-  color: #ffffff !important;
-  border: 1px solid rgba(255,255,255,.28) !important;
-  backdrop-filter: blur(16px) !important;
-  box-shadow:
-    0 14px 34px rgba(0,0,0,.22),
-    inset 0 1px 0 rgba(255,255,255,.18) !important;
-}
-
-/* Mobile: mismo consumo visual que home */
-@media (max-width: 760px) {
-  .hero {
-    min-height: 100svh !important;
-    height: 100svh !important;
-    padding: 0 !important;
-  }
-
-  .heroImageDesktop {
-    display: none !important;
-  }
-
-  .heroImageMobile {
-    display: block !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-  }
-
-  .heroImage {
-    object-fit: cover !important;
-    object-position: center center !important;
-    filter:
-      brightness(1.08)
-      contrast(1.03)
-      saturate(1.04) !important;
-  }
-
-  .heroOverlay {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(5, 11, 18, .42) 0%,
-        rgba(7, 17, 29, .34) 30%,
-        rgba(7, 17, 29, .25) 58%,
-        rgba(5, 11, 18, .48) 100%
-      ),
-      linear-gradient(
-        90deg,
-        rgba(5, 11, 18, .58) 0%,
-        rgba(7, 17, 29, .32) 54%,
-        rgba(7, 17, 29, .08) 100%
-      ) !important;
-  }
-
-  .heroInner {
-    min-height: 100svh !important;
-    height: 100svh !important;
-    align-items: center !important;
-    padding:
-      calc(env(safe-area-inset-top) + 6.6rem)
-      1.25rem
-      3.8rem !important;
-  }
-
-  .heroContent {
     width: 100% !important;
     max-width: 100% !important;
-  }
-
-  .eyebrow {
-    margin-bottom: .92rem !important;
-    font-size: .66rem !important;
-    letter-spacing: .22em !important;
-  }
-
-  .heroContent h1 {
-    max-width: 94% !important;
-    font-size: clamp(2.62rem, 11.6vw, 4.25rem) !important;
-    line-height: .92 !important;
-    letter-spacing: -.065em !important;
-  }
-
-  .heroContent p {
-    max-width: 92% !important;
-    margin-top: 1.05rem !important;
-    font-size: clamp(.96rem, 4vw, 1.12rem) !important;
-    line-height: 1.62 !important;
-  }
-}
-
-@media (max-width: 390px) {
-  .heroInner {
-    padding:
-      calc(env(safe-area-inset-top) + 6.25rem)
-      1.05rem
-      3.4rem !important;
-  }
-
-  .heroContent h1 {
-    font-size: clamp(2.35rem, 11.2vw, 3.65rem) !important;
-  }
-
-  .heroContent p {
-    font-size: .94rem !important;
-    line-height: 1.58 !important;
-  }
-}
-
-/* =====================================================
-   EXPORT CLASSES FOR GLOBAL HERO COMMAND BAR
-   Necesarias para que CSS Modules exporte styles.commandBar/item.
-   El estilo real lo toma globals.css.
-   ===================================================== */
-
-
-
-/* =====================================================
-   LOCAL SERVICE COMMAND BAR FIX
-   CSS real dentro del module, no depende de globals.
-   ===================================================== */
-
-
-
-
-
-
-
-/* Mobile igual a la home: abajo, compacto, sin texto encimado arriba */
-@media (max-width: 760px) {
-  .commandBar {
-    position: absolute !important;
-    left: 50% !important;
-    top: auto !important;
-    bottom: calc(env(safe-area-inset-bottom) + .82rem) !important;
-    transform: translateX(-50%) !important;
-    width: calc(100% - 1.5rem) !important;
-    min-height: 76px !important;
-    display: grid !important;
-    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-    border-radius: 22px !important;
-    background: rgba(255, 255, 255, .94) !important;
-    overflow: hidden !important;
-  }
-
-  .commandItem {
-    padding: .72rem .32rem !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    gap: 0 !important;
-  }
-
-  .commandItem span {
-    font-size: .64rem !important;
-    line-height: 1.05 !important;
-    white-space: normal !important;
-  }
-
-  .commandItem small {
-    display: none !important;
-  }
-}
-
-@media (max-width: 390px) {
-  .commandBar {
-    width: calc(100% - 1.1rem) !important;
-    min-height: 72px !important;
-  }
-
-  .commandItem span {
-    font-size: .58rem !important;
-  }
-}
-
-/* =====================================================
-   FINAL SERVICE HERO RESET — SAME RHYTHM AS HOME
-   Corrige hero revuelto: altura real, texto debajo del header,
-   CTA limpio, command bar abajo, nada de secciones metidas.
-   ===================================================== */
-
-@media (max-width: 760px) {
-  .hero {
-    position: relative !important;
-    width: 100% !important;
-    height: 100svh !important;
-    min-height: 100svh !important;
-    max-height: 100svh !important;
-    overflow: hidden !important;
-    isolation: isolate !important;
-    background: #07111d !important;
     margin: 0 !important;
-    padding: 0 !important;
+    padding: 3.4rem 18px 3.8rem !important;
+
+    background: #050609 !important;
+    color: #fff !important;
   }
 
-  .heroImageDesktop {
-    display: none !important;
-  }
-
-  .heroImageMobile {
-    display: block !important;
-  }
-
-  .heroImage,
-  .heroImageMobile {
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-    transform: none !important;
-    scale: 1 !important;
-    filter:
-      brightness(1.07)
-      contrast(1.03)
-      saturate(1.04) !important;
-    z-index: -4 !important;
-  }
-
-  .heroOverlay {
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: -3 !important;
-    background:
-      linear-gradient(
-        180deg,
-        rgba(5, 11, 18, .46) 0%,
-        rgba(7, 17, 29, .35) 32%,
-        rgba(7, 17, 29, .24) 58%,
-        rgba(5, 11, 18, .52) 100%
-      ),
-      linear-gradient(
-        90deg,
-        rgba(5, 11, 18, .58) 0%,
-        rgba(7, 17, 29, .30) 58%,
-        rgba(7, 17, 29, .08) 100%
-      ) !important;
-  }
-
-  .hero::before {
+  .page .overviewMobileBg::before {
     content: "" !important;
     position: absolute !important;
     inset: 0 !important;
-    z-index: -2 !important;
+    z-index: 0 !important;
+
+    background-image: var(--sector-overview-bg) !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+
+    opacity: .96 !important;
+    filter: brightness(.42) contrast(1.16) saturate(.96) !important;
     pointer-events: none !important;
-    background:
-      radial-gradient(circle at 78% 22%, rgba(214, 192, 141, .14), transparent 16rem),
-      radial-gradient(circle at 12% 18%, rgba(255,255,255,.06), transparent 14rem) !important;
   }
 
-  .hero::after {
+  .page .overviewMobileBg::after {
     content: "" !important;
     position: absolute !important;
     inset: 0 !important;
-    z-index: -1 !important;
-    pointer-events: none !important;
+    z-index: 1 !important;
+
     background:
-      linear-gradient(
-        180deg,
-        rgba(255,255,255,.02) 0%,
-        rgba(5,11,18,.04) 48%,
-        rgba(5,11,18,.32) 100%
-      ) !important;
+      radial-gradient(circle at 74% 18%, rgba(18, 63, 89, .16), transparent 20rem),
+      linear-gradient(180deg, rgba(5,6,9,.92) 0%, rgba(5,6,9,.76) 44%, rgba(5,6,9,.98) 100%) !important;
+    pointer-events: none !important;
   }
 
-  .heroInner {
+  .page .overviewMobileBg > *,
+  .page .overviewMobileBg .overviewCopy,
+  .page .overviewMobileBg .overviewCopy > * {
     position: relative !important;
     z-index: 2 !important;
-    width: 100% !important;
-    height: 100svh !important;
-    min-height: 100svh !important;
-    display: flex !important;
-    align-items: flex-start !important;
-    justify-content: flex-start !important;
-    padding:
-      calc(env(safe-area-inset-top) + 8.15rem)
-      1.15rem
-      8.7rem !important;
-    margin: 0 !important;
   }
 
-  .heroContent {
+  .page .overviewMobileBg .overviewCopy {
     width: 100% !important;
-    max-width: 100% !important;
+    max-width: 430px !important;
     margin: 0 !important;
     padding: 0 !important;
+    color: #fff !important;
   }
 
-  .operationCard {
-    display: none !important;
-  }
-
-  .eyebrow {
-    display: block !important;
-    margin: 0 0 .72rem !important;
-    color: #d6c08d !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: .62rem !important;
-    font-weight: 850 !important;
-    line-height: 1.16 !important;
-    letter-spacing: .20em !important;
-    text-transform: uppercase !important;
-    text-shadow: 0 10px 26px rgba(0,0,0,.24) !important;
-  }
-
-  .heroContent h1 {
-    max-width: 96% !important;
+  .page .overviewMobileBg .overviewCopy h2 {
+    max-width: 430px !important;
     margin: 0 !important;
-    color: #ffffff !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: clamp(2.18rem, 10.1vw, 3.45rem) !important;
-    font-weight: 760 !important;
-    line-height: .93 !important;
-    letter-spacing: -.065em !important;
-    text-wrap: balance !important;
-    text-shadow:
-      0 22px 54px rgba(0,0,0,.34),
-      0 2px 8px rgba(0,0,0,.18) !important;
+    color: #fff !important;
+    font-size: clamp(2rem, 9.4vw, 3.05rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.055em !important;
   }
 
-  .heroContent h1::after {
-    display: none !important;
-  }
-
-  .heroContent p {
-    max-width: 92% !important;
-    margin: .92rem 0 0 !important;
-    color: rgba(255,255,255,.84) !important;
-    font-family: Arial, Helvetica, sans-serif !important;
+  .page .overviewMobileBg .overviewCopy p {
+    max-width: 430px !important;
+    margin: 1rem 0 0 !important;
+    color: rgba(255,255,255,.78) !important;
     font-size: .92rem !important;
-    font-weight: 400 !important;
-    line-height: 1.55 !important;
-    text-shadow: 0 14px 34px rgba(0,0,0,.24) !important;
+    line-height: 1.6 !important;
   }
 
-  .actions {
-    display: flex !important;
+  .page .overviewMobileBg .overviewCopy a {
     width: 100% !important;
-    margin-top: 1.15rem !important;
-    gap: .6rem !important;
-  }
+    max-width: 430px !important;
+    min-height: 52px !important;
+    margin-top: 1.6rem !important;
+    padding: 0 1.15rem !important;
 
-  .actions a {
-    min-height: 42px !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    padding: 0 1rem !important;
+
     border-radius: 999px !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: .56rem !important;
-    font-weight: 850 !important;
-    letter-spacing: .08em !important;
+    color: #fff !important;
+    background: linear-gradient(135deg, #123f59 0%, #123f59 100%) !important;
+    border: 1px solid rgba(18, 63, 89, .9) !important;
+
+    text-decoration: none !important;
     text-transform: uppercase !important;
-    text-decoration: none !important;
-  }
-
-  .actions a:first-child {
-    width: min(100%, 245px) !important;
-    background:
-      radial-gradient(circle at 18% 0%, rgba(255,255,255,.18), transparent 36%),
-      linear-gradient(135deg, #07111d 0%, #0d1c2b 46%, #173247 100%) !important;
-    color: #ffffff !important;
-    border: 1px solid rgba(214,192,141,.34) !important;
-    box-shadow:
-      0 20px 44px rgba(7,17,29,.34),
-      0 6px 18px rgba(23,50,71,.24),
-      inset 0 1px 0 rgba(255,255,255,.18) !important;
-  }
-
-  .actions a:nth-child(2) {
-    display: none !important;
-  }
-
-  .commandBar {
-    position: absolute !important;
-    left: 50% !important;
-    top: auto !important;
-    right: auto !important;
-    bottom: calc(env(safe-area-inset-bottom) + .78rem) !important;
-    transform: translateX(-50%) !important;
-    z-index: 60 !important;
-    width: calc(100% - 1.5rem) !important;
-    height: 72px !important;
-    min-height: 72px !important;
-    display: grid !important;
-    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-    overflow: hidden !important;
-    border-radius: 20px !important;
-    background: rgba(255,255,255,.94) !important;
-    border: 1px solid rgba(255,255,255,.52) !important;
-    backdrop-filter: blur(20px) saturate(1.15) !important;
-    -webkit-backdrop-filter: blur(20px) saturate(1.15) !important;
-    box-shadow:
-      0 24px 70px rgba(5,11,18,.25),
-      inset 0 1px 0 rgba(255,255,255,.75) !important;
-  }
-
-  .commandItem {
-    min-width: 0 !important;
-    height: 100% !important;
-    padding: .62rem .22rem !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    text-decoration: none !important;
-    border-right: 1px solid rgba(16,24,32,.10) !important;
-    color: #101820 !important;
-  }
-
-  .commandItem:last-child {
-    border-right: 0 !important;
-  }
-
-  .commandItem span {
-    display: block !important;
-    color: #101820 !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: .58rem !important;
-    font-weight: 850 !important;
-    line-height: 1.05 !important;
-    letter-spacing: -.02em !important;
-  }
-
-  .commandItem small {
-    display: none !important;
+    font-size: .74rem !important;
+    font-weight: 950 !important;
+    letter-spacing: .075em !important;
   }
 }
 
-@media (max-width: 390px) {
-  .heroInner {
-    padding:
-      calc(env(safe-area-inset-top) + 7.9rem)
-      1.05rem
-      8.4rem !important;
+@media (max-width: 380px) {
+  .page .overviewMobileBg {
+    padding: 3.1rem 14px 3.4rem !important;
   }
 
-  .heroContent h1 {
-    font-size: clamp(2.02rem, 9.65vw, 3.12rem) !important;
+  .page .overviewMobileBg .overviewCopy h2 {
+    font-size: clamp(1.85rem, 9.6vw, 2.55rem) !important;
   }
 
-  .heroContent p {
-    font-size: .88rem !important;
-    line-height: 1.50 !important;
-  }
-
-  .actions a:first-child {
-    width: 225px !important;
-  }
-
-  .commandBar {
-    width: calc(100% - 1.05rem) !important;
-    height: 68px !important;
-    min-height: 68px !important;
-  }
-
-  .commandItem span {
-    font-size: .52rem !important;
+  .page .overviewMobileBg .overviewCopy a {
+    min-height: 50px !important;
+    font-size: .7rem !important;
   }
 }
+
+/* END SECTORES OVERVIEW REAL MOBILE FIX */
 
 /* =====================================================
-   SERVICE HERO MOBILE FINAL SIZE
-   Igual ritmo que la home, sin espacio reservado para menú inferior.
+   HERO IMAGE STARTS AT TOP UNDER HEADER
+   La imagen del hero empieza desde top:0.
+   El header queda encima. El padding solo mueve el texto, no la imagen.
    ===================================================== */
 
 @media (max-width: 760px) {
   .hero {
-    min-height: 100svh !important;
-    height: 100svh !important;
-    max-height: 100svh !important;
+    position: relative !important;
     overflow: hidden !important;
-  }
-
-  .heroInner {
-    min-height: 100svh !important;
-    height: 100svh !important;
-    max-height: 100svh !important;
-    align-items: flex-start !important;
-    justify-content: flex-start !important;
-
-    /* Antes tenía mucho padding-bottom por el menú que borramos */
-    padding:
-      calc(env(safe-area-inset-top) + 7.05rem)
-      1.25rem
-      2.8rem !important;
-  }
-
-  .heroContent {
-    max-width: 100% !important;
-    margin: 0 !important;
-  }
-
-  .eyebrow {
-    margin-bottom: .78rem !important;
-  }
-
-  .heroContent h1 {
-    max-width: 96% !important;
-    font-size: clamp(2.38rem, 10.7vw, 3.85rem) !important;
-    line-height: .93 !important;
-  }
-
-  .heroContent p {
-    max-width: 92% !important;
-    margin-top: .95rem !important;
-    font-size: clamp(.94rem, 3.9vw, 1.08rem) !important;
-    line-height: 1.58 !important;
-  }
-
-  .actions {
-    margin-top: 1.15rem !important;
-  }
-
-  .actions a:first-child {
-    width: 235px !important;
-    min-height: 42px !important;
-  }
-
-  .actions a:nth-child(2) {
-    display: none !important;
-  }
-
-  .operationCard,
-  .commandBar {
-    display: none !important;
-  }
-}
-
-@media (max-width: 390px) {
-  .heroInner {
-    padding:
-      calc(env(safe-area-inset-top) + 6.75rem)
-      1.05rem
-      2.5rem !important;
-  }
-
-  .heroContent h1 {
-    font-size: clamp(2.18rem, 10.2vw, 3.35rem) !important;
-  }
-
-  .heroContent p {
-    font-size: .91rem !important;
-    line-height: 1.52 !important;
-  }
-
-  .actions a:first-child {
-    width: 220px !important;
-  }
-}
-
-/* =====================================================
-   SERVICE HERO TRUE FIRST VIEWPORT
-   El hero completo debe verse al entrar, sin scroll interno.
-   ===================================================== */
-
-@media (max-width: 760px) {
-  .hero {
-    height: 100dvh !important;
-    min-height: 100dvh !important;
-    max-height: 100dvh !important;
-    overflow: hidden !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  @supports not (height: 100dvh) {
-    .hero {
-      height: 100vh !important;
-      min-height: 100vh !important;
-      max-height: 100vh !important;
-    }
-  }
-
-  .heroInner {
-    height: 100dvh !important;
-    min-height: 100dvh !important;
-    max-height: 100dvh !important;
-    overflow: hidden !important;
-
-    display: flex !important;
-    align-items: flex-start !important;
-    justify-content: flex-start !important;
-
-    /*
-      Mismo ritmo que la principal:
-      header arriba + texto visible + CTA visible
-      sin reservar espacio para menú inferior.
-    */
-    padding:
-      calc(env(safe-area-inset-top) + 7rem)
-      1.25rem
-      1.35rem !important;
-  }
-
-  @supports not (height: 100dvh) {
-    .heroInner {
-      height: 100vh !important;
-      min-height: 100vh !important;
-      max-height: 100vh !important;
-    }
-  }
-
-  .heroContent {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .eyebrow {
-    margin: 0 0 .62rem !important;
-    font-size: .58rem !important;
-    line-height: 1.12 !important;
-    letter-spacing: .20em !important;
-  }
-
-  .heroContent h1 {
-    max-width: 94% !important;
-    margin: 0 !important;
-    font-size: clamp(2.05rem, 9.5vw, 3.15rem) !important;
-    line-height: .92 !important;
-    letter-spacing: -.064em !important;
-  }
-
-  .heroContent p {
-    max-width: 91% !important;
-    margin-top: .78rem !important;
-    font-size: .86rem !important;
-    line-height: 1.46 !important;
-  }
-
-  .actions {
-    margin-top: .95rem !important;
-    gap: 0 !important;
-  }
-
-  .actions a:first-child {
-    width: 218px !important;
-    min-height: 40px !important;
-    padding: 0 .95rem !important;
-    font-size: .52rem !important;
-  }
-
-  .actions a:nth-child(2) {
-    display: none !important;
-  }
-
-  .operationCard,
-  .commandBar {
-    display: none !important;
+    isolation: isolate !important;
+    background: #050609 !important;
   }
 
   .heroImage,
+  .heroImageDesktop,
   .heroImageMobile {
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-  }
-}
-
-@media (max-width: 390px) {
-  .heroInner {
-    padding:
-      calc(env(safe-area-inset-top) + 6.55rem)
-      1.05rem
-      1.15rem !important;
-  }
-
-  .eyebrow {
-    font-size: .54rem !important;
-    margin-bottom: .55rem !important;
-  }
-
-  .heroContent h1 {
-    font-size: clamp(1.92rem, 9.1vw, 2.82rem) !important;
-    line-height: .92 !important;
-  }
-
-  .heroContent p {
-    margin-top: .7rem !important;
-    font-size: .82rem !important;
-    line-height: 1.42 !important;
-  }
-
-  .actions {
-    margin-top: .82rem !important;
-  }
-
-  .actions a:first-child {
-    width: 205px !important;
-    min-height: 38px !important;
-    font-size: .50rem !important;
-  }
-}
-
-/* =====================================================
-   ACROSS SERVICE PAGE VISUAL SYSTEM
-   Todas las páginas internas heredan la línea de la home.
-   ===================================================== */
-
-.actions a:first-child,
-.finalCta a,
-.cta a,
-.primaryCta,
-.heroContent a:first-of-type {
-  color: #f4efe4 !important;
-  background:
-    radial-gradient(circle at 18% 0%, rgba(255,255,255,.16), transparent 34%),
-    linear-gradient(135deg, #07111d 0%, #0d1c2b 48%, #173247 100%) !important;
-  border: 1px solid rgba(214,192,141,.42) !important;
-  box-shadow:
-    0 20px 46px rgba(7,17,29,.42),
-    0 6px 16px rgba(214,192,141,.08),
-    inset 0 1px 0 rgba(255,255,255,.16) !important;
-}
-
-.actions a:nth-child(2),
-.secondaryCta,
-.heroContent a:nth-of-type(2) {
-  color: #09233a !important;
-  background:
-    linear-gradient(180deg, rgba(247,243,234,.94), rgba(221,231,236,.86)) !important;
-  border: 1px solid rgba(214,192,141,.34) !important;
-  box-shadow:
-    0 18px 42px rgba(5,11,18,.18),
-    0 6px 18px rgba(214,192,141,.08),
-    inset 0 1px 0 rgba(255,255,255,.70) !important;
-}
-
-.eyebrow,
-.kicker,
-.sectionEyebrow {
-  color: #d6c08d !important;
-}
-
-.heroContent h1,
-.finalCta h2,
-.cta h2 {
-  color: #f4efe4 !important;
-}
-
-.heroContent p,
-.finalCta p,
-.cta p {
-  color: rgba(244,239,228,.82) !important;
-}
-
-.card,
-.serviceCard,
-.processCard,
-.featureCard {
-  border-color: rgba(7,17,29,.09) !important;
-  box-shadow:
-    0 18px 48px rgba(7,17,29,.075),
-    inset 0 1px 0 rgba(255,255,255,.70) !important;
-}
-
-.card:hover,
-.serviceCard:hover,
-.processCard:hover,
-.featureCard:hover {
-  transform: translateY(-3px) !important;
-  border-color: rgba(214,192,141,.26) !important;
-  box-shadow:
-    0 24px 58px rgba(7,17,29,.12),
-    0 8px 24px rgba(214,192,141,.09),
-    inset 0 1px 0 rgba(255,255,255,.82) !important;
-}
-
-/* =====================================================
-   AEREO VIEWPORT LOCK FINAL
-   El hero NO puede comerse el bloque azul.
-   Hero + trustBar = 100svh
-   ===================================================== */
-
-/* Base */
-.page {
-  --aereo-trust-h: 88px;
-}
-
-.page .hero {
-  height: calc(100svh - var(--aereo-trust-h)) !important;
-  min-height: calc(100svh - var(--aereo-trust-h)) !important;
-  max-height: calc(100svh - var(--aereo-trust-h)) !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-}
-
-.page .trustBar {
-  height: var(--aereo-trust-h) !important;
-  min-height: var(--aereo-trust-h) !important;
-  max-height: var(--aereo-trust-h) !important;
-  overflow: hidden !important;
-}
-
-/* Desktop normal */
-@media (min-width: 901px) {
-  .page {
-    --aereo-trust-h: 88px;
-  }
-
-  .page .content {
     position: absolute !important;
-    top: clamp(118px, 16svh, 155px) !important;
-    left: clamp(52px, 6vw, 82px) !important;
-    right: clamp(52px, 6vw, 82px) !important;
-    bottom: 24px !important;
-    width: auto !important;
-    max-width: 1240px !important;
-    margin: 0 auto !important;
-  }
+    inset: 0 !important;
 
-  .page .title {
-    font-size: clamp(2.7rem, 4.4vw, 4.8rem) !important;
-    max-width: 620px !important;
-    line-height: .9 !important;
-  }
-
-  .page .subtitle {
-    max-width: 520px !important;
-    font-size: .9rem !important;
-    line-height: 1.35 !important;
-  }
-
-  .page .actions {
-    margin-top: .9rem !important;
-  }
-
-  .page .actions a {
-    min-height: 38px !important;
-    font-size: .58rem !important;
-  }
-
-  .page .trustBar {
-    grid-template-columns: repeat(4, 1fr) !important;
-  }
-
-  .page .trustBar div {
-    height: 88px !important;
-    min-height: 88px !important;
-    padding: .65rem 1rem !important;
-  }
-}
-
-/* Desktop bajo tipo Nest Hub */
-@media (min-width: 901px) and (max-height: 700px) {
-  .page {
-    --aereo-trust-h: 78px;
-  }
-
-  .page .content {
-    top: 112px !important;
-  }
-
-  .page .title {
-    font-size: clamp(2.45rem, 4vw, 3.9rem) !important;
-    max-width: 590px !important;
-  }
-
-  .page .subtitle {
-    font-size: .78rem !important;
-    line-height: 1.3 !important;
-    max-width: 500px !important;
-  }
-
-  .page .actions a {
-    min-height: 34px !important;
-    font-size: .52rem !important;
-  }
-
-  .page .trustBar div {
-    height: 78px !important;
-    min-height: 78px !important;
-  }
-}
-
-/* iPad / tablets */
-@media (min-width: 701px) and (max-width: 900px) {
-  .page {
-    --aereo-trust-h: 108px;
-  }
-
-  .page .content {
-    position: absolute !important;
-    top: 118px !important;
-    left: 34px !important;
-    right: 34px !important;
-    bottom: 20px !important;
-    width: auto !important;
-    max-width: none !important;
-    margin: 0 !important;
-  }
-
-  .page .title {
-    font-size: clamp(2.45rem, 5.8vw, 3.45rem) !important;
-    max-width: 540px !important;
-    line-height: .9 !important;
-  }
-
-  .page .subtitle {
-    max-width: 470px !important;
-    font-size: .76rem !important;
-    line-height: 1.28 !important;
-  }
-
-  .page .actions {
-    margin-top: .75rem !important;
-    gap: .55rem !important;
-  }
-
-  .page .actions a {
-    min-height: 34px !important;
-    font-size: .5rem !important;
-  }
-
-  .page .trustBar {
-    grid-template-columns: 1fr 1fr !important;
-  }
-
-  .page .trustBar div {
-    height: 54px !important;
-    min-height: 54px !important;
-    padding: .45rem .75rem !important;
-  }
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-  .page {
-    --aereo-trust-h: 108px;
-  }
-
-  .page .hero {
-    min-height: calc(100svh - var(--aereo-trust-h)) !important;
-  }
-
-  .page .content {
-    position: absolute !important;
-    top: 100px !important;
-    left: 24px !important;
-    right: 20px !important;
-    bottom: 18px !important;
-    width: auto !important;
-    max-width: none !important;
-    margin: 0 !important;
-  }
-
-  .page .title {
-    font-size: clamp(1.72rem, 8.6vw, 2.2rem) !important;
-    max-width: 315px !important;
-    line-height: .92 !important;
-  }
-
-  .page .subtitle {
-    max-width: 300px !important;
-    font-size: .66rem !important;
-    line-height: 1.25 !important;
-  }
-
-  .page .actions {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    max-width: 250px !important;
-    gap: .45rem !important;
-    margin-top: .62rem !important;
-  }
-
-  .page .actions a {
     width: 100% !important;
-    min-height: 32px !important;
-    font-size: .5rem !important;
+    height: 100% !important;
+
+    object-fit: cover !important;
+    object-position: center top !important;
+
+    z-index: 0 !important;
+    transform: none !important;
+    translate: none !important;
   }
 
-  .page .trustBar {
-    grid-template-columns: 1fr 1fr !important;
+  .heroImageDesktop {
+    display: none !important;
   }
 
-  .page .trustBar div {
-    height: 54px !important;
-    min-height: 54px !important;
-    padding: .45rem .65rem !important;
+  .heroImageMobile {
+    display: block !important;
+  }
+
+  .heroOverlay {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+  }
+
+  .heroInner,
+  .heroContent,
+  .actions {
+    position: relative !important;
+    z-index: 2 !important;
   }
 }
 
+/* END HERO IMAGE STARTS AT TOP UNDER HEADER */
+
 /* =====================================================
-   AEREO HERO REAL JSX FINAL
-   Usa las clases reales:
-   hero / heroImage / heroOverlay / heroInner / heroContent /
-   eyebrow / title / subtitle / actions / trustBar
+   ZZZ SECTOR TECNOLOGICO FINAL SYSTEM
+   Replica sistema aprobado de Alimentación & Bebidas.
+   - Hero compacto
+   - Azul Across
+   - Sin rojos
+   - Mobile/tablet ordenado
+   - Dark band con imagen visible
    ===================================================== */
 
-.page > .hero {
+.page {
+  --sector-blue: #123f59;
+  --sector-blue-dark: #082234;
+  --sector-blue-soft: #1b5a78;
+  --sector-blue-light: #2b7897;
+  --sector-gold: #d6bd83;
+}
+
+/* Quitar rojos restantes por clase/estructura */
+.page .eyebrow,
+.page [class*="eyebrow"],
+.page [class*="Eyebrow"],
+.page [data-hero-role="eyebrow"] {
+  color: var(--sector-gold) !important;
+}
+
+.page svg,
+.page i svg,
+.page .stats svg,
+.page .darkBand svg,
+.page [class*="process"] svg,
+.page [class*="Process"] svg,
+.page [class*="steps"] svg,
+.page [class*="Steps"] svg,
+.page [class*="timeline"] svg,
+.page [class*="Timeline"] svg {
+  stroke: var(--sector-blue-soft) !important;
+  color: var(--sector-blue-soft) !important;
+}
+
+.page i,
+.page .stats i,
+.page .darkBand i,
+.page [class*="process"] i,
+.page [class*="Process"] i,
+.page [class*="steps"] i,
+.page [class*="Steps"] i,
+.page [class*="timeline"] i,
+.page [class*="Timeline"] i {
+  border-color: rgba(27, 90, 120, .45) !important;
+  color: var(--sector-blue-soft) !important;
+}
+
+.page [class*="process"] span:first-child,
+.page [class*="Process"] span:first-child,
+.page [class*="steps"] span:first-child,
+.page [class*="Steps"] span:first-child,
+.page [class*="timeline"] span:first-child,
+.page [class*="Timeline"] span:first-child {
+  background: var(--sector-blue) !important;
+  color: #fff !important;
+  border-color: var(--sector-blue) !important;
+}
+
+.page a::after,
+.page article::after,
+.page .stats article::after,
+.page .darkBand article::after {
+  color: var(--sector-blue-light) !important;
+}
+
+.page a[href="/cotizacion"],
+.page a[href="/contacto"],
+.page .actions a,
+.page .overview a,
+.page [data-across-final-cta="true"] a,
+.page [data-sector-final-cta="true"] a {
+  background: linear-gradient(135deg, var(--sector-blue-dark), var(--sector-blue)) !important;
+  color: #fff !important;
+  border: 1px solid rgba(214, 189, 131, .45) !important;
+  box-shadow: 0 18px 42px rgba(8, 34, 52, .24) !important;
+}
+
+.page .actions a:last-child,
+.page [data-across-final-cta="true"] a:last-child,
+.page [data-sector-final-cta="true"] a:last-child {
+  background: rgba(5, 18, 30, .42) !important;
+  color: #fff !important;
+  border-color: rgba(255,255,255,.34) !important;
+}
+
+/* HERO */
+.page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] {
   position: relative !important;
-  width: 100% !important;
   overflow: hidden !important;
   isolation: isolate !important;
   background: #07111d !important;
-  color: #fff !important;
-  padding: 0 !important;
-  margin: 0 !important;
 }
 
-.page > .hero .heroImage {
+.page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"]::before,
+.page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"]::after,
+.page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] .heroInner::before,
+.page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] .heroInner::after,
+.page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] .heroContent::before,
+.page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] .heroContent::after {
+  content: none !important;
+  display: none !important;
+}
+
+.page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="desktop-image"],
+.page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="mobile-image"] {
   position: absolute !important;
   inset: 0 !important;
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
   z-index: -4 !important;
-  filter: brightness(.72) contrast(1.08) saturate(1.08) !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  filter: brightness(1.08) contrast(1.06) saturate(1.12) !important;
 }
 
-.page > .hero .heroOverlay {
+.page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="overlay"] {
   position: absolute !important;
   inset: 0 !important;
   z-index: -3 !important;
   pointer-events: none !important;
   background:
-    linear-gradient(90deg, rgba(3,7,13,.92) 0%, rgba(3,7,13,.66) 46%, rgba(3,7,13,.20) 100%),
-    linear-gradient(180deg, rgba(3,7,13,.12) 0%, rgba(3,7,13,.22) 46%, rgba(3,7,13,.68) 100%) !important;
+    linear-gradient(90deg, rgba(3,7,13,.62) 0%, rgba(5,22,36,.42) 46%, rgba(7,34,54,.14) 100%),
+    linear-gradient(180deg, rgba(3,7,13,.08) 0%, rgba(3,7,13,.06) 44%, rgba(3,7,13,.18) 100%) !important;
 }
 
-.page > .hero .heroInner {
-  position: absolute !important;
-  z-index: 5 !important;
-  display: block !important;
-  width: auto !important;
-  max-width: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  transform: none !important;
+@media (max-width: 1200px) {
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="card"] {
+    display: none !important;
+  }
 }
 
-.page > .hero .heroContent {
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.page > .hero .operationCard {
-  display: none !important;
-}
-
-.page > .hero .eyebrow {
-  display: block !important;
-  color: #d6c08d !important;
-  font-weight: 950 !important;
-  text-transform: uppercase !important;
-  line-height: 1 !important;
-}
-
-.page > .hero .title {
-  margin: 0 !important;
-  color: #fff !important;
-  font-weight: 950 !important;
-  line-height: .9 !important;
-  letter-spacing: -.055em !important;
-  text-wrap: balance !important;
-  text-shadow: 0 18px 48px rgba(0,0,0,.40) !important;
-}
-
-.page > .hero .subtitle {
-  margin: 0 !important;
-  color: rgba(255,255,255,.90) !important;
-  font-weight: 650 !important;
-  text-shadow: 0 10px 28px rgba(0,0,0,.40) !important;
-}
-
-.page > .hero .actions {
-  display: flex !important;
-  flex-wrap: wrap !important;
-}
-
-.page > .hero .actions a,
-.page > .hero .primaryBtn,
-.page > .hero .secondaryBtn {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  border-radius: 999px !important;
-  text-decoration: none !important;
-  text-transform: uppercase !important;
-  font-weight: 950 !important;
-  line-height: 1.05 !important;
-  white-space: nowrap !important;
-  letter-spacing: .035em !important;
-}
-
-/* DESKTOP GRANDE */
 @media (min-width: 1201px) {
-  .page > .hero {
-    height: 620px !important;
-    min-height: 620px !important;
-    max-height: 620px !important;
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] {
+    height: clamp(640px, calc(100svh - 92px), 760px) !important;
+    min-height: 640px !important;
+    max-height: 760px !important;
+    padding: 0 !important;
   }
 
-  .page > .hero .heroImageDesktop {
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="desktop-image"] {
     display: block !important;
+    object-position: center center !important;
   }
 
-  .page > .hero .heroImageMobile {
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="mobile-image"] {
     display: none !important;
   }
 
-  .page > .hero .heroImage {
-    object-position: 58% 50% !important;
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="inner"] {
+    position: absolute !important;
+    top: 150px !important;
+    left: clamp(72px, 6.8vw, 118px) !important;
+    right: clamp(72px, 6.8vw, 118px) !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
   }
 
-  .page > .hero .heroInner {
-    top: 142px !important;
-    left: clamp(76px, 8vw, 130px) !important;
-    right: clamp(76px, 8vw, 130px) !important;
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="content"] {
+    max-width: 620px !important;
   }
 
-  .page > .hero .heroContent {
-    max-width: 660px !important;
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="title"] {
+    max-width: 620px !important;
+    margin: 0 !important;
+    font-size: clamp(2.9rem, 3.5vw, 4rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.052em !important;
+    font-weight: 950 !important;
   }
 
-  .page > .hero .eyebrow {
-    margin-bottom: .65rem !important;
-    font-size: .72rem !important;
-    letter-spacing: .22em !important;
-  }
-
-  .page > .hero .title {
-    max-width: 660px !important;
-    font-size: clamp(3.5rem, 4.8vw, 5.15rem) !important;
-  }
-
-  .page > .hero .subtitle {
-    max-width: 560px !important;
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="text"] {
+    max-width: 520px !important;
     margin-top: .95rem !important;
-    font-size: .98rem !important;
+    font-size: .9rem !important;
+    line-height: 1.44 !important;
+    font-weight: 650 !important;
+  }
+
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="actions"] {
+    margin-top: 1.2rem !important;
+    gap: .75rem !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] {
+    height: 500px !important;
+    min-height: 500px !important;
+    max-height: 500px !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="desktop-image"] {
+    display: block !important;
+    object-position: center center !important;
+  }
+
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="mobile-image"] {
+    display: none !important;
+  }
+
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="inner"] {
+    position: absolute !important;
+    top: 140px !important;
+    left: clamp(46px, 5.8vw, 64px) !important;
+    right: clamp(42px, 5.8vw, 64px) !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="content"] {
+    max-width: 520px !important;
+  }
+
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="title"] {
+    max-width: 520px !important;
+    font-size: clamp(2.35rem, 4vw, 2.85rem) !important;
+    line-height: .98 !important;
+  }
+
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="text"] {
+    max-width: 445px !important;
+    font-size: .76rem !important;
     line-height: 1.42 !important;
   }
-
-  .page > .hero .actions {
-    gap: .78rem !important;
-    margin-top: 1.15rem !important;
-  }
-
-  .page > .hero .actions a {
-    min-height: 44px !important;
-    padding: 0 1.35rem !important;
-    font-size: .68rem !important;
-  }
 }
 
-/* DESKTOP/TABLET HORIZONTAL 901-1200 */
-@media (min-width: 901px) and (max-width: 1200px) {
-  .page > .hero {
-    height: 520px !important;
-    min-height: 520px !important;
-    max-height: 520px !important;
-  }
-
-  .page > .hero .heroImageDesktop {
-    display: block !important;
-  }
-
-  .page > .hero .heroImageMobile {
-    display: none !important;
-  }
-
-  .page > .hero .heroImage {
-    object-position: 60% 50% !important;
-  }
-
-  .page > .hero .heroInner {
-    top: 118px !important;
-    left: clamp(58px, 7vw, 86px) !important;
-    right: clamp(58px, 7vw, 86px) !important;
-  }
-
-  .page > .hero .heroContent {
-    max-width: 560px !important;
-  }
-
-  .page > .hero .eyebrow {
-    margin-bottom: .55rem !important;
-    font-size: .6rem !important;
-    letter-spacing: .20em !important;
-  }
-
-  .page > .hero .title {
-    max-width: 560px !important;
-    font-size: clamp(2.65rem, 4.6vw, 3.95rem) !important;
-  }
-
-  .page > .hero .subtitle {
-    max-width: 500px !important;
-    margin-top: .72rem !important;
-    font-size: .82rem !important;
-    line-height: 1.34 !important;
-  }
-
-  .page > .hero .actions {
-    gap: .62rem !important;
-    margin-top: .85rem !important;
-  }
-
-  .page > .hero .actions a {
-    min-height: 36px !important;
-    padding: 0 1rem !important;
-    font-size: .54rem !important;
-  }
-}
-
-/* iPAD / TABLET 701-900 */
-@media (min-width: 701px) and (max-width: 900px) {
-  .page > .hero {
-    height: 520px !important;
-    min-height: 520px !important;
-    max-height: 520px !important;
-  }
-
-  .page > .hero .heroImageDesktop {
-    display: none !important;
-  }
-
-  .page > .hero .heroImageMobile {
-    display: block !important;
-  }
-
-  .page > .hero .heroImage {
-    object-position: 62% 50% !important;
-  }
-
-  .page > .hero .heroInner {
-    top: 122px !important;
-    left: clamp(46px, 7vw, 62px) !important;
-    right: clamp(46px, 7vw, 62px) !important;
-  }
-
-  .page > .hero .heroContent {
-    max-width: 520px !important;
-  }
-
-  .page > .hero .eyebrow {
-    margin-bottom: .52rem !important;
-    font-size: .58rem !important;
-    letter-spacing: .19em !important;
-  }
-
-  .page > .hero .title {
-    max-width: 520px !important;
-    font-size: clamp(2.4rem, 5.5vw, 3.3rem) !important;
-  }
-
-  .page > .hero .subtitle {
-    max-width: 455px !important;
-    margin-top: .68rem !important;
-    font-size: .76rem !important;
-    line-height: 1.3 !important;
-  }
-
-  .page > .hero .actions {
-    gap: .55rem !important;
-    margin-top: .78rem !important;
-  }
-
-  .page > .hero .actions a {
-    min-height: 35px !important;
-    padding: 0 .95rem !important;
-    font-size: .5rem !important;
-  }
-}
-
-/* MOBILE / FOLD <=700: SOLO 1 BOTÓN */
 @media (max-width: 700px) {
-  .page > .hero {
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] {
     height: 465px !important;
     min-height: 465px !important;
     max-height: 465px !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
 
-  .page > .hero .heroImageDesktop {
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="desktop-image"] {
     display: none !important;
   }
 
-  .page > .hero .heroImageMobile {
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="mobile-image"] {
     display: block !important;
+    object-position: center center !important;
   }
 
-  .page > .hero .heroImage {
-    object-position: 70% 54% !important;
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="inner"] {
+    position: absolute !important;
+    top: 86px !important;
+    left: 20px !important;
+    right: 20px !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
-  .page > .hero .heroInner {
-    top: 100px !important;
-    left: clamp(26px, 7vw, 38px) !important;
-    right: clamp(26px, 7vw, 38px) !important;
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="content"] {
+    max-width: 318px !important;
   }
 
-  .page > .hero .heroContent {
-    max-width: 315px !important;
-  }
-
-  .page > .hero .eyebrow {
-    margin-bottom: .4rem !important;
-    font-size: .52rem !important;
-    letter-spacing: .15em !important;
-  }
-
-  .page > .hero .title {
-    max-width: 315px !important;
-    font-size: clamp(1.72rem, 8.4vw, 2.18rem) !important;
-    line-height: .92 !important;
-  }
-
-  .page > .hero .subtitle {
-    max-width: 300px !important;
-    margin-top: .5rem !important;
-    font-size: .66rem !important;
-    line-height: 1.25 !important;
-  }
-
-  .page > .hero .actions {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    max-width: 250px !important;
-    gap: .45rem !important;
-    margin-top: .62rem !important;
-  }
-
-  .page > .hero .actions a {
-    width: 100% !important;
-    min-height: 32px !important;
-    padding: 0 .75rem !important;
-    font-size: .5rem !important;
-  }
-
-  .page > .hero .secondaryBtn,
-  .page > .hero .actions a:nth-of-type(2) {
-    display: none !important;
-  }
-}
-
-/* TRUSTBAR FINAL */
-@media (min-width: 901px) {
-  .page > .trustBar {
-    display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    height: 84px !important;
-    min-height: 84px !important;
-    max-height: 84px !important;
-    overflow: hidden !important;
-  }
-
-  .page > .trustBar div {
-    height: 84px !important;
-    min-height: 84px !important;
-    padding: .6rem .9rem !important;
-    gap: .6rem !important;
-  }
-}
-
-@media (max-width: 900px) {
-  .page > .trustBar {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    height: 108px !important;
-    min-height: 108px !important;
-    max-height: 108px !important;
-    overflow: hidden !important;
-  }
-
-  .page > .trustBar div {
-    height: 54px !important;
-    min-height: 54px !important;
-    padding: .45rem .65rem !important;
-    gap: .55rem !important;
-  }
-}
-
-.page > .trustBar i {
-  width: 25px !important;
-  height: 25px !important;
-  min-width: 25px !important;
-}
-
-.page > .trustBar strong,
-.page > .trustBar small {
-  font-size: .56rem !important;
-  line-height: 1.05 !important;
-}
-
-
-/* =====================================================
-   AEREO HERO TEXT SPACING ONLY
-   Solo mejora aire entre eyebrow, título, texto y botones.
-   No toca altura, fondo ni trustBar.
-   ===================================================== */
-
-.page > .hero .eyebrow {
-  margin-bottom: .72rem !important;
-}
-
-.page > .hero .title {
-  line-height: .96 !important;
-  letter-spacing: -.05em !important;
-}
-
-.page > .hero .subtitle {
-  margin-top: .9rem !important;
-  line-height: 1.44 !important;
-}
-
-.page > .hero .actions {
-  margin-top: 1.15rem !important;
-  gap: .72rem !important;
-}
-
-.page > .hero .actions a,
-.page > .hero .primaryBtn,
-.page > .hero .secondaryBtn {
-  letter-spacing: .055em !important;
-  line-height: 1.1 !important;
-}
-
-/* Tablet */
-@media (min-width: 701px) and (max-width: 900px) {
-  .page > .hero .eyebrow {
-    margin-bottom: .68rem !important;
-  }
-
-  .page > .hero .title {
-    line-height: .95 !important;
-  }
-
-  .page > .hero .subtitle {
-    margin-top: .82rem !important;
-    line-height: 1.4 !important;
-  }
-
-  .page > .hero .actions {
-    margin-top: 1rem !important;
-    gap: .65rem !important;
-  }
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-  .page > .hero .eyebrow {
-    margin-bottom: .58rem !important;
-  }
-
-  .page > .hero .title {
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="title"] {
+    max-width: 318px !important;
+    font-size: clamp(1.68rem, 8.1vw, 2.08rem) !important;
     line-height: .96 !important;
     letter-spacing: -.045em !important;
   }
 
-  .page > .hero .subtitle {
-    margin-top: .72rem !important;
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="text"] {
+    max-width: 292px !important;
+    margin-top: .68rem !important;
+    font-size: .62rem !important;
     line-height: 1.36 !important;
   }
 
-  .page > .hero .actions {
-    margin-top: .95rem !important;
-    gap: .58rem !important;
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="actions"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    max-width: 250px !important;
+    margin-top: .92rem !important;
+    gap: .5rem !important;
   }
 
-  .page > .hero .actions a,
-  .page > .hero .primaryBtn,
-  .page > .hero .secondaryBtn {
-    letter-spacing: .05em !important;
-  }
-}
-
-
-/* =====================================================
-   AEREO HERO EXTRA BLOCK SPACING
-   Separa mejor título, texto y botón. Solo aire interno.
-   ===================================================== */
-
-.page > .hero .title {
-  margin-bottom: 0 !important;
-}
-
-.page > .hero .subtitle {
-  margin-top: 1.15rem !important;
-  margin-bottom: 0 !important;
-}
-
-.page > .hero .actions {
-  margin-top: 1.45rem !important;
-}
-
-/* Tablet */
-@media (min-width: 701px) and (max-width: 900px) {
-  .page > .hero .subtitle {
-    margin-top: 1rem !important;
-  }
-
-  .page > .hero .actions {
-    margin-top: 1.25rem !important;
+  .page > .hero[data-sector-hero="true"][data-sector-name="tecnologico"] [data-hero-role="actions"] a:nth-of-type(2) {
+    display: none !important;
   }
 }
 
-/* Mobile */
+/* TrustBar mobile */
 @media (max-width: 700px) {
-  .page > .hero .subtitle {
-    margin-top: .9rem !important;
+  .page .trustBar {
+    height: 108px !important;
+    min-height: 108px !important;
+    max-height: 108px !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-rows: repeat(2, 54px) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 0 !important;
+    background: #05101b !important;
+    overflow: hidden !important;
   }
 
-  .page > .hero .actions {
-    margin-top: 1.15rem !important;
+  .page .trustBar > div {
+    height: 54px !important;
+    min-height: 54px !important;
+    padding: 0 .85rem !important;
+    display: grid !important;
+    grid-template-columns: 30px 1fr !important;
+    align-items: center !important;
+    column-gap: .55rem !important;
+  }
+
+  .page .trustBar strong {
+    font-size: .56rem !important;
+    line-height: 1.05 !important;
+  }
+
+  .page .trustBar small {
+    font-size: .5rem !important;
+    line-height: 1.08 !important;
   }
 }
 
-
-/* =====================================================
-   AEREO MOBILE FINAL TWEAK
-   Más aire entre menú y primer texto.
-   Oculta imágenes decorativas internas en mobile.
-   No toca el fondo del hero.
-   ===================================================== */
-
+/* Overview mobile */
 @media (max-width: 700px) {
-  .page > .hero .heroInner {
-    top: 122px !important;
-  }
-
-  .page > .hero .eyebrow {
-    margin-bottom: .52rem !important;
-  }
-}
-
-/* iPhone chico */
-@media (max-width: 390px) {
-  .page > .hero .heroInner {
-    top: 116px !important;
-  }
-}
-
-/* Suprimir bloques de imagen decorativa en mobile, no el hero */
-@media (max-width: 700px) {
-  .overview img,
-  .overview picture,
-  .overview [class*="Image"],
-  .overview [class*="image"],
-  .darkBandImage,
-  .finalImage {
-    display: none !important;
-  }
-
-  .overview,
-  .overviewCopy {
-    padding-top: 3rem !important;
-  }
-}
-
-
-/* =====================================================
-   AEREO HERO IMAGE COLOR / LIGHT FINAL
-   Solo mejora luz, contraste y overlay del fondo.
-   No toca estructura, textos, botones ni trustBar.
-   ===================================================== */
-
-.page > .hero .heroImage {
-  filter: brightness(.96) contrast(1.08) saturate(1.18) !important;
-}
-
-/* Overlay más limpio: oscuro donde está el texto, libre donde está el avión */
-.page > .hero .heroOverlay {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(3, 7, 13, .82) 0%,
-      rgba(3, 7, 13, .62) 28%,
-      rgba(3, 7, 13, .30) 52%,
-      rgba(3, 7, 13, .08) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(3, 7, 13, .10) 0%,
-      rgba(3, 7, 13, .08) 42%,
-      rgba(3, 7, 13, .22) 100%
-    ) !important;
-}
-
-/* Un toque cálido sobre la zona del sol/avión */
-.page > .hero::after {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -2 !important;
-  pointer-events: none !important;
-  background:
-    radial-gradient(
-      circle at 56% 68%,
-      rgba(218, 170, 82, .22),
-      transparent 34%
-    ) !important;
-}
-
-/* Tablet y mobile: un poco más oscuro para que el texto siga leyendo */
-@media (max-width: 900px) {
-  .page > .hero .heroImage {
-    filter: brightness(.90) contrast(1.08) saturate(1.14) !important;
-  }
-
-  .page > .hero .heroOverlay {
-    background:
-      linear-gradient(
-        90deg,
-        rgba(3, 7, 13, .84) 0%,
-        rgba(3, 7, 13, .58) 46%,
-        rgba(3, 7, 13, .16) 100%
-      ),
-      linear-gradient(
-        180deg,
-        rgba(3, 7, 13, .12) 0%,
-        rgba(3, 7, 13, .10) 45%,
-        rgba(3, 7, 13, .30) 100%
-      ) !important;
-  }
-}
-
-
-/* =====================================================
-   AEREO HERO LIGHT RIGHT + MOBILE IMAGE HIDE
-   Más iluminación a la derecha y ocultar imágenes decorativas en mobile
-   ===================================================== */
-
-/* Más vida en la imagen */
-.page > .hero .heroImage {
-  filter: brightness(1.04) contrast(1.08) saturate(1.22) !important;
-}
-
-/* Overlay menos pesado del lado derecho */
-.page > .hero .heroOverlay {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(3, 7, 13, .84) 0%,
-      rgba(3, 7, 13, .62) 28%,
-      rgba(3, 7, 13, .26) 54%,
-      rgba(3, 7, 13, .02) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(3, 7, 13, .08) 0%,
-      rgba(3, 7, 13, .06) 46%,
-      rgba(3, 7, 13, .18) 100%
-    ) !important;
-}
-
-/* Luz cálida en zona del avión / cielo derecho */
-.page > .hero::after {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -2 !important;
-  pointer-events: none !important;
-  background:
-    radial-gradient(
-      circle at 78% 42%,
-      rgba(255, 220, 150, .34),
-      rgba(255, 190, 96, .16) 24%,
-      transparent 48%
-    ),
-    radial-gradient(
-      circle at 58% 72%,
-      rgba(224, 162, 72, .24),
-      transparent 36%
-    ) !important;
-}
-
-/* En tablet/mobile mantenemos lectura pero sin apagar tanto */
-@media (max-width: 900px) {
-  .page > .hero .heroImage {
-    filter: brightness(.98) contrast(1.08) saturate(1.18) !important;
-  }
-
-  .page > .hero .heroOverlay {
-    background:
-      linear-gradient(
-        90deg,
-        rgba(3, 7, 13, .84) 0%,
-        rgba(3, 7, 13, .58) 44%,
-        rgba(3, 7, 13, .12) 100%
-      ),
-      linear-gradient(
-        180deg,
-        rgba(3, 7, 13, .10) 0%,
-        rgba(3, 7, 13, .08) 46%,
-        rgba(3, 7, 13, .24) 100%
-      ) !important;
-  }
-
-  .page > .hero::after {
-    background:
-      radial-gradient(
-        circle at 76% 44%,
-        rgba(255, 220, 150, .26),
-        rgba(255, 190, 96, .12) 24%,
-        transparent 48%
-      ) !important;
-  }
-}
-
-/* =====================================================
-   MOBILE: OCULTAR IMÁGENES DECORATIVAS INTERNAS
-   No toca la imagen del hero.
-   ===================================================== */
-
-@media (max-width: 700px) {
-  .overview img,
-  .overview picture,
-  .overview figure,
-  .overview [class*="image"],
-  .overview [class*="Image"],
-  .overview [class*="media"],
-  .overview [class*="Media"],
-  .overview [class*="visual"],
-  .overview [class*="Visual"],
-  .darkBandImage,
-  .finalImage {
-    display: none !important;
-  }
-
-  .darkBand [class*="image"],
-  .darkBand [class*="Image"],
-  .darkBand [class*="media"],
-  .darkBand [class*="Media"],
-  .finalCta [class*="image"],
-  .finalCta [class*="Image"],
-  .finalCta [class*="media"],
-  .finalCta [class*="Media"] {
-    display: none !important;
-  }
-
-  .overview,
-  .darkBand,
-  .finalCta {
-    background-image: none !important;
-  }
-
-  .overviewCopy,
-  .darkBandContent {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-}
-
-
-/* =====================================================
-   AEREO MOBILE HIDE PILLARS SECTION
-   Oculta las cards/pilares en dispositivos menores a tablet.
-   No toca hero, trustBar ni certificaciones.
-   ===================================================== */
-
-@media (max-width: 700px) {
-  .pillars {
-    display: none !important;
-  }
-
-  .overview {
-    padding-bottom: 3rem !important;
-  }
-}
-
-
-/* =====================================================
-   AEREO DESKTOP BUTTON SAFE FIX
-   Solo desktop grande: evita que los botones toquen el trustBar.
-   ===================================================== */
-
-@media (min-width: 1201px) {
-  .page > .hero {
-    height: clamp(700px, calc(100svh - 86px), 800px) !important;
-    min-height: 700px !important;
-    max-height: 800px !important;
-  }
-
-  .page > .hero .heroInner {
-    top: clamp(145px, 16svh, 175px) !important;
-    left: clamp(76px, 7vw, 130px) !important;
-    right: clamp(76px, 7vw, 130px) !important;
-  }
-
-  .page > .hero .heroContent {
-    max-width: 680px !important;
-  }
-
-  .page > .hero .title {
-    max-width: 680px !important;
-    font-size: clamp(4.1rem, 5.1vw, 5.8rem) !important;
-    line-height: .92 !important;
-  }
-
-  .page > .hero .subtitle {
-    max-width: 600px !important;
-    margin-top: 1.1rem !important;
-    font-size: 1.02rem !important;
-    line-height: 1.45 !important;
-  }
-
-  .page > .hero .actions {
-    margin-top: 1.35rem !important;
-    gap: .9rem !important;
-    padding-bottom: 1rem !important;
-  }
-
-  .page > .hero .actions a,
-  .page > .hero .primaryBtn,
-  .page > .hero .secondaryBtn {
-    min-height: 46px !important;
-    padding: 0 1.45rem !important;
-    font-size: .68rem !important;
-  }
-
-  .page > .trustBar {
-    height: 86px !important;
-    min-height: 86px !important;
-    max-height: 86px !important;
-  }
-}
-
-/* Desktop ancho pero bajo: evita corte de botones */
-@media (min-width: 1201px) and (max-height: 820px) {
-  .page > .hero {
-    height: 680px !important;
-    min-height: 680px !important;
-    max-height: 680px !important;
-  }
-
-  .page > .hero .heroInner {
-    top: 128px !important;
-  }
-
-  .page > .hero .title {
-    font-size: clamp(3.65rem, 4.7vw, 5.15rem) !important;
-  }
-
-  .page > .hero .subtitle {
-    margin-top: .95rem !important;
-    font-size: .95rem !important;
-  }
-
-  .page > .hero .actions {
-    margin-top: 1.05rem !important;
-  }
-}
-
-
-/* =====================================================
-   AEREO HERO IMAGE NO ZOOM FINAL
-   Quita el recorte/zoom del hero principal.
-   ===================================================== */
-
-.page > .hero .heroImage {
-  object-fit: contain !important;
-  object-position: center center !important;
-  background: #07111d !important;
-}
-
-/* Desktop usa imagen desktop */
-@media (min-width: 901px) {
-  .page > .hero .heroImageDesktop {
-    display: block !important;
-  }
-
-  .page > .hero .heroImageMobile {
-    display: none !important;
-  }
-}
-
-/* Mobile/tablet usa imagen mobile */
-@media (max-width: 900px) {
-  .page > .hero .heroImageDesktop {
-    display: none !important;
-  }
-
-  .page > .hero .heroImageMobile {
-    display: block !important;
-  }
-}
-
-
-/* =====================================================
-   AEREO HERO MOBILE IMAGE SOURCE FIX
-   Desktop usa horizontal. Mobile usa vertical.
-   ===================================================== */
-
-@media (min-width: 901px) {
-  .page > .hero .heroImageDesktop {
-    display: block !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-  }
-
-  .page > .hero .heroImageMobile {
-    display: none !important;
-  }
-}
-
-@media (max-width: 900px) {
-  .page > .hero .heroImageDesktop {
-    display: none !important;
-  }
-
-  .page > .hero .heroImageMobile {
-    display: block !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-  }
-}
-
-
-/* =====================================================
-   AEREO DESKTOP TITLE REFINEMENT
-   Solo pantallas grandes: título más elegante y menos monstruoso.
-   No toca mobile ni tablet.
-   ===================================================== */
-
-@media (min-width: 1400px) {
-  .page > .hero .heroInner {
-    top: 155px !important;
-    left: clamp(90px, 7vw, 140px) !important;
-    right: clamp(90px, 7vw, 140px) !important;
-  }
-
-  .page > .hero .heroContent {
-    max-width: 620px !important;
-  }
-
-  .page > .hero .title {
-    max-width: 620px !important;
-    font-size: clamp(3.45rem, 4.15vw, 4.75rem) !important;
-    line-height: .96 !important;
-    letter-spacing: -.045em !important;
-  }
-
-  .page > .hero .subtitle {
-    max-width: 560px !important;
-    margin-top: 1.15rem !important;
-    font-size: 1rem !important;
-    line-height: 1.48 !important;
-  }
-
-  .page > .hero .actions {
-    margin-top: 1.35rem !important;
-    gap: .9rem !important;
-  }
-
-  .page > .hero .actions a {
-    min-height: 46px !important;
-    padding: 0 1.45rem !important;
-    font-size: .66rem !important;
-    letter-spacing: .055em !important;
-  }
-}
-
-/* Desktop grande pero bajo de alto */
-@media (min-width: 1400px) and (max-height: 820px) {
-  .page > .hero .heroInner {
-    top: 132px !important;
-  }
-
-  .page > .hero .title {
-    font-size: clamp(3.2rem, 3.85vw, 4.35rem) !important;
-    line-height: .95 !important;
-  }
-
-  .page > .hero .subtitle {
-    margin-top: 1rem !important;
-    font-size: .94rem !important;
-    line-height: 1.42 !important;
-  }
-
-  .page > .hero .actions {
-    margin-top: 1.1rem !important;
-  }
-}
-
-
-/* =====================================================
-   AEREO HERO BRIGHT CORPORATE FINAL
-   Más luz al hero sin tocar estructura, texto ni botones.
-   ===================================================== */
-
-.page > .hero .heroImage {
-  filter: brightness(1.12) contrast(1.06) saturate(1.20) !important;
-}
-
-/* Menos sombra general: mantiene lectura en izquierda y deja vivir el avión */
-.page > .hero .heroOverlay {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(3, 7, 13, .78) 0%,
-      rgba(3, 7, 13, .56) 28%,
-      rgba(3, 7, 13, .24) 52%,
-      rgba(3, 7, 13, .02) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(3, 7, 13, .06) 0%,
-      rgba(3, 7, 13, .04) 46%,
-      rgba(3, 7, 13, .14) 100%
-    ) !important;
-}
-
-/* Luz cálida en avión / cielo / pista */
-.page > .hero::after {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -2 !important;
-  pointer-events: none !important;
-  background:
-    radial-gradient(
-      circle at 74% 38%,
-      rgba(255, 226, 170, .36),
-      rgba(255, 195, 105, .18) 26%,
-      transparent 52%
-    ),
-    radial-gradient(
-      circle at 55% 68%,
-      rgba(255, 180, 70, .26),
-      transparent 38%
-    ) !important;
-}
-
-/* Mobile/tablet: un poco menos de luz para que el texto no pierda contraste */
-@media (max-width: 900px) {
-  .page > .hero .heroImage {
-    filter: brightness(1.04) contrast(1.06) saturate(1.16) !important;
-  }
-
-  .page > .hero .heroOverlay {
-    background:
-      linear-gradient(
-        90deg,
-        rgba(3, 7, 13, .80) 0%,
-        rgba(3, 7, 13, .56) 44%,
-        rgba(3, 7, 13, .14) 100%
-      ),
-      linear-gradient(
-        180deg,
-        rgba(3, 7, 13, .08) 0%,
-        rgba(3, 7, 13, .06) 48%,
-        rgba(3, 7, 13, .20) 100%
-      ) !important;
-  }
-
-  .page > .hero::after {
-    background:
-      radial-gradient(
-        circle at 74% 44%,
-        rgba(255, 220, 150, .24),
-        rgba(255, 190, 96, .12) 25%,
-        transparent 50%
-      ) !important;
-  }
-}
-
-
-/* =====================================================
-   AEREO HERO REAL IMAGE SWITCH HARD LOCK
-   Fuerza desktop/mobile con las clases reales del JSX.
-   ===================================================== */
-
-.page > .hero .heroImageDesktop {
-  display: block !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  z-index: -4 !important;
-}
-
-.page > .hero .heroImageMobile {
-  display: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  z-index: -5 !important;
-}
-
-@media (max-width: 900px) {
-  .page > .hero .heroImageDesktop {
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-    z-index: -5 !important;
-  }
-
-  .page > .hero .heroImageMobile {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    z-index: -4 !important;
-  }
-}
-
-@media (min-width: 901px) {
-  .page > .hero .heroImageDesktop {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    z-index: -4 !important;
-  }
-
-  .page > .hero .heroImageMobile {
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-    z-index: -5 !important;
-  }
-}
-
-
-/* =====================================================
-   AEREO HERO REAL IMAGE SWITCH HARD LOCK
-   Fuerza desktop/mobile con las clases reales del JSX.
-   ===================================================== */
-
-.page > .hero .heroImageDesktop {
-  display: block !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  z-index: -4 !important;
-}
-
-.page > .hero .heroImageMobile {
-  display: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  z-index: -5 !important;
-}
-
-@media (max-width: 900px) {
-  .page > .hero .heroImageDesktop {
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-    z-index: -5 !important;
-  }
-
-  .page > .hero .heroImageMobile {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    z-index: -4 !important;
-  }
-}
-
-@media (min-width: 901px) {
-  .page > .hero .heroImageDesktop {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    z-index: -4 !important;
-  }
-
-  .page > .hero .heroImageMobile {
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-    z-index: -5 !important;
-  }
-}
-
-
-/* =====================================================
-   AEREO MOBILE CERTIFICATIONS GAP FIX
-   Reduce espacio vacío entre certificaciones y overview.
-   ===================================================== */
-
-@media (max-width: 700px) {
-  .page .overview {
-    padding-top: 1.6rem !important;
-    margin-top: 0 !important;
-  }
-
-  .page .overviewCopy {
-    padding-top: 0 !important;
-    margin-top: 0 !important;
-  }
-
-  .page .overview .eyebrow,
-  .page .overview [class*="eyebrow"],
-  .page .overview [class*="Eyebrow"] {
-    margin-top: 0 !important;
-  }
-
-  /* Por si el espacio viene del componente de certificaciones */
-  .page section + .overview {
-    margin-top: 0 !important;
-  }
-}
-
-@media (max-width: 390px) {
   .page .overview {
     padding-top: 1.25rem !important;
+    padding-left: clamp(22px, 6vw, 30px) !important;
+    padding-right: clamp(22px, 6vw, 30px) !important;
+    padding-bottom: 2.4rem !important;
+    margin-top: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .page .pillars {
+    display: none !important;
+  }
+
+  .page .overview h2 {
+    max-width: 330px !important;
+    margin: 0 !important;
+    font-size: clamp(1.9rem, 8.2vw, 2.35rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.055em !important;
+  }
+
+  .page .overview p {
+    max-width: 320px !important;
+    margin: 1.25rem 0 0 !important;
+    font-size: .95rem !important;
+    line-height: 1.62 !important;
+  }
+
+  .page .overview a {
+    width: 100% !important;
+    min-height: 50px !important;
+    margin: 1.65rem 0 0 !important;
+    white-space: normal !important;
+    text-align: center !important;
+  }
+}
+
+/* Dark band */
+.page section[data-sector-dark-band="true"],
+.page .darkBand {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background:
+    linear-gradient(90deg, rgba(5,20,34,.54) 0%, rgba(8,37,56,.42) 48%, rgba(10,55,78,.30) 100%),
+    url("/images/sectores/transporte-logistica-tecnologia.png") center center / cover no-repeat !important;
+}
+
+.page section[data-sector-dark-band="true"] > *,
+.page .darkBand > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.page .darkBandImage,
+.page .darkBandImage img {
+  display: none !important;
+}
+
+@media (min-width: 901px) {
+  .page section[data-sector-dark-band="true"],
+  .page .darkBand {
+    min-height: auto !important;
+    padding-top: clamp(3.4rem, 4.6vw, 4.8rem) !important;
+    padding-bottom: clamp(3.6rem, 4.8vw, 5rem) !important;
+  }
+
+  .page .darkBand h2 {
+    max-width: 760px !important;
+    font-size: clamp(2.25rem, 3.15vw, 3.25rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.052em !important;
+  }
+
+  .page .stats article {
+    min-height: 150px !important;
+    padding: 1.35rem 1.45rem !important;
+    border-color: rgba(255,255,255,.16) !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .page section[data-sector-dark-band="true"],
+  .page .darkBand {
+    padding-top: 2.8rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .page .darkBand h2 {
+    font-size: clamp(1.85rem, 7.6vw, 2.25rem) !important;
+    line-height: .99 !important;
+  }
+}
+
+/* Final CTA */
+.page [data-sector-final-cta="true"],
+.page [data-across-final-cta="true"] {
+  background:
+    linear-gradient(90deg, rgba(5,20,34,.50) 0%, rgba(8,37,56,.42) 48%, rgba(10,55,78,.28) 100%),
+    url("/images/sectores/transporte-logistica-tecnologia.png") center center / cover no-repeat !important;
+}
+
+/* =====================================================
+   ZZZ SECTORES MOBILE KILL DARK BAND LOCAL FINAL
+   Oculta en mobile/tablet chica el bloque oscuro de cards.
+   Va dentro de cada CSS module para ganar la cascada.
+   ===================================================== */
+
+@media (max-width: 1200px) {
+  .page section[data-sector-dark-band="true"],
+  .page section[class*="darkBand"],
+  .page section[class*="DarkBand"],
+  .page .darkBand,
+  .page [class*="darkBand"],
+  .page [class*="DarkBand"],
+  .page section:has(.stats):not(.hero):not(.trustBar):not(.overview):not([data-across-final-cta="true"]),
+  .page section:has([class*="stats"]):not(.hero):not(.trustBar):not(.overview):not([data-across-final-cta="true"]),
+  .page section:has([class*="Stats"]):not(.hero):not(.trustBar):not(.overview):not([data-across-final-cta="true"]) {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .page section[data-sector-dark-band="true"] + section,
+  .page section[class*="darkBand"] + section,
+  .page section[class*="DarkBand"] + section,
+  .page section:has(.stats):not(.hero):not(.trustBar):not(.overview):not([data-across-final-cta="true"]) + section,
+  .page section:has([class*="stats"]):not(.hero):not(.trustBar):not(.overview):not([data-across-final-cta="true"]) + section,
+  .page section:has([class*="Stats"]):not(.hero):not(.trustBar):not(.overview):not([data-across-final-cta="true"]) + section {
+    margin-top: 0 !important;
+    padding-top: 2.2rem !important;
+  }
+}
+
+/* =====================================================
+   ZZZ SECTORES MOBILE HIDE SERVICES CARDS FINAL
+   Oculta en mobile/tablet chica el bloque de servicios/cards
+   que aparece después del overview.
+   ===================================================== */
+
+@media (max-width: 900px) {
+  .page .services,
+  .page section[class*="services"],
+  .page section[class*="Services"],
+  .page section[class*="useCases"],
+  .page section[class*="UseCases"],
+  .page section[data-sector-dark-band="true"],
+  .page .darkBand,
+  .page section[class*="darkBand"],
+  .page section[class*="DarkBand"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .page .services + section,
+  .page section[class*="services"] + section,
+  .page section[class*="Services"] + section,
+  .page section[class*="useCases"] + section,
+  .page section[class*="UseCases"] + section,
+  .page section[data-sector-dark-band="true"] + section,
+  .page .darkBand + section {
+    margin-top: 0 !important;
+    padding-top: 2.2rem !important;
   }
 }
 
@@ -7066,6 +4892,233 @@
     height: auto !important;
     min-height: 400px !important;
     margin: 0 !important;
+  }
+}
+
+/* =====================================================
+   ZZZ SECTORES MOBILE LIGHT FLOW FIX FINAL
+   Mobile:
+   - overview después de certificaciones queda claro
+   - elimina imagen oscura del overviewMobileBg
+   - CTA final no se desborda ni se corta
+   ===================================================== */
+
+@media (max-width: 900px) {
+  /* El overview después de certificaciones NO debe parecer otro hero */
+  .page .overview,
+  .page .overviewMobileBg,
+  .page section[class*="overview"],
+  .page section[class*="Overview"] {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+    margin: 0 !important;
+    padding: 1.45rem 22px 2.5rem !important;
+    background: #f4f1eb !important;
+    background-image: none !important;
+    color: #07111d !important;
+    overflow: hidden !important;
+    transform: none !important;
+  }
+
+  .page .overview::before,
+  .page .overview::after,
+  .page .overviewMobileBg::before,
+  .page .overviewMobileBg::after,
+  .page section[class*="overview"]::before,
+  .page section[class*="overview"]::after,
+  .page section[class*="Overview"]::before,
+  .page section[class*="Overview"]::after {
+    content: none !important;
+    display: none !important;
+    background: transparent !important;
+    background-image: none !important;
+    opacity: 0 !important;
+  }
+
+  .page .overviewCopy,
+  .page .overviewContent,
+  .page .overviewInner,
+  .page .overviewGrid {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+
+  .page .overview .eyebrow,
+  .page .overview [class*="eyebrow"],
+  .page .overview [class*="Eyebrow"] {
+    display: block !important;
+    margin: 0 0 .75rem !important;
+    color: #c7a96b !important;
+    font-size: .55rem !important;
+    line-height: 1 !important;
+    letter-spacing: .17em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    background: transparent !important;
+  }
+
+  .page .overview h2 {
+    max-width: 330px !important;
+    margin: 0 !important;
+    color: #07111d !important;
+    font-size: clamp(1.9rem, 8.2vw, 2.35rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.055em !important;
+    text-align: left !important;
+    text-shadow: none !important;
+  }
+
+  .page .overview p {
+    max-width: 320px !important;
+    margin: 1.15rem 0 0 !important;
+    color: rgba(5, 12, 22, .78) !important;
+    font-size: .95rem !important;
+    line-height: 1.62 !important;
+    text-align: left !important;
+    text-shadow: none !important;
+  }
+
+  .page .overview a {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 50px !important;
+    margin: 1.55rem 0 0 !important;
+    padding: 0 .95rem !important;
+    border-radius: 999px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: normal !important;
+    text-wrap: balance !important;
+    font-size: .66rem !important;
+    line-height: 1.08 !important;
+    letter-spacing: .045em !important;
+  }
+
+  /* Sin pilares/cards en mobile */
+  .page .overview .pillars,
+  .page .overview .pillarGrid,
+  .page .overview .features,
+  .page .overview .featureGrid,
+  .page .pillars,
+  .page .pillarGrid {
+    display: none !important;
+  }
+
+  /* CTA final: no más corte lateral */
+  .page .finalCta,
+  .page section[data-across-final-cta="true"],
+  .page section[data-sector-final-cta="true"] {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: 400px !important;
+    margin: 0 !important;
+    padding: 3.25rem 22px 3.6rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    overflow: hidden !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+  }
+
+  .page .finalCta > *,
+  .page section[data-across-final-cta="true"] > *,
+  .page section[data-sector-final-cta="true"] > * {
+    position: relative !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    max-width: 315px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+
+  .page .finalCta h2,
+  .page section[data-across-final-cta="true"] h2,
+  .page section[data-sector-final-cta="true"] h2 {
+    max-width: 310px !important;
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: clamp(1.95rem, 8.4vw, 2.42rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.055em !important;
+    text-align: left !important;
+  }
+
+  .page .finalCta p,
+  .page section[data-across-final-cta="true"] p,
+  .page section[data-sector-final-cta="true"] p {
+    max-width: 300px !important;
+    margin: 1.05rem 0 0 !important;
+    color: rgba(255,255,255,.9) !important;
+    font-size: .93rem !important;
+    line-height: 1.55 !important;
+    text-align: left !important;
+  }
+
+  .page .finalCta a,
+  .page section[data-across-final-cta="true"] a,
+  .page section[data-sector-final-cta="true"] a {
+    width: 100% !important;
+    max-width: 310px !important;
+    min-height: 52px !important;
+    margin: 1.45rem 0 0 !important;
+    padding: 0 .95rem !important;
+    border-radius: 999px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: normal !important;
+    text-wrap: balance !important;
+    font-size: .64rem !important;
+    line-height: 1.08 !important;
+    letter-spacing: .045em !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .page .overview,
+  .page .overviewMobileBg,
+  .page section[class*="overview"],
+  .page section[class*="Overview"] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .page .overview h2 {
+    max-width: 300px !important;
+    font-size: 1.95rem !important;
+  }
+
+  .page .overview p {
+    max-width: 295px !important;
+    font-size: .9rem !important;
+  }
+
+  .page .finalCta,
+  .page section[data-across-final-cta="true"],
+  .page section[data-sector-final-cta="true"] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    min-height: 390px !important;
+  }
+
+  .page .finalCta > *,
+  .page section[data-across-final-cta="true"] > *,
+  .page section[data-sector-final-cta="true"] > * {
+    max-width: 300px !important;
   }
 }
 
@@ -7591,6 +5644,369 @@
 .page .finalCta *,
 .page section[data-across-final-cta="true"] * {
   text-shadow-color: rgba(0, 0, 0, .34) !important;
+}
+
+/* =====================================================
+   ZZZ SECTORES HERO SAME AS SERVICES FINAL LOCK
+   Iguala heroes de sectores con medidas usadas en servicios.
+   Arregla iPad Mini, Fold, Nest Hub y mobile.
+   No toca servicios ni home.
+   ===================================================== */
+
+.page > .hero[data-sector-hero="true"] {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.page > .hero[data-sector-hero="true"] [data-hero-role="desktop-image"],
+.page > .hero[data-sector-hero="true"] [data-hero-role="mobile-image"] {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  z-index: -4 !important;
+}
+
+.page > .hero[data-sector-hero="true"] [data-hero-role="overlay"] {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -3 !important;
+}
+
+/* La tarjeta lateral no va en tamaños medianos/chicos */
+@media (max-width: 1200px) {
+  .page > .hero[data-sector-hero="true"] [data-hero-role="card"],
+  .page > .hero[data-sector-hero="true"] .operationCard {
+    display: none !important;
+  }
+}
+
+/* DESKTOP REAL */
+@media (min-width: 1201px) {
+  .page > .hero[data-sector-hero="true"] {
+    height: 680px !important;
+    min-height: 680px !important;
+    max-height: 760px !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="desktop-image"] {
+    display: block !important;
+    object-position: center center !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="mobile-image"] {
+    display: none !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="inner"] {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 150px !important;
+    left: clamp(72px, 6.8vw, 118px) !important;
+    right: clamp(72px, 6.8vw, 118px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="content"] {
+    max-width: 620px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="title"] {
+    max-width: 620px !important;
+    margin: 0 !important;
+    font-size: clamp(3rem, 3.55vw, 4rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.052em !important;
+    font-weight: 950 !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="text"] {
+    max-width: 520px !important;
+    margin: .95rem 0 0 !important;
+    font-size: .9rem !important;
+    line-height: 1.44 !important;
+    font-weight: 650 !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="actions"] {
+    display: flex !important;
+    gap: .75rem !important;
+    margin: 1.2rem 0 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="actions"] a {
+    min-height: 40px !important;
+    padding: 0 1.15rem !important;
+    font-size: .62rem !important;
+  }
+}
+
+/* DESKTOP BAJO / NEST HUB 1024x600 */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .page > .hero[data-sector-hero="true"] {
+    height: 500px !important;
+    min-height: 500px !important;
+    max-height: 500px !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="desktop-image"] {
+    display: block !important;
+    object-position: center center !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="mobile-image"] {
+    display: none !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="inner"] {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 140px !important;
+    left: clamp(46px, 5.8vw, 64px) !important;
+    right: clamp(42px, 5.8vw, 64px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="content"] {
+    max-width: 520px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="title"] {
+    max-width: 520px !important;
+    margin: 0 !important;
+    font-size: clamp(2.28rem, 4vw, 2.72rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.05em !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="text"] {
+    max-width: 445px !important;
+    margin: .78rem 0 0 !important;
+    font-size: .76rem !important;
+    line-height: 1.42 !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="actions"] {
+    display: flex !important;
+    gap: .62rem !important;
+    margin: 1rem 0 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="actions"] a {
+    min-height: 36px !important;
+    padding: 0 1.05rem !important;
+    font-size: .54rem !important;
+  }
+}
+
+/* NEST HUB / BAJA ALTURA */
+@media (min-width: 980px) and (max-width: 1100px) and (max-height: 650px) {
+  .page > .hero[data-sector-hero="true"] {
+    height: 480px !important;
+    min-height: 480px !important;
+    max-height: 480px !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="inner"] {
+    top: 136px !important;
+    left: 58px !important;
+    right: 58px !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="title"] {
+    font-size: 2.42rem !important;
+    max-width: 500px !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="text"] {
+    max-width: 420px !important;
+    font-size: .72rem !important;
+  }
+}
+
+/* TABLET VERTICAL / iPad Mini / Fold */
+@media (min-width: 701px) and (max-width: 900px) {
+  .page > .hero[data-sector-hero="true"] {
+    height: 560px !important;
+    min-height: 560px !important;
+    max-height: 560px !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="desktop-image"] {
+    display: block !important;
+    object-position: center center !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="mobile-image"] {
+    display: none !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="inner"] {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 122px !important;
+    left: clamp(46px, 7vw, 62px) !important;
+    right: clamp(46px, 7vw, 62px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="content"] {
+    max-width: 430px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="title"] {
+    max-width: 430px !important;
+    margin: 0 !important;
+    font-size: clamp(2.05rem, 5.1vw, 2.58rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.045em !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="text"] {
+    max-width: 370px !important;
+    margin: .8rem 0 0 !important;
+    font-size: .76rem !important;
+    line-height: 1.42 !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="actions"] {
+    display: flex !important;
+    gap: .58rem !important;
+    margin: 1rem 0 0 !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="actions"] a {
+    min-height: 36px !important;
+    padding: 0 1rem !important;
+    font-size: .54rem !important;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .page > .hero[data-sector-hero="true"] {
+    height: 465px !important;
+    min-height: 465px !important;
+    max-height: 465px !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="desktop-image"] {
+    display: none !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="mobile-image"] {
+    display: block !important;
+    object-position: center center !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="inner"] {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 86px !important;
+    left: 20px !important;
+    right: 20px !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="content"] {
+    max-width: 318px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="title"] {
+    max-width: 318px !important;
+    margin: 0 !important;
+    font-size: clamp(1.68rem, 8.1vw, 2.08rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.045em !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="text"] {
+    max-width: 292px !important;
+    margin: .68rem 0 0 !important;
+    font-size: .62rem !important;
+    line-height: 1.36 !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="actions"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    max-width: 250px !important;
+    margin: .92rem 0 0 !important;
+    gap: .5rem !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="actions"] a {
+    width: 100% !important;
+    min-height: 34px !important;
+    padding: 0 .8rem !important;
+    font-size: .52rem !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="actions"] a:nth-of-type(2) {
+    display: none !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .page > .hero[data-sector-hero="true"] {
+    height: 455px !important;
+    min-height: 455px !important;
+    max-height: 455px !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="inner"] {
+    top: 84px !important;
+    left: 18px !important;
+    right: 18px !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="content"] {
+    max-width: 300px !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="title"] {
+    max-width: 300px !important;
+    font-size: 1.74rem !important;
+  }
+
+  .page > .hero[data-sector-hero="true"] [data-hero-role="text"] {
+    max-width: 282px !important;
+    font-size: .6rem !important;
+  }
 }
 
 /* =====================================================
@@ -8717,48 +7133,221 @@
 }
 
 /* =====================================================
-   ZZZ DARK OVERLAY EXACT SECTIONS FINAL
-   Overlay unificado SOLO para secciones marcadas:
-   services / darkBand / finalCta.
-   No toca hero ni overview.
+   ZZZ ALL SECTORS AFTER CERT TYPOGRAPHY HARD LOCK FINAL
+   Post-certificaciones en TODOS los sectores:
+   - misma letra que energías renovables
+   - h2 interno menor que hero
+   - no pelea visualmente con hero
    ===================================================== */
 
-.page section[data-dark-overlay="services"],
-.page section[data-dark-overlay="darkBand"],
-.page section[data-dark-overlay="finalCta"] {
+/* Desktop */
+@media (min-width: 901px) {
+  .page section[data-after-cert-overview="true"] h2,
+  .page section[data-after-cert-overview="true"] .overviewCopy h2,
+  .page .overview.overviewMobileBg h2,
+  .page .overview .overviewCopy h2,
+  .page .overviewCopy h2 {
+    max-width: 430px !important;
+    margin: 0 !important;
+
+    color: #07111d !important;
+    -webkit-text-fill-color: #07111d !important;
+
+    font-family: inherit !important;
+    font-size: clamp(2rem, 2.35vw, 2.65rem) !important;
+    line-height: 1 !important;
+    letter-spacing: -.048em !important;
+    font-weight: 950 !important;
+
+    text-wrap: balance !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    background-image: none !important;
+  }
+
+  .page section[data-after-cert-overview="true"] p,
+  .page section[data-after-cert-overview="true"] .overviewCopy p,
+  .page .overview.overviewMobileBg p,
+  .page .overview .overviewCopy p,
+  .page .overviewCopy p {
+    max-width: 380px !important;
+    margin-top: 1rem !important;
+
+    color: rgba(7, 17, 29, .72) !important;
+    -webkit-text-fill-color: rgba(7, 17, 29, .72) !important;
+
+    font-family: inherit !important;
+    font-size: .92rem !important;
+    line-height: 1.58 !important;
+    font-weight: 450 !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 701px) and (max-width: 900px) {
+  .page section[data-after-cert-overview="true"] h2,
+  .page section[data-after-cert-overview="true"] .overviewCopy h2,
+  .page .overview.overviewMobileBg h2,
+  .page .overview .overviewCopy h2,
+  .page .overviewCopy h2 {
+    max-width: 370px !important;
+
+    color: #07111d !important;
+    -webkit-text-fill-color: #07111d !important;
+
+    font-family: inherit !important;
+    font-size: clamp(1.65rem, 4vw, 2rem) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -.044em !important;
+    font-weight: 950 !important;
+
+    text-wrap: balance !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    background-image: none !important;
+  }
+
+  .page section[data-after-cert-overview="true"] p,
+  .page section[data-after-cert-overview="true"] .overviewCopy p,
+  .page .overview.overviewMobileBg p,
+  .page .overview .overviewCopy p,
+  .page .overviewCopy p {
+    max-width: 350px !important;
+    font-size: .84rem !important;
+    line-height: 1.5 !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .page section[data-after-cert-overview="true"],
+  .page .overview.overviewMobileBg,
+  .page .overview {
+    padding-top: 1.45rem !important;
+    padding-bottom: 1.9rem !important;
+  }
+
+  .page section[data-after-cert-overview="true"] h2,
+  .page section[data-after-cert-overview="true"] .overviewCopy h2,
+  .page .overview.overviewMobileBg h2,
+  .page .overview .overviewCopy h2,
+  .page .overviewCopy h2 {
+    max-width: 300px !important;
+    margin: 0 !important;
+
+    color: #07111d !important;
+    -webkit-text-fill-color: #07111d !important;
+
+    font-family: inherit !important;
+    font-size: clamp(1.34rem, 5.65vw, 1.58rem) !important;
+    line-height: 1.03 !important;
+    letter-spacing: -.04em !important;
+    font-weight: 950 !important;
+
+    text-wrap: balance !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    background-image: none !important;
+  }
+
+  .page section[data-after-cert-overview="true"] p,
+  .page section[data-after-cert-overview="true"] .overviewCopy p,
+  .page .overview.overviewMobileBg p,
+  .page .overview .overviewCopy p,
+  .page .overviewCopy p {
+    max-width: 300px !important;
+    margin-top: .85rem !important;
+
+    color: rgba(7, 17, 29, .72) !important;
+    -webkit-text-fill-color: rgba(7, 17, 29, .72) !important;
+
+    font-family: inherit !important;
+    font-size: .78rem !important;
+    line-height: 1.48 !important;
+    font-weight: 450 !important;
+  }
+
+  .page section[data-after-cert-overview="true"] .eyebrow,
+  .page section[data-after-cert-overview="true"] [class*="eyebrow"],
+  .page .overview .eyebrow,
+  .page .overview [class*="eyebrow"],
+  .page .overviewMobileBg .eyebrow,
+  .page .overviewMobileBg [class*="eyebrow"] {
+    margin-bottom: .62rem !important;
+
+    color: #c7a96b !important;
+    -webkit-text-fill-color: #c7a96b !important;
+
+    font-family: inherit !important;
+    font-size: .52rem !important;
+    line-height: 1 !important;
+    letter-spacing: .18em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  .page section[data-after-cert-overview="true"] a,
+  .page .overview a,
+  .page .overviewMobileBg a {
+    max-width: 300px !important;
+    min-height: 48px !important;
+    margin-top: 1.15rem !important;
+    font-size: .56rem !important;
+  }
+}
+
+/* Mobile chico */
+@media (max-width: 390px) {
+  .page section[data-after-cert-overview="true"] h2,
+  .page section[data-after-cert-overview="true"] .overviewCopy h2,
+  .page .overview.overviewMobileBg h2,
+  .page .overview .overviewCopy h2,
+  .page .overviewCopy h2 {
+    font-size: 1.38rem !important;
+    max-width: 286px !important;
+  }
+
+  .page section[data-after-cert-overview="true"] p,
+  .page section[data-after-cert-overview="true"] .overviewCopy p,
+  .page .overview.overviewMobileBg p,
+  .page .overview .overviewCopy p,
+  .page .overviewCopy p {
+    font-size: .76rem !important;
+  }
+}
+
+/* =====================================================
+   ZZZ UNIFIED DARK IMAGE OVERLAY FINAL
+   Oscurecido uniforme para secciones internas con imagen/video.
+   NO toca el hero.
+   Mood: imagen visible + velo azul oscuro premium.
+   ===================================================== */
+
+/* Secciones oscuras internas */
+.page .services,
+.page .darkBand,
+.page .finalCta,
+.page section[data-across-final-cta="true"],
+.page section[data-sector-final-cta="true"],
+.page section[data-energy-services-bg="true"],
+.page section[data-energy-final-video="true"] {
   position: relative !important;
   overflow: hidden !important;
   isolation: isolate !important;
-  background-color: #07111d !important;
 }
 
-/* Capa de imagen/video siempre debajo */
-.page section[data-dark-overlay] .darkBandImage,
-.page section[data-dark-overlay] .darkBandImage img,
-.page section[data-dark-overlay] .finalCtaImage,
-.page section[data-dark-overlay] .finalCtaImage img,
-.page section[data-dark-overlay] .darkBandVideoLayer,
-.page section[data-dark-overlay] .finalCtaVideoLayer {
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-}
-
-.page section[data-dark-overlay] .darkBandImage img,
-.page section[data-dark-overlay] .finalCtaImage img,
-.page section[data-dark-overlay] .darkBandVideo,
-.page section[data-dark-overlay] .finalCtaVideo {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center center !important;
-  display: block !important;
-}
-
-/* Overlay exacto: como la sección buena de consumo/distribución */
-.page section[data-dark-overlay]::before {
+/* Overlay estándar: igual al look correcto de consumo/distribución */
+.page .services::before,
+.page .darkBand::before,
+.page .finalCta::before,
+.page section[data-across-final-cta="true"]::before,
+.page section[data-sector-final-cta="true"]::before,
+.page section[data-energy-services-bg="true"]::before,
+.page section[data-energy-final-video="true"]::before {
   content: "" !important;
   position: absolute !important;
   inset: 0 !important;
@@ -8768,79 +7357,123 @@
   background:
     linear-gradient(
       90deg,
-      rgba(3, 10, 18, .94) 0%,
-      rgba(3, 10, 18, .88) 34%,
-      rgba(5, 18, 31, .68) 66%,
-      rgba(7, 21, 34, .46) 100%
+      rgba(3, 10, 18, .92) 0%,
+      rgba(3, 10, 18, .86) 30%,
+      rgba(5, 18, 31, .68) 62%,
+      rgba(7, 21, 34, .48) 100%
     ),
     linear-gradient(
       180deg,
-      rgba(3, 10, 18, .16) 0%,
+      rgba(3, 10, 18, .18) 0%,
       rgba(3, 10, 18, .72) 100%
     ) !important;
 }
 
-/* No dejar otra capa encima */
-.page section[data-dark-overlay]::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* Todo el contenido arriba */
-.page section[data-dark-overlay] > *:not(.darkBandImage):not(.finalCtaImage):not(.darkBandVideoLayer):not(.finalCtaVideoLayer) {
+/* Contenido siempre por encima del oscurecido */
+.page .services > *,
+.page .darkBand > *,
+.page .finalCta > *,
+.page section[data-across-final-cta="true"] > *,
+.page section[data-sector-final-cta="true"] > *,
+.page section[data-energy-services-bg="true"] > *,
+.page section[data-energy-final-video="true"] > * {
   position: relative !important;
   z-index: 2 !important;
 }
 
-/* Cards sobre imagen oscura */
-.page section[data-dark-overlay="services"] article,
-.page section[data-dark-overlay="darkBand"] article {
+/* Videos o imágenes de fondo quedan debajo del overlay */
+.page .darkBandVideoLayer,
+.page .darkBandVideo,
+.page .finalCtaVideoLayer,
+.page .finalCtaVideo {
+  z-index: 0 !important;
+}
+
+/* Evita capas sólidas encima de imagen/video */
+.page .services::after,
+.page .darkBand::after,
+.page .finalCta::after,
+.page section[data-across-final-cta="true"]::after,
+.page section[data-sector-final-cta="true"]::after,
+.page section[data-energy-services-bg="true"]::after,
+.page section[data-energy-final-video="true"]::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Textos en secciones oscuras: marfil */
+.page .services h2,
+.page .services h3,
+.page .darkBand h2,
+.page .darkBand h3,
+.page .finalCta h2,
+.page .finalCta h3,
+.page section[data-across-final-cta="true"] h2,
+.page section[data-across-final-cta="true"] h3,
+.page section[data-sector-final-cta="true"] h2,
+.page section[data-sector-final-cta="true"] h3 {
+  color: #f4efe5 !important;
+  -webkit-text-fill-color: #f4efe5 !important;
+}
+
+.page .services p,
+.page .darkBand p,
+.page .finalCta p,
+.page section[data-across-final-cta="true"] p,
+.page section[data-sector-final-cta="true"] p {
+  color: rgba(244, 239, 229, .78) !important;
+  -webkit-text-fill-color: rgba(244, 239, 229, .78) !important;
+}
+
+/* Eyebrow dorado */
+.page .services .eyebrow,
+.page .darkBand .eyebrow,
+.page .finalCta .eyebrow,
+.page .services [class*="eyebrow"],
+.page .darkBand [class*="eyebrow"],
+.page .finalCta [class*="eyebrow"],
+.page section[data-across-final-cta="true"] [class*="eyebrow"],
+.page section[data-sector-final-cta="true"] [class*="eyebrow"] {
+  color: #c7a96b !important;
+  -webkit-text-fill-color: #c7a96b !important;
+}
+
+/* Cards internas sobre imagen oscura */
+.page .services article,
+.page .darkBand article {
   background: rgba(3, 10, 18, .34) !important;
   border-color: rgba(244, 239, 229, .16) !important;
   backdrop-filter: blur(2px) !important;
 }
 
-/* Texto marfil en secciones oscuras */
-.page section[data-dark-overlay] h2,
-.page section[data-dark-overlay] h3,
-.page section[data-dark-overlay] strong {
-  color: #f4efe5 !important;
-  -webkit-text-fill-color: #f4efe5 !important;
-}
-
-.page section[data-dark-overlay] p,
-.page section[data-dark-overlay] span,
-.page section[data-dark-overlay] small {
-  color: rgba(244, 239, 229, .78) !important;
-  -webkit-text-fill-color: rgba(244, 239, 229, .78) !important;
-}
-
-.page section[data-dark-overlay] .eyebrow,
-.page section[data-dark-overlay] [class*="eyebrow"] {
-  color: #c7a96b !important;
-  -webkit-text-fill-color: #c7a96b !important;
-}
-
 /* Iconos */
-.page section[data-dark-overlay] i {
+.page .services i,
+.page .darkBand i {
   border-color: rgba(118, 188, 215, .38) !important;
   background: rgba(18, 63, 89, .30) !important;
   color: #76bcd7 !important;
 }
 
-.page section[data-dark-overlay] svg {
+.page .services svg,
+.page .darkBand svg {
   stroke: #76bcd7 !important;
 }
 
-/* Mobile: mismo tono, más vertical */
+/* Mobile: mantener el mismo tono cuando la sección aparezca */
 @media (max-width: 900px) {
-  .page section[data-dark-overlay]::before {
+  .page .services::before,
+  .page .darkBand::before,
+  .page .finalCta::before,
+  .page section[data-across-final-cta="true"]::before,
+  .page section[data-sector-final-cta="true"]::before,
+  .page section[data-energy-services-bg="true"]::before,
+  .page section[data-energy-final-video="true"]::before {
     background:
       linear-gradient(
         180deg,
-        rgba(3, 10, 18, .88) 0%,
+        rgba(3, 10, 18, .86) 0%,
         rgba(5, 18, 31, .76) 48%,
-        rgba(3, 10, 18, .90) 100%
+        rgba(3, 10, 18, .88) 100%
       ) !important;
   }
 }
