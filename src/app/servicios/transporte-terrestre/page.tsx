@@ -757,7 +757,7 @@ export default function TransporteTerrestrePage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/transporte-terrestre-mobile/trannsporte-terrestre2.png')" } as CSSProperties}>
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/transporte-terrestre-mobile/trannsporte-terrestre2.png')" } as CSSProperties} data-across-final-cta="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>

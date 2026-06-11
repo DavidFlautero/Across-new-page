@@ -4943,78 +4943,109 @@ main[class*="page"] section[data-across-final-cta="true"] a {
 }
 
 /* =====================================================
-   ACROSS SERVICE DESKTOP COMPACT TYPOGRAPHY FINAL
-   Baja tamaños en desktop para servicios.
-   La home no se toca.
+   ACROSS SERVICE DARK BANDS HOME-LIKE GLOBAL
+   Bandas oscuras internas tipo:
+   "Soluciones marítimas..."
+   "Nuestros servicios..."
+   Mismo oscurecido que la home y dimensiones más contenidas.
    ===================================================== */
 
-@media (min-width: 901px) {
-  /* HERO servicios: antes quedó gigante */
-  [data-standard-service-hero="true"] [data-hero-role="title"],
-  [data-aereo-hero="true"] [class*="title"] {
-    font-size: clamp(2.7rem, 3.35vw, 3.85rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.05em !important;
-    max-width: 620px !important;
-  }
-
-  [data-standard-service-hero="true"] [data-hero-role="text"],
-  [data-aereo-hero="true"] [class*="subtitle"] {
-    font-size: .88rem !important;
-    line-height: 1.44 !important;
-    max-width: 520px !important;
-  }
-
-  [data-standard-service-hero="true"] [data-hero-role="eyebrow"],
-  [data-aereo-hero="true"] [class*="eyebrow"] {
-    font-size: .62rem !important;
-    letter-spacing: .17em !important;
-  }
-
-  [data-standard-service-hero="true"] [data-hero-role="actions"] a,
-  [data-aereo-hero="true"] [class*="actions"] a {
-    font-size: .62rem !important;
-    min-height: 40px !important;
-    padding-inline: 1.15rem !important;
-  }
-
-  /* Overview blanco: menos gigante */
-  main[class*="page"]:has([data-standard-service-hero="true"]) [class*="overview"] h2,
-  main[class*="page"]:has([data-aereo-hero="true"]) [class*="overview"] h2 {
-    font-size: clamp(2.55rem, 3.45vw, 3.85rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.055em !important;
-  }
-
-  main[class*="page"]:has([data-standard-service-hero="true"]) [class*="overview"] p,
-  main[class*="page"]:has([data-aereo-hero="true"]) [class*="overview"] p {
-    font-size: .95rem !important;
-    line-height: 1.58 !important;
-  }
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="dark"]:not([data-across-final-cta="true"]),
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="Dark"]:not([data-across-final-cta="true"]),
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="services"]:not([data-across-final-cta="true"]),
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="Services"]:not([data-across-final-cta="true"]),
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="solutions"]:not([data-across-final-cta="true"]),
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="Solutions"]:not([data-across-final-cta="true"]),
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="band"]:not([data-across-final-cta="true"]),
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="Band"]:not([data-across-final-cta="true"]) {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background-color: #0b2638 !important;
 }
 
-/* Desktop ancho grande: no pasar de tamaño empresarial */
-@media (min-width: 1400px) {
-  [data-standard-service-hero="true"] [data-hero-role="title"],
-  [data-aereo-hero="true"] [class*="title"] {
-    font-size: 3.75rem !important;
-  }
-
-  main[class*="page"]:has([data-standard-service-hero="true"]) [class*="overview"] h2,
-  main[class*="page"]:has([data-aereo-hero="true"]) [class*="overview"] h2 {
-    font-size: 3.75rem !important;
-  }
+/* No tocar related services, overview ni trust */
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="related"],
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="Related"],
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="overview"],
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="Overview"],
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="trust"],
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="Trust"] {
+  background-color: unset;
 }
 
+/* Contenido arriba */
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="dark"]:not([data-across-final-cta="true"]) > *,
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="Dark"]:not([data-across-final-cta="true"]) > *,
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="services"]:not([data-across-final-cta="true"]) > *,
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="Services"]:not([data-across-final-cta="true"]) > *,
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="solutions"]:not([data-across-final-cta="true"]) > *,
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="Solutions"]:not([data-across-final-cta="true"]) > *,
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="band"]:not([data-across-final-cta="true"]) > *,
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="Band"]:not([data-across-final-cta="true"]) > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
 
-/* =====================================================
-   ACROSS SERVICE DARK BANDS COMPACT ONLY FINAL
-   Bandas oscuras internas:
-   - NO pisa ::before / ::after
-   - NO pisa background-image
-   - solo compacta tamaño y tipografía
-   ===================================================== */
+/* Overlay estilo home */
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="dark"]:not([data-across-final-cta="true"])::before,
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="Dark"]:not([data-across-final-cta="true"])::before,
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="services"]:not([data-across-final-cta="true"])::before,
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="Services"]:not([data-across-final-cta="true"])::before,
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="solutions"]:not([data-across-final-cta="true"])::before,
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="Solutions"]:not([data-across-final-cta="true"])::before,
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="band"]:not([data-across-final-cta="true"])::before,
+main[class*="page"]:has([data-standard-service-hero="true"])
+section[class*="Band"]:not([data-across-final-cta="true"])::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 20, 34, .54) 0%,
+      rgba(8, 37, 56, .42) 48%,
+      rgba(10, 55, 78, .30) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(2, 8, 14, .18) 0%,
+      rgba(2, 8, 14, .46) 100%
+    ) !important;
+}
 
+/* Desktop: dimensiones contenidas */
 @media (min-width: 901px) {
   main[class*="page"]:has([data-standard-service-hero="true"])
   section[class*="dark"]:not([data-across-final-cta="true"]),
@@ -5027,75 +5058,40 @@ main[class*="page"] section[data-across-final-cta="true"] a {
   main[class*="page"]:has([data-standard-service-hero="true"])
   section[class*="solutions"]:not([data-across-final-cta="true"]),
   main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Solutions"]:not([data-across-final-cta="true"]) {
+  section[class*="Solutions"]:not([data-across-final-cta="true"]),
+  main[class*="page"]:has([data-standard-service-hero="true"])
+  section[class*="band"]:not([data-across-final-cta="true"]),
+  main[class*="page"]:has([data-standard-service-hero="true"])
+  section[class*="Band"]:not([data-across-final-cta="true"]) {
     min-height: auto !important;
-    padding-top: clamp(3.2rem, 4.4vw, 4.6rem) !important;
-    padding-bottom: clamp(3.4rem, 4.6vw, 4.8rem) !important;
+    padding-top: clamp(3.8rem, 5vw, 5.2rem) !important;
+    padding-bottom: clamp(4rem, 5.4vw, 5.6rem) !important;
   }
 
   main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="dark"]:not([data-across-final-cta="true"]) h2,
+  section[class*="dark"] h2,
   main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Dark"]:not([data-across-final-cta="true"]) h2,
+  section[class*="Dark"] h2,
   main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="services"]:not([data-across-final-cta="true"]) h2,
+  section[class*="services"] h2,
   main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Services"]:not([data-across-final-cta="true"]) h2,
+  section[class*="Services"] h2,
   main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="solutions"]:not([data-across-final-cta="true"]) h2,
+  section[class*="solutions"] h2,
   main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Solutions"]:not([data-across-final-cta="true"]) h2 {
-    max-width: 760px !important;
-    font-size: clamp(2.25rem, 3.15vw, 3.25rem) !important;
+  section[class*="Solutions"] h2,
+  main[class*="page"]:has([data-standard-service-hero="true"])
+  section[class*="band"] h2,
+  main[class*="page"]:has([data-standard-service-hero="true"])
+  section[class*="Band"] h2 {
+    max-width: 850px !important;
+    font-size: clamp(2.45rem, 3.6vw, 3.8rem) !important;
     line-height: .98 !important;
-    letter-spacing: -.052em !important;
-  }
-
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="dark"]:not([data-across-final-cta="true"]) p,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Dark"]:not([data-across-final-cta="true"]) p,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="services"]:not([data-across-final-cta="true"]) p,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Services"]:not([data-across-final-cta="true"]) p,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="solutions"]:not([data-across-final-cta="true"]) p,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Solutions"]:not([data-across-final-cta="true"]) p {
-    font-size: .88rem !important;
-    line-height: 1.5 !important;
+    letter-spacing: -.055em !important;
   }
 }
 
-/* Cards internas de bandas oscuras más compactas */
-@media (min-width: 901px) {
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="services"]:not([data-across-final-cta="true"]) article,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Services"]:not([data-across-final-cta="true"]) article,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="solutions"]:not([data-across-final-cta="true"]) article,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Solutions"]:not([data-across-final-cta="true"]) article {
-    min-height: 150px !important;
-    padding: 1.35rem 1.45rem !important;
-  }
-
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="services"]:not([data-across-final-cta="true"]) h3,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Services"]:not([data-across-final-cta="true"]) h3,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="solutions"]:not([data-across-final-cta="true"]) h3,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Solutions"]:not([data-across-final-cta="true"]) h3 {
-    font-size: 1rem !important;
-    line-height: 1.15 !important;
-  }
-}
-
-/* Mobile: mantener legible pero no gigante */
+/* Mobile: no tan oscuro ni tan alto */
 @media (max-width: 700px) {
   main[class*="page"]:has([data-standard-service-hero="true"])
   section[class*="dark"]:not([data-across-final-cta="true"]),
@@ -5108,25 +5104,33 @@ main[class*="page"] section[data-across-final-cta="true"] a {
   main[class*="page"]:has([data-standard-service-hero="true"])
   section[class*="solutions"]:not([data-across-final-cta="true"]),
   main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Solutions"]:not([data-across-final-cta="true"]) {
-    padding-top: 2.8rem !important;
-    padding-bottom: 3rem !important;
+  section[class*="Solutions"]:not([data-across-final-cta="true"]),
+  main[class*="page"]:has([data-standard-service-hero="true"])
+  section[class*="band"]:not([data-across-final-cta="true"]),
+  main[class*="page"]:has([data-standard-service-hero="true"])
+  section[class*="Band"]:not([data-across-final-cta="true"]) {
+    padding-top: 3rem !important;
+    padding-bottom: 3.2rem !important;
   }
 
   main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="dark"]:not([data-across-final-cta="true"]) h2,
+  section[class*="dark"] h2,
   main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Dark"]:not([data-across-final-cta="true"]) h2,
+  section[class*="Dark"] h2,
   main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="services"]:not([data-across-final-cta="true"]) h2,
+  section[class*="services"] h2,
   main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Services"]:not([data-across-final-cta="true"]) h2,
+  section[class*="Services"] h2,
   main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="solutions"]:not([data-across-final-cta="true"]) h2,
+  section[class*="solutions"] h2,
   main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Solutions"]:not([data-across-final-cta="true"]) h2 {
-    font-size: clamp(1.85rem, 7.6vw, 2.25rem) !important;
-    line-height: .99 !important;
+  section[class*="Solutions"] h2,
+  main[class*="page"]:has([data-standard-service-hero="true"])
+  section[class*="band"] h2,
+  main[class*="page"]:has([data-standard-service-hero="true"])
+  section[class*="Band"] h2 {
+    font-size: clamp(1.95rem, 8.2vw, 2.45rem) !important;
+    line-height: .98 !important;
   }
 }
 

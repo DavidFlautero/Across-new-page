@@ -986,7 +986,7 @@ export default function EcommercePage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/heroecommerce.png')" } as CSSProperties} data-ecommerce-cta="true">
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/heroecommerce.png')" } as CSSProperties} data-ecommerce-cta="true" data-across-final-cta="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>

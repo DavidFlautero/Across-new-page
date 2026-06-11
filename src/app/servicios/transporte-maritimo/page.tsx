@@ -742,7 +742,7 @@ export default function TransporteMaritimoPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/transporte-maritimo-mobile/maritimo2-mobile.png')" } as CSSProperties}>
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/transporte-maritimo-mobile/maritimo2-mobile.png')" } as CSSProperties} data-across-final-cta="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>

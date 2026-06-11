@@ -986,7 +986,7 @@ export default function AduanasPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/aduanashero.png')" } as CSSProperties} data-aduanas-cta="true">
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/aduanashero.png')" } as CSSProperties} data-aduanas-cta="true" data-across-final-cta="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>

@@ -757,7 +757,7 @@ export default function CargasEspecialesPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/cargas-especiales-mobile/carga-especial2.png')" } as CSSProperties} data-across-final-cta="true">
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/cargas-especiales-mobile/carga-especial2.png')" } as CSSProperties}>
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>

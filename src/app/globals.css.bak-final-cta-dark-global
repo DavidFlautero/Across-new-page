@@ -4800,334 +4800,122 @@ main[class*="page"] section[data-temp-cta="true"] a {
   line-height: 1.08 !important;
 }
 
+
+
 /* =====================================================
    ACROSS FINAL CTA DARK SYSTEM GLOBAL
-   CTA final estilo home:
-   azul/transparente, no negro pesado.
+   Unifica el oscuro de las CTA finales en servicios.
+   Todas las secciones marcadas con data-across-final-cta
+   quedan con el mismo tono premium.
    ===================================================== */
 
-main[class*="page"] section[data-across-final-cta="true"] {
+main[class*="page"] section[data-across-final-cta="true"],
+main[class*="page"] section[data-temp-cta="true"],
+main[class*="page"] section[data-almacen-cta="true"],
+main[class*="page"] section[data-aduanas-cta="true"],
+main[class*="page"] section[data-ecommerce-cta="true"] {
   position: relative !important;
   overflow: hidden !important;
   isolation: isolate !important;
   color: #fff !important;
-  background-color: #0b2638 !important;
 }
 
-main[class*="page"] section[data-across-final-cta="true"] > * {
+/* Apagamos nieblas o capas viejas */
+main[class*="page"] section[data-across-final-cta="true"]::before,
+main[class*="page"] section[data-across-final-cta="true"]::after,
+main[class*="page"] section[data-temp-cta="true"]::before,
+main[class*="page"] section[data-temp-cta="true"]::after,
+main[class*="page"] section[data-almacen-cta="true"]::before,
+main[class*="page"] section[data-almacen-cta="true"]::after,
+main[class*="page"] section[data-aduanas-cta="true"]::before,
+main[class*="page"] section[data-aduanas-cta="true"]::after,
+main[class*="page"] section[data-ecommerce-cta="true"]::before,
+main[class*="page"] section[data-ecommerce-cta="true"]::after {
+  content: none !important;
+  display: none !important;
+  opacity: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+}
+
+/* Imagen interna invisible si la sección ya usa background */
+main[class*="page"] section[data-across-final-cta="true"] img,
+main[class*="page"] section[data-across-final-cta="true"] picture,
+main[class*="page"] section[data-temp-cta="true"] img,
+main[class*="page"] section[data-temp-cta="true"] picture,
+main[class*="page"] section[data-almacen-cta="true"] img,
+main[class*="page"] section[data-almacen-cta="true"] picture,
+main[class*="page"] section[data-aduanas-cta="true"] img,
+main[class*="page"] section[data-aduanas-cta="true"] picture,
+main[class*="page"] section[data-ecommerce-cta="true"] img,
+main[class*="page"] section[data-ecommerce-cta="true"] picture {
+  display: none !important;
+}
+
+/* Overlay oscuro uniforme */
+main[class*="page"] section[data-across-final-cta="true"],
+main[class*="page"] section[data-temp-cta="true"],
+main[class*="page"] section[data-almacen-cta="true"],
+main[class*="page"] section[data-aduanas-cta="true"],
+main[class*="page"] section[data-ecommerce-cta="true"] {
+  background-blend-mode: normal !important;
+}
+
+/* Capa oscura real encima del fondo, sin matar la imagen */
+main[class*="page"] section[data-across-final-cta="true"] > *,
+main[class*="page"] section[data-temp-cta="true"] > *,
+main[class*="page"] section[data-almacen-cta="true"] > *,
+main[class*="page"] section[data-aduanas-cta="true"] > *,
+main[class*="page"] section[data-ecommerce-cta="true"] > * {
   position: relative !important;
   z-index: 2 !important;
 }
 
-main[class*="page"] section[data-across-final-cta="true"]::before,
-main[class*="page"] section[data-across-final-cta="true"]::after {
-  content: "" !important;
-  display: block !important;
-  position: absolute !important;
-  inset: 0 !important;
-  pointer-events: none !important;
+/* Desktop/tablet */
+@media (min-width: 701px) {
+  main[class*="page"] section[data-across-final-cta="true"],
+  main[class*="page"] section[data-temp-cta="true"],
+  main[class*="page"] section[data-almacen-cta="true"],
+  main[class*="page"] section[data-aduanas-cta="true"],
+  main[class*="page"] section[data-ecommerce-cta="true"] {
+    min-height: 420px !important;
+    padding-top: 4rem !important;
+    padding-bottom: 4.6rem !important;
+    background-color: #050b12 !important;
+    box-shadow: inset 0 0 0 9999px rgba(3, 7, 13, .56) !important;
+  }
 }
 
-main[class*="page"] section[data-across-final-cta="true"]::before {
-  z-index: 1 !important;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5, 20, 34, .50) 0%,
-      rgba(8, 37, 56, .42) 48%,
-      rgba(10, 55, 78, .28) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,.03) 0%,
-      rgba(5, 20, 34, .34) 100%
-    ) !important;
-}
-
-main[class*="page"] section[data-across-final-cta="true"]::after {
-  z-index: 1 !important;
-  background:
-    radial-gradient(
-      circle at 28% 36%,
-      rgba(255,255,255,.13) 0%,
-      rgba(255,255,255,0) 40%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,.02) 0%,
-      rgba(3,10,18,.20) 100%
-    ) !important;
-}
-
-main[class*="page"] section[data-across-final-cta="true"] img,
-main[class*="page"] section[data-across-final-cta="true"] picture {
-  display: none !important;
-}
-
-main[class*="page"] section[data-across-final-cta="true"] h2 {
-  color: #fff !important;
-  font-family: inherit !important;
-  font-weight: 950 !important;
-  line-height: .98 !important;
-  letter-spacing: -.055em !important;
-  text-wrap: balance !important;
-  text-shadow: 0 14px 34px rgba(0,0,0,.32) !important;
-}
-
-main[class*="page"] section[data-across-final-cta="true"] p {
-  color: rgba(255,255,255,.92) !important;
-  font-family: inherit !important;
-  font-weight: 500 !important;
-  line-height: 1.55 !important;
-  text-shadow: 0 10px 24px rgba(0,0,0,.22) !important;
-}
-
-main[class*="page"] section[data-across-final-cta="true"] a {
-  font-family: inherit !important;
-  font-weight: 950 !important;
-  text-transform: uppercase !important;
-  letter-spacing: .045em !important;
-}
-
-/* CTA final desktop: menos gigante */
-@media (min-width: 901px) {
-  main[class*="page"] section[data-across-final-cta="true"] {
-    min-height: 360px !important;
+/* Mobile */
+@media (max-width: 700px) {
+  main[class*="page"] section[data-across-final-cta="true"],
+  main[class*="page"] section[data-temp-cta="true"],
+  main[class*="page"] section[data-almacen-cta="true"],
+  main[class*="page"] section[data-aduanas-cta="true"],
+  main[class*="page"] section[data-ecommerce-cta="true"] {
+    min-height: 420px !important;
     padding-top: 3.4rem !important;
-    padding-bottom: 3.9rem !important;
+    padding-bottom: 3.8rem !important;
+    background-color: #050b12 !important;
+    box-shadow: inset 0 0 0 9999px rgba(3, 7, 13, .66) !important;
   }
 
-  main[class*="page"] section[data-across-final-cta="true"] h2 {
-    font-size: clamp(2.15rem, 3.4vw, 2.85rem) !important;
+  main[class*="page"] section[data-across-final-cta="true"] h2,
+  main[class*="page"] section[data-temp-cta="true"] h2,
+  main[class*="page"] section[data-almacen-cta="true"] h2,
+  main[class*="page"] section[data-aduanas-cta="true"] h2,
+  main[class*="page"] section[data-ecommerce-cta="true"] h2 {
+    color: #fff !important;
+    text-shadow: 0 18px 40px rgba(0,0,0,.45) !important;
   }
 
-  main[class*="page"] section[data-across-final-cta="true"] p {
-    font-size: .95rem !important;
-  }
-}
-
-/* CTA final tablet */
-@media (min-width: 701px) and (max-width: 900px) {
-  main[class*="page"] section[data-across-final-cta="true"] {
-    min-height: 390px !important;
-    padding-top: 3.5rem !important;
-    padding-bottom: 4rem !important;
-  }
-}
-
-/* CTA final mobile */
-@media (max-width: 700px) {
-  main[class*="page"] section[data-across-final-cta="true"] {
-    min-height: 400px !important;
-    padding-top: 3.25rem !important;
-    padding-bottom: 3.6rem !important;
-  }
-
-  main[class*="page"] section[data-across-final-cta="true"]::before {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(5, 20, 34, .54) 0%,
-        rgba(8, 37, 56, .44) 46%,
-        rgba(3, 10, 18, .62) 100%
-      ) !important;
-  }
-
-  main[class*="page"] section[data-across-final-cta="true"] h2 {
-    font-size: clamp(1.95rem, 8.4vw, 2.45rem) !important;
-  }
-
-  main[class*="page"] section[data-across-final-cta="true"] p {
-    font-size: .93rem !important;
+  main[class*="page"] section[data-across-final-cta="true"] p,
+  main[class*="page"] section[data-temp-cta="true"] p,
+  main[class*="page"] section[data-almacen-cta="true"] p,
+  main[class*="page"] section[data-aduanas-cta="true"] p,
+  main[class*="page"] section[data-ecommerce-cta="true"] p {
+    color: rgba(255,255,255,.88) !important;
+    text-shadow: 0 12px 30px rgba(0,0,0,.38) !important;
   }
 }
-
-/* =====================================================
-   ACROSS SERVICE DESKTOP COMPACT TYPOGRAPHY FINAL
-   Baja tamaños en desktop para servicios.
-   La home no se toca.
-   ===================================================== */
-
-@media (min-width: 901px) {
-  /* HERO servicios: antes quedó gigante */
-  [data-standard-service-hero="true"] [data-hero-role="title"],
-  [data-aereo-hero="true"] [class*="title"] {
-    font-size: clamp(2.7rem, 3.35vw, 3.85rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.05em !important;
-    max-width: 620px !important;
-  }
-
-  [data-standard-service-hero="true"] [data-hero-role="text"],
-  [data-aereo-hero="true"] [class*="subtitle"] {
-    font-size: .88rem !important;
-    line-height: 1.44 !important;
-    max-width: 520px !important;
-  }
-
-  [data-standard-service-hero="true"] [data-hero-role="eyebrow"],
-  [data-aereo-hero="true"] [class*="eyebrow"] {
-    font-size: .62rem !important;
-    letter-spacing: .17em !important;
-  }
-
-  [data-standard-service-hero="true"] [data-hero-role="actions"] a,
-  [data-aereo-hero="true"] [class*="actions"] a {
-    font-size: .62rem !important;
-    min-height: 40px !important;
-    padding-inline: 1.15rem !important;
-  }
-
-  /* Overview blanco: menos gigante */
-  main[class*="page"]:has([data-standard-service-hero="true"]) [class*="overview"] h2,
-  main[class*="page"]:has([data-aereo-hero="true"]) [class*="overview"] h2 {
-    font-size: clamp(2.55rem, 3.45vw, 3.85rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.055em !important;
-  }
-
-  main[class*="page"]:has([data-standard-service-hero="true"]) [class*="overview"] p,
-  main[class*="page"]:has([data-aereo-hero="true"]) [class*="overview"] p {
-    font-size: .95rem !important;
-    line-height: 1.58 !important;
-  }
-}
-
-/* Desktop ancho grande: no pasar de tamaño empresarial */
-@media (min-width: 1400px) {
-  [data-standard-service-hero="true"] [data-hero-role="title"],
-  [data-aereo-hero="true"] [class*="title"] {
-    font-size: 3.75rem !important;
-  }
-
-  main[class*="page"]:has([data-standard-service-hero="true"]) [class*="overview"] h2,
-  main[class*="page"]:has([data-aereo-hero="true"]) [class*="overview"] h2 {
-    font-size: 3.75rem !important;
-  }
-}
-
-
-/* =====================================================
-   ACROSS SERVICE DARK BANDS COMPACT ONLY FINAL
-   Bandas oscuras internas:
-   - NO pisa ::before / ::after
-   - NO pisa background-image
-   - solo compacta tamaño y tipografía
-   ===================================================== */
-
-@media (min-width: 901px) {
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="dark"]:not([data-across-final-cta="true"]),
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Dark"]:not([data-across-final-cta="true"]),
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="services"]:not([data-across-final-cta="true"]),
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Services"]:not([data-across-final-cta="true"]),
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="solutions"]:not([data-across-final-cta="true"]),
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Solutions"]:not([data-across-final-cta="true"]) {
-    min-height: auto !important;
-    padding-top: clamp(3.2rem, 4.4vw, 4.6rem) !important;
-    padding-bottom: clamp(3.4rem, 4.6vw, 4.8rem) !important;
-  }
-
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="dark"]:not([data-across-final-cta="true"]) h2,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Dark"]:not([data-across-final-cta="true"]) h2,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="services"]:not([data-across-final-cta="true"]) h2,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Services"]:not([data-across-final-cta="true"]) h2,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="solutions"]:not([data-across-final-cta="true"]) h2,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Solutions"]:not([data-across-final-cta="true"]) h2 {
-    max-width: 760px !important;
-    font-size: clamp(2.25rem, 3.15vw, 3.25rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.052em !important;
-  }
-
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="dark"]:not([data-across-final-cta="true"]) p,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Dark"]:not([data-across-final-cta="true"]) p,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="services"]:not([data-across-final-cta="true"]) p,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Services"]:not([data-across-final-cta="true"]) p,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="solutions"]:not([data-across-final-cta="true"]) p,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Solutions"]:not([data-across-final-cta="true"]) p {
-    font-size: .88rem !important;
-    line-height: 1.5 !important;
-  }
-}
-
-/* Cards internas de bandas oscuras más compactas */
-@media (min-width: 901px) {
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="services"]:not([data-across-final-cta="true"]) article,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Services"]:not([data-across-final-cta="true"]) article,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="solutions"]:not([data-across-final-cta="true"]) article,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Solutions"]:not([data-across-final-cta="true"]) article {
-    min-height: 150px !important;
-    padding: 1.35rem 1.45rem !important;
-  }
-
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="services"]:not([data-across-final-cta="true"]) h3,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Services"]:not([data-across-final-cta="true"]) h3,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="solutions"]:not([data-across-final-cta="true"]) h3,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Solutions"]:not([data-across-final-cta="true"]) h3 {
-    font-size: 1rem !important;
-    line-height: 1.15 !important;
-  }
-}
-
-/* Mobile: mantener legible pero no gigante */
-@media (max-width: 700px) {
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="dark"]:not([data-across-final-cta="true"]),
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Dark"]:not([data-across-final-cta="true"]),
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="services"]:not([data-across-final-cta="true"]),
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Services"]:not([data-across-final-cta="true"]),
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="solutions"]:not([data-across-final-cta="true"]),
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Solutions"]:not([data-across-final-cta="true"]) {
-    padding-top: 2.8rem !important;
-    padding-bottom: 3rem !important;
-  }
-
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="dark"]:not([data-across-final-cta="true"]) h2,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Dark"]:not([data-across-final-cta="true"]) h2,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="services"]:not([data-across-final-cta="true"]) h2,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Services"]:not([data-across-final-cta="true"]) h2,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="solutions"]:not([data-across-final-cta="true"]) h2,
-  main[class*="page"]:has([data-standard-service-hero="true"])
-  section[class*="Solutions"]:not([data-across-final-cta="true"]) h2 {
-    font-size: clamp(1.85rem, 7.6vw, 2.25rem) !important;
-    line-height: .99 !important;
-  }
-}
-
 

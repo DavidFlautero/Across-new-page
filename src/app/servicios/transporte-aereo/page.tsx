@@ -755,7 +755,7 @@ export default function TransporteAereoPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/hero/cargaAereahero.png')" } as CSSProperties}>
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/hero/cargaAereahero.png')" } as CSSProperties} data-across-final-cta="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>
