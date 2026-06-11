@@ -6069,3 +6069,225 @@
     0 8px 24px rgba(214,192,141,.09),
     inset 0 1px 0 rgba(255,255,255,.82) !important;
 }
+
+/* =====================================================
+   TERRESTRE HERO HOME-LIKE DIMENSIONS ONLY
+   Solo corrige tamaño/posición del hero.
+   No toca secciones internas.
+   Basado en el sistema que funcionó en transporte aéreo.
+   ===================================================== */
+
+.hero {
+  position: relative !important;
+  width: 100% !important;
+  min-height: 92vh !important;
+  height: 100svh !important;
+  max-height: 860px !important;
+
+  display: flex !important;
+  align-items: center !important;
+
+  isolation: isolate !important;
+  overflow: hidden !important;
+
+  background: #07111d !important;
+  color: #fff !important;
+
+  padding: 7rem 6vw 4rem !important;
+}
+
+.heroImage,
+.heroImageDesktop,
+.heroImageMobile {
+  position: absolute !important;
+  inset: 0 !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  object-fit: cover !important;
+  object-position: center 48% !important;
+
+  z-index: -4 !important;
+
+  filter: brightness(1.04) contrast(1.08) saturate(1.14) !important;
+}
+
+.heroImageDesktop {
+  display: block !important;
+}
+
+.heroImageMobile {
+  display: none !important;
+}
+
+.heroOverlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -3 !important;
+  pointer-events: none !important;
+
+  background:
+    radial-gradient(circle at 74% 42%, rgba(214, 192, 141, .18), transparent 31rem),
+    linear-gradient(90deg, rgba(3, 7, 13, .94) 0%, rgba(3, 7, 13, .76) 34%, rgba(3, 7, 13, .34) 66%, rgba(3, 7, 13, .14) 100%),
+    linear-gradient(180deg, rgba(0,0,0,.08) 0%, rgba(0,0,0,.42) 100%) !important;
+}
+
+.hero::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: -1px !important;
+  height: 120px !important;
+  z-index: -2 !important;
+  pointer-events: none !important;
+  background: linear-gradient(180deg, transparent, #f4f1eb) !important;
+}
+
+.heroInner {
+  position: relative !important;
+  z-index: 2 !important;
+
+  width: min(1240px, 100%) !important;
+  margin: 0 auto !important;
+
+  display: grid !important;
+  grid-template-columns: minmax(0, 620px) 340px !important;
+  gap: clamp(2.5rem, 7vw, 7rem) !important;
+  align-items: center !important;
+}
+
+.heroContent {
+  max-width: 620px !important;
+}
+
+.heroContent h1 {
+  margin: 0 !important;
+  max-width: 620px !important;
+
+  color: #fff !important;
+  font-size: clamp(3.2rem, 5vw, 5.7rem) !important;
+  line-height: .9 !important;
+  letter-spacing: -.06em !important;
+  font-weight: 950 !important;
+  text-wrap: balance !important;
+}
+
+.heroContent p {
+  max-width: 560px !important;
+  margin: 1.25rem 0 0 !important;
+
+  color: rgba(255,255,255,.84) !important;
+  font-size: clamp(.98rem, 1.05vw, 1.1rem) !important;
+  line-height: 1.62 !important;
+}
+
+.actions {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: .85rem !important;
+  margin-top: 1.75rem !important;
+}
+
+.actions a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  min-height: 48px !important;
+  padding: 0 1.45rem !important;
+
+  border-radius: 999px !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+
+  font-size: .74rem !important;
+  letter-spacing: .04em !important;
+  font-weight: 950 !important;
+}
+
+/* Tablet / mobile: ESTE ES EL TAMAÑO CLAVE */
+@media (max-width: 900px) {
+  .hero {
+    min-height: 560px !important;
+    height: auto !important;
+    max-height: none !important;
+
+    padding: 5.8rem 22px 3.2rem !important;
+
+    align-items: flex-end !important;
+  }
+
+  .heroImageDesktop {
+    display: none !important;
+  }
+
+  .heroImageMobile {
+    display: block !important;
+  }
+
+  .heroImage,
+  .heroImageMobile {
+    object-fit: cover !important;
+    object-position: center top !important;
+  }
+
+  .heroInner {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .heroContent {
+    max-width: 460px !important;
+  }
+
+  .heroContent h1 {
+    max-width: 440px !important;
+    font-size: clamp(2.25rem, 9vw, 3.6rem) !important;
+    line-height: .95 !important;
+  }
+
+  .heroContent p {
+    max-width: 430px !important;
+    font-size: .95rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .actions {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    max-width: 360px !important;
+  }
+
+  .actions a {
+    width: 100% !important;
+  }
+
+  .operationCard {
+    display: none !important;
+  }
+
+  .heroOverlay {
+    background:
+      linear-gradient(90deg, rgba(3,7,13,.88) 0%, rgba(3,7,13,.62) 52%, rgba(3,7,13,.32) 100%),
+      linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.68)) !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero {
+    min-height: 520px !important;
+    padding: 5.4rem 18px 2.6rem !important;
+  }
+
+  .heroContent h1 {
+    font-size: clamp(2rem, 10.5vw, 2.85rem) !important;
+  }
+
+  .heroContent p {
+    font-size: .9rem !important;
+  }
+}
+
+/* END TERRESTRE HERO HOME-LIKE DIMENSIONS ONLY */

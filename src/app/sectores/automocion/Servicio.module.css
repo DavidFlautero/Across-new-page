@@ -4264,3 +4264,59 @@
 
 /* END SECTORES OVERVIEW REAL MOBILE FIX */
 
+/* =====================================================
+   HERO IMAGE STARTS AT TOP UNDER HEADER
+   La imagen del hero empieza desde top:0.
+   El header queda encima. El padding solo mueve el texto, no la imagen.
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .hero {
+    position: relative !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    background: #050609 !important;
+  }
+
+  .heroImage,
+  .heroImageDesktop,
+  .heroImageMobile {
+    position: absolute !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: cover !important;
+    object-position: center top !important;
+
+    z-index: 0 !important;
+    transform: none !important;
+    translate: none !important;
+  }
+
+  .heroImageDesktop {
+    display: none !important;
+  }
+
+  .heroImageMobile {
+    display: block !important;
+  }
+
+  .heroOverlay {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+  }
+
+  .heroInner,
+  .heroContent,
+  .actions {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+}
+
+/* END HERO IMAGE STARTS AT TOP UNDER HEADER */
+

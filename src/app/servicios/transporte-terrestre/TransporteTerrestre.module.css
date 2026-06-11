@@ -1,0 +1,62 @@
+
+/* =====================================================
+   TERRESTRE HERO iPHONE SE — MÁS CORTO
+   ===================================================== */
+
+@media (max-width: 390px) and (max-height: 700px) {
+  .hero {
+    height: 500px !important;
+    min-height: 500px !important;
+    max-height: 500px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .video,
+  .heroImage,
+  .airMedia {
+    object-fit: contain !important;
+    object-position: center bottom !important;
+    height: 100% !important;
+  }
+
+  .content,
+  .heroContent,
+  .airShell {
+    top: 96px !important;
+    left: 26px !important;
+    right: 22px !important;
+  }
+
+  .title,
+  .heroContent h1,
+  .airCopy h1 {
+    font-size: 1.78rem !important;
+    max-width: 280px !important;
+    line-height: .92 !important;
+  }
+
+  .subtitle,
+  .heroContent p,
+  .airCopy p {
+    max-width: 270px !important;
+    font-size: .68rem !important;
+    line-height: 1.28 !important;
+    margin-top: .55rem !important;
+  }
+
+  .actions,
+  .airCtas {
+    max-width: 245px !important;
+    gap: .48rem !important;
+    margin-top: .65rem !important;
+  }
+
+  .actions a,
+  .airCtas a {
+    min-height: 34px !important;
+    font-size: .52rem !important;
+    padding: 0 .75rem !important;
+  }
+}
+

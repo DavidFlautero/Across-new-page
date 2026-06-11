@@ -559,7 +559,7 @@ export default function TransporteAereoPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={`${styles.hero} acrossPageHero`}>
+        <section className={styles.hero} data-aereo-hero="true">
           <Image
             src="/images/hero/cargaAereahero.png"
             alt={t.heroTitle}
@@ -570,7 +570,7 @@ export default function TransporteAereoPage() {
           />
 
           <Image
-            src="/images/hero/cargaAereahero.png"
+            src="/images/hero/cargaAereahero-mobile.png"
             alt={t.heroTitle}
             fill
             priority
@@ -583,12 +583,12 @@ export default function TransporteAereoPage() {
           <div className={styles.heroInner}>
             <div className={styles.heroContent}>
               <span className={styles.eyebrow}>{t.heroEyebrow}</span>
-              <h1>{t.heroTitle}</h1>
-              <p>{t.heroText}</p>
+              <h1 className={styles.title}>{t.heroTitle}</h1>
+              <p className={styles.subtitle}>{t.heroText}</p>
 
               <div className={styles.actions}>
-                <Link href="/cotizacion">{t.primaryCta}</Link>
-                <Link href="/contacto">{t.secondaryCta}</Link>
+                <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>
+                <Link href="/contacto" className={styles.secondaryBtn}>{t.secondaryCta}</Link>
               </div>
             </div>
 
@@ -610,7 +610,7 @@ export default function TransporteAereoPage() {
           </div>
         </section>
 
-        <section className={styles.trustBar}>
+        <section className={styles.trustBar} data-aereo-trust="true">
           {t.trust.map(([title, text]: string[], index: number) => {
             const icons: IconName[] = ["timer", "shield", "document", "tracking"];
 

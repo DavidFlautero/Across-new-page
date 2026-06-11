@@ -1,0 +1,9 @@
+C:\Users\david\Documents\Across-new-page\src\app\sectores\alimentacion-bebidas\Servicio.module.css
+C:\Users\david\Documents\Across-new-page\src\app\sectores\automocion\Servicio.module.css
+C:\Users\david\Documents\Across-new-page\src\app\sectores\consumo-distribucion\Servicio.module.css
+C:\Users\david\Documents\Across-new-page\src\app\sectores\energias-renovables\Servicio.module.css
+C:\Users\david\Documents\Across-new-page\src\app\sectores\farmaceutico-sanitario\Servicio.module.css
+C:\Users\david\Documents\Across-new-page\src\app\sectores\quimico\Servicio.module.css
+C:\Users\david\Documents\Across-new-page\src\app\sectores\tecnologico\Servicio.module.css
+C:\Users\david\Documents\Across-new-page\src\app\servicios\_shared\ServicePage.module.css
+C:\Users\david\Documents\Across-new-page\src\app\tracking\Tracking.module.css
