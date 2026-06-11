@@ -8,158 +8,158 @@ import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import RelatedServices from "@/app/servicios/_shared/RelatedServices";
-import styles from "./Automocion.module.css";
+import styles from "./Servicio.module.css";
 
 type Locale = "es" | "en" | "zh";
 
 const copy = {
   "es": {
-    "heroEyebrow": "Sector automoción",
-    "heroTitle": "Logística para cadenas automotrices que no pueden detenerse.",
-    "heroText": "Coordinamos transporte, almacenaje, distribución y operaciones especiales para componentes, repuestos, autopartes y proyectos de automoción con trazabilidad y control operativo.",
+    "heroEyebrow": "Sector químico",
+    "heroTitle": "Logística química para cargas que exigen control, seguridad y cumplimiento.",
+    "heroText": "Coordinamos operaciones logísticas para productos químicos, materias primas, mercancía sensible y cargas reguladas, integrando transporte, documentación, trazabilidad y control operativo.",
     "primaryCta": "Planificar mi operación",
     "secondaryCta": "Hablar con nuestro equipo",
-    "activeLabel": "Operación automotriz activa",
-    "activeRoute": "Proveedor → Planta",
-    "activeCargo": "Autopartes y componentes",
+    "activeLabel": "Operación química activa",
+    "activeRoute": "Origen → Planta",
+    "activeCargo": "Producto químico",
     "activeStatusLabel": "Estado:",
     "activeStatus": "En coordinación",
-    "activeEtaLabel": "Prioridad:",
-    "activeEta": "Línea productiva",
+    "activeEtaLabel": "Control:",
+    "activeEta": "Alta seguridad",
     "trust": [
       [
-        "Just in time",
-        "Continuidad operativa"
+        "Cumplimiento",
+        "Documentación controlada"
       ],
       [
-        "Autopartes",
-        "Componentes críticos"
+        "Carga sensible",
+        "Manejo especializado"
+      ],
+      [
+        "Seguridad",
+        "Protocolos operativos"
       ],
       [
         "Trazabilidad",
-        "Control de avance"
-      ],
-      [
-        "Distribución",
-        "Entrega coordinada"
+        "Seguimiento de origen a destino"
       ]
     ],
-    "overviewEyebrow": "Logística automotriz",
-    "overviewTitle": "Precisión logística para operaciones industriales de alta exigencia.",
-    "overviewText": "La industria automotriz requiere entregas puntuales, control documental, disponibilidad de componentes y respuesta ante urgencias. Diseñamos operaciones para mantener la cadena productiva en movimiento.",
-    "overviewButton": "Conocer más sobre automoción",
+    "overviewEyebrow": "Logística química especializada",
+    "overviewTitle": "Control operativo para productos que requieren precisión y responsabilidad.",
+    "overviewText": "El sector químico exige planificación, cumplimiento documental, manipulación adecuada y visibilidad en cada etapa. Diseñamos operaciones para reducir riesgos, mantener continuidad y proteger la integridad de la carga.",
+    "overviewButton": "Conocer más sobre química",
     "pillars": [
       [
-        "Continuidad productiva",
-        "Coordinación de entregas para reducir interrupciones en planta o distribución."
+        "Control documental",
+        "Revisión de documentos comerciales, técnicos, aduaneros y operativos según el tipo de producto."
       ],
       [
-        "Control de componentes",
-        "Gestión logística para autopartes, repuestos, equipos y piezas críticas."
+        "Manejo especializado",
+        "Coordinación de transporte y manipulación adaptada a mercancías sensibles o reguladas."
       ],
       [
-        "Operaciones urgentes",
-        "Respuesta para envíos prioritarios que afectan producción o servicio."
+        "Seguridad operativa",
+        "Planificación con foco en prevención, trazabilidad y reducción de riesgos."
       ],
       [
-        "Distribución B2B",
-        "Entregas hacia plantas, talleres, distribuidores o centros logísticos."
+        "Coordinación integral",
+        "Integración con transporte, aduanas, almacén y entrega final."
       ]
     ],
-    "servicesEyebrow": "Soluciones para automoción",
-    "servicesTitle": "Operaciones diseñadas para la cadena automotriz.",
+    "servicesEyebrow": "Soluciones para el sector químico",
+    "servicesTitle": "Operaciones diseñadas para mercancías sensibles y reguladas.",
     "services": [
       [
-        "Transporte terrestre",
-        "Rutas nacionales e internacionales para autopartes y componentes."
+        "Transporte internacional",
+        "Coordinación aérea, marítima o terrestre según producto, urgencia y requisitos."
       ],
       [
-        "Carga urgente",
-        "Soluciones prioritarias para repuestos o piezas críticas."
+        "Carga regulada",
+        "Gestión logística para mercancías que requieren documentación y control específico."
       ],
       [
-        "Almacenaje",
-        "Gestión de stock, preparación y distribución de componentes."
+        "Productos sensibles",
+        "Soluciones para cargas que exigen cuidado, trazabilidad y seguimiento."
       ],
       [
         "Importación y exportación",
-        "Coordinación documental y aduanera para comercio internacional."
+        "Soporte documental, aduanero y operativo para comercio internacional."
       ],
       [
-        "Cargas especiales",
-        "Transporte de equipos, maquinaria o piezas de gran volumen."
+        "Almacenaje especializado",
+        "Gestión de stock y preparación bajo criterios operativos controlados."
       ],
       [
         "Door to door",
-        "Flujo completo desde proveedor hasta planta o destino final."
+        "Coordinación completa desde origen hasta entrega final."
       ]
     ],
-    "useCasesEyebrow": "Cuándo necesita logística automotriz",
-    "useCasesTitle": "Cuando la operación depende de que cada pieza llegue a tiempo.",
+    "useCasesEyebrow": "Cuándo necesita logística química",
+    "useCasesTitle": "Cuando la carga requiere control antes, durante y después del movimiento.",
     "useCases": [
       [
-        "Autopartes",
-        "Movimientos recurrentes de componentes y repuestos."
+        "Materias primas",
+        "Movimientos para producción, industria y transformación."
       ],
       [
-        "Línea productiva",
-        "Entregas que impactan directamente en continuidad industrial."
+        "Productos químicos",
+        "Operaciones con requisitos documentales y operativos específicos."
       ],
       [
-        "Distribuidores",
-        "Abastecimiento hacia redes comerciales o técnicas."
+        "Carga sensible",
+        "Mercancías que requieren cuidado, control y trazabilidad."
       ],
       [
-        "Repuestos críticos",
-        "Cargas urgentes para reparación, garantía o servicio."
+        "Importadores químicos",
+        "Gestión internacional con documentación y coordinación aduanera."
       ],
       [
-        "Importadores",
-        "Operaciones internacionales con control documental."
+        "Industria y manufactura",
+        "Abastecimiento para plantas, procesos y proyectos productivos."
       ],
       [
-        "Proyectos industriales",
-        "Equipos, maquinaria o componentes especiales."
+        "Distribución especializada",
+        "Entregas a clientes industriales, laboratorios o centros técnicos."
       ]
     ],
     "processEyebrow": "Nuestro proceso operativo",
-    "processTitle": "Una operación automotriz clara desde la necesidad hasta la entrega.",
+    "processTitle": "Una operación química clara desde la validación inicial.",
     "process": [
       [
-        "Análisis de carga",
-        "Revisamos tipo de pieza, volumen, urgencia y destino."
+        "Análisis del producto",
+        "Revisamos tipo de carga, requisitos, documentación y sensibilidad."
       ],
       [
         "Diseño logístico",
-        "Definimos ruta, modalidad y tiempos de operación."
+        "Definimos modalidad, ruta, controles y tiempos de operación."
       ],
       [
-        "Documentación",
-        "Coordinamos requisitos comerciales, aduaneros y operativos."
+        "Validación documental",
+        "Coordinamos documentos comerciales, técnicos, aduaneros y operativos."
       ],
       [
-        "Ejecución",
-        "Gestionamos retiro, transporte y conexión logística."
+        "Preparación",
+        "Gestionamos retiro, acondicionamiento, carga y salida."
       ],
       [
         "Seguimiento",
-        "Monitoreamos hitos críticos y avance."
+        "Monitoreamos avance, hitos y trazabilidad."
       ],
       [
         "Entrega final",
-        "Coordinamos recepción y cierre operativo."
+        "Coordinamos recepción, descarga y cierre operativo."
       ]
     ],
-    "bandTitle": "Logística automotriz diseñada para mantener la producción en movimiento.",
-    "bandText": "Nuestro equipo coordina operaciones para empresas que necesitan puntualidad, control documental y respuesta profesional en cadenas automotrices.",
+    "bandTitle": "Logística química diseñada para operaciones que no admiten improvisación.",
+    "bandText": "Nuestro equipo coordina operaciones para empresas químicas e industriales que necesitan cumplimiento, trazabilidad y respuesta profesional en cada etapa logística.",
     "stats": [
       [
-        "Just in time",
-        "Continuidad de suministro"
+        "Cumplimiento",
+        "Documentación y control"
       ],
       [
-        "Autopartes",
-        "Componentes críticos"
+        "Carga sensible",
+        "Manejo especializado"
       ],
       [
         "Trazabilidad",
@@ -170,158 +170,158 @@ const copy = {
         "Especialistas dedicados"
       ]
     ],
-    "finalTitle": "Coordinemos su próxima operación automotriz.",
-    "finalText": "Cuéntenos tipo de carga, origen, destino, urgencia y requisitos. Nuestro equipo analizará la mejor solución logística.",
-    "finalPrimary": "Solicitar propuesta automotriz",
+    "finalTitle": "Coordinemos su próxima operación química.",
+    "finalText": "Cuéntenos tipo de producto, origen, destino, documentación disponible y requisitos. Nuestro equipo analizará la mejor solución logística.",
+    "finalPrimary": "Solicitar propuesta química",
     "finalSecondary": "Hablar con un especialista"
   },
   "en": {
-    "heroEyebrow": "Automotive sector",
-    "heroTitle": "Logistics for automotive chains that cannot stop.",
-    "heroText": "We coordinate transport, warehousing, distribution and special operations for components, spare parts, automotive parts and projects with traceability and operational control.",
+    "heroEyebrow": "Chemical sector",
+    "heroTitle": "Chemical logistics for cargo that requires control, safety and compliance.",
+    "heroText": "We coordinate logistics operations for chemical products, raw materials, sensitive goods and regulated cargo, integrating transport, documentation, traceability and operational control.",
     "primaryCta": "Plan my operation",
     "secondaryCta": "Talk to our team",
-    "activeLabel": "Active automotive operation",
-    "activeRoute": "Supplier → Plant",
-    "activeCargo": "Parts and components",
+    "activeLabel": "Active chemical operation",
+    "activeRoute": "Origin → Plant",
+    "activeCargo": "Chemical product",
     "activeStatusLabel": "Status:",
     "activeStatus": "In coordination",
-    "activeEtaLabel": "Priority:",
-    "activeEta": "Production line",
+    "activeEtaLabel": "Control:",
+    "activeEta": "High security",
     "trust": [
       [
-        "Just in time",
-        "Operational continuity"
+        "Compliance",
+        "Controlled documentation"
       ],
       [
-        "Auto parts",
-        "Critical components"
+        "Sensitive cargo",
+        "Specialized handling"
+      ],
+      [
+        "Safety",
+        "Operational protocols"
       ],
       [
         "Traceability",
-        "Progress control"
-      ],
-      [
-        "Distribution",
-        "Coordinated delivery"
+        "Origin-to-destination tracking"
       ]
     ],
-    "overviewEyebrow": "Automotive logistics",
-    "overviewTitle": "Logistics precision for demanding industrial operations.",
-    "overviewText": "The automotive industry requires punctual deliveries, document control, component availability and response to urgency. We design operations to keep the production chain moving.",
-    "overviewButton": "Learn more about automotive",
+    "overviewEyebrow": "Specialized chemical logistics",
+    "overviewTitle": "Operational control for products that require precision and responsibility.",
+    "overviewText": "The chemical sector requires planning, documentary compliance, proper handling and visibility at every stage. We design operations to reduce risks, maintain continuity and protect cargo integrity.",
+    "overviewButton": "Learn more about chemical logistics",
     "pillars": [
       [
-        "Production continuity",
-        "Delivery coordination to reduce plant or distribution interruptions."
+        "Document control",
+        "Review of commercial, technical, customs and operational documents according to product type."
       ],
       [
-        "Component control",
-        "Logistics management for auto parts, spares, equipment and critical pieces."
+        "Specialized handling",
+        "Transport and handling coordination adapted to sensitive or regulated goods."
       ],
       [
-        "Urgent operations",
-        "Priority shipments affecting production or service."
+        "Operational safety",
+        "Planning focused on prevention, traceability and risk reduction."
       ],
       [
-        "B2B distribution",
-        "Deliveries to plants, workshops, distributors or logistics centers."
+        "Integrated coordination",
+        "Integration with transport, customs, warehousing and final delivery."
       ]
     ],
-    "servicesEyebrow": "Automotive solutions",
-    "servicesTitle": "Operations designed for the automotive chain.",
+    "servicesEyebrow": "Solutions for the chemical sector",
+    "servicesTitle": "Operations designed for sensitive and regulated goods.",
     "services": [
       [
-        "Road transport",
-        "Domestic and international routes for auto parts and components."
+        "International transport",
+        "Air, ocean or road coordination according to product, urgency and requirements."
       ],
       [
-        "Urgent cargo",
-        "Priority solutions for spares or critical pieces."
+        "Regulated cargo",
+        "Logistics management for goods requiring documentation and specific control."
       ],
       [
-        "Warehousing",
-        "Stock management, preparation and component distribution."
+        "Sensitive products",
+        "Solutions for cargo requiring care, traceability and tracking."
       ],
       [
         "Import and export",
-        "Document and customs coordination for international trade."
+        "Document, customs and operational support for international trade."
       ],
       [
-        "Special cargo",
-        "Transport of equipment, machinery or large parts."
+        "Specialized warehousing",
+        "Stock management and preparation under controlled operational criteria."
       ],
       [
         "Door to door",
-        "Full flow from supplier to plant or final destination."
+        "Complete coordination from origin to final delivery."
       ]
     ],
-    "useCasesEyebrow": "When automotive logistics is needed",
-    "useCasesTitle": "When the operation depends on every part arriving on time.",
+    "useCasesEyebrow": "When chemical logistics is needed",
+    "useCasesTitle": "When cargo requires control before, during and after movement.",
     "useCases": [
       [
-        "Auto parts",
-        "Recurring movements of components and spares."
+        "Raw materials",
+        "Movements for production, industry and transformation."
       ],
       [
-        "Production line",
-        "Deliveries directly impacting industrial continuity."
+        "Chemical products",
+        "Operations with specific document and operational requirements."
       ],
       [
-        "Distributors",
-        "Supply to commercial or technical networks."
+        "Sensitive cargo",
+        "Goods requiring care, control and traceability."
       ],
       [
-        "Critical spares",
-        "Urgent cargo for repair, warranty or service."
+        "Chemical importers",
+        "International management with documentation and customs coordination."
       ],
       [
-        "Importers",
-        "International operations with document control."
+        "Industry and manufacturing",
+        "Supply for plants, processes and productive projects."
       ],
       [
-        "Industrial projects",
-        "Equipment, machinery or special components."
+        "Specialized distribution",
+        "Deliveries to industrial clients, laboratories or technical centers."
       ]
     ],
     "processEyebrow": "Our operational process",
-    "processTitle": "A clear automotive operation from need to delivery.",
+    "processTitle": "A clear chemical operation from initial validation.",
     "process": [
       [
-        "Cargo analysis",
-        "We review part type, volume, urgency and destination."
+        "Product analysis",
+        "We review cargo type, requirements, documentation and sensitivity."
       ],
       [
         "Logistics design",
-        "We define route, modality and operational timing."
+        "We define modality, route, controls and operational timing."
       ],
       [
-        "Documentation",
-        "We coordinate commercial, customs and operational requirements."
+        "Document validation",
+        "We coordinate commercial, technical, customs and operational documents."
       ],
       [
-        "Execution",
-        "We manage pickup, transport and logistics connection."
+        "Preparation",
+        "We manage pickup, conditioning, loading and dispatch."
       ],
       [
         "Tracking",
-        "We monitor critical milestones and progress."
+        "We monitor progress, milestones and traceability."
       ],
       [
         "Final delivery",
-        "We coordinate reception and closure."
+        "We coordinate reception, unloading and operational closure."
       ]
     ],
-    "bandTitle": "Automotive logistics designed to keep production moving.",
-    "bandText": "Our team coordinates operations for companies needing punctuality, document control and professional response in automotive supply chains.",
+    "bandTitle": "Chemical logistics designed for operations that cannot be improvised.",
+    "bandText": "Our team coordinates operations for chemical and industrial companies that need compliance, traceability and professional response at every logistics stage.",
     "stats": [
       [
-        "Just in time",
-        "Supply continuity"
+        "Compliance",
+        "Documentation and control"
       ],
       [
-        "Auto parts",
-        "Critical components"
+        "Sensitive cargo",
+        "Specialized handling"
       ],
       [
         "Traceability",
@@ -332,158 +332,158 @@ const copy = {
         "Dedicated specialists"
       ]
     ],
-    "finalTitle": "Let’s coordinate your next automotive operation.",
-    "finalText": "Tell us cargo type, origin, destination, urgency and requirements. Our team will analyze the best logistics solution.",
-    "finalPrimary": "Request automotive proposal",
+    "finalTitle": "Let’s coordinate your next chemical operation.",
+    "finalText": "Tell us product type, origin, destination, available documentation and requirements. Our team will analyze the best logistics solution.",
+    "finalPrimary": "Request chemical proposal",
     "finalSecondary": "Talk to a specialist"
   },
   "zh": {
-    "heroEyebrow": "汽车行业",
-    "heroTitle": "为不能停止的汽车供应链提供物流。",
-    "heroText": "我们为汽车零部件、备件和项目协调运输、仓储、配送和特殊操作，并提供可追溯性和运营控制。",
+    "heroEyebrow": "化工行业",
+    "heroTitle": "为需要控制、安全和合规的货物提供化工物流。",
+    "heroText": "我们为化工产品、原材料、敏感货物和受监管货物协调物流运营，整合运输、文件、可追溯性和运营控制。",
     "primaryCta": "规划物流操作",
     "secondaryCta": "联系我们的团队",
-    "activeLabel": "进行中的汽车物流",
-    "activeRoute": "供应商 → 工厂",
-    "activeCargo": "零部件",
+    "activeLabel": "进行中的化工操作",
+    "activeRoute": "始发地 → 工厂",
+    "activeCargo": "化工产品",
     "activeStatusLabel": "状态：",
     "activeStatus": "协调中",
-    "activeEtaLabel": "优先级：",
-    "activeEta": "生产线",
+    "activeEtaLabel": "控制：",
+    "activeEta": "高安全",
     "trust": [
       [
-        "准时制",
-        "运营连续性"
+        "合规",
+        "文件受控"
       ],
       [
-        "汽车零件",
-        "关键组件"
+        "敏感货物",
+        "专业处理"
+      ],
+      [
+        "安全",
+        "运营协议"
       ],
       [
         "可追溯性",
-        "进度控制"
-      ],
-      [
-        "配送",
-        "协调交付"
+        "从始发地到目的地跟踪"
       ]
     ],
-    "overviewEyebrow": "汽车物流",
-    "overviewTitle": "为高要求工业运营提供精准物流。",
-    "overviewText": "汽车行业需要准时交付、文件控制、组件可用性和紧急响应。我们设计运营以保持生产链流动。",
-    "overviewButton": "了解汽车物流",
+    "overviewEyebrow": "专业化工物流",
+    "overviewTitle": "为需要精准和责任的产品提供运营控制。",
+    "overviewText": "化工行业需要规划、文件合规、适当处理和每个阶段的可视化。我们设计运营以降低风险、保持连续性并保护货物完整性。",
+    "overviewButton": "了解化工物流",
     "pillars": [
       [
-        "生产连续性",
-        "协调交付以减少工厂或配送中断。"
+        "文件控制",
+        "根据产品类型审核商业、技术、海关和运营文件。"
       ],
       [
-        "组件控制",
-        "管理汽车零件、备件、设备和关键组件。"
+        "专业处理",
+        "为敏感或受监管货物协调运输和处理。"
       ],
       [
-        "紧急操作",
-        "影响生产或服务的优先运输。"
+        "运营安全",
+        "以预防、可追溯性和降低风险为重点进行规划。"
       ],
       [
-        "B2B 配送",
-        "交付到工厂、维修点、经销商或物流中心。"
+        "综合协调",
+        "与运输、海关、仓储和最终交付整合。"
       ]
     ],
-    "servicesEyebrow": "汽车行业解决方案",
-    "servicesTitle": "为汽车供应链设计的运营。",
+    "servicesEyebrow": "化工行业解决方案",
+    "servicesTitle": "为敏感和受监管货物设计的运营。",
     "services": [
       [
-        "陆运",
-        "汽车零部件的国内和国际路线。"
+        "国际运输",
+        "根据产品、紧急程度和要求协调空运、海运或陆运。"
       ],
       [
-        "紧急货物",
-        "备件或关键部件的优先方案。"
+        "受监管货物",
+        "为需要文件和特定控制的货物提供物流管理。"
       ],
       [
-        "仓储",
-        "库存管理、准备和组件配送。"
+        "敏感产品",
+        "为需要保护、可追溯和跟踪的货物提供方案。"
       ],
       [
         "进出口",
-        "国际贸易文件与海关协调。"
+        "为国际贸易提供文件、海关和运营支持。"
       ],
       [
-        "特殊货物",
-        "设备、机械或大型零件运输。"
+        "专业仓储",
+        "在受控运营标准下进行库存管理和准备。"
       ],
       [
         "门到门",
-        "从供应商到工厂或最终目的地的完整流程。"
+        "从始发地到最终交付的完整协调。"
       ]
     ],
-    "useCasesEyebrow": "何时需要汽车物流",
-    "useCasesTitle": "当每个零件都必须准时到达时。",
+    "useCasesEyebrow": "何时需要化工物流",
+    "useCasesTitle": "当货物在移动前、中、后都需要控制时。",
     "useCases": [
       [
-        "汽车零件",
-        "组件和备件的经常性运输。"
+        "原材料",
+        "用于生产、工业和加工的运输。"
       ],
       [
-        "生产线",
-        "直接影响工业连续性的交付。"
+        "化工产品",
+        "具有特定文件和运营要求的操作。"
       ],
       [
-        "经销网络",
-        "商业或技术网络供应。"
+        "敏感货物",
+        "需要保护、控制和可追溯的货物。"
       ],
       [
-        "关键备件",
-        "维修、保修或服务的紧急货物。"
+        "化工进口商",
+        "带有文件和海关协调的国际管理。"
       ],
       [
-        "进口商",
-        "带文件控制的国际操作。"
+        "工业与制造",
+        "为工厂、流程和生产项目供应。"
       ],
       [
-        "工业项目",
-        "设备、机械或特殊组件。"
+        "专业配送",
+        "交付至工业客户、实验室或技术中心。"
       ]
     ],
     "processEyebrow": "我们的运营流程",
-    "processTitle": "从需求到交付，汽车物流清晰可控。",
+    "processTitle": "从初始验证开始，化工操作清晰可控。",
     "process": [
       [
-        "货物分析",
-        "审核零件类型、体量、紧急程度和目的地。"
+        "产品分析",
+        "审核货物类型、要求、文件和敏感性。"
       ],
       [
         "物流设计",
-        "确定路线、方式和时间。"
+        "确定方式、路线、控制和运营时间。"
       ],
       [
-        "文件管理",
-        "协调商业、海关和运营要求。"
+        "文件验证",
+        "协调商业、技术、海关和运营文件。"
       ],
       [
-        "执行",
-        "管理提货、运输和物流衔接。"
+        "准备",
+        "管理提货、处理、装载和出库。"
       ],
       [
         "跟踪",
-        "监控关键节点和进度。"
+        "监控进度、节点和可追溯性。"
       ],
       [
         "最终交付",
-        "协调接收和关闭。"
+        "协调接收、卸货和运营关闭。"
       ]
     ],
-    "bandTitle": "为保持生产流动而设计的汽车物流。",
-    "bandText": "我们的团队为需要准时、文件控制和专业响应的汽车供应链企业协调运营。",
+    "bandTitle": "为不能即兴处理的操作设计化工物流。",
+    "bandText": "我们的团队为需要合规、可追溯性和专业响应的化工与工业企业协调每个物流阶段。",
     "stats": [
       [
-        "准时制",
-        "供应连续性"
+        "合规",
+        "文件与控制"
       ],
       [
-        "汽车零件",
-        "关键组件"
+        "敏感货物",
+        "专业处理"
       ],
       [
         "可追溯性",
@@ -494,9 +494,9 @@ const copy = {
         "专属专家"
       ]
     ],
-    "finalTitle": "让我们协调您的下一次汽车物流操作。",
-    "finalText": "告诉我们货物类型、始发地、目的地、紧急程度和要求。我们的团队将分析最佳物流方案。",
-    "finalPrimary": "申请汽车物流方案",
+    "finalTitle": "让我们协调您的下一次化工操作。",
+    "finalText": "告诉我们产品类型、始发地、目的地、现有文件和要求。我们的团队将分析最佳物流方案。",
+    "finalPrimary": "申请化工方案",
     "finalSecondary": "联系专家"
   }
 } satisfies Record<Locale, any>;
@@ -740,7 +740,7 @@ function Icon({ name }: { name: IconName }) {
   }
 }
 
-export default function AutomocionPage() {
+export default function QuimicoPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
@@ -788,42 +788,40 @@ export default function AutomocionPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={`${styles.hero} acrossPageHero`} data-sector-hero="true" data-standard-service-hero="true" data-sector-name="automocion">
+        <section className={`${styles.hero} acrossPageHero`}>
           <Image
-            src="/images/sectores/transporte-logistica-automocion.png"
+            src="/images/sectores/quimicohero.png"
             alt={t.heroTitle}
             fill
             priority
             sizes="(max-width: 900px) 0px, 100vw"
-            data-hero-role="desktop-image"
             className={`${styles.heroImage} ${styles.heroImageDesktop}`}
           />
 
           <Image
-            src="/images/sectores/automocion2.png"
+            src="/images/sectores/quimico2.png"
             alt={t.heroTitle}
             fill
             priority
             sizes="(max-width: 900px) 100vw, 0px"
-            data-hero-role="mobile-image"
             className={`${styles.heroImage} ${styles.heroImageMobile}`}
           />
 
-          <div data-hero-role="overlay" className={styles.heroOverlay} />
+          <div className={styles.heroOverlay} />
 
-          <div data-hero-role="inner" className={styles.heroInner}>
-            <div data-hero-role="content" className={styles.heroContent}>
-              <span data-hero-role="eyebrow" className={styles.eyebrow}>{t.heroEyebrow}</span>
-              <h1 data-hero-role="title">{t.heroTitle}</h1>
-              <p data-hero-role="text">{t.heroText}</p>
+          <div className={styles.heroInner}>
+            <div className={styles.heroContent}>
+              <span className={styles.eyebrow}>{t.heroEyebrow}</span>
+              <h1>{t.heroTitle}</h1>
+              <p>{t.heroText}</p>
 
-              <div data-hero-role="actions" className={styles.actions}>
+              <div className={styles.actions}>
                 <Link href="/cotizacion">{t.primaryCta}</Link>
                 <Link href="/contacto">{t.secondaryCta}</Link>
               </div>
             </div>
 
-            <div data-hero-role="card" className={styles.operationCard}>
+            <div className={styles.operationCard}>
               <span>{t.activeLabel}</span>
               <strong>{t.activeRoute}</strong>
               <p>{t.activeCargo}</p>
@@ -843,7 +841,7 @@ export default function AutomocionPage() {
 
         <section className={styles.trustBar}>
           {t.trust.map(([title, text]: string[], index: number) => {
-            const icons: IconName[] = ["truck", "package", "shield", "route", "tracking", "door"];
+            const icons: IconName[] = ["shield", "package", "document", "tracking", "globe", "truck"];
 
             return (
               <div key={title}>
@@ -861,7 +859,7 @@ export default function AutomocionPage() {
 
         <Certifications />
 
-        <section className={`${styles.overview} ${styles.overviewMobileBg}`} style={{ "--sector-overview-bg": "url('/images/sectores/automocion2.png')" } as CSSProperties}>
+        <section className={`${styles.overview} ${styles.overviewMobileBg}`} style={{ "--sector-overview-bg": "url('/images/sectores/quimico2.png')" } as CSSProperties}>
           <div className={styles.overviewCopy}>
             <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
             <h2>{t.overviewTitle}</h2>
@@ -956,10 +954,10 @@ export default function AutomocionPage() {
           </div>
         </section>
 
-        <section className={styles.darkBand} data-sector-dark-band="true">
+        <section className={styles.darkBand}>
           <div className={styles.darkBandImage}>
             <Image
-              src="/images/sectores/automocion2.png"
+              src="/images/sectores/quimico2.png"
               alt={t.bandTitle}
               fill
               sizes="(max-width: 900px) 100vw, 42vw"
@@ -986,7 +984,7 @@ export default function AutomocionPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} data-sector-final-cta="true" data-across-final-cta="true">
+        <section className={styles.finalCta}>
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>
@@ -999,7 +997,7 @@ export default function AutomocionPage() {
 
           <div className={styles.finalImage}>
             <Image
-              src="/images/sectores/transporte-logistica-automocion.png"
+              src="/images/sectores/quimicohero.png"
               alt={t.finalTitle}
               fill
               sizes="(max-width: 900px) 100vw, 44vw"

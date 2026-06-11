@@ -5131,3 +5131,54 @@ main[class*="page"] section[data-across-final-cta="true"] a {
 }
 
 
+
+/* =====================================================
+   ACROSS SECTORES MOBILE HIDE DARK BAND
+   Oculta en mobile el bloque oscuro de servicios/cards
+   en todos los sectores.
+   ===================================================== */
+
+@media (max-width: 700px) {
+  main[class*="page"]:has([data-sector-hero="true"])
+  section[data-sector-dark-band="true"]:not([data-across-final-cta="true"]),
+  main[class*="page"]:has([data-sector-hero="true"])
+  section[class*="darkBand"]:not([data-across-final-cta="true"]),
+  main[class*="page"]:has([data-sector-hero="true"])
+  section[class*="DarkBand"]:not([data-across-final-cta="true"]) {
+    display: none !important;
+  }
+
+  /* La sección que sigue sube limpia */
+  main[class*="page"]:has([data-sector-hero="true"])
+  section[data-sector-dark-band="true"]:not([data-across-final-cta="true"]) + section,
+  main[class*="page"]:has([data-sector-hero="true"])
+  section[class*="darkBand"]:not([data-across-final-cta="true"]) + section,
+  main[class*="page"]:has([data-sector-hero="true"])
+  section[class*="DarkBand"]:not([data-across-final-cta="true"]) + section {
+    margin-top: 0 !important;
+    padding-top: 2.2rem !important;
+  }
+}
+
+/* Tablet chica: también lo sacamos si se vuelve pesado */
+@media (min-width: 701px) and (max-width: 900px) {
+  main[class*="page"]:has([data-sector-hero="true"])
+  section[data-sector-dark-band="true"]:not([data-across-final-cta="true"]),
+  main[class*="page"]:has([data-sector-hero="true"])
+  section[class*="darkBand"]:not([data-across-final-cta="true"]),
+  main[class*="page"]:has([data-sector-hero="true"])
+  section[class*="DarkBand"]:not([data-across-final-cta="true"]) {
+    display: none !important;
+  }
+
+  main[class*="page"]:has([data-sector-hero="true"])
+  section[data-sector-dark-band="true"]:not([data-across-final-cta="true"]) + section,
+  main[class*="page"]:has([data-sector-hero="true"])
+  section[class*="darkBand"]:not([data-across-final-cta="true"]) + section,
+  main[class*="page"]:has([data-sector-hero="true"])
+  section[class*="DarkBand"]:not([data-across-final-cta="true"]) + section {
+    margin-top: 0 !important;
+    padding-top: 3rem !important;
+  }
+}
+

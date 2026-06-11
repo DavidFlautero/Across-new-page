@@ -1267,7 +1267,7 @@
 }
 
 
-/* === BRAND COHERENCE: BLACK / WHITE / #123f59 SYSTEM === */
+/* === BRAND COHERENCE: BLACK / WHITE / RED SYSTEM === */
 
 /* Fondo general más parecido a la home */
 .page {
@@ -1423,7 +1423,7 @@
 }
 
 
-/* === BRAND COHERENCE: BLACK / WHITE / #123f59 SYSTEM === */
+/* === BRAND COHERENCE: BLACK / WHITE / RED SYSTEM === */
 
 /* Fondo general más parecido a la home */
 .page {
@@ -2963,7 +2963,7 @@
       rgba(5, 6, 9, .55) 100%
     ),
     radial-gradient(circle at 18% 18%, rgba(18, 63, 89, .16), transparent 24rem),
-    url("/images/sectores/alimentosybebidas2.png") !important;
+    url("/images/sectores/automocion2.png") !important;
   background-size: cover !important;
   background-position: center 48% !important;
   background-repeat: no-repeat !important;
@@ -3065,7 +3065,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(18, 63, 89, .14), transparent 24rem),
-    url("/images/sectores/alimentosybebidas2.png") !important;
+    url("/images/sectores/automocion2.png") !important;
   background-size: cover !important;
   background-position: center 55% !important;
   background-repeat: no-repeat !important;
@@ -3104,7 +3104,7 @@
   .services {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.90)),
-      url("/images/sectores/alimentosybebidas2.png") !important;
+      url("/images/sectores/automocion2.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3116,7 +3116,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/alimentosybebidas2.png") !important;
+      url("/images/sectores/automocion2.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3134,7 +3134,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(18, 63, 89, .14), transparent 24rem),
-    url("/images/sectores/alimentosybebidas.png") !important;
+    url("/images/sectores/transporte-logistica-automocion.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3144,7 +3144,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/alimentosybebidas.png") !important;
+      url("/images/sectores/transporte-logistica-automocion.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3162,7 +3162,7 @@
       rgba(5, 6, 9, .44) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(18, 63, 89, .14), transparent 24rem),
-    url("/images/sectores/alimentosybebidas.png") !important;
+    url("/images/sectores/transporte-logistica-automocion.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3172,7 +3172,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/alimentosybebidas.png") !important;
+      url("/images/sectores/transporte-logistica-automocion.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -4320,587 +4320,8 @@
 
 /* END HERO IMAGE STARTS AT TOP UNDER HEADER */
 
-
 /* =====================================================
-   ZZZ SECTOR ALIMENTACION BEBIDAS FINAL SYSTEM
-   Estructura tipo servicios:
-   - hero compacto premium
-   - mobile/tablet ordenado
-   - imagen visible, no negro pesado
-   - dark band compacta
-   - overview con márgenes correctas
-   - CTA final consistente
-   ===================================================== */
-
-/* =========================
-   HERO BASE
-   ========================= */
-
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] {
-  position: relative !important;
-  overflow: hidden !important;
-  isolation: isolate !important;
-  background: #07111d !important;
-}
-
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"]::before,
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"]::after,
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] .heroInner::before,
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] .heroInner::after,
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] .heroContent::before,
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] .heroContent::after {
-  content: none !important;
-  display: none !important;
-}
-
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="desktop-image"],
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="mobile-image"] {
-  position: absolute !important;
-  inset: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  z-index: -4 !important;
-  opacity: 1 !important;
-  mix-blend-mode: normal !important;
-  filter: brightness(1.08) contrast(1.06) saturate(1.12) !important;
-}
-
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="overlay"] {
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -3 !important;
-  pointer-events: none !important;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(3, 7, 13, .62) 0%,
-      rgba(5, 22, 36, .42) 46%,
-      rgba(7, 34, 54, .14) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(3, 7, 13, .08) 0%,
-      rgba(3, 7, 13, .06) 44%,
-      rgba(3, 7, 13, .18) 100%
-    ) !important;
-}
-
-@media (max-width: 1200px) {
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="card"] {
-    display: none !important;
-  }
-}
-
-/* DESKTOP */
-@media (min-width: 1201px) {
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] {
-    height: clamp(640px, calc(100svh - 92px), 760px) !important;
-    min-height: 640px !important;
-    max-height: 760px !important;
-    padding: 0 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="desktop-image"] {
-    display: block !important;
-    object-position: center center !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="mobile-image"] {
-    display: none !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="inner"] {
-    position: absolute !important;
-    top: 150px !important;
-    left: clamp(72px, 6.8vw, 118px) !important;
-    right: clamp(72px, 6.8vw, 118px) !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    display: block !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="content"] {
-    max-width: 620px !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="title"] {
-    max-width: 620px !important;
-    margin: 0 !important;
-    font-size: clamp(2.9rem, 3.5vw, 4rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.052em !important;
-    font-weight: 950 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="text"] {
-    max-width: 520px !important;
-    margin-top: .95rem !important;
-    font-size: .9rem !important;
-    line-height: 1.44 !important;
-    font-weight: 650 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="actions"] {
-    margin-top: 1.2rem !important;
-    gap: .75rem !important;
-  }
-}
-
-/* TABLET / NEST HUB */
-@media (min-width: 901px) and (max-width: 1200px) {
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] {
-    height: 500px !important;
-    min-height: 500px !important;
-    max-height: 500px !important;
-    padding: 0 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="desktop-image"] {
-    display: block !important;
-    object-position: center center !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="mobile-image"] {
-    display: none !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="inner"] {
-    position: absolute !important;
-    top: 140px !important;
-    left: clamp(46px, 5.8vw, 64px) !important;
-    right: clamp(42px, 5.8vw, 64px) !important;
-    display: block !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="content"] {
-    max-width: 520px !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="title"] {
-    max-width: 520px !important;
-    font-size: clamp(2.35rem, 4vw, 2.85rem) !important;
-    line-height: .98 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="text"] {
-    max-width: 445px !important;
-    font-size: .76rem !important;
-    line-height: 1.42 !important;
-  }
-}
-
-/* MOBILE */
-@media (max-width: 700px) {
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] {
-    height: 465px !important;
-    min-height: 465px !important;
-    max-height: 465px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="desktop-image"] {
-    display: none !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="mobile-image"] {
-    display: block !important;
-    object-position: center center !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="inner"] {
-    position: absolute !important;
-    top: 86px !important;
-    left: 20px !important;
-    right: 20px !important;
-    display: block !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="content"] {
-    max-width: 318px !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="title"] {
-    max-width: 318px !important;
-    font-size: clamp(1.68rem, 8.1vw, 2.08rem) !important;
-    line-height: .96 !important;
-    letter-spacing: -.045em !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="text"] {
-    max-width: 292px !important;
-    margin-top: .68rem !important;
-    font-size: .62rem !important;
-    line-height: 1.36 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="actions"] {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    max-width: 250px !important;
-    margin-top: .92rem !important;
-    gap: .5rem !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="actions"] a:nth-of-type(2) {
-    display: none !important;
-  }
-}
-
-/* =========================
-   TRUST BAR MOBILE
-   ========================= */
-
-@media (max-width: 700px) {
-  .page .trustBar {
-    height: 108px !important;
-    min-height: 108px !important;
-    max-height: 108px !important;
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    grid-template-rows: repeat(2, 54px) !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    gap: 0 !important;
-    background: #05101b !important;
-    overflow: hidden !important;
-  }
-
-  .page .trustBar > div {
-    height: 54px !important;
-    min-height: 54px !important;
-    padding: 0 .85rem !important;
-    display: grid !important;
-    grid-template-columns: 30px 1fr !important;
-    align-items: center !important;
-    column-gap: .55rem !important;
-  }
-
-  .page .trustBar strong {
-    font-size: .56rem !important;
-    line-height: 1.05 !important;
-  }
-
-  .page .trustBar small {
-    font-size: .5rem !important;
-    line-height: 1.08 !important;
-  }
-}
-
-/* =========================
-   OVERVIEW
-   ========================= */
-
-@media (max-width: 700px) {
-  .page .overview {
-    padding-top: 1.25rem !important;
-    padding-left: clamp(22px, 6vw, 30px) !important;
-    padding-right: clamp(22px, 6vw, 30px) !important;
-    padding-bottom: 2.4rem !important;
-    margin-top: 0 !important;
-    overflow: hidden !important;
-  }
-
-  .page .pillars {
-    display: none !important;
-  }
-
-  .page .overview h2 {
-    max-width: 330px !important;
-    margin: 0 !important;
-    font-size: clamp(1.9rem, 8.2vw, 2.35rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.055em !important;
-  }
-
-  .page .overview p {
-    max-width: 320px !important;
-    margin: 1.25rem 0 0 !important;
-    font-size: .95rem !important;
-    line-height: 1.62 !important;
-  }
-
-  .page .overview a {
-    width: 100% !important;
-    min-height: 50px !important;
-    margin: 1.65rem 0 0 !important;
-    white-space: normal !important;
-    text-align: center !important;
-  }
-}
-
-/* =========================
-   DARK BAND SECTOR
-   ========================= */
-
-.page section[data-sector-dark-band="true"],
-.page .darkBand {
-  position: relative !important;
-  isolation: isolate !important;
-  overflow: hidden !important;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5, 20, 34, .54) 0%,
-      rgba(8, 37, 56, .42) 48%,
-      rgba(10, 55, 78, .30) 100%
-    ),
-    url("/images/sectores/alimentosybebidas2.png") center center / cover no-repeat !important;
-}
-
-.page section[data-sector-dark-band="true"] > *,
-.page .darkBand > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-.page .darkBandImage,
-.page .darkBandImage img {
-  display: none !important;
-}
-
-@media (min-width: 901px) {
-  .page section[data-sector-dark-band="true"],
-  .page .darkBand {
-    min-height: auto !important;
-    padding-top: clamp(3.4rem, 4.6vw, 4.8rem) !important;
-    padding-bottom: clamp(3.6rem, 4.8vw, 5rem) !important;
-  }
-
-  .page .darkBand h2 {
-    max-width: 760px !important;
-    font-size: clamp(2.25rem, 3.15vw, 3.25rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.052em !important;
-  }
-
-  .page .stats article {
-    min-height: 150px !important;
-    padding: 1.35rem 1.45rem !important;
-  }
-}
-
-@media (max-width: 700px) {
-  .page section[data-sector-dark-band="true"],
-  .page .darkBand {
-    padding-top: 2.8rem !important;
-    padding-bottom: 3rem !important;
-  }
-
-  .page .darkBand h2 {
-    font-size: clamp(1.85rem, 7.6vw, 2.25rem) !important;
-    line-height: .99 !important;
-  }
-}
-
-/* =========================
-   FINAL CTA
-   ========================= */
-
-.page [data-sector-final-cta="true"],
-.page [data-across-final-cta="true"] {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5, 20, 34, .50) 0%,
-      rgba(8, 37, 56, .42) 48%,
-      rgba(10, 55, 78, .28) 100%
-    ),
-    url("/images/sectores/alimentosybebidas2.png") center center / cover no-repeat !important;
-}
-
-
-/* =====================================================
-   ZZZ SECTOR ALIMENTACION REMOVE #123f59 ACCENTS
-   Quita rojos viejos y usa azul Across + dorado suave.
-   ===================================================== */
-
-.page {
-  --sector-blue: #123f59;
-  --sector-blue-dark: #082234;
-  --sector-blue-soft: #1b5a78;
-  --sector-gold: #d6bd83;
-}
-
-/* Botones principales */
-.page a[href="/cotizacion"],
-.page a[href="/contacto"],
-.page .actions a,
-.page .overview a,
-.page [data-across-final-cta="true"] a,
-.page [data-sector-final-cta="true"] a {
-  background: linear-gradient(135deg, var(--sector-blue-dark), var(--sector-blue)) !important;
-  color: #fff !important;
-  border: 1px solid rgba(214, 189, 131, .48) !important;
-  box-shadow: 0 18px 42px rgba(8, 34, 52, .24) !important;
-}
-
-/* Botón secundario */
-.page .actions a:last-child,
-.page [data-across-final-cta="true"] a:last-child,
-.page [data-sector-final-cta="true"] a:last-child {
-  background: rgba(5, 18, 30, .42) !important;
-  color: #fff !important;
-  border: 1px solid rgba(255, 255, 255, .34) !important;
-}
-
-/* Flechas / iconos / acentos */
-.page a::after,
-.page .actions a::after,
-.page .overview a::after,
-.page [data-across-final-cta="true"] a::after,
-.page [data-sector-final-cta="true"] a::after {
-  color: inherit !important;
-}
-
-/* Eyebrows dorados, no rojos */
-.page .eyebrow,
-.page [class*="eyebrow"],
-.page [class*="Eyebrow"],
-.page [data-hero-role="eyebrow"] {
-  color: var(--sector-gold) !important;
-}
-
-/* Cards oscuras: iconos/bordes azules, no rojos */
-.page .stats i,
-.page .stats svg,
-.page .darkBand i,
-.page .darkBand svg,
-.page section[data-sector-dark-band="true"] i,
-.page section[data-sector-dark-band="true"] svg {
-  color: var(--sector-blue-soft) !important;
-  stroke: var(--sector-blue-soft) !important;
-}
-
-.page .stats article,
-.page .darkBand article,
-.page section[data-sector-dark-band="true"] article {
-  border-color: rgba(255,255,255,.16) !important;
-}
-
-/* Cualquier sombra roja vieja */
-.page * {
-  --red: var(--sector-blue) !important;
-  --accent-red: var(--sector-blue) !important;
-}
-
-
-/* =====================================================
-   ZZZ SECTOR ALIMENTACION BLUE ACCENTS FINAL LOCK
-   Mata rojos restantes en proceso, cards, iconos y flechas.
-   ===================================================== */
-
-.page {
-  --sector-blue: #123f59;
-  --sector-blue-dark: #082234;
-  --sector-blue-soft: #1b5a78;
-  --sector-blue-light: #2b7897;
-  --sector-gold: #d6bd83;
-}
-
-/* Eyebrows dorados */
-.page .eyebrow,
-.page [class*="eyebrow"],
-.page [class*="Eyebrow"],
-.page [data-hero-role="eyebrow"] {
-  color: var(--sector-gold) !important;
-}
-
-/* Proceso operativo: círculos, líneas, flechas */
-.page [class*="process"] *,
-.page [class*="Process"] *,
-.page [class*="steps"] *,
-.page [class*="Steps"] *,
-.page [class*="timeline"] *,
-.page [class*="Timeline"] * {
-  border-color: rgba(18, 63, 89, .24) !important;
-}
-
-/* Círculos numerados */
-.page [class*="process"] span:first-child,
-.page [class*="Process"] span:first-child,
-.page [class*="steps"] span:first-child,
-.page [class*="Steps"] span:first-child,
-.page [class*="timeline"] span:first-child,
-.page [class*="Timeline"] span:first-child {
-  background: var(--sector-blue) !important;
-  color: #fff !important;
-  border-color: var(--sector-blue) !important;
-}
-
-/* Iconos SVG */
-.page svg,
-.page i svg,
-.page [class*="process"] svg,
-.page [class*="Process"] svg,
-.page [class*="steps"] svg,
-.page [class*="Steps"] svg,
-.page .stats svg,
-.page .darkBand svg {
-  stroke: var(--sector-blue-soft) !important;
-  color: var(--sector-blue-soft) !important;
-}
-
-/* Iconos dentro de círculos */
-.page i,
-.page .stats i,
-.page .darkBand i,
-.page [class*="process"] i,
-.page [class*="Process"] i,
-.page [class*="steps"] i,
-.page [class*="Steps"] i {
-  border-color: rgba(27, 90, 120, .45) !important;
-  color: var(--sector-blue-soft) !important;
-}
-
-/* Flechas rojas */
-.page a::after,
-.page article::after,
-.page .stats article::after,
-.page .darkBand article::after,
-.page [class*="process"] article::after,
-.page [class*="Process"] article::after,
-.page [class*="steps"] article::after,
-.page [class*="Steps"] article::after {
-  color: var(--sector-blue-light) !important;
-}
-
-/* Cards oscuras */
-.page .stats article,
-.page .darkBand article,
-.page section[data-sector-dark-band="true"] article {
-  border-color: rgba(255,255,255,.16) !important;
-}
-
-/* Botones */
-.page a[href="/cotizacion"],
-.page a[href="/contacto"],
-.page .actions a,
-.page .overview a,
-.page [data-across-final-cta="true"] a,
-.page [data-sector-final-cta="true"] a {
-  background: linear-gradient(135deg, var(--sector-blue-dark), var(--sector-blue)) !important;
-  color: #fff !important;
-  border-color: rgba(214, 189, 131, .45) !important;
-}
-
-/* Botón secundario */
-.page .actions a:last-child,
-.page [data-across-final-cta="true"] a:last-child,
-.page [data-sector-final-cta="true"] a:last-child {
-  background: rgba(5, 18, 30, .42) !important;
-  color: #fff !important;
-  border-color: rgba(255,255,255,.34) !important;
-}
-
-/* =====================================================
-   ZZZ SECTOR ALIMENTACION-BEBIDAS FINAL SYSTEM
+   ZZZ SECTOR AUTOMOCION FINAL SYSTEM
    Replica sistema aprobado de Alimentación & Bebidas.
    - Hero compacto
    - Azul Across
@@ -4991,25 +4412,25 @@
 }
 
 /* HERO */
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] {
+.page > .hero[data-sector-hero="true"][data-sector-name="automocion"] {
   position: relative !important;
   overflow: hidden !important;
   isolation: isolate !important;
   background: #07111d !important;
 }
 
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"]::before,
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"]::after,
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] .heroInner::before,
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] .heroInner::after,
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] .heroContent::before,
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] .heroContent::after {
+.page > .hero[data-sector-hero="true"][data-sector-name="automocion"]::before,
+.page > .hero[data-sector-hero="true"][data-sector-name="automocion"]::after,
+.page > .hero[data-sector-hero="true"][data-sector-name="automocion"] .heroInner::before,
+.page > .hero[data-sector-hero="true"][data-sector-name="automocion"] .heroInner::after,
+.page > .hero[data-sector-hero="true"][data-sector-name="automocion"] .heroContent::before,
+.page > .hero[data-sector-hero="true"][data-sector-name="automocion"] .heroContent::after {
   content: none !important;
   display: none !important;
 }
 
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="desktop-image"],
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="mobile-image"] {
+.page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="desktop-image"],
+.page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="mobile-image"] {
   position: absolute !important;
   inset: 0 !important;
   width: 100% !important;
@@ -5021,7 +4442,7 @@
   filter: brightness(1.08) contrast(1.06) saturate(1.12) !important;
 }
 
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="overlay"] {
+.page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="overlay"] {
   position: absolute !important;
   inset: 0 !important;
   z-index: -3 !important;
@@ -5032,29 +4453,29 @@
 }
 
 @media (max-width: 1200px) {
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="card"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="card"] {
     display: none !important;
   }
 }
 
 @media (min-width: 1201px) {
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] {
     height: clamp(640px, calc(100svh - 92px), 760px) !important;
     min-height: 640px !important;
     max-height: 760px !important;
     padding: 0 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="desktop-image"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="desktop-image"] {
     display: block !important;
     object-position: center center !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="mobile-image"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="mobile-image"] {
     display: none !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="inner"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="inner"] {
     position: absolute !important;
     top: 150px !important;
     left: clamp(72px, 6.8vw, 118px) !important;
@@ -5065,11 +4486,11 @@
     display: block !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="content"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="content"] {
     max-width: 620px !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="title"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="title"] {
     max-width: 620px !important;
     margin: 0 !important;
     font-size: clamp(2.9rem, 3.5vw, 4rem) !important;
@@ -5078,7 +4499,7 @@
     font-weight: 950 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="text"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="text"] {
     max-width: 520px !important;
     margin-top: .95rem !important;
     font-size: .9rem !important;
@@ -5086,30 +4507,30 @@
     font-weight: 650 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="actions"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="actions"] {
     margin-top: 1.2rem !important;
     gap: .75rem !important;
   }
 }
 
 @media (min-width: 901px) and (max-width: 1200px) {
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] {
     height: 500px !important;
     min-height: 500px !important;
     max-height: 500px !important;
     padding: 0 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="desktop-image"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="desktop-image"] {
     display: block !important;
     object-position: center center !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="mobile-image"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="mobile-image"] {
     display: none !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="inner"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="inner"] {
     position: absolute !important;
     top: 140px !important;
     left: clamp(46px, 5.8vw, 64px) !important;
@@ -5119,17 +4540,17 @@
     padding: 0 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="content"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="content"] {
     max-width: 520px !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="title"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="title"] {
     max-width: 520px !important;
     font-size: clamp(2.35rem, 4vw, 2.85rem) !important;
     line-height: .98 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="text"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="text"] {
     max-width: 445px !important;
     font-size: .76rem !important;
     line-height: 1.42 !important;
@@ -5137,7 +4558,7 @@
 }
 
 @media (max-width: 700px) {
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] {
     height: 465px !important;
     min-height: 465px !important;
     max-height: 465px !important;
@@ -5145,16 +4566,16 @@
     margin: 0 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="desktop-image"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="desktop-image"] {
     display: none !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="mobile-image"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="mobile-image"] {
     display: block !important;
     object-position: center center !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="inner"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="inner"] {
     position: absolute !important;
     top: 86px !important;
     left: 20px !important;
@@ -5164,25 +4585,25 @@
     padding: 0 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="content"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="content"] {
     max-width: 318px !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="title"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="title"] {
     max-width: 318px !important;
     font-size: clamp(1.68rem, 8.1vw, 2.08rem) !important;
     line-height: .96 !important;
     letter-spacing: -.045em !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="text"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="text"] {
     max-width: 292px !important;
     margin-top: .68rem !important;
     font-size: .62rem !important;
     line-height: 1.36 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="actions"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="actions"] {
     display: grid !important;
     grid-template-columns: 1fr !important;
     max-width: 250px !important;
@@ -5190,7 +4611,7 @@
     gap: .5rem !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="actions"] a:nth-of-type(2) {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="actions"] a:nth-of-type(2) {
     display: none !important;
   }
 }
@@ -5279,7 +4700,7 @@
   overflow: hidden !important;
   background:
     linear-gradient(90deg, rgba(5,20,34,.54) 0%, rgba(8,37,56,.42) 48%, rgba(10,55,78,.30) 100%),
-    url("/images/sectores/alimentosybebidas2.png") center center / cover no-repeat !important;
+    url("/images/sectores/automocion2.png") center center / cover no-repeat !important;
 }
 
 .page section[data-sector-dark-band="true"] > *,
@@ -5333,7 +4754,7 @@
 .page [data-across-final-cta="true"] {
   background:
     linear-gradient(90deg, rgba(5,20,34,.50) 0%, rgba(8,37,56,.42) 48%, rgba(10,55,78,.28) 100%),
-    url("/images/sectores/alimentosybebidas2.png") center center / cover no-repeat !important;
+    url("/images/sectores/automocion2.png") center center / cover no-repeat !important;
 }
 
 /* =====================================================
@@ -5342,7 +4763,7 @@
    Va dentro de cada CSS module para ganar la cascada.
    ===================================================== */
 
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
   .page section[data-sector-dark-band="true"],
   .page section[class*="darkBand"],
   .page section[class*="DarkBand"],
@@ -5370,46 +4791,6 @@
   .page section:has(.stats):not(.hero):not(.trustBar):not(.overview):not([data-across-final-cta="true"]) + section,
   .page section:has([class*="stats"]):not(.hero):not(.trustBar):not(.overview):not([data-across-final-cta="true"]) + section,
   .page section:has([class*="Stats"]):not(.hero):not(.trustBar):not(.overview):not([data-across-final-cta="true"]) + section {
-    margin-top: 0 !important;
-    padding-top: 2.2rem !important;
-  }
-}
-
-/* =====================================================
-   ZZZ SECTORES MOBILE HIDE SERVICES CARDS FINAL
-   Oculta en mobile/tablet chica el bloque de servicios/cards
-   que aparece después del overview.
-   ===================================================== */
-
-@media (max-width: 900px) {
-  .page .services,
-  .page section[class*="services"],
-  .page section[class*="Services"],
-  .page section[class*="useCases"],
-  .page section[class*="UseCases"],
-  .page section[data-sector-dark-band="true"],
-  .page .darkBand,
-  .page section[class*="darkBand"],
-  .page section[class*="DarkBand"] {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    height: 0 !important;
-    min-height: 0 !important;
-    max-height: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    overflow: hidden !important;
-    pointer-events: none !important;
-  }
-
-  .page .services + section,
-  .page section[class*="services"] + section,
-  .page section[class*="Services"] + section,
-  .page section[class*="useCases"] + section,
-  .page section[class*="UseCases"] + section,
-  .page section[data-sector-dark-band="true"] + section,
-  .page .darkBand + section {
     margin-top: 0 !important;
     padding-top: 2.2rem !important;
   }

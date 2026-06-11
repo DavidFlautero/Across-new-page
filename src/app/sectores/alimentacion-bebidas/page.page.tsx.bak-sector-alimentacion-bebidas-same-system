@@ -8,495 +8,495 @@ import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import RelatedServices from "@/app/servicios/_shared/RelatedServices";
-import styles from "./Automocion.module.css";
+import styles from "./AlimentacionBebidas.module.css";
 
 type Locale = "es" | "en" | "zh";
 
 const copy = {
   "es": {
-    "heroEyebrow": "Sector automoción",
-    "heroTitle": "Logística para cadenas automotrices que no pueden detenerse.",
-    "heroText": "Coordinamos transporte, almacenaje, distribución y operaciones especiales para componentes, repuestos, autopartes y proyectos de automoción con trazabilidad y control operativo.",
+    "heroEyebrow": "Sector alimentación y bebidas",
+    "heroTitle": "Logística para productos que exigen tiempo, control y confianza.",
+    "heroText": "Diseñamos operaciones logísticas para alimentos, bebidas, perecederos y productos de consumo, integrando transporte, almacenaje, distribución, trazabilidad y control operativo.",
     "primaryCta": "Planificar mi operación",
     "secondaryCta": "Hablar con nuestro equipo",
-    "activeLabel": "Operación automotriz activa",
-    "activeRoute": "Proveedor → Planta",
-    "activeCargo": "Autopartes y componentes",
+    "activeLabel": "Operación alimentaria activa",
+    "activeRoute": "Proveedor → Distribución",
+    "activeCargo": "Alimentos y bebidas",
     "activeStatusLabel": "Estado:",
     "activeStatus": "En coordinación",
     "activeEtaLabel": "Prioridad:",
-    "activeEta": "Línea productiva",
+    "activeEta": "Entrega segura",
     "trust": [
       [
-        "Just in time",
-        "Continuidad operativa"
-      ],
-      [
-        "Autopartes",
-        "Componentes críticos"
-      ],
-      [
         "Trazabilidad",
-        "Control de avance"
+        "Control operativo"
       ],
       [
         "Distribución",
-        "Entrega coordinada"
+        "Entregas coordinadas"
+      ],
+      [
+        "Cadena de frío",
+        "Cuando aplica"
+      ],
+      [
+        "Cumplimiento",
+        "Documentación y control"
       ]
     ],
-    "overviewEyebrow": "Logística automotriz",
-    "overviewTitle": "Precisión logística para operaciones industriales de alta exigencia.",
-    "overviewText": "La industria automotriz requiere entregas puntuales, control documental, disponibilidad de componentes y respuesta ante urgencias. Diseñamos operaciones para mantener la cadena productiva en movimiento.",
-    "overviewButton": "Conocer más sobre automoción",
+    "overviewEyebrow": "Logística sectorial",
+    "overviewTitle": "Soluciones logísticas para cadenas alimentarias que no pueden fallar.",
+    "overviewText": "El sector de alimentación y bebidas exige velocidad, cuidado del producto, cumplimiento documental y continuidad. Coordinamos operaciones diseñadas para proteger mercancía, reducir riesgos y mantener la cadena en movimiento.",
+    "overviewButton": "Conocer más sobre alimentación y bebidas",
     "pillars": [
       [
-        "Continuidad productiva",
-        "Coordinación de entregas para reducir interrupciones en planta o distribución."
+        "Control de producto",
+        "Coordinación según tipo de mercancía, sensibilidad, rotación y requisitos de entrega."
       ],
       [
-        "Control de componentes",
-        "Gestión logística para autopartes, repuestos, equipos y piezas críticas."
-      ],
-      [
-        "Operaciones urgentes",
-        "Respuesta para envíos prioritarios que afectan producción o servicio."
-      ],
-      [
-        "Distribución B2B",
-        "Entregas hacia plantas, talleres, distribuidores o centros logísticos."
-      ]
-    ],
-    "servicesEyebrow": "Soluciones para automoción",
-    "servicesTitle": "Operaciones diseñadas para la cadena automotriz.",
-    "services": [
-      [
-        "Transporte terrestre",
-        "Rutas nacionales e internacionales para autopartes y componentes."
-      ],
-      [
-        "Carga urgente",
-        "Soluciones prioritarias para repuestos o piezas críticas."
-      ],
-      [
-        "Almacenaje",
-        "Gestión de stock, preparación y distribución de componentes."
-      ],
-      [
-        "Importación y exportación",
-        "Coordinación documental y aduanera para comercio internacional."
-      ],
-      [
-        "Cargas especiales",
-        "Transporte de equipos, maquinaria o piezas de gran volumen."
-      ],
-      [
-        "Door to door",
-        "Flujo completo desde proveedor hasta planta o destino final."
-      ]
-    ],
-    "useCasesEyebrow": "Cuándo necesita logística automotriz",
-    "useCasesTitle": "Cuando la operación depende de que cada pieza llegue a tiempo.",
-    "useCases": [
-      [
-        "Autopartes",
-        "Movimientos recurrentes de componentes y repuestos."
-      ],
-      [
-        "Línea productiva",
-        "Entregas que impactan directamente en continuidad industrial."
-      ],
-      [
-        "Distribuidores",
-        "Abastecimiento hacia redes comerciales o técnicas."
-      ],
-      [
-        "Repuestos críticos",
-        "Cargas urgentes para reparación, garantía o servicio."
-      ],
-      [
-        "Importadores",
-        "Operaciones internacionales con control documental."
-      ],
-      [
-        "Proyectos industriales",
-        "Equipos, maquinaria o componentes especiales."
-      ]
-    ],
-    "processEyebrow": "Nuestro proceso operativo",
-    "processTitle": "Una operación automotriz clara desde la necesidad hasta la entrega.",
-    "process": [
-      [
-        "Análisis de carga",
-        "Revisamos tipo de pieza, volumen, urgencia y destino."
-      ],
-      [
-        "Diseño logístico",
-        "Definimos ruta, modalidad y tiempos de operación."
-      ],
-      [
-        "Documentación",
-        "Coordinamos requisitos comerciales, aduaneros y operativos."
-      ],
-      [
-        "Ejecución",
-        "Gestionamos retiro, transporte y conexión logística."
-      ],
-      [
-        "Seguimiento",
-        "Monitoreamos hitos críticos y avance."
-      ],
-      [
-        "Entrega final",
-        "Coordinamos recepción y cierre operativo."
-      ]
-    ],
-    "bandTitle": "Logística automotriz diseñada para mantener la producción en movimiento.",
-    "bandText": "Nuestro equipo coordina operaciones para empresas que necesitan puntualidad, control documental y respuesta profesional en cadenas automotrices.",
-    "stats": [
-      [
-        "Just in time",
-        "Continuidad de suministro"
-      ],
-      [
-        "Autopartes",
-        "Componentes críticos"
+        "Distribución eficiente",
+        "Planificación de salidas, rutas y entregas para clientes, retail o puntos de venta."
       ],
       [
         "Trazabilidad",
+        "Seguimiento operativo para mantener visibilidad de la mercancía."
+      ],
+      [
+        "Cadena de frío",
+        "Soluciones con control térmico cuando el producto lo requiere."
+      ]
+    ],
+    "servicesEyebrow": "Soluciones para alimentación y bebidas",
+    "servicesTitle": "Operaciones diseñadas para productos de consumo.",
+    "services": [
+      [
+        "Transporte nacional e internacional",
+        "Coordinación de movimientos terrestres, marítimos o aéreos según urgencia y volumen."
+      ],
+      [
+        "Distribución comercial",
+        "Entregas a clientes, cadenas, puntos de venta o centros de distribución."
+      ],
+      [
+        "Carga refrigerada",
+        "Soluciones para productos perecederos o sensibles a temperatura."
+      ],
+      [
+        "Almacenaje y preparación",
+        "Gestión de stock, picking, packing y salidas programadas."
+      ],
+      [
+        "Importación y exportación",
+        "Soporte documental, aduanero y operativo para comercio internacional."
+      ],
+      [
+        "Door to door",
+        "Coordinación completa desde origen hasta entrega final."
+      ]
+    ],
+    "useCasesEyebrow": "Cuándo necesita logística especializada",
+    "useCasesTitle": "Cuando el producto debe llegar bien, a tiempo y bajo control.",
+    "useCases": [
+      [
+        "Alimentos perecederos",
+        "Operaciones que requieren tiempos precisos y control de condiciones."
+      ],
+      [
+        "Bebidas",
+        "Distribución de productos embotellados, envasados o de alto volumen."
+      ],
+      [
+        "Retail y supermercados",
+        "Entregas programadas hacia cadenas y puntos de venta."
+      ],
+      [
+        "Importadores",
+        "Gestión integral para productos alimentarios internacionales."
+      ],
+      [
+        "Campañas comerciales",
+        "Picos de demanda y entregas de alta rotación."
+      ],
+      [
+        "Productos sensibles",
+        "Mercancía que requiere cuidado, trazabilidad o control térmico."
+      ]
+    ],
+    "processEyebrow": "Nuestro proceso operativo",
+    "processTitle": "Una operación alimentaria clara desde la planificación hasta la entrega.",
+    "process": [
+      [
+        "Análisis del producto",
+        "Revisamos tipo de mercancía, sensibilidad, volumen y requisitos."
+      ],
+      [
+        "Diseño logístico",
+        "Definimos transporte, almacenamiento, distribución y tiempos."
+      ],
+      [
+        "Documentación",
+        "Coordinamos requisitos comerciales, sanitarios o aduaneros cuando aplica."
+      ],
+      [
+        "Preparación operativa",
+        "Gestionamos retiro, carga, acondicionamiento y salida."
+      ],
+      [
+        "Seguimiento",
+        "Monitoreamos avance, hitos y trazabilidad."
+      ],
+      [
+        "Entrega final",
+        "Coordinamos recepción, descarga y cierre operativo."
+      ]
+    ],
+    "bandTitle": "Logística alimentaria diseñada para proteger producto y continuidad.",
+    "bandText": "Nuestro equipo coordina operaciones para empresas que necesitan puntualidad, trazabilidad y respuesta profesional en alimentos, bebidas y productos de consumo.",
+    "stats": [
+      [
+        "Trazabilidad",
         "Seguimiento operativo"
+      ],
+      [
+        "Distribución",
+        "Entregas coordinadas"
+      ],
+      [
+        "Cadena de frío",
+        "Cuando aplica"
       ],
       [
         "Soporte experto",
         "Especialistas dedicados"
       ]
     ],
-    "finalTitle": "Coordinemos su próxima operación automotriz.",
-    "finalText": "Cuéntenos tipo de carga, origen, destino, urgencia y requisitos. Nuestro equipo analizará la mejor solución logística.",
-    "finalPrimary": "Solicitar propuesta automotriz",
+    "finalTitle": "Coordinemos su próxima operación de alimentación y bebidas.",
+    "finalText": "Cuéntenos tipo de producto, volumen, origen, destino y requisitos. Nuestro equipo analizará la mejor solución logística.",
+    "finalPrimary": "Solicitar propuesta logística",
     "finalSecondary": "Hablar con un especialista"
   },
   "en": {
-    "heroEyebrow": "Automotive sector",
-    "heroTitle": "Logistics for automotive chains that cannot stop.",
-    "heroText": "We coordinate transport, warehousing, distribution and special operations for components, spare parts, automotive parts and projects with traceability and operational control.",
+    "heroEyebrow": "Food and beverage sector",
+    "heroTitle": "Logistics for products that demand timing, control and trust.",
+    "heroText": "We design logistics operations for food, beverages, perishables and consumer products, integrating transport, warehousing, distribution, traceability and operational control.",
     "primaryCta": "Plan my operation",
     "secondaryCta": "Talk to our team",
-    "activeLabel": "Active automotive operation",
-    "activeRoute": "Supplier → Plant",
-    "activeCargo": "Parts and components",
+    "activeLabel": "Active food operation",
+    "activeRoute": "Supplier → Distribution",
+    "activeCargo": "Food and beverages",
     "activeStatusLabel": "Status:",
     "activeStatus": "In coordination",
     "activeEtaLabel": "Priority:",
-    "activeEta": "Production line",
+    "activeEta": "Safe delivery",
     "trust": [
       [
-        "Just in time",
-        "Operational continuity"
-      ],
-      [
-        "Auto parts",
-        "Critical components"
-      ],
-      [
         "Traceability",
-        "Progress control"
+        "Operational control"
       ],
       [
         "Distribution",
-        "Coordinated delivery"
+        "Coordinated deliveries"
+      ],
+      [
+        "Cold chain",
+        "When required"
+      ],
+      [
+        "Compliance",
+        "Documentation and control"
       ]
     ],
-    "overviewEyebrow": "Automotive logistics",
-    "overviewTitle": "Logistics precision for demanding industrial operations.",
-    "overviewText": "The automotive industry requires punctual deliveries, document control, component availability and response to urgency. We design operations to keep the production chain moving.",
-    "overviewButton": "Learn more about automotive",
+    "overviewEyebrow": "Sector logistics",
+    "overviewTitle": "Logistics solutions for food supply chains that cannot fail.",
+    "overviewText": "The food and beverage sector requires speed, product care, document compliance and continuity. We coordinate operations designed to protect goods, reduce risks and keep the chain moving.",
+    "overviewButton": "Learn more about food and beverages",
     "pillars": [
       [
-        "Production continuity",
-        "Delivery coordination to reduce plant or distribution interruptions."
+        "Product control",
+        "Coordination according to goods type, sensitivity, rotation and delivery requirements."
       ],
       [
-        "Component control",
-        "Logistics management for auto parts, spares, equipment and critical pieces."
-      ],
-      [
-        "Urgent operations",
-        "Priority shipments affecting production or service."
-      ],
-      [
-        "B2B distribution",
-        "Deliveries to plants, workshops, distributors or logistics centers."
-      ]
-    ],
-    "servicesEyebrow": "Automotive solutions",
-    "servicesTitle": "Operations designed for the automotive chain.",
-    "services": [
-      [
-        "Road transport",
-        "Domestic and international routes for auto parts and components."
-      ],
-      [
-        "Urgent cargo",
-        "Priority solutions for spares or critical pieces."
-      ],
-      [
-        "Warehousing",
-        "Stock management, preparation and component distribution."
-      ],
-      [
-        "Import and export",
-        "Document and customs coordination for international trade."
-      ],
-      [
-        "Special cargo",
-        "Transport of equipment, machinery or large parts."
-      ],
-      [
-        "Door to door",
-        "Full flow from supplier to plant or final destination."
-      ]
-    ],
-    "useCasesEyebrow": "When automotive logistics is needed",
-    "useCasesTitle": "When the operation depends on every part arriving on time.",
-    "useCases": [
-      [
-        "Auto parts",
-        "Recurring movements of components and spares."
-      ],
-      [
-        "Production line",
-        "Deliveries directly impacting industrial continuity."
-      ],
-      [
-        "Distributors",
-        "Supply to commercial or technical networks."
-      ],
-      [
-        "Critical spares",
-        "Urgent cargo for repair, warranty or service."
-      ],
-      [
-        "Importers",
-        "International operations with document control."
-      ],
-      [
-        "Industrial projects",
-        "Equipment, machinery or special components."
-      ]
-    ],
-    "processEyebrow": "Our operational process",
-    "processTitle": "A clear automotive operation from need to delivery.",
-    "process": [
-      [
-        "Cargo analysis",
-        "We review part type, volume, urgency and destination."
-      ],
-      [
-        "Logistics design",
-        "We define route, modality and operational timing."
-      ],
-      [
-        "Documentation",
-        "We coordinate commercial, customs and operational requirements."
-      ],
-      [
-        "Execution",
-        "We manage pickup, transport and logistics connection."
-      ],
-      [
-        "Tracking",
-        "We monitor critical milestones and progress."
-      ],
-      [
-        "Final delivery",
-        "We coordinate reception and closure."
-      ]
-    ],
-    "bandTitle": "Automotive logistics designed to keep production moving.",
-    "bandText": "Our team coordinates operations for companies needing punctuality, document control and professional response in automotive supply chains.",
-    "stats": [
-      [
-        "Just in time",
-        "Supply continuity"
-      ],
-      [
-        "Auto parts",
-        "Critical components"
+        "Efficient distribution",
+        "Planning of dispatches, routes and deliveries for clients, retail or points of sale."
       ],
       [
         "Traceability",
+        "Operational tracking to maintain cargo visibility."
+      ],
+      [
+        "Cold chain",
+        "Temperature-controlled solutions when the product requires it."
+      ]
+    ],
+    "servicesEyebrow": "Food and beverage solutions",
+    "servicesTitle": "Operations designed for consumer products.",
+    "services": [
+      [
+        "Domestic and international transport",
+        "Road, ocean or air movements according to urgency and volume."
+      ],
+      [
+        "Commercial distribution",
+        "Deliveries to clients, chains, points of sale or distribution centers."
+      ],
+      [
+        "Refrigerated cargo",
+        "Solutions for perishable or temperature-sensitive products."
+      ],
+      [
+        "Warehousing and preparation",
+        "Stock management, picking, packing and scheduled dispatches."
+      ],
+      [
+        "Import and export",
+        "Document, customs and operational support for international trade."
+      ],
+      [
+        "Door to door",
+        "Complete coordination from origin to final delivery."
+      ]
+    ],
+    "useCasesEyebrow": "When specialized logistics is needed",
+    "useCasesTitle": "When the product must arrive properly, on time and under control.",
+    "useCases": [
+      [
+        "Perishable food",
+        "Operations requiring precise timing and condition control."
+      ],
+      [
+        "Beverages",
+        "Distribution of bottled, packaged or high-volume products."
+      ],
+      [
+        "Retail and supermarkets",
+        "Scheduled deliveries to chains and points of sale."
+      ],
+      [
+        "Importers",
+        "Integrated management for international food products."
+      ],
+      [
+        "Commercial campaigns",
+        "Demand peaks and high-rotation deliveries."
+      ],
+      [
+        "Sensitive products",
+        "Goods requiring care, traceability or thermal control."
+      ]
+    ],
+    "processEyebrow": "Our operational process",
+    "processTitle": "A clear food logistics operation from planning to delivery.",
+    "process": [
+      [
+        "Product analysis",
+        "We review goods type, sensitivity, volume and requirements."
+      ],
+      [
+        "Logistics design",
+        "We define transport, warehousing, distribution and timing."
+      ],
+      [
+        "Documentation",
+        "We coordinate commercial, sanitary or customs requirements when applicable."
+      ],
+      [
+        "Operational setup",
+        "We manage pickup, loading, conditioning and dispatch."
+      ],
+      [
+        "Tracking",
+        "We monitor progress, milestones and traceability."
+      ],
+      [
+        "Final delivery",
+        "We coordinate reception, unloading and operational closure."
+      ]
+    ],
+    "bandTitle": "Food logistics designed to protect product and continuity.",
+    "bandText": "Our team coordinates operations for companies that need punctuality, traceability and professional response in food, beverages and consumer products.",
+    "stats": [
+      [
+        "Traceability",
         "Operational tracking"
+      ],
+      [
+        "Distribution",
+        "Coordinated deliveries"
+      ],
+      [
+        "Cold chain",
+        "When required"
       ],
       [
         "Expert support",
         "Dedicated specialists"
       ]
     ],
-    "finalTitle": "Let’s coordinate your next automotive operation.",
-    "finalText": "Tell us cargo type, origin, destination, urgency and requirements. Our team will analyze the best logistics solution.",
-    "finalPrimary": "Request automotive proposal",
+    "finalTitle": "Let’s coordinate your next food and beverage operation.",
+    "finalText": "Tell us product type, volume, origin, destination and requirements. Our team will analyze the best logistics solution.",
+    "finalPrimary": "Request logistics proposal",
     "finalSecondary": "Talk to a specialist"
   },
   "zh": {
-    "heroEyebrow": "汽车行业",
-    "heroTitle": "为不能停止的汽车供应链提供物流。",
-    "heroText": "我们为汽车零部件、备件和项目协调运输、仓储、配送和特殊操作，并提供可追溯性和运营控制。",
+    "heroEyebrow": "食品与饮料行业",
+    "heroTitle": "为需要时间、控制和信任的产品提供物流。",
+    "heroText": "我们为食品、饮料、易腐品和消费品设计物流运营，整合运输、仓储、配送、可追溯性和运营控制。",
     "primaryCta": "规划物流操作",
     "secondaryCta": "联系我们的团队",
-    "activeLabel": "进行中的汽车物流",
-    "activeRoute": "供应商 → 工厂",
-    "activeCargo": "零部件",
+    "activeLabel": "进行中的食品操作",
+    "activeRoute": "供应商 → 配送",
+    "activeCargo": "食品与饮料",
     "activeStatusLabel": "状态：",
     "activeStatus": "协调中",
     "activeEtaLabel": "优先级：",
-    "activeEta": "生产线",
+    "activeEta": "安全交付",
     "trust": [
       [
-        "准时制",
-        "运营连续性"
-      ],
-      [
-        "汽车零件",
-        "关键组件"
-      ],
-      [
         "可追溯性",
-        "进度控制"
+        "运营控制"
       ],
       [
         "配送",
         "协调交付"
+      ],
+      [
+        "冷链",
+        "按需提供"
+      ],
+      [
+        "合规",
+        "文件与控制"
       ]
     ],
-    "overviewEyebrow": "汽车物流",
-    "overviewTitle": "为高要求工业运营提供精准物流。",
-    "overviewText": "汽车行业需要准时交付、文件控制、组件可用性和紧急响应。我们设计运营以保持生产链流动。",
-    "overviewButton": "了解汽车物流",
+    "overviewEyebrow": "行业物流",
+    "overviewTitle": "为不能失败的食品供应链提供物流解决方案。",
+    "overviewText": "食品与饮料行业需要速度、产品保护、文件合规和连续性。我们协调运营以保护货物、降低风险并保持供应链流动。",
+    "overviewButton": "了解食品与饮料物流",
     "pillars": [
       [
-        "生产连续性",
-        "协调交付以减少工厂或配送中断。"
+        "产品控制",
+        "根据货物类型、敏感性、周转和交付要求进行协调。"
       ],
       [
-        "组件控制",
-        "管理汽车零件、备件、设备和关键组件。"
-      ],
-      [
-        "紧急操作",
-        "影响生产或服务的优先运输。"
-      ],
-      [
-        "B2B 配送",
-        "交付到工厂、维修点、经销商或物流中心。"
-      ]
-    ],
-    "servicesEyebrow": "汽车行业解决方案",
-    "servicesTitle": "为汽车供应链设计的运营。",
-    "services": [
-      [
-        "陆运",
-        "汽车零部件的国内和国际路线。"
-      ],
-      [
-        "紧急货物",
-        "备件或关键部件的优先方案。"
-      ],
-      [
-        "仓储",
-        "库存管理、准备和组件配送。"
-      ],
-      [
-        "进出口",
-        "国际贸易文件与海关协调。"
-      ],
-      [
-        "特殊货物",
-        "设备、机械或大型零件运输。"
-      ],
-      [
-        "门到门",
-        "从供应商到工厂或最终目的地的完整流程。"
-      ]
-    ],
-    "useCasesEyebrow": "何时需要汽车物流",
-    "useCasesTitle": "当每个零件都必须准时到达时。",
-    "useCases": [
-      [
-        "汽车零件",
-        "组件和备件的经常性运输。"
-      ],
-      [
-        "生产线",
-        "直接影响工业连续性的交付。"
-      ],
-      [
-        "经销网络",
-        "商业或技术网络供应。"
-      ],
-      [
-        "关键备件",
-        "维修、保修或服务的紧急货物。"
-      ],
-      [
-        "进口商",
-        "带文件控制的国际操作。"
-      ],
-      [
-        "工业项目",
-        "设备、机械或特殊组件。"
-      ]
-    ],
-    "processEyebrow": "我们的运营流程",
-    "processTitle": "从需求到交付，汽车物流清晰可控。",
-    "process": [
-      [
-        "货物分析",
-        "审核零件类型、体量、紧急程度和目的地。"
-      ],
-      [
-        "物流设计",
-        "确定路线、方式和时间。"
-      ],
-      [
-        "文件管理",
-        "协调商业、海关和运营要求。"
-      ],
-      [
-        "执行",
-        "管理提货、运输和物流衔接。"
-      ],
-      [
-        "跟踪",
-        "监控关键节点和进度。"
-      ],
-      [
-        "最终交付",
-        "协调接收和关闭。"
-      ]
-    ],
-    "bandTitle": "为保持生产流动而设计的汽车物流。",
-    "bandText": "我们的团队为需要准时、文件控制和专业响应的汽车供应链企业协调运营。",
-    "stats": [
-      [
-        "准时制",
-        "供应连续性"
-      ],
-      [
-        "汽车零件",
-        "关键组件"
+        "高效配送",
+        "为客户、零售或销售点规划出库、路线和交付。"
       ],
       [
         "可追溯性",
+        "通过运营跟踪保持货物可视化。"
+      ],
+      [
+        "冷链",
+        "当产品需要时提供温控解决方案。"
+      ]
+    ],
+    "servicesEyebrow": "食品与饮料解决方案",
+    "servicesTitle": "为消费品设计的物流运营。",
+    "services": [
+      [
+        "国内和国际运输",
+        "根据紧急程度和体量协调陆运、海运或空运。"
+      ],
+      [
+        "商业配送",
+        "配送到客户、连锁、销售点或配送中心。"
+      ],
+      [
+        "冷藏货物",
+        "为易腐或温度敏感产品提供解决方案。"
+      ],
+      [
+        "仓储与准备",
+        "库存管理、拣货、包装和计划出库。"
+      ],
+      [
+        "进出口",
+        "为国际贸易提供文件、海关和运营支持。"
+      ],
+      [
+        "门到门",
+        "从始发地到最终交付的完整协调。"
+      ]
+    ],
+    "useCasesEyebrow": "何时需要专业物流",
+    "useCasesTitle": "当产品必须完好、准时且受控到达时。",
+    "useCases": [
+      [
+        "易腐食品",
+        "需要精准时间和条件控制的操作。"
+      ],
+      [
+        "饮料",
+        "瓶装、包装或大批量产品配送。"
+      ],
+      [
+        "零售与超市",
+        "向连锁和销售点进行计划交付。"
+      ],
+      [
+        "进口商",
+        "为国际食品提供综合管理。"
+      ],
+      [
+        "商业活动",
+        "需求高峰和高周转交付。"
+      ],
+      [
+        "敏感产品",
+        "需要保护、可追溯或温控的货物。"
+      ]
+    ],
+    "processEyebrow": "我们的运营流程",
+    "processTitle": "从规划到交付，食品物流清晰可控。",
+    "process": [
+      [
+        "产品分析",
+        "审核货物类型、敏感性、体量和要求。"
+      ],
+      [
+        "物流设计",
+        "确定运输、仓储、配送和时间安排。"
+      ],
+      [
+        "文件管理",
+        "按需协调商业、卫生或海关要求。"
+      ],
+      [
+        "操作准备",
+        "管理提货、装载、处理和出库。"
+      ],
+      [
+        "跟踪",
+        "监控进度、节点和可追溯性。"
+      ],
+      [
+        "最终交付",
+        "协调收货、卸货和运营关闭。"
+      ]
+    ],
+    "bandTitle": "为保护产品和连续性而设计的食品物流。",
+    "bandText": "我们的团队为食品、饮料和消费品企业协调需要准时、可追溯和专业响应的运营。",
+    "stats": [
+      [
+        "可追溯性",
         "运营跟踪"
+      ],
+      [
+        "配送",
+        "协调交付"
+      ],
+      [
+        "冷链",
+        "按需提供"
       ],
       [
         "专家支持",
         "专属专家"
       ]
     ],
-    "finalTitle": "让我们协调您的下一次汽车物流操作。",
-    "finalText": "告诉我们货物类型、始发地、目的地、紧急程度和要求。我们的团队将分析最佳物流方案。",
-    "finalPrimary": "申请汽车物流方案",
+    "finalTitle": "让我们协调您的下一次食品与饮料操作。",
+    "finalText": "告诉我们产品类型、数量、始发地、目的地和要求。我们的团队将分析最佳物流方案。",
+    "finalPrimary": "申请物流方案",
     "finalSecondary": "联系专家"
   }
 } satisfies Record<Locale, any>;
@@ -740,7 +740,7 @@ function Icon({ name }: { name: IconName }) {
   }
 }
 
-export default function AutomocionPage() {
+export default function AlimentacionBebidasPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
@@ -788,9 +788,9 @@ export default function AutomocionPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={`${styles.hero} acrossPageHero`} data-sector-hero="true" data-standard-service-hero="true" data-sector-name="automocion">
+        <section className={`${styles.hero} acrossPageHero`} data-sector-hero="true" data-standard-service-hero="true" data-sector-name="alimentacion-bebidas">
           <Image
-            src="/images/sectores/transporte-logistica-automocion.png"
+            src="/images/sectores/alimentosybebidas.png"
             alt={t.heroTitle}
             fill
             priority
@@ -800,7 +800,7 @@ export default function AutomocionPage() {
           />
 
           <Image
-            src="/images/sectores/automocion2.png"
+            src="/images/sectores/alimentosybebidas.png"
             alt={t.heroTitle}
             fill
             priority
@@ -843,7 +843,7 @@ export default function AutomocionPage() {
 
         <section className={styles.trustBar}>
           {t.trust.map(([title, text]: string[], index: number) => {
-            const icons: IconName[] = ["truck", "package", "shield", "route", "tracking", "door"];
+            const icons: IconName[] = ["timer", "shield", "document", "tracking"];
 
             return (
               <div key={title}>
@@ -861,7 +861,7 @@ export default function AutomocionPage() {
 
         <Certifications />
 
-        <section className={`${styles.overview} ${styles.overviewMobileBg}`} style={{ "--sector-overview-bg": "url('/images/sectores/automocion2.png')" } as CSSProperties}>
+        <section className={`${styles.overview} ${styles.overviewMobileBg}`} style={{ "--sector-overview-bg": "url('/images/sectores/alimentosybebidas.png')" } as CSSProperties}>
           <div className={styles.overviewCopy}>
             <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
             <h2>{t.overviewTitle}</h2>
@@ -871,7 +871,7 @@ export default function AutomocionPage() {
 
           <div className={styles.pillars}>
             {t.pillars.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["search", "package", "document", "route", "tracking", "truck"];
+              const icons: IconName[] = ["airport", "document", "tracking", "truck"];
 
               return (
                 <article key={title}>
@@ -894,7 +894,7 @@ export default function AutomocionPage() {
 
           <div className={styles.serviceGrid}>
             {t.services.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["plane", "box", "diamond", "charter", "globe", "door"];
+              const icons: IconName[] = ["package", "shield", "truck", "tracking", "door", "document"];
 
               return (
                 <article key={title}>
@@ -940,7 +940,7 @@ export default function AutomocionPage() {
 
           <div className={styles.processGrid}>
             {t.process.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["search", "route", "document", "plane", "tracking", "truck"];
+              const icons: IconName[] = ["search", "package", "document", "route", "tracking", "truck"];
 
               return (
                 <article key={title}>
@@ -959,7 +959,7 @@ export default function AutomocionPage() {
         <section className={styles.darkBand} data-sector-dark-band="true">
           <div className={styles.darkBandImage}>
             <Image
-              src="/images/sectores/automocion2.png"
+              src="/images/sectores/alimentosybebidas2.png"
               alt={t.bandTitle}
               fill
               sizes="(max-width: 900px) 100vw, 42vw"
@@ -999,7 +999,7 @@ export default function AutomocionPage() {
 
           <div className={styles.finalImage}>
             <Image
-              src="/images/sectores/transporte-logistica-automocion.png"
+              src="/images/sectores/alimentosybebidas.png"
               alt={t.finalTitle}
               fill
               sizes="(max-width: 900px) 100vw, 44vw"

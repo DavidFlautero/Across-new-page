@@ -61,7 +61,7 @@
 .eyebrow {
   display: inline-flex;
   margin-bottom: 1rem;
-  color: #123f59;
+  color: #ed1b2f;
   font-size: .78rem;
   font-weight: 950;
   letter-spacing: .16em;
@@ -111,9 +111,9 @@
 .actions a:first-child,
 .finalActions a:first-child,
 .overviewCopy a {
-  background: #123f59;
+  background: #ed1b2f;
   color: #fff;
-  box-shadow: 0 18px 42px rgba(18, 63, 89, .28);
+  box-shadow: 0 18px 42px rgba(237, 27, 47, .28);
 }
 
 .actions a:first-child::after,
@@ -144,7 +144,7 @@
 .operationCard > span {
   display: inline-flex;
   margin-bottom: 1rem;
-  color: #123f59;
+  color: #ed1b2f;
   font-size: .7rem;
   font-weight: 950;
   letter-spacing: .12em;
@@ -195,7 +195,7 @@
 }
 
 .operationCard b {
-  background: #123f59;
+  background: #ed1b2f;
   color: #fff;
 }
 
@@ -231,8 +231,8 @@
   place-items: center;
   width: 36px;
   height: 36px;
-  color: #123f59;
-  border: 1px solid rgba(18, 63, 89, .55);
+  color: #ed1b2f;
+  border: 1px solid rgba(237, 27, 47, .55);
   border-radius: 999px;
   font-style: normal;
   font-weight: 900;
@@ -309,8 +309,8 @@
   width: 48px;
   height: 48px;
   margin-bottom: 1.1rem;
-  color: #123f59;
-  border: 1px solid rgba(18, 63, 89, .5);
+  color: #ed1b2f;
+  border: 1px solid rgba(237, 27, 47, .5);
   border-radius: 999px;
   font-style: normal;
   font-size: 1.3rem;
@@ -425,10 +425,10 @@
   height: 56px;
   margin-bottom: 1rem;
   border-radius: 999px;
-  background: #123f59;
+  background: #ed1b2f;
   color: #fff;
   font-weight: 950;
-  box-shadow: 0 14px 38px rgba(18, 63, 89, .24);
+  box-shadow: 0 14px 38px rgba(237, 27, 47, .24);
 }
 
 .darkBand {
@@ -491,7 +491,7 @@
 
 .stats strong {
   display: block;
-  color: #123f59;
+  color: #ed1b2f;
   text-transform: uppercase;
   font-size: .86rem;
   line-height: 1.15;
@@ -727,11 +727,11 @@
 .pillars i,
 .serviceGrid i,
 .useCaseGrid i {
-  background: rgba(18, 63, 89, .035);
+  background: rgba(237, 27, 47, .035);
 }
 
 .trustBar i {
-  background: rgba(18, 63, 89, .06);
+  background: rgba(237, 27, 47, .06);
 }
 
 .processGrid i {
@@ -799,7 +799,7 @@
     width: 28px;
     height: 28px;
     margin: 0 0 .45rem;
-    color: #123f59;
+    color: #ed1b2f;
   }
 
   .processGrid article {
@@ -836,7 +836,7 @@
         circle at 72% 42%,
         rgba(255, 190, 118, .34) 0%,
         rgba(255, 120, 70, .16) 18%,
-        rgba(18, 63, 89, .10) 32%,
+        rgba(237, 27, 47, .10) 32%,
         transparent 52%
       ),
       radial-gradient(
@@ -870,7 +870,7 @@
     border-radius: 999px !important;
     background:
       radial-gradient(circle, rgba(255, 255, 255, .20), transparent 26%),
-      radial-gradient(circle, rgba(18, 63, 89, .16), transparent 58%) !important;
+      radial-gradient(circle, rgba(237, 27, 47, .16), transparent 58%) !important;
     filter: blur(28px) !important;
     opacity: .72 !important;
     z-index: -1 !important;
@@ -900,7 +900,7 @@
   }
 
   .eyebrow {
-    color: #123f59 !important;
+    color: #ed1b2f !important;
     margin-bottom: 1rem !important;
     font-size: .76rem !important;
     letter-spacing: .2em !important;
@@ -916,7 +916,7 @@
 
   .heroContent h1::after {
     content: "." !important;
-    color: #123f59 !important;
+    color: #ed1b2f !important;
   }
 
   .heroContent p {
@@ -980,7 +980,7 @@
         circle at 70% 42%,
         rgba(255, 196, 120, .38) 0%,
         rgba(255, 120, 70, .18) 18%,
-        rgba(18, 63, 89, .10) 32%,
+        rgba(237, 27, 47, .10) 32%,
         transparent 54%
       ),
       radial-gradient(
@@ -1026,7 +1026,7 @@
       radial-gradient(
         circle at 72% 46%,
         rgba(255, 178, 96, .26) 0%,
-        rgba(18, 63, 89, .08) 28%,
+        rgba(237, 27, 47, .08) 28%,
         transparent 52%
       ),
       linear-gradient(
@@ -1267,7 +1267,7 @@
 }
 
 
-/* === BRAND COHERENCE: BLACK / WHITE / #123f59 SYSTEM === */
+/* === BRAND COHERENCE: BLACK / WHITE / RED SYSTEM === */
 
 /* Fondo general más parecido a la home */
 .page {
@@ -1287,7 +1287,7 @@
   transform: translateX(-50%) !important;
   padding: clamp(4rem, 6vw, 6rem) max(24px, calc((100vw - 1180px) / 2)) !important;
   background:
-    radial-gradient(circle at 78% 18%, rgba(18, 63, 89, .14), transparent 28rem),
+    radial-gradient(circle at 78% 18%, rgba(237, 27, 47, .14), transparent 28rem),
     linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
   color: #fff !important;
 }
@@ -1304,7 +1304,7 @@
 }
 
 .services .eyebrow {
-  color: #123f59 !important;
+  color: #ed1b2f !important;
 }
 
 /* Cards de servicios oscuras, no cajitas blancas */
@@ -1331,9 +1331,9 @@
   width: 46px !important;
   height: 46px !important;
   margin-bottom: 1rem !important;
-  color: #123f59 !important;
-  background: rgba(18, 63, 89, .07) !important;
-  border: 1px solid rgba(18, 63, 89, .32) !important;
+  color: #ed1b2f !important;
+  background: rgba(237, 27, 47, .07) !important;
+  border: 1px solid rgba(237, 27, 47, .32) !important;
 }
 
 .serviceGrid i svg {
@@ -1368,7 +1368,7 @@
 
 .darkBandContent {
   background:
-    radial-gradient(circle at 78% 18%, rgba(18, 63, 89, .12), transparent 24rem),
+    radial-gradient(circle at 78% 18%, rgba(237, 27, 47, .12), transparent 24rem),
     #050609 !important;
 }
 
@@ -1423,7 +1423,7 @@
 }
 
 
-/* === BRAND COHERENCE: BLACK / WHITE / #123f59 SYSTEM === */
+/* === BRAND COHERENCE: BLACK / WHITE / RED SYSTEM === */
 
 /* Fondo general más parecido a la home */
 .page {
@@ -1443,7 +1443,7 @@
   transform: translateX(-50%) !important;
   padding: clamp(4rem, 6vw, 6rem) max(24px, calc((100vw - 1180px) / 2)) !important;
   background:
-    radial-gradient(circle at 78% 18%, rgba(18, 63, 89, .14), transparent 28rem),
+    radial-gradient(circle at 78% 18%, rgba(237, 27, 47, .14), transparent 28rem),
     linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
   color: #fff !important;
 }
@@ -1460,7 +1460,7 @@
 }
 
 .services .eyebrow {
-  color: #123f59 !important;
+  color: #ed1b2f !important;
 }
 
 /* Cards de servicios oscuras, no cajitas blancas */
@@ -1487,9 +1487,9 @@
   width: 46px !important;
   height: 46px !important;
   margin-bottom: 1rem !important;
-  color: #123f59 !important;
-  background: rgba(18, 63, 89, .07) !important;
-  border: 1px solid rgba(18, 63, 89, .32) !important;
+  color: #ed1b2f !important;
+  background: rgba(237, 27, 47, .07) !important;
+  border: 1px solid rgba(237, 27, 47, .32) !important;
 }
 
 .serviceGrid i svg {
@@ -1524,7 +1524,7 @@
 
 .darkBandContent {
   background:
-    radial-gradient(circle at 78% 18%, rgba(18, 63, 89, .12), transparent 24rem),
+    radial-gradient(circle at 78% 18%, rgba(237, 27, 47, .12), transparent 24rem),
     #050609 !important;
 }
 
@@ -1705,7 +1705,7 @@
     margin-bottom: .45rem !important;
     font-size: .66rem !important;
     letter-spacing: .22em !important;
-    color: #123f59 !important;
+    color: #ed1b2f !important;
   }
 
   .process .sectionHead h2 {
@@ -1757,7 +1757,7 @@
     display: grid !important;
     place-items: center !important;
     border-radius: 999px !important;
-    background: #123f59 !important;
+    background: #ed1b2f !important;
     color: #fff !important;
     font-size: .82rem !important;
     font-weight: 950 !important;
@@ -1886,7 +1886,7 @@
   justify-content: center !important;
   padding: clamp(3rem, 5vw, 5rem) max(36px, 7vw) !important;
   background:
-    radial-gradient(circle at 86% 18%, rgba(18, 63, 89, .12), transparent 24rem),
+    radial-gradient(circle at 86% 18%, rgba(237, 27, 47, .12), transparent 24rem),
     linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
 }
 
@@ -1926,7 +1926,7 @@
 }
 
 .stats strong {
-  color: #123f59 !important;
+  color: #ed1b2f !important;
   font-size: .82rem !important;
   letter-spacing: .12em !important;
 }
@@ -1986,7 +1986,7 @@
 }
 
 .finalActions a:first-child {
-  background: #123f59 !important;
+  background: #ed1b2f !important;
   color: #fff !important;
 }
 
@@ -2087,7 +2087,7 @@
   position: relative !important;
   overflow: hidden !important;
   background:
-    radial-gradient(circle at 82% 28%, rgba(18, 63, 89, .10), transparent 26rem),
+    radial-gradient(circle at 82% 28%, rgba(237, 27, 47, .10), transparent 26rem),
     linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
   color: #fff !important;
   border-top: 1px solid rgba(255,255,255,.08) !important;
@@ -2158,7 +2158,7 @@
 
 .stats strong {
   display: block !important;
-  color: #123f59 !important;
+  color: #ed1b2f !important;
   font-size: .76rem !important;
   line-height: 1.12 !important;
   font-weight: 950 !important;
@@ -2198,9 +2198,9 @@
 }
 
 .darkBandActions a:first-child {
-  background: #123f59 !important;
+  background: #ed1b2f !important;
   color: #fff !important;
-  box-shadow: 0 16px 36px rgba(18, 63, 89, .22) !important;
+  box-shadow: 0 16px 36px rgba(237, 27, 47, .22) !important;
 }
 
 .darkBandActions a:first-child::after {
@@ -2293,7 +2293,7 @@
   position: relative !important;
   overflow: hidden !important;
   background:
-    radial-gradient(circle at 82% 28%, rgba(18, 63, 89, .10), transparent 26rem),
+    radial-gradient(circle at 82% 28%, rgba(237, 27, 47, .10), transparent 26rem),
     linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
   color: #fff !important;
   border-top: 1px solid rgba(255,255,255,.08) !important;
@@ -2364,7 +2364,7 @@
 
 .stats strong {
   display: block !important;
-  color: #123f59 !important;
+  color: #ed1b2f !important;
   font-size: .76rem !important;
   line-height: 1.12 !important;
   font-weight: 950 !important;
@@ -2404,9 +2404,9 @@
 }
 
 .darkBandActions a:first-child {
-  background: #123f59 !important;
+  background: #ed1b2f !important;
   color: #fff !important;
-  box-shadow: 0 16px 36px rgba(18, 63, 89, .22) !important;
+  box-shadow: 0 16px 36px rgba(237, 27, 47, .22) !important;
 }
 
 .darkBandActions a:first-child::after {
@@ -2558,7 +2558,7 @@
 }
 
 .darkBandActions a:first-child {
-  background: #123f59 !important;
+  background: #ed1b2f !important;
   color: #fff !important;
 }
 
@@ -2604,7 +2604,7 @@
 /* === FINAL CTA BALANCED: TITLE + COPY + ACTION CARD === */
 .darkBand {
   background:
-    radial-gradient(circle at 84% 24%, rgba(18, 63, 89, .12), transparent 24rem),
+    radial-gradient(circle at 84% 24%, rgba(237, 27, 47, .12), transparent 24rem),
     linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
 }
 
@@ -2627,8 +2627,8 @@
   width: 3px !important;
   height: 68% !important;
   transform: translateY(-50%) !important;
-  background: #123f59 !important;
-  box-shadow: 0 0 24px rgba(18, 63, 89, .28) !important;
+  background: #ed1b2f !important;
+  box-shadow: 0 0 24px rgba(237,27,47,.28) !important;
 }
 
 .darkBandContent h2 {
@@ -2672,7 +2672,7 @@
 }
 
 .darkBand .stats strong {
-  color: #123f59 !important;
+  color: #ed1b2f !important;
   font-size: .72rem !important;
   letter-spacing: .14em !important;
 }
@@ -2750,7 +2750,7 @@
 .services {
   position: relative !important;
   background:
-    radial-gradient(circle at 18% 20%, rgba(18, 63, 89, .14), transparent 24rem),
+    radial-gradient(circle at 18% 20%, rgba(237, 27, 47, .14), transparent 24rem),
     radial-gradient(circle at 92% 72%, rgba(255, 255, 255, .055), transparent 26rem),
     linear-gradient(180deg, #08090e 0%, #050609 100%) !important;
   overflow: hidden !important;
@@ -2805,16 +2805,16 @@
   position: absolute !important;
   right: 1.25rem !important;
   bottom: 1.05rem !important;
-  color: #123f59 !important;
+  color: #ed1b2f !important;
   font-size: 1.1rem !important;
   opacity: .85 !important;
 }
 
 .serviceGrid article:hover {
   transform: translateY(-4px) !important;
-  border-color: rgba(18, 63, 89, .45) !important;
+  border-color: rgba(237,27,47,.45) !important;
   background:
-    linear-gradient(145deg, rgba(18, 63, 89, .12), rgba(255,255,255,.035)) !important;
+    linear-gradient(145deg, rgba(237,27,47,.12), rgba(255,255,255,.035)) !important;
 }
 
 .serviceGrid i {
@@ -2839,7 +2839,7 @@
 .darkBand {
   position: relative !important;
   background:
-    radial-gradient(circle at 82% 28%, rgba(18, 63, 89, .16), transparent 22rem),
+    radial-gradient(circle at 82% 28%, rgba(237, 27, 47, .16), transparent 22rem),
     radial-gradient(circle at 8% 80%, rgba(255,255,255,.045), transparent 20rem),
     linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
   overflow: hidden !important;
@@ -2962,8 +2962,8 @@
       rgba(5, 6, 9, .78) 62%,
       rgba(5, 6, 9, .55) 100%
     ),
-    radial-gradient(circle at 18% 18%, rgba(18, 63, 89, .16), transparent 24rem),
-    url("/images/sectores/alimentosybebidas2.png") !important;
+    radial-gradient(circle at 18% 18%, rgba(237, 27, 47, .16), transparent 24rem),
+    url("/images/sectores/energiasrenovables2.png") !important;
   background-size: cover !important;
   background-position: center 48% !important;
   background-repeat: no-repeat !important;
@@ -3030,16 +3030,16 @@
 
 .serviceGrid article:hover {
   transform: translateY(-4px) !important;
-  border-color: rgba(18, 63, 89, .55) !important;
+  border-color: rgba(237,27,47,.55) !important;
   background:
-    linear-gradient(145deg, rgba(18, 63, 89, .16), rgba(10, 12, 18, .58)) !important;
+    linear-gradient(145deg, rgba(237,27,47,.16), rgba(10, 12, 18, .58)) !important;
 }
 
 .serviceGrid i {
   width: 40px !important;
   height: 40px !important;
-  background: rgba(18, 63, 89, .10) !important;
-  border-color: rgba(18, 63, 89, .42) !important;
+  background: rgba(237, 27, 47, .10) !important;
+  border-color: rgba(237, 27, 47, .42) !important;
 }
 
 .serviceGrid h3 {
@@ -3064,8 +3064,8 @@
       rgba(5, 6, 9, .76) 68%,
       rgba(5, 6, 9, .42) 100%
     ),
-    radial-gradient(circle at 82% 30%, rgba(18, 63, 89, .14), transparent 24rem),
-    url("/images/sectores/alimentosybebidas2.png") !important;
+    radial-gradient(circle at 82% 30%, rgba(237, 27, 47, .14), transparent 24rem),
+    url("/images/sectores/energiasrenovables2.png") !important;
   background-size: cover !important;
   background-position: center 55% !important;
   background-repeat: no-repeat !important;
@@ -3104,7 +3104,7 @@
   .services {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.90)),
-      url("/images/sectores/alimentosybebidas2.png") !important;
+      url("/images/sectores/energiasrenovables2.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3116,7 +3116,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/alimentosybebidas2.png") !important;
+      url("/images/sectores/energiasrenovables2.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3133,8 +3133,8 @@
       rgba(5, 6, 9, .76) 68%,
       rgba(5, 6, 9, .42) 100%
     ),
-    radial-gradient(circle at 82% 30%, rgba(18, 63, 89, .14), transparent 24rem),
-    url("/images/sectores/alimentosybebidas.png") !important;
+    radial-gradient(circle at 82% 30%, rgba(237, 27, 47, .14), transparent 24rem),
+    url("/images/sectores/energiasrenovables.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3144,7 +3144,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/alimentosybebidas.png") !important;
+      url("/images/sectores/energiasrenovables.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3161,8 +3161,8 @@
       rgba(5, 6, 9, .76) 68%,
       rgba(5, 6, 9, .44) 100%
     ),
-    radial-gradient(circle at 82% 30%, rgba(18, 63, 89, .14), transparent 24rem),
-    url("/images/sectores/alimentosybebidas.png") !important;
+    radial-gradient(circle at 82% 30%, rgba(237, 27, 47, .14), transparent 24rem),
+    url("/images/sectores/energiasrenovables.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3172,7 +3172,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/alimentosybebidas.png") !important;
+      url("/images/sectores/energiasrenovables.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3755,13 +3755,13 @@
     height: 34px !important;
     margin: 0 !important;
     border-radius: 999px !important;
-    background: #123f59 !important;
+    background: #ed1b2f !important;
     color: #fff !important;
     display: grid !important;
     place-items: center !important;
     font-size: .78rem !important;
     font-weight: 950 !important;
-    box-shadow: 0 10px 24px rgba(18, 63, 89, .18) !important;
+    box-shadow: 0 10px 24px rgba(237,27,47,.18) !important;
   }
 
   .processGrid i {
@@ -3770,7 +3770,7 @@
     width: 24px !important;
     height: 24px !important;
     margin: 0 0 .35rem !important;
-    color: #123f59 !important;
+    color: #ed1b2f !important;
     background: transparent !important;
     border: 0 !important;
   }
@@ -3875,8 +3875,8 @@
     width: 64px !important;
     height: 3px !important;
     transform: none !important;
-    background: #123f59 !important;
-    box-shadow: 0 0 18px rgba(18, 63, 89, .28) !important;
+    background: #ed1b2f !important;
+    box-shadow: 0 0 18px rgba(237, 27, 47, .28) !important;
   }
 
   .darkBandContent h2 {
@@ -4082,10 +4082,10 @@
 
 .actions a:first-child {
   color: #fff !important;
-  background: linear-gradient(135deg, #123f59 0%, #123f59 100%) !important;
-  border: 1px solid rgba(18, 63, 89, .9) !important;
+  background: linear-gradient(135deg, #ed1b2f 0%, #c90027 100%) !important;
+  border: 1px solid rgba(237, 27, 47, .9) !important;
   box-shadow:
-    0 18px 44px rgba(18, 63, 89, .27),
+    0 18px 44px rgba(237, 27, 47, .27),
     inset 0 1px 0 rgba(255,255,255,.18) !important;
 }
 
@@ -4105,7 +4105,7 @@
 
 .actions a:first-child:hover {
   box-shadow:
-    0 24px 58px rgba(18, 63, 89, .34),
+    0 24px 58px rgba(237, 27, 47, .34),
     inset 0 1px 0 rgba(255,255,255,.22) !important;
 }
 
@@ -4186,7 +4186,7 @@
     z-index: 1 !important;
 
     background:
-      radial-gradient(circle at 74% 18%, rgba(18, 63, 89, .16), transparent 20rem),
+      radial-gradient(circle at 74% 18%, rgba(237, 27, 47, .16), transparent 20rem),
       linear-gradient(180deg, rgba(5,6,9,.92) 0%, rgba(5,6,9,.76) 44%, rgba(5,6,9,.98) 100%) !important;
     pointer-events: none !important;
   }
@@ -4236,8 +4236,8 @@
 
     border-radius: 999px !important;
     color: #fff !important;
-    background: linear-gradient(135deg, #123f59 0%, #123f59 100%) !important;
-    border: 1px solid rgba(18, 63, 89, .9) !important;
+    background: linear-gradient(135deg, #ed1b2f 0%, #c90027 100%) !important;
+    border: 1px solid rgba(237, 27, 47, .9) !important;
 
     text-decoration: none !important;
     text-transform: uppercase !important;
@@ -4319,1100 +4319,4 @@
 }
 
 /* END HERO IMAGE STARTS AT TOP UNDER HEADER */
-
-
-/* =====================================================
-   ZZZ SECTOR ALIMENTACION BEBIDAS FINAL SYSTEM
-   Estructura tipo servicios:
-   - hero compacto premium
-   - mobile/tablet ordenado
-   - imagen visible, no negro pesado
-   - dark band compacta
-   - overview con márgenes correctas
-   - CTA final consistente
-   ===================================================== */
-
-/* =========================
-   HERO BASE
-   ========================= */
-
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] {
-  position: relative !important;
-  overflow: hidden !important;
-  isolation: isolate !important;
-  background: #07111d !important;
-}
-
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"]::before,
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"]::after,
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] .heroInner::before,
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] .heroInner::after,
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] .heroContent::before,
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] .heroContent::after {
-  content: none !important;
-  display: none !important;
-}
-
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="desktop-image"],
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="mobile-image"] {
-  position: absolute !important;
-  inset: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  z-index: -4 !important;
-  opacity: 1 !important;
-  mix-blend-mode: normal !important;
-  filter: brightness(1.08) contrast(1.06) saturate(1.12) !important;
-}
-
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="overlay"] {
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -3 !important;
-  pointer-events: none !important;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(3, 7, 13, .62) 0%,
-      rgba(5, 22, 36, .42) 46%,
-      rgba(7, 34, 54, .14) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(3, 7, 13, .08) 0%,
-      rgba(3, 7, 13, .06) 44%,
-      rgba(3, 7, 13, .18) 100%
-    ) !important;
-}
-
-@media (max-width: 1200px) {
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="card"] {
-    display: none !important;
-  }
-}
-
-/* DESKTOP */
-@media (min-width: 1201px) {
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] {
-    height: clamp(640px, calc(100svh - 92px), 760px) !important;
-    min-height: 640px !important;
-    max-height: 760px !important;
-    padding: 0 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="desktop-image"] {
-    display: block !important;
-    object-position: center center !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="mobile-image"] {
-    display: none !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="inner"] {
-    position: absolute !important;
-    top: 150px !important;
-    left: clamp(72px, 6.8vw, 118px) !important;
-    right: clamp(72px, 6.8vw, 118px) !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    display: block !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="content"] {
-    max-width: 620px !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="title"] {
-    max-width: 620px !important;
-    margin: 0 !important;
-    font-size: clamp(2.9rem, 3.5vw, 4rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.052em !important;
-    font-weight: 950 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="text"] {
-    max-width: 520px !important;
-    margin-top: .95rem !important;
-    font-size: .9rem !important;
-    line-height: 1.44 !important;
-    font-weight: 650 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="actions"] {
-    margin-top: 1.2rem !important;
-    gap: .75rem !important;
-  }
-}
-
-/* TABLET / NEST HUB */
-@media (min-width: 901px) and (max-width: 1200px) {
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] {
-    height: 500px !important;
-    min-height: 500px !important;
-    max-height: 500px !important;
-    padding: 0 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="desktop-image"] {
-    display: block !important;
-    object-position: center center !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="mobile-image"] {
-    display: none !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="inner"] {
-    position: absolute !important;
-    top: 140px !important;
-    left: clamp(46px, 5.8vw, 64px) !important;
-    right: clamp(42px, 5.8vw, 64px) !important;
-    display: block !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="content"] {
-    max-width: 520px !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="title"] {
-    max-width: 520px !important;
-    font-size: clamp(2.35rem, 4vw, 2.85rem) !important;
-    line-height: .98 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="text"] {
-    max-width: 445px !important;
-    font-size: .76rem !important;
-    line-height: 1.42 !important;
-  }
-}
-
-/* MOBILE */
-@media (max-width: 700px) {
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] {
-    height: 465px !important;
-    min-height: 465px !important;
-    max-height: 465px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="desktop-image"] {
-    display: none !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="mobile-image"] {
-    display: block !important;
-    object-position: center center !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="inner"] {
-    position: absolute !important;
-    top: 86px !important;
-    left: 20px !important;
-    right: 20px !important;
-    display: block !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="content"] {
-    max-width: 318px !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="title"] {
-    max-width: 318px !important;
-    font-size: clamp(1.68rem, 8.1vw, 2.08rem) !important;
-    line-height: .96 !important;
-    letter-spacing: -.045em !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="text"] {
-    max-width: 292px !important;
-    margin-top: .68rem !important;
-    font-size: .62rem !important;
-    line-height: 1.36 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="actions"] {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    max-width: 250px !important;
-    margin-top: .92rem !important;
-    gap: .5rem !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="actions"] a:nth-of-type(2) {
-    display: none !important;
-  }
-}
-
-/* =========================
-   TRUST BAR MOBILE
-   ========================= */
-
-@media (max-width: 700px) {
-  .page .trustBar {
-    height: 108px !important;
-    min-height: 108px !important;
-    max-height: 108px !important;
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    grid-template-rows: repeat(2, 54px) !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    gap: 0 !important;
-    background: #05101b !important;
-    overflow: hidden !important;
-  }
-
-  .page .trustBar > div {
-    height: 54px !important;
-    min-height: 54px !important;
-    padding: 0 .85rem !important;
-    display: grid !important;
-    grid-template-columns: 30px 1fr !important;
-    align-items: center !important;
-    column-gap: .55rem !important;
-  }
-
-  .page .trustBar strong {
-    font-size: .56rem !important;
-    line-height: 1.05 !important;
-  }
-
-  .page .trustBar small {
-    font-size: .5rem !important;
-    line-height: 1.08 !important;
-  }
-}
-
-/* =========================
-   OVERVIEW
-   ========================= */
-
-@media (max-width: 700px) {
-  .page .overview {
-    padding-top: 1.25rem !important;
-    padding-left: clamp(22px, 6vw, 30px) !important;
-    padding-right: clamp(22px, 6vw, 30px) !important;
-    padding-bottom: 2.4rem !important;
-    margin-top: 0 !important;
-    overflow: hidden !important;
-  }
-
-  .page .pillars {
-    display: none !important;
-  }
-
-  .page .overview h2 {
-    max-width: 330px !important;
-    margin: 0 !important;
-    font-size: clamp(1.9rem, 8.2vw, 2.35rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.055em !important;
-  }
-
-  .page .overview p {
-    max-width: 320px !important;
-    margin: 1.25rem 0 0 !important;
-    font-size: .95rem !important;
-    line-height: 1.62 !important;
-  }
-
-  .page .overview a {
-    width: 100% !important;
-    min-height: 50px !important;
-    margin: 1.65rem 0 0 !important;
-    white-space: normal !important;
-    text-align: center !important;
-  }
-}
-
-/* =========================
-   DARK BAND SECTOR
-   ========================= */
-
-.page section[data-sector-dark-band="true"],
-.page .darkBand {
-  position: relative !important;
-  isolation: isolate !important;
-  overflow: hidden !important;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5, 20, 34, .54) 0%,
-      rgba(8, 37, 56, .42) 48%,
-      rgba(10, 55, 78, .30) 100%
-    ),
-    url("/images/sectores/alimentosybebidas2.png") center center / cover no-repeat !important;
-}
-
-.page section[data-sector-dark-band="true"] > *,
-.page .darkBand > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-.page .darkBandImage,
-.page .darkBandImage img {
-  display: none !important;
-}
-
-@media (min-width: 901px) {
-  .page section[data-sector-dark-band="true"],
-  .page .darkBand {
-    min-height: auto !important;
-    padding-top: clamp(3.4rem, 4.6vw, 4.8rem) !important;
-    padding-bottom: clamp(3.6rem, 4.8vw, 5rem) !important;
-  }
-
-  .page .darkBand h2 {
-    max-width: 760px !important;
-    font-size: clamp(2.25rem, 3.15vw, 3.25rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.052em !important;
-  }
-
-  .page .stats article {
-    min-height: 150px !important;
-    padding: 1.35rem 1.45rem !important;
-  }
-}
-
-@media (max-width: 700px) {
-  .page section[data-sector-dark-band="true"],
-  .page .darkBand {
-    padding-top: 2.8rem !important;
-    padding-bottom: 3rem !important;
-  }
-
-  .page .darkBand h2 {
-    font-size: clamp(1.85rem, 7.6vw, 2.25rem) !important;
-    line-height: .99 !important;
-  }
-}
-
-/* =========================
-   FINAL CTA
-   ========================= */
-
-.page [data-sector-final-cta="true"],
-.page [data-across-final-cta="true"] {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5, 20, 34, .50) 0%,
-      rgba(8, 37, 56, .42) 48%,
-      rgba(10, 55, 78, .28) 100%
-    ),
-    url("/images/sectores/alimentosybebidas2.png") center center / cover no-repeat !important;
-}
-
-
-/* =====================================================
-   ZZZ SECTOR ALIMENTACION REMOVE #123f59 ACCENTS
-   Quita rojos viejos y usa azul Across + dorado suave.
-   ===================================================== */
-
-.page {
-  --sector-blue: #123f59;
-  --sector-blue-dark: #082234;
-  --sector-blue-soft: #1b5a78;
-  --sector-gold: #d6bd83;
-}
-
-/* Botones principales */
-.page a[href="/cotizacion"],
-.page a[href="/contacto"],
-.page .actions a,
-.page .overview a,
-.page [data-across-final-cta="true"] a,
-.page [data-sector-final-cta="true"] a {
-  background: linear-gradient(135deg, var(--sector-blue-dark), var(--sector-blue)) !important;
-  color: #fff !important;
-  border: 1px solid rgba(214, 189, 131, .48) !important;
-  box-shadow: 0 18px 42px rgba(8, 34, 52, .24) !important;
-}
-
-/* Botón secundario */
-.page .actions a:last-child,
-.page [data-across-final-cta="true"] a:last-child,
-.page [data-sector-final-cta="true"] a:last-child {
-  background: rgba(5, 18, 30, .42) !important;
-  color: #fff !important;
-  border: 1px solid rgba(255, 255, 255, .34) !important;
-}
-
-/* Flechas / iconos / acentos */
-.page a::after,
-.page .actions a::after,
-.page .overview a::after,
-.page [data-across-final-cta="true"] a::after,
-.page [data-sector-final-cta="true"] a::after {
-  color: inherit !important;
-}
-
-/* Eyebrows dorados, no rojos */
-.page .eyebrow,
-.page [class*="eyebrow"],
-.page [class*="Eyebrow"],
-.page [data-hero-role="eyebrow"] {
-  color: var(--sector-gold) !important;
-}
-
-/* Cards oscuras: iconos/bordes azules, no rojos */
-.page .stats i,
-.page .stats svg,
-.page .darkBand i,
-.page .darkBand svg,
-.page section[data-sector-dark-band="true"] i,
-.page section[data-sector-dark-band="true"] svg {
-  color: var(--sector-blue-soft) !important;
-  stroke: var(--sector-blue-soft) !important;
-}
-
-.page .stats article,
-.page .darkBand article,
-.page section[data-sector-dark-band="true"] article {
-  border-color: rgba(255,255,255,.16) !important;
-}
-
-/* Cualquier sombra roja vieja */
-.page * {
-  --red: var(--sector-blue) !important;
-  --accent-red: var(--sector-blue) !important;
-}
-
-
-/* =====================================================
-   ZZZ SECTOR ALIMENTACION BLUE ACCENTS FINAL LOCK
-   Mata rojos restantes en proceso, cards, iconos y flechas.
-   ===================================================== */
-
-.page {
-  --sector-blue: #123f59;
-  --sector-blue-dark: #082234;
-  --sector-blue-soft: #1b5a78;
-  --sector-blue-light: #2b7897;
-  --sector-gold: #d6bd83;
-}
-
-/* Eyebrows dorados */
-.page .eyebrow,
-.page [class*="eyebrow"],
-.page [class*="Eyebrow"],
-.page [data-hero-role="eyebrow"] {
-  color: var(--sector-gold) !important;
-}
-
-/* Proceso operativo: círculos, líneas, flechas */
-.page [class*="process"] *,
-.page [class*="Process"] *,
-.page [class*="steps"] *,
-.page [class*="Steps"] *,
-.page [class*="timeline"] *,
-.page [class*="Timeline"] * {
-  border-color: rgba(18, 63, 89, .24) !important;
-}
-
-/* Círculos numerados */
-.page [class*="process"] span:first-child,
-.page [class*="Process"] span:first-child,
-.page [class*="steps"] span:first-child,
-.page [class*="Steps"] span:first-child,
-.page [class*="timeline"] span:first-child,
-.page [class*="Timeline"] span:first-child {
-  background: var(--sector-blue) !important;
-  color: #fff !important;
-  border-color: var(--sector-blue) !important;
-}
-
-/* Iconos SVG */
-.page svg,
-.page i svg,
-.page [class*="process"] svg,
-.page [class*="Process"] svg,
-.page [class*="steps"] svg,
-.page [class*="Steps"] svg,
-.page .stats svg,
-.page .darkBand svg {
-  stroke: var(--sector-blue-soft) !important;
-  color: var(--sector-blue-soft) !important;
-}
-
-/* Iconos dentro de círculos */
-.page i,
-.page .stats i,
-.page .darkBand i,
-.page [class*="process"] i,
-.page [class*="Process"] i,
-.page [class*="steps"] i,
-.page [class*="Steps"] i {
-  border-color: rgba(27, 90, 120, .45) !important;
-  color: var(--sector-blue-soft) !important;
-}
-
-/* Flechas rojas */
-.page a::after,
-.page article::after,
-.page .stats article::after,
-.page .darkBand article::after,
-.page [class*="process"] article::after,
-.page [class*="Process"] article::after,
-.page [class*="steps"] article::after,
-.page [class*="Steps"] article::after {
-  color: var(--sector-blue-light) !important;
-}
-
-/* Cards oscuras */
-.page .stats article,
-.page .darkBand article,
-.page section[data-sector-dark-band="true"] article {
-  border-color: rgba(255,255,255,.16) !important;
-}
-
-/* Botones */
-.page a[href="/cotizacion"],
-.page a[href="/contacto"],
-.page .actions a,
-.page .overview a,
-.page [data-across-final-cta="true"] a,
-.page [data-sector-final-cta="true"] a {
-  background: linear-gradient(135deg, var(--sector-blue-dark), var(--sector-blue)) !important;
-  color: #fff !important;
-  border-color: rgba(214, 189, 131, .45) !important;
-}
-
-/* Botón secundario */
-.page .actions a:last-child,
-.page [data-across-final-cta="true"] a:last-child,
-.page [data-sector-final-cta="true"] a:last-child {
-  background: rgba(5, 18, 30, .42) !important;
-  color: #fff !important;
-  border-color: rgba(255,255,255,.34) !important;
-}
-
-/* =====================================================
-   ZZZ SECTOR ALIMENTACION-BEBIDAS FINAL SYSTEM
-   Replica sistema aprobado de Alimentación & Bebidas.
-   - Hero compacto
-   - Azul Across
-   - Sin rojos
-   - Mobile/tablet ordenado
-   - Dark band con imagen visible
-   ===================================================== */
-
-.page {
-  --sector-blue: #123f59;
-  --sector-blue-dark: #082234;
-  --sector-blue-soft: #1b5a78;
-  --sector-blue-light: #2b7897;
-  --sector-gold: #d6bd83;
-}
-
-/* Quitar rojos restantes por clase/estructura */
-.page .eyebrow,
-.page [class*="eyebrow"],
-.page [class*="Eyebrow"],
-.page [data-hero-role="eyebrow"] {
-  color: var(--sector-gold) !important;
-}
-
-.page svg,
-.page i svg,
-.page .stats svg,
-.page .darkBand svg,
-.page [class*="process"] svg,
-.page [class*="Process"] svg,
-.page [class*="steps"] svg,
-.page [class*="Steps"] svg,
-.page [class*="timeline"] svg,
-.page [class*="Timeline"] svg {
-  stroke: var(--sector-blue-soft) !important;
-  color: var(--sector-blue-soft) !important;
-}
-
-.page i,
-.page .stats i,
-.page .darkBand i,
-.page [class*="process"] i,
-.page [class*="Process"] i,
-.page [class*="steps"] i,
-.page [class*="Steps"] i,
-.page [class*="timeline"] i,
-.page [class*="Timeline"] i {
-  border-color: rgba(27, 90, 120, .45) !important;
-  color: var(--sector-blue-soft) !important;
-}
-
-.page [class*="process"] span:first-child,
-.page [class*="Process"] span:first-child,
-.page [class*="steps"] span:first-child,
-.page [class*="Steps"] span:first-child,
-.page [class*="timeline"] span:first-child,
-.page [class*="Timeline"] span:first-child {
-  background: var(--sector-blue) !important;
-  color: #fff !important;
-  border-color: var(--sector-blue) !important;
-}
-
-.page a::after,
-.page article::after,
-.page .stats article::after,
-.page .darkBand article::after {
-  color: var(--sector-blue-light) !important;
-}
-
-.page a[href="/cotizacion"],
-.page a[href="/contacto"],
-.page .actions a,
-.page .overview a,
-.page [data-across-final-cta="true"] a,
-.page [data-sector-final-cta="true"] a {
-  background: linear-gradient(135deg, var(--sector-blue-dark), var(--sector-blue)) !important;
-  color: #fff !important;
-  border: 1px solid rgba(214, 189, 131, .45) !important;
-  box-shadow: 0 18px 42px rgba(8, 34, 52, .24) !important;
-}
-
-.page .actions a:last-child,
-.page [data-across-final-cta="true"] a:last-child,
-.page [data-sector-final-cta="true"] a:last-child {
-  background: rgba(5, 18, 30, .42) !important;
-  color: #fff !important;
-  border-color: rgba(255,255,255,.34) !important;
-}
-
-/* HERO */
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] {
-  position: relative !important;
-  overflow: hidden !important;
-  isolation: isolate !important;
-  background: #07111d !important;
-}
-
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"]::before,
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"]::after,
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] .heroInner::before,
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] .heroInner::after,
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] .heroContent::before,
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] .heroContent::after {
-  content: none !important;
-  display: none !important;
-}
-
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="desktop-image"],
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="mobile-image"] {
-  position: absolute !important;
-  inset: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  z-index: -4 !important;
-  opacity: 1 !important;
-  mix-blend-mode: normal !important;
-  filter: brightness(1.08) contrast(1.06) saturate(1.12) !important;
-}
-
-.page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="overlay"] {
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: -3 !important;
-  pointer-events: none !important;
-  background:
-    linear-gradient(90deg, rgba(3,7,13,.62) 0%, rgba(5,22,36,.42) 46%, rgba(7,34,54,.14) 100%),
-    linear-gradient(180deg, rgba(3,7,13,.08) 0%, rgba(3,7,13,.06) 44%, rgba(3,7,13,.18) 100%) !important;
-}
-
-@media (max-width: 1200px) {
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="card"] {
-    display: none !important;
-  }
-}
-
-@media (min-width: 1201px) {
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] {
-    height: clamp(640px, calc(100svh - 92px), 760px) !important;
-    min-height: 640px !important;
-    max-height: 760px !important;
-    padding: 0 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="desktop-image"] {
-    display: block !important;
-    object-position: center center !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="mobile-image"] {
-    display: none !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="inner"] {
-    position: absolute !important;
-    top: 150px !important;
-    left: clamp(72px, 6.8vw, 118px) !important;
-    right: clamp(72px, 6.8vw, 118px) !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    display: block !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="content"] {
-    max-width: 620px !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="title"] {
-    max-width: 620px !important;
-    margin: 0 !important;
-    font-size: clamp(2.9rem, 3.5vw, 4rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.052em !important;
-    font-weight: 950 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="text"] {
-    max-width: 520px !important;
-    margin-top: .95rem !important;
-    font-size: .9rem !important;
-    line-height: 1.44 !important;
-    font-weight: 650 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="actions"] {
-    margin-top: 1.2rem !important;
-    gap: .75rem !important;
-  }
-}
-
-@media (min-width: 901px) and (max-width: 1200px) {
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] {
-    height: 500px !important;
-    min-height: 500px !important;
-    max-height: 500px !important;
-    padding: 0 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="desktop-image"] {
-    display: block !important;
-    object-position: center center !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="mobile-image"] {
-    display: none !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="inner"] {
-    position: absolute !important;
-    top: 140px !important;
-    left: clamp(46px, 5.8vw, 64px) !important;
-    right: clamp(42px, 5.8vw, 64px) !important;
-    display: block !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="content"] {
-    max-width: 520px !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="title"] {
-    max-width: 520px !important;
-    font-size: clamp(2.35rem, 4vw, 2.85rem) !important;
-    line-height: .98 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="text"] {
-    max-width: 445px !important;
-    font-size: .76rem !important;
-    line-height: 1.42 !important;
-  }
-}
-
-@media (max-width: 700px) {
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] {
-    height: 465px !important;
-    min-height: 465px !important;
-    max-height: 465px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="desktop-image"] {
-    display: none !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="mobile-image"] {
-    display: block !important;
-    object-position: center center !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="inner"] {
-    position: absolute !important;
-    top: 86px !important;
-    left: 20px !important;
-    right: 20px !important;
-    display: block !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="content"] {
-    max-width: 318px !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="title"] {
-    max-width: 318px !important;
-    font-size: clamp(1.68rem, 8.1vw, 2.08rem) !important;
-    line-height: .96 !important;
-    letter-spacing: -.045em !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="text"] {
-    max-width: 292px !important;
-    margin-top: .68rem !important;
-    font-size: .62rem !important;
-    line-height: 1.36 !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="actions"] {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    max-width: 250px !important;
-    margin-top: .92rem !important;
-    gap: .5rem !important;
-  }
-
-  .page > .hero[data-sector-hero="true"][data-sector-name="alimentacion-bebidas"] [data-hero-role="actions"] a:nth-of-type(2) {
-    display: none !important;
-  }
-}
-
-/* TrustBar mobile */
-@media (max-width: 700px) {
-  .page .trustBar {
-    height: 108px !important;
-    min-height: 108px !important;
-    max-height: 108px !important;
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    grid-template-rows: repeat(2, 54px) !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    gap: 0 !important;
-    background: #05101b !important;
-    overflow: hidden !important;
-  }
-
-  .page .trustBar > div {
-    height: 54px !important;
-    min-height: 54px !important;
-    padding: 0 .85rem !important;
-    display: grid !important;
-    grid-template-columns: 30px 1fr !important;
-    align-items: center !important;
-    column-gap: .55rem !important;
-  }
-
-  .page .trustBar strong {
-    font-size: .56rem !important;
-    line-height: 1.05 !important;
-  }
-
-  .page .trustBar small {
-    font-size: .5rem !important;
-    line-height: 1.08 !important;
-  }
-}
-
-/* Overview mobile */
-@media (max-width: 700px) {
-  .page .overview {
-    padding-top: 1.25rem !important;
-    padding-left: clamp(22px, 6vw, 30px) !important;
-    padding-right: clamp(22px, 6vw, 30px) !important;
-    padding-bottom: 2.4rem !important;
-    margin-top: 0 !important;
-    overflow: hidden !important;
-  }
-
-  .page .pillars {
-    display: none !important;
-  }
-
-  .page .overview h2 {
-    max-width: 330px !important;
-    margin: 0 !important;
-    font-size: clamp(1.9rem, 8.2vw, 2.35rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.055em !important;
-  }
-
-  .page .overview p {
-    max-width: 320px !important;
-    margin: 1.25rem 0 0 !important;
-    font-size: .95rem !important;
-    line-height: 1.62 !important;
-  }
-
-  .page .overview a {
-    width: 100% !important;
-    min-height: 50px !important;
-    margin: 1.65rem 0 0 !important;
-    white-space: normal !important;
-    text-align: center !important;
-  }
-}
-
-/* Dark band */
-.page section[data-sector-dark-band="true"],
-.page .darkBand {
-  position: relative !important;
-  isolation: isolate !important;
-  overflow: hidden !important;
-  background:
-    linear-gradient(90deg, rgba(5,20,34,.54) 0%, rgba(8,37,56,.42) 48%, rgba(10,55,78,.30) 100%),
-    url("/images/sectores/alimentosybebidas2.png") center center / cover no-repeat !important;
-}
-
-.page section[data-sector-dark-band="true"] > *,
-.page .darkBand > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-.page .darkBandImage,
-.page .darkBandImage img {
-  display: none !important;
-}
-
-@media (min-width: 901px) {
-  .page section[data-sector-dark-band="true"],
-  .page .darkBand {
-    min-height: auto !important;
-    padding-top: clamp(3.4rem, 4.6vw, 4.8rem) !important;
-    padding-bottom: clamp(3.6rem, 4.8vw, 5rem) !important;
-  }
-
-  .page .darkBand h2 {
-    max-width: 760px !important;
-    font-size: clamp(2.25rem, 3.15vw, 3.25rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.052em !important;
-  }
-
-  .page .stats article {
-    min-height: 150px !important;
-    padding: 1.35rem 1.45rem !important;
-    border-color: rgba(255,255,255,.16) !important;
-  }
-}
-
-@media (max-width: 700px) {
-  .page section[data-sector-dark-band="true"],
-  .page .darkBand {
-    padding-top: 2.8rem !important;
-    padding-bottom: 3rem !important;
-  }
-
-  .page .darkBand h2 {
-    font-size: clamp(1.85rem, 7.6vw, 2.25rem) !important;
-    line-height: .99 !important;
-  }
-}
-
-/* Final CTA */
-.page [data-sector-final-cta="true"],
-.page [data-across-final-cta="true"] {
-  background:
-    linear-gradient(90deg, rgba(5,20,34,.50) 0%, rgba(8,37,56,.42) 48%, rgba(10,55,78,.28) 100%),
-    url("/images/sectores/alimentosybebidas2.png") center center / cover no-repeat !important;
-}
-
-/* =====================================================
-   ZZZ SECTORES MOBILE KILL DARK BAND LOCAL FINAL
-   Oculta en mobile/tablet chica el bloque oscuro de cards.
-   Va dentro de cada CSS module para ganar la cascada.
-   ===================================================== */
-
-@media (max-width: 1200px) {
-  .page section[data-sector-dark-band="true"],
-  .page section[class*="darkBand"],
-  .page section[class*="DarkBand"],
-  .page .darkBand,
-  .page [class*="darkBand"],
-  .page [class*="DarkBand"],
-  .page section:has(.stats):not(.hero):not(.trustBar):not(.overview):not([data-across-final-cta="true"]),
-  .page section:has([class*="stats"]):not(.hero):not(.trustBar):not(.overview):not([data-across-final-cta="true"]),
-  .page section:has([class*="Stats"]):not(.hero):not(.trustBar):not(.overview):not([data-across-final-cta="true"]) {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    height: 0 !important;
-    min-height: 0 !important;
-    max-height: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    overflow: hidden !important;
-    pointer-events: none !important;
-  }
-
-  .page section[data-sector-dark-band="true"] + section,
-  .page section[class*="darkBand"] + section,
-  .page section[class*="DarkBand"] + section,
-  .page section:has(.stats):not(.hero):not(.trustBar):not(.overview):not([data-across-final-cta="true"]) + section,
-  .page section:has([class*="stats"]):not(.hero):not(.trustBar):not(.overview):not([data-across-final-cta="true"]) + section,
-  .page section:has([class*="Stats"]):not(.hero):not(.trustBar):not(.overview):not([data-across-final-cta="true"]) + section {
-    margin-top: 0 !important;
-    padding-top: 2.2rem !important;
-  }
-}
-
-/* =====================================================
-   ZZZ SECTORES MOBILE HIDE SERVICES CARDS FINAL
-   Oculta en mobile/tablet chica el bloque de servicios/cards
-   que aparece después del overview.
-   ===================================================== */
-
-@media (max-width: 900px) {
-  .page .services,
-  .page section[class*="services"],
-  .page section[class*="Services"],
-  .page section[class*="useCases"],
-  .page section[class*="UseCases"],
-  .page section[data-sector-dark-band="true"],
-  .page .darkBand,
-  .page section[class*="darkBand"],
-  .page section[class*="DarkBand"] {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    height: 0 !important;
-    min-height: 0 !important;
-    max-height: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    overflow: hidden !important;
-    pointer-events: none !important;
-  }
-
-  .page .services + section,
-  .page section[class*="services"] + section,
-  .page section[class*="Services"] + section,
-  .page section[class*="useCases"] + section,
-  .page section[class*="UseCases"] + section,
-  .page section[data-sector-dark-band="true"] + section,
-  .page .darkBand + section {
-    margin-top: 0 !important;
-    padding-top: 2.2rem !important;
-  }
-}
-
 
