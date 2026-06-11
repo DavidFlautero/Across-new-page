@@ -8830,3 +8830,357 @@
   }
 }
 
+
+/* =====================================================
+   ZZZ MARITIMO MATCH AEREO MOBILE POSITION
+   Misma posición visual del hero aéreo en mobile/tablet.
+   No toca desktop.
+   ===================================================== */
+
+/* MOBILE: copiar posición del hero aéreo */
+@media (max-width: 700px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 465px !important;
+    min-height: 465px !important;
+    max-height: 465px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 96px !important;
+    left: clamp(26px, 7vw, 38px) !important;
+    right: clamp(26px, 7vw, 38px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 315px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="eyebrow"] {
+    max-width: 315px !important;
+    margin: 0 0 .52rem !important;
+    font-size: .52rem !important;
+    line-height: 1 !important;
+    letter-spacing: .15em !important;
+    font-weight: 950 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 315px !important;
+    margin: 0 !important;
+    font-size: clamp(1.72rem, 8.4vw, 2.18rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.045em !important;
+    font-weight: 950 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 300px !important;
+    margin: .72rem 0 0 !important;
+    font-size: .66rem !important;
+    line-height: 1.34 !important;
+    font-weight: 650 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    max-width: 250px !important;
+    margin: 1rem 0 0 !important;
+    gap: .5rem !important;
+    padding: 0 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a {
+    width: 100% !important;
+    min-height: 34px !important;
+    padding: 0 .8rem !important;
+    font-size: .52rem !important;
+    line-height: 1.05 !important;
+    letter-spacing: .045em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a:nth-of-type(2) {
+    display: none !important;
+  }
+}
+
+/* MOBILE CHICO: igual que aéreo compacto */
+@media (max-width: 390px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 455px !important;
+    min-height: 455px !important;
+    max-height: 455px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 94px !important;
+    left: 24px !important;
+    right: 22px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 300px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 300px !important;
+    font-size: 1.78rem !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 285px !important;
+    font-size: .64rem !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    max-width: 245px !important;
+  }
+}
+
+/* TABLET VERTICAL: misma lógica del aéreo */
+@media (min-width: 701px) and (max-width: 900px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 122px !important;
+    left: clamp(46px, 7vw, 62px) !important;
+    right: clamp(46px, 7vw, 62px) !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 430px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 430px !important;
+    font-size: clamp(2.4rem, 7vw, 3.3rem) !important;
+    line-height: .96 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 380px !important;
+    margin-top: .92rem !important;
+    font-size: .82rem !important;
+    line-height: 1.38 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    margin-top: 1.12rem !important;
+  }
+}
+
+
+/* =====================================================
+   ZZZ MARITIMO MATCH AEREO MOBILE FINAL STRUCTURE
+   Mismo hero mobile que aéreo:
+   - texto más arriba y a la izquierda
+   - CTA compacto
+   - trustBar azul inferior compacta 2x2
+   ===================================================== */
+
+@media (max-width: 700px) {
+  /* HERO: misma altura compacta */
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 465px !important;
+    min-height: 465px !important;
+    max-height: 465px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* TEXTO: más arriba y más a la izquierda */
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 86px !important;
+    left: 20px !important;
+    right: 20px !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 318px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="eyebrow"] {
+    max-width: 318px !important;
+    margin: 0 0 .5rem !important;
+    font-size: .5rem !important;
+    line-height: 1 !important;
+    letter-spacing: .15em !important;
+    font-weight: 950 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 318px !important;
+    margin: 0 !important;
+    font-size: clamp(1.68rem, 8.1vw, 2.08rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.045em !important;
+    font-weight: 950 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 292px !important;
+    margin: .68rem 0 0 !important;
+    font-size: .62rem !important;
+    line-height: 1.36 !important;
+    font-weight: 650 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    max-width: 250px !important;
+    margin: .92rem 0 0 !important;
+    gap: .5rem !important;
+    padding: 0 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a {
+    width: 100% !important;
+    min-height: 34px !important;
+    padding: 0 .8rem !important;
+    font-size: .52rem !important;
+    line-height: 1.05 !important;
+    letter-spacing: .045em !important;
+    border-radius: 999px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a:nth-of-type(2) {
+    display: none !important;
+  }
+
+  /* TRUSTBAR: misma estructura compacta que aéreo */
+  .page .trustBar {
+    height: 108px !important;
+    min-height: 108px !important;
+    max-height: 108px !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-rows: repeat(2, 54px) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 0 !important;
+    background: #05101b !important;
+    border-top: 1px solid rgba(255,255,255,.08) !important;
+    border-bottom: 1px solid rgba(255,255,255,.08) !important;
+    overflow: hidden !important;
+  }
+
+  .page .trustBar > div {
+    min-height: 54px !important;
+    height: 54px !important;
+    padding: 0 .85rem !important;
+    margin: 0 !important;
+    display: grid !important;
+    grid-template-columns: 30px 1fr !important;
+    align-items: center !important;
+    column-gap: .55rem !important;
+    border-right: 1px solid rgba(255,255,255,.08) !important;
+    border-bottom: 1px solid rgba(255,255,255,.08) !important;
+  }
+
+  .page .trustBar i {
+    width: 26px !important;
+    height: 26px !important;
+    min-width: 26px !important;
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .page .trustBar strong {
+    display: block !important;
+    margin: 0 0 .08rem !important;
+    font-size: .56rem !important;
+    line-height: 1.05 !important;
+    letter-spacing: .035em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    color: #fff !important;
+  }
+
+  .page .trustBar span,
+  .page .trustBar p,
+  .page .trustBar small {
+    display: block !important;
+    margin: 0 !important;
+    font-size: .5rem !important;
+    line-height: 1.08 !important;
+    color: rgba(255,255,255,.72) !important;
+  }
+}
+
+/* Mobile muy chico */
+@media (max-width: 390px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 455px !important;
+    min-height: 455px !important;
+    max-height: 455px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 84px !important;
+    left: 18px !important;
+    right: 18px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 300px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 300px !important;
+    font-size: 1.74rem !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 282px !important;
+    font-size: .6rem !important;
+  }
+
+  .page .trustBar {
+    height: 104px !important;
+    min-height: 104px !important;
+    max-height: 104px !important;
+    grid-template-rows: repeat(2, 52px) !important;
+  }
+
+  .page .trustBar > div {
+    height: 52px !important;
+    min-height: 52px !important;
+    padding: 0 .72rem !important;
+    grid-template-columns: 28px 1fr !important;
+    column-gap: .48rem !important;
+  }
+
+  .page .trustBar strong {
+    font-size: .52rem !important;
+  }
+
+  .page .trustBar span,
+  .page .trustBar p,
+  .page .trustBar small {
+    font-size: .47rem !important;
+  }
+}
+
