@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -742,6 +742,8 @@ function Icon({ name }: { name: IconName }) {
 
 export default function EnergiasRenovablesPage() {
   const [locale, setLocale] = useState<Locale>("es");
+  const finalCtaVideoRef = useRef<HTMLVideoElement | null>(null);
+  const darkBandVideoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
     const updateLocale = (event?: Event) => {
@@ -779,6 +781,60 @@ export default function EnergiasRenovablesPage() {
       window.removeEventListener("across-language-change", updateLocale);
       window.removeEventListener("across-locale-change", updateLocale);
     };
+  }, []);
+
+
+  /* ENERGIAS DARK BAND VIDEO SLOWDOWN */
+  useEffect(() => {
+    const video = darkBandVideoRef.current;
+
+    if (!video) return;
+
+    video.playbackRate = 0.45;
+  }, []);
+
+
+  /* ENERGIAS MP4 REAL AUTOPLAY */
+  useEffect(() => {
+    const video = darkBandVideoRef.current;
+    if (!video) return;
+
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    video.playbackRate = 0.42;
+
+    const playVideo = async () => {
+      try {
+        await video.play();
+      } catch {
+        // Autoplay puede esperar interacción en casos raros.
+      }
+    };
+
+    playVideo();
+  }, []);
+
+
+  /* ENERGIAS FINAL CTA VIDEO REAL AUTOPLAY */
+  useEffect(() => {
+    const video = finalCtaVideoRef.current;
+    if (!video) return;
+
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    video.playbackRate = 0.42;
+
+    const start = async () => {
+      try {
+        await video.play();
+      } catch {
+        // Autoplay puede esperar interacción en casos raros.
+      }
+    };
+
+    start();
   }, []);
 
   const t = copy[locale];
@@ -861,7 +917,7 @@ export default function EnergiasRenovablesPage() {
 
         <Certifications />
 
-        <section className={`${styles.overview} ${styles.overviewMobileBg}`} style={{ "--sector-overview-bg": "url('/images/sectores/energiasrenovables.png')" } as CSSProperties}>
+        <section className={`${styles.overview} ${styles.overviewMobileBg}`} data-after-cert-overview="true" style={{ "--sector-overview-bg": "url('/images/sectores/energiasrenovables1.png')" } as CSSProperties}>
           <div className={styles.overviewCopy}>
             <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
             <h2>{t.overviewTitle}</h2>
@@ -886,7 +942,7 @@ export default function EnergiasRenovablesPage() {
           </div>
         </section>
 
-        <section className={styles.services} data-mobile-hide-after-cert="true">
+        <section className={styles.services} data-energy-services-bg="true" data-mobile-hide-after-cert="true">
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -957,13 +1013,18 @@ export default function EnergiasRenovablesPage() {
         </section>
 
         <section className={styles.darkBand} data-mobile-hide-after-cert="true" data-sector-dark-band="true">
-          <div className={styles.darkBandImage}>
-            <Image
-              src="/images/sectores/energiasrenovables2.png"
-              alt={t.bandTitle}
-              fill
-              sizes="(max-width: 900px) 100vw, 42vw"
-            />
+          <div className={styles.darkBandVideoLayer} aria-hidden="true">
+            <video
+              ref={darkBandVideoRef}
+              className={styles.darkBandVideo}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+            >
+              <source src="/images/sectores/energiasrenovables2.mp4" type="video/mp4" />
+            </video>
           </div>
 
           <div className={styles.darkBandContent}>
@@ -986,7 +1047,24 @@ export default function EnergiasRenovablesPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} data-sector-final-cta="true" data-across-final-cta="true">
+        <section className={styles.finalCta} data-energy-final-video="true" data-sector-final-cta="true" data-across-final-cta="true">
+          <div className={styles.finalCtaVideoLayer} aria-hidden="true">
+            <video
+              ref={finalCtaVideoRef}
+              className={styles.finalCtaVideo}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              onLoadedData={(event) => {
+                event.currentTarget.playbackRate = 0.42;
+                event.currentTarget.play().catch(() => undefined);
+              }}
+            >
+              <source src="/images/sectores/energiasrenovables2.mp4" type="video/mp4" />
+            </video>
+          </div>
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>
