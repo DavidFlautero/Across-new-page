@@ -6686,4 +6686,85 @@
   }
 }
 
+/* =====================================================
+   ZZZ MOBILE FLOW AFTER CERTIFICATIONS CLEAN FINAL
+   Mobile/tablet:
+   Después de certificaciones la página queda clara.
+   Se ocultan services/useCases/darkBand.
+   La única sección oscura con imagen queda antes de RelatedServices:
+   finalCta / data-across-final-cta.
+   ===================================================== */
+
+@media (max-width: 900px) {
+  .page section[data-mobile-hide-after-cert="true"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .page section[data-mobile-hide-after-cert="true"] + section {
+    margin-top: 0 !important;
+  }
+
+  /* El proceso queda limpio después del overview */
+  .page .process {
+    margin-top: 0 !important;
+    padding-top: 2.2rem !important;
+    background: #f4f1eb !important;
+  }
+
+  .page .process h2 {
+    max-width: 330px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    font-size: clamp(1.9rem, 8.2vw, 2.35rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.055em !important;
+    text-align: left !important;
+  }
+
+  .page .processGrid {
+    margin-top: 1.6rem !important;
+  }
+
+  /* La CTA final sí queda visible antes de RelatedServices/oficinas */
+  .page section[data-across-final-cta="true"] {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    min-height: 400px !important;
+    margin: 0 !important;
+  }
+}
+
+/* =====================================================
+   ZZZ MOBILE FINAL CTA ONLY ONE BUTTON
+   En mobile la CTA final queda con un solo botón.
+   ===================================================== */
+
+@media (max-width: 700px) {
+  .page section[data-across-final-cta="true"] a:nth-of-type(2),
+  .page section[data-sector-final-cta="true"] a:nth-of-type(2),
+  .page .finalCta a:nth-of-type(2) {
+    display: none !important;
+  }
+
+  .page section[data-across-final-cta="true"] a:first-of-type,
+  .page section[data-sector-final-cta="true"] a:first-of-type,
+  .page .finalCta a:first-of-type {
+    width: 100% !important;
+    max-width: 310px !important;
+    min-height: 52px !important;
+    margin-top: 1.45rem !important;
+  }
+}
+
 

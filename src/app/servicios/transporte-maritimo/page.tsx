@@ -642,7 +642,7 @@ export default function TransporteMaritimoPage() {
           </div>
         </section>
 
-        <section className={styles.services} style={{ "--mobile-bg": "url('/images/transporte-maritimo-mobile/maritimo-mobile.png')" } as CSSProperties}>
+        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/transporte-maritimo-mobile/maritimo-mobile.png')" } as CSSProperties}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -665,7 +665,7 @@ export default function TransporteMaritimoPage() {
           </div>
         </section>
 
-        <section className={styles.useCases}>
+        <section className={styles.useCases} data-mobile-hide-after-cert="true">
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.useCasesEyebrow}</span>
             <h2>{t.useCasesTitle}</h2>
@@ -712,7 +712,7 @@ export default function TransporteMaritimoPage() {
           </div>
         </section>
 
-        <section className={styles.darkBand}>
+        <section className={styles.darkBand} data-mobile-hide-after-cert="true">
           <div className={styles.darkBandImage}>
             <Image
               src="/images/transporte-maritimo-mobile/maritimo-mobile.png"

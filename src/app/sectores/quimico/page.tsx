@@ -886,7 +886,7 @@ export default function QuimicoPage() {
           </div>
         </section>
 
-        <section className={styles.services}>
+        <section className={styles.services} data-mobile-hide-after-cert="true">
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -909,7 +909,7 @@ export default function QuimicoPage() {
           </div>
         </section>
 
-        <section className={styles.useCases}>
+        <section className={styles.useCases} data-mobile-hide-after-cert="true">
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.useCasesEyebrow}</span>
             <h2>{t.useCasesTitle}</h2>
@@ -956,7 +956,7 @@ export default function QuimicoPage() {
           </div>
         </section>
 
-        <section className={styles.darkBand} data-sector-dark-band="true">
+        <section className={styles.darkBand} data-mobile-hide-after-cert="true" data-sector-dark-band="true">
           <div className={styles.darkBandImage}>
             <Image
               src="/images/sectores/quimico2.png"

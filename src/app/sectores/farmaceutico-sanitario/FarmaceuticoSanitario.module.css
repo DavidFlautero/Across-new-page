@@ -4836,4 +4836,312 @@
   }
 }
 
+/* =====================================================
+   ZZZ MOBILE FLOW AFTER CERTIFICATIONS CLEAN FINAL
+   Mobile/tablet:
+   Después de certificaciones la página queda clara.
+   Se ocultan services/useCases/darkBand.
+   La única sección oscura con imagen queda antes de RelatedServices:
+   finalCta / data-across-final-cta.
+   ===================================================== */
+
+@media (max-width: 900px) {
+  .page section[data-mobile-hide-after-cert="true"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .page section[data-mobile-hide-after-cert="true"] + section {
+    margin-top: 0 !important;
+  }
+
+  /* El proceso queda limpio después del overview */
+  .page .process {
+    margin-top: 0 !important;
+    padding-top: 2.2rem !important;
+    background: #f4f1eb !important;
+  }
+
+  .page .process h2 {
+    max-width: 330px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    font-size: clamp(1.9rem, 8.2vw, 2.35rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.055em !important;
+    text-align: left !important;
+  }
+
+  .page .processGrid {
+    margin-top: 1.6rem !important;
+  }
+
+  /* La CTA final sí queda visible antes de RelatedServices/oficinas */
+  .page section[data-across-final-cta="true"] {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    min-height: 400px !important;
+    margin: 0 !important;
+  }
+}
+
+/* =====================================================
+   ZZZ SECTORES MOBILE LIGHT FLOW FIX FINAL
+   Mobile:
+   - overview después de certificaciones queda claro
+   - elimina imagen oscura del overviewMobileBg
+   - CTA final no se desborda ni se corta
+   ===================================================== */
+
+@media (max-width: 900px) {
+  /* El overview después de certificaciones NO debe parecer otro hero */
+  .page .overview,
+  .page .overviewMobileBg,
+  .page section[class*="overview"],
+  .page section[class*="Overview"] {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+    margin: 0 !important;
+    padding: 1.45rem 22px 2.5rem !important;
+    background: #f4f1eb !important;
+    background-image: none !important;
+    color: #07111d !important;
+    overflow: hidden !important;
+    transform: none !important;
+  }
+
+  .page .overview::before,
+  .page .overview::after,
+  .page .overviewMobileBg::before,
+  .page .overviewMobileBg::after,
+  .page section[class*="overview"]::before,
+  .page section[class*="overview"]::after,
+  .page section[class*="Overview"]::before,
+  .page section[class*="Overview"]::after {
+    content: none !important;
+    display: none !important;
+    background: transparent !important;
+    background-image: none !important;
+    opacity: 0 !important;
+  }
+
+  .page .overviewCopy,
+  .page .overviewContent,
+  .page .overviewInner,
+  .page .overviewGrid {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+
+  .page .overview .eyebrow,
+  .page .overview [class*="eyebrow"],
+  .page .overview [class*="Eyebrow"] {
+    display: block !important;
+    margin: 0 0 .75rem !important;
+    color: #c7a96b !important;
+    font-size: .55rem !important;
+    line-height: 1 !important;
+    letter-spacing: .17em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    background: transparent !important;
+  }
+
+  .page .overview h2 {
+    max-width: 330px !important;
+    margin: 0 !important;
+    color: #07111d !important;
+    font-size: clamp(1.9rem, 8.2vw, 2.35rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.055em !important;
+    text-align: left !important;
+    text-shadow: none !important;
+  }
+
+  .page .overview p {
+    max-width: 320px !important;
+    margin: 1.15rem 0 0 !important;
+    color: rgba(5, 12, 22, .78) !important;
+    font-size: .95rem !important;
+    line-height: 1.62 !important;
+    text-align: left !important;
+    text-shadow: none !important;
+  }
+
+  .page .overview a {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 50px !important;
+    margin: 1.55rem 0 0 !important;
+    padding: 0 .95rem !important;
+    border-radius: 999px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: normal !important;
+    text-wrap: balance !important;
+    font-size: .66rem !important;
+    line-height: 1.08 !important;
+    letter-spacing: .045em !important;
+  }
+
+  /* Sin pilares/cards en mobile */
+  .page .overview .pillars,
+  .page .overview .pillarGrid,
+  .page .overview .features,
+  .page .overview .featureGrid,
+  .page .pillars,
+  .page .pillarGrid {
+    display: none !important;
+  }
+
+  /* CTA final: no más corte lateral */
+  .page .finalCta,
+  .page section[data-across-final-cta="true"],
+  .page section[data-sector-final-cta="true"] {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: 400px !important;
+    margin: 0 !important;
+    padding: 3.25rem 22px 3.6rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    overflow: hidden !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+  }
+
+  .page .finalCta > *,
+  .page section[data-across-final-cta="true"] > *,
+  .page section[data-sector-final-cta="true"] > * {
+    position: relative !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    max-width: 315px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+
+  .page .finalCta h2,
+  .page section[data-across-final-cta="true"] h2,
+  .page section[data-sector-final-cta="true"] h2 {
+    max-width: 310px !important;
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: clamp(1.95rem, 8.4vw, 2.42rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.055em !important;
+    text-align: left !important;
+  }
+
+  .page .finalCta p,
+  .page section[data-across-final-cta="true"] p,
+  .page section[data-sector-final-cta="true"] p {
+    max-width: 300px !important;
+    margin: 1.05rem 0 0 !important;
+    color: rgba(255,255,255,.9) !important;
+    font-size: .93rem !important;
+    line-height: 1.55 !important;
+    text-align: left !important;
+  }
+
+  .page .finalCta a,
+  .page section[data-across-final-cta="true"] a,
+  .page section[data-sector-final-cta="true"] a {
+    width: 100% !important;
+    max-width: 310px !important;
+    min-height: 52px !important;
+    margin: 1.45rem 0 0 !important;
+    padding: 0 .95rem !important;
+    border-radius: 999px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: normal !important;
+    text-wrap: balance !important;
+    font-size: .64rem !important;
+    line-height: 1.08 !important;
+    letter-spacing: .045em !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .page .overview,
+  .page .overviewMobileBg,
+  .page section[class*="overview"],
+  .page section[class*="Overview"] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .page .overview h2 {
+    max-width: 300px !important;
+    font-size: 1.95rem !important;
+  }
+
+  .page .overview p {
+    max-width: 295px !important;
+    font-size: .9rem !important;
+  }
+
+  .page .finalCta,
+  .page section[data-across-final-cta="true"],
+  .page section[data-sector-final-cta="true"] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    min-height: 390px !important;
+  }
+
+  .page .finalCta > *,
+  .page section[data-across-final-cta="true"] > *,
+  .page section[data-sector-final-cta="true"] > * {
+    max-width: 300px !important;
+  }
+}
+
+/* =====================================================
+   ZZZ MOBILE FINAL CTA ONLY ONE BUTTON
+   En mobile la CTA final queda con un solo botón.
+   ===================================================== */
+
+@media (max-width: 700px) {
+  .page section[data-across-final-cta="true"] a:nth-of-type(2),
+  .page section[data-sector-final-cta="true"] a:nth-of-type(2),
+  .page .finalCta a:nth-of-type(2) {
+    display: none !important;
+  }
+
+  .page section[data-across-final-cta="true"] a:first-of-type,
+  .page section[data-sector-final-cta="true"] a:first-of-type,
+  .page .finalCta a:first-of-type {
+    width: 100% !important;
+    max-width: 310px !important;
+    min-height: 52px !important;
+    margin-top: 1.45rem !important;
+  }
+}
+
 
