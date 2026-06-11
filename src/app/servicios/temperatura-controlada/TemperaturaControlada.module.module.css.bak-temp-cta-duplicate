@@ -6755,44 +6755,46 @@
   }
 }
 
+
 /* =====================================================
-   ZZZ TEMPERATURA CTA FINAL ONLY DARK CLEAN
-   Solo afecta la CTA final marcada con data-temp-cta.
-   Evita duplicados y oscurece como las anteriores.
+   ZZZ TEMPERATURA INTERNAL CTA CLEAN RESPONSIVE
+   Corrige la sección oscura interna:
+   - cambia fondo a temperaturacontrolada2.png
+   - quita imagen vieja interna si existe
+   - mejora layout en Nest Hub / tablet
+   - botón mobile correcto
+   - aclara el fondo sin capa negra pesada
    ===================================================== */
 
-.page [data-temp-cta="true"] {
+/* CTA interna: sección que tiene link a cotización, pero NO es el hero */
+.page.page > section:not(.hero):has(a[href="/cotizacion"]) {
   position: relative !important;
   overflow: hidden !important;
   isolation: isolate !important;
-  color: #fff !important;
   background:
     linear-gradient(
       90deg,
-      rgba(3, 7, 13, .88) 0%,
-      rgba(3, 7, 13, .76) 48%,
-      rgba(3, 7, 13, .58) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(3, 7, 13, .50) 0%,
-      rgba(3, 7, 13, .76) 100%
+      rgba(3, 7, 13, .72) 0%,
+      rgba(3, 7, 13, .50) 46%,
+      rgba(3, 7, 13, .30) 100%
     ),
     url("/images/temperaturacontrolada2.png") center center / cover no-repeat !important;
+  color: #fff !important;
 }
 
-/* Evita que quede la imagen vieja además del background */
-.page [data-temp-cta="true"] img,
-.page [data-temp-cta="true"] picture,
-.page [data-temp-cta="true"] [class*="image"],
-.page [data-temp-cta="true"] [class*="Image"],
-.page [data-temp-cta="true"] [class*="media"],
-.page [data-temp-cta="true"] [class*="Media"] {
+/* Si esa sección tenía una imagen vieja como <Image>, la sacamos y usamos el background nuevo */
+.page.page > section:not(.hero):has(a[href="/cotizacion"]) > img,
+.page.page > section:not(.hero):has(a[href="/cotizacion"]) picture,
+.page.page > section:not(.hero):has(a[href="/cotizacion"]) [class*="image"],
+.page.page > section:not(.hero):has(a[href="/cotizacion"]) [class*="Image"],
+.page.page > section:not(.hero):has(a[href="/cotizacion"]) [class*="media"],
+.page.page > section:not(.hero):has(a[href="/cotizacion"]) [class*="Media"] {
   display: none !important;
 }
 
-.page [data-temp-cta="true"]::before,
-.page [data-temp-cta="true"]::after {
+/* Matar nieblas/overlays viejos dentro de esa sección */
+.page.page > section:not(.hero):has(a[href="/cotizacion"])::before,
+.page.page > section:not(.hero):has(a[href="/cotizacion"])::after {
   content: none !important;
   display: none !important;
   background: transparent !important;
@@ -6800,40 +6802,40 @@
   opacity: 0 !important;
 }
 
-/* Tablet / Nest Hub */
-@media (min-width: 701px) and (max-width: 1200px) {
-  .page [data-temp-cta="true"] {
+/* Nest Hub / tablet landscape: se veía horrible acá */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) {
     min-height: 420px !important;
+    height: auto !important;
     padding: 4rem clamp(42px, 6vw, 68px) !important;
     display: flex !important;
     align-items: center !important;
     background-position: center center !important;
   }
 
-  .page [data-temp-cta="true"] > * {
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) > * {
     position: relative !important;
     z-index: 2 !important;
-    max-width: 520px !important;
   }
 
-  .page [data-temp-cta="true"] h2 {
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) h2 {
     max-width: 520px !important;
     margin: 0 !important;
-    color: #fff !important;
     font-size: clamp(2.25rem, 4vw, 3rem) !important;
     line-height: .98 !important;
     letter-spacing: -.055em !important;
+    color: #fff !important;
   }
 
-  .page [data-temp-cta="true"] p {
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) p {
     max-width: 460px !important;
     margin: 1rem 0 0 !important;
-    color: rgba(255,255,255,.88) !important;
     font-size: .92rem !important;
     line-height: 1.5 !important;
+    color: rgba(255,255,255,.88) !important;
   }
 
-  .page [data-temp-cta="true"] a {
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) a {
     width: fit-content !important;
     max-width: 330px !important;
     min-height: 42px !important;
@@ -6847,56 +6849,56 @@
     letter-spacing: .045em !important;
   }
 
-  .page [data-temp-cta="true"] [class*="grid"],
-  .page [data-temp-cta="true"] [class*="Grid"],
-  .page [data-temp-cta="true"] [class*="feature"],
-  .page [data-temp-cta="true"] [class*="Feature"],
-  .page [data-temp-cta="true"] [class*="metric"],
-  .page [data-temp-cta="true"] [class*="Metric"] {
-    display: none !important;
+  /* En tablet escondemos cuadritos internos si ensucian la CTA */
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) [class*="grid"],
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) [class*="Grid"],
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) [class*="feature"],
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) [class*="Feature"],
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) [class*="metric"],
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) [class*="Metric"] {
+    max-height: 0 !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
   }
 }
 
-/* Mobile */
+/* Mobile: CTA limpia, no botón roto */
 @media (max-width: 700px) {
-  .page [data-temp-cta="true"] {
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) {
     min-height: 420px !important;
+    height: auto !important;
     padding: 3.4rem 24px !important;
     display: flex !important;
     align-items: center !important;
     background:
       linear-gradient(
         180deg,
-        rgba(3, 7, 13, .84) 0%,
-        rgba(3, 7, 13, .72) 48%,
-        rgba(3, 7, 13, .90) 100%
+        rgba(3, 7, 13, .68) 0%,
+        rgba(3, 7, 13, .50) 48%,
+        rgba(3, 7, 13, .78) 100%
       ),
       url("/images/temperaturacontrolada2.png") center center / cover no-repeat !important;
   }
 
-  .page [data-temp-cta="true"] > * {
-    position: relative !important;
-    z-index: 2 !important;
-  }
-
-  .page [data-temp-cta="true"] h2 {
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) h2 {
     max-width: 305px !important;
     margin: 0 !important;
-    color: #fff !important;
     font-size: clamp(2rem, 8.8vw, 2.55rem) !important;
     line-height: .98 !important;
     letter-spacing: -.055em !important;
+    color: #fff !important;
   }
 
-  .page [data-temp-cta="true"] p {
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) p {
     max-width: 300px !important;
     margin: 1.1rem 0 0 !important;
-    color: rgba(255,255,255,.88) !important;
     font-size: .95rem !important;
     line-height: 1.55 !important;
+    color: rgba(255,255,255,.88) !important;
   }
 
-  .page [data-temp-cta="true"] a {
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) a {
     width: 100% !important;
     max-width: 310px !important;
     min-height: 52px !important;
@@ -6911,246 +6913,33 @@
     letter-spacing: .045em !important;
   }
 
-  .page [data-temp-cta="true"] [class*="grid"],
-  .page [data-temp-cta="true"] [class*="Grid"],
-  .page [data-temp-cta="true"] [class*="feature"],
-  .page [data-temp-cta="true"] [class*="Feature"],
-  .page [data-temp-cta="true"] [class*="metric"],
-  .page [data-temp-cta="true"] [class*="Metric"] {
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) [class*="grid"],
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) [class*="Grid"],
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) [class*="feature"],
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) [class*="Feature"],
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) [class*="metric"],
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) [class*="Metric"] {
     display: none !important;
   }
 }
 
 @media (max-width: 390px) {
-  .page [data-temp-cta="true"] {
-    min-height: 400px !important;
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) {
     padding: 3.1rem 20px !important;
+    min-height: 400px !important;
   }
 
-  .page [data-temp-cta="true"] h2 {
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) h2 {
     max-width: 290px !important;
     font-size: 2.05rem !important;
   }
 
-  .page [data-temp-cta="true"] p {
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) p {
     max-width: 285px !important;
     font-size: .9rem !important;
   }
 
-  .page [data-temp-cta="true"] a {
-    max-width: 295px !important;
-    font-size: .62rem !important;
-  }
-}
-
-
-/* =====================================================
-   ZZZ TEMPERATURA CTA SINGLE FINAL DECISION
-   Elegimos una CTA:
-   - Se mantiene la final: "Coordinemos..."
-   - Se oculta la duplicada en tablet/mobile
-   - En desktop, si aparece, usa temperaturacontrolada2.png
-   - Fondo más oscuro como las anteriores
-   ===================================================== */
-
-/* La CTA duplicada, si queda visible en desktop, usa la imagen correcta */
-.page [data-temp-extra-cta="true"] {
-  position: relative !important;
-  overflow: hidden !important;
-  isolation: isolate !important;
-  color: #fff !important;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(3, 7, 13, .86) 0%,
-      rgba(3, 7, 13, .74) 48%,
-      rgba(3, 7, 13, .56) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(3, 7, 13, .46) 0%,
-      rgba(3, 7, 13, .78) 100%
-    ),
-    url("/images/temperaturacontrolada2.png") center center / cover no-repeat !important;
-}
-
-/* La CTA final también usa la imagen correcta */
-.page [data-temp-cta="true"] {
-  position: relative !important;
-  overflow: hidden !important;
-  isolation: isolate !important;
-  color: #fff !important;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(3, 7, 13, .88) 0%,
-      rgba(3, 7, 13, .76) 48%,
-      rgba(3, 7, 13, .58) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(3, 7, 13, .50) 0%,
-      rgba(3, 7, 13, .78) 100%
-    ),
-    url("/images/temperaturacontrolada2.png") center center / cover no-repeat !important;
-}
-
-/* No permitir imágenes internas duplicadas encima del background */
-.page [data-temp-cta="true"] img,
-.page [data-temp-cta="true"] picture,
-.page [data-temp-cta="true"] [class*="image"],
-.page [data-temp-cta="true"] [class*="Image"],
-.page [data-temp-cta="true"] [class*="media"],
-.page [data-temp-cta="true"] [class*="Media"],
-.page [data-temp-extra-cta="true"] img,
-.page [data-temp-extra-cta="true"] picture,
-.page [data-temp-extra-cta="true"] [class*="image"],
-.page [data-temp-extra-cta="true"] [class*="Image"],
-.page [data-temp-extra-cta="true"] [class*="media"],
-.page [data-temp-extra-cta="true"] [class*="Media"] {
-  display: none !important;
-}
-
-.page [data-temp-cta="true"]::before,
-.page [data-temp-cta="true"]::after,
-.page [data-temp-extra-cta="true"]::before,
-.page [data-temp-extra-cta="true"]::after {
-  content: none !important;
-  display: none !important;
-  opacity: 0 !important;
-  background: transparent !important;
-  background-image: none !important;
-}
-
-/* Tablet/mobile: quitamos la CTA duplicada y dejamos solo la final */
-@media (max-width: 1200px) {
-  .page [data-temp-extra-cta="true"] {
-    display: none !important;
-  }
-}
-
-/* CTA final en tablet / iPad / Nest Hub */
-@media (min-width: 701px) and (max-width: 1200px) {
-  .page [data-temp-cta="true"] {
-    min-height: 420px !important;
-    padding: 4rem clamp(42px, 6vw, 68px) !important;
-    display: flex !important;
-    align-items: center !important;
-    background:
-      linear-gradient(
-        180deg,
-        rgba(3, 7, 13, .82) 0%,
-        rgba(3, 7, 13, .70) 48%,
-        rgba(3, 7, 13, .88) 100%
-      ),
-      url("/images/temperaturacontrolada2.png") center center / cover no-repeat !important;
-  }
-
-  .page [data-temp-cta="true"] > * {
-    position: relative !important;
-    z-index: 2 !important;
-    max-width: 520px !important;
-  }
-
-  .page [data-temp-cta="true"] h2 {
-    max-width: 520px !important;
-    margin: 0 !important;
-    color: #fff !important;
-    font-size: clamp(2.25rem, 4vw, 3rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.055em !important;
-  }
-
-  .page [data-temp-cta="true"] p {
-    max-width: 460px !important;
-    margin: 1rem 0 0 !important;
-    color: rgba(255,255,255,.9) !important;
-    font-size: .92rem !important;
-    line-height: 1.5 !important;
-  }
-
-  .page [data-temp-cta="true"] a {
-    width: fit-content !important;
-    max-width: 330px !important;
-    min-height: 42px !important;
-    margin-top: 1.35rem !important;
-    padding: 0 1.25rem !important;
-    border-radius: 999px !important;
-    white-space: normal !important;
-    text-align: center !important;
-    font-size: .64rem !important;
-    line-height: 1.08 !important;
-    letter-spacing: .045em !important;
-  }
-}
-
-/* CTA final mobile */
-@media (max-width: 700px) {
-  .page [data-temp-cta="true"] {
-    min-height: 420px !important;
-    padding: 3.4rem 24px !important;
-    display: flex !important;
-    align-items: center !important;
-    background:
-      linear-gradient(
-        180deg,
-        rgba(3, 7, 13, .86) 0%,
-        rgba(3, 7, 13, .74) 48%,
-        rgba(3, 7, 13, .92) 100%
-      ),
-      url("/images/temperaturacontrolada2.png") center center / cover no-repeat !important;
-  }
-
-  .page [data-temp-cta="true"] h2 {
-    max-width: 305px !important;
-    margin: 0 !important;
-    color: #fff !important;
-    font-size: clamp(2rem, 8.8vw, 2.55rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.055em !important;
-  }
-
-  .page [data-temp-cta="true"] p {
-    max-width: 300px !important;
-    margin: 1.1rem 0 0 !important;
-    color: rgba(255,255,255,.9) !important;
-    font-size: .95rem !important;
-    line-height: 1.55 !important;
-  }
-
-  .page [data-temp-cta="true"] a {
-    width: 100% !important;
-    max-width: 310px !important;
-    min-height: 52px !important;
-    margin: 1.65rem 0 0 !important;
-    padding: 0 1rem !important;
-    border-radius: 999px !important;
-    white-space: normal !important;
-    text-wrap: balance !important;
-    text-align: center !important;
-    font-size: .66rem !important;
-    line-height: 1.08 !important;
-    letter-spacing: .045em !important;
-  }
-}
-
-@media (max-width: 390px) {
-  .page [data-temp-cta="true"] {
-    min-height: 400px !important;
-    padding: 3.1rem 20px !important;
-  }
-
-  .page [data-temp-cta="true"] h2 {
-    max-width: 290px !important;
-    font-size: 2.05rem !important;
-  }
-
-  .page [data-temp-cta="true"] p {
-    max-width: 285px !important;
-    font-size: .9rem !important;
-  }
-
-  .page [data-temp-cta="true"] a {
+  .page.page > section:not(.hero):has(a[href="/cotizacion"]) a {
     max-width: 295px !important;
     font-size: .62rem !important;
   }
