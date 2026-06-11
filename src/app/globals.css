@@ -4497,3 +4497,59 @@ header [class*="Contact"] {
   }
 }
 
+
+/* =====================================================
+   HEADER MOBILE ACTIONS RIGHT LOCK
+   Fuerza banderas + hamburguesa a la derecha.
+   Solo mobile/tablet. No toca desktop.
+   ===================================================== */
+
+@media (max-width: 900px) {
+  html body header {
+    width: 100% !important;
+  }
+
+  /* Contenedor principal del header */
+  html body header > div,
+  html body header nav,
+  html body [class*="Header"] header > div,
+  html body [class*="header"] header > div {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  /* Logo siempre a la izquierda */
+  html body header a[href="/"],
+  html body header [class*="logo"],
+  html body header [class*="Logo"],
+  html body header [class*="brand"],
+  html body header [class*="Brand"] {
+    margin-right: auto !important;
+    flex: 0 0 auto !important;
+  }
+
+  /* Grupo de banderas + hamburguesa siempre a la derecha */
+  html body header [class*="actions"],
+  html body header [class*="Actions"],
+  html body header [class*="lang"],
+  html body header [class*="Lang"],
+  html body header [class*="language"],
+  html body header [class*="Language"],
+  html body header [class*="mobileActions"],
+  html body header [class*="MobileActions"] {
+    margin-left: auto !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    flex: 0 0 auto !important;
+  }
+
+  /* Botón hamburguesa */
+  html body header button,
+  html body header [class*="menu"],
+  html body header [class*="Menu"],
+  html body header [class*="toggle"],
+  html body header [class*="Toggle"] {
+    flex: 0 0 auto !important;
+  }
+}
+

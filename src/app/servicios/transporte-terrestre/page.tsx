@@ -567,7 +567,6 @@ export default function TransporteTerrestrePage() {
             priority
             sizes="(max-width: 900px) 0px, 100vw"
             data-hero-role="desktop-image"
-            data-hero-role="desktop-image"
             className={`${styles.heroImage} ${styles.heroImageDesktop}`}
           />
 
@@ -577,7 +576,6 @@ export default function TransporteTerrestrePage() {
             fill
             priority
             sizes="(max-width: 900px) 100vw, 0px"
-            data-hero-role="mobile-image"
             data-hero-role="mobile-image"
             className={`${styles.heroImage} ${styles.heroImageMobile}`}
           />
