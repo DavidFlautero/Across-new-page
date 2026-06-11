@@ -2963,7 +2963,7 @@
       rgba(5, 6, 9, .55) 100%
     ),
     radial-gradient(circle at 18% 18%, rgba(18, 63, 89, .16), transparent 24rem),
-    url("/images/sectores/consumo2.png") !important;
+    url("/images/sectores/automocion2.png") !important;
   background-size: cover !important;
   background-position: center 48% !important;
   background-repeat: no-repeat !important;
@@ -3065,7 +3065,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(18, 63, 89, .14), transparent 24rem),
-    url("/images/sectores/consumo2.png") !important;
+    url("/images/sectores/automocion2.png") !important;
   background-size: cover !important;
   background-position: center 55% !important;
   background-repeat: no-repeat !important;
@@ -3104,7 +3104,7 @@
   .services {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.90)),
-      url("/images/sectores/consumo2.png") !important;
+      url("/images/sectores/automocion2.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3116,7 +3116,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/consumo2.png") !important;
+      url("/images/sectores/automocion2.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3134,7 +3134,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(18, 63, 89, .14), transparent 24rem),
-    url("/images/sectores/consumo1.png") !important;
+    url("/images/sectores/transporte-logistica-automocion.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3144,7 +3144,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/consumo1.png") !important;
+      url("/images/sectores/transporte-logistica-automocion.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3162,7 +3162,7 @@
       rgba(5, 6, 9, .44) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(18, 63, 89, .14), transparent 24rem),
-    url("/images/sectores/consumo1.png") !important;
+    url("/images/sectores/transporte-logistica-automocion.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3172,7 +3172,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/consumo1.png") !important;
+      url("/images/sectores/transporte-logistica-automocion.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -4321,7 +4321,7 @@
 /* END HERO IMAGE STARTS AT TOP UNDER HEADER */
 
 /* =====================================================
-   ZZZ SECTOR CONSUMO-DISTRIBUCION FINAL SYSTEM
+   ZZZ SECTOR AUTOMOCION FINAL SYSTEM
    Replica sistema aprobado de Alimentación & Bebidas.
    - Hero compacto
    - Azul Across
@@ -4412,25 +4412,25 @@
 }
 
 /* HERO */
-.page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] {
+.page > .hero[data-sector-hero="true"][data-sector-name="automocion"] {
   position: relative !important;
   overflow: hidden !important;
   isolation: isolate !important;
   background: #07111d !important;
 }
 
-.page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"]::before,
-.page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"]::after,
-.page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] .heroInner::before,
-.page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] .heroInner::after,
-.page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] .heroContent::before,
-.page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] .heroContent::after {
+.page > .hero[data-sector-hero="true"][data-sector-name="automocion"]::before,
+.page > .hero[data-sector-hero="true"][data-sector-name="automocion"]::after,
+.page > .hero[data-sector-hero="true"][data-sector-name="automocion"] .heroInner::before,
+.page > .hero[data-sector-hero="true"][data-sector-name="automocion"] .heroInner::after,
+.page > .hero[data-sector-hero="true"][data-sector-name="automocion"] .heroContent::before,
+.page > .hero[data-sector-hero="true"][data-sector-name="automocion"] .heroContent::after {
   content: none !important;
   display: none !important;
 }
 
-.page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="desktop-image"],
-.page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="mobile-image"] {
+.page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="desktop-image"],
+.page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="mobile-image"] {
   position: absolute !important;
   inset: 0 !important;
   width: 100% !important;
@@ -4442,7 +4442,7 @@
   filter: brightness(1.08) contrast(1.06) saturate(1.12) !important;
 }
 
-.page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="overlay"] {
+.page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="overlay"] {
   position: absolute !important;
   inset: 0 !important;
   z-index: -3 !important;
@@ -4453,29 +4453,29 @@
 }
 
 @media (max-width: 1200px) {
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="card"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="card"] {
     display: none !important;
   }
 }
 
 @media (min-width: 1201px) {
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] {
     height: clamp(640px, calc(100svh - 92px), 760px) !important;
     min-height: 640px !important;
     max-height: 760px !important;
     padding: 0 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="desktop-image"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="desktop-image"] {
     display: block !important;
     object-position: center center !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="mobile-image"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="mobile-image"] {
     display: none !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="inner"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="inner"] {
     position: absolute !important;
     top: 150px !important;
     left: clamp(72px, 6.8vw, 118px) !important;
@@ -4486,11 +4486,11 @@
     display: block !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="content"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="content"] {
     max-width: 620px !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="title"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="title"] {
     max-width: 620px !important;
     margin: 0 !important;
     font-size: clamp(2.9rem, 3.5vw, 4rem) !important;
@@ -4499,7 +4499,7 @@
     font-weight: 950 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="text"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="text"] {
     max-width: 520px !important;
     margin-top: .95rem !important;
     font-size: .9rem !important;
@@ -4507,30 +4507,30 @@
     font-weight: 650 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="actions"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="actions"] {
     margin-top: 1.2rem !important;
     gap: .75rem !important;
   }
 }
 
 @media (min-width: 901px) and (max-width: 1200px) {
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] {
     height: 500px !important;
     min-height: 500px !important;
     max-height: 500px !important;
     padding: 0 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="desktop-image"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="desktop-image"] {
     display: block !important;
     object-position: center center !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="mobile-image"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="mobile-image"] {
     display: none !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="inner"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="inner"] {
     position: absolute !important;
     top: 140px !important;
     left: clamp(46px, 5.8vw, 64px) !important;
@@ -4540,17 +4540,17 @@
     padding: 0 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="content"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="content"] {
     max-width: 520px !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="title"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="title"] {
     max-width: 520px !important;
     font-size: clamp(2.35rem, 4vw, 2.85rem) !important;
     line-height: .98 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="text"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="text"] {
     max-width: 445px !important;
     font-size: .76rem !important;
     line-height: 1.42 !important;
@@ -4558,7 +4558,7 @@
 }
 
 @media (max-width: 700px) {
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] {
     height: 465px !important;
     min-height: 465px !important;
     max-height: 465px !important;
@@ -4566,16 +4566,16 @@
     margin: 0 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="desktop-image"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="desktop-image"] {
     display: none !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="mobile-image"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="mobile-image"] {
     display: block !important;
     object-position: center center !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="inner"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="inner"] {
     position: absolute !important;
     top: 86px !important;
     left: 20px !important;
@@ -4585,25 +4585,25 @@
     padding: 0 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="content"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="content"] {
     max-width: 318px !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="title"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="title"] {
     max-width: 318px !important;
     font-size: clamp(1.68rem, 8.1vw, 2.08rem) !important;
     line-height: .96 !important;
     letter-spacing: -.045em !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="text"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="text"] {
     max-width: 292px !important;
     margin-top: .68rem !important;
     font-size: .62rem !important;
     line-height: 1.36 !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="actions"] {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="actions"] {
     display: grid !important;
     grid-template-columns: 1fr !important;
     max-width: 250px !important;
@@ -4611,7 +4611,7 @@
     gap: .5rem !important;
   }
 
-  .page > .hero[data-sector-hero="true"][data-sector-name="consumo-distribucion"] [data-hero-role="actions"] a:nth-of-type(2) {
+  .page > .hero[data-sector-hero="true"][data-sector-name="automocion"] [data-hero-role="actions"] a:nth-of-type(2) {
     display: none !important;
   }
 }
@@ -4700,7 +4700,7 @@
   overflow: hidden !important;
   background:
     linear-gradient(90deg, rgba(5,20,34,.54) 0%, rgba(8,37,56,.42) 48%, rgba(10,55,78,.30) 100%),
-    url("/images/sectores/consumo2.png") center center / cover no-repeat !important;
+    url("/images/sectores/automocion2.png") center center / cover no-repeat !important;
 }
 
 .page section[data-sector-dark-band="true"] > *,
@@ -4754,7 +4754,7 @@
 .page [data-across-final-cta="true"] {
   background:
     linear-gradient(90deg, rgba(5,20,34,.50) 0%, rgba(8,37,56,.42) 48%, rgba(10,55,78,.28) 100%),
-    url("/images/sectores/consumo2.png") center center / cover no-repeat !important;
+    url("/images/sectores/automocion2.png") center center / cover no-repeat !important;
 }
 
 /* =====================================================
@@ -7129,194 +7129,6 @@
   .page section[data-across-final-cta="true"] h2 {
     font-size: 1.38rem !important;
     max-width: 285px !important;
-  }
-}
-
-/* =====================================================
-   ZZZ ALL SECTORS AFTER CERT TYPOGRAPHY HARD LOCK FINAL
-   Post-certificaciones en TODOS los sectores:
-   - misma letra que energías renovables
-   - h2 interno menor que hero
-   - no pelea visualmente con hero
-   ===================================================== */
-
-/* Desktop */
-@media (min-width: 901px) {
-  .page section[data-after-cert-overview="true"] h2,
-  .page section[data-after-cert-overview="true"] .overviewCopy h2,
-  .page .overview.overviewMobileBg h2,
-  .page .overview .overviewCopy h2,
-  .page .overviewCopy h2 {
-    max-width: 430px !important;
-    margin: 0 !important;
-
-    color: #07111d !important;
-    -webkit-text-fill-color: #07111d !important;
-
-    font-family: inherit !important;
-    font-size: clamp(2rem, 2.35vw, 2.65rem) !important;
-    line-height: 1 !important;
-    letter-spacing: -.048em !important;
-    font-weight: 950 !important;
-
-    text-wrap: balance !important;
-    text-shadow: none !important;
-    background: transparent !important;
-    background-image: none !important;
-  }
-
-  .page section[data-after-cert-overview="true"] p,
-  .page section[data-after-cert-overview="true"] .overviewCopy p,
-  .page .overview.overviewMobileBg p,
-  .page .overview .overviewCopy p,
-  .page .overviewCopy p {
-    max-width: 380px !important;
-    margin-top: 1rem !important;
-
-    color: rgba(7, 17, 29, .72) !important;
-    -webkit-text-fill-color: rgba(7, 17, 29, .72) !important;
-
-    font-family: inherit !important;
-    font-size: .92rem !important;
-    line-height: 1.58 !important;
-    font-weight: 450 !important;
-  }
-}
-
-/* Tablet */
-@media (min-width: 701px) and (max-width: 900px) {
-  .page section[data-after-cert-overview="true"] h2,
-  .page section[data-after-cert-overview="true"] .overviewCopy h2,
-  .page .overview.overviewMobileBg h2,
-  .page .overview .overviewCopy h2,
-  .page .overviewCopy h2 {
-    max-width: 370px !important;
-
-    color: #07111d !important;
-    -webkit-text-fill-color: #07111d !important;
-
-    font-family: inherit !important;
-    font-size: clamp(1.65rem, 4vw, 2rem) !important;
-    line-height: 1.02 !important;
-    letter-spacing: -.044em !important;
-    font-weight: 950 !important;
-
-    text-wrap: balance !important;
-    text-shadow: none !important;
-    background: transparent !important;
-    background-image: none !important;
-  }
-
-  .page section[data-after-cert-overview="true"] p,
-  .page section[data-after-cert-overview="true"] .overviewCopy p,
-  .page .overview.overviewMobileBg p,
-  .page .overview .overviewCopy p,
-  .page .overviewCopy p {
-    max-width: 350px !important;
-    font-size: .84rem !important;
-    line-height: 1.5 !important;
-  }
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-  .page section[data-after-cert-overview="true"],
-  .page .overview.overviewMobileBg,
-  .page .overview {
-    padding-top: 1.45rem !important;
-    padding-bottom: 1.9rem !important;
-  }
-
-  .page section[data-after-cert-overview="true"] h2,
-  .page section[data-after-cert-overview="true"] .overviewCopy h2,
-  .page .overview.overviewMobileBg h2,
-  .page .overview .overviewCopy h2,
-  .page .overviewCopy h2 {
-    max-width: 300px !important;
-    margin: 0 !important;
-
-    color: #07111d !important;
-    -webkit-text-fill-color: #07111d !important;
-
-    font-family: inherit !important;
-    font-size: clamp(1.34rem, 5.65vw, 1.58rem) !important;
-    line-height: 1.03 !important;
-    letter-spacing: -.04em !important;
-    font-weight: 950 !important;
-
-    text-wrap: balance !important;
-    text-shadow: none !important;
-    background: transparent !important;
-    background-image: none !important;
-  }
-
-  .page section[data-after-cert-overview="true"] p,
-  .page section[data-after-cert-overview="true"] .overviewCopy p,
-  .page .overview.overviewMobileBg p,
-  .page .overview .overviewCopy p,
-  .page .overviewCopy p {
-    max-width: 300px !important;
-    margin-top: .85rem !important;
-
-    color: rgba(7, 17, 29, .72) !important;
-    -webkit-text-fill-color: rgba(7, 17, 29, .72) !important;
-
-    font-family: inherit !important;
-    font-size: .78rem !important;
-    line-height: 1.48 !important;
-    font-weight: 450 !important;
-  }
-
-  .page section[data-after-cert-overview="true"] .eyebrow,
-  .page section[data-after-cert-overview="true"] [class*="eyebrow"],
-  .page .overview .eyebrow,
-  .page .overview [class*="eyebrow"],
-  .page .overviewMobileBg .eyebrow,
-  .page .overviewMobileBg [class*="eyebrow"] {
-    margin-bottom: .62rem !important;
-
-    color: #c7a96b !important;
-    -webkit-text-fill-color: #c7a96b !important;
-
-    font-family: inherit !important;
-    font-size: .52rem !important;
-    line-height: 1 !important;
-    letter-spacing: .18em !important;
-    font-weight: 950 !important;
-    text-transform: uppercase !important;
-
-    background: transparent !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  .page section[data-after-cert-overview="true"] a,
-  .page .overview a,
-  .page .overviewMobileBg a {
-    max-width: 300px !important;
-    min-height: 48px !important;
-    margin-top: 1.15rem !important;
-    font-size: .56rem !important;
-  }
-}
-
-/* Mobile chico */
-@media (max-width: 390px) {
-  .page section[data-after-cert-overview="true"] h2,
-  .page section[data-after-cert-overview="true"] .overviewCopy h2,
-  .page .overview.overviewMobileBg h2,
-  .page .overview .overviewCopy h2,
-  .page .overviewCopy h2 {
-    font-size: 1.38rem !important;
-    max-width: 286px !important;
-  }
-
-  .page section[data-after-cert-overview="true"] p,
-  .page section[data-after-cert-overview="true"] .overviewCopy p,
-  .page .overview.overviewMobileBg p,
-  .page .overview .overviewCopy p,
-  .page .overviewCopy p {
-    font-size: .76rem !important;
   }
 }
 

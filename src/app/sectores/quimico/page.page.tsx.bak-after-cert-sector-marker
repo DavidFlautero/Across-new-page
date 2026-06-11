@@ -8,138 +8,138 @@ import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import RelatedServices from "@/app/servicios/_shared/RelatedServices";
-import styles from "./AlimentacionBebidas.module.css";
+import styles from "./Quimico.module.css";
 
 type Locale = "es" | "en" | "zh";
 
 const copy = {
   "es": {
-    "heroEyebrow": "Sector alimentación y bebidas",
-    "heroTitle": "Logística para productos que exigen tiempo, control y confianza.",
-    "heroText": "Diseñamos operaciones logísticas para alimentos, bebidas, perecederos y productos de consumo, integrando transporte, almacenaje, distribución, trazabilidad y control operativo.",
+    "heroEyebrow": "Sector químico",
+    "heroTitle": "Logística química para cargas que exigen control, seguridad y cumplimiento.",
+    "heroText": "Coordinamos operaciones logísticas para productos químicos, materias primas, mercancía sensible y cargas reguladas, integrando transporte, documentación, trazabilidad y control operativo.",
     "primaryCta": "Planificar mi operación",
     "secondaryCta": "Hablar con nuestro equipo",
-    "activeLabel": "Operación alimentaria activa",
-    "activeRoute": "Proveedor → Distribución",
-    "activeCargo": "Alimentos y bebidas",
+    "activeLabel": "Operación química activa",
+    "activeRoute": "Origen → Planta",
+    "activeCargo": "Producto químico",
     "activeStatusLabel": "Estado:",
     "activeStatus": "En coordinación",
-    "activeEtaLabel": "Prioridad:",
-    "activeEta": "Entrega segura",
+    "activeEtaLabel": "Control:",
+    "activeEta": "Alta seguridad",
     "trust": [
       [
-        "Trazabilidad",
-        "Control operativo"
-      ],
-      [
-        "Distribución",
-        "Entregas coordinadas"
-      ],
-      [
-        "Cadena de frío",
-        "Cuando aplica"
-      ],
-      [
         "Cumplimiento",
-        "Documentación y control"
+        "Documentación controlada"
+      ],
+      [
+        "Carga sensible",
+        "Manejo especializado"
+      ],
+      [
+        "Seguridad",
+        "Protocolos operativos"
+      ],
+      [
+        "Trazabilidad",
+        "Seguimiento de origen a destino"
       ]
     ],
-    "overviewEyebrow": "Logística sectorial",
-    "overviewTitle": "Soluciones logísticas para cadenas alimentarias que no pueden fallar.",
-    "overviewText": "El sector de alimentación y bebidas exige velocidad, cuidado del producto, cumplimiento documental y continuidad. Coordinamos operaciones diseñadas para proteger mercancía, reducir riesgos y mantener la cadena en movimiento.",
-    "overviewButton": "Conocer más sobre alimentación y bebidas",
+    "overviewEyebrow": "Logística química especializada",
+    "overviewTitle": "Control operativo para productos que requieren precisión y responsabilidad.",
+    "overviewText": "El sector químico exige planificación, cumplimiento documental, manipulación adecuada y visibilidad en cada etapa. Diseñamos operaciones para reducir riesgos, mantener continuidad y proteger la integridad de la carga.",
+    "overviewButton": "Conocer más sobre química",
     "pillars": [
       [
-        "Control de producto",
-        "Coordinación según tipo de mercancía, sensibilidad, rotación y requisitos de entrega."
+        "Control documental",
+        "Revisión de documentos comerciales, técnicos, aduaneros y operativos según el tipo de producto."
       ],
       [
-        "Distribución eficiente",
-        "Planificación de salidas, rutas y entregas para clientes, retail o puntos de venta."
+        "Manejo especializado",
+        "Coordinación de transporte y manipulación adaptada a mercancías sensibles o reguladas."
       ],
       [
-        "Trazabilidad",
-        "Seguimiento operativo para mantener visibilidad de la mercancía."
+        "Seguridad operativa",
+        "Planificación con foco en prevención, trazabilidad y reducción de riesgos."
       ],
       [
-        "Cadena de frío",
-        "Soluciones con control térmico cuando el producto lo requiere."
+        "Coordinación integral",
+        "Integración con transporte, aduanas, almacén y entrega final."
       ]
     ],
-    "servicesEyebrow": "Soluciones para alimentación y bebidas",
-    "servicesTitle": "Operaciones diseñadas para productos de consumo.",
+    "servicesEyebrow": "Soluciones para el sector químico",
+    "servicesTitle": "Operaciones diseñadas para mercancías sensibles y reguladas.",
     "services": [
       [
-        "Transporte nacional e internacional",
-        "Coordinación de movimientos terrestres, marítimos o aéreos según urgencia y volumen."
+        "Transporte internacional",
+        "Coordinación aérea, marítima o terrestre según producto, urgencia y requisitos."
       ],
       [
-        "Distribución comercial",
-        "Entregas a clientes, cadenas, puntos de venta o centros de distribución."
+        "Carga regulada",
+        "Gestión logística para mercancías que requieren documentación y control específico."
       ],
       [
-        "Carga refrigerada",
-        "Soluciones para productos perecederos o sensibles a temperatura."
-      ],
-      [
-        "Almacenaje y preparación",
-        "Gestión de stock, picking, packing y salidas programadas."
+        "Productos sensibles",
+        "Soluciones para cargas que exigen cuidado, trazabilidad y seguimiento."
       ],
       [
         "Importación y exportación",
         "Soporte documental, aduanero y operativo para comercio internacional."
       ],
       [
+        "Almacenaje especializado",
+        "Gestión de stock y preparación bajo criterios operativos controlados."
+      ],
+      [
         "Door to door",
         "Coordinación completa desde origen hasta entrega final."
       ]
     ],
-    "useCasesEyebrow": "Cuándo necesita logística especializada",
-    "useCasesTitle": "Cuando el producto debe llegar bien, a tiempo y bajo control.",
+    "useCasesEyebrow": "Cuándo necesita logística química",
+    "useCasesTitle": "Cuando la carga requiere control antes, durante y después del movimiento.",
     "useCases": [
       [
-        "Alimentos perecederos",
-        "Operaciones que requieren tiempos precisos y control de condiciones."
+        "Materias primas",
+        "Movimientos para producción, industria y transformación."
       ],
       [
-        "Bebidas",
-        "Distribución de productos embotellados, envasados o de alto volumen."
+        "Productos químicos",
+        "Operaciones con requisitos documentales y operativos específicos."
       ],
       [
-        "Retail y supermercados",
-        "Entregas programadas hacia cadenas y puntos de venta."
+        "Carga sensible",
+        "Mercancías que requieren cuidado, control y trazabilidad."
       ],
       [
-        "Importadores",
-        "Gestión integral para productos alimentarios internacionales."
+        "Importadores químicos",
+        "Gestión internacional con documentación y coordinación aduanera."
       ],
       [
-        "Campañas comerciales",
-        "Picos de demanda y entregas de alta rotación."
+        "Industria y manufactura",
+        "Abastecimiento para plantas, procesos y proyectos productivos."
       ],
       [
-        "Productos sensibles",
-        "Mercancía que requiere cuidado, trazabilidad o control térmico."
+        "Distribución especializada",
+        "Entregas a clientes industriales, laboratorios o centros técnicos."
       ]
     ],
     "processEyebrow": "Nuestro proceso operativo",
-    "processTitle": "Una operación alimentaria clara desde la planificación hasta la entrega.",
+    "processTitle": "Una operación química clara desde la validación inicial.",
     "process": [
       [
         "Análisis del producto",
-        "Revisamos tipo de mercancía, sensibilidad, volumen y requisitos."
+        "Revisamos tipo de carga, requisitos, documentación y sensibilidad."
       ],
       [
         "Diseño logístico",
-        "Definimos transporte, almacenamiento, distribución y tiempos."
+        "Definimos modalidad, ruta, controles y tiempos de operación."
       ],
       [
-        "Documentación",
-        "Coordinamos requisitos comerciales, sanitarios o aduaneros cuando aplica."
+        "Validación documental",
+        "Coordinamos documentos comerciales, técnicos, aduaneros y operativos."
       ],
       [
-        "Preparación operativa",
-        "Gestionamos retiro, carga, acondicionamiento y salida."
+        "Preparación",
+        "Gestionamos retiro, acondicionamiento, carga y salida."
       ],
       [
         "Seguimiento",
@@ -150,158 +150,158 @@ const copy = {
         "Coordinamos recepción, descarga y cierre operativo."
       ]
     ],
-    "bandTitle": "Logística alimentaria diseñada para proteger producto y continuidad.",
-    "bandText": "Nuestro equipo coordina operaciones para empresas que necesitan puntualidad, trazabilidad y respuesta profesional en alimentos, bebidas y productos de consumo.",
+    "bandTitle": "Logística química diseñada para operaciones que no admiten improvisación.",
+    "bandText": "Nuestro equipo coordina operaciones para empresas químicas e industriales que necesitan cumplimiento, trazabilidad y respuesta profesional en cada etapa logística.",
     "stats": [
+      [
+        "Cumplimiento",
+        "Documentación y control"
+      ],
+      [
+        "Carga sensible",
+        "Manejo especializado"
+      ],
       [
         "Trazabilidad",
         "Seguimiento operativo"
-      ],
-      [
-        "Distribución",
-        "Entregas coordinadas"
-      ],
-      [
-        "Cadena de frío",
-        "Cuando aplica"
       ],
       [
         "Soporte experto",
         "Especialistas dedicados"
       ]
     ],
-    "finalTitle": "Coordinemos su próxima operación de alimentación y bebidas.",
-    "finalText": "Cuéntenos tipo de producto, volumen, origen, destino y requisitos. Nuestro equipo analizará la mejor solución logística.",
-    "finalPrimary": "Solicitar propuesta logística",
+    "finalTitle": "Coordinemos su próxima operación química.",
+    "finalText": "Cuéntenos tipo de producto, origen, destino, documentación disponible y requisitos. Nuestro equipo analizará la mejor solución logística.",
+    "finalPrimary": "Solicitar propuesta química",
     "finalSecondary": "Hablar con un especialista"
   },
   "en": {
-    "heroEyebrow": "Food and beverage sector",
-    "heroTitle": "Logistics for products that demand timing, control and trust.",
-    "heroText": "We design logistics operations for food, beverages, perishables and consumer products, integrating transport, warehousing, distribution, traceability and operational control.",
+    "heroEyebrow": "Chemical sector",
+    "heroTitle": "Chemical logistics for cargo that requires control, safety and compliance.",
+    "heroText": "We coordinate logistics operations for chemical products, raw materials, sensitive goods and regulated cargo, integrating transport, documentation, traceability and operational control.",
     "primaryCta": "Plan my operation",
     "secondaryCta": "Talk to our team",
-    "activeLabel": "Active food operation",
-    "activeRoute": "Supplier → Distribution",
-    "activeCargo": "Food and beverages",
+    "activeLabel": "Active chemical operation",
+    "activeRoute": "Origin → Plant",
+    "activeCargo": "Chemical product",
     "activeStatusLabel": "Status:",
     "activeStatus": "In coordination",
-    "activeEtaLabel": "Priority:",
-    "activeEta": "Safe delivery",
+    "activeEtaLabel": "Control:",
+    "activeEta": "High security",
     "trust": [
       [
-        "Traceability",
-        "Operational control"
-      ],
-      [
-        "Distribution",
-        "Coordinated deliveries"
-      ],
-      [
-        "Cold chain",
-        "When required"
-      ],
-      [
         "Compliance",
-        "Documentation and control"
+        "Controlled documentation"
+      ],
+      [
+        "Sensitive cargo",
+        "Specialized handling"
+      ],
+      [
+        "Safety",
+        "Operational protocols"
+      ],
+      [
+        "Traceability",
+        "Origin-to-destination tracking"
       ]
     ],
-    "overviewEyebrow": "Sector logistics",
-    "overviewTitle": "Logistics solutions for food supply chains that cannot fail.",
-    "overviewText": "The food and beverage sector requires speed, product care, document compliance and continuity. We coordinate operations designed to protect goods, reduce risks and keep the chain moving.",
-    "overviewButton": "Learn more about food and beverages",
+    "overviewEyebrow": "Specialized chemical logistics",
+    "overviewTitle": "Operational control for products that require precision and responsibility.",
+    "overviewText": "The chemical sector requires planning, documentary compliance, proper handling and visibility at every stage. We design operations to reduce risks, maintain continuity and protect cargo integrity.",
+    "overviewButton": "Learn more about chemical logistics",
     "pillars": [
       [
-        "Product control",
-        "Coordination according to goods type, sensitivity, rotation and delivery requirements."
+        "Document control",
+        "Review of commercial, technical, customs and operational documents according to product type."
       ],
       [
-        "Efficient distribution",
-        "Planning of dispatches, routes and deliveries for clients, retail or points of sale."
+        "Specialized handling",
+        "Transport and handling coordination adapted to sensitive or regulated goods."
       ],
       [
-        "Traceability",
-        "Operational tracking to maintain cargo visibility."
+        "Operational safety",
+        "Planning focused on prevention, traceability and risk reduction."
       ],
       [
-        "Cold chain",
-        "Temperature-controlled solutions when the product requires it."
+        "Integrated coordination",
+        "Integration with transport, customs, warehousing and final delivery."
       ]
     ],
-    "servicesEyebrow": "Food and beverage solutions",
-    "servicesTitle": "Operations designed for consumer products.",
+    "servicesEyebrow": "Solutions for the chemical sector",
+    "servicesTitle": "Operations designed for sensitive and regulated goods.",
     "services": [
       [
-        "Domestic and international transport",
-        "Road, ocean or air movements according to urgency and volume."
+        "International transport",
+        "Air, ocean or road coordination according to product, urgency and requirements."
       ],
       [
-        "Commercial distribution",
-        "Deliveries to clients, chains, points of sale or distribution centers."
+        "Regulated cargo",
+        "Logistics management for goods requiring documentation and specific control."
       ],
       [
-        "Refrigerated cargo",
-        "Solutions for perishable or temperature-sensitive products."
-      ],
-      [
-        "Warehousing and preparation",
-        "Stock management, picking, packing and scheduled dispatches."
+        "Sensitive products",
+        "Solutions for cargo requiring care, traceability and tracking."
       ],
       [
         "Import and export",
         "Document, customs and operational support for international trade."
       ],
       [
+        "Specialized warehousing",
+        "Stock management and preparation under controlled operational criteria."
+      ],
+      [
         "Door to door",
         "Complete coordination from origin to final delivery."
       ]
     ],
-    "useCasesEyebrow": "When specialized logistics is needed",
-    "useCasesTitle": "When the product must arrive properly, on time and under control.",
+    "useCasesEyebrow": "When chemical logistics is needed",
+    "useCasesTitle": "When cargo requires control before, during and after movement.",
     "useCases": [
       [
-        "Perishable food",
-        "Operations requiring precise timing and condition control."
+        "Raw materials",
+        "Movements for production, industry and transformation."
       ],
       [
-        "Beverages",
-        "Distribution of bottled, packaged or high-volume products."
+        "Chemical products",
+        "Operations with specific document and operational requirements."
       ],
       [
-        "Retail and supermarkets",
-        "Scheduled deliveries to chains and points of sale."
+        "Sensitive cargo",
+        "Goods requiring care, control and traceability."
       ],
       [
-        "Importers",
-        "Integrated management for international food products."
+        "Chemical importers",
+        "International management with documentation and customs coordination."
       ],
       [
-        "Commercial campaigns",
-        "Demand peaks and high-rotation deliveries."
+        "Industry and manufacturing",
+        "Supply for plants, processes and productive projects."
       ],
       [
-        "Sensitive products",
-        "Goods requiring care, traceability or thermal control."
+        "Specialized distribution",
+        "Deliveries to industrial clients, laboratories or technical centers."
       ]
     ],
     "processEyebrow": "Our operational process",
-    "processTitle": "A clear food logistics operation from planning to delivery.",
+    "processTitle": "A clear chemical operation from initial validation.",
     "process": [
       [
         "Product analysis",
-        "We review goods type, sensitivity, volume and requirements."
+        "We review cargo type, requirements, documentation and sensitivity."
       ],
       [
         "Logistics design",
-        "We define transport, warehousing, distribution and timing."
+        "We define modality, route, controls and operational timing."
       ],
       [
-        "Documentation",
-        "We coordinate commercial, sanitary or customs requirements when applicable."
+        "Document validation",
+        "We coordinate commercial, technical, customs and operational documents."
       ],
       [
-        "Operational setup",
-        "We manage pickup, loading, conditioning and dispatch."
+        "Preparation",
+        "We manage pickup, conditioning, loading and dispatch."
       ],
       [
         "Tracking",
@@ -312,158 +312,158 @@ const copy = {
         "We coordinate reception, unloading and operational closure."
       ]
     ],
-    "bandTitle": "Food logistics designed to protect product and continuity.",
-    "bandText": "Our team coordinates operations for companies that need punctuality, traceability and professional response in food, beverages and consumer products.",
+    "bandTitle": "Chemical logistics designed for operations that cannot be improvised.",
+    "bandText": "Our team coordinates operations for chemical and industrial companies that need compliance, traceability and professional response at every logistics stage.",
     "stats": [
+      [
+        "Compliance",
+        "Documentation and control"
+      ],
+      [
+        "Sensitive cargo",
+        "Specialized handling"
+      ],
       [
         "Traceability",
         "Operational tracking"
-      ],
-      [
-        "Distribution",
-        "Coordinated deliveries"
-      ],
-      [
-        "Cold chain",
-        "When required"
       ],
       [
         "Expert support",
         "Dedicated specialists"
       ]
     ],
-    "finalTitle": "Let’s coordinate your next food and beverage operation.",
-    "finalText": "Tell us product type, volume, origin, destination and requirements. Our team will analyze the best logistics solution.",
-    "finalPrimary": "Request logistics proposal",
+    "finalTitle": "Let’s coordinate your next chemical operation.",
+    "finalText": "Tell us product type, origin, destination, available documentation and requirements. Our team will analyze the best logistics solution.",
+    "finalPrimary": "Request chemical proposal",
     "finalSecondary": "Talk to a specialist"
   },
   "zh": {
-    "heroEyebrow": "食品与饮料行业",
-    "heroTitle": "为需要时间、控制和信任的产品提供物流。",
-    "heroText": "我们为食品、饮料、易腐品和消费品设计物流运营，整合运输、仓储、配送、可追溯性和运营控制。",
+    "heroEyebrow": "化工行业",
+    "heroTitle": "为需要控制、安全和合规的货物提供化工物流。",
+    "heroText": "我们为化工产品、原材料、敏感货物和受监管货物协调物流运营，整合运输、文件、可追溯性和运营控制。",
     "primaryCta": "规划物流操作",
     "secondaryCta": "联系我们的团队",
-    "activeLabel": "进行中的食品操作",
-    "activeRoute": "供应商 → 配送",
-    "activeCargo": "食品与饮料",
+    "activeLabel": "进行中的化工操作",
+    "activeRoute": "始发地 → 工厂",
+    "activeCargo": "化工产品",
     "activeStatusLabel": "状态：",
     "activeStatus": "协调中",
-    "activeEtaLabel": "优先级：",
-    "activeEta": "安全交付",
+    "activeEtaLabel": "控制：",
+    "activeEta": "高安全",
     "trust": [
       [
-        "可追溯性",
-        "运营控制"
-      ],
-      [
-        "配送",
-        "协调交付"
-      ],
-      [
-        "冷链",
-        "按需提供"
-      ],
-      [
         "合规",
-        "文件与控制"
+        "文件受控"
+      ],
+      [
+        "敏感货物",
+        "专业处理"
+      ],
+      [
+        "安全",
+        "运营协议"
+      ],
+      [
+        "可追溯性",
+        "从始发地到目的地跟踪"
       ]
     ],
-    "overviewEyebrow": "行业物流",
-    "overviewTitle": "为不能失败的食品供应链提供物流解决方案。",
-    "overviewText": "食品与饮料行业需要速度、产品保护、文件合规和连续性。我们协调运营以保护货物、降低风险并保持供应链流动。",
-    "overviewButton": "了解食品与饮料物流",
+    "overviewEyebrow": "专业化工物流",
+    "overviewTitle": "为需要精准和责任的产品提供运营控制。",
+    "overviewText": "化工行业需要规划、文件合规、适当处理和每个阶段的可视化。我们设计运营以降低风险、保持连续性并保护货物完整性。",
+    "overviewButton": "了解化工物流",
     "pillars": [
       [
-        "产品控制",
-        "根据货物类型、敏感性、周转和交付要求进行协调。"
+        "文件控制",
+        "根据产品类型审核商业、技术、海关和运营文件。"
       ],
       [
-        "高效配送",
-        "为客户、零售或销售点规划出库、路线和交付。"
+        "专业处理",
+        "为敏感或受监管货物协调运输和处理。"
       ],
       [
-        "可追溯性",
-        "通过运营跟踪保持货物可视化。"
+        "运营安全",
+        "以预防、可追溯性和降低风险为重点进行规划。"
       ],
       [
-        "冷链",
-        "当产品需要时提供温控解决方案。"
+        "综合协调",
+        "与运输、海关、仓储和最终交付整合。"
       ]
     ],
-    "servicesEyebrow": "食品与饮料解决方案",
-    "servicesTitle": "为消费品设计的物流运营。",
+    "servicesEyebrow": "化工行业解决方案",
+    "servicesTitle": "为敏感和受监管货物设计的运营。",
     "services": [
       [
-        "国内和国际运输",
-        "根据紧急程度和体量协调陆运、海运或空运。"
+        "国际运输",
+        "根据产品、紧急程度和要求协调空运、海运或陆运。"
       ],
       [
-        "商业配送",
-        "配送到客户、连锁、销售点或配送中心。"
+        "受监管货物",
+        "为需要文件和特定控制的货物提供物流管理。"
       ],
       [
-        "冷藏货物",
-        "为易腐或温度敏感产品提供解决方案。"
-      ],
-      [
-        "仓储与准备",
-        "库存管理、拣货、包装和计划出库。"
+        "敏感产品",
+        "为需要保护、可追溯和跟踪的货物提供方案。"
       ],
       [
         "进出口",
         "为国际贸易提供文件、海关和运营支持。"
       ],
       [
+        "专业仓储",
+        "在受控运营标准下进行库存管理和准备。"
+      ],
+      [
         "门到门",
         "从始发地到最终交付的完整协调。"
       ]
     ],
-    "useCasesEyebrow": "何时需要专业物流",
-    "useCasesTitle": "当产品必须完好、准时且受控到达时。",
+    "useCasesEyebrow": "何时需要化工物流",
+    "useCasesTitle": "当货物在移动前、中、后都需要控制时。",
     "useCases": [
       [
-        "易腐食品",
-        "需要精准时间和条件控制的操作。"
+        "原材料",
+        "用于生产、工业和加工的运输。"
       ],
       [
-        "饮料",
-        "瓶装、包装或大批量产品配送。"
+        "化工产品",
+        "具有特定文件和运营要求的操作。"
       ],
       [
-        "零售与超市",
-        "向连锁和销售点进行计划交付。"
+        "敏感货物",
+        "需要保护、控制和可追溯的货物。"
       ],
       [
-        "进口商",
-        "为国际食品提供综合管理。"
+        "化工进口商",
+        "带有文件和海关协调的国际管理。"
       ],
       [
-        "商业活动",
-        "需求高峰和高周转交付。"
+        "工业与制造",
+        "为工厂、流程和生产项目供应。"
       ],
       [
-        "敏感产品",
-        "需要保护、可追溯或温控的货物。"
+        "专业配送",
+        "交付至工业客户、实验室或技术中心。"
       ]
     ],
     "processEyebrow": "我们的运营流程",
-    "processTitle": "从规划到交付，食品物流清晰可控。",
+    "processTitle": "从初始验证开始，化工操作清晰可控。",
     "process": [
       [
         "产品分析",
-        "审核货物类型、敏感性、体量和要求。"
+        "审核货物类型、要求、文件和敏感性。"
       ],
       [
         "物流设计",
-        "确定运输、仓储、配送和时间安排。"
+        "确定方式、路线、控制和运营时间。"
       ],
       [
-        "文件管理",
-        "按需协调商业、卫生或海关要求。"
+        "文件验证",
+        "协调商业、技术、海关和运营文件。"
       ],
       [
-        "操作准备",
-        "管理提货、装载、处理和出库。"
+        "准备",
+        "管理提货、处理、装载和出库。"
       ],
       [
         "跟踪",
@@ -471,32 +471,32 @@ const copy = {
       ],
       [
         "最终交付",
-        "协调收货、卸货和运营关闭。"
+        "协调接收、卸货和运营关闭。"
       ]
     ],
-    "bandTitle": "为保护产品和连续性而设计的食品物流。",
-    "bandText": "我们的团队为食品、饮料和消费品企业协调需要准时、可追溯和专业响应的运营。",
+    "bandTitle": "为不能即兴处理的操作设计化工物流。",
+    "bandText": "我们的团队为需要合规、可追溯性和专业响应的化工与工业企业协调每个物流阶段。",
     "stats": [
+      [
+        "合规",
+        "文件与控制"
+      ],
+      [
+        "敏感货物",
+        "专业处理"
+      ],
       [
         "可追溯性",
         "运营跟踪"
-      ],
-      [
-        "配送",
-        "协调交付"
-      ],
-      [
-        "冷链",
-        "按需提供"
       ],
       [
         "专家支持",
         "专属专家"
       ]
     ],
-    "finalTitle": "让我们协调您的下一次食品与饮料操作。",
-    "finalText": "告诉我们产品类型、数量、始发地、目的地和要求。我们的团队将分析最佳物流方案。",
-    "finalPrimary": "申请物流方案",
+    "finalTitle": "让我们协调您的下一次化工操作。",
+    "finalText": "告诉我们产品类型、始发地、目的地、现有文件和要求。我们的团队将分析最佳物流方案。",
+    "finalPrimary": "申请化工方案",
     "finalSecondary": "联系专家"
   }
 } satisfies Record<Locale, any>;
@@ -740,7 +740,7 @@ function Icon({ name }: { name: IconName }) {
   }
 }
 
-export default function AlimentacionBebidasPage() {
+export default function QuimicoPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
@@ -788,9 +788,9 @@ export default function AlimentacionBebidasPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={`${styles.hero} acrossPageHero`} data-sector-hero="true" data-standard-service-hero="true" data-sector-name="alimentacion-bebidas">
+        <section className={`${styles.hero} acrossPageHero`} data-sector-hero="true" data-standard-service-hero="true" data-sector-name="quimico">
           <Image
-            src="/images/sectores/alimentosybebidas.png"
+            src="/images/sectores/quimicohero.png"
             alt={t.heroTitle}
             fill
             priority
@@ -800,7 +800,7 @@ export default function AlimentacionBebidasPage() {
           />
 
           <Image
-            src="/images/sectores/alimentosybebidas.png"
+            src="/images/sectores/quimico2.png"
             alt={t.heroTitle}
             fill
             priority
@@ -843,7 +843,7 @@ export default function AlimentacionBebidasPage() {
 
         <section className={styles.trustBar}>
           {t.trust.map(([title, text]: string[], index: number) => {
-            const icons: IconName[] = ["timer", "shield", "document", "tracking"];
+            const icons: IconName[] = ["shield", "package", "document", "tracking", "globe", "truck"];
 
             return (
               <div key={title}>
@@ -861,7 +861,7 @@ export default function AlimentacionBebidasPage() {
 
         <Certifications />
 
-        <section className={`${styles.overview} ${styles.overviewMobileBg}`} data-after-cert-overview="true" style={{ "--sector-overview-bg": "url('/images/sectores/alimentosybebidas.png')" } as CSSProperties}>
+        <section className={`${styles.overview} ${styles.overviewMobileBg}`} style={{ "--sector-overview-bg": "url('/images/sectores/quimico2.png')" } as CSSProperties}>
           <div className={styles.overviewCopy}>
             <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
             <h2>{t.overviewTitle}</h2>
@@ -871,7 +871,7 @@ export default function AlimentacionBebidasPage() {
 
           <div className={styles.pillars}>
             {t.pillars.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["airport", "document", "tracking", "truck"];
+              const icons: IconName[] = ["search", "package", "document", "route", "tracking", "truck"];
 
               return (
                 <article key={title}>
@@ -894,7 +894,7 @@ export default function AlimentacionBebidasPage() {
 
           <div className={styles.serviceGrid}>
             {t.services.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["package", "shield", "truck", "tracking", "door", "document"];
+              const icons: IconName[] = ["plane", "box", "diamond", "charter", "globe", "door"];
 
               return (
                 <article key={title}>
@@ -940,7 +940,7 @@ export default function AlimentacionBebidasPage() {
 
           <div className={styles.processGrid}>
             {t.process.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["search", "package", "document", "route", "tracking", "truck"];
+              const icons: IconName[] = ["search", "route", "document", "plane", "tracking", "truck"];
 
               return (
                 <article key={title}>
@@ -959,7 +959,7 @@ export default function AlimentacionBebidasPage() {
         <section className={styles.darkBand} data-mobile-hide-after-cert="true" data-sector-dark-band="true">
           <div className={styles.darkBandImage}>
             <Image
-              src="/images/sectores/alimentosybebidas2.png"
+              src="/images/sectores/quimico2.png"
               alt={t.bandTitle}
               fill
               sizes="(max-width: 900px) 100vw, 42vw"
@@ -999,7 +999,7 @@ export default function AlimentacionBebidasPage() {
 
           <div className={styles.finalImage}>
             <Image
-              src="/images/sectores/alimentosybebidas.png"
+              src="/images/sectores/quimicohero.png"
               alt={t.finalTitle}
               fill
               sizes="(max-width: 900px) 100vw, 44vw"

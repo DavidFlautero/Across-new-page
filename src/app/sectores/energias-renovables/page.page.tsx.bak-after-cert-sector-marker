@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -8,495 +8,495 @@ import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import RelatedServices from "@/app/servicios/_shared/RelatedServices";
-import styles from "./AlimentacionBebidas.module.css";
+import styles from "./EnergiasRenovables.module.css";
 
 type Locale = "es" | "en" | "zh";
 
 const copy = {
   "es": {
-    "heroEyebrow": "Sector alimentación y bebidas",
-    "heroTitle": "Logística para productos que exigen tiempo, control y confianza.",
-    "heroText": "Diseñamos operaciones logísticas para alimentos, bebidas, perecederos y productos de consumo, integrando transporte, almacenaje, distribución, trazabilidad y control operativo.",
+    "heroEyebrow": "Sector energías renovables",
+    "heroTitle": "Logística para proyectos energéticos que no pueden detenerse.",
+    "heroText": "Coordinamos transporte, manipulación y operaciones especiales para componentes de energía renovable, cargas industriales y proyectos de alta complejidad.",
     "primaryCta": "Planificar mi operación",
     "secondaryCta": "Hablar con nuestro equipo",
-    "activeLabel": "Operación alimentaria activa",
-    "activeRoute": "Proveedor → Distribución",
-    "activeCargo": "Alimentos y bebidas",
+    "activeLabel": "Proyecto renovable activo",
+    "activeRoute": "Puerto → Obra",
+    "activeCargo": "Componentes industriales",
     "activeStatusLabel": "Estado:",
-    "activeStatus": "En coordinación",
+    "activeStatus": "En planificación",
     "activeEtaLabel": "Prioridad:",
-    "activeEta": "Entrega segura",
+    "activeEta": "Alta complejidad",
     "trust": [
       [
-        "Trazabilidad",
+        "Carga sobredimensionada",
+        "Componentes especiales"
+      ],
+      [
+        "Coordinación multimodal",
+        "Puerto, ruta y obra"
+      ],
+      [
+        "Permisos",
+        "Gestión documental"
+      ],
+      [
+        "Entrega en obra",
         "Control operativo"
-      ],
-      [
-        "Distribución",
-        "Entregas coordinadas"
-      ],
-      [
-        "Cadena de frío",
-        "Cuando aplica"
-      ],
-      [
-        "Cumplimiento",
-        "Documentación y control"
       ]
     ],
-    "overviewEyebrow": "Logística sectorial",
-    "overviewTitle": "Soluciones logísticas para cadenas alimentarias que no pueden fallar.",
-    "overviewText": "El sector de alimentación y bebidas exige velocidad, cuidado del producto, cumplimiento documental y continuidad. Coordinamos operaciones diseñadas para proteger mercancía, reducir riesgos y mantener la cadena en movimiento.",
-    "overviewButton": "Conocer más sobre alimentación y bebidas",
+    "overviewEyebrow": "Operación industrial especializada",
+    "overviewTitle": "Control operativo para proyectos energéticos que no pueden detenerse.",
+    "overviewText": "Gestionamos componentes sobredimensionados, equipos sensibles y cargas críticas para parques solares, eólicos e infraestructuras energéticas, coordinando rutas, permisos, manipulación y entrega final.",
+    "overviewButton": "Conocer más sobre renovables",
     "pillars": [
       [
-        "Control de producto",
-        "Coordinación según tipo de mercancía, sensibilidad, rotación y requisitos de entrega."
+        "Planificación técnica",
+        "Análisis de dimensiones, peso, ruta, accesos y restricciones operativas."
       ],
       [
-        "Distribución eficiente",
-        "Planificación de salidas, rutas y entregas para clientes, retail o puntos de venta."
+        "Gestión de permisos",
+        "Coordinación documental para rutas, maniobras y cargas especiales."
       ],
       [
-        "Trazabilidad",
-        "Seguimiento operativo para mantener visibilidad de la mercancía."
+        "Transporte multimodal",
+        "Integración marítima, terrestre o aérea según el proyecto."
       ],
       [
-        "Cadena de frío",
-        "Soluciones con control térmico cuando el producto lo requiere."
+        "Entrega en obra",
+        "Coordinación final con ventanas, accesos y equipos de descarga."
       ]
     ],
-    "servicesEyebrow": "Soluciones para alimentación y bebidas",
-    "servicesTitle": "Operaciones diseñadas para productos de consumo.",
+    "servicesEyebrow": "Servicios logísticos para energías renovables",
+    "servicesTitle": "Soluciones diseñadas para operaciones energéticas.",
     "services": [
       [
-        "Transporte nacional e internacional",
-        "Coordinación de movimientos terrestres, marítimos o aéreos según urgencia y volumen."
+        "Componentes eólicos",
+        "Transporte de palas, torres, nacelles y equipos asociados."
       ],
       [
-        "Distribución comercial",
-        "Entregas a clientes, cadenas, puntos de venta o centros de distribución."
+        "Proyectos solares",
+        "Coordinación para paneles, estructuras, inversores y componentes técnicos."
       ],
       [
-        "Carga refrigerada",
-        "Soluciones para productos perecederos o sensibles a temperatura."
+        "Carga sobredimensionada",
+        "Operaciones para mercancías fuera de medidas estándar."
       ],
       [
-        "Almacenaje y preparación",
-        "Gestión de stock, picking, packing y salidas programadas."
+        "Coordinación multimodal",
+        "Integración de puerto, carretera, almacén y entrega final."
       ],
       [
-        "Importación y exportación",
-        "Soporte documental, aduanero y operativo para comercio internacional."
+        "Gestión documental",
+        "Permisos, documentación y requisitos operativos para cargas especiales."
       ],
       [
-        "Door to door",
-        "Coordinación completa desde origen hasta entrega final."
+        "Entrega en obra",
+        "Coordinación con accesos, ventanas de entrega y equipos de manipulación."
       ]
     ],
-    "useCasesEyebrow": "Cuándo necesita logística especializada",
-    "useCasesTitle": "Cuando el producto debe llegar bien, a tiempo y bajo control.",
+    "useCasesEyebrow": "Cuándo necesita logística renovable",
+    "useCasesTitle": "Cuando el proyecto exige precisión antes de mover la carga.",
     "useCases": [
       [
-        "Alimentos perecederos",
-        "Operaciones que requieren tiempos precisos y control de condiciones."
+        "Parques eólicos",
+        "Componentes de gran dimensión y operaciones de alta complejidad."
       ],
       [
-        "Bebidas",
-        "Distribución de productos embotellados, envasados o de alto volumen."
+        "Proyectos solares",
+        "Cargas técnicas con planificación de entregas y control documental."
       ],
       [
-        "Retail y supermercados",
-        "Entregas programadas hacia cadenas y puntos de venta."
+        "Infraestructura energética",
+        "Equipos industriales para obras y proyectos críticos."
       ],
       [
-        "Importadores",
-        "Gestión integral para productos alimentarios internacionales."
+        "Importación de componentes",
+        "Coordinación internacional desde origen hasta obra."
       ],
       [
-        "Campañas comerciales",
-        "Picos de demanda y entregas de alta rotación."
+        "Carga industrial",
+        "Equipos que requieren manipulación y rutas especiales."
       ],
       [
-        "Productos sensibles",
-        "Mercancía que requiere cuidado, trazabilidad o control térmico."
+        "Proyectos llave en mano",
+        "Planificación integral para operaciones energéticas."
       ]
     ],
     "processEyebrow": "Nuestro proceso operativo",
-    "processTitle": "Una operación alimentaria clara desde la planificación hasta la entrega.",
+    "processTitle": "Una operación renovable diseñada antes de mover la carga.",
     "process": [
       [
-        "Análisis del producto",
-        "Revisamos tipo de mercancía, sensibilidad, volumen y requisitos."
+        "Análisis técnico",
+        "Revisamos dimensiones, peso, tipo de componente y destino final."
       ],
       [
-        "Diseño logístico",
-        "Definimos transporte, almacenamiento, distribución y tiempos."
+        "Estudio de ruta",
+        "Evaluamos accesos, restricciones, permisos y viabilidad."
       ],
       [
-        "Documentación",
-        "Coordinamos requisitos comerciales, sanitarios o aduaneros cuando aplica."
+        "Plan documental",
+        "Coordinamos autorizaciones, seguros y requisitos operativos."
       ],
       [
-        "Preparación operativa",
-        "Gestionamos retiro, carga, acondicionamiento y salida."
+        "Transporte y manipulación",
+        "Definimos equipos, operadores y modalidad logística."
       ],
       [
         "Seguimiento",
-        "Monitoreamos avance, hitos y trazabilidad."
+        "Monitoreamos hitos críticos del proyecto."
       ],
       [
-        "Entrega final",
-        "Coordinamos recepción, descarga y cierre operativo."
+        "Entrega en obra",
+        "Coordinamos descarga, recepción y cierre operativo."
       ]
     ],
-    "bandTitle": "Logística alimentaria diseñada para proteger producto y continuidad.",
-    "bandText": "Nuestro equipo coordina operaciones para empresas que necesitan puntualidad, trazabilidad y respuesta profesional en alimentos, bebidas y productos de consumo.",
+    "bandTitle": "Logística renovable diseñada para proyectos de alta exigencia.",
+    "bandText": "Nuestro equipo coordina operaciones para empresas energéticas que necesitan planificación técnica, control documental y ejecución precisa en cada etapa.",
     "stats": [
       [
-        "Trazabilidad",
-        "Seguimiento operativo"
+        "Proyectos energéticos",
+        "Operaciones de alta complejidad"
       ],
       [
-        "Distribución",
-        "Entregas coordinadas"
+        "Carga especial",
+        "Sobredimensionada e industrial"
       ],
       [
-        "Cadena de frío",
-        "Cuando aplica"
+        "Multimodal",
+        "Puerto, ruta y obra"
       ],
       [
         "Soporte experto",
         "Especialistas dedicados"
       ]
     ],
-    "finalTitle": "Coordinemos su próxima operación de alimentación y bebidas.",
-    "finalText": "Cuéntenos tipo de producto, volumen, origen, destino y requisitos. Nuestro equipo analizará la mejor solución logística.",
-    "finalPrimary": "Solicitar propuesta logística",
+    "finalTitle": "Planifiquemos su próxima operación renovable.",
+    "finalText": "Analizamos tipo de componente, dimensiones, origen, destino y requerimientos de obra para construir una operación segura y viable.",
+    "finalPrimary": "Solicitar propuesta",
     "finalSecondary": "Hablar con un especialista"
   },
   "en": {
-    "heroEyebrow": "Food and beverage sector",
-    "heroTitle": "Logistics for products that demand timing, control and trust.",
-    "heroText": "We design logistics operations for food, beverages, perishables and consumer products, integrating transport, warehousing, distribution, traceability and operational control.",
+    "heroEyebrow": "Renewable energy sector",
+    "heroTitle": "Logistics for energy projects that cannot stop.",
+    "heroText": "We coordinate transport, handling and special operations for renewable energy components, industrial cargo and high-complexity projects.",
     "primaryCta": "Plan my operation",
     "secondaryCta": "Talk to our team",
-    "activeLabel": "Active food operation",
-    "activeRoute": "Supplier → Distribution",
-    "activeCargo": "Food and beverages",
+    "activeLabel": "Active renewable project",
+    "activeRoute": "Port → Site",
+    "activeCargo": "Industrial components",
     "activeStatusLabel": "Status:",
-    "activeStatus": "In coordination",
+    "activeStatus": "In planning",
     "activeEtaLabel": "Priority:",
-    "activeEta": "Safe delivery",
+    "activeEta": "High complexity",
     "trust": [
       [
-        "Traceability",
+        "Oversized cargo",
+        "Special components"
+      ],
+      [
+        "Multimodal coordination",
+        "Port, road and site"
+      ],
+      [
+        "Permits",
+        "Document management"
+      ],
+      [
+        "Site delivery",
         "Operational control"
-      ],
-      [
-        "Distribution",
-        "Coordinated deliveries"
-      ],
-      [
-        "Cold chain",
-        "When required"
-      ],
-      [
-        "Compliance",
-        "Documentation and control"
       ]
     ],
-    "overviewEyebrow": "Sector logistics",
-    "overviewTitle": "Logistics solutions for food supply chains that cannot fail.",
-    "overviewText": "The food and beverage sector requires speed, product care, document compliance and continuity. We coordinate operations designed to protect goods, reduce risks and keep the chain moving.",
-    "overviewButton": "Learn more about food and beverages",
+    "overviewEyebrow": "Specialized industrial operation",
+    "overviewTitle": "Operational control for energy projects that cannot stop.",
+    "overviewText": "We manage oversized components, sensitive equipment and critical cargo for solar farms, wind projects and energy infrastructure, coordinating routes, permits, handling and final delivery.",
+    "overviewButton": "Learn more about renewables",
     "pillars": [
       [
-        "Product control",
-        "Coordination according to goods type, sensitivity, rotation and delivery requirements."
+        "Technical planning",
+        "Analysis of dimensions, weight, route, access and operational restrictions."
       ],
       [
-        "Efficient distribution",
-        "Planning of dispatches, routes and deliveries for clients, retail or points of sale."
+        "Permit management",
+        "Document coordination for routes, maneuvers and special cargo."
       ],
       [
-        "Traceability",
-        "Operational tracking to maintain cargo visibility."
+        "Multimodal transport",
+        "Ocean, road or air integration according to the project."
       ],
       [
-        "Cold chain",
-        "Temperature-controlled solutions when the product requires it."
+        "Site delivery",
+        "Final coordination with windows, access and unloading equipment."
       ]
     ],
-    "servicesEyebrow": "Food and beverage solutions",
-    "servicesTitle": "Operations designed for consumer products.",
+    "servicesEyebrow": "Logistics services for renewable energy",
+    "servicesTitle": "Solutions designed for energy operations.",
     "services": [
       [
-        "Domestic and international transport",
-        "Road, ocean or air movements according to urgency and volume."
+        "Wind components",
+        "Transport of blades, towers, nacelles and associated equipment."
       ],
       [
-        "Commercial distribution",
-        "Deliveries to clients, chains, points of sale or distribution centers."
+        "Solar projects",
+        "Coordination for panels, structures, inverters and technical components."
       ],
       [
-        "Refrigerated cargo",
-        "Solutions for perishable or temperature-sensitive products."
+        "Oversized cargo",
+        "Operations for goods outside standard dimensions."
       ],
       [
-        "Warehousing and preparation",
-        "Stock management, picking, packing and scheduled dispatches."
+        "Multimodal coordination",
+        "Integration of port, road, warehousing and final delivery."
       ],
       [
-        "Import and export",
-        "Document, customs and operational support for international trade."
+        "Document management",
+        "Permits, documentation and operational requirements for special cargo."
       ],
       [
-        "Door to door",
-        "Complete coordination from origin to final delivery."
+        "Site delivery",
+        "Coordination with access, delivery windows and handling equipment."
       ]
     ],
-    "useCasesEyebrow": "When specialized logistics is needed",
-    "useCasesTitle": "When the product must arrive properly, on time and under control.",
+    "useCasesEyebrow": "When renewable logistics is needed",
+    "useCasesTitle": "When the project requires precision before moving cargo.",
     "useCases": [
       [
-        "Perishable food",
-        "Operations requiring precise timing and condition control."
+        "Wind farms",
+        "Large components and high-complexity operations."
       ],
       [
-        "Beverages",
-        "Distribution of bottled, packaged or high-volume products."
+        "Solar projects",
+        "Technical cargo with delivery planning and document control."
       ],
       [
-        "Retail and supermarkets",
-        "Scheduled deliveries to chains and points of sale."
+        "Energy infrastructure",
+        "Industrial equipment for sites and critical projects."
       ],
       [
-        "Importers",
-        "Integrated management for international food products."
+        "Component imports",
+        "International coordination from origin to site."
       ],
       [
-        "Commercial campaigns",
-        "Demand peaks and high-rotation deliveries."
+        "Industrial cargo",
+        "Equipment requiring handling and special routes."
       ],
       [
-        "Sensitive products",
-        "Goods requiring care, traceability or thermal control."
+        "Turnkey projects",
+        "End-to-end planning for energy operations."
       ]
     ],
     "processEyebrow": "Our operational process",
-    "processTitle": "A clear food logistics operation from planning to delivery.",
+    "processTitle": "A renewable operation designed before moving cargo.",
     "process": [
       [
-        "Product analysis",
-        "We review goods type, sensitivity, volume and requirements."
+        "Technical analysis",
+        "We review dimensions, weight, component type and final destination."
       ],
       [
-        "Logistics design",
-        "We define transport, warehousing, distribution and timing."
+        "Route study",
+        "We assess access, restrictions, permits and viability."
       ],
       [
-        "Documentation",
-        "We coordinate commercial, sanitary or customs requirements when applicable."
+        "Document plan",
+        "We coordinate authorizations, insurance and operational requirements."
       ],
       [
-        "Operational setup",
-        "We manage pickup, loading, conditioning and dispatch."
+        "Transport and handling",
+        "We define equipment, operators and logistics modality."
       ],
       [
         "Tracking",
-        "We monitor progress, milestones and traceability."
+        "We monitor critical project milestones."
       ],
       [
-        "Final delivery",
-        "We coordinate reception, unloading and operational closure."
+        "Site delivery",
+        "We coordinate unloading, reception and operational closure."
       ]
     ],
-    "bandTitle": "Food logistics designed to protect product and continuity.",
-    "bandText": "Our team coordinates operations for companies that need punctuality, traceability and professional response in food, beverages and consumer products.",
+    "bandTitle": "Renewable logistics designed for high-demand projects.",
+    "bandText": "Our team coordinates operations for energy companies that require technical planning, document control and precise execution at every stage.",
     "stats": [
       [
-        "Traceability",
-        "Operational tracking"
+        "Energy projects",
+        "High-complexity operations"
       ],
       [
-        "Distribution",
-        "Coordinated deliveries"
+        "Special cargo",
+        "Oversized and industrial"
       ],
       [
-        "Cold chain",
-        "When required"
+        "Multimodal",
+        "Port, road and site"
       ],
       [
         "Expert support",
         "Dedicated specialists"
       ]
     ],
-    "finalTitle": "Let’s coordinate your next food and beverage operation.",
-    "finalText": "Tell us product type, volume, origin, destination and requirements. Our team will analyze the best logistics solution.",
-    "finalPrimary": "Request logistics proposal",
+    "finalTitle": "Let’s plan your next renewable operation.",
+    "finalText": "We analyze component type, dimensions, origin, destination and site requirements to build a safe and viable operation.",
+    "finalPrimary": "Request proposal",
     "finalSecondary": "Talk to a specialist"
   },
   "zh": {
-    "heroEyebrow": "食品与饮料行业",
-    "heroTitle": "为需要时间、控制和信任的产品提供物流。",
-    "heroText": "我们为食品、饮料、易腐品和消费品设计物流运营，整合运输、仓储、配送、可追溯性和运营控制。",
+    "heroEyebrow": "可再生能源行业",
+    "heroTitle": "为不能停滞的能源项目提供物流。",
+    "heroText": "我们为可再生能源组件、工业货物和高复杂度项目协调运输、装卸和特殊操作。",
     "primaryCta": "规划物流操作",
     "secondaryCta": "联系我们的团队",
-    "activeLabel": "进行中的食品操作",
-    "activeRoute": "供应商 → 配送",
-    "activeCargo": "食品与饮料",
+    "activeLabel": "进行中的可再生能源项目",
+    "activeRoute": "港口 → 工地",
+    "activeCargo": "工业组件",
     "activeStatusLabel": "状态：",
-    "activeStatus": "协调中",
+    "activeStatus": "规划中",
     "activeEtaLabel": "优先级：",
-    "activeEta": "安全交付",
+    "activeEta": "高复杂度",
     "trust": [
       [
-        "可追溯性",
+        "超限货物",
+        "特殊组件"
+      ],
+      [
+        "多式联运协调",
+        "港口、道路与工地"
+      ],
+      [
+        "许可",
+        "文件管理"
+      ],
+      [
+        "工地交付",
         "运营控制"
-      ],
-      [
-        "配送",
-        "协调交付"
-      ],
-      [
-        "冷链",
-        "按需提供"
-      ],
-      [
-        "合规",
-        "文件与控制"
       ]
     ],
-    "overviewEyebrow": "行业物流",
-    "overviewTitle": "为不能失败的食品供应链提供物流解决方案。",
-    "overviewText": "食品与饮料行业需要速度、产品保护、文件合规和连续性。我们协调运营以保护货物、降低风险并保持供应链流动。",
-    "overviewButton": "了解食品与饮料物流",
+    "overviewEyebrow": "专业工业运营",
+    "overviewTitle": "为不能停止的能源项目提供运营控制。",
+    "overviewText": "我们为太阳能、风能和能源基础设施管理超限组件、敏感设备和关键货物，协调路线、许可、装卸和最终交付。",
+    "overviewButton": "了解可再生能源物流",
     "pillars": [
       [
-        "产品控制",
-        "根据货物类型、敏感性、周转和交付要求进行协调。"
+        "技术规划",
+        "分析尺寸、重量、路线、通行和运营限制。"
       ],
       [
-        "高效配送",
-        "为客户、零售或销售点规划出库、路线和交付。"
+        "许可管理",
+        "为路线、操作和特殊货物协调文件。"
       ],
       [
-        "可追溯性",
-        "通过运营跟踪保持货物可视化。"
+        "多式联运",
+        "根据项目整合海运、陆运或空运。"
       ],
       [
-        "冷链",
-        "当产品需要时提供温控解决方案。"
+        "工地交付",
+        "协调时间窗口、通行和卸货设备。"
       ]
     ],
-    "servicesEyebrow": "食品与饮料解决方案",
-    "servicesTitle": "为消费品设计的物流运营。",
+    "servicesEyebrow": "可再生能源物流服务",
+    "servicesTitle": "为能源运营设计的解决方案。",
     "services": [
       [
-        "国内和国际运输",
-        "根据紧急程度和体量协调陆运、海运或空运。"
+        "风电组件",
+        "运输叶片、塔筒、机舱和相关设备。"
       ],
       [
-        "商业配送",
-        "配送到客户、连锁、销售点或配送中心。"
+        "太阳能项目",
+        "协调面板、结构、逆变器和技术组件。"
       ],
       [
-        "冷藏货物",
-        "为易腐或温度敏感产品提供解决方案。"
+        "超限货物",
+        "为超出标准尺寸的货物提供操作。"
       ],
       [
-        "仓储与准备",
-        "库存管理、拣货、包装和计划出库。"
-      ],
-      [
-        "进出口",
-        "为国际贸易提供文件、海关和运营支持。"
-      ],
-      [
-        "门到门",
-        "从始发地到最终交付的完整协调。"
-      ]
-    ],
-    "useCasesEyebrow": "何时需要专业物流",
-    "useCasesTitle": "当产品必须完好、准时且受控到达时。",
-    "useCases": [
-      [
-        "易腐食品",
-        "需要精准时间和条件控制的操作。"
-      ],
-      [
-        "饮料",
-        "瓶装、包装或大批量产品配送。"
-      ],
-      [
-        "零售与超市",
-        "向连锁和销售点进行计划交付。"
-      ],
-      [
-        "进口商",
-        "为国际食品提供综合管理。"
-      ],
-      [
-        "商业活动",
-        "需求高峰和高周转交付。"
-      ],
-      [
-        "敏感产品",
-        "需要保护、可追溯或温控的货物。"
-      ]
-    ],
-    "processEyebrow": "我们的运营流程",
-    "processTitle": "从规划到交付，食品物流清晰可控。",
-    "process": [
-      [
-        "产品分析",
-        "审核货物类型、敏感性、体量和要求。"
-      ],
-      [
-        "物流设计",
-        "确定运输、仓储、配送和时间安排。"
+        "多式联运协调",
+        "整合港口、道路、仓储和最终交付。"
       ],
       [
         "文件管理",
-        "按需协调商业、卫生或海关要求。"
+        "特殊货物的许可、文件和运营要求。"
       ],
       [
-        "操作准备",
-        "管理提货、装载、处理和出库。"
+        "工地交付",
+        "协调通行、交付窗口和装卸设备。"
+      ]
+    ],
+    "useCasesEyebrow": "何时需要可再生能源物流",
+    "useCasesTitle": "当项目在移动货物前需要精准规划时。",
+    "useCases": [
+      [
+        "风电场",
+        "大型组件和高复杂度操作。"
+      ],
+      [
+        "太阳能项目",
+        "需要交付规划和文件控制的技术货物。"
+      ],
+      [
+        "能源基础设施",
+        "用于工地和关键项目的工业设备。"
+      ],
+      [
+        "组件进口",
+        "从始发地到工地的国际协调。"
+      ],
+      [
+        "工业货物",
+        "需要装卸和特殊路线的设备。"
+      ],
+      [
+        "交钥匙项目",
+        "能源运营的整体规划。"
+      ]
+    ],
+    "processEyebrow": "我们的运营流程",
+    "processTitle": "在移动货物之前设计可再生能源操作。",
+    "process": [
+      [
+        "技术分析",
+        "审核尺寸、重量、组件类型和最终目的地。"
+      ],
+      [
+        "路线研究",
+        "评估通行、限制、许可和可行性。"
+      ],
+      [
+        "文件计划",
+        "协调授权、保险和运营要求。"
+      ],
+      [
+        "运输与装卸",
+        "确定设备、操作人员和物流方式。"
       ],
       [
         "跟踪",
-        "监控进度、节点和可追溯性。"
+        "监控项目关键节点。"
       ],
       [
-        "最终交付",
-        "协调收货、卸货和运营关闭。"
+        "工地交付",
+        "协调卸货、接收和运营关闭。"
       ]
     ],
-    "bandTitle": "为保护产品和连续性而设计的食品物流。",
-    "bandText": "我们的团队为食品、饮料和消费品企业协调需要准时、可追溯和专业响应的运营。",
+    "bandTitle": "为高要求项目设计的可再生能源物流。",
+    "bandText": "我们的团队为需要技术规划、文件控制和精准执行的能源企业协调每个阶段的运营。",
     "stats": [
       [
-        "可追溯性",
-        "运营跟踪"
+        "能源项目",
+        "高复杂度运营"
       ],
       [
-        "配送",
-        "协调交付"
+        "特殊货物",
+        "超限与工业"
       ],
       [
-        "冷链",
-        "按需提供"
+        "多式联运",
+        "港口、道路与工地"
       ],
       [
         "专家支持",
         "专属专家"
       ]
     ],
-    "finalTitle": "让我们协调您的下一次食品与饮料操作。",
-    "finalText": "告诉我们产品类型、数量、始发地、目的地和要求。我们的团队将分析最佳物流方案。",
-    "finalPrimary": "申请物流方案",
+    "finalTitle": "让我们规划您的下一次可再生能源操作。",
+    "finalText": "我们分析组件类型、尺寸、始发地、目的地和工地要求，以构建安全可行的操作。",
+    "finalPrimary": "申请方案",
     "finalSecondary": "联系专家"
   }
 } satisfies Record<Locale, any>;
@@ -740,8 +740,10 @@ function Icon({ name }: { name: IconName }) {
   }
 }
 
-export default function AlimentacionBebidasPage() {
+export default function EnergiasRenovablesPage() {
   const [locale, setLocale] = useState<Locale>("es");
+  const finalCtaVideoRef = useRef<HTMLVideoElement | null>(null);
+  const darkBandVideoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
     const updateLocale = (event?: Event) => {
@@ -781,6 +783,60 @@ export default function AlimentacionBebidasPage() {
     };
   }, []);
 
+
+  /* ENERGIAS DARK BAND VIDEO SLOWDOWN */
+  useEffect(() => {
+    const video = darkBandVideoRef.current;
+
+    if (!video) return;
+
+    video.playbackRate = 0.45;
+  }, []);
+
+
+  /* ENERGIAS MP4 REAL AUTOPLAY */
+  useEffect(() => {
+    const video = darkBandVideoRef.current;
+    if (!video) return;
+
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    video.playbackRate = 0.42;
+
+    const playVideo = async () => {
+      try {
+        await video.play();
+      } catch {
+        // Autoplay puede esperar interacción en casos raros.
+      }
+    };
+
+    playVideo();
+  }, []);
+
+
+  /* ENERGIAS FINAL CTA VIDEO REAL AUTOPLAY */
+  useEffect(() => {
+    const video = finalCtaVideoRef.current;
+    if (!video) return;
+
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    video.playbackRate = 0.42;
+
+    const start = async () => {
+      try {
+        await video.play();
+      } catch {
+        // Autoplay puede esperar interacción en casos raros.
+      }
+    };
+
+    start();
+  }, []);
+
   const t = copy[locale];
 
   return (
@@ -788,9 +844,9 @@ export default function AlimentacionBebidasPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={`${styles.hero} acrossPageHero`} data-sector-hero="true" data-standard-service-hero="true" data-sector-name="alimentacion-bebidas">
+        <section className={`${styles.hero} acrossPageHero`} data-sector-hero="true" data-standard-service-hero="true" data-sector-name="energias-renovables">
           <Image
-            src="/images/sectores/alimentosybebidas.png"
+            src="/images/sectores/energiasrenovables.png"
             alt={t.heroTitle}
             fill
             priority
@@ -800,7 +856,7 @@ export default function AlimentacionBebidasPage() {
           />
 
           <Image
-            src="/images/sectores/alimentosybebidas.png"
+            src="/images/sectores/energiasrenovables.png"
             alt={t.heroTitle}
             fill
             priority
@@ -861,7 +917,7 @@ export default function AlimentacionBebidasPage() {
 
         <Certifications />
 
-        <section className={`${styles.overview} ${styles.overviewMobileBg}`} data-after-cert-overview="true" style={{ "--sector-overview-bg": "url('/images/sectores/alimentosybebidas.png')" } as CSSProperties}>
+        <section className={`${styles.overview} ${styles.overviewMobileBg}`} data-after-cert-overview="true" style={{ "--sector-overview-bg": "url('/images/sectores/energiasrenovables1.png')" } as CSSProperties}>
           <div className={styles.overviewCopy}>
             <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
             <h2>{t.overviewTitle}</h2>
@@ -886,7 +942,7 @@ export default function AlimentacionBebidasPage() {
           </div>
         </section>
 
-        <section className={styles.services} data-mobile-hide-after-cert="true">
+        <section className={styles.services} data-energy-services-bg="true" data-mobile-hide-after-cert="true">
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -894,7 +950,7 @@ export default function AlimentacionBebidasPage() {
 
           <div className={styles.serviceGrid}>
             {t.services.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["package", "shield", "truck", "tracking", "door", "document"];
+              const icons: IconName[] = ["gear", "truck", "package", "route", "globe", "document"];
 
               return (
                 <article key={title}>
@@ -957,13 +1013,18 @@ export default function AlimentacionBebidasPage() {
         </section>
 
         <section className={styles.darkBand} data-mobile-hide-after-cert="true" data-sector-dark-band="true">
-          <div className={styles.darkBandImage}>
-            <Image
-              src="/images/sectores/alimentosybebidas2.png"
-              alt={t.bandTitle}
-              fill
-              sizes="(max-width: 900px) 100vw, 42vw"
-            />
+          <div className={styles.darkBandVideoLayer} aria-hidden="true">
+            <video
+              ref={darkBandVideoRef}
+              className={styles.darkBandVideo}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+            >
+              <source src="/images/sectores/energiasrenovables2.mp4" type="video/mp4" />
+            </video>
           </div>
 
           <div className={styles.darkBandContent}>
@@ -986,7 +1047,24 @@ export default function AlimentacionBebidasPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} data-sector-final-cta="true" data-across-final-cta="true">
+        <section className={styles.finalCta} data-energy-final-video="true" data-sector-final-cta="true" data-across-final-cta="true">
+          <div className={styles.finalCtaVideoLayer} aria-hidden="true">
+            <video
+              ref={finalCtaVideoRef}
+              className={styles.finalCtaVideo}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              onLoadedData={(event) => {
+                event.currentTarget.playbackRate = 0.42;
+                event.currentTarget.play().catch(() => undefined);
+              }}
+            >
+              <source src="/images/sectores/energiasrenovables2.mp4" type="video/mp4" />
+            </video>
+          </div>
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>
@@ -999,7 +1077,7 @@ export default function AlimentacionBebidasPage() {
 
           <div className={styles.finalImage}>
             <Image
-              src="/images/sectores/alimentosybebidas.png"
+              src="/images/sectores/energiasrenovables.png"
               alt={t.finalTitle}
               fill
               sizes="(max-width: 900px) 100vw, 44vw"

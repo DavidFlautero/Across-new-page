@@ -861,7 +861,7 @@ export default function AutomocionPage() {
 
         <Certifications />
 
-        <section className={`${styles.overview} ${styles.overviewMobileBg}`} style={{ "--sector-overview-bg": "url('/images/sectores/automocion2.png')" } as CSSProperties}>
+        <section className={`${styles.overview} ${styles.overviewMobileBg}`} data-after-cert-overview="true" style={{ "--sector-overview-bg": "url('/images/sectores/automocion2.png')" } as CSSProperties}>
           <div className={styles.overviewCopy}>
             <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
             <h2>{t.overviewTitle}</h2>

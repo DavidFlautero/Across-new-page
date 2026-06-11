@@ -8,495 +8,495 @@ import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import RelatedServices from "@/app/servicios/_shared/RelatedServices";
-import styles from "./AlimentacionBebidas.module.css";
+import styles from "./Tecnologico.module.css";
 
 type Locale = "es" | "en" | "zh";
 
 const copy = {
   "es": {
-    "heroEyebrow": "Sector alimentación y bebidas",
-    "heroTitle": "Logística para productos que exigen tiempo, control y confianza.",
-    "heroText": "Diseñamos operaciones logísticas para alimentos, bebidas, perecederos y productos de consumo, integrando transporte, almacenaje, distribución, trazabilidad y control operativo.",
+    "heroEyebrow": "Sector tecnológico",
+    "heroTitle": "Logística para tecnología que exige precisión, seguridad y trazabilidad.",
+    "heroText": "Coordinamos operaciones para equipos tecnológicos, dispositivos, componentes electrónicos y mercancía de alto valor, integrando transporte, documentación, almacenaje y seguimiento operativo.",
     "primaryCta": "Planificar mi operación",
     "secondaryCta": "Hablar con nuestro equipo",
-    "activeLabel": "Operación alimentaria activa",
-    "activeRoute": "Proveedor → Distribución",
-    "activeCargo": "Alimentos y bebidas",
+    "activeLabel": "Operación tecnológica activa",
+    "activeRoute": "Origen → Centro técnico",
+    "activeCargo": "Carga tecnológica",
     "activeStatusLabel": "Estado:",
     "activeStatus": "En coordinación",
-    "activeEtaLabel": "Prioridad:",
-    "activeEta": "Entrega segura",
+    "activeEtaLabel": "Control:",
+    "activeEta": "Alta seguridad",
     "trust": [
       [
+        "Alto valor",
+        "Control reforzado"
+      ],
+      [
+        "Tecnología",
+        "Equipos y componentes"
+      ],
+      [
         "Trazabilidad",
-        "Control operativo"
+        "Visibilidad operativa"
       ],
       [
-        "Distribución",
-        "Entregas coordinadas"
-      ],
-      [
-        "Cadena de frío",
-        "Cuando aplica"
-      ],
-      [
-        "Cumplimiento",
-        "Documentación y control"
+        "Documentación",
+        "Gestión internacional"
       ]
     ],
-    "overviewEyebrow": "Logística sectorial",
-    "overviewTitle": "Soluciones logísticas para cadenas alimentarias que no pueden fallar.",
-    "overviewText": "El sector de alimentación y bebidas exige velocidad, cuidado del producto, cumplimiento documental y continuidad. Coordinamos operaciones diseñadas para proteger mercancía, reducir riesgos y mantener la cadena en movimiento.",
-    "overviewButton": "Conocer más sobre alimentación y bebidas",
+    "overviewEyebrow": "Logística tecnológica",
+    "overviewTitle": "Control logístico para mercancía sensible y de alto valor.",
+    "overviewText": "La tecnología requiere manipulación cuidadosa, control documental, seguridad, tiempos precisos y visibilidad. Coordinamos operaciones para proteger equipos, componentes y dispositivos durante toda la cadena.",
+    "overviewButton": "Conocer más sobre tecnología",
     "pillars": [
       [
-        "Control de producto",
-        "Coordinación según tipo de mercancía, sensibilidad, rotación y requisitos de entrega."
+        "Seguridad operativa",
+        "Coordinación para cargas de alto valor o sensibilidad técnica."
       ],
       [
-        "Distribución eficiente",
-        "Planificación de salidas, rutas y entregas para clientes, retail o puntos de venta."
+        "Documentación internacional",
+        "Gestión de requisitos comerciales, aduaneros y operativos."
       ],
       [
-        "Trazabilidad",
-        "Seguimiento operativo para mantener visibilidad de la mercancía."
+        "Almacenaje especializado",
+        "Control de stock, preparación y distribución de productos tecnológicos."
       ],
       [
-        "Cadena de frío",
-        "Soluciones con control térmico cuando el producto lo requiere."
+        "Seguimiento",
+        "Visibilidad sobre cada etapa del movimiento logístico."
       ]
     ],
-    "servicesEyebrow": "Soluciones para alimentación y bebidas",
-    "servicesTitle": "Operaciones diseñadas para productos de consumo.",
+    "servicesEyebrow": "Soluciones para tecnología",
+    "servicesTitle": "Operaciones para equipos, componentes y dispositivos.",
     "services": [
       [
-        "Transporte nacional e internacional",
-        "Coordinación de movimientos terrestres, marítimos o aéreos según urgencia y volumen."
+        "Transporte internacional",
+        "Soluciones aéreas, marítimas o terrestres según urgencia y valor."
       ],
       [
-        "Distribución comercial",
-        "Entregas a clientes, cadenas, puntos de venta o centros de distribución."
+        "Carga de alto valor",
+        "Coordinación segura para dispositivos, equipos y componentes críticos."
       ],
       [
-        "Carga refrigerada",
-        "Soluciones para productos perecederos o sensibles a temperatura."
-      ],
-      [
-        "Almacenaje y preparación",
-        "Gestión de stock, picking, packing y salidas programadas."
+        "Almacenaje tecnológico",
+        "Stock, preparación y distribución con control operativo."
       ],
       [
         "Importación y exportación",
-        "Soporte documental, aduanero y operativo para comercio internacional."
+        "Gestión documental y aduanera para comercio tecnológico."
+      ],
+      [
+        "Distribución B2B",
+        "Entregas a empresas, centros técnicos, retailers o integradores."
       ],
       [
         "Door to door",
         "Coordinación completa desde origen hasta entrega final."
       ]
     ],
-    "useCasesEyebrow": "Cuándo necesita logística especializada",
-    "useCasesTitle": "Cuando el producto debe llegar bien, a tiempo y bajo control.",
+    "useCasesEyebrow": "Cuándo necesita logística tecnológica",
+    "useCasesTitle": "Cuando la carga exige seguridad, cuidado y trazabilidad.",
     "useCases": [
       [
-        "Alimentos perecederos",
-        "Operaciones que requieren tiempos precisos y control de condiciones."
+        "Dispositivos electrónicos",
+        "Operaciones para productos sensibles y de alto valor."
       ],
       [
-        "Bebidas",
-        "Distribución de productos embotellados, envasados o de alto volumen."
+        "Componentes tecnológicos",
+        "Movimientos para cadenas de suministro e integración."
       ],
       [
-        "Retail y supermercados",
-        "Entregas programadas hacia cadenas y puntos de venta."
+        "Equipos profesionales",
+        "Transporte de hardware, servidores o equipos técnicos."
       ],
       [
         "Importadores",
-        "Gestión integral para productos alimentarios internacionales."
+        "Coordinación internacional con documentación."
       ],
       [
-        "Campañas comerciales",
-        "Picos de demanda y entregas de alta rotación."
+        "Retail tecnológico",
+        "Distribución hacia puntos de venta o clientes B2B."
       ],
       [
-        "Productos sensibles",
-        "Mercancía que requiere cuidado, trazabilidad o control térmico."
+        "Proyectos IT",
+        "Entrega de equipos para instalaciones o despliegues."
       ]
     ],
     "processEyebrow": "Nuestro proceso operativo",
-    "processTitle": "Una operación alimentaria clara desde la planificación hasta la entrega.",
+    "processTitle": "Una operación tecnológica clara desde el primer contacto.",
     "process": [
       [
-        "Análisis del producto",
-        "Revisamos tipo de mercancía, sensibilidad, volumen y requisitos."
+        "Análisis de carga",
+        "Revisamos valor, sensibilidad, volumen y requisitos."
       ],
       [
         "Diseño logístico",
-        "Definimos transporte, almacenamiento, distribución y tiempos."
+        "Definimos modalidad, ruta y controles operativos."
       ],
       [
         "Documentación",
-        "Coordinamos requisitos comerciales, sanitarios o aduaneros cuando aplica."
+        "Coordinamos requisitos comerciales y aduaneros."
       ],
       [
-        "Preparación operativa",
-        "Gestionamos retiro, carga, acondicionamiento y salida."
+        "Preparación",
+        "Gestionamos retiro, acondicionamiento y salida."
       ],
       [
         "Seguimiento",
-        "Monitoreamos avance, hitos y trazabilidad."
+        "Monitoreamos avance e hitos críticos."
       ],
       [
         "Entrega final",
-        "Coordinamos recepción, descarga y cierre operativo."
+        "Coordinamos recepción segura y cierre."
       ]
     ],
-    "bandTitle": "Logística alimentaria diseñada para proteger producto y continuidad.",
-    "bandText": "Nuestro equipo coordina operaciones para empresas que necesitan puntualidad, trazabilidad y respuesta profesional en alimentos, bebidas y productos de consumo.",
+    "bandTitle": "Logística tecnológica diseñada para cargas que requieren control total.",
+    "bandText": "Nuestro equipo coordina operaciones para empresas que necesitan seguridad, precisión documental y trazabilidad en productos tecnológicos.",
     "stats": [
       [
+        "Alto valor",
+        "Seguridad operativa"
+      ],
+      [
+        "Tecnología",
+        "Equipos y componentes"
+      ],
+      [
         "Trazabilidad",
-        "Seguimiento operativo"
-      ],
-      [
-        "Distribución",
-        "Entregas coordinadas"
-      ],
-      [
-        "Cadena de frío",
-        "Cuando aplica"
+        "Seguimiento completo"
       ],
       [
         "Soporte experto",
         "Especialistas dedicados"
       ]
     ],
-    "finalTitle": "Coordinemos su próxima operación de alimentación y bebidas.",
-    "finalText": "Cuéntenos tipo de producto, volumen, origen, destino y requisitos. Nuestro equipo analizará la mejor solución logística.",
-    "finalPrimary": "Solicitar propuesta logística",
+    "finalTitle": "Coordinemos su próxima operación tecnológica.",
+    "finalText": "Cuéntenos tipo de producto, valor, origen, destino y urgencia. Nuestro equipo analizará la mejor solución logística.",
+    "finalPrimary": "Solicitar propuesta tecnológica",
     "finalSecondary": "Hablar con un especialista"
   },
   "en": {
-    "heroEyebrow": "Food and beverage sector",
-    "heroTitle": "Logistics for products that demand timing, control and trust.",
-    "heroText": "We design logistics operations for food, beverages, perishables and consumer products, integrating transport, warehousing, distribution, traceability and operational control.",
+    "heroEyebrow": "Technology sector",
+    "heroTitle": "Logistics for technology requiring precision, security and traceability.",
+    "heroText": "We coordinate operations for technology equipment, devices, electronic components and high-value goods, integrating transport, documentation, warehousing and operational tracking.",
     "primaryCta": "Plan my operation",
     "secondaryCta": "Talk to our team",
-    "activeLabel": "Active food operation",
-    "activeRoute": "Supplier → Distribution",
-    "activeCargo": "Food and beverages",
+    "activeLabel": "Active technology operation",
+    "activeRoute": "Origin → Technical center",
+    "activeCargo": "Technology cargo",
     "activeStatusLabel": "Status:",
     "activeStatus": "In coordination",
-    "activeEtaLabel": "Priority:",
-    "activeEta": "Safe delivery",
+    "activeEtaLabel": "Control:",
+    "activeEta": "High security",
     "trust": [
       [
+        "High value",
+        "Reinforced control"
+      ],
+      [
+        "Technology",
+        "Equipment and components"
+      ],
+      [
         "Traceability",
-        "Operational control"
+        "Operational visibility"
       ],
       [
-        "Distribution",
-        "Coordinated deliveries"
-      ],
-      [
-        "Cold chain",
-        "When required"
-      ],
-      [
-        "Compliance",
-        "Documentation and control"
+        "Documentation",
+        "International management"
       ]
     ],
-    "overviewEyebrow": "Sector logistics",
-    "overviewTitle": "Logistics solutions for food supply chains that cannot fail.",
-    "overviewText": "The food and beverage sector requires speed, product care, document compliance and continuity. We coordinate operations designed to protect goods, reduce risks and keep the chain moving.",
-    "overviewButton": "Learn more about food and beverages",
+    "overviewEyebrow": "Technology logistics",
+    "overviewTitle": "Logistics control for sensitive and high-value goods.",
+    "overviewText": "Technology requires careful handling, document control, security, precise timing and visibility. We coordinate operations to protect equipment, components and devices across the entire chain.",
+    "overviewButton": "Learn more about technology",
     "pillars": [
       [
-        "Product control",
-        "Coordination according to goods type, sensitivity, rotation and delivery requirements."
+        "Operational security",
+        "Coordination for high-value or technically sensitive cargo."
       ],
       [
-        "Efficient distribution",
-        "Planning of dispatches, routes and deliveries for clients, retail or points of sale."
+        "International documentation",
+        "Commercial, customs and operational requirement management."
       ],
       [
-        "Traceability",
-        "Operational tracking to maintain cargo visibility."
+        "Specialized warehousing",
+        "Stock control, preparation and distribution of technology products."
       ],
       [
-        "Cold chain",
-        "Temperature-controlled solutions when the product requires it."
+        "Tracking",
+        "Visibility over every stage of the logistics movement."
       ]
     ],
-    "servicesEyebrow": "Food and beverage solutions",
-    "servicesTitle": "Operations designed for consumer products.",
+    "servicesEyebrow": "Technology solutions",
+    "servicesTitle": "Operations for equipment, components and devices.",
     "services": [
       [
-        "Domestic and international transport",
-        "Road, ocean or air movements according to urgency and volume."
+        "International transport",
+        "Air, ocean or road solutions according to urgency and value."
       ],
       [
-        "Commercial distribution",
-        "Deliveries to clients, chains, points of sale or distribution centers."
+        "High-value cargo",
+        "Secure coordination for devices, equipment and critical components."
       ],
       [
-        "Refrigerated cargo",
-        "Solutions for perishable or temperature-sensitive products."
-      ],
-      [
-        "Warehousing and preparation",
-        "Stock management, picking, packing and scheduled dispatches."
+        "Technology warehousing",
+        "Stock, preparation and distribution with operational control."
       ],
       [
         "Import and export",
-        "Document, customs and operational support for international trade."
+        "Document and customs management for technology trade."
+      ],
+      [
+        "B2B distribution",
+        "Deliveries to companies, technical centers, retailers or integrators."
       ],
       [
         "Door to door",
         "Complete coordination from origin to final delivery."
       ]
     ],
-    "useCasesEyebrow": "When specialized logistics is needed",
-    "useCasesTitle": "When the product must arrive properly, on time and under control.",
+    "useCasesEyebrow": "When technology logistics is needed",
+    "useCasesTitle": "When cargo demands security, care and traceability.",
     "useCases": [
       [
-        "Perishable food",
-        "Operations requiring precise timing and condition control."
+        "Electronic devices",
+        "Operations for sensitive and high-value products."
       ],
       [
-        "Beverages",
-        "Distribution of bottled, packaged or high-volume products."
+        "Technology components",
+        "Movements for supply chains and integration."
       ],
       [
-        "Retail and supermarkets",
-        "Scheduled deliveries to chains and points of sale."
+        "Professional equipment",
+        "Transport of hardware, servers or technical equipment."
       ],
       [
         "Importers",
-        "Integrated management for international food products."
+        "International coordination with documentation."
       ],
       [
-        "Commercial campaigns",
-        "Demand peaks and high-rotation deliveries."
+        "Technology retail",
+        "Distribution to points of sale or B2B customers."
       ],
       [
-        "Sensitive products",
-        "Goods requiring care, traceability or thermal control."
+        "IT projects",
+        "Equipment delivery for installations or deployments."
       ]
     ],
     "processEyebrow": "Our operational process",
-    "processTitle": "A clear food logistics operation from planning to delivery.",
+    "processTitle": "A clear technology operation from the first contact.",
     "process": [
       [
-        "Product analysis",
-        "We review goods type, sensitivity, volume and requirements."
+        "Cargo analysis",
+        "We review value, sensitivity, volume and requirements."
       ],
       [
         "Logistics design",
-        "We define transport, warehousing, distribution and timing."
+        "We define modality, route and operational controls."
       ],
       [
         "Documentation",
-        "We coordinate commercial, sanitary or customs requirements when applicable."
+        "We coordinate commercial and customs requirements."
       ],
       [
-        "Operational setup",
-        "We manage pickup, loading, conditioning and dispatch."
+        "Preparation",
+        "We manage pickup, conditioning and dispatch."
       ],
       [
         "Tracking",
-        "We monitor progress, milestones and traceability."
+        "We monitor progress and critical milestones."
       ],
       [
         "Final delivery",
-        "We coordinate reception, unloading and operational closure."
+        "We coordinate secure reception and closure."
       ]
     ],
-    "bandTitle": "Food logistics designed to protect product and continuity.",
-    "bandText": "Our team coordinates operations for companies that need punctuality, traceability and professional response in food, beverages and consumer products.",
+    "bandTitle": "Technology logistics designed for cargo requiring full control.",
+    "bandText": "Our team coordinates operations for companies requiring security, document precision and traceability for technology products.",
     "stats": [
       [
+        "High value",
+        "Operational security"
+      ],
+      [
+        "Technology",
+        "Equipment and components"
+      ],
+      [
         "Traceability",
-        "Operational tracking"
-      ],
-      [
-        "Distribution",
-        "Coordinated deliveries"
-      ],
-      [
-        "Cold chain",
-        "When required"
+        "Full tracking"
       ],
       [
         "Expert support",
         "Dedicated specialists"
       ]
     ],
-    "finalTitle": "Let’s coordinate your next food and beverage operation.",
-    "finalText": "Tell us product type, volume, origin, destination and requirements. Our team will analyze the best logistics solution.",
-    "finalPrimary": "Request logistics proposal",
+    "finalTitle": "Let’s coordinate your next technology operation.",
+    "finalText": "Tell us product type, value, origin, destination and urgency. Our team will analyze the best logistics solution.",
+    "finalPrimary": "Request technology proposal",
     "finalSecondary": "Talk to a specialist"
   },
   "zh": {
-    "heroEyebrow": "食品与饮料行业",
-    "heroTitle": "为需要时间、控制和信任的产品提供物流。",
-    "heroText": "我们为食品、饮料、易腐品和消费品设计物流运营，整合运输、仓储、配送、可追溯性和运营控制。",
+    "heroEyebrow": "科技行业",
+    "heroTitle": "为需要精准、安全和可追溯的科技产品提供物流。",
+    "heroText": "我们为技术设备、电子组件和高价值货物协调运输、文件、仓储和运营跟踪。",
     "primaryCta": "规划物流操作",
     "secondaryCta": "联系我们的团队",
-    "activeLabel": "进行中的食品操作",
-    "activeRoute": "供应商 → 配送",
-    "activeCargo": "食品与饮料",
+    "activeLabel": "进行中的科技物流",
+    "activeRoute": "始发地 → 技术中心",
+    "activeCargo": "科技货物",
     "activeStatusLabel": "状态：",
     "activeStatus": "协调中",
-    "activeEtaLabel": "优先级：",
-    "activeEta": "安全交付",
+    "activeEtaLabel": "控制：",
+    "activeEta": "高安全",
     "trust": [
       [
-        "可追溯性",
-        "运营控制"
+        "高价值",
+        "加强控制"
       ],
       [
-        "配送",
-        "协调交付"
+        "科技",
+        "设备和组件"
       ],
       [
-        "冷链",
-        "按需提供"
+        "可追溯",
+        "运营可视化"
       ],
       [
-        "合规",
-        "文件与控制"
+        "文件",
+        "国际管理"
       ]
     ],
-    "overviewEyebrow": "行业物流",
-    "overviewTitle": "为不能失败的食品供应链提供物流解决方案。",
-    "overviewText": "食品与饮料行业需要速度、产品保护、文件合规和连续性。我们协调运营以保护货物、降低风险并保持供应链流动。",
-    "overviewButton": "了解食品与饮料物流",
+    "overviewEyebrow": "科技物流",
+    "overviewTitle": "为敏感和高价值货物提供物流控制。",
+    "overviewText": "科技产品需要谨慎处理、文件控制、安全、准时和可视化。我们协调全链路操作以保护设备、组件和产品。",
+    "overviewButton": "了解科技物流",
     "pillars": [
       [
-        "产品控制",
-        "根据货物类型、敏感性、周转和交付要求进行协调。"
+        "运营安全",
+        "为高价值或技术敏感货物提供协调。"
       ],
       [
-        "高效配送",
-        "为客户、零售或销售点规划出库、路线和交付。"
+        "国际文件",
+        "管理商业、海关和运营要求。"
       ],
       [
-        "可追溯性",
-        "通过运营跟踪保持货物可视化。"
+        "专业仓储",
+        "科技产品库存、准备和配送控制。"
       ],
       [
-        "冷链",
-        "当产品需要时提供温控解决方案。"
+        "跟踪",
+        "保持每个物流阶段可视化。"
       ]
     ],
-    "servicesEyebrow": "食品与饮料解决方案",
-    "servicesTitle": "为消费品设计的物流运营。",
+    "servicesEyebrow": "科技解决方案",
+    "servicesTitle": "面向设备、组件和产品的运营。",
     "services": [
       [
-        "国内和国际运输",
-        "根据紧急程度和体量协调陆运、海运或空运。"
+        "国际运输",
+        "根据紧急程度和价值提供空运、海运或陆运。"
       ],
       [
-        "商业配送",
-        "配送到客户、连锁、销售点或配送中心。"
+        "高价值货物",
+        "为设备和关键组件提供安全协调。"
       ],
       [
-        "冷藏货物",
-        "为易腐或温度敏感产品提供解决方案。"
-      ],
-      [
-        "仓储与准备",
-        "库存管理、拣货、包装和计划出库。"
+        "科技仓储",
+        "库存、准备和配送运营控制。"
       ],
       [
         "进出口",
-        "为国际贸易提供文件、海关和运营支持。"
+        "科技贸易文件和海关管理。"
+      ],
+      [
+        "B2B 配送",
+        "交付到企业、技术中心、零售商或集成商。"
       ],
       [
         "门到门",
         "从始发地到最终交付的完整协调。"
       ]
     ],
-    "useCasesEyebrow": "何时需要专业物流",
-    "useCasesTitle": "当产品必须完好、准时且受控到达时。",
+    "useCasesEyebrow": "何时需要科技物流",
+    "useCasesTitle": "当货物需要安全、保护和可追溯时。",
     "useCases": [
       [
-        "易腐食品",
-        "需要精准时间和条件控制的操作。"
+        "电子设备",
+        "敏感和高价值产品操作。"
       ],
       [
-        "饮料",
-        "瓶装、包装或大批量产品配送。"
+        "技术组件",
+        "供应链和集成运输。"
       ],
       [
-        "零售与超市",
-        "向连锁和销售点进行计划交付。"
+        "专业设备",
+        "硬件、服务器或技术设备运输。"
       ],
       [
         "进口商",
-        "为国际食品提供综合管理。"
+        "带文件的国际协调。"
       ],
       [
-        "商业活动",
-        "需求高峰和高周转交付。"
+        "科技零售",
+        "向销售点或 B2B 客户配送。"
       ],
       [
-        "敏感产品",
-        "需要保护、可追溯或温控的货物。"
+        "IT 项目",
+        "安装或部署设备交付。"
       ]
     ],
     "processEyebrow": "我们的运营流程",
-    "processTitle": "从规划到交付，食品物流清晰可控。",
+    "processTitle": "从首次联系开始，科技物流清晰可控。",
     "process": [
       [
-        "产品分析",
-        "审核货物类型、敏感性、体量和要求。"
+        "货物分析",
+        "审核价值、敏感性、体量和要求。"
       ],
       [
         "物流设计",
-        "确定运输、仓储、配送和时间安排。"
+        "确定方式、路线和控制。"
       ],
       [
         "文件管理",
-        "按需协调商业、卫生或海关要求。"
+        "协调商业和海关要求。"
       ],
       [
-        "操作准备",
-        "管理提货、装载、处理和出库。"
+        "准备",
+        "管理提货、处理和出库。"
       ],
       [
         "跟踪",
-        "监控进度、节点和可追溯性。"
+        "监控进度和关键节点。"
       ],
       [
         "最终交付",
-        "协调收货、卸货和运营关闭。"
+        "协调安全接收和关闭。"
       ]
     ],
-    "bandTitle": "为保护产品和连续性而设计的食品物流。",
-    "bandText": "我们的团队为食品、饮料和消费品企业协调需要准时、可追溯和专业响应的运营。",
+    "bandTitle": "为需要全面控制的科技货物设计物流。",
+    "bandText": "我们的团队为需要安全、文件精准和可追溯性的科技企业协调物流。",
     "stats": [
       [
-        "可追溯性",
-        "运营跟踪"
+        "高价值",
+        "运营安全"
       ],
       [
-        "配送",
-        "协调交付"
+        "科技",
+        "设备和组件"
       ],
       [
-        "冷链",
-        "按需提供"
+        "可追溯",
+        "全程跟踪"
       ],
       [
         "专家支持",
         "专属专家"
       ]
     ],
-    "finalTitle": "让我们协调您的下一次食品与饮料操作。",
-    "finalText": "告诉我们产品类型、数量、始发地、目的地和要求。我们的团队将分析最佳物流方案。",
-    "finalPrimary": "申请物流方案",
+    "finalTitle": "让我们协调您的下一次科技物流操作。",
+    "finalText": "告诉我们产品类型、价值、始发地、目的地和紧急程度。我们的团队将分析最佳物流方案。",
+    "finalPrimary": "申请科技物流方案",
     "finalSecondary": "联系专家"
   }
 } satisfies Record<Locale, any>;
@@ -740,7 +740,7 @@ function Icon({ name }: { name: IconName }) {
   }
 }
 
-export default function AlimentacionBebidasPage() {
+export default function TecnologicoPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
@@ -788,9 +788,9 @@ export default function AlimentacionBebidasPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={`${styles.hero} acrossPageHero`} data-sector-hero="true" data-standard-service-hero="true" data-sector-name="alimentacion-bebidas">
+        <section className={`${styles.hero} acrossPageHero`} data-sector-hero="true" data-standard-service-hero="true" data-sector-name="tecnologico">
           <Image
-            src="/images/sectores/alimentosybebidas.png"
+            src="/images/sectores/transporte-logistica-tecnologia.png"
             alt={t.heroTitle}
             fill
             priority
@@ -800,7 +800,7 @@ export default function AlimentacionBebidasPage() {
           />
 
           <Image
-            src="/images/sectores/alimentosybebidas.png"
+            src="/images/sectores/tecnologico.png"
             alt={t.heroTitle}
             fill
             priority
@@ -843,7 +843,7 @@ export default function AlimentacionBebidasPage() {
 
         <section className={styles.trustBar}>
           {t.trust.map(([title, text]: string[], index: number) => {
-            const icons: IconName[] = ["timer", "shield", "document", "tracking"];
+            const icons: IconName[] = ["package", "shield", "document", "tracking", "globe", "door"];
 
             return (
               <div key={title}>
@@ -861,7 +861,7 @@ export default function AlimentacionBebidasPage() {
 
         <Certifications />
 
-        <section className={`${styles.overview} ${styles.overviewMobileBg}`} data-after-cert-overview="true" style={{ "--sector-overview-bg": "url('/images/sectores/alimentosybebidas.png')" } as CSSProperties}>
+        <section className={`${styles.overview} ${styles.overviewMobileBg}`} style={{ "--sector-overview-bg": "url('/images/sectores/tecnologico.png')" } as CSSProperties}>
           <div className={styles.overviewCopy}>
             <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
             <h2>{t.overviewTitle}</h2>
@@ -871,7 +871,7 @@ export default function AlimentacionBebidasPage() {
 
           <div className={styles.pillars}>
             {t.pillars.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["airport", "document", "tracking", "truck"];
+              const icons: IconName[] = ["search", "package", "document", "route", "tracking", "truck"];
 
               return (
                 <article key={title}>
@@ -894,7 +894,7 @@ export default function AlimentacionBebidasPage() {
 
           <div className={styles.serviceGrid}>
             {t.services.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["package", "shield", "truck", "tracking", "door", "document"];
+              const icons: IconName[] = ["plane", "box", "diamond", "charter", "globe", "door"];
 
               return (
                 <article key={title}>
@@ -940,7 +940,7 @@ export default function AlimentacionBebidasPage() {
 
           <div className={styles.processGrid}>
             {t.process.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["search", "package", "document", "route", "tracking", "truck"];
+              const icons: IconName[] = ["search", "route", "document", "plane", "tracking", "truck"];
 
               return (
                 <article key={title}>
@@ -959,7 +959,7 @@ export default function AlimentacionBebidasPage() {
         <section className={styles.darkBand} data-mobile-hide-after-cert="true" data-sector-dark-band="true">
           <div className={styles.darkBandImage}>
             <Image
-              src="/images/sectores/alimentosybebidas2.png"
+              src="/images/sectores/tecnologico.png"
               alt={t.bandTitle}
               fill
               sizes="(max-width: 900px) 100vw, 42vw"
@@ -999,7 +999,7 @@ export default function AlimentacionBebidasPage() {
 
           <div className={styles.finalImage}>
             <Image
-              src="/images/sectores/alimentosybebidas.png"
+              src="/images/sectores/transporte-logistica-tecnologia.png"
               alt={t.finalTitle}
               fill
               sizes="(max-width: 900px) 100vw, 44vw"

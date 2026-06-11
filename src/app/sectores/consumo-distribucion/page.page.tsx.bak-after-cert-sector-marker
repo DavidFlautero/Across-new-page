@@ -8,496 +8,496 @@ import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import RelatedServices from "@/app/servicios/_shared/RelatedServices";
-import styles from "./AlimentacionBebidas.module.css";
+import styles from "./ConsumoDistribucion.module.css";
 
 type Locale = "es" | "en" | "zh";
 
 const copy = {
   "es": {
-    "heroEyebrow": "Sector alimentación y bebidas",
-    "heroTitle": "Logística para productos que exigen tiempo, control y confianza.",
-    "heroText": "Diseñamos operaciones logísticas para alimentos, bebidas, perecederos y productos de consumo, integrando transporte, almacenaje, distribución, trazabilidad y control operativo.",
+    "heroEyebrow": "Sector consumo y distribución",
+    "heroTitle": "Logística para productos de consumo que necesitan llegar a tiempo.",
+    "heroText": "Coordinamos transporte, almacenaje, preparación, distribución y trazabilidad para productos de consumo, retail, e-commerce y operaciones comerciales.",
     "primaryCta": "Planificar mi operación",
     "secondaryCta": "Hablar con nuestro equipo",
-    "activeLabel": "Operación alimentaria activa",
-    "activeRoute": "Proveedor → Distribución",
-    "activeCargo": "Alimentos y bebidas",
+    "activeLabel": "Operación de distribución activa",
+    "activeRoute": "Almacén → Cliente",
+    "activeCargo": "Productos de consumo",
     "activeStatusLabel": "Estado:",
-    "activeStatus": "En coordinación",
-    "activeEtaLabel": "Prioridad:",
-    "activeEta": "Entrega segura",
+    "activeStatus": "En distribución",
+    "activeEtaLabel": "Salida:",
+    "activeEta": "Programada",
     "trust": [
       [
-        "Trazabilidad",
+        "Distribución",
+        "Entregas coordinadas"
+      ],
+      [
+        "Stock",
         "Control operativo"
       ],
       [
-        "Distribución",
-        "Entregas coordinadas"
-      ],
-      [
-        "Cadena de frío",
-        "Cuando aplica"
-      ],
-      [
-        "Cumplimiento",
-        "Documentación y control"
-      ]
-    ],
-    "overviewEyebrow": "Logística sectorial",
-    "overviewTitle": "Soluciones logísticas para cadenas alimentarias que no pueden fallar.",
-    "overviewText": "El sector de alimentación y bebidas exige velocidad, cuidado del producto, cumplimiento documental y continuidad. Coordinamos operaciones diseñadas para proteger mercancía, reducir riesgos y mantener la cadena en movimiento.",
-    "overviewButton": "Conocer más sobre alimentación y bebidas",
-    "pillars": [
-      [
-        "Control de producto",
-        "Coordinación según tipo de mercancía, sensibilidad, rotación y requisitos de entrega."
-      ],
-      [
-        "Distribución eficiente",
-        "Planificación de salidas, rutas y entregas para clientes, retail o puntos de venta."
+        "Retail",
+        "Puntos de venta"
       ],
       [
         "Trazabilidad",
-        "Seguimiento operativo para mantener visibilidad de la mercancía."
-      ],
-      [
-        "Cadena de frío",
-        "Soluciones con control térmico cuando el producto lo requiere."
+        "Seguimiento"
       ]
     ],
-    "servicesEyebrow": "Soluciones para alimentación y bebidas",
-    "servicesTitle": "Operaciones diseñadas para productos de consumo.",
+    "overviewEyebrow": "Logística de consumo",
+    "overviewTitle": "Operaciones flexibles para marcas, retail y distribución comercial.",
+    "overviewText": "El consumo exige velocidad, cobertura, preparación eficiente y capacidad para responder a picos de demanda. Diseñamos operaciones para mover mercancía con orden y visibilidad.",
+    "overviewButton": "Conocer más sobre consumo",
+    "pillars": [
+      [
+        "Gestión de stock",
+        "Control de inventario, entradas, salidas y disponibilidad."
+      ],
+      [
+        "Preparación de pedidos",
+        "Picking, packing y acondicionamiento según canal."
+      ],
+      [
+        "Distribución",
+        "Entregas a clientes, tiendas, centros o puntos de venta."
+      ],
+      [
+        "Trazabilidad",
+        "Seguimiento de estados, tiempos y avance operativo."
+      ]
+    ],
+    "servicesEyebrow": "Soluciones para consumo y distribución",
+    "servicesTitle": "Logística para productos que se mueven todos los días.",
     "services": [
       [
-        "Transporte nacional e internacional",
-        "Coordinación de movimientos terrestres, marítimos o aéreos según urgencia y volumen."
+        "Distribución nacional",
+        "Entregas regionales o nacionales para productos de consumo."
       ],
       [
-        "Distribución comercial",
-        "Entregas a clientes, cadenas, puntos de venta o centros de distribución."
+        "Almacenaje",
+        "Gestión de stock y disponibilidad."
       ],
       [
-        "Carga refrigerada",
-        "Soluciones para productos perecederos o sensibles a temperatura."
+        "Picking y packing",
+        "Preparación de pedidos para retail, B2B o e-commerce."
       ],
       [
-        "Almacenaje y preparación",
-        "Gestión de stock, picking, packing y salidas programadas."
+        "Retail logistics",
+        "Abastecimiento hacia puntos de venta y cadenas comerciales."
       ],
       [
-        "Importación y exportación",
-        "Soporte documental, aduanero y operativo para comercio internacional."
+        "E-commerce",
+        "Flujos de preparación y entrega para canal online."
       ],
       [
         "Door to door",
-        "Coordinación completa desde origen hasta entrega final."
+        "Coordinación completa hasta destino final."
       ]
     ],
-    "useCasesEyebrow": "Cuándo necesita logística especializada",
-    "useCasesTitle": "Cuando el producto debe llegar bien, a tiempo y bajo control.",
+    "useCasesEyebrow": "Cuándo necesita logística de consumo",
+    "useCasesTitle": "Cuando la demanda exige orden, velocidad y cobertura.",
     "useCases": [
       [
-        "Alimentos perecederos",
-        "Operaciones que requieren tiempos precisos y control de condiciones."
+        "Retail",
+        "Entregas hacia tiendas y puntos comerciales."
       ],
       [
-        "Bebidas",
-        "Distribución de productos embotellados, envasados o de alto volumen."
+        "E-commerce",
+        "Preparación y distribución de pedidos online."
       ],
       [
-        "Retail y supermercados",
-        "Entregas programadas hacia cadenas y puntos de venta."
+        "Campañas",
+        "Picos de demanda y promociones."
       ],
       [
-        "Importadores",
-        "Gestión integral para productos alimentarios internacionales."
+        "Stock estacional",
+        "Gestión de inventario por temporada."
       ],
       [
-        "Campañas comerciales",
-        "Picos de demanda y entregas de alta rotación."
+        "Distribución B2B",
+        "Entregas a clientes corporativos o mayoristas."
       ],
       [
-        "Productos sensibles",
-        "Mercancía que requiere cuidado, trazabilidad o control térmico."
+        "Productos de alta rotación",
+        "Movimientos frecuentes y controlados."
       ]
     ],
     "processEyebrow": "Nuestro proceso operativo",
-    "processTitle": "Una operación alimentaria clara desde la planificación hasta la entrega.",
+    "processTitle": "Una operación de consumo clara desde el stock hasta la entrega.",
     "process": [
       [
-        "Análisis del producto",
-        "Revisamos tipo de mercancía, sensibilidad, volumen y requisitos."
+        "Análisis operativo",
+        "Revisamos producto, volumen, frecuencia y destinos."
       ],
       [
         "Diseño logístico",
-        "Definimos transporte, almacenamiento, distribución y tiempos."
+        "Definimos almacenamiento, preparación y distribución."
       ],
       [
         "Documentación",
-        "Coordinamos requisitos comerciales, sanitarios o aduaneros cuando aplica."
+        "Coordinamos requisitos comerciales y operativos."
       ],
       [
-        "Preparación operativa",
-        "Gestionamos retiro, carga, acondicionamiento y salida."
+        "Preparación",
+        "Gestionamos picking, packing y salida."
       ],
       [
         "Seguimiento",
-        "Monitoreamos avance, hitos y trazabilidad."
+        "Monitoreamos estados y entregas."
       ],
       [
         "Entrega final",
-        "Coordinamos recepción, descarga y cierre operativo."
+        "Coordinamos recepción y cierre operativo."
       ]
     ],
-    "bandTitle": "Logística alimentaria diseñada para proteger producto y continuidad.",
-    "bandText": "Nuestro equipo coordina operaciones para empresas que necesitan puntualidad, trazabilidad y respuesta profesional en alimentos, bebidas y productos de consumo.",
+    "bandTitle": "Logística de consumo diseñada para mantener la mercancía en movimiento.",
+    "bandText": "Nuestro equipo coordina operaciones para marcas y distribuidores que necesitan stock visible, preparación eficiente y entregas confiables.",
     "stats": [
       [
-        "Trazabilidad",
-        "Seguimiento operativo"
-      ],
-      [
         "Distribución",
-        "Entregas coordinadas"
+        "Cobertura operativa"
       ],
       [
-        "Cadena de frío",
-        "Cuando aplica"
+        "Stock",
+        "Control y visibilidad"
+      ],
+      [
+        "Retail",
+        "Puntos de venta"
       ],
       [
         "Soporte experto",
         "Especialistas dedicados"
       ]
     ],
-    "finalTitle": "Coordinemos su próxima operación de alimentación y bebidas.",
-    "finalText": "Cuéntenos tipo de producto, volumen, origen, destino y requisitos. Nuestro equipo analizará la mejor solución logística.",
+    "finalTitle": "Coordinemos su operación de consumo y distribución.",
+    "finalText": "Cuéntenos tipo de producto, volumen, frecuencia de salidas y destinos. Nuestro equipo analizará la mejor solución logística.",
     "finalPrimary": "Solicitar propuesta logística",
     "finalSecondary": "Hablar con un especialista"
   },
   "en": {
-    "heroEyebrow": "Food and beverage sector",
-    "heroTitle": "Logistics for products that demand timing, control and trust.",
-    "heroText": "We design logistics operations for food, beverages, perishables and consumer products, integrating transport, warehousing, distribution, traceability and operational control.",
+    "heroEyebrow": "Sector consumo y distribución",
+    "heroTitle": "Logística para productos de consumo que necesitan llegar a tiempo.",
+    "heroText": "Coordinamos transporte, almacenaje, preparación, distribución y trazabilidad para productos de consumo, retail, e-commerce y operaciones comerciales.",
     "primaryCta": "Plan my operation",
     "secondaryCta": "Talk to our team",
-    "activeLabel": "Active food operation",
-    "activeRoute": "Supplier → Distribution",
-    "activeCargo": "Food and beverages",
-    "activeStatusLabel": "Status:",
-    "activeStatus": "In coordination",
-    "activeEtaLabel": "Priority:",
-    "activeEta": "Safe delivery",
+    "activeLabel": "Operación de distribución activa",
+    "activeRoute": "Almacén → Cliente",
+    "activeCargo": "Productos de consumo",
+    "activeStatusLabel": "Estado:",
+    "activeStatus": "En distribución",
+    "activeEtaLabel": "Salida:",
+    "activeEta": "Programada",
     "trust": [
       [
-        "Traceability",
-        "Operational control"
+        "Distribución",
+        "Entregas coordinadas"
       ],
       [
-        "Distribution",
-        "Coordinated deliveries"
+        "Stock",
+        "Control operativo"
       ],
       [
-        "Cold chain",
-        "When required"
+        "Retail",
+        "Puntos de venta"
       ],
       [
-        "Compliance",
-        "Documentation and control"
+        "Trazabilidad",
+        "Seguimiento"
       ]
     ],
-    "overviewEyebrow": "Sector logistics",
-    "overviewTitle": "Logistics solutions for food supply chains that cannot fail.",
-    "overviewText": "The food and beverage sector requires speed, product care, document compliance and continuity. We coordinate operations designed to protect goods, reduce risks and keep the chain moving.",
-    "overviewButton": "Learn more about food and beverages",
+    "overviewEyebrow": "Logística de consumo",
+    "overviewTitle": "Operaciones flexibles para marcas, retail y distribución comercial.",
+    "overviewText": "El consumo exige velocidad, cobertura, preparación eficiente y capacidad para responder a picos de demanda. Diseñamos operaciones para mover mercancía con orden y visibilidad.",
+    "overviewButton": "Conocer más sobre consumo",
     "pillars": [
       [
-        "Product control",
-        "Coordination according to goods type, sensitivity, rotation and delivery requirements."
+        "Gestión de stock",
+        "Control de inventario, entradas, salidas y disponibilidad."
       ],
       [
-        "Efficient distribution",
-        "Planning of dispatches, routes and deliveries for clients, retail or points of sale."
+        "Preparación de pedidos",
+        "Picking, packing y acondicionamiento según canal."
       ],
       [
-        "Traceability",
-        "Operational tracking to maintain cargo visibility."
+        "Distribución",
+        "Entregas a clientes, tiendas, centros o puntos de venta."
       ],
       [
-        "Cold chain",
-        "Temperature-controlled solutions when the product requires it."
+        "Trazabilidad",
+        "Seguimiento de estados, tiempos y avance operativo."
       ]
     ],
-    "servicesEyebrow": "Food and beverage solutions",
-    "servicesTitle": "Operations designed for consumer products.",
+    "servicesEyebrow": "Soluciones para consumo y distribución",
+    "servicesTitle": "Logística para productos que se mueven todos los días.",
     "services": [
       [
-        "Domestic and international transport",
-        "Road, ocean or air movements according to urgency and volume."
+        "Distribución nacional",
+        "Entregas regionales o nacionales para productos de consumo."
       ],
       [
-        "Commercial distribution",
-        "Deliveries to clients, chains, points of sale or distribution centers."
+        "Almacenaje",
+        "Gestión de stock y disponibilidad."
       ],
       [
-        "Refrigerated cargo",
-        "Solutions for perishable or temperature-sensitive products."
+        "Picking y packing",
+        "Preparación de pedidos para retail, B2B o e-commerce."
       ],
       [
-        "Warehousing and preparation",
-        "Stock management, picking, packing and scheduled dispatches."
+        "Retail logistics",
+        "Abastecimiento hacia puntos de venta y cadenas comerciales."
       ],
       [
-        "Import and export",
-        "Document, customs and operational support for international trade."
+        "E-commerce",
+        "Flujos de preparación y entrega para canal online."
       ],
       [
         "Door to door",
-        "Complete coordination from origin to final delivery."
+        "Coordinación completa hasta destino final."
       ]
     ],
-    "useCasesEyebrow": "When specialized logistics is needed",
-    "useCasesTitle": "When the product must arrive properly, on time and under control.",
+    "useCasesEyebrow": "Cuándo necesita logística de consumo",
+    "useCasesTitle": "Cuando la demanda exige orden, velocidad y cobertura.",
     "useCases": [
       [
-        "Perishable food",
-        "Operations requiring precise timing and condition control."
+        "Retail",
+        "Entregas hacia tiendas y puntos comerciales."
       ],
       [
-        "Beverages",
-        "Distribution of bottled, packaged or high-volume products."
+        "E-commerce",
+        "Preparación y distribución de pedidos online."
       ],
       [
-        "Retail and supermarkets",
-        "Scheduled deliveries to chains and points of sale."
+        "Campañas",
+        "Picos de demanda y promociones."
       ],
       [
-        "Importers",
-        "Integrated management for international food products."
+        "Stock estacional",
+        "Gestión de inventario por temporada."
       ],
       [
-        "Commercial campaigns",
-        "Demand peaks and high-rotation deliveries."
+        "Distribución B2B",
+        "Entregas a clientes corporativos o mayoristas."
       ],
       [
-        "Sensitive products",
-        "Goods requiring care, traceability or thermal control."
+        "Productos de alta rotación",
+        "Movimientos frecuentes y controlados."
       ]
     ],
-    "processEyebrow": "Our operational process",
-    "processTitle": "A clear food logistics operation from planning to delivery.",
+    "processEyebrow": "Nuestro proceso operativo",
+    "processTitle": "Una operación de consumo clara desde el stock hasta la entrega.",
     "process": [
       [
-        "Product analysis",
-        "We review goods type, sensitivity, volume and requirements."
+        "Análisis operativo",
+        "Revisamos producto, volumen, frecuencia y destinos."
       ],
       [
-        "Logistics design",
-        "We define transport, warehousing, distribution and timing."
+        "Diseño logístico",
+        "Definimos almacenamiento, preparación y distribución."
       ],
       [
-        "Documentation",
-        "We coordinate commercial, sanitary or customs requirements when applicable."
+        "Documentación",
+        "Coordinamos requisitos comerciales y operativos."
       ],
       [
-        "Operational setup",
-        "We manage pickup, loading, conditioning and dispatch."
+        "Preparación",
+        "Gestionamos picking, packing y salida."
       ],
       [
-        "Tracking",
-        "We monitor progress, milestones and traceability."
+        "Seguimiento",
+        "Monitoreamos estados y entregas."
       ],
       [
-        "Final delivery",
-        "We coordinate reception, unloading and operational closure."
+        "Entrega final",
+        "Coordinamos recepción y cierre operativo."
       ]
     ],
-    "bandTitle": "Food logistics designed to protect product and continuity.",
-    "bandText": "Our team coordinates operations for companies that need punctuality, traceability and professional response in food, beverages and consumer products.",
+    "bandTitle": "Logística de consumo diseñada para mantener la mercancía en movimiento.",
+    "bandText": "Nuestro equipo coordina operaciones para marcas y distribuidores que necesitan stock visible, preparación eficiente y entregas confiables.",
     "stats": [
       [
-        "Traceability",
-        "Operational tracking"
+        "Distribución",
+        "Cobertura operativa"
       ],
       [
-        "Distribution",
-        "Coordinated deliveries"
+        "Stock",
+        "Control y visibilidad"
       ],
       [
-        "Cold chain",
-        "When required"
+        "Retail",
+        "Puntos de venta"
       ],
       [
-        "Expert support",
-        "Dedicated specialists"
+        "Soporte experto",
+        "Especialistas dedicados"
       ]
     ],
-    "finalTitle": "Let’s coordinate your next food and beverage operation.",
-    "finalText": "Tell us product type, volume, origin, destination and requirements. Our team will analyze the best logistics solution.",
-    "finalPrimary": "Request logistics proposal",
-    "finalSecondary": "Talk to a specialist"
+    "finalTitle": "Coordinemos su operación de consumo y distribución.",
+    "finalText": "Cuéntenos tipo de producto, volumen, frecuencia de salidas y destinos. Nuestro equipo analizará la mejor solución logística.",
+    "finalPrimary": "Solicitar propuesta logística",
+    "finalSecondary": "Hablar con un especialista"
   },
   "zh": {
-    "heroEyebrow": "食品与饮料行业",
-    "heroTitle": "为需要时间、控制和信任的产品提供物流。",
-    "heroText": "我们为食品、饮料、易腐品和消费品设计物流运营，整合运输、仓储、配送、可追溯性和运营控制。",
+    "heroEyebrow": "Sector consumo y distribución",
+    "heroTitle": "Logística para productos de consumo que necesitan llegar a tiempo.",
+    "heroText": "Coordinamos transporte, almacenaje, preparación, distribución y trazabilidad para productos de consumo, retail, e-commerce y operaciones comerciales.",
     "primaryCta": "规划物流操作",
     "secondaryCta": "联系我们的团队",
-    "activeLabel": "进行中的食品操作",
-    "activeRoute": "供应商 → 配送",
-    "activeCargo": "食品与饮料",
-    "activeStatusLabel": "状态：",
-    "activeStatus": "协调中",
-    "activeEtaLabel": "优先级：",
-    "activeEta": "安全交付",
+    "activeLabel": "Operación de distribución activa",
+    "activeRoute": "Almacén → Cliente",
+    "activeCargo": "Productos de consumo",
+    "activeStatusLabel": "Estado:",
+    "activeStatus": "En distribución",
+    "activeEtaLabel": "Salida:",
+    "activeEta": "Programada",
     "trust": [
       [
-        "可追溯性",
-        "运营控制"
+        "Distribución",
+        "Entregas coordinadas"
       ],
       [
-        "配送",
-        "协调交付"
+        "Stock",
+        "Control operativo"
       ],
       [
-        "冷链",
-        "按需提供"
+        "Retail",
+        "Puntos de venta"
       ],
       [
-        "合规",
-        "文件与控制"
+        "Trazabilidad",
+        "Seguimiento"
       ]
     ],
-    "overviewEyebrow": "行业物流",
-    "overviewTitle": "为不能失败的食品供应链提供物流解决方案。",
-    "overviewText": "食品与饮料行业需要速度、产品保护、文件合规和连续性。我们协调运营以保护货物、降低风险并保持供应链流动。",
-    "overviewButton": "了解食品与饮料物流",
+    "overviewEyebrow": "Logística de consumo",
+    "overviewTitle": "Operaciones flexibles para marcas, retail y distribución comercial.",
+    "overviewText": "El consumo exige velocidad, cobertura, preparación eficiente y capacidad para responder a picos de demanda. Diseñamos operaciones para mover mercancía con orden y visibilidad.",
+    "overviewButton": "Conocer más sobre consumo",
     "pillars": [
       [
-        "产品控制",
-        "根据货物类型、敏感性、周转和交付要求进行协调。"
+        "Gestión de stock",
+        "Control de inventario, entradas, salidas y disponibilidad."
       ],
       [
-        "高效配送",
-        "为客户、零售或销售点规划出库、路线和交付。"
+        "Preparación de pedidos",
+        "Picking, packing y acondicionamiento según canal."
       ],
       [
-        "可追溯性",
-        "通过运营跟踪保持货物可视化。"
+        "Distribución",
+        "Entregas a clientes, tiendas, centros o puntos de venta."
       ],
       [
-        "冷链",
-        "当产品需要时提供温控解决方案。"
+        "Trazabilidad",
+        "Seguimiento de estados, tiempos y avance operativo."
       ]
     ],
-    "servicesEyebrow": "食品与饮料解决方案",
-    "servicesTitle": "为消费品设计的物流运营。",
+    "servicesEyebrow": "Soluciones para consumo y distribución",
+    "servicesTitle": "Logística para productos que se mueven todos los días.",
     "services": [
       [
-        "国内和国际运输",
-        "根据紧急程度和体量协调陆运、海运或空运。"
+        "Distribución nacional",
+        "Entregas regionales o nacionales para productos de consumo."
       ],
       [
-        "商业配送",
-        "配送到客户、连锁、销售点或配送中心。"
+        "Almacenaje",
+        "Gestión de stock y disponibilidad."
       ],
       [
-        "冷藏货物",
-        "为易腐或温度敏感产品提供解决方案。"
+        "Picking y packing",
+        "Preparación de pedidos para retail, B2B o e-commerce."
       ],
       [
-        "仓储与准备",
-        "库存管理、拣货、包装和计划出库。"
+        "Retail logistics",
+        "Abastecimiento hacia puntos de venta y cadenas comerciales."
       ],
       [
-        "进出口",
-        "为国际贸易提供文件、海关和运营支持。"
+        "E-commerce",
+        "Flujos de preparación y entrega para canal online."
       ],
       [
-        "门到门",
-        "从始发地到最终交付的完整协调。"
+        "Door to door",
+        "Coordinación completa hasta destino final."
       ]
     ],
-    "useCasesEyebrow": "何时需要专业物流",
-    "useCasesTitle": "当产品必须完好、准时且受控到达时。",
+    "useCasesEyebrow": "Cuándo necesita logística de consumo",
+    "useCasesTitle": "Cuando la demanda exige orden, velocidad y cobertura.",
     "useCases": [
       [
-        "易腐食品",
-        "需要精准时间和条件控制的操作。"
+        "Retail",
+        "Entregas hacia tiendas y puntos comerciales."
       ],
       [
-        "饮料",
-        "瓶装、包装或大批量产品配送。"
+        "E-commerce",
+        "Preparación y distribución de pedidos online."
       ],
       [
-        "零售与超市",
-        "向连锁和销售点进行计划交付。"
+        "Campañas",
+        "Picos de demanda y promociones."
       ],
       [
-        "进口商",
-        "为国际食品提供综合管理。"
+        "Stock estacional",
+        "Gestión de inventario por temporada."
       ],
       [
-        "商业活动",
-        "需求高峰和高周转交付。"
+        "Distribución B2B",
+        "Entregas a clientes corporativos o mayoristas."
       ],
       [
-        "敏感产品",
-        "需要保护、可追溯或温控的货物。"
+        "Productos de alta rotación",
+        "Movimientos frecuentes y controlados."
       ]
     ],
-    "processEyebrow": "我们的运营流程",
-    "processTitle": "从规划到交付，食品物流清晰可控。",
+    "processEyebrow": "Nuestro proceso operativo",
+    "processTitle": "Una operación de consumo clara desde el stock hasta la entrega.",
     "process": [
       [
-        "产品分析",
-        "审核货物类型、敏感性、体量和要求。"
+        "Análisis operativo",
+        "Revisamos producto, volumen, frecuencia y destinos."
       ],
       [
-        "物流设计",
-        "确定运输、仓储、配送和时间安排。"
+        "Diseño logístico",
+        "Definimos almacenamiento, preparación y distribución."
       ],
       [
-        "文件管理",
-        "按需协调商业、卫生或海关要求。"
+        "Documentación",
+        "Coordinamos requisitos comerciales y operativos."
       ],
       [
-        "操作准备",
-        "管理提货、装载、处理和出库。"
+        "Preparación",
+        "Gestionamos picking, packing y salida."
       ],
       [
-        "跟踪",
-        "监控进度、节点和可追溯性。"
+        "Seguimiento",
+        "Monitoreamos estados y entregas."
       ],
       [
-        "最终交付",
-        "协调收货、卸货和运营关闭。"
+        "Entrega final",
+        "Coordinamos recepción y cierre operativo."
       ]
     ],
-    "bandTitle": "为保护产品和连续性而设计的食品物流。",
-    "bandText": "我们的团队为食品、饮料和消费品企业协调需要准时、可追溯和专业响应的运营。",
+    "bandTitle": "Logística de consumo diseñada para mantener la mercancía en movimiento.",
+    "bandText": "Nuestro equipo coordina operaciones para marcas y distribuidores que necesitan stock visible, preparación eficiente y entregas confiables.",
     "stats": [
       [
-        "可追溯性",
-        "运营跟踪"
+        "Distribución",
+        "Cobertura operativa"
       ],
       [
-        "配送",
-        "协调交付"
+        "Stock",
+        "Control y visibilidad"
       ],
       [
-        "冷链",
-        "按需提供"
+        "Retail",
+        "Puntos de venta"
       ],
       [
-        "专家支持",
-        "专属专家"
+        "Soporte experto",
+        "Especialistas dedicados"
       ]
     ],
-    "finalTitle": "让我们协调您的下一次食品与饮料操作。",
-    "finalText": "告诉我们产品类型、数量、始发地、目的地和要求。我们的团队将分析最佳物流方案。",
-    "finalPrimary": "申请物流方案",
-    "finalSecondary": "联系专家"
+    "finalTitle": "Coordinemos su operación de consumo y distribución.",
+    "finalText": "Cuéntenos tipo de producto, volumen, frecuencia de salidas y destinos. Nuestro equipo analizará la mejor solución logística.",
+    "finalPrimary": "Solicitar propuesta logística",
+    "finalSecondary": "Hablar con un especialista"
   }
 } satisfies Record<Locale, any>;
 
@@ -740,7 +740,7 @@ function Icon({ name }: { name: IconName }) {
   }
 }
 
-export default function AlimentacionBebidasPage() {
+export default function ConsumoDistribucionPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
@@ -788,9 +788,9 @@ export default function AlimentacionBebidasPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={`${styles.hero} acrossPageHero`} data-sector-hero="true" data-standard-service-hero="true" data-sector-name="alimentacion-bebidas">
+        <section className={`${styles.hero} acrossPageHero`} data-sector-hero="true" data-standard-service-hero="true" data-sector-name="consumo-distribucion">
           <Image
-            src="/images/sectores/alimentosybebidas.png"
+            src="/images/sectores/consumo1.png"
             alt={t.heroTitle}
             fill
             priority
@@ -800,7 +800,7 @@ export default function AlimentacionBebidasPage() {
           />
 
           <Image
-            src="/images/sectores/alimentosybebidas.png"
+            src="/images/sectores/consumo2.png"
             alt={t.heroTitle}
             fill
             priority
@@ -843,7 +843,7 @@ export default function AlimentacionBebidasPage() {
 
         <section className={styles.trustBar}>
           {t.trust.map(([title, text]: string[], index: number) => {
-            const icons: IconName[] = ["timer", "shield", "document", "tracking"];
+            const icons: IconName[] = ["package", "truck", "tracking", "door", "globe", "document"];
 
             return (
               <div key={title}>
@@ -861,7 +861,7 @@ export default function AlimentacionBebidasPage() {
 
         <Certifications />
 
-        <section className={`${styles.overview} ${styles.overviewMobileBg}`} data-after-cert-overview="true" style={{ "--sector-overview-bg": "url('/images/sectores/alimentosybebidas.png')" } as CSSProperties}>
+        <section className={`${styles.overview} ${styles.overviewMobileBg}`} style={{ "--sector-overview-bg": "url('/images/sectores/consumo2.png')" } as CSSProperties}>
           <div className={styles.overviewCopy}>
             <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
             <h2>{t.overviewTitle}</h2>
@@ -871,7 +871,7 @@ export default function AlimentacionBebidasPage() {
 
           <div className={styles.pillars}>
             {t.pillars.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["airport", "document", "tracking", "truck"];
+              const icons: IconName[] = ["search", "package", "document", "route", "tracking", "truck"];
 
               return (
                 <article key={title}>
@@ -894,7 +894,7 @@ export default function AlimentacionBebidasPage() {
 
           <div className={styles.serviceGrid}>
             {t.services.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["package", "shield", "truck", "tracking", "door", "document"];
+              const icons: IconName[] = ["plane", "box", "diamond", "charter", "globe", "door"];
 
               return (
                 <article key={title}>
@@ -940,7 +940,7 @@ export default function AlimentacionBebidasPage() {
 
           <div className={styles.processGrid}>
             {t.process.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["search", "package", "document", "route", "tracking", "truck"];
+              const icons: IconName[] = ["search", "route", "document", "plane", "tracking", "truck"];
 
               return (
                 <article key={title}>
@@ -959,7 +959,7 @@ export default function AlimentacionBebidasPage() {
         <section className={styles.darkBand} data-mobile-hide-after-cert="true" data-sector-dark-band="true">
           <div className={styles.darkBandImage}>
             <Image
-              src="/images/sectores/alimentosybebidas2.png"
+              src="/images/sectores/consumo2.png"
               alt={t.bandTitle}
               fill
               sizes="(max-width: 900px) 100vw, 42vw"
@@ -999,7 +999,7 @@ export default function AlimentacionBebidasPage() {
 
           <div className={styles.finalImage}>
             <Image
-              src="/images/sectores/alimentosybebidas.png"
+              src="/images/sectores/consumo1.png"
               alt={t.finalTitle}
               fill
               sizes="(max-width: 900px) 100vw, 44vw"
