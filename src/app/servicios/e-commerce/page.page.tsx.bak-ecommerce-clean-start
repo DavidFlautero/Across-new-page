@@ -8,495 +8,495 @@ import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import RelatedServices from "../_shared/RelatedServices";
-import styles from "./Aduanas.module.css";
+import styles from "./Servicio.module.css";
 
 type Locale = "es" | "en" | "zh";
 
 const copy = {
   "es": {
-    "heroEyebrow": "Servicios de aduanas",
-    "heroTitle": "Despacho aduanero para operaciones que no pueden quedar detenidas.",
-    "heroText": "Gestionamos documentación, clasificación, cumplimiento y coordinación aduanera para importaciones y exportaciones, reduciendo riesgos operativos y tiempos de liberación.",
+    "heroEyebrow": "Logística e-commerce",
+    "heroTitle": "Operaciones e-commerce preparadas para vender, preparar y entregar.",
+    "heroText": "Coordinamos soluciones logísticas para tiendas online, marketplaces y marcas digitales: almacenaje, preparación de pedidos, distribución, devoluciones y trazabilidad operativa.",
     "primaryCta": "Planificar mi operación",
     "secondaryCta": "Hablar con nuestro equipo",
-    "activeLabel": "Gestión aduanera activa",
-    "activeRoute": "Origen → Aduana → Destino",
-    "activeCargo": "Importación / Exportación",
+    "activeLabel": "Operación e-commerce activa",
+    "activeRoute": "Stock → Pedido → Cliente",
+    "activeCargo": "Fulfillment y distribución",
     "activeStatusLabel": "Estado:",
-    "activeStatus": "En revisión",
-    "activeEtaLabel": "Prioridad:",
-    "activeEta": "Liberación",
+    "activeStatus": "En preparación",
+    "activeEtaLabel": "Salida:",
+    "activeEta": "Programada",
     "trust": [
       [
-        "Documentación",
-        "Control aduanero"
+        "Fulfillment",
+        "Pedidos preparados"
       ],
       [
-        "Clasificación",
-        "Partidas arancelarias"
+        "Distribución",
+        "Entregas coordinadas"
       ],
       [
-        "Cumplimiento",
-        "Normativa vigente"
+        "Devoluciones",
+        "Logística inversa"
       ],
       [
-        "Liberación",
-        "Gestión operativa"
+        "Trazabilidad",
+        "Control operativo"
       ]
     ],
-    "overviewEyebrow": "Cumplimiento aduanero",
-    "overviewTitle": "Gestión documental y operativa para mover carga sin fricciones.",
-    "overviewText": "Una operación internacional puede detenerse por un documento incompleto, una clasificación incorrecta o una gestión tardía. Nuestro equipo coordina el proceso aduanero para reducir riesgos y mantener continuidad.",
-    "overviewButton": "Conocer más sobre aduanas",
+    "overviewEyebrow": "Operación digital",
+    "overviewTitle": "Logística diseñada para convertir pedidos online en entregas reales.",
+    "overviewText": "El e-commerce exige velocidad, orden, visibilidad y capacidad de respuesta. Diseñamos operaciones para gestionar stock, preparar pedidos, coordinar salidas y mantener trazabilidad desde el almacén hasta el cliente final.",
+    "overviewButton": "Conocer más sobre e-commerce",
     "pillars": [
       [
-        "Revisión documental",
-        "Control de facturas, packing list, certificados y documentos requeridos."
+        "Gestión de stock",
+        "Control de inventario, entradas, salidas y disponibilidad para operaciones online."
       ],
       [
-        "Clasificación arancelaria",
-        "Soporte para identificar partidas y requisitos aplicables."
+        "Preparación de pedidos",
+        "Picking, packing, etiquetado y acondicionamiento según canal de venta."
       ],
       [
-        "Gestión de despacho",
-        "Coordinación del proceso de importación o exportación con operadores y autoridades."
+        "Distribución coordinada",
+        "Planificación de entregas nacionales, regionales o dedicadas."
       ],
       [
-        "Cumplimiento normativo",
-        "Apoyo para reducir riesgos, errores y demoras operativas."
+        "Logística inversa",
+        "Gestión de devoluciones, cambios y recuperación de mercancía."
       ]
     ],
-    "servicesEyebrow": "Nuestros servicios aduaneros",
-    "servicesTitle": "Soluciones para importaciones y exportaciones con control.",
+    "servicesEyebrow": "Nuestros servicios e-commerce",
+    "servicesTitle": "Soluciones logísticas para marcas que venden online.",
     "services": [
       [
-        "Despacho de importación",
-        "Gestión documental y operativa para ingreso de mercancía."
+        "Fulfillment",
+        "Preparación integral de pedidos para tiendas online y marketplaces."
       ],
       [
-        "Despacho de exportación",
-        "Coordinación para salida internacional de carga."
+        "Almacenaje e-commerce",
+        "Stock organizado para operaciones digitales con alta rotación."
       ],
       [
-        "Clasificación arancelaria",
-        "Soporte para partidas, requisitos y tratamiento documental."
+        "Picking y packing",
+        "Preparación eficiente, ordenada y adaptada al tipo de producto."
       ],
       [
-        "Revisión documental",
-        "Validación de documentos comerciales y operativos."
+        "Distribución nacional",
+        "Coordinación de entregas hacia clientes, tiendas o puntos de retiro."
       ],
       [
-        "Asesoría aduanera",
-        "Acompañamiento para operaciones complejas o recurrentes."
+        "Logística inversa",
+        "Gestión de devoluciones, cambios y reingreso de mercancía."
       ],
       [
-        "Coordinación integral",
-        "Integración con transporte, almacén y entrega final."
+        "Operaciones omnicanal",
+        "Integración de flujos entre tienda online, retail y distribución B2B."
       ]
     ],
-    "useCasesEyebrow": "Cuándo necesita soporte aduanero",
-    "useCasesTitle": "Cuando la documentación define el avance de la operación.",
+    "useCasesEyebrow": "Cuándo necesita logística e-commerce",
+    "useCasesTitle": "Cuando vender online requiere una operación detrás.",
     "useCases": [
       [
-        "Importaciones",
-        "Ingreso de mercancía con control documental."
+        "Tiendas online",
+        "Preparación y despacho de pedidos desde inventario centralizado."
       ],
       [
-        "Exportaciones",
-        "Salida internacional con coordinación aduanera."
+        "Marketplaces",
+        "Operaciones con altos volúmenes, tiempos definidos y control de stock."
       ],
       [
-        "Carga sensible",
-        "Mercancías con requisitos específicos."
+        "Marcas D2C",
+        "Distribución directa al consumidor con experiencia de entrega cuidada."
       ],
       [
-        "Operaciones recurrentes",
-        "Procesos continuos que requieren orden y seguimiento."
+        "Campañas comerciales",
+        "Picos de demanda, promociones y eventos con mayor volumen."
       ],
       [
-        "Proyectos internacionales",
-        "Cargas con documentación compleja."
+        "Retail omnicanal",
+        "Conexión entre stock, tienda online, puntos físicos y entregas."
       ],
       [
-        "Multimodal",
-        "Operaciones que combinan transporte y despacho."
+        "Devoluciones",
+        "Gestión ordenada de cambios, reingresos y recuperación de producto."
       ]
     ],
     "processEyebrow": "Nuestro proceso operativo",
-    "processTitle": "Una gestión aduanera clara desde la revisión documental.",
+    "processTitle": "Una operación e-commerce clara desde el ingreso de stock hasta la entrega.",
     "process": [
       [
-        "Análisis inicial",
-        "Revisamos tipo de operación, carga y documentación disponible."
+        "Recepción de stock",
+        "Coordinamos ingreso, control e identificación de mercancía."
       ],
       [
-        "Validación documental",
-        "Controlamos requisitos, certificados y datos comerciales."
+        "Gestión de inventario",
+        "Organizamos disponibilidad, ubicación y estado operativo."
       ],
       [
-        "Clasificación",
-        "Apoyamos la identificación arancelaria y requisitos aplicables."
+        "Preparación",
+        "Ejecutamos picking, packing, etiquetado y acondicionamiento."
       ],
       [
-        "Coordinación de despacho",
-        "Gestionamos el avance con operadores y autoridades."
+        "Plan de salida",
+        "Coordinamos rutas, operadores y prioridades de entrega."
       ],
       [
         "Seguimiento",
-        "Monitoreamos estados y posibles observaciones."
+        "Monitoreamos estados, tiempos y trazabilidad del pedido."
       ],
       [
-        "Liberación",
-        "Coordinamos cierre aduanero y continuidad logística."
+        "Entrega o devolución",
+        "Cerramos la operación con entrega final o logística inversa."
       ]
     ],
-    "bandTitle": "Gestión aduanera diseñada para que la carga siga avanzando.",
-    "bandText": "Nuestro equipo coordina procesos aduaneros para empresas que necesitan cumplimiento, precisión documental y continuidad operativa en comercio internacional.",
+    "bandTitle": "Logística e-commerce diseñada para pedidos que no pueden quedarse quietos.",
+    "bandText": "Nuestro equipo coordina operaciones para marcas que necesitan control de stock, preparación eficiente, distribución confiable y respuesta profesional en cada pedido.",
     "stats": [
       [
-        "Documentación",
-        "Revisión y control"
+        "Fulfillment",
+        "Preparación de pedidos"
       ],
       [
-        "Clasificación",
-        "Soporte arancelario"
+        "Stock visible",
+        "Control operativo"
       ],
       [
-        "Despacho",
-        "Importación y exportación"
+        "Distribución",
+        "Entregas coordinadas"
       ],
       [
         "Soporte experto",
         "Especialistas dedicados"
       ]
     ],
-    "finalTitle": "Coordinemos su próxima operación aduanera.",
-    "finalText": "Cuéntenos tipo de operación, mercancía, origen, destino y documentación disponible. Nuestro equipo analizará el mejor camino para avanzar.",
-    "finalPrimary": "Solicitar soporte aduanero",
+    "finalTitle": "Coordinemos su operación e-commerce.",
+    "finalText": "Cuéntenos volumen de pedidos, tipo de producto, frecuencia de salidas y destinos. Nuestro equipo analizará la mejor solución logística para su canal online.",
+    "finalPrimary": "Solicitar propuesta e-commerce",
     "finalSecondary": "Hablar con un especialista"
   },
   "en": {
-    "heroEyebrow": "Customs services",
-    "heroTitle": "Customs clearance for operations that cannot remain stopped.",
-    "heroText": "We manage documentation, classification, compliance and customs coordination for imports and exports, reducing operational risks and release times.",
+    "heroEyebrow": "E-commerce logistics",
+    "heroTitle": "E-commerce operations built to sell, prepare and deliver.",
+    "heroText": "We coordinate logistics solutions for online stores, marketplaces and digital brands: warehousing, order preparation, distribution, returns and operational traceability.",
     "primaryCta": "Plan my operation",
     "secondaryCta": "Talk to our team",
-    "activeLabel": "Active customs management",
-    "activeRoute": "Origin → Customs → Destination",
-    "activeCargo": "Import / Export",
+    "activeLabel": "Active e-commerce operation",
+    "activeRoute": "Stock → Order → Customer",
+    "activeCargo": "Fulfillment and distribution",
     "activeStatusLabel": "Status:",
-    "activeStatus": "Under review",
-    "activeEtaLabel": "Priority:",
-    "activeEta": "Release",
+    "activeStatus": "In preparation",
+    "activeEtaLabel": "Dispatch:",
+    "activeEta": "Scheduled",
     "trust": [
       [
-        "Documentation",
-        "Customs control"
+        "Fulfillment",
+        "Orders prepared"
       ],
       [
-        "Classification",
-        "Tariff codes"
+        "Distribution",
+        "Coordinated deliveries"
       ],
       [
-        "Compliance",
-        "Current regulation"
+        "Returns",
+        "Reverse logistics"
       ],
       [
-        "Release",
-        "Operational management"
+        "Traceability",
+        "Operational control"
       ]
     ],
-    "overviewEyebrow": "Customs compliance",
-    "overviewTitle": "Documentary and operational management to move cargo without friction.",
-    "overviewText": "An international operation can be stopped by an incomplete document, an incorrect classification or late management. Our team coordinates the customs process to reduce risks and maintain continuity.",
-    "overviewButton": "Learn more about customs",
+    "overviewEyebrow": "Digital operation",
+    "overviewTitle": "Logistics designed to turn online orders into real deliveries.",
+    "overviewText": "E-commerce requires speed, order, visibility and response capacity. We design operations to manage stock, prepare orders, coordinate dispatches and maintain traceability from warehouse to final customer.",
+    "overviewButton": "Learn more about e-commerce",
     "pillars": [
       [
-        "Document review",
-        "Control of invoices, packing lists, certificates and required documents."
+        "Stock management",
+        "Inventory, inbound, outbound and availability control for online operations."
       ],
       [
-        "Tariff classification",
-        "Support to identify codes and applicable requirements."
+        "Order preparation",
+        "Picking, packing, labeling and conditioning according to the sales channel."
       ],
       [
-        "Clearance management",
-        "Coordination of import or export processes with operators and authorities."
+        "Coordinated distribution",
+        "Planning for national, regional or dedicated deliveries."
       ],
       [
-        "Regulatory compliance",
-        "Support to reduce risks, errors and operational delays."
+        "Reverse logistics",
+        "Management of returns, exchanges and goods recovery."
       ]
     ],
-    "servicesEyebrow": "Our customs services",
-    "servicesTitle": "Solutions for imports and exports with control.",
+    "servicesEyebrow": "Our e-commerce services",
+    "servicesTitle": "Logistics solutions for brands selling online.",
     "services": [
       [
-        "Import clearance",
-        "Documentary and operational management for goods entry."
+        "Fulfillment",
+        "End-to-end order preparation for online stores and marketplaces."
       ],
       [
-        "Export clearance",
-        "Coordination for international cargo departure."
+        "E-commerce warehousing",
+        "Organized stock for high-rotation digital operations."
       ],
       [
-        "Tariff classification",
-        "Support for codes, requirements and document treatment."
+        "Picking and packing",
+        "Efficient preparation adapted to product type."
       ],
       [
-        "Document review",
-        "Validation of commercial and operational documents."
+        "Domestic distribution",
+        "Delivery coordination to customers, stores or pickup points."
       ],
       [
-        "Customs advisory",
-        "Support for complex or recurring operations."
+        "Reverse logistics",
+        "Returns, exchanges and product re-entry management."
       ],
       [
-        "Integrated coordination",
-        "Integration with transport, warehousing and final delivery."
+        "Omnichannel operations",
+        "Flow integration between online store, retail and B2B distribution."
       ]
     ],
-    "useCasesEyebrow": "When customs support is needed",
-    "useCasesTitle": "When documentation defines operational progress.",
+    "useCasesEyebrow": "When e-commerce logistics is needed",
+    "useCasesTitle": "When selling online requires an operation behind it.",
     "useCases": [
       [
-        "Imports",
-        "Goods entry with document control."
+        "Online stores",
+        "Order preparation and dispatch from centralized inventory."
       ],
       [
-        "Exports",
-        "International departure with customs coordination."
+        "Marketplaces",
+        "Operations with high volumes, defined times and stock control."
       ],
       [
-        "Sensitive cargo",
-        "Goods with specific requirements."
+        "D2C brands",
+        "Direct-to-consumer distribution with a careful delivery experience."
       ],
       [
-        "Recurring operations",
-        "Continuous processes requiring order and tracking."
+        "Commercial campaigns",
+        "Demand peaks, promotions and high-volume events."
       ],
       [
-        "International projects",
-        "Cargo with complex documentation."
+        "Omnichannel retail",
+        "Connection between stock, online store, physical points and deliveries."
       ],
       [
-        "Multimodal",
-        "Operations combining transport and clearance."
+        "Returns",
+        "Organized management of exchanges, re-entry and product recovery."
       ]
     ],
     "processEyebrow": "Our operational process",
-    "processTitle": "Clear customs management from document review.",
+    "processTitle": "A clear e-commerce operation from stock entry to delivery.",
     "process": [
       [
-        "Initial analysis",
-        "We review operation type, cargo and available documentation."
+        "Stock reception",
+        "We coordinate inbound, control and goods identification."
       ],
       [
-        "Document validation",
-        "We control requirements, certificates and commercial data."
+        "Inventory management",
+        "We organize availability, location and operational status."
       ],
       [
-        "Classification",
-        "We support tariff identification and applicable requirements."
+        "Preparation",
+        "We execute picking, packing, labeling and conditioning."
       ],
       [
-        "Clearance coordination",
-        "We manage progress with operators and authorities."
+        "Dispatch plan",
+        "We coordinate routes, operators and delivery priorities."
       ],
       [
         "Tracking",
-        "We monitor statuses and possible observations."
+        "We monitor order statuses, times and traceability."
       ],
       [
-        "Release",
-        "We coordinate customs closure and logistics continuity."
+        "Delivery or return",
+        "We close the operation with final delivery or reverse logistics."
       ]
     ],
-    "bandTitle": "Customs management designed to keep cargo moving.",
-    "bandText": "Our team coordinates customs processes for companies that need compliance, documentary precision and operational continuity in international trade.",
+    "bandTitle": "E-commerce logistics designed for orders that cannot stand still.",
+    "bandText": "Our team coordinates operations for brands that need stock control, efficient preparation, reliable distribution and professional response for every order.",
     "stats": [
       [
-        "Documentation",
-        "Review and control"
+        "Fulfillment",
+        "Order preparation"
       ],
       [
-        "Classification",
-        "Tariff support"
+        "Visible stock",
+        "Operational control"
       ],
       [
-        "Clearance",
-        "Import and export"
+        "Distribution",
+        "Coordinated deliveries"
       ],
       [
         "Expert support",
         "Dedicated specialists"
       ]
     ],
-    "finalTitle": "Let’s coordinate your next customs operation.",
-    "finalText": "Tell us operation type, goods, origin, destination and available documentation. Our team will analyze the best path forward.",
-    "finalPrimary": "Request customs support",
+    "finalTitle": "Let’s coordinate your e-commerce operation.",
+    "finalText": "Tell us order volume, product type, dispatch frequency and destinations. Our team will analyze the best logistics solution for your online channel.",
+    "finalPrimary": "Request e-commerce proposal",
     "finalSecondary": "Talk to a specialist"
   },
   "zh": {
-    "heroEyebrow": "海关服务",
-    "heroTitle": "为不能停滞的业务提供清关服务。",
-    "heroText": "我们为进出口业务管理文件、归类、合规和海关协调，降低运营风险并缩短放行时间。",
+    "heroEyebrow": "电商物流",
+    "heroTitle": "为销售、准备和交付而设计的电商运营。",
+    "heroText": "我们为在线商店、平台和数字品牌协调物流解决方案：仓储、订单准备、配送、退货和运营可追溯性。",
     "primaryCta": "规划物流操作",
     "secondaryCta": "联系我们的团队",
-    "activeLabel": "进行中的海关管理",
-    "activeRoute": "始发地 → 海关 → 目的地",
-    "activeCargo": "进口 / 出口",
+    "activeLabel": "进行中的电商操作",
+    "activeRoute": "库存 → 订单 → 客户",
+    "activeCargo": "履约与配送",
     "activeStatusLabel": "状态：",
-    "activeStatus": "审核中",
-    "activeEtaLabel": "优先级：",
-    "activeEta": "放行",
+    "activeStatus": "准备中",
+    "activeEtaLabel": "出库：",
+    "activeEta": "已安排",
     "trust": [
       [
-        "文件",
-        "海关控制"
+        "订单履约",
+        "订单准备"
       ],
       [
-        "归类",
-        "税则编码"
+        "配送",
+        "协调交付"
       ],
       [
-        "合规",
-        "现行法规"
+        "退货",
+        "逆向物流"
       ],
       [
-        "放行",
-        "运营管理"
+        "可追溯",
+        "运营控制"
       ]
     ],
-    "overviewEyebrow": "海关合规",
-    "overviewTitle": "通过文件和运营管理让货物顺畅流动。",
-    "overviewText": "国际业务可能因文件不完整、归类错误或管理延迟而停滞。我们的团队协调海关流程以降低风险并保持连续性。",
-    "overviewButton": "了解海关服务",
+    "overviewEyebrow": "数字运营",
+    "overviewTitle": "将在线订单转化为真实交付的物流方案。",
+    "overviewText": "电商需要速度、秩序、可视化和响应能力。我们设计运营流程，用于管理库存、准备订单、协调出库，并从仓库到最终客户保持可追溯性。",
+    "overviewButton": "了解电商物流",
     "pillars": [
       [
-        "文件审核",
-        "控制发票、装箱单、证书和所需文件。"
+        "库存管理",
+        "为在线运营控制库存、入库、出库和可用性。"
       ],
       [
-        "税则归类",
-        "支持识别编码和适用要求。"
+        "订单准备",
+        "根据销售渠道进行拣货、包装、贴标和处理。"
       ],
       [
-        "清关管理",
-        "与运营商和主管部门协调进口或出口流程。"
+        "配送协调",
+        "规划全国、区域或专属交付。"
       ],
       [
-        "法规合规",
-        "帮助降低风险、错误和运营延误。"
+        "逆向物流",
+        "管理退货、换货和货物回收。"
       ]
     ],
-    "servicesEyebrow": "我们的海关服务",
-    "servicesTitle": "为进出口提供可控解决方案。",
+    "servicesEyebrow": "我们的电商服务",
+    "servicesTitle": "面向在线销售品牌的物流解决方案。",
     "services": [
       [
-        "进口清关",
-        "为货物进口提供文件和运营管理。"
+        "订单履约",
+        "为在线商店和平台提供完整订单准备。"
       ],
       [
-        "出口清关",
-        "协调国际货物出口。"
+        "电商仓储",
+        "为高周转数字运营提供有序库存。"
       ],
       [
-        "税则归类",
-        "支持编码、要求和文件处理。"
+        "拣货与包装",
+        "根据产品类型进行高效准备。"
       ],
       [
-        "文件审核",
-        "验证商业和运营文件。"
+        "国内配送",
+        "协调向客户、门店或自提点交付。"
       ],
       [
-        "海关咨询",
-        "为复杂或重复业务提供支持。"
+        "逆向物流",
+        "管理退货、换货和产品重新入库。"
       ],
       [
-        "综合协调",
-        "与运输、仓储和最终交付整合。"
+        "全渠道运营",
+        "整合在线商店、零售和 B2B 配送流程。"
       ]
     ],
-    "useCasesEyebrow": "何时需要海关支持",
-    "useCasesTitle": "当文件决定操作进度时。",
+    "useCasesEyebrow": "何时需要电商物流",
+    "useCasesTitle": "当在线销售背后需要运营时。",
     "useCases": [
       [
-        "进口",
-        "带有文件控制的货物入境。"
+        "在线商店",
+        "从集中库存准备和发送订单。"
       ],
       [
-        "出口",
-        "带有海关协调的国际出运。"
+        "平台业务",
+        "具有高订单量、固定时效和库存控制的操作。"
       ],
       [
-        "敏感货物",
-        "具有特定要求的货物。"
+        "D2C 品牌",
+        "直接面向消费者并重视交付体验。"
       ],
       [
-        "重复业务",
-        "需要秩序和跟踪的连续流程。"
+        "商业活动",
+        "需求高峰、促销和高订单量活动。"
       ],
       [
-        "国际项目",
-        "文件复杂的货物。"
+        "全渠道零售",
+        "连接库存、网店、实体点和交付。"
       ],
       [
-        "多式联运",
-        "结合运输和清关的业务。"
+        "退货",
+        "有序管理换货、重新入库和产品回收。"
       ]
     ],
     "processEyebrow": "我们的运营流程",
-    "processTitle": "从文件审核开始，海关管理清晰可控。",
+    "processTitle": "从库存入库到交付，电商操作清晰可控。",
     "process": [
       [
-        "初步分析",
-        "审核业务类型、货物和现有文件。"
+        "库存接收",
+        "协调入库、控制和货物识别。"
       ],
       [
-        "文件验证",
-        "控制要求、证书和商业数据。"
+        "库存管理",
+        "组织可用性、位置和运营状态。"
       ],
       [
-        "归类",
-        "支持税则识别和适用要求。"
+        "订单准备",
+        "执行拣货、包装、贴标和处理。"
       ],
       [
-        "清关协调",
-        "与运营商和主管部门推动流程。"
+        "出库计划",
+        "协调路线、运营商和交付优先级。"
       ],
       [
         "跟踪",
-        "监控状态和可能的问题。"
+        "监控订单状态、时间和可追溯性。"
       ],
       [
-        "放行",
-        "协调海关关闭和物流连续性。"
+        "交付或退货",
+        "通过最终交付或逆向物流关闭操作。"
       ]
     ],
-    "bandTitle": "为保持货物流动而设计的海关管理。",
-    "bandText": "我们的团队为需要合规、文件精准和国际贸易运营连续性的企业协调海关流程。",
+    "bandTitle": "为不能停下来的订单设计的电商物流。",
+    "bandText": "我们的团队为需要库存控制、高效准备、可靠配送和专业响应的品牌协调运营。",
     "stats": [
       [
-        "文件",
-        "审核与控制"
+        "履约",
+        "订单准备"
       ],
       [
-        "归类",
-        "税则支持"
+        "库存可视",
+        "运营控制"
       ],
       [
-        "清关",
-        "进口与出口"
+        "配送",
+        "协调交付"
       ],
       [
         "专家支持",
         "专属专家"
       ]
     ],
-    "finalTitle": "让我们协调您的下一次海关操作。",
-    "finalText": "告诉我们业务类型、货物、始发地、目的地和现有文件。我们的团队将分析最佳推进路径。",
-    "finalPrimary": "申请海关支持",
+    "finalTitle": "让我们协调您的电商运营。",
+    "finalText": "告诉我们订单量、产品类型、出库频率和目的地。我们的团队将分析适合您在线渠道的最佳物流方案。",
+    "finalPrimary": "申请电商方案",
     "finalSecondary": "联系专家"
   }
 } satisfies Record<Locale, any>;
@@ -740,7 +740,7 @@ function Icon({ name }: { name: IconName }) {
   }
 }
 
-export default function AduanasPage() {
+export default function EcommercePage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
@@ -788,42 +788,40 @@ export default function AduanasPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={`${styles.hero} acrossPageHero`} data-service-hero="compact" data-standard-service-hero="true" data-service-name="aduanas">
+        <section className={`${styles.hero} acrossPageHero`} data-service-hero="compact">
           <Image
-            src="/images/aduanashero.png"
+            src="/images/heroecommerce.png"
             alt={t.heroTitle}
             fill
             priority
             sizes="(max-width: 900px) 0px, 100vw"
-            data-hero-role="desktop-image"
             className={`${styles.heroImage} ${styles.heroImageDesktop}`}
           />
 
           <Image
-            src="/images/aduanashero.png"
+            src="/images/heroecommerce.png"
             alt={t.heroTitle}
             fill
             priority
             sizes="(max-width: 900px) 100vw, 0px"
-            data-hero-role="mobile-image"
             className={`${styles.heroImage} ${styles.heroImageMobile}`}
           />
 
-          <div data-hero-role="overlay" className={styles.heroOverlay} />
+          <div className={styles.heroOverlay} />
 
-          <div data-hero-role="inner" className={styles.heroInner}>
-            <div data-hero-role="content" className={styles.heroContent}>
-              <span data-hero-role="eyebrow" className={styles.eyebrow}>{t.heroEyebrow}</span>
-              <h1 data-hero-role="title">{t.heroTitle}</h1>
-              <p data-hero-role="text">{t.heroText}</p>
+          <div className={styles.heroInner}>
+            <div className={styles.heroContent}>
+              <span className={styles.eyebrow}>{t.heroEyebrow}</span>
+              <h1>{t.heroTitle}</h1>
+              <p>{t.heroText}</p>
 
-              <div data-hero-role="actions" className={styles.actions}>
+              <div className={styles.actions}>
                 <Link href="/cotizacion">{t.primaryCta}</Link>
                 <Link href="/contacto">{t.secondaryCta}</Link>
               </div>
             </div>
 
-            <div data-hero-role="card" className={styles.operationCard}>
+            <div className={styles.operationCard}>
               <span>{t.activeLabel}</span>
               <strong>{t.activeRoute}</strong>
               <p>{t.activeCargo}</p>
@@ -886,7 +884,7 @@ export default function AduanasPage() {
           </div>
         </section>
 
-        <section className={styles.services} style={{ "--mobile-bg": "url('/images/caduana.png')" } as CSSProperties}>
+        <section className={styles.services} style={{ "--mobile-bg": "url('/images/ecommerce.png')" } as CSSProperties}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -894,7 +892,7 @@ export default function AduanasPage() {
 
           <div className={styles.serviceGrid}>
             {t.services.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["plane", "box", "diamond", "charter", "globe", "door"];
+              const icons: IconName[] = ["package", "cart", "box", "truck", "tracking", "door"];
 
               return (
                 <article key={title}>
@@ -940,7 +938,7 @@ export default function AduanasPage() {
 
           <div className={styles.processGrid}>
             {t.process.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["search", "route", "document", "plane", "tracking", "truck"];
+              const icons: IconName[] = ["package", "box", "document", "route", "tracking", "truck"];
 
               return (
                 <article key={title}>
@@ -956,10 +954,10 @@ export default function AduanasPage() {
           </div>
         </section>
 
-        <section className={styles.darkBand} data-aduanas-extra-cta="true">
+        <section className={styles.darkBand}>
           <div className={styles.darkBandImage}>
             <Image
-              src="/images/caduana.png"
+              src="/images/ecommerce.png"
               alt={t.bandTitle}
               fill
               sizes="(max-width: 900px) 100vw, 42vw"
@@ -986,7 +984,7 @@ export default function AduanasPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/aduanashero.png')" } as CSSProperties} data-aduanas-cta="true">
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/heroecommerce.png')" } as CSSProperties}>
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>
@@ -999,7 +997,7 @@ export default function AduanasPage() {
 
           <div className={styles.finalImage}>
             <Image
-              src="/images/aduanashero.png"
+              src="/images/heroecommerce.png"
               alt={t.finalTitle}
               fill
               sizes="(max-width: 900px) 100vw, 44vw"
@@ -1007,7 +1005,7 @@ export default function AduanasPage() {
           </div>
         </section>
 
-        <RelatedServices current="aduanas" locale={locale} />
+        <RelatedServices current="e-commerce" locale={locale} />
       </main>
 
       <Footer />

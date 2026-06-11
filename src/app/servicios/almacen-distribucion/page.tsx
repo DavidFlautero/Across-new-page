@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import RelatedServices from "../_shared/RelatedServices";
-import styles from "./Servicio.module.css";
+import styles from "./AlmacenDistribucion.module.css";
 
 type Locale = "es" | "en" | "zh";
 
@@ -45,7 +45,7 @@ const copy = {
       ]
     ],
     "overviewEyebrow": "Gestión logística",
-    "overviewTitle": "Orden, control y distribución para operaciones que no pueden detenerse.",
+    "overviewTitle": "Almacén y distribución sin interrupciones.",
     "overviewText": "Una operación de almacén eficiente requiere control de stock, preparación precisa, coordinación de salidas y seguimiento. Diseñamos soluciones para mejorar continuidad, visibilidad y respuesta logística.",
     "overviewButton": "Conocer más sobre almacén",
     "pillars": [
@@ -788,13 +788,14 @@ export default function AlmacenDistribucionPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={`${styles.hero} acrossPageHero`} data-service-hero="compact">
+        <section className={`${styles.hero} acrossPageHero`} data-service-hero="compact" data-standard-service-hero="true" data-service-name="almacen">
           <Image
             src="/images/almacenHero.png"
             alt={t.heroTitle}
             fill
             priority
             sizes="(max-width: 900px) 0px, 100vw"
+            data-hero-role="desktop-image"
             className={`${styles.heroImage} ${styles.heroImageDesktop}`}
           />
 
@@ -804,24 +805,25 @@ export default function AlmacenDistribucionPage() {
             fill
             priority
             sizes="(max-width: 900px) 100vw, 0px"
+            data-hero-role="mobile-image"
             className={`${styles.heroImage} ${styles.heroImageMobile}`}
           />
 
-          <div className={styles.heroOverlay} />
+          <div data-hero-role="overlay" className={styles.heroOverlay} />
 
-          <div className={styles.heroInner}>
-            <div className={styles.heroContent}>
-              <span className={styles.eyebrow}>{t.heroEyebrow}</span>
-              <h1>{t.heroTitle}</h1>
-              <p>{t.heroText}</p>
+          <div data-hero-role="inner" className={styles.heroInner}>
+            <div data-hero-role="content" className={styles.heroContent}>
+              <span data-hero-role="eyebrow" className={styles.eyebrow}>{t.heroEyebrow}</span>
+              <h1 data-hero-role="title">{t.heroTitle}</h1>
+              <p data-hero-role="text">{t.heroText}</p>
 
-              <div className={styles.actions}>
+              <div data-hero-role="actions" className={styles.actions}>
                 <Link href="/cotizacion">{t.primaryCta}</Link>
                 <Link href="/contacto">{t.secondaryCta}</Link>
               </div>
             </div>
 
-            <div className={styles.operationCard}>
+            <div data-hero-role="card" className={styles.operationCard}>
               <span>{t.activeLabel}</span>
               <strong>{t.activeRoute}</strong>
               <p>{t.activeCargo}</p>
@@ -954,7 +956,7 @@ export default function AlmacenDistribucionPage() {
           </div>
         </section>
 
-        <section className={styles.darkBand}>
+        <section className={styles.darkBand} data-almacen-extra-cta="true">
           <div className={styles.darkBandImage}>
             <Image
               src="/images/almacen.png"
@@ -984,7 +986,7 @@ export default function AlmacenDistribucionPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/almacenHero.png')" } as CSSProperties}>
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/almacenHero.png')" } as CSSProperties} data-almacen-cta="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>
