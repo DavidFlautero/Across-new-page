@@ -6220,3 +6220,494 @@
     0 8px 24px rgba(214,192,141,.09),
     inset 0 1px 0 rgba(255,255,255,.82) !important;
 }
+
+/* =====================================================
+   ZZZ CARGAS HERO MOBILE/TABLET FINAL LOCK
+   Desktop grande queda intacto.
+   Corrige:
+   - letras y posición en mobile/tablet
+   - Surface / Nest Hub / tablet landscape
+   - trustBar compacta como aéreo/marítimo
+   - cortes de espacio debajo de certificaciones
+   ===================================================== */
+
+/* Base solo para hero marcado */
+.page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+}
+
+/* Quitar decoraciones viejas del título */
+.page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="title"]::before,
+.page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="title"]::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Card lateral fuera en todos los tamaños menores a desktop grande */
+@media (max-width: 1200px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="card"],
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] .operationCard {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}
+
+/* =========================
+   TABLET / NEST HUB LANDSCAPE
+   901px - 1200px
+   ========================= */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] {
+    height: 500px !important;
+    min-height: 500px !important;
+    max-height: 500px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="desktop-image"] {
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    z-index: -4 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="mobile-image"] {
+    display: none !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="inner"] {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 145px !important;
+    left: clamp(46px, 5.8vw, 64px) !important;
+    right: clamp(42px, 5.8vw, 64px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="content"] {
+    max-width: 520px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="eyebrow"] {
+    display: block !important;
+    max-width: 520px !important;
+    margin: 0 0 .55rem !important;
+    color: #d6c08d !important;
+    font-size: .56rem !important;
+    line-height: 1 !important;
+    letter-spacing: .17em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="title"] {
+    max-width: 520px !important;
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: clamp(2.22rem, 4vw, 2.72rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.045em !important;
+    font-weight: 950 !important;
+    text-wrap: balance !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="text"] {
+    max-width: 445px !important;
+    margin: .78rem 0 0 !important;
+    color: rgba(255,255,255,.9) !important;
+    font-size: .76rem !important;
+    line-height: 1.42 !important;
+    font-weight: 650 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="actions"] {
+    display: flex !important;
+    gap: .62rem !important;
+    margin: 1rem 0 0 !important;
+    padding: 0 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="actions"] a {
+    min-height: 36px !important;
+    padding: 0 1.05rem !important;
+    border-radius: 999px !important;
+    font-size: .54rem !important;
+    line-height: 1 !important;
+    letter-spacing: .05em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+/* Nest Hub 1024x600 específico */
+@media (min-width: 980px) and (max-width: 1100px) and (max-height: 650px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] {
+    height: 480px !important;
+    min-height: 480px !important;
+    max-height: 480px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="inner"] {
+    top: 142px !important;
+    left: 58px !important;
+    right: 58px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="title"] {
+    font-size: 2.48rem !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="text"] {
+    max-width: 430px !important;
+    font-size: .74rem !important;
+  }
+}
+
+/* =========================
+   TABLET VERTICAL / SURFACE
+   ========================= */
+@media (min-width: 701px) and (max-width: 1024px) and (orientation: portrait) {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] {
+    height: 560px !important;
+    min-height: 560px !important;
+    max-height: 560px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="desktop-image"] {
+    display: none !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="mobile-image"] {
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center bottom !important;
+    z-index: -4 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="inner"] {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 122px !important;
+    left: clamp(46px, 7vw, 62px) !important;
+    right: clamp(46px, 7vw, 62px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="content"] {
+    max-width: 430px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="eyebrow"] {
+    margin: 0 0 .56rem !important;
+    color: #d6c08d !important;
+    font-size: .54rem !important;
+    line-height: 1 !important;
+    letter-spacing: .17em !important;
+    font-weight: 950 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="title"] {
+    max-width: 430px !important;
+    margin: 0 !important;
+    font-size: clamp(2.05rem, 5.1vw, 2.58rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.045em !important;
+    font-weight: 950 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="text"] {
+    max-width: 370px !important;
+    margin: .8rem 0 0 !important;
+    font-size: .76rem !important;
+    line-height: 1.42 !important;
+    font-weight: 650 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="actions"] {
+    display: flex !important;
+    gap: .58rem !important;
+    margin: 1rem 0 0 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="actions"] a {
+    min-height: 36px !important;
+    padding: 0 1rem !important;
+    font-size: .54rem !important;
+  }
+}
+
+/* =========================
+   MOBILE REAL
+   ========================= */
+@media (max-width: 700px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] {
+    height: 465px !important;
+    min-height: 465px !important;
+    max-height: 465px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="desktop-image"] {
+    display: none !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="mobile-image"] {
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center bottom !important;
+    z-index: -4 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="inner"] {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 86px !important;
+    left: 20px !important;
+    right: 20px !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="content"] {
+    max-width: 318px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="eyebrow"] {
+    max-width: 318px !important;
+    margin: 0 0 .5rem !important;
+    color: #d6c08d !important;
+    font-size: .5rem !important;
+    line-height: 1 !important;
+    letter-spacing: .15em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="title"] {
+    max-width: 318px !important;
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: clamp(1.68rem, 8.1vw, 2.08rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.045em !important;
+    font-weight: 950 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="text"] {
+    max-width: 292px !important;
+    margin: .68rem 0 0 !important;
+    color: rgba(255,255,255,.9) !important;
+    font-size: .62rem !important;
+    line-height: 1.36 !important;
+    font-weight: 650 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="actions"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    max-width: 250px !important;
+    margin: .92rem 0 0 !important;
+    gap: .5rem !important;
+    padding: 0 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="actions"] a {
+    width: 100% !important;
+    min-height: 34px !important;
+    padding: 0 .8rem !important;
+    border-radius: 999px !important;
+    font-size: .52rem !important;
+    line-height: 1.05 !important;
+    letter-spacing: .045em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="actions"] a:nth-of-type(2) {
+    display: none !important;
+  }
+
+  /* TRUSTBAR compacta 2x2 como las anteriores */
+  .page .trustBar {
+    height: 108px !important;
+    min-height: 108px !important;
+    max-height: 108px !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-rows: repeat(2, 54px) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 0 !important;
+    background: #05101b !important;
+    border-top: 1px solid rgba(255,255,255,.08) !important;
+    border-bottom: 1px solid rgba(255,255,255,.08) !important;
+    overflow: hidden !important;
+  }
+
+  .page .trustBar > div {
+    height: 54px !important;
+    min-height: 54px !important;
+    padding: 0 .85rem !important;
+    margin: 0 !important;
+    display: grid !important;
+    grid-template-columns: 30px 1fr !important;
+    align-items: center !important;
+    column-gap: .55rem !important;
+    border-right: 1px solid rgba(255,255,255,.08) !important;
+    border-bottom: 1px solid rgba(255,255,255,.08) !important;
+  }
+
+  .page .trustBar i {
+    width: 26px !important;
+    height: 26px !important;
+    min-width: 26px !important;
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .page .trustBar strong {
+    display: block !important;
+    margin: 0 0 .08rem !important;
+    font-size: .56rem !important;
+    line-height: 1.05 !important;
+    letter-spacing: .035em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    color: #fff !important;
+  }
+
+  .page .trustBar span,
+  .page .trustBar p,
+  .page .trustBar small {
+    display: block !important;
+    margin: 0 !important;
+    font-size: .5rem !important;
+    line-height: 1.08 !important;
+    color: rgba(255,255,255,.72) !important;
+  }
+
+  /* Cortar espacio vacío bajo certificaciones */
+  .page .overview {
+    padding-top: 1rem !important;
+    margin-top: 0 !important;
+  }
+
+  .page .overview::before,
+  .page .overview::after {
+    display: none !important;
+  }
+
+  /* Ocultar cards/pilares internas en mobile */
+  .page .pillars,
+  .page .pillarGrid,
+  .page .features,
+  .page .featureGrid,
+  .page .featureCards,
+  .page .overviewCards,
+  .page .benefitsGrid,
+  .page .serviceGrid,
+  .page [class*="pillars"],
+  .page [class*="Pillars"],
+  .page [class*="pillar"],
+  .page [class*="Pillar"] {
+    display: none !important;
+  }
+}
+
+/* MOBILE CHICO */
+@media (max-width: 390px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] {
+    height: 455px !important;
+    min-height: 455px !important;
+    max-height: 455px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="inner"] {
+    top: 84px !important;
+    left: 18px !important;
+    right: 18px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="content"] {
+    max-width: 300px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="title"] {
+    max-width: 300px !important;
+    font-size: 1.74rem !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="cargas"] [data-hero-role="text"] {
+    max-width: 282px !important;
+    font-size: .6rem !important;
+  }
+
+  .page .trustBar {
+    height: 104px !important;
+    min-height: 104px !important;
+    max-height: 104px !important;
+    grid-template-rows: repeat(2, 52px) !important;
+  }
+
+  .page .trustBar > div {
+    height: 52px !important;
+    min-height: 52px !important;
+    padding: 0 .72rem !important;
+    grid-template-columns: 28px 1fr !important;
+    column-gap: .48rem !important;
+  }
+}
+
+
