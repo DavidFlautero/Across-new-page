@@ -6789,3 +6789,224 @@
   }
 }
 
+
+/* =====================================================
+   AEREO HERO BRIGHT CORPORATE FINAL
+   Más luz al hero sin tocar estructura, texto ni botones.
+   ===================================================== */
+
+.page > .hero .heroImage {
+  filter: brightness(1.12) contrast(1.06) saturate(1.20) !important;
+}
+
+/* Menos sombra general: mantiene lectura en izquierda y deja vivir el avión */
+.page > .hero .heroOverlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 7, 13, .78) 0%,
+      rgba(3, 7, 13, .56) 28%,
+      rgba(3, 7, 13, .24) 52%,
+      rgba(3, 7, 13, .02) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 7, 13, .06) 0%,
+      rgba(3, 7, 13, .04) 46%,
+      rgba(3, 7, 13, .14) 100%
+    ) !important;
+}
+
+/* Luz cálida en avión / cielo / pista */
+.page > .hero::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -2 !important;
+  pointer-events: none !important;
+  background:
+    radial-gradient(
+      circle at 74% 38%,
+      rgba(255, 226, 170, .36),
+      rgba(255, 195, 105, .18) 26%,
+      transparent 52%
+    ),
+    radial-gradient(
+      circle at 55% 68%,
+      rgba(255, 180, 70, .26),
+      transparent 38%
+    ) !important;
+}
+
+/* Mobile/tablet: un poco menos de luz para que el texto no pierda contraste */
+@media (max-width: 900px) {
+  .page > .hero .heroImage {
+    filter: brightness(1.04) contrast(1.06) saturate(1.16) !important;
+  }
+
+  .page > .hero .heroOverlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(3, 7, 13, .80) 0%,
+        rgba(3, 7, 13, .56) 44%,
+        rgba(3, 7, 13, .14) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(3, 7, 13, .08) 0%,
+        rgba(3, 7, 13, .06) 48%,
+        rgba(3, 7, 13, .20) 100%
+      ) !important;
+  }
+
+  .page > .hero::after {
+    background:
+      radial-gradient(
+        circle at 74% 44%,
+        rgba(255, 220, 150, .24),
+        rgba(255, 190, 96, .12) 25%,
+        transparent 50%
+      ) !important;
+  }
+}
+
+
+/* =====================================================
+   AEREO HERO REAL IMAGE SWITCH HARD LOCK
+   Fuerza desktop/mobile con las clases reales del JSX.
+   ===================================================== */
+
+.page > .hero .heroImageDesktop {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: -4 !important;
+}
+
+.page > .hero .heroImageMobile {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  z-index: -5 !important;
+}
+
+@media (max-width: 900px) {
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    z-index: -5 !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: -4 !important;
+  }
+}
+
+@media (min-width: 901px) {
+  .page > .hero .heroImageDesktop {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: -4 !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    z-index: -5 !important;
+  }
+}
+
+
+/* =====================================================
+   AEREO HERO REAL IMAGE SWITCH HARD LOCK
+   Fuerza desktop/mobile con las clases reales del JSX.
+   ===================================================== */
+
+.page > .hero .heroImageDesktop {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: -4 !important;
+}
+
+.page > .hero .heroImageMobile {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  z-index: -5 !important;
+}
+
+@media (max-width: 900px) {
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    z-index: -5 !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: -4 !important;
+  }
+}
+
+@media (min-width: 901px) {
+  .page > .hero .heroImageDesktop {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: -4 !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    z-index: -5 !important;
+  }
+}
+
+
+/* =====================================================
+   AEREO MOBILE CERTIFICATIONS GAP FIX
+   Reduce espacio vacío entre certificaciones y overview.
+   ===================================================== */
+
+@media (max-width: 700px) {
+  .page .overview {
+    padding-top: 1.6rem !important;
+    margin-top: 0 !important;
+  }
+
+  .page .overviewCopy {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .page .overview .eyebrow,
+  .page .overview [class*="eyebrow"],
+  .page .overview [class*="Eyebrow"] {
+    margin-top: 0 !important;
+  }
+
+  /* Por si el espacio viene del componente de certificaciones */
+  .page section + .overview {
+    margin-top: 0 !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .page .overview {
+    padding-top: 1.25rem !important;
+  }
+}
+

@@ -2889,3 +2889,122 @@ header,
 [class*="Header_header"] {
   z-index: 9999 !important;
 }
+
+/* =====================================================
+   HEADER CONTACT BLUE FIX
+   Cambia el rojo del botón Contacto por azul corporativo
+   en desktop y menú mobile.
+   ===================================================== */
+
+:root {
+  --across-header-blue: #0b2a3a;
+  --across-header-blue-soft: #10384d;
+  --across-header-gold: #d6c08d;
+}
+
+/* Botón Contacto del header desktop */
+header a[href="/contacto"],
+header [href="/contacto"],
+header button[class*="contact"],
+header a[class*="contact"],
+header [class*="Contact"] {
+  background: linear-gradient(135deg, var(--across-header-blue), var(--across-header-blue-soft)) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(214, 192, 141, .28) !important;
+  box-shadow:
+    0 14px 34px rgba(7, 17, 29, .28),
+    inset 0 1px 0 rgba(255,255,255,.12) !important;
+}
+
+/* Botón Contacto dentro del menú mobile */
+[class*="mobile"] a[href="/contacto"],
+[class*="Mobile"] a[href="/contacto"],
+[class*="drawer"] a[href="/contacto"],
+[class*="Drawer"] a[href="/contacto"],
+[class*="menu"] a[href="/contacto"],
+[class*="Menu"] a[href="/contacto"] {
+  background: linear-gradient(135deg, #0b2a3a, #123f56) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(214, 192, 141, .28) !important;
+  box-shadow:
+    0 18px 42px rgba(7, 17, 29, .22),
+    inset 0 1px 0 rgba(255,255,255,.14) !important;
+}
+
+/* Flechitas/acento rojo del menú mobile */
+[class*="mobile"] button,
+[class*="Mobile"] button,
+[class*="drawer"] button,
+[class*="Drawer"] button,
+[class*="menu"] button,
+[class*="Menu"] button {
+  --accent: #0b2a3a !important;
+}
+
+/* Si hay íconos/flechitas rojas dentro del menú */
+[class*="mobile"] svg,
+[class*="Mobile"] svg,
+[class*="drawer"] svg,
+[class*="Drawer"] svg,
+[class*="menu"] svg,
+[class*="Menu"] svg {
+  color: #0b2a3a;
+}
+
+
+/* =====================================================
+   MOBILE MENU BLUE BRAND FIX
+   Cambia rojo del drawer mobile a azul corporativo.
+   ===================================================== */
+
+@media (max-width: 900px) {
+  html body [class*="mobile"] a[href="/contacto"],
+  html body [class*="Mobile"] a[href="/contacto"],
+  html body [class*="drawer"] a[href="/contacto"],
+  html body [class*="Drawer"] a[href="/contacto"],
+  html body [class*="menu"] a[href="/contacto"],
+  html body [class*="Menu"] a[href="/contacto"],
+  html body nav a[href="/contacto"],
+  html body aside a[href="/contacto"],
+  html body div[role="dialog"] a[href="/contacto"] {
+    background: linear-gradient(135deg, #0b2a3a, #123f56) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(214, 192, 141, .30) !important;
+    box-shadow:
+      0 18px 42px rgba(7, 17, 29, .22),
+      inset 0 1px 0 rgba(255,255,255,.16) !important;
+  }
+
+  html body [class*="mobile"] a[href="/contacto"] *,
+  html body [class*="Mobile"] a[href="/contacto"] *,
+  html body [class*="drawer"] a[href="/contacto"] *,
+  html body [class*="Drawer"] a[href="/contacto"] *,
+  html body [class*="menu"] a[href="/contacto"] *,
+  html body [class*="Menu"] a[href="/contacto"] *,
+  html body div[role="dialog"] a[href="/contacto"] * {
+    color: #ffffff !important;
+  }
+
+  /* Flechas rojas del menú mobile */
+  html body [class*="mobile"] button,
+  html body [class*="Mobile"] button,
+  html body [class*="drawer"] button,
+  html body [class*="Drawer"] button,
+  html body [class*="menu"] button,
+  html body [class*="Menu"] button,
+  html body div[role="dialog"] button {
+    color: #0b2a3a !important;
+  }
+
+  html body [class*="mobile"] button svg,
+  html body [class*="Mobile"] button svg,
+  html body [class*="drawer"] button svg,
+  html body [class*="Drawer"] button svg,
+  html body [class*="menu"] button svg,
+  html body [class*="Menu"] button svg,
+  html body div[role="dialog"] button svg {
+    color: #0b2a3a !important;
+    stroke: #0b2a3a !important;
+  }
+}
+

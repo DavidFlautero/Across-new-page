@@ -2480,3 +2480,88 @@
     scale: 1 !important;
   }
 }
+
+/* =====================================================
+   RELATED SERVICES LIGHT CORPORATE FIX
+   La página es clara: las cards relacionadas no deben verse negras.
+   ===================================================== */
+
+.related {
+  background: #f4f1eb !important;
+  padding-top: 3.5rem !important;
+  padding-bottom: 4.5rem !important;
+}
+
+.relatedGrid {
+  background: transparent !important;
+}
+
+/* Cards más claras, menos dramáticas */
+.relatedGrid a,
+.relatedGrid article {
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 24px !important;
+  background: #fff !important;
+  border: 1px solid rgba(7, 17, 29, .08) !important;
+  box-shadow:
+    0 18px 44px rgba(7, 17, 29, .08),
+    inset 0 1px 0 rgba(255,255,255,.85) !important;
+}
+
+/* Imagen viva, no enterrada */
+.relatedGrid img {
+  filter: brightness(1.12) contrast(1.04) saturate(1.08) !important;
+  opacity: .92 !important;
+  transform: scale(1.01) !important;
+}
+
+/* Overlay suave: mantiene texto legible sin matar la imagen */
+.relatedGrid a::before,
+.relatedGrid article::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7,17,29,.04) 0%,
+      rgba(7,17,29,.10) 48%,
+      rgba(7,17,29,.48) 100%
+    ) !important;
+}
+
+/* Quitar capas negras extra si existían */
+.relatedGrid a::after,
+.relatedGrid article::after {
+  background: transparent !important;
+  opacity: 0 !important;
+}
+
+/* Texto con presencia, pero sin look oscuro pesado */
+.relatedGrid h3,
+.relatedGrid strong,
+.relatedGrid span {
+  position: relative !important;
+  z-index: 2 !important;
+  color: #fff !important;
+  text-shadow: 0 8px 22px rgba(0,0,0,.38) !important;
+}
+
+/* Hover más premium */
+.relatedGrid a:hover,
+.relatedGrid article:hover {
+  transform: translateY(-3px) !important;
+  box-shadow:
+    0 24px 58px rgba(7, 17, 29, .12),
+    inset 0 1px 0 rgba(255,255,255,.9) !important;
+}
+
+.relatedGrid a:hover img,
+.relatedGrid article:hover img {
+  filter: brightness(1.18) contrast(1.05) saturate(1.12) !important;
+  transform: scale(1.035) !important;
+}
+
