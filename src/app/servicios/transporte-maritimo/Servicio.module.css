@@ -6595,3 +6595,2238 @@
     0 8px 24px rgba(214,192,141,.09),
     inset 0 1px 0 rgba(255,255,255,.82) !important;
 }
+
+/* =====================================================
+   MARITIMO HERO SAME AS AEREO FINAL LOCK
+   Misma estructura visual del hero aéreo.
+   Solo cambia texto e imagen.
+   ===================================================== */
+
+/* Reset fuerte del hero */
+.page > .hero {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #fff !important;
+  background: #07111d !important;
+}
+
+/* Imagen */
+.page > .hero .heroImage {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  z-index: -4 !important;
+  filter: brightness(1.04) contrast(1.08) saturate(1.16) !important;
+}
+
+.page > .hero .heroImageDesktop {
+  display: block !important;
+  object-position: center center !important;
+}
+
+.page > .hero .heroImageMobile {
+  display: none !important;
+  object-position: center bottom !important;
+}
+
+/* Overlay igual al aéreo: texto legible, imagen viva */
+.page > .hero .heroOverlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -3 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 7, 13, .82) 0%,
+      rgba(3, 7, 13, .60) 30%,
+      rgba(3, 7, 13, .26) 58%,
+      rgba(3, 7, 13, .06) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 7, 13, .08) 0%,
+      rgba(3, 7, 13, .12) 48%,
+      rgba(3, 7, 13, .26) 100%
+    ) !important;
+}
+
+.page > .hero::before,
+.page > .hero::after {
+  pointer-events: none !important;
+}
+
+/* Desktop grande */
+@media (min-width: 1201px) {
+  .page > .hero {
+    height: clamp(700px, calc(100svh - 86px), 800px) !important;
+    min-height: 700px !important;
+    max-height: 800px !important;
+  }
+
+  .page > .hero .heroInner {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 155px !important;
+    left: clamp(72px, 7vw, 112px) !important;
+    right: clamp(72px, 7vw, 112px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    gap: 3rem !important;
+    transform: none !important;
+  }
+
+  .page > .hero .heroContent {
+    width: 100% !important;
+    max-width: 620px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .eyebrow {
+    display: block !important;
+    margin: 0 0 .72rem !important;
+    color: #d6c08d !important;
+    font-size: .72rem !important;
+    line-height: 1 !important;
+    letter-spacing: .17em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 620px !important;
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: clamp(3.45rem, 4.15vw, 4.75rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.05em !important;
+    font-weight: 950 !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 520px !important;
+    margin: 1.15rem 0 0 !important;
+    color: rgba(255,255,255,.9) !important;
+    font-size: 1.02rem !important;
+    line-height: 1.44 !important;
+    font-weight: 650 !important;
+  }
+
+  .page > .hero .actions {
+    display: flex !important;
+    gap: .72rem !important;
+    margin: 1.45rem 0 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 46px !important;
+    padding: 0 1.3rem !important;
+    border-radius: 999px !important;
+    font-size: .72rem !important;
+    line-height: 1 !important;
+    letter-spacing: .055em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+  }
+
+  .page > .hero .operationCard {
+    display: block !important;
+  }
+}
+
+/* Desktop bajo */
+@media (min-width: 1201px) and (max-height: 820px) {
+  .page > .hero {
+    height: 680px !important;
+    min-height: 680px !important;
+    max-height: 680px !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 138px !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    font-size: clamp(3.15rem, 3.85vw, 4.35rem) !important;
+  }
+}
+
+/* Tablet horizontal / laptop chica */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .page > .hero {
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+  }
+
+  .page > .hero .heroImageDesktop {
+    display: block !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: none !important;
+  }
+
+  .page > .hero .heroInner {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 118px !important;
+    left: clamp(58px, 7vw, 86px) !important;
+    right: clamp(58px, 7vw, 86px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    gap: 2rem !important;
+    transform: none !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 500px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin: 0 0 .6rem !important;
+    font-size: .62rem !important;
+    line-height: 1 !important;
+    letter-spacing: .16em !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 500px !important;
+    margin: 0 !important;
+    font-size: clamp(2.65rem, 4.6vw, 3.95rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.05em !important;
+    font-weight: 950 !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 430px !important;
+    margin: 1rem 0 0 !important;
+    font-size: .9rem !important;
+    line-height: 1.42 !important;
+  }
+
+  .page > .hero .actions {
+    display: flex !important;
+    gap: .65rem !important;
+    margin: 1.25rem 0 0 !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 42px !important;
+    padding: 0 1.1rem !important;
+    font-size: .66rem !important;
+  }
+
+  .page > .hero .operationCard {
+    display: none !important;
+  }
+}
+
+/* Tablet vertical */
+@media (min-width: 701px) and (max-width: 900px) {
+  .page > .hero {
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+  }
+
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: block !important;
+  }
+
+  .page > .hero .heroInner {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 122px !important;
+    left: clamp(46px, 7vw, 62px) !important;
+    right: clamp(46px, 7vw, 62px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 430px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin: 0 0 .58rem !important;
+    font-size: .58rem !important;
+    line-height: 1 !important;
+    letter-spacing: .16em !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 430px !important;
+    margin: 0 !important;
+    font-size: clamp(2.4rem, 7vw, 3.3rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.05em !important;
+    font-weight: 950 !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 380px !important;
+    margin: .92rem 0 0 !important;
+    font-size: .82rem !important;
+    line-height: 1.38 !important;
+  }
+
+  .page > .hero .actions {
+    display: flex !important;
+    gap: .6rem !important;
+    margin: 1.12rem 0 0 !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 39px !important;
+    padding: 0 1rem !important;
+    font-size: .6rem !important;
+  }
+
+  .page > .hero .operationCard {
+    display: none !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .page > .hero {
+    height: 465px !important;
+    min-height: 465px !important;
+    max-height: 465px !important;
+  }
+
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: block !important;
+    object-position: center bottom !important;
+  }
+
+  .page > .hero .heroInner {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 122px !important;
+    left: clamp(26px, 7vw, 38px) !important;
+    right: clamp(26px, 7vw, 38px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 315px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .eyebrow {
+    display: block !important;
+    max-width: 315px !important;
+    margin: 0 0 .52rem !important;
+    color: #d6c08d !important;
+    font-size: .52rem !important;
+    line-height: 1 !important;
+    letter-spacing: .15em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 315px !important;
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: clamp(1.72rem, 8.4vw, 2.18rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.045em !important;
+    font-weight: 950 !important;
+    text-wrap: balance !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 300px !important;
+    margin: .72rem 0 0 !important;
+    color: rgba(255,255,255,.9) !important;
+    font-size: .66rem !important;
+    line-height: 1.34 !important;
+    font-weight: 650 !important;
+  }
+
+  .page > .hero .actions {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    max-width: 250px !important;
+    gap: .5rem !important;
+    margin: 1rem 0 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .actions a {
+    width: 100% !important;
+    min-height: 34px !important;
+    padding: 0 .8rem !important;
+    border-radius: 999px !important;
+    font-size: .52rem !important;
+    line-height: 1.05 !important;
+    letter-spacing: .045em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .page > .hero .actions a:nth-of-type(2) {
+    display: none !important;
+  }
+
+  .page > .hero .operationCard {
+    display: none !important;
+  }
+}
+
+/* Mobile chico */
+@media (max-width: 390px) {
+  .page > .hero {
+    height: 455px !important;
+    min-height: 455px !important;
+    max-height: 455px !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 116px !important;
+    left: 24px !important;
+    right: 22px !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 300px !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 300px !important;
+    font-size: 1.78rem !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 285px !important;
+    font-size: .64rem !important;
+  }
+
+  .page > .hero .actions {
+    max-width: 245px !important;
+  }
+}
+
+/* =====================================================
+   MARITIMO HERO SAME AS AEREO FINAL LOCK
+   Misma estructura visual del hero aéreo.
+   Solo cambia texto e imagen.
+   ===================================================== */
+
+/* Reset fuerte del hero */
+.page > .hero {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #fff !important;
+  background: #07111d !important;
+}
+
+/* Imagen */
+.page > .hero .heroImage {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  z-index: -4 !important;
+  filter: brightness(1.04) contrast(1.08) saturate(1.16) !important;
+}
+
+.page > .hero .heroImageDesktop {
+  display: block !important;
+  object-position: center center !important;
+}
+
+.page > .hero .heroImageMobile {
+  display: none !important;
+  object-position: center bottom !important;
+}
+
+/* Overlay igual al aéreo: texto legible, imagen viva */
+.page > .hero .heroOverlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -3 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 7, 13, .82) 0%,
+      rgba(3, 7, 13, .60) 30%,
+      rgba(3, 7, 13, .26) 58%,
+      rgba(3, 7, 13, .06) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 7, 13, .08) 0%,
+      rgba(3, 7, 13, .12) 48%,
+      rgba(3, 7, 13, .26) 100%
+    ) !important;
+}
+
+.page > .hero::before,
+.page > .hero::after {
+  pointer-events: none !important;
+}
+
+/* Desktop grande */
+@media (min-width: 1201px) {
+  .page > .hero {
+    height: clamp(700px, calc(100svh - 86px), 800px) !important;
+    min-height: 700px !important;
+    max-height: 800px !important;
+  }
+
+  .page > .hero .heroInner {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 155px !important;
+    left: clamp(72px, 7vw, 112px) !important;
+    right: clamp(72px, 7vw, 112px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    gap: 3rem !important;
+    transform: none !important;
+  }
+
+  .page > .hero .heroContent {
+    width: 100% !important;
+    max-width: 620px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .eyebrow {
+    display: block !important;
+    margin: 0 0 .72rem !important;
+    color: #d6c08d !important;
+    font-size: .72rem !important;
+    line-height: 1 !important;
+    letter-spacing: .17em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 620px !important;
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: clamp(3.45rem, 4.15vw, 4.75rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.05em !important;
+    font-weight: 950 !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 520px !important;
+    margin: 1.15rem 0 0 !important;
+    color: rgba(255,255,255,.9) !important;
+    font-size: 1.02rem !important;
+    line-height: 1.44 !important;
+    font-weight: 650 !important;
+  }
+
+  .page > .hero .actions {
+    display: flex !important;
+    gap: .72rem !important;
+    margin: 1.45rem 0 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 46px !important;
+    padding: 0 1.3rem !important;
+    border-radius: 999px !important;
+    font-size: .72rem !important;
+    line-height: 1 !important;
+    letter-spacing: .055em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+  }
+
+  .page > .hero .operationCard {
+    display: block !important;
+  }
+}
+
+/* Desktop bajo */
+@media (min-width: 1201px) and (max-height: 820px) {
+  .page > .hero {
+    height: 680px !important;
+    min-height: 680px !important;
+    max-height: 680px !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 138px !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    font-size: clamp(3.15rem, 3.85vw, 4.35rem) !important;
+  }
+}
+
+/* Tablet horizontal / laptop chica */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .page > .hero {
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+  }
+
+  .page > .hero .heroImageDesktop {
+    display: block !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: none !important;
+  }
+
+  .page > .hero .heroInner {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 118px !important;
+    left: clamp(58px, 7vw, 86px) !important;
+    right: clamp(58px, 7vw, 86px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    gap: 2rem !important;
+    transform: none !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 500px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin: 0 0 .6rem !important;
+    font-size: .62rem !important;
+    line-height: 1 !important;
+    letter-spacing: .16em !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 500px !important;
+    margin: 0 !important;
+    font-size: clamp(2.65rem, 4.6vw, 3.95rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.05em !important;
+    font-weight: 950 !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 430px !important;
+    margin: 1rem 0 0 !important;
+    font-size: .9rem !important;
+    line-height: 1.42 !important;
+  }
+
+  .page > .hero .actions {
+    display: flex !important;
+    gap: .65rem !important;
+    margin: 1.25rem 0 0 !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 42px !important;
+    padding: 0 1.1rem !important;
+    font-size: .66rem !important;
+  }
+
+  .page > .hero .operationCard {
+    display: none !important;
+  }
+}
+
+/* Tablet vertical */
+@media (min-width: 701px) and (max-width: 900px) {
+  .page > .hero {
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+  }
+
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: block !important;
+  }
+
+  .page > .hero .heroInner {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 122px !important;
+    left: clamp(46px, 7vw, 62px) !important;
+    right: clamp(46px, 7vw, 62px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 430px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin: 0 0 .58rem !important;
+    font-size: .58rem !important;
+    line-height: 1 !important;
+    letter-spacing: .16em !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 430px !important;
+    margin: 0 !important;
+    font-size: clamp(2.4rem, 7vw, 3.3rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.05em !important;
+    font-weight: 950 !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 380px !important;
+    margin: .92rem 0 0 !important;
+    font-size: .82rem !important;
+    line-height: 1.38 !important;
+  }
+
+  .page > .hero .actions {
+    display: flex !important;
+    gap: .6rem !important;
+    margin: 1.12rem 0 0 !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 39px !important;
+    padding: 0 1rem !important;
+    font-size: .6rem !important;
+  }
+
+  .page > .hero .operationCard {
+    display: none !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .page > .hero {
+    height: 465px !important;
+    min-height: 465px !important;
+    max-height: 465px !important;
+  }
+
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: block !important;
+    object-position: center bottom !important;
+  }
+
+  .page > .hero .heroInner {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 122px !important;
+    left: clamp(26px, 7vw, 38px) !important;
+    right: clamp(26px, 7vw, 38px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 315px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .eyebrow {
+    display: block !important;
+    max-width: 315px !important;
+    margin: 0 0 .52rem !important;
+    color: #d6c08d !important;
+    font-size: .52rem !important;
+    line-height: 1 !important;
+    letter-spacing: .15em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 315px !important;
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: clamp(1.72rem, 8.4vw, 2.18rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.045em !important;
+    font-weight: 950 !important;
+    text-wrap: balance !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 300px !important;
+    margin: .72rem 0 0 !important;
+    color: rgba(255,255,255,.9) !important;
+    font-size: .66rem !important;
+    line-height: 1.34 !important;
+    font-weight: 650 !important;
+  }
+
+  .page > .hero .actions {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    max-width: 250px !important;
+    gap: .5rem !important;
+    margin: 1rem 0 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .actions a {
+    width: 100% !important;
+    min-height: 34px !important;
+    padding: 0 .8rem !important;
+    border-radius: 999px !important;
+    font-size: .52rem !important;
+    line-height: 1.05 !important;
+    letter-spacing: .045em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .page > .hero .actions a:nth-of-type(2) {
+    display: none !important;
+  }
+
+  .page > .hero .operationCard {
+    display: none !important;
+  }
+}
+
+/* Mobile chico */
+@media (max-width: 390px) {
+  .page > .hero {
+    height: 455px !important;
+    min-height: 455px !important;
+    max-height: 455px !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 116px !important;
+    left: 24px !important;
+    right: 22px !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 300px !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 300px !important;
+    font-size: 1.78rem !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 285px !important;
+    font-size: .64rem !important;
+  }
+
+  .page > .hero .actions {
+    max-width: 245px !important;
+  }
+}
+
+/* =====================================================
+   MARITIMO MOBILE SECTIONS + DESKTOP RESPONSIVE FINAL
+   Corrige:
+   - espacio vacío después de certificaciones
+   - oculta cards/pilares en mobile
+   - hero responsive en laptop/desktop
+   ===================================================== */
+
+/* =========================
+   MOBILE: cortar vacío después de certificaciones
+   ========================= */
+
+@media (max-width: 700px) {
+  .page .overview {
+    padding-top: 1.15rem !important;
+    margin-top: 0 !important;
+  }
+
+  .page .overviewCopy,
+  .page .overviewContent,
+  .page .overviewInner,
+  .page .overviewGrid {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .page .overview .eyebrow,
+  .page .overview [class*="eyebrow"],
+  .page .overview [class*="Eyebrow"] {
+    margin-top: 0 !important;
+    margin-bottom: .58rem !important;
+  }
+
+  .page .trustBar,
+  .page [class*="certification"],
+  .page [class*="Certification"] {
+    margin-bottom: 0 !important;
+  }
+
+  .page section + .overview,
+  .page [class*="Certification"] + .overview,
+  .page [class*="certification"] + .overview {
+    margin-top: 0 !important;
+  }
+
+  /* Sacar nieblas/fondos que generan aire falso */
+  .page .overview::before,
+  .page .overview::after {
+    display: none !important;
+  }
+}
+
+/* Mobile chico: todavía más compacto */
+@media (max-width: 390px) {
+  .page .overview {
+    padding-top: .9rem !important;
+  }
+}
+
+/* =========================
+   MOBILE: ocultar sección de cards/pilares
+   La de Coordinación portuaria / Control documental / Seguimiento
+   ========================= */
+
+@media (max-width: 700px) {
+  .page .pillars,
+  .page .pillarGrid,
+  .page .features,
+  .page .featureGrid,
+  .page .featureCards,
+  .page .overviewCards,
+  .page .benefitsGrid,
+  .page .serviceGrid,
+  .page [class*="pillars"],
+  .page [class*="Pillars"],
+  .page [class*="pillar"],
+  .page [class*="Pillar"] {
+    display: none !important;
+  }
+
+  .page .overview {
+    padding-bottom: 2rem !important;
+  }
+}
+
+/* =========================
+   DESKTOP/LAPTOP: hero responsive real
+   Para pantallas tipo notebook 1366x768 / 1440x900
+   ========================= */
+
+@media (min-width: 901px) and (max-width: 1440px) {
+  .page > .hero {
+    height: clamp(610px, calc(100svh - 74px), 700px) !important;
+    min-height: 610px !important;
+    max-height: 700px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .page > .hero .heroInner {
+    top: clamp(116px, 14vh, 142px) !important;
+    left: clamp(54px, 6vw, 86px) !important;
+    right: clamp(54px, 6vw, 86px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: clamp(1.4rem, 3vw, 2.6rem) !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: clamp(470px, 44vw, 590px) !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin-bottom: .64rem !important;
+    font-size: clamp(.58rem, .72vw, .68rem) !important;
+    line-height: 1 !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: clamp(470px, 44vw, 590px) !important;
+    font-size: clamp(2.85rem, 4vw, 4.35rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.05em !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: clamp(390px, 38vw, 500px) !important;
+    margin-top: .95rem !important;
+    font-size: clamp(.86rem, 1vw, .98rem) !important;
+    line-height: 1.42 !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: 1.2rem !important;
+    gap: .65rem !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 42px !important;
+    padding: 0 1.1rem !important;
+    font-size: .64rem !important;
+  }
+}
+
+/* Desktop bajo: evita que se corte en pantallas de poca altura */
+@media (min-width: 901px) and (max-height: 780px) {
+  .page > .hero {
+    height: 610px !important;
+    min-height: 610px !important;
+    max-height: 610px !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 108px !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    font-size: clamp(2.65rem, 3.7vw, 3.85rem) !important;
+  }
+
+  .page > .hero .heroContent p {
+    font-size: .86rem !important;
+    line-height: 1.38 !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: 1rem !important;
+  }
+}
+
+/* En laptop chica, la card lateral ensucia y rompe el responsive */
+@media (min-width: 901px) and (max-width: 1180px) {
+  .page > .hero .operationCard {
+    display: none !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 560px !important;
+  }
+}
+
+/* =====================================================
+   MARITIMO DESKTOP COMPACT CLEAN LOCK
+   Compacta 1280x800 / laptops / pantallas medianas.
+   Quita la card derecha que no aporta.
+   ===================================================== */
+
+@media (min-width: 901px) and (max-width: 1440px) {
+  .page > .hero {
+    height: clamp(560px, calc(100svh - 72px), 640px) !important;
+    min-height: 560px !important;
+    max-height: 640px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .page > .hero .operationCard {
+    display: none !important;
+  }
+
+  .page > .hero .heroInner {
+    position: absolute !important;
+    top: clamp(112px, 13vh, 132px) !important;
+    left: clamp(54px, 6vw, 78px) !important;
+    right: clamp(54px, 6vw, 78px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 560px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin: 0 0 .58rem !important;
+    font-size: .62rem !important;
+    line-height: 1 !important;
+    letter-spacing: .16em !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 560px !important;
+    margin: 0 !important;
+    font-size: clamp(2.7rem, 3.55vw, 3.65rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.05em !important;
+    font-weight: 950 !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 505px !important;
+    margin: .92rem 0 0 !important;
+    font-size: .88rem !important;
+    line-height: 1.38 !important;
+    font-weight: 650 !important;
+  }
+
+  .page > .hero .actions {
+    display: flex !important;
+    gap: .65rem !important;
+    margin: 1.12rem 0 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 40px !important;
+    padding: 0 1.15rem !important;
+    border-radius: 999px !important;
+    font-size: .62rem !important;
+    line-height: 1 !important;
+    letter-spacing: .052em !important;
+    font-weight: 950 !important;
+    white-space: nowrap !important;
+  }
+
+  .page > .hero .heroImage {
+    object-fit: cover !important;
+    object-position: center center !important;
+    filter: brightness(1.04) contrast(1.08) saturate(1.12) !important;
+  }
+
+  .page > .hero .heroOverlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(3, 7, 13, .82) 0%,
+        rgba(3, 7, 13, .60) 34%,
+        rgba(3, 7, 13, .28) 62%,
+        rgba(3, 7, 13, .08) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(3, 7, 13, .06) 0%,
+        rgba(3, 7, 13, .12) 52%,
+        rgba(3, 7, 13, .28) 100%
+      ) !important;
+  }
+}
+
+/* Pantallas de poca altura: todavía más compacto */
+@media (min-width: 901px) and (max-height: 820px) {
+  .page > .hero {
+    height: 560px !important;
+    min-height: 560px !important;
+    max-height: 560px !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 108px !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    font-size: clamp(2.45rem, 3.25vw, 3.25rem) !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 480px !important;
+    font-size: .82rem !important;
+    line-height: 1.36 !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: 1rem !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 38px !important;
+    font-size: .58rem !important;
+  }
+}
+
+/* 1280x800 específico / Nest Hub Max */
+@media (min-width: 1200px) and (max-width: 1320px) and (max-height: 850px) {
+  .page > .hero {
+    height: 555px !important;
+    min-height: 555px !important;
+    max-height: 555px !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 106px !important;
+    left: 72px !important;
+    right: 72px !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 545px !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 545px !important;
+    font-size: 3.05rem !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 485px !important;
+    font-size: .82rem !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 38px !important;
+  }
+}
+
+/* =====================================================
+   MARITIMO HERO RESPONSIVE REAL FINAL LOCK
+   Corrige Surface Pro, Nest Hub, laptop y desktop.
+   Mismo criterio visual del aéreo, pero compacto.
+   ===================================================== */
+
+/* Matar definitivamente la card derecha */
+.page > .hero .operationCard,
+.page > .hero [data-hero-role="card"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* =========================
+   DESKTOP GRANDE REAL
+   1366 / 1440 / 1600+
+   ========================= */
+
+@media (min-width: 1201px) {
+  .page > .hero {
+    height: 590px !important;
+    min-height: 590px !important;
+    max-height: 590px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .page > .hero .heroImageDesktop {
+    display: block !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: none !important;
+  }
+
+  .page > .hero .heroImage {
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  .page > .hero .heroInner {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 118px !important;
+    left: clamp(72px, 6vw, 96px) !important;
+    right: clamp(72px, 6vw, 96px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 545px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin: 0 0 .58rem !important;
+    font-size: .62rem !important;
+    line-height: 1 !important;
+    letter-spacing: .16em !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 545px !important;
+    margin: 0 !important;
+    font-size: clamp(2.9rem, 3.45vw, 3.7rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.05em !important;
+    font-weight: 950 !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 490px !important;
+    margin: .88rem 0 0 !important;
+    font-size: .84rem !important;
+    line-height: 1.36 !important;
+    font-weight: 650 !important;
+  }
+
+  .page > .hero .actions {
+    display: flex !important;
+    gap: .68rem !important;
+    margin: 1rem 0 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 38px !important;
+    padding: 0 1.12rem !important;
+    border-radius: 999px !important;
+    font-size: .58rem !important;
+    line-height: 1 !important;
+    letter-spacing: .052em !important;
+    font-weight: 950 !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* Desktop con poca altura: 1280x800, 1366x768 */
+@media (min-width: 1201px) and (max-height: 850px) {
+  .page > .hero {
+    height: 555px !important;
+    min-height: 555px !important;
+    max-height: 555px !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 108px !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 525px !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 525px !important;
+    font-size: clamp(2.65rem, 3.15vw, 3.25rem) !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 470px !important;
+    font-size: .8rem !important;
+    line-height: 1.34 !important;
+  }
+}
+
+/* =========================
+   NEST HUB / TABLET LANDSCAPE
+   901px - 1200px
+   ========================= */
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .page > .hero {
+    height: 500px !important;
+    min-height: 500px !important;
+    max-height: 500px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .page > .hero .heroImageDesktop {
+    display: block !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: none !important;
+  }
+
+  .page > .hero .heroImage {
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  .page > .hero .heroInner {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 168px !important;
+    left: clamp(56px, 6vw, 72px) !important;
+    right: clamp(56px, 6vw, 72px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 530px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin: 0 0 .5rem !important;
+    font-size: .56rem !important;
+    line-height: 1 !important;
+    letter-spacing: .15em !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 530px !important;
+    margin: 0 !important;
+    font-size: clamp(2.35rem, 4.4vw, 3rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.045em !important;
+    font-weight: 950 !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 455px !important;
+    margin: .72rem 0 0 !important;
+    font-size: .76rem !important;
+    line-height: 1.34 !important;
+    font-weight: 650 !important;
+  }
+
+  .page > .hero .actions {
+    display: flex !important;
+    gap: .6rem !important;
+    margin: .9rem 0 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 35px !important;
+    padding: 0 1rem !important;
+    font-size: .54rem !important;
+    line-height: 1 !important;
+    letter-spacing: .05em !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* Nest Hub 1024x600 específico */
+@media (min-width: 980px) and (max-width: 1100px) and (max-height: 650px) {
+  .page > .hero {
+    height: 480px !important;
+    min-height: 480px !important;
+    max-height: 480px !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 160px !important;
+    left: 62px !important;
+    right: 62px !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 520px !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 520px !important;
+    font-size: 2.55rem !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 440px !important;
+    font-size: .74rem !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 34px !important;
+    font-size: .52rem !important;
+  }
+}
+
+/* =========================
+   SURFACE PRO / TABLET PORTRAIT
+   701px - 1024px en vertical
+   ========================= */
+
+@media (min-width: 701px) and (max-width: 1024px) and (orientation: portrait) {
+  .page > .hero {
+    height: 560px !important;
+    min-height: 560px !important;
+    max-height: 560px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: block !important;
+  }
+
+  .page > .hero .heroImage {
+    object-fit: cover !important;
+    object-position: center bottom !important;
+  }
+
+  .page > .hero .heroInner {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 158px !important;
+    left: clamp(44px, 7vw, 64px) !important;
+    right: clamp(44px, 7vw, 64px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 430px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin: 0 0 .52rem !important;
+    font-size: .55rem !important;
+    line-height: 1 !important;
+    letter-spacing: .15em !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 430px !important;
+    margin: 0 !important;
+    font-size: clamp(2.15rem, 6vw, 2.85rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.045em !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 370px !important;
+    margin: .78rem 0 0 !important;
+    font-size: .76rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .page > .hero .actions {
+    display: flex !important;
+    gap: .58rem !important;
+    margin: .95rem 0 0 !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 36px !important;
+    padding: 0 .95rem !important;
+    font-size: .54rem !important;
+  }
+}
+
+/* =========================
+   MOBILE REAL
+   ========================= */
+
+@media (max-width: 700px) {
+  .page > .hero {
+    height: 445px !important;
+    min-height: 445px !important;
+    max-height: 445px !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 108px !important;
+    left: 28px !important;
+    right: 24px !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 270px !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 270px !important;
+    font-size: clamp(1.48rem, 7.2vw, 1.82rem) !important;
+    line-height: .98 !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 260px !important;
+    font-size: .56rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .page > .hero .actions {
+    max-width: 225px !important;
+    margin-top: .82rem !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 34px !important;
+    font-size: .48rem !important;
+  }
+}
+
+
+
+/* =====================================================
+   ZZZ MARITIMO HERO REAL FINAL LOCK
+   Usa los roles reales del JSX.
+   No depende de globals.
+   No card derecha.
+   ===================================================== */
+
+.page.page > .hero.hero[data-standard-service-hero="true"] {
+  position: relative !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background: #07111d !important;
+  color: #fff !important;
+}
+
+.page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="desktop-image"],
+.page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="mobile-image"] {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  z-index: -4 !important;
+  filter: brightness(1.03) contrast(1.08) saturate(1.14) !important;
+}
+
+.page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="overlay"] {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -3 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(90deg, rgba(3,7,13,.84) 0%, rgba(3,7,13,.58) 42%, rgba(3,7,13,.18) 100%),
+    linear-gradient(180deg, rgba(3,7,13,.08) 0%, rgba(3,7,13,.14) 50%, rgba(3,7,13,.34) 100%) !important;
+}
+
+.page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+  position: absolute !important;
+  z-index: 5 !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  transform: none !important;
+}
+
+.page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="eyebrow"] {
+  display: block !important;
+  color: #d6c08d !important;
+  line-height: 1 !important;
+  font-weight: 950 !important;
+  text-transform: uppercase !important;
+}
+
+.page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+  margin: 0 !important;
+  color: #fff !important;
+  font-weight: 950 !important;
+  text-wrap: balance !important;
+  text-shadow: 0 14px 36px rgba(0,0,0,.42) !important;
+}
+
+.page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+  color: rgba(255,255,255,.9) !important;
+  font-weight: 650 !important;
+  text-shadow: 0 10px 28px rgba(0,0,0,.36) !important;
+}
+
+.page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+  padding: 0 !important;
+}
+
+.page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a {
+  border-radius: 999px !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  font-weight: 950 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+}
+
+/* DESKTOP REAL */
+@media (min-width: 1201px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 620px !important;
+    min-height: 620px !important;
+    max-height: 620px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="desktop-image"] {
+    display: block !important;
+    object-position: center center !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="mobile-image"] {
+    display: none !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 126px !important;
+    left: clamp(72px, 7vw, 96px) !important;
+    right: clamp(72px, 7vw, 96px) !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 560px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="eyebrow"] {
+    margin: 0 0 .64rem !important;
+    font-size: .66rem !important;
+    letter-spacing: .17em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 560px !important;
+    font-size: clamp(3rem, 3.6vw, 3.85rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.05em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 500px !important;
+    margin: .95rem 0 0 !important;
+    font-size: .9rem !important;
+    line-height: 1.38 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    display: flex !important;
+    gap: .68rem !important;
+    margin: 1.12rem 0 0 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a {
+    min-height: 40px !important;
+    padding: 0 1.15rem !important;
+    font-size: .62rem !important;
+    line-height: 1 !important;
+    letter-spacing: .052em !important;
+  }
+}
+
+/* DESKTOP BAJO / 1280x800 */
+@media (min-width: 1201px) and (max-height: 850px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 590px !important;
+    min-height: 590px !important;
+    max-height: 590px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 112px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    font-size: clamp(2.75rem, 3.25vw, 3.35rem) !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 480px !important;
+    font-size: .84rem !important;
+    line-height: 1.36 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    margin-top: 1rem !important;
+  }
+}
+
+/* TABLET / NEST HUB LANDSCAPE */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 500px !important;
+    min-height: 500px !important;
+    max-height: 500px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="desktop-image"] {
+    display: block !important;
+    object-position: center center !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="mobile-image"] {
+    display: none !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 145px !important;
+    left: clamp(56px, 6vw, 72px) !important;
+    right: clamp(56px, 6vw, 72px) !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 500px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="eyebrow"] {
+    margin: 0 0 .5rem !important;
+    font-size: .56rem !important;
+    letter-spacing: .15em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 500px !important;
+    font-size: clamp(2.2rem, 4.1vw, 2.8rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.045em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 430px !important;
+    margin: .72rem 0 0 !important;
+    font-size: .74rem !important;
+    line-height: 1.34 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    display: flex !important;
+    gap: .6rem !important;
+    margin: .9rem 0 0 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a {
+    min-height: 35px !important;
+    padding: 0 1rem !important;
+    font-size: .54rem !important;
+  }
+}
+
+/* TABLET VERTICAL / SURFACE */
+@media (min-width: 701px) and (max-width: 1024px) and (orientation: portrait) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 560px !important;
+    min-height: 560px !important;
+    max-height: 560px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="desktop-image"] {
+    display: none !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="mobile-image"] {
+    display: block !important;
+    object-position: center bottom !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 150px !important;
+    left: clamp(44px, 7vw, 64px) !important;
+    right: clamp(44px, 7vw, 64px) !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 410px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 410px !important;
+    font-size: clamp(2.05rem, 5.4vw, 2.65rem) !important;
+    line-height: .96 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 360px !important;
+    margin: .76rem 0 0 !important;
+    font-size: .74rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    display: flex !important;
+    gap: .58rem !important;
+    margin: .92rem 0 0 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a {
+    min-height: 36px !important;
+    padding: 0 .95rem !important;
+    font-size: .54rem !important;
+  }
+}
+
+/* MOBILE REAL */
+@media (max-width: 700px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 445px !important;
+    min-height: 445px !important;
+    max-height: 445px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="desktop-image"] {
+    display: none !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="mobile-image"] {
+    display: block !important;
+    object-position: center bottom !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 108px !important;
+    left: 28px !important;
+    right: 24px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 270px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="eyebrow"] {
+    margin: 0 0 .46rem !important;
+    font-size: .48rem !important;
+    letter-spacing: .16em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 270px !important;
+    font-size: clamp(1.48rem, 7.2vw, 1.82rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.04em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 260px !important;
+    margin: .68rem 0 0 !important;
+    font-size: .56rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    max-width: 225px !important;
+    margin: .82rem 0 0 !important;
+    gap: .45rem !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a {
+    min-height: 34px !important;
+    padding: 0 .9rem !important;
+    font-size: .48rem !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a:nth-of-type(2) {
+    display: none !important;
+  }
+}
+
+
+/* =====================================================
+   ZZZ MARITIMO HERO COPY PREMIUM MOBILE/TABLET LOCK
+   Refina posición, tamaño y jerarquía de letras.
+   Mobile/tablet empresarial, no afiche apretado.
+   ===================================================== */
+
+/* Sacar decoraciones viejas del título */
+.page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"]::before,
+.page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"]::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* TABLET LANDSCAPE / NEST HUB */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 500px !important;
+    min-height: 500px !important;
+    max-height: 500px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 150px !important;
+    left: clamp(46px, 5.8vw, 64px) !important;
+    right: clamp(42px, 5.8vw, 64px) !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 520px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="eyebrow"] {
+    margin: 0 0 .55rem !important;
+    font-size: .56rem !important;
+    letter-spacing: .17em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 520px !important;
+    font-size: clamp(2.22rem, 4vw, 2.72rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.045em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 445px !important;
+    margin-top: .78rem !important;
+    font-size: .76rem !important;
+    line-height: 1.42 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    margin-top: 1rem !important;
+    gap: .62rem !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a {
+    min-height: 36px !important;
+    padding: 0 1.05rem !important;
+    font-size: .54rem !important;
+  }
+}
+
+/* TABLET VERTICAL / SURFACE */
+@media (min-width: 701px) and (max-width: 1024px) and (orientation: portrait) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 560px !important;
+    min-height: 560px !important;
+    max-height: 560px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 150px !important;
+    left: clamp(40px, 5.8vw, 58px) !important;
+    right: clamp(34px, 5.8vw, 56px) !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 430px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="eyebrow"] {
+    margin: 0 0 .56rem !important;
+    font-size: .54rem !important;
+    letter-spacing: .17em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 430px !important;
+    font-size: clamp(2.05rem, 5.1vw, 2.58rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.045em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 370px !important;
+    margin-top: .8rem !important;
+    font-size: .76rem !important;
+    line-height: 1.42 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    margin-top: 1rem !important;
+    gap: .58rem !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a {
+    min-height: 36px !important;
+    padding: 0 1rem !important;
+    font-size: .54rem !important;
+  }
+}
+
+/* MOBILE REAL */
+@media (max-width: 700px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 445px !important;
+    min-height: 445px !important;
+    max-height: 445px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 116px !important;
+    left: clamp(22px, 5.6vw, 30px) !important;
+    right: clamp(22px, 5.6vw, 28px) !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 300px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="eyebrow"] {
+    max-width: 300px !important;
+    margin: 0 0 .52rem !important;
+    font-size: .48rem !important;
+    line-height: 1 !important;
+    letter-spacing: .17em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 300px !important;
+    font-size: clamp(1.56rem, 7vw, 1.86rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.04em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 280px !important;
+    margin-top: .72rem !important;
+    font-size: .6rem !important;
+    line-height: 1.45 !important;
+    font-weight: 650 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    max-width: 240px !important;
+    margin-top: .92rem !important;
+    gap: .45rem !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a {
+    min-height: 36px !important;
+    padding: 0 .95rem !important;
+    font-size: .5rem !important;
+    letter-spacing: .055em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a:nth-of-type(2) {
+    display: none !important;
+  }
+}
+
+/* MOBILE ANGOSTO */
+@media (max-width: 390px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 438px !important;
+    min-height: 438px !important;
+    max-height: 438px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 112px !important;
+    left: 22px !important;
+    right: 20px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 286px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 286px !important;
+    font-size: 1.58rem !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 266px !important;
+    font-size: .58rem !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    max-width: 232px !important;
+  }
+}
+
