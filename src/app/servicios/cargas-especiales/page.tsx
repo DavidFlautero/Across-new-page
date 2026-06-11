@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import RelatedServices from "../_shared/RelatedServices";
-import styles from "./Servicio.module.css";
+import styles from "./CargasEspeciales.module.css";
 
 type Locale = "es" | "en" | "zh";
 
@@ -571,7 +571,7 @@ export default function CargasEspecialesPage() {
           />
 
           <Image
-            src="/images/cargas-especiales-desktop/transporte-especial-hero.png"
+            src="/images/cargas-especiales-mobile/carga-especial1.png"
             alt={t.heroTitle}
             fill
             priority
