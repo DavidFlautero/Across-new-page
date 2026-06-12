@@ -4132,3 +4132,702 @@ main[class*="page"] section[data-across-final-cta="true"] a {
     font-size: .93rem !important;
   }
 }
+
+/* =====================================================
+   ACROSS GLOBAL COMMAND BAR HOME SYSTEM
+   Unifica barras tipo Home:
+   - commandBar / commandItem
+   - trustBar heredada de servicios/sectores
+   Aplica mismo lenguaje visual: altura, color, texto, iconos,
+   transparencia y responsive.
+   ===================================================== */
+
+:root {
+  --ac-command-x: clamp(1rem, 4vw, 4.5rem);
+  --ac-command-bottom: 1.45rem;
+
+  --ac-command-h-desktop: 74px;
+  --ac-command-h-tablet: 82px;
+  --ac-command-h-mobile: 66px;
+
+  --ac-command-bg: rgba(6, 6, 6, 0.66);
+  --ac-command-bg-strong: rgba(5, 5, 8, 0.92);
+
+  --ac-command-border: rgba(255, 255, 255, 0.10);
+  --ac-command-border-soft: rgba(255, 255, 255, 0.075);
+
+  --ac-command-gold: #c7a96b;
+  --ac-command-white: rgba(255, 255, 255, 0.94);
+  --ac-command-muted: rgba(255, 255, 255, 0.62);
+}
+
+/* =========================
+   CONTENEDOR GLOBAL
+   ========================= */
+
+[class*="_hero"] > [class*="_commandBar"],
+[class*="_hero"] > [class*="_trustBar"],
+[data-service-hero-home="true"] > [class*="_commandBar"],
+[data-service-hero-home="true"] > [class*="_trustBar"],
+[data-standard-service-hero="true"] > [class*="_commandBar"],
+[data-standard-service-hero="true"] > [class*="_trustBar"],
+[data-service-hero="compact"] > [class*="_commandBar"],
+[data-service-hero="compact"] > [class*="_trustBar"] {
+  position: absolute !important;
+  z-index: 40 !important;
+
+  left: var(--ac-command-x) !important;
+  right: var(--ac-command-x) !important;
+  bottom: var(--ac-command-bottom) !important;
+
+  width: auto !important;
+  max-width: none !important;
+
+  height: var(--ac-command-h-desktop) !important;
+  min-height: var(--ac-command-h-desktop) !important;
+  max-height: var(--ac-command-h-desktop) !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: grid !important;
+  grid-auto-flow: column !important;
+  grid-auto-columns: minmax(0, 1fr) !important;
+  grid-template-columns: none !important;
+
+  border: 1px solid var(--ac-command-border) !important;
+  background: var(--ac-command-bg) !important;
+
+  box-shadow:
+    0 -20px 50px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03) !important;
+
+  backdrop-filter: blur(18px) saturate(1.12) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(1.12) !important;
+
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+/* =========================
+   ITEMS
+   ========================= */
+
+[class*="_commandBar"] > *,
+[class*="_trustBar"] > * {
+  min-width: 0 !important;
+
+  height: 100% !important;
+  min-height: 100% !important;
+  max-height: 100% !important;
+
+  padding: 0 1.2rem !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 0.9rem !important;
+
+  color: var(--ac-command-white) !important;
+  text-decoration: none !important;
+
+  border-right: 1px solid var(--ac-command-border) !important;
+  background: transparent !important;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease !important;
+
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+[class*="_commandBar"] > *:last-child,
+[class*="_trustBar"] > *:last-child {
+  border-right: 0 !important;
+}
+
+[class*="_commandBar"] > *:hover,
+[class*="_trustBar"] > *:hover {
+  transform: translateY(-2px) !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(199, 169, 107, 0.14),
+      rgba(255, 255, 255, 0.045)
+    ) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+/* =========================
+   ICONOS
+   Home usa svg directo.
+   Servicios viejos usan i > svg.
+   ========================= */
+
+[class*="_commandBar"] > * > svg,
+[class*="_trustBar"] > * > svg,
+[class*="_commandBar"] > * i svg,
+[class*="_trustBar"] > * i svg {
+  width: 27px !important;
+  height: 27px !important;
+  flex: 0 0 27px !important;
+
+  fill: none !important;
+  stroke: var(--ac-command-gold) !important;
+  color: var(--ac-command-gold) !important;
+
+  stroke-width: 1.45 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+}
+
+[class*="_commandBar"] > * i,
+[class*="_trustBar"] > * i {
+  flex: 0 0 36px !important;
+  width: 36px !important;
+  height: 36px !important;
+
+  display: grid !important;
+  place-items: center !important;
+
+  color: var(--ac-command-gold) !important;
+  border: 1px solid rgba(199, 169, 107, .36) !important;
+  background:
+    radial-gradient(
+      circle,
+      rgba(199, 169, 107, .14),
+      rgba(199, 169, 107, .04)
+    ) !important;
+}
+
+[class*="_commandBar"] > *:hover svg,
+[class*="_trustBar"] > *:hover svg {
+  stroke: var(--ac-command-gold) !important;
+}
+
+/* =========================
+   TEXTO
+   Home: span + small.
+   TrustBar vieja: strong + small.
+   ========================= */
+
+[class*="_commandBar"] > * > div,
+[class*="_trustBar"] > * > div,
+[class*="_commandBar"] > * > span,
+[class*="_trustBar"] > * > span {
+  min-width: 0 !important;
+  display: block !important;
+}
+
+[class*="_commandBar"] span,
+[class*="_commandBar"] strong,
+[class*="_trustBar"] span,
+[class*="_trustBar"] strong {
+  display: block !important;
+
+  color: var(--ac-command-white) !important;
+  -webkit-text-fill-color: var(--ac-command-white) !important;
+
+  font-size: 0.88rem !important;
+  font-weight: 850 !important;
+  line-height: 1.05 !important;
+
+  margin: 0 0 0.16rem 0 !important;
+
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+[class*="_trustBar"] strong {
+  color: var(--ac-command-gold) !important;
+  -webkit-text-fill-color: var(--ac-command-gold) !important;
+  letter-spacing: .16em !important;
+  text-transform: uppercase !important;
+  font-weight: 900 !important;
+}
+
+[class*="_commandBar"] small,
+[class*="_trustBar"] small {
+  display: block !important;
+
+  color: var(--ac-command-muted) !important;
+  -webkit-text-fill-color: var(--ac-command-muted) !important;
+
+  font-size: 0.7rem !important;
+  line-height: 1.2 !important;
+
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* =========================
+   TABLET / GALAXY TAB / IPAD
+   ========================= */
+
+@media (min-width: 761px) and (max-width: 1100px) {
+  [class*="_hero"] > [class*="_commandBar"],
+  [class*="_hero"] > [class*="_trustBar"],
+  [data-service-hero-home="true"] > [class*="_commandBar"],
+  [data-service-hero-home="true"] > [class*="_trustBar"],
+  [data-standard-service-hero="true"] > [class*="_commandBar"],
+  [data-standard-service-hero="true"] > [class*="_trustBar"],
+  [data-service-hero="compact"] > [class*="_commandBar"],
+  [data-service-hero="compact"] > [class*="_trustBar"] {
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+
+    height: var(--ac-command-h-tablet) !important;
+    min-height: var(--ac-command-h-tablet) !important;
+    max-height: var(--ac-command-h-tablet) !important;
+
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 0 !important;
+
+    background: var(--ac-command-bg-strong) !important;
+  }
+
+  [class*="_commandBar"] > *,
+  [class*="_trustBar"] > * {
+    justify-content: center !important;
+    padding: 0 0.9rem !important;
+  }
+}
+
+/* TABLET / LAPTOP BAJO */
+@media (min-width: 761px) and (max-width: 1100px) and (max-height: 760px) {
+  [class*="_hero"] > [class*="_commandBar"],
+  [class*="_hero"] > [class*="_trustBar"],
+  [data-service-hero-home="true"] > [class*="_commandBar"],
+  [data-service-hero-home="true"] > [class*="_trustBar"],
+  [data-standard-service-hero="true"] > [class*="_commandBar"],
+  [data-standard-service-hero="true"] > [class*="_trustBar"],
+  [data-service-hero="compact"] > [class*="_commandBar"],
+  [data-service-hero="compact"] > [class*="_trustBar"] {
+    height: 64px !important;
+    min-height: 64px !important;
+    max-height: 64px !important;
+  }
+
+  [class*="_commandBar"] > *,
+  [class*="_trustBar"] > * {
+    min-height: 64px !important;
+  }
+
+  [class*="_commandBar"] > * > svg,
+  [class*="_trustBar"] > * > svg,
+  [class*="_commandBar"] > * i svg,
+  [class*="_trustBar"] > * i svg {
+    width: 18px !important;
+    height: 18px !important;
+    flex-basis: 18px !important;
+  }
+
+  [class*="_commandBar"] span,
+  [class*="_commandBar"] strong,
+  [class*="_trustBar"] span,
+  [class*="_trustBar"] strong {
+    font-size: 0.72rem !important;
+  }
+
+  [class*="_commandBar"] small,
+  [class*="_trustBar"] small {
+    font-size: 0.58rem !important;
+  }
+}
+
+/* =========================
+   MOBILE / IPHONE / GALAXY FOLD
+   ========================= */
+
+@media (max-width: 760px) {
+  [class*="_hero"] > [class*="_commandBar"],
+  [class*="_hero"] > [class*="_trustBar"],
+  [data-service-hero-home="true"] > [class*="_commandBar"],
+  [data-service-hero-home="true"] > [class*="_trustBar"],
+  [data-standard-service-hero="true"] > [class*="_commandBar"],
+  [data-standard-service-hero="true"] > [class*="_trustBar"],
+  [data-service-hero="compact"] > [class*="_commandBar"],
+  [data-service-hero="compact"] > [class*="_trustBar"] {
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+
+    width: 100% !important;
+    max-width: 100vw !important;
+
+    height: 66px !important;
+    min-height: 66px !important;
+    max-height: 66px !important;
+
+    display: grid !important;
+    grid-auto-flow: column !important;
+    grid-auto-columns: minmax(0, 1fr) !important;
+
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 0 !important;
+
+    background: rgba(5, 6, 9, .91) !important;
+
+    box-shadow:
+      0 -18px 42px rgba(0,0,0,.28),
+      inset 0 1px 0 rgba(255,255,255,.045) !important;
+
+    overflow: hidden !important;
+    transform: none !important;
+  }
+
+  [class*="_commandBar"] > *,
+  [class*="_trustBar"] > * {
+    min-width: 0 !important;
+    min-height: 66px !important;
+
+    padding: 5px 3px !important;
+    gap: 5px !important;
+
+    flex-direction: column !important;
+    justify-content: center !important;
+    text-align: center !important;
+
+    overflow: hidden !important;
+  }
+
+  [class*="_commandBar"] > * > svg,
+  [class*="_trustBar"] > * > svg,
+  [class*="_commandBar"] > * i svg,
+  [class*="_trustBar"] > * i svg {
+    width: 15px !important;
+    height: 15px !important;
+    flex-basis: 15px !important;
+  }
+
+  [class*="_commandBar"] > * i,
+  [class*="_trustBar"] > * i {
+    width: auto !important;
+    height: auto !important;
+    flex: 0 0 auto !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+
+  [class*="_commandBar"] span,
+  [class*="_commandBar"] strong,
+  [class*="_trustBar"] span,
+  [class*="_trustBar"] strong {
+    font-size: 8.5px !important;
+    line-height: 1.08 !important;
+    letter-spacing: -.02em !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+
+  [class*="_trustBar"] strong {
+    letter-spacing: .08em !important;
+  }
+
+  [class*="_commandBar"] small,
+  [class*="_trustBar"] small {
+    font-size: 6.8px !important;
+    line-height: 1.05 !important;
+    letter-spacing: -.02em !important;
+    max-width: 100% !important;
+  }
+}
+
+/* IPHONE SE / FOLD ANGOSTO */
+@media (max-width: 380px), (max-height: 720px) {
+  [class*="_hero"] > [class*="_commandBar"],
+  [class*="_hero"] > [class*="_trustBar"],
+  [data-service-hero-home="true"] > [class*="_commandBar"],
+  [data-service-hero-home="true"] > [class*="_trustBar"],
+  [data-standard-service-hero="true"] > [class*="_commandBar"],
+  [data-standard-service-hero="true"] > [class*="_trustBar"],
+  [data-service-hero="compact"] > [class*="_commandBar"],
+  [data-service-hero="compact"] > [class*="_trustBar"] {
+    height: 66px !important;
+    min-height: 66px !important;
+    max-height: 66px !important;
+  }
+
+  [class*="_commandBar"] > *,
+  [class*="_trustBar"] > * {
+    min-height: 66px !important;
+    padding: 5px 3px !important;
+  }
+
+  [class*="_commandBar"] span,
+  [class*="_commandBar"] strong,
+  [class*="_trustBar"] span,
+  [class*="_trustBar"] strong {
+    font-size: 8px !important;
+  }
+
+  [class*="_commandBar"] small,
+  [class*="_trustBar"] small {
+    font-size: 6.2px !important;
+  }
+}
+
+/* TV / DESKTOP GIGANTE */
+@media (min-width: 1600px) {
+  [class*="_hero"] > [class*="_commandBar"],
+  [class*="_hero"] > [class*="_trustBar"],
+  [data-service-hero-home="true"] > [class*="_commandBar"],
+  [data-service-hero-home="true"] > [class*="_trustBar"],
+  [data-standard-service-hero="true"] > [class*="_commandBar"],
+  [data-standard-service-hero="true"] > [class*="_trustBar"],
+  [data-service-hero="compact"] > [class*="_commandBar"],
+  [data-service-hero="compact"] > [class*="_trustBar"] {
+    left: clamp(3rem, 5vw, 6rem) !important;
+    right: clamp(3rem, 5vw, 6rem) !important;
+    height: 74px !important;
+    min-height: 74px !important;
+    max-height: 74px !important;
+  }
+}
+
+/* END ACROSS GLOBAL COMMAND BAR HOME SYSTEM */
+
+/* =====================================================
+   ACROSS GLOBAL HERO SECONDARY BUTTON
+   Quita el blanco fuerte del segundo CTA en héroes.
+   Lo deja azul/gris vidrio, elegante y consistente.
+   ===================================================== */
+
+[data-service-hero-home="true"] [class*="_actions"] a:nth-child(2),
+[data-service-hero-home="true"] [class*="_secondaryBtn"],
+[data-standard-service-hero="true"] [class*="_actions"] a:nth-child(2),
+[data-standard-service-hero="true"] [class*="_secondaryBtn"],
+[data-service-hero="compact"] [class*="_actions"] a:nth-child(2),
+[data-service-hero="compact"] [class*="_secondaryBtn"] {
+  color: rgba(244, 239, 229, .94) !important;
+  -webkit-text-fill-color: rgba(244, 239, 229, .94) !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(12, 33, 45, .86),
+      rgba(20, 48, 62, .68)
+    ) !important;
+
+  border: 1px solid rgba(199, 169, 107, .34) !important;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .10),
+    0 18px 42px rgba(0, 0, 0, .26) !important;
+
+  backdrop-filter: blur(12px) saturate(1.12) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(1.12) !important;
+}
+
+[data-service-hero-home="true"] [class*="_actions"] a:nth-child(2):hover,
+[data-service-hero-home="true"] [class*="_secondaryBtn"]:hover,
+[data-standard-service-hero="true"] [class*="_actions"] a:nth-child(2):hover,
+[data-standard-service-hero="true"] [class*="_secondaryBtn"]:hover,
+[data-service-hero="compact"] [class*="_actions"] a:nth-child(2):hover,
+[data-service-hero="compact"] [class*="_secondaryBtn"]:hover {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(16, 46, 62, .94),
+      rgba(28, 64, 82, .76)
+    ) !important;
+
+  border-color: rgba(199, 169, 107, .48) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* END ACROSS GLOBAL HERO SECONDARY BUTTON */
+
+/* =====================================================
+   ACROSS GLOBAL IVORY TEXT
+   Cambia blancos duros por marfil cálido en servicios/sectores.
+   ===================================================== */
+
+:root {
+  --ac-ivory: #f4efe5;
+  --ac-ivory-soft: rgba(244, 239, 229, .84);
+  --ac-ivory-muted: rgba(244, 239, 229, .70);
+}
+
+/* Títulos grandes de secciones */
+main [class*="_services"] h1,
+main [class*="_services"] h2,
+main [class*="_overview"] h1,
+main [class*="_overview"] h2,
+main [class*="_process"] h1,
+main [class*="_process"] h2,
+main [class*="_useCases"] h1,
+main [class*="_useCases"] h2,
+main [class*="_finalCta"] h1,
+main [class*="_finalCta"] h2,
+main [class*="_band"] h1,
+main [class*="_band"] h2 {
+  color: var(--ac-ivory) !important;
+  -webkit-text-fill-color: var(--ac-ivory) !important;
+}
+
+/* Títulos de cards */
+main [class*="_services"] h3,
+main [class*="_service"] h3,
+main [class*="_card"] h3,
+main [class*="_grid"] h3,
+main [class*="_overview"] h3,
+main [class*="_process"] h3,
+main [class*="_useCases"] h3 {
+  color: var(--ac-ivory) !important;
+  -webkit-text-fill-color: var(--ac-ivory) !important;
+}
+
+/* Párrafos y textos internos */
+main [class*="_services"] p,
+main [class*="_service"] p,
+main [class*="_card"] p,
+main [class*="_grid"] p,
+main [class*="_overview"] p,
+main [class*="_process"] p,
+main [class*="_useCases"] p,
+main [class*="_band"] p,
+main [class*="_finalCta"] p {
+  color: var(--ac-ivory-soft) !important;
+  -webkit-text-fill-color: var(--ac-ivory-soft) !important;
+}
+
+/* Textos secundarios */
+main [class*="_services"] small,
+main [class*="_service"] small,
+main [class*="_card"] small,
+main [class*="_grid"] small,
+main [class*="_overview"] small,
+main [class*="_process"] small,
+main [class*="_useCases"] small {
+  color: var(--ac-ivory-muted) !important;
+  -webkit-text-fill-color: var(--ac-ivory-muted) !important;
+}
+
+/* Evita que los headings tengan blanco puro por sombras o overrides */
+main [class*="_services"] h2,
+main [class*="_services"] h3,
+main [class*="_card"] h3 {
+  text-shadow: 0 2px 14px rgba(0, 0, 0, .32) !important;
+}
+
+/* No tocar botones ni command bar */
+main a[class*="_primary"],
+main a[class*="_secondary"],
+main [class*="_commandBar"] *,
+main [class*="_trustBar"] * {
+  -webkit-text-fill-color: initial;
+}
+
+/* END ACROSS GLOBAL IVORY TEXT */
+
+/* =====================================================
+   ACROSS LIGHT SECTIONS DARK TEXT FIX
+   Las secciones claras NO deben usar marfil.
+   Aplica a:
+   - Overview / Operaciones confiables
+   - Process / Una operación clara
+   - Bloques claros de servicios y sectores
+   ===================================================== */
+
+:root {
+  --ac-dark-ink: #07131d;
+  --ac-dark-ink-soft: rgba(7, 19, 29, .82);
+  --ac-dark-ink-muted: rgba(7, 19, 29, .66);
+  --ac-blue-ink: #0f3d56;
+}
+
+/* OVERVIEW: "Operaciones confiables..." */
+main [class*="_overview"],
+main section[class*="_overview"] {
+  color: var(--ac-dark-ink) !important;
+}
+
+main [class*="_overview"] h1,
+main [class*="_overview"] h2,
+main [class*="_overview"] h3,
+main [class*="_overview"] h4,
+main [class*="_overview"] strong {
+  color: var(--ac-dark-ink) !important;
+  -webkit-text-fill-color: var(--ac-dark-ink) !important;
+}
+
+main [class*="_overview"] p,
+main [class*="_overview"] li,
+main [class*="_overview"] span {
+  color: var(--ac-dark-ink-soft) !important;
+  -webkit-text-fill-color: var(--ac-dark-ink-soft) !important;
+}
+
+main [class*="_overview"] small {
+  color: var(--ac-dark-ink-muted) !important;
+  -webkit-text-fill-color: var(--ac-dark-ink-muted) !important;
+}
+
+/* PROCESS: "Una operación aérea clara desde el primer contacto" */
+main [class*="_process"],
+main section[class*="_process"] {
+  color: var(--ac-dark-ink) !important;
+}
+
+main [class*="_process"] h1,
+main [class*="_process"] h2,
+main [class*="_process"] h3,
+main [class*="_process"] h4,
+main [class*="_process"] strong,
+main [class*="_process"] b {
+  color: var(--ac-dark-ink) !important;
+  -webkit-text-fill-color: var(--ac-dark-ink) !important;
+}
+
+main [class*="_process"] p,
+main [class*="_process"] li,
+main [class*="_process"] span {
+  color: var(--ac-dark-ink-soft) !important;
+  -webkit-text-fill-color: var(--ac-dark-ink-soft) !important;
+}
+
+main [class*="_process"] small,
+main [class*="_process"] em {
+  color: var(--ac-dark-ink-muted) !important;
+  -webkit-text-fill-color: var(--ac-dark-ink-muted) !important;
+}
+
+/* Números del proceso */
+main [class*="_process"] [class*="_step"] > span,
+main [class*="_process"] [class*="_number"],
+main [class*="_process"] [class*="_index"] {
+  color: var(--ac-blue-ink) !important;
+  -webkit-text-fill-color: var(--ac-blue-ink) !important;
+}
+
+/* Eyebrows en secciones claras */
+main [class*="_overview"] [class*="_eyebrow"],
+main [class*="_process"] [class*="_eyebrow"] {
+  color: var(--ac-blue-ink) !important;
+  -webkit-text-fill-color: var(--ac-blue-ink) !important;
+}
+
+/* Iconos dentro de secciones claras */
+main [class*="_overview"] svg,
+main [class*="_process"] svg,
+main [class*="_overview"] i,
+main [class*="_process"] i {
+  color: var(--ac-blue-ink) !important;
+  stroke: var(--ac-blue-ink) !important;
+}
+
+/* Botones dentro de estas secciones mantienen su estilo propio */
+main [class*="_overview"] a,
+main [class*="_process"] a {
+  -webkit-text-fill-color: initial;
+}
+
+/* END ACROSS LIGHT SECTIONS DARK TEXT FIX */

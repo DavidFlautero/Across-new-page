@@ -2963,7 +2963,7 @@
       rgba(5, 6, 9, .55) 100%
     ),
     radial-gradient(circle at 18% 18%, rgba(23, 50, 71, .16), transparent 24rem),
-    url("/images/ecommerce.png") !important;
+    url("/images/transportemaritimo.png") !important;
   background-size: cover !important;
   background-position: center 48% !important;
   background-repeat: no-repeat !important;
@@ -3065,7 +3065,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/ecommerce.png") !important;
+    url("/images/transportemaritimo.png") !important;
   background-size: cover !important;
   background-position: center 55% !important;
   background-repeat: no-repeat !important;
@@ -3104,7 +3104,7 @@
   .services {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.90)),
-      url("/images/ecommerce.png") !important;
+      url("/images/transportemaritimo.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3116,7 +3116,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/ecommerce.png") !important;
+      url("/images/transportemaritimo.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3134,7 +3134,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/heroecommerce.png") !important;
+    url("/images/maritimo.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3144,7 +3144,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/heroecommerce.png") !important;
+      url("/images/maritimo.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3162,7 +3162,7 @@
       rgba(5, 6, 9, .44) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/segundaecommerce.png") !important;
+    url("/images/maritimo.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3172,7 +3172,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/segundaecommerce.png") !important;
+      url("/images/maritimo.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -4043,6 +4043,385 @@
 
 
 /* =====================================================
+   MARÍTIMO - FIX IMÁGENES INTERNAS MOBILE/TABLET
+   Mantiene hero intacto y muestra imágenes nuevas en secciones internas.
+   ===================================================== */
+
+.darkBandImage,
+.finalImage {
+  position: relative !important;
+  overflow: hidden !important;
+  background: #050609 !important;
+}
+
+.darkBandImage img,
+.finalImage img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  display: block !important;
+  filter: brightness(.82) contrast(1.08) saturate(1.02) !important;
+}
+
+/* Desktop / tablet */
+@media (min-width: 761px) {
+  .darkBandImage {
+    display: block !important;
+    min-height: 420px !important;
+  }
+
+  .finalImage {
+    display: block !important;
+    min-height: 420px !important;
+  }
+}
+
+/* Tablet y mobile */
+@media (max-width: 900px) {
+  .darkBandImage {
+    display: block !important;
+    min-height: 420px !important;
+    height: 420px !important;
+  }
+
+  .finalImage {
+    display: block !important;
+    min-height: 420px !important;
+    height: 420px !important;
+  }
+
+  .darkBandImage img,
+  .finalImage img {
+    object-position: center center !important;
+  }
+}
+
+/* Mobile común */
+@media (max-width: 760px) {
+  .darkBandImage {
+    display: block !important;
+    min-height: 520px !important;
+    height: 520px !important;
+  }
+
+  .finalImage {
+    display: block !important;
+    min-height: 520px !important;
+    height: 520px !important;
+  }
+
+  .darkBandImage img,
+  .finalImage img {
+    object-position: center center !important;
+  }
+}
+
+/* iPhone SE */
+@media (max-width: 380px) {
+  .darkBandImage {
+    min-height: 460px !important;
+    height: 460px !important;
+  }
+
+  .finalImage {
+    min-height: 460px !important;
+    height: 460px !important;
+  }
+}
+
+
+/* =====================================================
+   MARÍTIMO - IMÁGENES DETRÁS DEL TEXTO
+   Las imágenes internas pasan a fondo visual, no bloque separado.
+   ===================================================== */
+
+/* Sección oscura principal */
+.darkBand {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background: #050609 !important;
+}
+
+.darkBandImage {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -3 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  pointer-events: none !important;
+}
+
+.darkBandImage img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  display: block !important;
+  filter: brightness(.52) contrast(1.08) saturate(.95) !important;
+}
+
+.darkBand::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -2 !important;
+  pointer-events: none !important;
+  background:
+    radial-gradient(circle at 78% 24%, rgba(23, 50, 71, .14), transparent 24rem),
+    linear-gradient(90deg, rgba(5,6,9,.96) 0%, rgba(5,6,9,.82) 42%, rgba(5,6,9,.58) 100%),
+    linear-gradient(180deg, rgba(5,6,9,.74) 0%, rgba(5,6,9,.94) 100%) !important;
+}
+
+.darkBandContent {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* CTA / sección final con imagen detrás */
+.finalCta {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background: #050609 !important;
+}
+
+.finalImage {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -3 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  pointer-events: none !important;
+}
+
+.finalImage img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  display: block !important;
+  filter: brightness(.48) contrast(1.08) saturate(.95) !important;
+}
+
+.finalCta::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -2 !important;
+  pointer-events: none !important;
+  background:
+    radial-gradient(circle at 75% 24%, rgba(23, 50, 71, .16), transparent 24rem),
+    linear-gradient(90deg, rgba(5,6,9,.97) 0%, rgba(5,6,9,.84) 46%, rgba(5,6,9,.62) 100%),
+    linear-gradient(180deg, rgba(5,6,9,.70) 0%, rgba(5,6,9,.96) 100%) !important;
+}
+
+/* Por si el contenido final tiene wrapper interno */
+.finalCta > *:not(.finalImage) {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Mobile: mantener imagen detrás, más oscura para lectura */
+@media (max-width: 760px) {
+  .darkBandImage,
+  .finalImage {
+    position: absolute !important;
+    inset: 0 !important;
+    height: 100% !important;
+    min-height: 100% !important;
+  }
+
+  .darkBandImage img,
+  .finalImage img {
+    object-position: center center !important;
+    filter: brightness(.42) contrast(1.1) saturate(.95) !important;
+  }
+
+  .darkBand::before,
+  .finalCta::before {
+    background:
+      radial-gradient(circle at 80% 18%, rgba(23, 50, 71, .16), transparent 20rem),
+      linear-gradient(180deg, rgba(5,6,9,.92) 0%, rgba(5,6,9,.78) 42%, rgba(5,6,9,.96) 100%) !important;
+  }
+}
+
+
+/* =====================================================
+   MARÍTIMO - FONDO DETRÁS DE "SERVICES" / CARDS
+   Esta es la sección que aparece como "Air solutions..."
+   ===================================================== */
+
+.services {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background:
+    linear-gradient(180deg, rgba(5,6,9,.92) 0%, rgba(5,6,9,.86) 48%, rgba(5,6,9,.96) 100%),
+    url("/images/transporte-maritimo-mobile/maritimo-mobile.png") center center / cover no-repeat !important;
+  color: #fff !important;
+}
+
+.services::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -2 !important;
+  pointer-events: none !important;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(23, 50, 71, .15), transparent 24rem),
+    linear-gradient(90deg, rgba(5,6,9,.96) 0%, rgba(5,6,9,.82) 48%, rgba(5,6,9,.70) 100%) !important;
+}
+
+.services::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -3 !important;
+  pointer-events: none !important;
+  background: url("/images/transporte-maritimo-mobile/maritimo-mobile.png") center center / cover no-repeat !important;
+  filter: brightness(.48) contrast(1.12) saturate(.95) !important;
+}
+
+/* Asegurar que todo el contenido quede encima */
+.services > *,
+.sectionHead,
+.serviceGrid,
+.serviceGrid > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Cards más legibles sobre imagen */
+.serviceGrid article,
+.operationCard {
+  background: rgba(7, 9, 14, .72) !important;
+  border: 1px solid rgba(255,255,255,.13) !important;
+  backdrop-filter: blur(6px) !important;
+}
+
+/* Mobile / tablet */
+@media (max-width: 900px) {
+  .services {
+    background:
+      linear-gradient(180deg, rgba(5,6,9,.92) 0%, rgba(5,6,9,.84) 44%, rgba(5,6,9,.96) 100%),
+      url("/images/transporte-maritimo-mobile/maritimo-mobile.png") center center / cover no-repeat !important;
+  }
+
+  .services::before {
+    background:
+      radial-gradient(circle at 22% 10%, rgba(23, 50, 71, .16), transparent 18rem),
+      linear-gradient(180deg, rgba(5,6,9,.93) 0%, rgba(5,6,9,.78) 45%, rgba(5,6,9,.97) 100%) !important;
+  }
+
+  .services::after {
+    background: url("/images/transporte-maritimo-mobile/maritimo-mobile.png") center center / cover no-repeat !important;
+    filter: brightness(.42) contrast(1.12) saturate(.95) !important;
+  }
+}
+
+/* iPhone SE */
+@media (max-width: 380px) {
+  .services::after {
+    background-position: center center !important;
+    filter: brightness(.38) contrast(1.14) saturate(.95) !important;
+  }
+}
+
+
+/* =====================================================
+   MARÍTIMO - FIX REAL FONDO SERVICES VISIBLE
+   Evita z-index negativo. Imagen visible detrás del texto/cards.
+   ===================================================== */
+
+.services {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background: #050609 !important;
+  color: #fff !important;
+}
+
+/* Imagen real visible */
+.services::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  background-image: url("/images/transporte-maritimo-mobile/maritimo-mobile.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  opacity: .72 !important;
+  filter: brightness(.58) contrast(1.12) saturate(.95) !important;
+}
+
+/* Overlay de lectura */
+.services::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(23, 50, 71, .18), transparent 24rem),
+    linear-gradient(90deg, rgba(5,6,9,.96) 0%, rgba(5,6,9,.82) 48%, rgba(5,6,9,.64) 100%),
+    linear-gradient(180deg, rgba(5,6,9,.70) 0%, rgba(5,6,9,.96) 100%) !important;
+}
+
+/* Todo el contenido arriba */
+.services > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Cards sobre fondo */
+.services .serviceGrid,
+.serviceGrid {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.services article,
+.serviceGrid article,
+.operationCard {
+  position: relative !important;
+  z-index: 2 !important;
+  background: rgba(7, 9, 14, .70) !important;
+  border: 1px solid rgba(255,255,255,.14) !important;
+  backdrop-filter: blur(6px) !important;
+}
+
+/* Mobile/tablet: que se note más la imagen pero sin matar lectura */
+@media (max-width: 900px) {
+  .services::before {
+    opacity: .82 !important;
+    background-position: center center !important;
+    filter: brightness(.54) contrast(1.14) saturate(.96) !important;
+  }
+
+  .services::after {
+    background:
+      radial-gradient(circle at 22% 10%, rgba(23, 50, 71, .18), transparent 18rem),
+      linear-gradient(180deg, rgba(5,6,9,.88) 0%, rgba(5,6,9,.74) 44%, rgba(5,6,9,.96) 100%) !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .services::before {
+    opacity: .86 !important;
+    filter: brightness(.50) contrast(1.16) saturate(.96) !important;
+  }
+}
+
+
+/* =====================================================
    GLOBAL SERVICE FIX - MOBILE USA IMÁGENES DESKTOP
    Evita crear imágenes dobles por cada sección.
    ===================================================== */
@@ -4081,318 +4460,6 @@
   .darkBandImage img,
   .finalImage img {
     object-position: center center !important;
-  }
-}
-
-/* =====================================================
-   SERVICE MOBILE MASTER RESET V2
-   Corrige secciones partidas, imágenes sueltas y ancho roto.
-   Desktop/tablet intactos.
-   Página: e-commerce
-   ===================================================== */
-
-@media (max-width: 760px) {
-  .page {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-    background: #f4f1eb !important;
-  }
-
-  .hero,
-  .overview,
-  .services,
-  .process,
-  .darkBand,
-  .useCases,
-  .finalCta,
-  .trustBar,
-  .pillars {
-    width: 100vw !important;
-    max-width: none !important;
-    margin-left: calc(50% - 50vw) !important;
-    margin-right: calc(50% - 50vw) !important;
-    box-sizing: border-box !important;
-    overflow-x: hidden !important;
-    transform: none !important;
-  }
-
-  .heroImageDesktop {
-    display: none !important;
-  }
-
-  .heroImageMobile {
-    display: block !important;
-  }
-
-  .heroImage {
-    object-fit: cover !important;
-    object-position: center center !important;
-  }
-
-  .services {
-    position: relative !important;
-    isolation: isolate !important;
-    display: block !important;
-    padding: 3.5rem 18px 3.8rem !important;
-    background: #050609 !important;
-    color: #fff !important;
-  }
-
-  .services::before {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 0 !important;
-    background-image: url("/images/ecommerce.png") !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    opacity: .86 !important;
-    filter: brightness(.44) contrast(1.15) saturate(.96) !important;
-    pointer-events: none !important;
-  }
-
-  .services::after {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 1 !important;
-    background:
-      radial-gradient(circle at 22% 10%, rgba(23, 50, 71, .17), transparent 18rem),
-      linear-gradient(180deg, rgba(5,6,9,.92) 0%, rgba(5,6,9,.76) 44%, rgba(5,6,9,.97) 100%) !important;
-    pointer-events: none !important;
-  }
-
-  .services > *,
-  .services .sectionHead,
-  .services .serviceGrid,
-  .serviceGrid,
-  .serviceGrid > * {
-    position: relative !important;
-    z-index: 2 !important;
-  }
-
-  .services .sectionHead {
-    width: 100% !important;
-    max-width: 100% !important;
-    display: block !important;
-    margin: 0 0 1.8rem !important;
-    padding: 0 !important;
-    transform: none !important;
-  }
-
-  .services .sectionHead h2 {
-    width: 100% !important;
-    max-width: 430px !important;
-    margin: 0 !important;
-    color: #fff !important;
-    font-size: clamp(2.05rem, 9.5vw, 3.15rem) !important;
-    line-height: .96 !important;
-    letter-spacing: -.055em !important;
-  }
-
-  .services .eyebrow {
-    color: #173247 !important;
-  }
-
-  .serviceGrid {
-    width: 100% !important;
-    max-width: 100% !important;
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: .85rem !important;
-  }
-
-  .serviceGrid article,
-  .operationCard {
-    width: 100% !important;
-    max-width: 100% !important;
-    background: rgba(7, 9, 14, .72) !important;
-    border: 1px solid rgba(255,255,255,.14) !important;
-    backdrop-filter: blur(6px) !important;
-  }
-
-  .darkBand {
-    position: relative !important;
-    isolation: isolate !important;
-    display: block !important;
-    padding: 3.2rem 18px !important;
-    background: #050609 !important;
-    color: #fff !important;
-  }
-
-  .darkBand::before {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 0 !important;
-    background-image: url("/images/ecommerce.png") !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    opacity: .80 !important;
-    filter: brightness(.40) contrast(1.12) saturate(.96) !important;
-    pointer-events: none !important;
-  }
-
-  .darkBand::after {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 1 !important;
-    background:
-      radial-gradient(circle at 75% 18%, rgba(23, 50, 71, .14), transparent 20rem),
-      linear-gradient(180deg, rgba(5,6,9,.92) 0%, rgba(5,6,9,.80) 45%, rgba(5,6,9,.98) 100%) !important;
-    pointer-events: none !important;
-  }
-
-  .darkBandContent,
-  .darkBand .stats,
-  .darkBandActions {
-    position: relative !important;
-    z-index: 2 !important;
-  }
-
-  .darkBandContent {
-    width: 100% !important;
-    max-width: 430px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    display: block !important;
-    transform: none !important;
-  }
-
-  .darkBandContent h2 {
-    max-width: 430px !important;
-    margin: 0 !important;
-    color: #fff !important;
-    font-size: clamp(2rem, 9.4vw, 3rem) !important;
-    line-height: .96 !important;
-    letter-spacing: -.055em !important;
-  }
-
-  .darkBandContent p {
-    max-width: 430px !important;
-    margin: 1rem 0 0 !important;
-    font-size: .9rem !important;
-    line-height: 1.55 !important;
-  }
-
-  .darkBandActions {
-    width: 100% !important;
-    max-width: 430px !important;
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: .75rem !important;
-    margin-top: 1.5rem !important;
-  }
-
-  .darkBandActions a {
-    width: 100% !important;
-    min-height: 46px !important;
-    border-radius: 999px !important;
-  }
-
-  .finalCta {
-    position: relative !important;
-    isolation: isolate !important;
-    display: block !important;
-    padding: 3.2rem 18px !important;
-    background: #050609 !important;
-    color: #fff !important;
-  }
-
-  .finalCta::before {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 0 !important;
-    background-image: url("/images/heroecommerce.png") !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    opacity: .78 !important;
-    filter: brightness(.40) contrast(1.12) saturate(.96) !important;
-    pointer-events: none !important;
-  }
-
-  .finalCta::after {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 1 !important;
-    background:
-      radial-gradient(circle at 75% 18%, rgba(23, 50, 71, .14), transparent 20rem),
-      linear-gradient(180deg, rgba(5,6,9,.92) 0%, rgba(5,6,9,.80) 45%, rgba(5,6,9,.98) 100%) !important;
-    pointer-events: none !important;
-  }
-
-  .finalCta > *:not(.finalImage),
-  .finalActions {
-    position: relative !important;
-    z-index: 2 !important;
-  }
-
-  .finalCta h2 {
-    max-width: 430px !important;
-    margin: 0 !important;
-    color: #fff !important;
-    font-size: clamp(2rem, 9.4vw, 3rem) !important;
-    line-height: .96 !important;
-    letter-spacing: -.055em !important;
-  }
-
-  .finalCta p {
-    max-width: 430px !important;
-    margin: 1rem 0 0 !important;
-    font-size: .9rem !important;
-    line-height: 1.55 !important;
-  }
-
-  .finalActions {
-    width: 100% !important;
-    max-width: 430px !important;
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: .75rem !important;
-    margin-top: 1.5rem !important;
-  }
-
-  .finalActions a {
-    width: 100% !important;
-    min-height: 46px !important;
-    border-radius: 999px !important;
-  }
-
-  .darkBandImage,
-  .finalImage {
-    display: none !important;
-    visibility: hidden !important;
-    width: 0 !important;
-    height: 0 !important;
-    min-height: 0 !important;
-    max-height: 0 !important;
-    overflow: hidden !important;
-    position: absolute !important;
-    pointer-events: none !important;
-  }
-}
-
-@media (max-width: 380px) {
-  .services {
-    padding: 3.2rem 14px 3.4rem !important;
-  }
-
-  .darkBand,
-  .finalCta {
-    padding: 2.8rem 14px !important;
-  }
-
-  .services .sectionHead h2,
-  .darkBandContent h2,
-  .finalCta h2 {
-    font-size: clamp(1.85rem, 9.6vw, 2.55rem) !important;
   }
 }
 
@@ -4981,6 +5048,462 @@
     object-position: center center !important;
     transform: none !important;
     scale: 1 !important;
+  }
+}
+
+/* =====================================================
+   MARITIMO HERO FINAL — MAIN HERO VISUAL SYSTEM
+   Imagen completa + estilo visual coherente con la home.
+   ===================================================== */
+
+.hero {
+  position: relative !important;
+  min-height: 86vh !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background: #07111d !important;
+}
+
+/* Imagen llena todo el hero */
+.heroImage {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  transform: none !important;
+  scale: 1 !important;
+  filter:
+    brightness(1.05)
+    contrast(1.03)
+    saturate(1.04) !important;
+  z-index: -4 !important;
+}
+
+/* Desktop usa la horizontal */
+.heroImageDesktop {
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center right !important;
+}
+
+/* Mobile usa la vertical real */
+.heroImageMobile {
+  display: none !important;
+}
+
+/* Overlay estilo home: azul tinta, no negro sucio */
+.heroOverlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -3 !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 11, 18, .72) 0%,
+      rgba(7, 17, 29, .56) 34%,
+      rgba(7, 17, 29, .24) 66%,
+      rgba(7, 17, 29, .08) 100%
+    ) !important;
+}
+
+/* Capa premium: luz champagne + profundidad */
+.hero::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -2 !important;
+  pointer-events: none !important;
+  opacity: 1 !important;
+  background:
+    radial-gradient(circle at 78% 22%, rgba(214, 192, 141, .18), transparent 26rem),
+    radial-gradient(circle at 12% 18%, rgba(255,255,255,.08), transparent 22rem) !important;
+}
+
+/* Degradado inferior limpio */
+.hero::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.02) 0%,
+      rgba(5,11,18,.04) 46%,
+      rgba(5,11,18,.26) 100%
+    ) !important;
+}
+
+/* Layout del texto como hero principal */
+.heroInner {
+  position: relative !important;
+  z-index: 2 !important;
+  min-height: 86vh !important;
+  display: flex !important;
+  align-items: center !important;
+  padding-top: clamp(7.2rem, 11vh, 10rem) !important;
+  padding-bottom: clamp(4.5rem, 8vh, 7rem) !important;
+}
+
+.heroContent {
+  max-width: 780px !important;
+}
+
+.eyebrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  margin-bottom: 1.1rem !important;
+  color: #d6c08d !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: .72rem !important;
+  font-weight: 800 !important;
+  letter-spacing: .26em !important;
+  text-transform: uppercase !important;
+  text-shadow: 0 10px 26px rgba(0,0,0,.22) !important;
+}
+
+.heroContent h1 {
+  max-width: 820px !important;
+  margin: 0 !important;
+  color: #ffffff !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: clamp(4.4rem, 7.6vw, 8.8rem) !important;
+  font-weight: 700 !important;
+  line-height: .90 !important;
+  letter-spacing: -.07em !important;
+  text-wrap: balance !important;
+  text-shadow:
+    0 22px 52px rgba(0,0,0,.34),
+    0 2px 8px rgba(0,0,0,.18) !important;
+}
+
+.heroContent h1::after {
+  background: linear-gradient(90deg, #d6c08d, rgba(214,192,141,0)) !important;
+}
+
+.heroContent p {
+  max-width: 610px !important;
+  margin-top: 1.35rem !important;
+  color: rgba(255,255,255,.82) !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: clamp(1.05rem, 1.35vw, 1.28rem) !important;
+  font-weight: 400 !important;
+  line-height: 1.72 !important;
+  text-shadow: 0 14px 34px rgba(0,0,0,.26) !important;
+}
+
+/* Mobile: cubre todo, con imagen mobile real */
+@media (max-width: 760px) {
+  .hero {
+    min-height: 88vh !important;
+  }
+
+  .heroImageDesktop {
+    display: none !important;
+  }
+
+  .heroImageMobile {
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  .heroImage {
+    object-fit: cover !important;
+    object-position: center center !important;
+    filter:
+      brightness(1.08)
+      contrast(1.02)
+      saturate(1.03) !important;
+  }
+
+  .heroOverlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5, 11, 18, .64) 0%,
+        rgba(7, 17, 29, .44) 36%,
+        rgba(7, 17, 29, .20) 64%,
+        rgba(5, 11, 18, .34) 100%
+      ) !important;
+  }
+
+  .hero::before {
+    background:
+      radial-gradient(circle at 70% 30%, rgba(214, 192, 141, .13), transparent 16rem),
+      radial-gradient(circle at 12% 14%, rgba(255,255,255,.06), transparent 14rem) !important;
+  }
+
+  .heroInner {
+    min-height: 88vh !important;
+    align-items: flex-start !important;
+    padding-top: calc(env(safe-area-inset-top) + 8.4rem) !important;
+    padding-bottom: 4.6rem !important;
+  }
+
+  .heroContent {
+    max-width: 94% !important;
+  }
+
+  .eyebrow {
+    margin-bottom: .9rem !important;
+    font-size: .66rem !important;
+    letter-spacing: .22em !important;
+  }
+
+  .heroContent h1 {
+    max-width: 96% !important;
+    font-size: clamp(2.55rem, 11.4vw, 4.2rem) !important;
+    line-height: .94 !important;
+    letter-spacing: -.06em !important;
+  }
+
+  .heroContent p {
+    max-width: 92% !important;
+    margin-top: 1.05rem !important;
+    font-size: clamp(.96rem, 4vw, 1.12rem) !important;
+    line-height: 1.62 !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero {
+    min-height: 88vh !important;
+  }
+
+  .heroInner {
+    padding-top: calc(env(safe-area-inset-top) + 8rem) !important;
+  }
+
+  .heroContent h1 {
+    font-size: clamp(2.24rem, 10.8vw, 3.5rem) !important;
+  }
+
+  .heroContent p {
+    font-size: .94rem !important;
+  }
+}
+
+/* =====================================================
+   MARITIMO HERO MOBILE — MATCH HOME HERO SYSTEM
+   Mismo consumo visual, color, overlay y CTA que la home.
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .hero {
+    width: 100% !important;
+    min-height: 100svh !important;
+    height: 100svh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    background: #07111d !important;
+  }
+
+  .heroImageDesktop {
+    display: none !important;
+  }
+
+  .heroImageMobile {
+    display: block !important;
+  }
+
+  .heroImage,
+  .heroImageMobile {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 100% !important;
+    min-height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    transform: none !important;
+    scale: 1 !important;
+    filter:
+      brightness(1.08)
+      contrast(1.03)
+      saturate(1.04) !important;
+    z-index: -4 !important;
+  }
+
+  .heroOverlay {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: -3 !important;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5, 11, 18, .40) 0%,
+        rgba(7, 17, 29, .34) 28%,
+        rgba(7, 17, 29, .28) 54%,
+        rgba(5, 11, 18, .46) 100%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(5, 11, 18, .58) 0%,
+        rgba(7, 17, 29, .32) 52%,
+        rgba(7, 17, 29, .08) 100%
+      ) !important;
+  }
+
+  .hero::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: -2 !important;
+    pointer-events: none !important;
+    opacity: 1 !important;
+    background:
+      radial-gradient(circle at 78% 22%, rgba(214, 192, 141, .14), transparent 16rem),
+      radial-gradient(circle at 10% 20%, rgba(255,255,255,.07), transparent 14rem) !important;
+  }
+
+  .hero::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: -1 !important;
+    pointer-events: none !important;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,.02) 0%,
+        rgba(5,11,18,.04) 44%,
+        rgba(5,11,18,.28) 100%
+      ) !important;
+  }
+
+  .heroInner {
+    position: relative !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    min-height: 100svh !important;
+    height: 100svh !important;
+    display: flex !important;
+    align-items: center !important;
+    padding:
+      calc(env(safe-area-inset-top) + 6.6rem)
+      1.25rem
+      3.8rem !important;
+    margin: 0 !important;
+  }
+
+  .heroContent {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .eyebrow {
+    display: block !important;
+    margin: 0 0 .92rem !important;
+    color: #d6c08d !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: .68rem !important;
+    font-weight: 800 !important;
+    line-height: 1.15 !important;
+    letter-spacing: .22em !important;
+    text-transform: uppercase !important;
+    text-shadow: 0 10px 26px rgba(0,0,0,.22) !important;
+  }
+
+  .heroContent h1 {
+    max-width: 94% !important;
+    margin: 0 !important;
+    color: #ffffff !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: clamp(2.72rem, 11.8vw, 4.35rem) !important;
+    font-weight: 750 !important;
+    line-height: .92 !important;
+    letter-spacing: -.065em !important;
+    text-wrap: balance !important;
+    text-shadow:
+      0 22px 54px rgba(0,0,0,.34),
+      0 2px 8px rgba(0,0,0,.18) !important;
+  }
+
+  .heroContent h1::after {
+    display: none !important;
+  }
+
+  .heroContent p {
+    max-width: 92% !important;
+    margin: 1.05rem 0 0 !important;
+    color: rgba(255,255,255,.84) !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: clamp(.98rem, 4vw, 1.14rem) !important;
+    font-weight: 400 !important;
+    line-height: 1.62 !important;
+    text-shadow: 0 14px 34px rgba(0,0,0,.24) !important;
+  }
+
+  /* Botones del hero: mismo sistema visual que la home */
+  .heroContent a,
+  .heroContent button {
+    border-radius: 999px !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-weight: 800 !important;
+    letter-spacing: .08em !important;
+    text-transform: uppercase !important;
+    transition:
+      transform .28s cubic-bezier(.22,.61,.36,1),
+      box-shadow .28s cubic-bezier(.22,.61,.36,1),
+      background .28s ease,
+      border-color .28s ease !important;
+  }
+
+  .heroContent a:first-of-type {
+    background:
+      radial-gradient(circle at 18% 0%, rgba(255,255,255,.18), transparent 36%),
+      linear-gradient(135deg, #07111d 0%, #0d1c2b 46%, #173247 100%) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(214,192,141,.34) !important;
+    box-shadow:
+      0 20px 44px rgba(7,17,29,.34),
+      0 6px 18px rgba(23,50,71,.24),
+      inset 0 1px 0 rgba(255,255,255,.18) !important;
+  }
+
+  .heroContent a:first-of-type:hover {
+    transform: translateY(-2px) !important;
+    box-shadow:
+      0 24px 54px rgba(7,17,29,.40),
+      0 8px 22px rgba(23,50,71,.28),
+      inset 0 1px 0 rgba(255,255,255,.22) !important;
+  }
+
+  .heroContent a:nth-of-type(2) {
+    background: rgba(255,255,255,.16) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255,255,255,.28) !important;
+    backdrop-filter: blur(16px) !important;
+    box-shadow:
+      0 14px 34px rgba(0,0,0,.22),
+      inset 0 1px 0 rgba(255,255,255,.18) !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .heroInner {
+    padding:
+      calc(env(safe-area-inset-top) + 6.35rem)
+      1.05rem
+      3.4rem !important;
+  }
+
+  .heroContent h1 {
+    font-size: clamp(2.42rem, 11.2vw, 3.65rem) !important;
+  }
+
+  .heroContent p {
+    font-size: .94rem !important;
+    line-height: 1.58 !important;
   }
 }
 
@@ -5628,6 +6151,93 @@
 }
 
 /* =====================================================
+   MARITIMO CLEAN HERO FLOW FINAL
+   El hero termina limpio como la principal.
+   Lo que viene abajo no se mete visualmente en el hero.
+   ===================================================== */
+
+@media (max-width: 760px) {
+  .hero {
+    height: 100svh !important;
+    min-height: 100svh !important;
+    max-height: 100svh !important;
+    overflow: hidden !important;
+  }
+
+  .heroInner {
+    height: 100svh !important;
+    min-height: 100svh !important;
+    max-height: 100svh !important;
+    padding-top: calc(env(safe-area-inset-top) + 8.4rem) !important;
+    padding-bottom: 8.8rem !important;
+    align-items: flex-start !important;
+  }
+
+  .heroContent h1 {
+    font-size: clamp(2.12rem, 9.7vw, 3.15rem) !important;
+    line-height: .94 !important;
+    max-width: 95% !important;
+  }
+
+  .heroContent p {
+    max-width: 92% !important;
+    font-size: .88rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .actions {
+    margin-top: 1rem !important;
+  }
+
+  .actions a:first-child {
+    width: 230px !important;
+    min-height: 42px !important;
+  }
+
+  .actions a:nth-child(2) {
+    display: none !important;
+  }
+
+  .commandBar {
+    bottom: calc(env(safe-area-inset-bottom) + 1rem) !important;
+    height: 68px !important;
+    min-height: 68px !important;
+    border-radius: 20px !important;
+  }
+
+  .commandItem span {
+    font-size: .54rem !important;
+  }
+
+  /* Todo lo que viene después del hero arranca como sección real */
+  .hero + * {
+    margin-top: 0 !important;
+  }
+
+  .features,
+  .certifications,
+  .overview,
+  .services,
+  .process,
+  .useCases {
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  .features {
+    padding-top: 2.2rem !important;
+  }
+
+  .certifications {
+    margin-top: 0 !important;
+  }
+
+  .overview {
+    padding-top: 4.2rem !important;
+  }
+}
+
+/* =====================================================
    SERVICE HERO MOBILE FINAL SIZE
    Igual ritmo que la home, sin espacio reservado para menú inferior.
    ===================================================== */
@@ -5863,6 +6473,56 @@
 }
 
 /* =====================================================
+   ZZZ MARITIMO HERO IMAGE FINAL SYSTEM
+   Desktop usa marítimo desktop. Mobile usa marítimo mobile.
+   Sin contain, sin scale raro, sin encuadres viejos.
+   ===================================================== */
+
+/* Base */
+.heroImage {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transform: none !important;
+  scale: 1 !important;
+}
+
+/* Desktop */
+@media (min-width: 761px) {
+  .heroImageDesktop {
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  .heroImageMobile {
+    display: none !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  .heroImageDesktop {
+    display: none !important;
+  }
+
+  .heroImageMobile {
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    transform: none !important;
+    scale: 1 !important;
+  }
+
+  .heroImage {
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+}
+
+/* =====================================================
    ACROSS SERVICE PAGE VISUAL SYSTEM
    Todas las páginas internas heredan la línea de la home.
    ===================================================== */
@@ -5937,224 +6597,273 @@
 }
 
 /* =====================================================
-   ZZZ ECOMMERCE FINAL MOBILE/TABLET SYSTEM
-   Desktop grande queda intacto.
-   Sistema igual a las otras:
-   - hero responsive ordenado
-   - card fuera en tablet/mobile
-   - trustBar 2x2 compacta
-   - overview con márgenes
-   - oculta cards/pilares en mobile
-   - deja una sola CTA final
+   MARITIMO HERO SAME AS AEREO FINAL LOCK
+   Misma estructura visual del hero aéreo.
+   Solo cambia texto e imagen.
    ===================================================== */
 
-.page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] {
+/* Reset fuerte del hero */
+.page > .hero {
   position: relative !important;
   overflow: hidden !important;
   isolation: isolate !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #fff !important;
   background: #07111d !important;
 }
 
-/* Quitar decoraciones/nieblas del hero */
-@media (max-width: 900px) {
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"]::before,
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"]::after,
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] .heroInner::before,
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] .heroInner::after,
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] .heroContent::before,
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] .heroContent::after,
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="title"]::before,
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="title"]::after {
-    content: none !important;
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-    background: transparent !important;
-    background-image: none !important;
-    box-shadow: none !important;
-    filter: none !important;
-    backdrop-filter: none !important;
-  }
-
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="desktop-image"],
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="mobile-image"],
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] .heroImage {
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    z-index: -4 !important;
-    opacity: 1 !important;
-    mix-blend-mode: normal !important;
-    filter: brightness(1.08) contrast(1.06) saturate(1.14) !important;
-  }
-
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="overlay"],
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] .heroOverlay {
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: -3 !important;
-    pointer-events: none !important;
-    opacity: 1 !important;
-    filter: none !important;
-    backdrop-filter: none !important;
-    background:
-      linear-gradient(90deg, rgba(3,7,13,.64) 0%, rgba(3,7,13,.40) 48%, rgba(3,7,13,.10) 100%),
-      linear-gradient(180deg, rgba(3,7,13,.08) 0%, rgba(3,7,13,.06) 44%, rgba(3,7,13,.22) 100%) !important;
-  }
+/* Imagen */
+.page > .hero .heroImage {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  z-index: -4 !important;
+  filter: brightness(1.04) contrast(1.08) saturate(1.16) !important;
 }
 
-/* Card lateral fuera en tablet/mobile */
-@media (max-width: 1200px) {
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="card"],
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] .operationCard {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-  }
+.page > .hero .heroImageDesktop {
+  display: block !important;
+  object-position: center center !important;
 }
 
-/* TABLET / NEST HUB LANDSCAPE */
-@media (min-width: 901px) and (max-width: 1200px) {
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] {
-    height: 500px !important;
-    min-height: 500px !important;
-    max-height: 500px !important;
-    padding: 0 !important;
-    margin: 0 !important;
+.page > .hero .heroImageMobile {
+  display: none !important;
+  object-position: center bottom !important;
+}
+
+/* Overlay igual al aéreo: texto legible, imagen viva */
+.page > .hero .heroOverlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -3 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 7, 13, .82) 0%,
+      rgba(3, 7, 13, .60) 30%,
+      rgba(3, 7, 13, .26) 58%,
+      rgba(3, 7, 13, .06) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 7, 13, .08) 0%,
+      rgba(3, 7, 13, .12) 48%,
+      rgba(3, 7, 13, .26) 100%
+    ) !important;
+}
+
+.page > .hero::before,
+.page > .hero::after {
+  pointer-events: none !important;
+}
+
+/* Desktop grande */
+@media (min-width: 1201px) {
+  .page > .hero {
+    height: clamp(700px, calc(100svh - 86px), 800px) !important;
+    min-height: 700px !important;
+    max-height: 800px !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="desktop-image"] {
-    display: block !important;
-    object-position: center center !important;
-  }
-
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="mobile-image"] {
-    display: none !important;
-  }
-
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="inner"] {
+  .page > .hero .heroInner {
     position: absolute !important;
     z-index: 5 !important;
-    top: 145px !important;
-    left: clamp(46px, 5.8vw, 64px) !important;
-    right: clamp(42px, 5.8vw, 64px) !important;
+    top: 155px !important;
+    left: clamp(72px, 7vw, 112px) !important;
+    right: clamp(72px, 7vw, 112px) !important;
     width: auto !important;
     max-width: none !important;
     margin: 0 !important;
     padding: 0 !important;
-    display: block !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    gap: 3rem !important;
     transform: none !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="content"] {
-    max-width: 520px !important;
+  .page > .hero .heroContent {
+    width: 100% !important;
+    max-width: 620px !important;
     margin: 0 !important;
     padding: 0 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="eyebrow"] {
+  .page > .hero .eyebrow {
     display: block !important;
-    max-width: 520px !important;
-    margin: 0 0 .55rem !important;
+    margin: 0 0 .72rem !important;
     color: #d6c08d !important;
-    font-size: .56rem !important;
+    font-size: .72rem !important;
     line-height: 1 !important;
     letter-spacing: .17em !important;
     font-weight: 950 !important;
     text-transform: uppercase !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="title"] {
-    max-width: 520px !important;
+  .page > .hero .heroContent h1 {
+    max-width: 620px !important;
     margin: 0 !important;
     color: #fff !important;
-    font-size: clamp(2.22rem, 4vw, 2.72rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.045em !important;
+    font-size: clamp(3.45rem, 4.15vw, 4.75rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.05em !important;
     font-weight: 950 !important;
-    text-wrap: balance !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="text"] {
-    max-width: 445px !important;
-    margin: .78rem 0 0 !important;
+  .page > .hero .heroContent p {
+    max-width: 520px !important;
+    margin: 1.15rem 0 0 !important;
     color: rgba(255,255,255,.9) !important;
-    font-size: .76rem !important;
-    line-height: 1.42 !important;
+    font-size: 1.02rem !important;
+    line-height: 1.44 !important;
     font-weight: 650 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="actions"] {
+  .page > .hero .actions {
     display: flex !important;
-    gap: .62rem !important;
-    margin: 1rem 0 0 !important;
+    gap: .72rem !important;
+    margin: 1.45rem 0 0 !important;
     padding: 0 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="actions"] a {
-    min-height: 36px !important;
-    padding: 0 1.05rem !important;
+  .page > .hero .actions a {
+    min-height: 46px !important;
+    padding: 0 1.3rem !important;
     border-radius: 999px !important;
-    font-size: .54rem !important;
+    font-size: .72rem !important;
     line-height: 1 !important;
-    letter-spacing: .05em !important;
+    letter-spacing: .055em !important;
     font-weight: 950 !important;
     text-transform: uppercase !important;
     text-decoration: none !important;
-    white-space: nowrap !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-  }
-}
-
-/* Nest Hub 1024x600 */
-@media (min-width: 980px) and (max-width: 1100px) and (max-height: 650px) {
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] {
-    height: 480px !important;
-    min-height: 480px !important;
-    max-height: 480px !important;
+    white-space: nowrap !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="inner"] {
-    top: 142px !important;
-    left: 58px !important;
-    right: 58px !important;
-  }
-
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="title"] {
-    font-size: 2.48rem !important;
-  }
-
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="text"] {
-    max-width: 430px !important;
-    font-size: .74rem !important;
-  }
-}
-
-/* TABLET VERTICAL / iPad / Surface */
-@media (min-width: 701px) and (max-width: 1024px) and (orientation: portrait) {
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] {
-    height: 560px !important;
-    min-height: 560px !important;
-    max-height: 560px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="desktop-image"] {
+  .page > .hero .operationCard {
     display: block !important;
-    object-position: center center !important;
+  }
+}
+
+/* Desktop bajo */
+@media (min-width: 1201px) and (max-height: 820px) {
+  .page > .hero {
+    height: 680px !important;
+    min-height: 680px !important;
+    max-height: 680px !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="mobile-image"] {
+  .page > .hero .heroInner {
+    top: 138px !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    font-size: clamp(3.15rem, 3.85vw, 4.35rem) !important;
+  }
+}
+
+/* Tablet horizontal / laptop chica */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .page > .hero {
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+  }
+
+  .page > .hero .heroImageDesktop {
+    display: block !important;
+  }
+
+  .page > .hero .heroImageMobile {
     display: none !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="inner"] {
+  .page > .hero .heroInner {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 118px !important;
+    left: clamp(58px, 7vw, 86px) !important;
+    right: clamp(58px, 7vw, 86px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    gap: 2rem !important;
+    transform: none !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 500px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin: 0 0 .6rem !important;
+    font-size: .62rem !important;
+    line-height: 1 !important;
+    letter-spacing: .16em !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 500px !important;
+    margin: 0 !important;
+    font-size: clamp(2.65rem, 4.6vw, 3.95rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.05em !important;
+    font-weight: 950 !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 430px !important;
+    margin: 1rem 0 0 !important;
+    font-size: .9rem !important;
+    line-height: 1.42 !important;
+  }
+
+  .page > .hero .actions {
+    display: flex !important;
+    gap: .65rem !important;
+    margin: 1.25rem 0 0 !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 42px !important;
+    padding: 0 1.1rem !important;
+    font-size: .66rem !important;
+  }
+
+  .page > .hero .operationCard {
+    display: none !important;
+  }
+}
+
+/* Tablet vertical */
+@media (min-width: 701px) and (max-width: 900px) {
+  .page > .hero {
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+  }
+
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: block !important;
+  }
+
+  .page > .hero .heroInner {
     position: absolute !important;
     z-index: 5 !important;
     top: 122px !important;
@@ -6168,67 +6877,75 @@
     transform: none !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="content"] {
+  .page > .hero .heroContent {
     max-width: 430px !important;
     margin: 0 !important;
     padding: 0 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="title"] {
+  .page > .hero .eyebrow {
+    margin: 0 0 .58rem !important;
+    font-size: .58rem !important;
+    line-height: 1 !important;
+    letter-spacing: .16em !important;
+  }
+
+  .page > .hero .heroContent h1 {
     max-width: 430px !important;
     margin: 0 !important;
-    font-size: clamp(2.05rem, 5.1vw, 2.58rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.045em !important;
+    font-size: clamp(2.4rem, 7vw, 3.3rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.05em !important;
     font-weight: 950 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="text"] {
-    max-width: 370px !important;
-    margin: .8rem 0 0 !important;
-    font-size: .76rem !important;
-    line-height: 1.42 !important;
-    font-weight: 650 !important;
+  .page > .hero .heroContent p {
+    max-width: 380px !important;
+    margin: .92rem 0 0 !important;
+    font-size: .82rem !important;
+    line-height: 1.38 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="actions"] {
+  .page > .hero .actions {
     display: flex !important;
-    gap: .58rem !important;
-    margin: 1rem 0 0 !important;
+    gap: .6rem !important;
+    margin: 1.12rem 0 0 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="actions"] a {
-    min-height: 36px !important;
+  .page > .hero .actions a {
+    min-height: 39px !important;
     padding: 0 1rem !important;
-    font-size: .54rem !important;
+    font-size: .6rem !important;
+  }
+
+  .page > .hero .operationCard {
+    display: none !important;
   }
 }
 
-/* MOBILE */
+/* Mobile */
 @media (max-width: 700px) {
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] {
+  .page > .hero {
     height: 465px !important;
     min-height: 465px !important;
     max-height: 465px !important;
-    padding: 0 !important;
-    margin: 0 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="desktop-image"] {
+  .page > .hero .heroImageDesktop {
     display: none !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="mobile-image"] {
+  .page > .hero .heroImageMobile {
     display: block !important;
-    object-position: center center !important;
+    object-position: center bottom !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="inner"] {
+  .page > .hero .heroInner {
     position: absolute !important;
     z-index: 5 !important;
-    top: 86px !important;
-    left: 20px !important;
-    right: 20px !important;
+    top: 122px !important;
+    left: clamp(26px, 7vw, 38px) !important;
+    right: clamp(26px, 7vw, 38px) !important;
     width: auto !important;
     max-width: none !important;
     margin: 0 !important;
@@ -6237,52 +6954,54 @@
     transform: none !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="content"] {
-    max-width: 318px !important;
+  .page > .hero .heroContent {
+    max-width: 315px !important;
     margin: 0 !important;
     padding: 0 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="eyebrow"] {
-    max-width: 318px !important;
-    margin: 0 0 .5rem !important;
+  .page > .hero .eyebrow {
+    display: block !important;
+    max-width: 315px !important;
+    margin: 0 0 .52rem !important;
     color: #d6c08d !important;
-    font-size: .5rem !important;
+    font-size: .52rem !important;
     line-height: 1 !important;
     letter-spacing: .15em !important;
     font-weight: 950 !important;
     text-transform: uppercase !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="title"] {
-    max-width: 318px !important;
+  .page > .hero .heroContent h1 {
+    max-width: 315px !important;
     margin: 0 !important;
     color: #fff !important;
-    font-size: clamp(1.68rem, 8.1vw, 2.08rem) !important;
+    font-size: clamp(1.72rem, 8.4vw, 2.18rem) !important;
     line-height: .96 !important;
     letter-spacing: -.045em !important;
     font-weight: 950 !important;
+    text-wrap: balance !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="text"] {
-    max-width: 292px !important;
-    margin: .68rem 0 0 !important;
+  .page > .hero .heroContent p {
+    max-width: 300px !important;
+    margin: .72rem 0 0 !important;
     color: rgba(255,255,255,.9) !important;
-    font-size: .62rem !important;
-    line-height: 1.36 !important;
+    font-size: .66rem !important;
+    line-height: 1.34 !important;
     font-weight: 650 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="actions"] {
+  .page > .hero .actions {
     display: grid !important;
     grid-template-columns: 1fr !important;
     max-width: 250px !important;
-    margin: .92rem 0 0 !important;
     gap: .5rem !important;
+    margin: 1rem 0 0 !important;
     padding: 0 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="actions"] a {
+  .page > .hero .actions a {
     width: 100% !important;
     min-height: 34px !important;
     padding: 0 .8rem !important;
@@ -6299,11 +7018,2017 @@
     justify-content: center !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="actions"] a:nth-of-type(2) {
+  .page > .hero .actions a:nth-of-type(2) {
     display: none !important;
   }
 
-  /* trustBar compacta */
+  .page > .hero .operationCard {
+    display: none !important;
+  }
+}
+
+/* Mobile chico */
+@media (max-width: 390px) {
+  .page > .hero {
+    height: 455px !important;
+    min-height: 455px !important;
+    max-height: 455px !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 116px !important;
+    left: 24px !important;
+    right: 22px !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 300px !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 300px !important;
+    font-size: 1.78rem !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 285px !important;
+    font-size: .64rem !important;
+  }
+
+  .page > .hero .actions {
+    max-width: 245px !important;
+  }
+}
+
+/* =====================================================
+   MARITIMO HERO SAME AS AEREO FINAL LOCK
+   Misma estructura visual del hero aéreo.
+   Solo cambia texto e imagen.
+   ===================================================== */
+
+/* Reset fuerte del hero */
+.page > .hero {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #fff !important;
+  background: #07111d !important;
+}
+
+/* Imagen */
+.page > .hero .heroImage {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  z-index: -4 !important;
+  filter: brightness(1.04) contrast(1.08) saturate(1.16) !important;
+}
+
+.page > .hero .heroImageDesktop {
+  display: block !important;
+  object-position: center center !important;
+}
+
+.page > .hero .heroImageMobile {
+  display: none !important;
+  object-position: center bottom !important;
+}
+
+/* Overlay igual al aéreo: texto legible, imagen viva */
+.page > .hero .heroOverlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -3 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 7, 13, .82) 0%,
+      rgba(3, 7, 13, .60) 30%,
+      rgba(3, 7, 13, .26) 58%,
+      rgba(3, 7, 13, .06) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 7, 13, .08) 0%,
+      rgba(3, 7, 13, .12) 48%,
+      rgba(3, 7, 13, .26) 100%
+    ) !important;
+}
+
+.page > .hero::before,
+.page > .hero::after {
+  pointer-events: none !important;
+}
+
+/* Desktop grande */
+@media (min-width: 1201px) {
+  .page > .hero {
+    height: clamp(700px, calc(100svh - 86px), 800px) !important;
+    min-height: 700px !important;
+    max-height: 800px !important;
+  }
+
+  .page > .hero .heroInner {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 155px !important;
+    left: clamp(72px, 7vw, 112px) !important;
+    right: clamp(72px, 7vw, 112px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    gap: 3rem !important;
+    transform: none !important;
+  }
+
+  .page > .hero .heroContent {
+    width: 100% !important;
+    max-width: 620px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .eyebrow {
+    display: block !important;
+    margin: 0 0 .72rem !important;
+    color: #d6c08d !important;
+    font-size: .72rem !important;
+    line-height: 1 !important;
+    letter-spacing: .17em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 620px !important;
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: clamp(3.45rem, 4.15vw, 4.75rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.05em !important;
+    font-weight: 950 !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 520px !important;
+    margin: 1.15rem 0 0 !important;
+    color: rgba(255,255,255,.9) !important;
+    font-size: 1.02rem !important;
+    line-height: 1.44 !important;
+    font-weight: 650 !important;
+  }
+
+  .page > .hero .actions {
+    display: flex !important;
+    gap: .72rem !important;
+    margin: 1.45rem 0 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 46px !important;
+    padding: 0 1.3rem !important;
+    border-radius: 999px !important;
+    font-size: .72rem !important;
+    line-height: 1 !important;
+    letter-spacing: .055em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+  }
+
+  .page > .hero .operationCard {
+    display: block !important;
+  }
+}
+
+/* Desktop bajo */
+@media (min-width: 1201px) and (max-height: 820px) {
+  .page > .hero {
+    height: 680px !important;
+    min-height: 680px !important;
+    max-height: 680px !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 138px !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    font-size: clamp(3.15rem, 3.85vw, 4.35rem) !important;
+  }
+}
+
+/* Tablet horizontal / laptop chica */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .page > .hero {
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+  }
+
+  .page > .hero .heroImageDesktop {
+    display: block !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: none !important;
+  }
+
+  .page > .hero .heroInner {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 118px !important;
+    left: clamp(58px, 7vw, 86px) !important;
+    right: clamp(58px, 7vw, 86px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    gap: 2rem !important;
+    transform: none !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 500px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin: 0 0 .6rem !important;
+    font-size: .62rem !important;
+    line-height: 1 !important;
+    letter-spacing: .16em !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 500px !important;
+    margin: 0 !important;
+    font-size: clamp(2.65rem, 4.6vw, 3.95rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.05em !important;
+    font-weight: 950 !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 430px !important;
+    margin: 1rem 0 0 !important;
+    font-size: .9rem !important;
+    line-height: 1.42 !important;
+  }
+
+  .page > .hero .actions {
+    display: flex !important;
+    gap: .65rem !important;
+    margin: 1.25rem 0 0 !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 42px !important;
+    padding: 0 1.1rem !important;
+    font-size: .66rem !important;
+  }
+
+  .page > .hero .operationCard {
+    display: none !important;
+  }
+}
+
+/* Tablet vertical */
+@media (min-width: 701px) and (max-width: 900px) {
+  .page > .hero {
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+  }
+
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: block !important;
+  }
+
+  .page > .hero .heroInner {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 122px !important;
+    left: clamp(46px, 7vw, 62px) !important;
+    right: clamp(46px, 7vw, 62px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 430px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin: 0 0 .58rem !important;
+    font-size: .58rem !important;
+    line-height: 1 !important;
+    letter-spacing: .16em !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 430px !important;
+    margin: 0 !important;
+    font-size: clamp(2.4rem, 7vw, 3.3rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.05em !important;
+    font-weight: 950 !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 380px !important;
+    margin: .92rem 0 0 !important;
+    font-size: .82rem !important;
+    line-height: 1.38 !important;
+  }
+
+  .page > .hero .actions {
+    display: flex !important;
+    gap: .6rem !important;
+    margin: 1.12rem 0 0 !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 39px !important;
+    padding: 0 1rem !important;
+    font-size: .6rem !important;
+  }
+
+  .page > .hero .operationCard {
+    display: none !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .page > .hero {
+    height: 465px !important;
+    min-height: 465px !important;
+    max-height: 465px !important;
+  }
+
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: block !important;
+    object-position: center bottom !important;
+  }
+
+  .page > .hero .heroInner {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 122px !important;
+    left: clamp(26px, 7vw, 38px) !important;
+    right: clamp(26px, 7vw, 38px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 315px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .eyebrow {
+    display: block !important;
+    max-width: 315px !important;
+    margin: 0 0 .52rem !important;
+    color: #d6c08d !important;
+    font-size: .52rem !important;
+    line-height: 1 !important;
+    letter-spacing: .15em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 315px !important;
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: clamp(1.72rem, 8.4vw, 2.18rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.045em !important;
+    font-weight: 950 !important;
+    text-wrap: balance !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 300px !important;
+    margin: .72rem 0 0 !important;
+    color: rgba(255,255,255,.9) !important;
+    font-size: .66rem !important;
+    line-height: 1.34 !important;
+    font-weight: 650 !important;
+  }
+
+  .page > .hero .actions {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    max-width: 250px !important;
+    gap: .5rem !important;
+    margin: 1rem 0 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .actions a {
+    width: 100% !important;
+    min-height: 34px !important;
+    padding: 0 .8rem !important;
+    border-radius: 999px !important;
+    font-size: .52rem !important;
+    line-height: 1.05 !important;
+    letter-spacing: .045em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .page > .hero .actions a:nth-of-type(2) {
+    display: none !important;
+  }
+
+  .page > .hero .operationCard {
+    display: none !important;
+  }
+}
+
+/* Mobile chico */
+@media (max-width: 390px) {
+  .page > .hero {
+    height: 455px !important;
+    min-height: 455px !important;
+    max-height: 455px !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 116px !important;
+    left: 24px !important;
+    right: 22px !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 300px !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 300px !important;
+    font-size: 1.78rem !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 285px !important;
+    font-size: .64rem !important;
+  }
+
+  .page > .hero .actions {
+    max-width: 245px !important;
+  }
+}
+
+/* =====================================================
+   MARITIMO MOBILE SECTIONS + DESKTOP RESPONSIVE FINAL
+  }
+
+  .page .overviewCopy,
+  .page .overviewContent,
+  .page .overviewInner,
+  .page .overviewGrid {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .page .overview .eyebrow,
+  .page .overview [class*="eyebrow"],
+  .page .overview [class*="Eyebrow"] {
+    margin-top: 0 !important;
+    margin-bottom: .58rem !important;
+  }
+
+  .page .trustBar,
+  .page [class*="certification"],
+  .page [class*="Certification"] {
+    margin-bottom: 0 !important;
+  }
+
+  .page section + .overview,
+  .page [class*="Certification"] + .overview,
+  .page [class*="certification"] + .overview {
+    margin-top: 0 !important;
+  }
+
+  /* Sacar nieblas/fondos que generan aire falso */
+  .page .overview::before,
+  .page .overview::after {
+    display: none !important;
+  }
+
+/* Mobile chico: todavía más compacto */
+@media (max-width: 390px) {
+  .page .overview {
+    padding-top: .9rem !important;
+  }
+}
+
+
+/* =========================
+   DESKTOP/LAPTOP: hero responsive real
+   Para pantallas tipo notebook 1366x768 / 1440x900
+   ========================= */
+
+@media (min-width: 901px) and (max-width: 1440px) {
+  .page > .hero {
+    height: clamp(610px, calc(100svh - 74px), 700px) !important;
+    min-height: 610px !important;
+    max-height: 700px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .page > .hero .heroInner {
+    top: clamp(116px, 14vh, 142px) !important;
+    left: clamp(54px, 6vw, 86px) !important;
+    right: clamp(54px, 6vw, 86px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: clamp(1.4rem, 3vw, 2.6rem) !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: clamp(470px, 44vw, 590px) !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin-bottom: .64rem !important;
+    font-size: clamp(.58rem, .72vw, .68rem) !important;
+    line-height: 1 !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: clamp(470px, 44vw, 590px) !important;
+    font-size: clamp(2.85rem, 4vw, 4.35rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.05em !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: clamp(390px, 38vw, 500px) !important;
+    margin-top: .95rem !important;
+    font-size: clamp(.86rem, 1vw, .98rem) !important;
+    line-height: 1.42 !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: 1.2rem !important;
+    gap: .65rem !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 42px !important;
+    padding: 0 1.1rem !important;
+    font-size: .64rem !important;
+  }
+}
+
+/* Desktop bajo: evita que se corte en pantallas de poca altura */
+@media (min-width: 901px) and (max-height: 780px) {
+  .page > .hero {
+    height: 610px !important;
+    min-height: 610px !important;
+    max-height: 610px !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 108px !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    font-size: clamp(2.65rem, 3.7vw, 3.85rem) !important;
+  }
+
+  .page > .hero .heroContent p {
+    font-size: .86rem !important;
+    line-height: 1.38 !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: 1rem !important;
+  }
+}
+
+/* En laptop chica, la card lateral ensucia y rompe el responsive */
+@media (min-width: 901px) and (max-width: 1180px) {
+  .page > .hero .operationCard {
+    display: none !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 560px !important;
+  }
+}
+
+/* =====================================================
+   MARITIMO DESKTOP COMPACT CLEAN LOCK
+   Compacta 1280x800 / laptops / pantallas medianas.
+   Quita la card derecha que no aporta.
+   ===================================================== */
+
+@media (min-width: 901px) and (max-width: 1440px) {
+  .page > .hero {
+    height: clamp(560px, calc(100svh - 72px), 640px) !important;
+    min-height: 560px !important;
+    max-height: 640px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .page > .hero .operationCard {
+    display: none !important;
+  }
+
+  .page > .hero .heroInner {
+    position: absolute !important;
+    top: clamp(112px, 13vh, 132px) !important;
+    left: clamp(54px, 6vw, 78px) !important;
+    right: clamp(54px, 6vw, 78px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 560px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin: 0 0 .58rem !important;
+    font-size: .62rem !important;
+    line-height: 1 !important;
+    letter-spacing: .16em !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 560px !important;
+    margin: 0 !important;
+    font-size: clamp(2.7rem, 3.55vw, 3.65rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.05em !important;
+    font-weight: 950 !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 505px !important;
+    margin: .92rem 0 0 !important;
+    font-size: .88rem !important;
+    line-height: 1.38 !important;
+    font-weight: 650 !important;
+  }
+
+  .page > .hero .actions {
+    display: flex !important;
+    gap: .65rem !important;
+    margin: 1.12rem 0 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 40px !important;
+    padding: 0 1.15rem !important;
+    border-radius: 999px !important;
+    font-size: .62rem !important;
+    line-height: 1 !important;
+    letter-spacing: .052em !important;
+    font-weight: 950 !important;
+    white-space: nowrap !important;
+  }
+
+  .page > .hero .heroImage {
+    object-fit: cover !important;
+    object-position: center center !important;
+    filter: brightness(1.04) contrast(1.08) saturate(1.12) !important;
+  }
+
+  .page > .hero .heroOverlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(3, 7, 13, .82) 0%,
+        rgba(3, 7, 13, .60) 34%,
+        rgba(3, 7, 13, .28) 62%,
+        rgba(3, 7, 13, .08) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(3, 7, 13, .06) 0%,
+        rgba(3, 7, 13, .12) 52%,
+        rgba(3, 7, 13, .28) 100%
+      ) !important;
+  }
+}
+
+/* Pantallas de poca altura: todavía más compacto */
+@media (min-width: 901px) and (max-height: 820px) {
+  .page > .hero {
+    height: 560px !important;
+    min-height: 560px !important;
+    max-height: 560px !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 108px !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    font-size: clamp(2.45rem, 3.25vw, 3.25rem) !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 480px !important;
+    font-size: .82rem !important;
+    line-height: 1.36 !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: 1rem !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 38px !important;
+    font-size: .58rem !important;
+  }
+}
+
+/* 1280x800 específico / Nest Hub Max */
+@media (min-width: 1200px) and (max-width: 1320px) and (max-height: 850px) {
+  .page > .hero {
+    height: 555px !important;
+    min-height: 555px !important;
+    max-height: 555px !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 106px !important;
+    left: 72px !important;
+    right: 72px !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 545px !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 545px !important;
+    font-size: 3.05rem !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 485px !important;
+    font-size: .82rem !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 38px !important;
+  }
+}
+
+/* =====================================================
+   MARITIMO HERO RESPONSIVE REAL FINAL LOCK
+   Corrige Surface Pro, Nest Hub, laptop y desktop.
+   Mismo criterio visual del aéreo, pero compacto.
+   ===================================================== */
+
+/* Matar definitivamente la card derecha */
+.page > .hero .operationCard,
+.page > .hero [data-hero-role="card"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* =========================
+   DESKTOP GRANDE REAL
+   1366 / 1440 / 1600+
+   ========================= */
+
+@media (min-width: 1201px) {
+  .page > .hero {
+    height: 590px !important;
+    min-height: 590px !important;
+    max-height: 590px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .page > .hero .heroImageDesktop {
+    display: block !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: none !important;
+  }
+
+  .page > .hero .heroImage {
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  .page > .hero .heroInner {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 118px !important;
+    left: clamp(72px, 6vw, 96px) !important;
+    right: clamp(72px, 6vw, 96px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 545px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin: 0 0 .58rem !important;
+    font-size: .62rem !important;
+    line-height: 1 !important;
+    letter-spacing: .16em !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 545px !important;
+    margin: 0 !important;
+    font-size: clamp(2.9rem, 3.45vw, 3.7rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.05em !important;
+    font-weight: 950 !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 490px !important;
+    margin: .88rem 0 0 !important;
+    font-size: .84rem !important;
+    line-height: 1.36 !important;
+    font-weight: 650 !important;
+  }
+
+  .page > .hero .actions {
+    display: flex !important;
+    gap: .68rem !important;
+    margin: 1rem 0 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 38px !important;
+    padding: 0 1.12rem !important;
+    border-radius: 999px !important;
+    font-size: .58rem !important;
+    line-height: 1 !important;
+    letter-spacing: .052em !important;
+    font-weight: 950 !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* Desktop con poca altura: 1280x800, 1366x768 */
+@media (min-width: 1201px) and (max-height: 850px) {
+  .page > .hero {
+    height: 555px !important;
+    min-height: 555px !important;
+    max-height: 555px !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 108px !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 525px !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 525px !important;
+    font-size: clamp(2.65rem, 3.15vw, 3.25rem) !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 470px !important;
+    font-size: .8rem !important;
+    line-height: 1.34 !important;
+  }
+}
+
+/* =========================
+   NEST HUB / TABLET LANDSCAPE
+   901px - 1200px
+   ========================= */
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .page > .hero {
+    height: 500px !important;
+    min-height: 500px !important;
+    max-height: 500px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .page > .hero .heroImageDesktop {
+    display: block !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: none !important;
+  }
+
+  .page > .hero .heroImage {
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  .page > .hero .heroInner {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 168px !important;
+    left: clamp(56px, 6vw, 72px) !important;
+    right: clamp(56px, 6vw, 72px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 530px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin: 0 0 .5rem !important;
+    font-size: .56rem !important;
+    line-height: 1 !important;
+    letter-spacing: .15em !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 530px !important;
+    margin: 0 !important;
+    font-size: clamp(2.35rem, 4.4vw, 3rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.045em !important;
+    font-weight: 950 !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 455px !important;
+    margin: .72rem 0 0 !important;
+    font-size: .76rem !important;
+    line-height: 1.34 !important;
+    font-weight: 650 !important;
+  }
+
+  .page > .hero .actions {
+    display: flex !important;
+    gap: .6rem !important;
+    margin: .9rem 0 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 35px !important;
+    padding: 0 1rem !important;
+    font-size: .54rem !important;
+    line-height: 1 !important;
+    letter-spacing: .05em !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* Nest Hub 1024x600 específico */
+@media (min-width: 980px) and (max-width: 1100px) and (max-height: 650px) {
+  .page > .hero {
+    height: 480px !important;
+    min-height: 480px !important;
+    max-height: 480px !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 160px !important;
+    left: 62px !important;
+    right: 62px !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 520px !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 520px !important;
+    font-size: 2.55rem !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 440px !important;
+    font-size: .74rem !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 34px !important;
+    font-size: .52rem !important;
+  }
+}
+
+/* =========================
+   SURFACE PRO / TABLET PORTRAIT
+   701px - 1024px en vertical
+   ========================= */
+
+@media (min-width: 701px) and (max-width: 1024px) and (orientation: portrait) {
+  .page > .hero {
+    height: 560px !important;
+    min-height: 560px !important;
+    max-height: 560px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: block !important;
+  }
+
+  .page > .hero .heroImage {
+    object-fit: cover !important;
+    object-position: center bottom !important;
+  }
+
+  .page > .hero .heroInner {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 158px !important;
+    left: clamp(44px, 7vw, 64px) !important;
+    right: clamp(44px, 7vw, 64px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 430px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin: 0 0 .52rem !important;
+    font-size: .55rem !important;
+    line-height: 1 !important;
+    letter-spacing: .15em !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 430px !important;
+    margin: 0 !important;
+    font-size: clamp(2.15rem, 6vw, 2.85rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.045em !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 370px !important;
+    margin: .78rem 0 0 !important;
+    font-size: .76rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .page > .hero .actions {
+    display: flex !important;
+    gap: .58rem !important;
+    margin: .95rem 0 0 !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 36px !important;
+    padding: 0 .95rem !important;
+    font-size: .54rem !important;
+  }
+}
+
+/* =========================
+   MOBILE REAL
+   ========================= */
+
+@media (max-width: 700px) {
+  .page > .hero {
+    height: 445px !important;
+    min-height: 445px !important;
+    max-height: 445px !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 108px !important;
+    left: 28px !important;
+    right: 24px !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 270px !important;
+  }
+
+  .page > .hero .heroContent h1 {
+    max-width: 270px !important;
+    font-size: clamp(1.48rem, 7.2vw, 1.82rem) !important;
+    line-height: .98 !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 260px !important;
+    font-size: .56rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .page > .hero .actions {
+    max-width: 225px !important;
+    margin-top: .82rem !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 34px !important;
+    font-size: .48rem !important;
+  }
+}
+
+
+
+/* =====================================================
+   ZZZ MARITIMO HERO REAL FINAL LOCK
+   Usa los roles reales del JSX.
+   No depende de globals.
+   No card derecha.
+   ===================================================== */
+
+.page.page > .hero.hero[data-standard-service-hero="true"] {
+  position: relative !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background: #07111d !important;
+  color: #fff !important;
+}
+
+.page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="desktop-image"],
+.page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="mobile-image"] {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  z-index: -4 !important;
+  filter: brightness(1.03) contrast(1.08) saturate(1.14) !important;
+}
+
+.page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="overlay"] {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -3 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(90deg, rgba(3,7,13,.84) 0%, rgba(3,7,13,.58) 42%, rgba(3,7,13,.18) 100%),
+    linear-gradient(180deg, rgba(3,7,13,.08) 0%, rgba(3,7,13,.14) 50%, rgba(3,7,13,.34) 100%) !important;
+}
+
+.page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+  position: absolute !important;
+  z-index: 5 !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  transform: none !important;
+}
+
+.page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="eyebrow"] {
+  display: block !important;
+  color: #d6c08d !important;
+  line-height: 1 !important;
+  font-weight: 950 !important;
+  text-transform: uppercase !important;
+}
+
+.page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+  margin: 0 !important;
+  color: #fff !important;
+  font-weight: 950 !important;
+  text-wrap: balance !important;
+  text-shadow: 0 14px 36px rgba(0,0,0,.42) !important;
+}
+
+.page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+  color: rgba(255,255,255,.9) !important;
+  font-weight: 650 !important;
+  text-shadow: 0 10px 28px rgba(0,0,0,.36) !important;
+}
+
+.page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+  padding: 0 !important;
+}
+
+.page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a {
+  border-radius: 999px !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  font-weight: 950 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+}
+
+/* DESKTOP REAL */
+@media (min-width: 1201px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 620px !important;
+    min-height: 620px !important;
+    max-height: 620px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="desktop-image"] {
+    display: block !important;
+    object-position: center center !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="mobile-image"] {
+    display: none !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 126px !important;
+    left: clamp(72px, 7vw, 96px) !important;
+    right: clamp(72px, 7vw, 96px) !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 560px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="eyebrow"] {
+    margin: 0 0 .64rem !important;
+    font-size: .66rem !important;
+    letter-spacing: .17em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 560px !important;
+    font-size: clamp(3rem, 3.6vw, 3.85rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.05em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 500px !important;
+    margin: .95rem 0 0 !important;
+    font-size: .9rem !important;
+    line-height: 1.38 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    display: flex !important;
+    gap: .68rem !important;
+    margin: 1.12rem 0 0 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a {
+    min-height: 40px !important;
+    padding: 0 1.15rem !important;
+    font-size: .62rem !important;
+    line-height: 1 !important;
+    letter-spacing: .052em !important;
+  }
+}
+
+/* DESKTOP BAJO / 1280x800 */
+@media (min-width: 1201px) and (max-height: 850px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 590px !important;
+    min-height: 590px !important;
+    max-height: 590px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 112px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    font-size: clamp(2.75rem, 3.25vw, 3.35rem) !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 480px !important;
+    font-size: .84rem !important;
+    line-height: 1.36 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    margin-top: 1rem !important;
+  }
+}
+
+/* TABLET / NEST HUB LANDSCAPE */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 500px !important;
+    min-height: 500px !important;
+    max-height: 500px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="desktop-image"] {
+    display: block !important;
+    object-position: center center !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="mobile-image"] {
+    display: none !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 145px !important;
+    left: clamp(56px, 6vw, 72px) !important;
+    right: clamp(56px, 6vw, 72px) !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 500px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="eyebrow"] {
+    margin: 0 0 .5rem !important;
+    font-size: .56rem !important;
+    letter-spacing: .15em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 500px !important;
+    font-size: clamp(2.2rem, 4.1vw, 2.8rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.045em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 430px !important;
+    margin: .72rem 0 0 !important;
+    font-size: .74rem !important;
+    line-height: 1.34 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    display: flex !important;
+    gap: .6rem !important;
+    margin: .9rem 0 0 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a {
+    min-height: 35px !important;
+    padding: 0 1rem !important;
+    font-size: .54rem !important;
+  }
+}
+
+/* TABLET VERTICAL / SURFACE */
+@media (min-width: 701px) and (max-width: 1024px) and (orientation: portrait) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 560px !important;
+    min-height: 560px !important;
+    max-height: 560px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="desktop-image"] {
+    display: none !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="mobile-image"] {
+    display: block !important;
+    object-position: center bottom !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 150px !important;
+    left: clamp(44px, 7vw, 64px) !important;
+    right: clamp(44px, 7vw, 64px) !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 410px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 410px !important;
+    font-size: clamp(2.05rem, 5.4vw, 2.65rem) !important;
+    line-height: .96 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 360px !important;
+    margin: .76rem 0 0 !important;
+    font-size: .74rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    display: flex !important;
+    gap: .58rem !important;
+    margin: .92rem 0 0 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a {
+    min-height: 36px !important;
+    padding: 0 .95rem !important;
+    font-size: .54rem !important;
+  }
+}
+
+/* MOBILE REAL */
+@media (max-width: 700px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 445px !important;
+    min-height: 445px !important;
+    max-height: 445px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="desktop-image"] {
+    display: none !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="mobile-image"] {
+    display: block !important;
+    object-position: center bottom !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 108px !important;
+    left: 28px !important;
+    right: 24px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 270px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="eyebrow"] {
+    margin: 0 0 .46rem !important;
+    font-size: .48rem !important;
+    letter-spacing: .16em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 270px !important;
+    font-size: clamp(1.48rem, 7.2vw, 1.82rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.04em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 260px !important;
+    margin: .68rem 0 0 !important;
+    font-size: .56rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    max-width: 225px !important;
+    margin: .82rem 0 0 !important;
+    gap: .45rem !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a {
+    min-height: 34px !important;
+    padding: 0 .9rem !important;
+    font-size: .48rem !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a:nth-of-type(2) {
+    display: none !important;
+  }
+}
+
+
+/* =====================================================
+   ZZZ MARITIMO HERO COPY PREMIUM MOBILE/TABLET LOCK
+   Refina posición, tamaño y jerarquía de letras.
+   Mobile/tablet empresarial, no afiche apretado.
+   ===================================================== */
+
+/* Sacar decoraciones viejas del título */
+.page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"]::before,
+.page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"]::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* TABLET LANDSCAPE / NEST HUB */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 500px !important;
+    min-height: 500px !important;
+    max-height: 500px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 150px !important;
+    left: clamp(46px, 5.8vw, 64px) !important;
+    right: clamp(42px, 5.8vw, 64px) !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 520px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="eyebrow"] {
+    margin: 0 0 .55rem !important;
+    font-size: .56rem !important;
+    letter-spacing: .17em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 520px !important;
+    font-size: clamp(2.22rem, 4vw, 2.72rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.045em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 445px !important;
+    margin-top: .78rem !important;
+    font-size: .76rem !important;
+    line-height: 1.42 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    margin-top: 1rem !important;
+    gap: .62rem !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a {
+    min-height: 36px !important;
+    padding: 0 1.05rem !important;
+    font-size: .54rem !important;
+  }
+}
+
+/* TABLET VERTICAL / SURFACE */
+@media (min-width: 701px) and (max-width: 1024px) and (orientation: portrait) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 560px !important;
+    min-height: 560px !important;
+    max-height: 560px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 150px !important;
+    left: clamp(40px, 5.8vw, 58px) !important;
+    right: clamp(34px, 5.8vw, 56px) !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 430px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="eyebrow"] {
+    margin: 0 0 .56rem !important;
+    font-size: .54rem !important;
+    letter-spacing: .17em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 430px !important;
+    font-size: clamp(2.05rem, 5.1vw, 2.58rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.045em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 370px !important;
+    margin-top: .8rem !important;
+    font-size: .76rem !important;
+    line-height: 1.42 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    margin-top: 1rem !important;
+    gap: .58rem !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a {
+    min-height: 36px !important;
+    padding: 0 1rem !important;
+    font-size: .54rem !important;
+  }
+}
+
+/* MOBILE REAL */
+@media (max-width: 700px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 445px !important;
+    min-height: 445px !important;
+    max-height: 445px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 116px !important;
+    left: clamp(22px, 5.6vw, 30px) !important;
+    right: clamp(22px, 5.6vw, 28px) !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 300px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="eyebrow"] {
+    max-width: 300px !important;
+    margin: 0 0 .52rem !important;
+    font-size: .48rem !important;
+    line-height: 1 !important;
+    letter-spacing: .17em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 300px !important;
+    font-size: clamp(1.56rem, 7vw, 1.86rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.04em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 280px !important;
+    margin-top: .72rem !important;
+    font-size: .6rem !important;
+    line-height: 1.45 !important;
+    font-weight: 650 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    max-width: 240px !important;
+    margin-top: .92rem !important;
+    gap: .45rem !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a {
+    min-height: 36px !important;
+    padding: 0 .95rem !important;
+    font-size: .5rem !important;
+    letter-spacing: .055em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a:nth-of-type(2) {
+    display: none !important;
+  }
+}
+
+/* MOBILE ANGOSTO */
+@media (max-width: 390px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 438px !important;
+    min-height: 438px !important;
+    max-height: 438px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 112px !important;
+    left: 22px !important;
+    right: 20px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 286px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 286px !important;
+    font-size: 1.58rem !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 266px !important;
+    font-size: .58rem !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    max-width: 232px !important;
+  }
+}
+
+
+/* =====================================================
+   ZZZ MARITIMO MATCH AEREO MOBILE POSITION
+   Misma posición visual del hero aéreo en mobile/tablet.
+   No toca desktop.
+   ===================================================== */
+
+/* MOBILE: copiar posición del hero aéreo */
+@media (max-width: 700px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 465px !important;
+    min-height: 465px !important;
+    max-height: 465px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 96px !important;
+    left: clamp(26px, 7vw, 38px) !important;
+    right: clamp(26px, 7vw, 38px) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 315px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="eyebrow"] {
+    max-width: 315px !important;
+    margin: 0 0 .52rem !important;
+    font-size: .52rem !important;
+    line-height: 1 !important;
+    letter-spacing: .15em !important;
+    font-weight: 950 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 315px !important;
+    margin: 0 !important;
+    font-size: clamp(1.72rem, 8.4vw, 2.18rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.045em !important;
+    font-weight: 950 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 300px !important;
+    margin: .72rem 0 0 !important;
+    font-size: .66rem !important;
+    line-height: 1.34 !important;
+    font-weight: 650 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    max-width: 250px !important;
+    margin: 1rem 0 0 !important;
+    gap: .5rem !important;
+    padding: 0 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a {
+    width: 100% !important;
+    min-height: 34px !important;
+    padding: 0 .8rem !important;
+    font-size: .52rem !important;
+    line-height: 1.05 !important;
+    letter-spacing: .045em !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a:nth-of-type(2) {
+    display: none !important;
+  }
+}
+
+/* MOBILE CHICO: igual que aéreo compacto */
+@media (max-width: 390px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 455px !important;
+    min-height: 455px !important;
+    max-height: 455px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 94px !important;
+    left: 24px !important;
+    right: 22px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 300px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 300px !important;
+    font-size: 1.78rem !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 285px !important;
+    font-size: .64rem !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    max-width: 245px !important;
+  }
+}
+
+/* TABLET VERTICAL: misma lógica del aéreo */
+@media (min-width: 701px) and (max-width: 900px) {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 122px !important;
+    left: clamp(46px, 7vw, 62px) !important;
+    right: clamp(46px, 7vw, 62px) !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 430px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 430px !important;
+    font-size: clamp(2.4rem, 7vw, 3.3rem) !important;
+    line-height: .96 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 380px !important;
+    margin-top: .92rem !important;
+    font-size: .82rem !important;
+    line-height: 1.38 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    margin-top: 1.12rem !important;
+  }
+}
+
+
+/* =====================================================
+   ZZZ MARITIMO MATCH AEREO MOBILE FINAL STRUCTURE
+   Mismo hero mobile que aéreo:
+   - texto más arriba y a la izquierda
+   - CTA compacto
+   - trustBar azul inferior compacta 2x2
+   ===================================================== */
+
+@media (max-width: 700px) {
+  /* HERO: misma altura compacta */
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
+    height: 465px !important;
+    min-height: 465px !important;
+    max-height: 465px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* TEXTO: más arriba y más a la izquierda */
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
+    top: 86px !important;
+    left: 20px !important;
+    right: 20px !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
+    max-width: 318px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="eyebrow"] {
+    max-width: 318px !important;
+    margin: 0 0 .5rem !important;
+    font-size: .5rem !important;
+    line-height: 1 !important;
+    letter-spacing: .15em !important;
+    font-weight: 950 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
+    max-width: 318px !important;
+    margin: 0 !important;
+    font-size: clamp(1.68rem, 8.1vw, 2.08rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.045em !important;
+    font-weight: 950 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
+    max-width: 292px !important;
+    margin: .68rem 0 0 !important;
+    font-size: .62rem !important;
+    line-height: 1.36 !important;
+    font-weight: 650 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    max-width: 250px !important;
+    margin: .92rem 0 0 !important;
+    gap: .5rem !important;
+    padding: 0 !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a {
+    width: 100% !important;
+    min-height: 34px !important;
+    padding: 0 .8rem !important;
+    font-size: .52rem !important;
+    line-height: 1.05 !important;
+    letter-spacing: .045em !important;
+    border-radius: 999px !important;
+  }
+
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="actions"] a:nth-of-type(2) {
+    display: none !important;
+  }
+
+  /* TRUSTBAR: misma estructura compacta que aéreo */
   .page .trustBar {
     height: 108px !important;
     min-height: 108px !important;
@@ -6314,23 +9039,23 @@
     padding: 0 !important;
     margin: 0 !important;
     gap: 0 !important;
-    background: #05101b !important;
-    border-top: 1px solid rgba(255,255,255,.08) !important;
-    border-bottom: 1px solid rgba(255,255,255,.08) !important;
+    background: linear-gradient(90deg, rgba(3, 10, 18, .98), rgba(5, 18, 31, .98)) !important;
+    border-top: 1px solid rgba(199, 169, 107, .38) !important;
+    border-bottom: 1px solid rgba(199, 169, 107, .38) !important;
     overflow: hidden !important;
   }
 
   .page .trustBar > div {
-    height: 54px !important;
     min-height: 54px !important;
+    height: 54px !important;
     padding: 0 .85rem !important;
     margin: 0 !important;
     display: grid !important;
     grid-template-columns: 30px 1fr !important;
     align-items: center !important;
     column-gap: .55rem !important;
-    border-right: 1px solid rgba(255,255,255,.08) !important;
-    border-bottom: 1px solid rgba(255,255,255,.08) !important;
+    border-right: 1px solid rgba(199, 169, 107, .22) !important;
+    border-bottom: 1px solid rgba(199, 169, 107, .38) !important;
   }
 
   .page .trustBar i {
@@ -6348,10 +9073,10 @@
     margin: 0 0 .08rem !important;
     font-size: .56rem !important;
     line-height: 1.05 !important;
-    letter-spacing: .035em !important;
-    font-weight: 950 !important;
+    letter-spacing: .16em !important;
+    font-weight: 900 !important;
     text-transform: uppercase !important;
-    color: #fff !important;
+    color: #c7a96b !important;
   }
 
   .page .trustBar span,
@@ -6361,276 +9086,34 @@
     margin: 0 !important;
     font-size: .5rem !important;
     line-height: 1.08 !important;
-    color: rgba(255,255,255,.72) !important;
-  }
-
-  /* overview con márgenes */
-  .page .overview {
-    padding-top: 1.25rem !important;
-    padding-left: clamp(22px, 6vw, 30px) !important;
-    padding-right: clamp(22px, 6vw, 30px) !important;
-    padding-bottom: 2.4rem !important;
-    margin-top: 0 !important;
-    overflow: hidden !important;
-  }
-
-  .page .overviewCopy,
-  .page .overviewContent,
-  .page .overviewInner,
-  .page .overviewGrid {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .page .overview::before,
-  .page .overview::after {
-    display: none !important;
-    content: none !important;
-  }
-
-  .page .overview .eyebrow,
-  .page .overview [class*="eyebrow"],
-  .page .overview [class*="Eyebrow"] {
-    margin: 0 0 .72rem !important;
-    font-size: .55rem !important;
-    line-height: 1 !important;
-    letter-spacing: .17em !important;
-  }
-
-  .page .overview h2 {
-    max-width: 330px !important;
-    margin: 0 !important;
-    font-size: clamp(1.9rem, 8.2vw, 2.35rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.055em !important;
-  }
-
-  .page .overview p {
-    max-width: 320px !important;
-    margin: 1.25rem 0 0 !important;
-    font-size: .95rem !important;
-    line-height: 1.62 !important;
-  }
-
-  .page .overview a {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-height: 50px !important;
-    margin: 1.65rem 0 0 !important;
-    padding: 0 .95rem !important;
-    border-radius: 999px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    white-space: normal !important;
-    text-wrap: balance !important;
-    font-size: .66rem !important;
-    line-height: 1.08 !important;
-    letter-spacing: .045em !important;
-  }
-
-  /* ocultar cards/pilares en mobile */
-  .page .pillars,
-  .page .pillarGrid,
-  .page .features,
-  .page .featureGrid,
-  .page .featureCards,
-  .page .overviewCards,
-  .page .benefitsGrid,
-  .page .serviceGrid,
-  .page [class*="pillars"],
-  .page [class*="Pillars"],
-  .page [class*="pillar"],
-  .page [class*="Pillar"],
-  .page [class*="features"],
-  .page [class*="Features"],
-  .page [class*="featureGrid"],
-  .page [class*="FeatureGrid"],
-  .page [class*="overviewCards"],
-  .page [class*="OverviewCards"] {
-    display: none !important;
+    color: rgba(244, 239, 229, .88) !important;
   }
 }
 
-/* Tablet vertical: ocultar cards si ensucian */
-@media (min-width: 701px) and (max-width: 900px) {
-  .page .pillars,
-  .page .pillarGrid,
-  .page .features,
-  .page .featureGrid,
-  .page .featureCards,
-  .page .overviewCards,
-  .page [class*="pillars"],
-  .page [class*="Pillars"],
-  .page [class*="pillar"],
-  .page [class*="Pillar"] {
-    display: none !important;
-  }
-
-  .page .overview {
-    padding-top: 1.35rem !important;
-    margin-top: 0 !important;
-  }
-}
-
-/* CTA: dejar solo la final en tablet/mobile */
-.page [data-ecommerce-cta="true"],
-.page [data-ecommerce-extra-cta="true"] {
-  position: relative !important;
-  overflow: hidden !important;
-  isolation: isolate !important;
-  color: #fff !important;
-  background:
-    linear-gradient(90deg, rgba(3,7,13,.88) 0%, rgba(3,7,13,.76) 48%, rgba(3,7,13,.58) 100%),
-    linear-gradient(180deg, rgba(3,7,13,.50) 0%, rgba(3,7,13,.78) 100%),
-    url("/images/heroecommerce.png") center center / cover no-repeat !important;
-}
-
-.page [data-ecommerce-cta="true"] img,
-.page [data-ecommerce-cta="true"] picture,
-.page [data-ecommerce-cta="true"] [class*="image"],
-.page [data-ecommerce-cta="true"] [class*="Image"],
-.page [data-ecommerce-cta="true"] [class*="media"],
-.page [data-ecommerce-cta="true"] [class*="Media"],
-.page [data-ecommerce-extra-cta="true"] img,
-.page [data-ecommerce-extra-cta="true"] picture,
-.page [data-ecommerce-extra-cta="true"] [class*="image"],
-.page [data-ecommerce-extra-cta="true"] [class*="Image"],
-.page [data-ecommerce-extra-cta="true"] [class*="media"],
-.page [data-ecommerce-extra-cta="true"] [class*="Media"] {
-  display: none !important;
-}
-
-.page [data-ecommerce-cta="true"]::before,
-.page [data-ecommerce-cta="true"]::after,
-.page [data-ecommerce-extra-cta="true"]::before,
-.page [data-ecommerce-extra-cta="true"]::after {
-  content: none !important;
-  display: none !important;
-  opacity: 0 !important;
-  background: transparent !important;
-  background-image: none !important;
-}
-
-@media (max-width: 1200px) {
-  .page [data-ecommerce-extra-cta="true"] {
-    display: none !important;
-  }
-}
-
-@media (min-width: 701px) and (max-width: 1200px) {
-  .page [data-ecommerce-cta="true"] {
-    min-height: 420px !important;
-    padding: 4rem clamp(42px, 6vw, 68px) !important;
-    display: flex !important;
-    align-items: center !important;
-  }
-
-  .page [data-ecommerce-cta="true"] > * {
-    position: relative !important;
-    z-index: 2 !important;
-    max-width: 520px !important;
-  }
-
-  .page [data-ecommerce-cta="true"] h2 {
-    max-width: 520px !important;
-    margin: 0 !important;
-    color: #fff !important;
-    font-size: clamp(2.25rem, 4vw, 3rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.055em !important;
-  }
-
-  .page [data-ecommerce-cta="true"] p {
-    max-width: 460px !important;
-    margin: 1rem 0 0 !important;
-    color: rgba(255,255,255,.9) !important;
-    font-size: .92rem !important;
-    line-height: 1.5 !important;
-  }
-
-  .page [data-ecommerce-cta="true"] a {
-    width: fit-content !important;
-    max-width: 330px !important;
-    min-height: 42px !important;
-    margin-top: 1.35rem !important;
-    padding: 0 1.25rem !important;
-    border-radius: 999px !important;
-    white-space: normal !important;
-    text-align: center !important;
-    font-size: .64rem !important;
-    line-height: 1.08 !important;
-    letter-spacing: .045em !important;
-  }
-}
-
-@media (max-width: 700px) {
-  .page [data-ecommerce-cta="true"] {
-    min-height: 420px !important;
-    padding: 3.4rem 24px !important;
-    display: flex !important;
-    align-items: center !important;
-  }
-
-  .page [data-ecommerce-cta="true"] h2 {
-    max-width: 305px !important;
-    margin: 0 !important;
-    color: #fff !important;
-    font-size: clamp(2rem, 8.8vw, 2.55rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.055em !important;
-  }
-
-  .page [data-ecommerce-cta="true"] p {
-    max-width: 300px !important;
-    margin: 1.1rem 0 0 !important;
-    color: rgba(255,255,255,.9) !important;
-    font-size: .95rem !important;
-    line-height: 1.55 !important;
-  }
-
-  .page [data-ecommerce-cta="true"] a {
-    width: 100% !important;
-    max-width: 310px !important;
-    min-height: 52px !important;
-    margin: 1.65rem 0 0 !important;
-    padding: 0 1rem !important;
-    border-radius: 999px !important;
-    white-space: normal !important;
-    text-wrap: balance !important;
-    text-align: center !important;
-    font-size: .66rem !important;
-    line-height: 1.08 !important;
-    letter-spacing: .045em !important;
-  }
-}
-
+/* Mobile muy chico */
 @media (max-width: 390px) {
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"] {
     height: 455px !important;
     min-height: 455px !important;
     max-height: 455px !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="inner"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="inner"] {
     top: 84px !important;
     left: 18px !important;
     right: 18px !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="content"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="content"] {
     max-width: 300px !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="title"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="title"] {
     max-width: 300px !important;
     font-size: 1.74rem !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="text"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"] [data-hero-role="text"] {
     max-width: 282px !important;
     font-size: .6rem !important;
   }
@@ -6650,39 +9133,14 @@
     column-gap: .48rem !important;
   }
 
-  .page .overview {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+  .page .trustBar strong {
+    font-size: .52rem !important;
   }
 
-  .page .overview h2 {
-    max-width: 300px !important;
-    font-size: 1.95rem !important;
-  }
-
-  .page .overview p {
-    max-width: 295px !important;
-    font-size: .9rem !important;
-  }
-
-  .page [data-ecommerce-cta="true"] {
-    min-height: 400px !important;
-    padding: 3.1rem 20px !important;
-  }
-
-  .page [data-ecommerce-cta="true"] h2 {
-    max-width: 290px !important;
-    font-size: 2.05rem !important;
-  }
-
-  .page [data-ecommerce-cta="true"] p {
-    max-width: 285px !important;
-    font-size: .9rem !important;
-  }
-
-  .page [data-ecommerce-cta="true"] a {
-    max-width: 295px !important;
-    font-size: .62rem !important;
+  .page .trustBar span,
+  .page .trustBar p,
+  .page .trustBar small {
+    font-size: .47rem !important;
   }
 }
 
@@ -8391,163 +10849,3 @@
     max-width: 285px !important;
   }
 }
-
-/* =====================================================
-   ZZZ UNIFIED DARK IMAGE OVERLAY FINAL
-   Oscurecido uniforme para secciones internas con imagen/video.
-   NO toca el hero.
-   Mood: imagen visible + velo azul oscuro premium.
-   ===================================================== */
-
-/* Secciones oscuras internas */
-.page .services,
-.page .darkBand,
-.page .finalCta,
-.page section[data-across-final-cta="true"],
-.page section[data-sector-final-cta="true"],
-.page section[data-energy-services-bg="true"],
-.page section[data-energy-final-video="true"] {
-  position: relative !important;
-  overflow: hidden !important;
-  isolation: isolate !important;
-}
-
-/* Overlay estándar: igual al look correcto de consumo/distribución */
-.page .services::before,
-.page .darkBand::before,
-.page .finalCta::before,
-.page section[data-across-final-cta="true"]::before,
-.page section[data-sector-final-cta="true"]::before,
-.page section[data-energy-services-bg="true"]::before,
-.page section[data-energy-final-video="true"]::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: 1 !important;
-  pointer-events: none !important;
-  display: block !important;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(3, 10, 18, .92) 0%,
-      rgba(3, 10, 18, .86) 30%,
-      rgba(5, 18, 31, .68) 62%,
-      rgba(7, 21, 34, .48) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(3, 10, 18, .18) 0%,
-      rgba(3, 10, 18, .72) 100%
-    ) !important;
-}
-
-/* Contenido siempre por encima del oscurecido */
-.page .services > *,
-.page .darkBand > *,
-.page .finalCta > *,
-.page section[data-across-final-cta="true"] > *,
-.page section[data-sector-final-cta="true"] > *,
-.page section[data-energy-services-bg="true"] > *,
-.page section[data-energy-final-video="true"] > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-/* Videos o imágenes de fondo quedan debajo del overlay */
-.page .darkBandVideoLayer,
-.page .darkBandVideo,
-.page .finalCtaVideoLayer,
-.page .finalCtaVideo {
-  z-index: 0 !important;
-}
-
-/* Evita capas sólidas encima de imagen/video */
-.page .services::after,
-.page .darkBand::after,
-.page .finalCta::after,
-.page section[data-across-final-cta="true"]::after,
-.page section[data-sector-final-cta="true"]::after,
-.page section[data-energy-services-bg="true"]::after,
-.page section[data-energy-final-video="true"]::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* Textos en secciones oscuras: marfil */
-.page .services h2,
-.page .services h3,
-.page .darkBand h2,
-.page .darkBand h3,
-.page .finalCta h2,
-.page .finalCta h3,
-.page section[data-across-final-cta="true"] h2,
-.page section[data-across-final-cta="true"] h3,
-.page section[data-sector-final-cta="true"] h2,
-.page section[data-sector-final-cta="true"] h3 {
-  color: #f4efe5 !important;
-  -webkit-text-fill-color: #f4efe5 !important;
-}
-
-.page .services p,
-.page .darkBand p,
-.page .finalCta p,
-.page section[data-across-final-cta="true"] p,
-.page section[data-sector-final-cta="true"] p {
-  color: rgba(244, 239, 229, .78) !important;
-  -webkit-text-fill-color: rgba(244, 239, 229, .78) !important;
-}
-
-/* Eyebrow dorado */
-.page .services .eyebrow,
-.page .darkBand .eyebrow,
-.page .finalCta .eyebrow,
-.page .services [class*="eyebrow"],
-.page .darkBand [class*="eyebrow"],
-.page .finalCta [class*="eyebrow"],
-.page section[data-across-final-cta="true"] [class*="eyebrow"],
-.page section[data-sector-final-cta="true"] [class*="eyebrow"] {
-  color: #c7a96b !important;
-  -webkit-text-fill-color: #c7a96b !important;
-}
-
-/* Cards internas sobre imagen oscura */
-.page .services article,
-.page .darkBand article {
-  background: rgba(3, 10, 18, .34) !important;
-  border-color: rgba(244, 239, 229, .16) !important;
-  backdrop-filter: blur(2px) !important;
-}
-
-/* Iconos */
-.page .services i,
-.page .darkBand i {
-  border-color: rgba(118, 188, 215, .38) !important;
-  background: rgba(18, 63, 89, .30) !important;
-  color: #76bcd7 !important;
-}
-
-.page .services svg,
-.page .darkBand svg {
-  stroke: #76bcd7 !important;
-}
-
-/* Mobile: mantener el mismo tono cuando la sección aparezca */
-@media (max-width: 900px) {
-  .page .services::before,
-  .page .darkBand::before,
-  .page .finalCta::before,
-  .page section[data-across-final-cta="true"]::before,
-  .page section[data-sector-final-cta="true"]::before,
-  .page section[data-energy-services-bg="true"]::before,
-  .page section[data-energy-final-video="true"]::before {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(3, 10, 18, .86) 0%,
-        rgba(5, 18, 31, .76) 48%,
-        rgba(3, 10, 18, .88) 100%
-      ) !important;
-  }
-}
-
-

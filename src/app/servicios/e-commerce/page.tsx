@@ -839,25 +839,28 @@ export default function EcommercePage() {
               </div>
             </div>
           </div>
-        </section>
+        
 
-        <section className={styles.trustBar}>
+          <div className={styles.commandBar}>
           {t.trust.map(([title, text]: string[], index: number) => {
-            const icons: IconName[] = ["timer", "shield", "document", "tracking"];
+          const icons: IconName[] = ["timer", "shield", "document", "tracking"];
 
-            return (
-              <div key={title}>
-                <i>
-                  <Icon name={icons[index]} />
-                </i>
-                <span>
-                  <strong>{title}</strong>
-                  <small>{text}</small>
-                </span>
-              </div>
-            );
+          return (
+          <div key={title} className={styles.commandItem}>
+          <i>
+          <Icon name={icons[index]} />
+          </i>
+          <span>
+          <strong>{title}</strong>
+          <small>{text}</small>
+          </span>
+          </div>
+          );
           })}
+          </div>
         </section>
+
+
 
         <Certifications />
 
@@ -886,7 +889,7 @@ export default function EcommercePage() {
           </div>
         </section>
 
-        <section className={styles.services} data-dark-overlay="services" data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/ecommerce.png')" } as CSSProperties}>
+        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/ecommerce.png')" } as CSSProperties}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -956,7 +959,7 @@ export default function EcommercePage() {
           </div>
         </section>
 
-        <section className={styles.darkBand} data-dark-overlay="darkBand" data-mobile-hide-after-cert="true" data-ecommerce-extra-cta="true">
+        <section className={styles.darkBand} data-mobile-hide-after-cert="true" data-ecommerce-extra-cta="true">
           <div className={styles.darkBandImage}>
             <Image
               src="/images/ecommerce.png"
@@ -986,7 +989,7 @@ export default function EcommercePage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} data-dark-overlay="finalCta" style={{ "--mobile-bg": "url('/images/heroecommerce.png')" } as CSSProperties} data-ecommerce-cta="true" data-across-final-cta="true">
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/heroecommerce.png')" } as CSSProperties} data-ecommerce-cta="true" data-across-final-cta="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>

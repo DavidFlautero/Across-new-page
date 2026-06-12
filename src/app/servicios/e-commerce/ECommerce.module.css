@@ -8392,133 +8392,159 @@
   }
 }
 
-/* =====================================================
-   ZZZ DARK OVERLAY EXACT SECTIONS FINAL
-   Overlay unificado SOLO para secciones marcadas:
-   services / darkBand / finalCta.
-   No toca hero ni overview.
-   ===================================================== */
-
-.page section[data-dark-overlay="services"],
-.page section[data-dark-overlay="darkBand"],
-.page section[data-dark-overlay="finalCta"] {
-  position: relative !important;
-  overflow: hidden !important;
-  isolation: isolate !important;
-  background-color: #07111d !important;
-}
-
-/* Capa de imagen/video siempre debajo */
-.page section[data-dark-overlay] .darkBandImage,
-.page section[data-dark-overlay] .darkBandImage img,
-.page section[data-dark-overlay] .finalCtaImage,
-.page section[data-dark-overlay] .finalCtaImage img,
-.page section[data-dark-overlay] .darkBandVideoLayer,
-.page section[data-dark-overlay] .finalCtaVideoLayer {
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-}
-
-.page section[data-dark-overlay] .darkBandImage img,
-.page section[data-dark-overlay] .finalCtaImage img,
-.page section[data-dark-overlay] .darkBandVideo,
-.page section[data-dark-overlay] .finalCtaVideo {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center center !important;
-  display: block !important;
-}
-
-/* Overlay exacto: como la sección buena de consumo/distribución */
-.page section[data-dark-overlay]::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: 1 !important;
-  pointer-events: none !important;
-  display: block !important;
+/* ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL
+   Barra debajo del hero en servicios:
+   borde dorado, títulos dorados, iconos azul Across.
+*/
+.page .trustBar {
   background:
-    linear-gradient(
-      90deg,
-      rgba(3, 10, 18, .94) 0%,
-      rgba(3, 10, 18, .88) 34%,
-      rgba(5, 18, 31, .68) 66%,
-      rgba(7, 21, 34, .46) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(3, 10, 18, .16) 0%,
-      rgba(3, 10, 18, .72) 100%
-    ) !important;
+    linear-gradient(90deg, rgba(3, 10, 18, .98), rgba(5, 18, 31, .98)) !important;
+  border-top: 1px solid rgba(199, 169, 107, .38) !important;
+  border-bottom: 1px solid rgba(199, 169, 107, .38) !important;
 }
 
-/* No dejar otra capa encima */
-.page section[data-dark-overlay]::after {
-  content: none !important;
-  display: none !important;
+.page .trustBar > div,
+.page .trustBar div {
+  background: transparent !important;
+  border-right: 1px solid rgba(199, 169, 107, .22) !important;
 }
 
-/* Todo el contenido arriba */
-.page section[data-dark-overlay] > *:not(.darkBandImage):not(.finalCtaImage):not(.darkBandVideoLayer):not(.finalCtaVideoLayer) {
-  position: relative !important;
-  z-index: 2 !important;
+.page .trustBar > div:last-child,
+.page .trustBar div:last-child {
+  border-right: 0 !important;
 }
 
-/* Cards sobre imagen oscura */
-.page section[data-dark-overlay="services"] article,
-.page section[data-dark-overlay="darkBand"] article {
-  background: rgba(3, 10, 18, .34) !important;
-  border-color: rgba(244, 239, 229, .16) !important;
-  backdrop-filter: blur(2px) !important;
+.page .trustBar i {
+  color: #0f6f96 !important;
+  background:
+    radial-gradient(circle, rgba(15, 111, 150, .20), rgba(15, 111, 150, .06)) !important;
+  border: 1px solid rgba(199, 169, 107, .38) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(244, 239, 229, .08),
+    0 0 22px rgba(15, 111, 150, .16) !important;
 }
 
-/* Texto marfil en secciones oscuras */
-.page section[data-dark-overlay] h2,
-.page section[data-dark-overlay] h3,
-.page section[data-dark-overlay] strong {
-  color: #f4efe5 !important;
-  -webkit-text-fill-color: #f4efe5 !important;
+.page .trustBar i svg {
+  stroke: currentColor !important;
 }
 
-.page section[data-dark-overlay] p,
-.page section[data-dark-overlay] span,
-.page section[data-dark-overlay] small {
-  color: rgba(244, 239, 229, .78) !important;
-  -webkit-text-fill-color: rgba(244, 239, 229, .78) !important;
-}
-
-.page section[data-dark-overlay] .eyebrow,
-.page section[data-dark-overlay] [class*="eyebrow"] {
+.page .trustBar strong {
   color: #c7a96b !important;
   -webkit-text-fill-color: #c7a96b !important;
+  font-weight: 900 !important;
+  letter-spacing: .16em !important;
+  text-transform: uppercase !important;
 }
 
-/* Iconos */
-.page section[data-dark-overlay] i {
-  border-color: rgba(118, 188, 215, .38) !important;
-  background: rgba(18, 63, 89, .30) !important;
-  color: #76bcd7 !important;
+.page .trustBar span,
+.page .trustBar p,
+.page .trustBar small {
+  color: rgba(244, 239, 229, .88) !important;
+  -webkit-text-fill-color: rgba(244, 239, 229, .88) !important;
 }
 
-.page section[data-dark-overlay] svg {
-  stroke: #76bcd7 !important;
+.page .trustBar small {
+  font-weight: 600 !important;
 }
 
-/* Mobile: mismo tono, más vertical */
 @media (max-width: 900px) {
-  .page section[data-dark-overlay]::before {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(3, 10, 18, .88) 0%,
-        rgba(5, 18, 31, .76) 48%,
-        rgba(3, 10, 18, .90) 100%
-      ) !important;
+  .page .trustBar > div,
+  .page .trustBar div {
+    border-right: 1px solid rgba(199, 169, 107, .18) !important;
+    border-bottom: 1px solid rgba(199, 169, 107, .18) !important;
+  }
+}
+/* END ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL */
+
+/* ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL
+   Hero de servicios con presencia tipo home.
+   Scopeado por data-service-hero-home para no romper otras secciones.
+*/
+.page > .hero[data-service-hero-home="true"] {
+  position: relative !important;
+  width: 100vw !important;
+  max-width: none !important;
+  margin-left: 50% !important;
+  margin-right: 50% !important;
+  transform: translateX(-50%) !important;
+
+  min-height: 100svh !important;
+  height: 100svh !important;
+  max-height: 920px !important;
+
+  padding: 0 !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+}
+
+.page > .hero[data-service-hero-home="true"] img,
+.page > .hero[data-service-hero-home="true"] video,
+.page > .hero[data-service-hero-home="true"] [data-hero-role="desktop-image"],
+.page > .hero[data-service-hero-home="true"] [data-hero-role="mobile-image"],
+.page > .hero[data-service-hero-home="true"] [data-hero-role="video"] {
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+.page > .hero[data-service-hero-home="true"] [data-hero-role="inner"],
+.page > .hero[data-service-hero-home="true"] .heroInner {
+  min-height: 100% !important;
+  height: 100% !important;
+  max-height: inherit !important;
+  padding-bottom: 112px !important;
+}
+
+.page > .hero[data-service-hero-home="true"] [data-hero-role="content"],
+.page > .hero[data-service-hero-home="true"] .heroContent {
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+/* TrustBar integrada abajo como en el home */
+.page > .hero[data-service-hero-home="true"] + .trustBar,
+.page > .hero[data-service-hero-home="true"] + section[class*="trustBar"] {
+  position: relative !important;
+  z-index: 5 !important;
+  margin-top: -96px !important;
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 900px) {
+  .page > .hero[data-service-hero-home="true"] {
+    min-height: 86svh !important;
+    height: 86svh !important;
+    max-height: 760px !important;
+  }
+
+  .page > .hero[data-service-hero-home="true"] [data-hero-role="inner"],
+  .page > .hero[data-service-hero-home="true"] .heroInner {
+    padding-bottom: 0 !important;
+  }
+
+  .page > .hero[data-service-hero-home="true"] + .trustBar,
+  .page > .hero[data-service-hero-home="true"] + section[class*="trustBar"] {
+    margin-top: 0 !important;
   }
 }
 
+@media (max-width: 520px) {
+  .page > .hero[data-service-hero-home="true"] {
+    min-height: 82svh !important;
+    height: 82svh !important;
+    max-height: 690px !important;
+  }
+}
+/* END ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL */
 
+
+
+/* =====================================================
+   ACROSS COMMAND BAR EXPORTS
+   Necesario para que CSS Modules exporte styles.commandBar/item.
+   El estilo visual real vive en globals.css.
+   ===================================================== */
+
+.commandBar {}
+.commandItem {}
+
+/* END ACROSS COMMAND BAR EXPORTS */

@@ -559,7 +559,7 @@ export default function TransporteAereoPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={styles.hero} data-aereo-hero="true">
+        <section className={styles.hero} data-aereo-hero="true" data-service-hero-home="true">
           <Image
             src="/images/hero/cargaAereahero.png"
             alt={t.heroTitle}
@@ -608,24 +608,24 @@ export default function TransporteAereoPage() {
               </div>
             </div>
           </div>
-        </section>
 
-        <section className={styles.trustBar} data-aereo-trust="true">
-          {t.trust.map(([title, text]: string[], index: number) => {
-            const icons: IconName[] = ["timer", "shield", "document", "tracking"];
+          <div className={styles.commandBar} data-aereo-trust="true">
+            {t.trust.map(([title, text]: string[], index: number) => {
+              const icons: IconName[] = ["timer", "shield", "document", "tracking"];
 
-            return (
-              <div key={title}>
-                <i>
-                  <Icon name={icons[index]} />
-                </i>
-                <span>
-                  <strong>{title}</strong>
-                  <small>{text}</small>
-                </span>
-              </div>
-            );
-          })}
+              return (
+                <div key={title} className={styles.commandItem}>
+                  <i>
+                    <Icon name={icons[index]} />
+                  </i>
+                  <span>
+                    <strong>{title}</strong>
+                    <small>{text}</small>
+                  </span>
+                </div>
+              );
+            })}
+          </div>
         </section>
 
         <Certifications />
@@ -655,7 +655,7 @@ export default function TransporteAereoPage() {
           </div>
         </section>
 
-        <section className={styles.services} data-dark-overlay="services" data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/cargaaerea.png')" } as CSSProperties}>
+        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/cargaaerea.png')" } as CSSProperties}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -725,7 +725,7 @@ export default function TransporteAereoPage() {
           </div>
         </section>
 
-        <section className={styles.darkBand} data-dark-overlay="darkBand" data-mobile-hide-after-cert="true">
+        <section className={styles.darkBand} data-mobile-hide-after-cert="true">
           <div className={styles.darkBandImage}>
             <Image
               src="/images/cargaaerea.png"
@@ -755,7 +755,7 @@ export default function TransporteAereoPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} data-dark-overlay="finalCta" style={{ "--mobile-bg": "url('/images/hero/cargaAereahero.png')" } as CSSProperties} data-across-final-cta="true">
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/hero/cargaAereahero.png')" } as CSSProperties} data-across-final-cta="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>

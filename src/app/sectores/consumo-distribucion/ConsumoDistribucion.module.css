@@ -7320,133 +7320,1090 @@
   }
 }
 
-/* =====================================================
-   ZZZ DARK OVERLAY EXACT SECTIONS FINAL
-   Overlay unificado SOLO para secciones marcadas:
-   services / darkBand / finalCta.
-   No toca hero ni overview.
-   ===================================================== */
+/* ZZZ CONSUMO SERVICES CLEAN IMAGE NO OVERLAY FINAL
+   Quita el gradiente negro, grilla y fade inferior de la sección services.
+   Deja solo la imagen real de fondo.
+*/
+.page .services {
+  position: relative !important;
+  overflow: hidden !important;
+  background:
+    url("/images/sectores/consumo2.png") center center / cover no-repeat !important;
+}
 
-.page section[data-dark-overlay="services"],
-.page section[data-dark-overlay="darkBand"],
-.page section[data-dark-overlay="finalCta"] {
+.page .services::before,
+.page .services::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  background-image: none !important;
+  opacity: 0 !important;
+  filter: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.page .services > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+/* END ZZZ CONSUMO SERVICES CLEAN IMAGE NO OVERLAY FINAL */
+
+/* ZZZ CONSUMO SERVICES ONLY IMAGE NO SHADOW FINAL
+   Arriba/services: deja solo la imagen consumo2.png.
+   Quita gradientes negros, grilla, fade inferior, filtros y sombras internas.
+*/
+.page .services {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background:
+    url("/images/sectores/consumo2.png") center center / cover no-repeat !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+.page .services::before,
+.page .services::after,
+.page .services .sectionHead::before,
+.page .services .sectionHead::after,
+.page .services .serviceGrid::before,
+.page .services .serviceGrid::after,
+.page .services .serviceGrid article::before,
+.page .services .serviceGrid article::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  background-image: none !important;
+  opacity: 0 !important;
+  filter: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.page .services .serviceGrid article {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  filter: none !important;
+}
+
+.page .services > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+/* END ZZZ CONSUMO SERVICES ONLY IMAGE NO SHADOW FINAL */
+
+/* ZZZ CONSUMO DARKBAND CLEAN IMAGE NO OVERLAY FINAL
+   Quita gradientes, filtros, grilla y capas oscuras del darkBand.
+   Deja la misma imagen limpia que services.
+*/
+.page section[data-sector-dark-band="true"],
+.page .darkBand {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background:
+    url("/images/sectores/consumo2.png") center center / cover no-repeat !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+.page section[data-sector-dark-band="true"]::before,
+.page section[data-sector-dark-band="true"]::after,
+.page .darkBand::before,
+.page .darkBand::after,
+.page .darkBandContent::before,
+.page .darkBandContent::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  background-image: none !important;
+  opacity: 0 !important;
+  filter: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.page .darkBandImage,
+.page .darkBandImage img {
+  display: none !important;
+  opacity: 0 !important;
+  filter: none !important;
+}
+
+.page .darkBandContent {
+  position: relative !important;
+  z-index: 2 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.page .darkBand .stats,
+.page .darkBand .stats article {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  filter: none !important;
+}
+
+.page .darkBand > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+/* END ZZZ CONSUMO DARKBAND CLEAN IMAGE NO OVERLAY FINAL */
+
+/* ZZZ ALL SECTORS SERVICES DARKBAND CLEAN IMAGE NO OVERLAY FINAL
+   Limpieza visual de secciones oscuras internas.
+   Quita gradientes/overlays/sombras y deja imagen limpia por sección.
+*/
+.page .services {
   position: relative !important;
   overflow: hidden !important;
   isolation: isolate !important;
-  background-color: #07111d !important;
+  background:
+    url("/images/sectores/consumo2.png") center center / cover no-repeat !important;
+  box-shadow: none !important;
+  filter: none !important;
 }
 
-/* Capa de imagen/video siempre debajo */
-.page section[data-dark-overlay] .darkBandImage,
-.page section[data-dark-overlay] .darkBandImage img,
-.page section[data-dark-overlay] .finalCtaImage,
-.page section[data-dark-overlay] .finalCtaImage img,
-.page section[data-dark-overlay] .darkBandVideoLayer,
-.page section[data-dark-overlay] .finalCtaVideoLayer {
+.page section[data-sector-dark-band="true"],
+.page .darkBand {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background:
+    url("/images/sectores/consumo2.png") center center / cover no-repeat !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+.page .services::before,
+.page .services::after,
+.page section[data-sector-dark-band="true"]::before,
+.page section[data-sector-dark-band="true"]::after,
+.page .darkBand::before,
+.page .darkBand::after,
+.page .darkBandContent::before,
+.page .darkBandContent::after,
+.page .serviceGrid article::before,
+.page .serviceGrid article::after,
+.page .darkBand article::before,
+.page .darkBand article::after,
+.page .stats::before,
+.page .stats::after,
+.page .stats article::before,
+.page .stats article::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  background-image: none !important;
+  opacity: 0 !important;
+  filter: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.page .services > *,
+.page .darkBand > *,
+.page section[data-sector-dark-band="true"] > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.page .darkBandImage,
+.page .darkBandImage img {
+  display: none !important;
+  opacity: 0 !important;
+  filter: none !important;
+}
+
+.page .darkBandContent,
+.page .serviceGrid article,
+.page .darkBand .stats,
+.page .darkBand .stats article {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+/* END ZZZ ALL SECTORS SERVICES DARKBAND CLEAN IMAGE NO OVERLAY FINAL */
+
+/* ZZZ ALL SECTORS BLUE PROFESSIONAL OVERLAY FINAL
+   Capa azul profesional sobre las imágenes limpias de services y darkBand.
+   Mantiene la imagen visible y asegura lectura del contenido.
+*/
+.page .services,
+.page section[data-sector-dark-band="true"],
+.page .darkBand {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+}
+
+/* Overlay azul/negro premium */
+.page .services::after,
+.page section[data-sector-dark-band="true"]::after,
+.page .darkBand::after {
+  content: "" !important;
+  display: block !important;
   position: absolute !important;
   inset: 0 !important;
-  z-index: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  opacity: 1 !important;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(18, 63, 89, .28), transparent 24rem),
+    radial-gradient(circle at 12% 82%, rgba(18, 63, 89, .22), transparent 26rem),
+    linear-gradient(
+      90deg,
+      rgba(3, 10, 18, .78) 0%,
+      rgba(5, 20, 34, .68) 36%,
+      rgba(8, 37, 56, .52) 66%,
+      rgba(18, 63, 89, .34) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 10, 18, .20) 0%,
+      rgba(3, 10, 18, .46) 100%
+    ) !important;
+  box-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }
 
-.page section[data-dark-overlay] .darkBandImage img,
-.page section[data-dark-overlay] .finalCtaImage img,
-.page section[data-dark-overlay] .darkBandVideo,
-.page section[data-dark-overlay] .finalCtaVideo {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center center !important;
+/* Mantenemos apagadas las grillas/capas viejas */
+.page .services::before,
+.page section[data-sector-dark-band="true"]::before,
+.page .darkBand::before,
+.page .darkBandContent::before,
+.page .darkBandContent::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  background-image: none !important;
+  opacity: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Todo el contenido siempre por encima del degradado */
+.page .services > *,
+.page section[data-sector-dark-band="true"] > *,
+.page .darkBand > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Cards suaves, no negras */
+.page .serviceGrid article,
+.page .darkBand .stats,
+.page .darkBand .stats article {
+  background: rgba(5, 20, 34, .18) !important;
+  background-image: none !important;
+  border-color: rgba(244, 239, 229, .16) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Texto con contraste premium */
+.page .services h2,
+.page .services h3,
+.page .services p,
+.page .services span,
+.page .darkBand h2,
+.page .darkBand h3,
+.page .darkBand p,
+.page .darkBand span,
+.page .darkBand strong,
+.page section[data-sector-dark-band="true"] h2,
+.page section[data-sector-dark-band="true"] h3,
+.page section[data-sector-dark-band="true"] p,
+.page section[data-sector-dark-band="true"] span,
+.page section[data-sector-dark-band="true"] strong {
+  position: relative !important;
+  z-index: 3 !important;
+}
+/* END ZZZ ALL SECTORS BLUE PROFESSIONAL OVERLAY FINAL */
+
+/* ZZZ ALL SECTORS SERVICES REMOVE PATCHY CARDS FINAL
+   Evita que el degradado de services se vea por bloques/cuadros.
+   El overlay queda como una sola capa global y las cards no pintan parches encima.
+*/
+.page .services {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+}
+
+.page .services::after {
+  content: "" !important;
   display: block !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  opacity: 1 !important;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(18, 63, 89, .24), transparent 24rem),
+    radial-gradient(circle at 12% 82%, rgba(18, 63, 89, .18), transparent 26rem),
+    linear-gradient(
+      90deg,
+      rgba(3, 10, 18, .68) 0%,
+      rgba(5, 20, 34, .58) 38%,
+      rgba(8, 37, 56, .42) 68%,
+      rgba(18, 63, 89, .26) 100%
+    ) !important;
 }
 
-/* Overlay exacto: como la sección buena de consumo/distribución */
-.page section[data-dark-overlay]::before {
+.page .services > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Este era el efecto raro: las cards pintaban bloques encima del fondo */
+.page .serviceGrid article,
+.page .services article,
+.page .services [class*="card"],
+.page .services [class*="Card"] {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
+  border-color: rgba(199, 169, 107, .26) !important;
+}
+
+/* Apagar pseudo-capas de cards */
+.page .serviceGrid article::before,
+.page .serviceGrid article::after,
+.page .services article::before,
+.page .services article::after,
+.page .services [class*="card"]::before,
+.page .services [class*="card"]::after,
+.page .services [class*="Card"]::before,
+.page .services [class*="Card"]::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  background-image: none !important;
+  opacity: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+/* END ZZZ ALL SECTORS SERVICES REMOVE PATCHY CARDS FINAL */
+
+/* ZZZ SERVICES FULL BLUE LAYER FIX FINAL
+   Corrige el efecto raro donde el degradado se ve arriba pero no abajo.
+   Usa una sola capa azul completa sobre toda la sección services.
+*/
+.page .services {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+}
+
+/* Apagar capa vieja superior */
+.page .services::before {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  background-image: none !important;
+  opacity: 0 !important;
+  filter: none !important;
+  box-shadow: none !important;
+}
+
+/* Capa azul única de punta a punta */
+.page .services::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  display: block !important;
+  pointer-events: none !important;
+  opacity: 1 !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 10, 18, .72) 0%,
+      rgba(5, 20, 34, .64) 38%,
+      rgba(8, 37, 56, .50) 68%,
+      rgba(18, 63, 89, .36) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 10, 18, .18) 0%,
+      rgba(3, 10, 18, .34) 100%
+    ) !important;
+}
+
+/* Todo el contenido arriba del overlay */
+.page .services > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Nada interno debe aclarar por bloques */
+.page .services .sectionHead,
+.page .services .serviceGrid,
+.page .services article,
+.page .services .serviceGrid article {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
+}
+
+/* Cards solo borde, sin rellenos que generen parches */
+.page .services article,
+.page .services .serviceGrid article {
+  border-color: rgba(244, 239, 229, .20) !important;
+}
+/* END ZZZ SERVICES FULL BLUE LAYER FIX FINAL */
+
+/* ZZZ SERVICES ONE REAL BACKGROUND ONE OVERLAY FINAL
+   Services: elimina gradiente duplicado del background.
+   Deja solo imagen real + una sola capa azul encima.
+*/
+.page .services {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background:
+    url("/images/sectores/consumo2.png") center center / cover no-repeat !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+.page .services::before {
+  content: none !important;
+  display: none !important;
+  opacity: 0 !important;
+  background: none !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.page .services::after {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  opacity: 1 !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 10, 18, .62) 0%,
+      rgba(5, 20, 34, .52) 38%,
+      rgba(8, 37, 56, .38) 68%,
+      rgba(18, 63, 89, .24) 100%
+    ) !important;
+  box-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.page .services > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.page .services article,
+.page .services [class*="serviceGrid"],
+.page .services [class*="sectionHead"] {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+/* END ZZZ SERVICES ONE REAL BACKGROUND ONE OVERLAY FINAL */
+
+/* ZZZ CLEAN SERVICES MEDIA SECTION GLOBAL FINAL
+   Capa nueva y limpia para services.
+   Pasa por arriba de los bloques viejos sin depender de ellos.
+*/
+.page .services[data-clean-media-section="services"] {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  width: 100vw !important;
+  max-width: none !important;
+  margin-left: 50% !important;
+  margin-right: 50% !important;
+  transform: translateX(-50%) !important;
+  background:
+    url("/images/sectores/consumo2.png") center center / cover no-repeat !important;
+  background-image:
+    url("/images/sectores/consumo2.png") !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* Apaga capas viejas de services */
+.page .services[data-clean-media-section="services"]::before {
+  content: none !important;
+  display: none !important;
+  opacity: 0 !important;
+  background: none !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Única capa azul profesional */
+.page .services[data-clean-media-section="services"]::after {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  opacity: 1 !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 10, 18, .58) 0%,
+      rgba(5, 20, 34, .48) 38%,
+      rgba(8, 37, 56, .34) 68%,
+      rgba(18, 63, 89, .20) 100%
+    ) !important;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(3, 10, 18, .58) 0%,
+      rgba(5, 20, 34, .48) 38%,
+      rgba(8, 37, 56, .34) 68%,
+      rgba(18, 63, 89, .20) 100%
+    ) !important;
+  box-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Contenido arriba del degradado */
+.page .services[data-clean-media-section="services"] > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Nada interno debe crear parches */
+.page .services[data-clean-media-section="services"] .sectionHead,
+.page .services[data-clean-media-section="services"] .serviceGrid,
+.page .services[data-clean-media-section="services"] article {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.page .services[data-clean-media-section="services"] article::before,
+.page .services[data-clean-media-section="services"] article::after,
+.page .services[data-clean-media-section="services"] .serviceGrid article::before,
+.page .services[data-clean-media-section="services"] .serviceGrid article::after {
+  content: none !important;
+  display: none !important;
+  opacity: 0 !important;
+  background: none !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+/* END ZZZ CLEAN SERVICES MEDIA SECTION GLOBAL FINAL */
+
+/* ZZZ REAL CLEAN SERVICES CLASS ALL SECTORS FINAL
+   Clase nueva para la sección de servicios.
+   No usa .services, así evita heredar overlays viejos acumulados.
+*/
+.cleanServices {
+  width: 100vw !important;
+  max-width: none !important;
+  margin: 4.8rem 50% 0 !important;
+  transform: translateX(-50%) !important;
+  padding: clamp(4rem, 6vw, 6rem) max(24px, calc((100vw - 1180px) / 2)) !important;
+
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+
+  background:
+    url("/images/sectores/consumo2.png") center center / cover no-repeat !important;
+
+  color: #f4efe5 !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+.cleanServices::before {
+  content: none !important;
+  display: none !important;
+}
+
+.cleanServices::after {
   content: "" !important;
   position: absolute !important;
   inset: 0 !important;
   z-index: 1 !important;
   pointer-events: none !important;
-  display: block !important;
   background:
     linear-gradient(
       90deg,
-      rgba(3, 10, 18, .94) 0%,
-      rgba(3, 10, 18, .88) 34%,
-      rgba(5, 18, 31, .68) 66%,
-      rgba(7, 21, 34, .46) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(3, 10, 18, .16) 0%,
-      rgba(3, 10, 18, .72) 100%
+      rgba(3, 10, 18, .56) 0%,
+      rgba(5, 20, 34, .46) 38%,
+      rgba(8, 37, 56, .32) 68%,
+      rgba(18, 63, 89, .18) 100%
     ) !important;
 }
 
-/* No dejar otra capa encima */
-.page section[data-dark-overlay]::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* Todo el contenido arriba */
-.page section[data-dark-overlay] > *:not(.darkBandImage):not(.finalCtaImage):not(.darkBandVideoLayer):not(.finalCtaVideoLayer) {
+.cleanServices > * {
   position: relative !important;
   z-index: 2 !important;
 }
 
-/* Cards sobre imagen oscura */
-.page section[data-dark-overlay="services"] article,
-.page section[data-dark-overlay="darkBand"] article {
-  background: rgba(3, 10, 18, .34) !important;
-  border-color: rgba(244, 239, 229, .16) !important;
-  backdrop-filter: blur(2px) !important;
+.cleanServices .sectionHead {
+  text-align: left !important;
+  margin: 0 0 2.4rem !important;
+  max-width: 780px !important;
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
-/* Texto marfil en secciones oscuras */
-.page section[data-dark-overlay] h2,
-.page section[data-dark-overlay] h3,
-.page section[data-dark-overlay] strong {
+.cleanServices .sectionHead h2 {
   color: #f4efe5 !important;
   -webkit-text-fill-color: #f4efe5 !important;
+  max-width: 760px !important;
 }
 
-.page section[data-dark-overlay] p,
-.page section[data-dark-overlay] span,
-.page section[data-dark-overlay] small {
-  color: rgba(244, 239, 229, .78) !important;
-  -webkit-text-fill-color: rgba(244, 239, 229, .78) !important;
-}
-
-.page section[data-dark-overlay] .eyebrow,
-.page section[data-dark-overlay] [class*="eyebrow"] {
+.cleanServices .eyebrow {
   color: #c7a96b !important;
   -webkit-text-fill-color: #c7a96b !important;
 }
 
-/* Iconos */
-.page section[data-dark-overlay] i {
-  border-color: rgba(118, 188, 215, .38) !important;
-  background: rgba(18, 63, 89, .30) !important;
-  color: #76bcd7 !important;
+.cleanServices .serviceGrid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 14px !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
-.page section[data-dark-overlay] svg {
-  stroke: #76bcd7 !important;
+.cleanServices .serviceGrid article {
+  min-height: 190px !important;
+  padding: 1.6rem !important;
+  text-align: left !important;
+  border: 1px solid rgba(199, 169, 107, .26) !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
 }
 
-/* Mobile: mismo tono, más vertical */
+.cleanServices .serviceGrid article::before,
+.cleanServices .serviceGrid article::after {
+  content: none !important;
+  display: none !important;
+}
+
+.cleanServices .serviceGrid h3 {
+  color: #f4efe5 !important;
+  -webkit-text-fill-color: #f4efe5 !important;
+}
+
+.cleanServices .serviceGrid p {
+  color: rgba(244, 239, 229, .78) !important;
+  -webkit-text-fill-color: rgba(244, 239, 229, .78) !important;
+}
+
+.cleanServices .serviceGrid i {
+  color: #c7a96b !important;
+  background: rgba(18, 63, 89, .22) !important;
+  border: 1px solid rgba(199, 169, 107, .28) !important;
+}
+
 @media (max-width: 900px) {
-  .page section[data-dark-overlay]::before {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(3, 10, 18, .88) 0%,
-        rgba(5, 18, 31, .76) 48%,
-        rgba(3, 10, 18, .90) 100%
-      ) !important;
+  .cleanServices {
+    margin-top: 3.5rem !important;
+    padding: 3.2rem 18px !important;
+  }
+
+  .cleanServices .serviceGrid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .cleanServices .serviceGrid article {
+    min-height: auto !important;
+  }
+}
+/* END ZZZ REAL CLEAN SERVICES CLASS ALL SECTORS FINAL */
+
+/* ZZZ CLEAN SERVICES SAME DARKBAND BLUE LAYER FINAL
+   cleanServices usa la misma capa azul premium que darkBand
+   para que las dos secciones oscuras queden parejas.
+*/
+.cleanServices {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+}
+
+.cleanServices::before {
+  content: none !important;
+  display: none !important;
+  opacity: 0 !important;
+  background: none !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.cleanServices::after {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  opacity: 1 !important;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(18, 63, 89, .28), transparent 24rem),
+    radial-gradient(circle at 12% 82%, rgba(18, 63, 89, .22), transparent 26rem),
+    linear-gradient(
+      90deg,
+      rgba(3, 10, 18, .78) 0%,
+      rgba(5, 20, 34, .68) 36%,
+      rgba(8, 37, 56, .52) 66%,
+      rgba(18, 63, 89, .34) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 10, 18, .20) 0%,
+      rgba(3, 10, 18, .46) 100%
+    ) !important;
+  box-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.cleanServices > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.cleanServices .sectionHead,
+.cleanServices .serviceGrid,
+.cleanServices article {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+/* END ZZZ CLEAN SERVICES SAME DARKBAND BLUE LAYER FINAL */
+
+/* ZZZ COMPACT DARK SECTOR SECTIONS FINAL
+   Las secciones oscuras de sectores no deben parecer otro hero.
+   Compacta cleanServices y darkBand como subsecciones premium.
+*/
+.cleanServices {
+  margin-top: 3.6rem !important;
+  margin-bottom: 0 !important;
+  padding-top: clamp(2.8rem, 4.2vw, 4rem) !important;
+  padding-bottom: clamp(2.8rem, 4.2vw, 4rem) !important;
+  min-height: auto !important;
+}
+
+.cleanServices .sectionHead {
+  margin-bottom: 1.55rem !important;
+}
+
+.cleanServices .sectionHead h2 {
+  font-size: clamp(2rem, 3.2vw, 3.45rem) !important;
+  line-height: .98 !important;
+  max-width: 760px !important;
+}
+
+.cleanServices .serviceGrid {
+  gap: 12px !important;
+}
+
+.cleanServices .serviceGrid article {
+  min-height: 150px !important;
+  padding: 1.25rem 1.35rem !important;
+}
+
+.cleanServices .serviceGrid i {
+  width: 40px !important;
+  height: 40px !important;
+  margin-bottom: .75rem !important;
+}
+
+.cleanServices .serviceGrid h3 {
+  font-size: 1rem !important;
+  line-height: 1.08 !important;
+}
+
+.cleanServices .serviceGrid p {
+  margin-top: .55rem !important;
+  font-size: .86rem !important;
+  line-height: 1.45 !important;
+}
+
+/* DarkBand abajo también compacta */
+.page .darkBand,
+.page section[data-sector-dark-band="true"] {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  min-height: auto !important;
+  padding-top: clamp(3rem, 4.6vw, 4.4rem) !important;
+  padding-bottom: clamp(3rem, 4.6vw, 4.4rem) !important;
+}
+
+.page .darkBandContent {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.page .darkBand h2,
+.page section[data-sector-dark-band="true"] h2 {
+  font-size: clamp(2rem, 3.2vw, 3.5rem) !important;
+  line-height: .98 !important;
+}
+
+.page .darkBand p,
+.page section[data-sector-dark-band="true"] p {
+  font-size: .96rem !important;
+  line-height: 1.55 !important;
+}
+
+.page .darkBand .stats,
+.page section[data-sector-dark-band="true"] .stats {
+  margin-top: 1.5rem !important;
+}
+
+.page .darkBand .stats article,
+.page section[data-sector-dark-band="true"] .stats article {
+  min-height: 110px !important;
+  padding: 1.15rem !important;
+}
+
+@media (max-width: 900px) {
+  .cleanServices {
+    margin-top: 2.8rem !important;
+    padding-top: 2.6rem !important;
+    padding-bottom: 2.6rem !important;
+  }
+
+  .cleanServices .sectionHead {
+    margin-bottom: 1.35rem !important;
+  }
+
+  .cleanServices .sectionHead h2 {
+    font-size: clamp(1.85rem, 8vw, 2.65rem) !important;
+  }
+
+  .cleanServices .serviceGrid article {
+    min-height: auto !important;
+    padding: 1.15rem !important;
+  }
+
+  .page .darkBand,
+  .page section[data-sector-dark-band="true"] {
+    padding-top: 2.8rem !important;
+    padding-bottom: 2.8rem !important;
+  }
+}
+/* END ZZZ COMPACT DARK SECTOR SECTIONS FINAL */
+
+/* ZZZ SECTOR HERO TRUSTBAR GOLD BLUE PREMIUM FINAL
+   Barra debajo del hero estilo home:
+   fondo azul noche, letras doradas, iconos azul Across y borde dorado fino.
+*/
+.page .trustBar {
+  width: 100vw !important;
+  max-width: none !important;
+  margin: 0 50% !important;
+  transform: translateX(-50%) !important;
+
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+
+  background:
+    linear-gradient(90deg, rgba(3, 10, 18, .98), rgba(5, 18, 31, .98)) !important;
+
+  border-top: 1px solid rgba(199, 169, 107, .38) !important;
+  border-bottom: 1px solid rgba(199, 169, 107, .38) !important;
+
+  box-shadow:
+    inset 0 1px 0 rgba(244, 239, 229, .08),
+    0 18px 60px rgba(0, 0, 0, .18) !important;
+
+  overflow: hidden !important;
+}
+
+.page .trustBar div {
+  min-height: 98px !important;
+  padding: 1.2rem clamp(1.2rem, 2.4vw, 2.2rem) !important;
+
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+
+  background: transparent !important;
+  border-right: 1px solid rgba(199, 169, 107, .22) !important;
+  box-shadow: none !important;
+}
+
+.page .trustBar div:last-child {
+  border-right: 0 !important;
+}
+
+.page .trustBar i {
+  width: 38px !important;
+  height: 38px !important;
+  min-width: 38px !important;
+
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  color: #0f6f96 !important;
+  background:
+    radial-gradient(circle, rgba(15, 111, 150, .20), rgba(15, 111, 150, .06)) !important;
+
+  border: 1px solid rgba(199, 169, 107, .38) !important;
+  border-radius: 999px !important;
+
+  box-shadow:
+    inset 0 1px 0 rgba(244, 239, 229, .08),
+    0 0 22px rgba(15, 111, 150, .16) !important;
+}
+
+.page .trustBar i svg {
+  width: 20px !important;
+  height: 20px !important;
+  stroke: currentColor !important;
+}
+
+.page .trustBar span {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: .24rem !important;
+}
+
+.page .trustBar strong {
+  color: #c7a96b !important;
+  -webkit-text-fill-color: #c7a96b !important;
+
+  font-size: .78rem !important;
+  line-height: 1.1 !important;
+  font-weight: 900 !important;
+  letter-spacing: .16em !important;
+  text-transform: uppercase !important;
+}
+
+.page .trustBar small {
+  color: rgba(244, 239, 229, .88) !important;
+  -webkit-text-fill-color: rgba(244, 239, 229, .88) !important;
+
+  font-size: .82rem !important;
+  line-height: 1.28 !important;
+  font-weight: 600 !important;
+}
+
+@media (max-width: 900px) {
+  .page .trustBar {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .page .trustBar div {
+    min-height: 86px !important;
+    padding: 1rem 1.1rem !important;
+  }
+
+  .page .trustBar div:nth-child(2) {
+    border-right: 0 !important;
+  }
+
+  .page .trustBar div:nth-child(1),
+  .page .trustBar div:nth-child(2) {
+    border-bottom: 1px solid rgba(199, 169, 107, .22) !important;
+  }
+
+  .page .trustBar strong {
+    font-size: .7rem !important;
+    letter-spacing: .12em !important;
+  }
+
+  .page .trustBar small {
+    font-size: .76rem !important;
   }
 }
 
+@media (max-width: 520px) {
+  .page .trustBar {
+    grid-template-columns: 1fr !important;
+  }
 
+  .page .trustBar div {
+    border-right: 0 !important;
+    border-bottom: 1px solid rgba(199, 169, 107, .20) !important;
+  }
+
+  .page .trustBar div:last-child {
+    border-bottom: 0 !important;
+  }
+}
+/* END ZZZ SECTOR HERO TRUSTBAR GOLD BLUE PREMIUM FINAL */
+
+
+
+/* =====================================================
+   ACROSS COMMAND BAR EXPORTS
+   Necesario para que CSS Modules exporte styles.commandBar/item.
+   El estilo visual real vive en globals.css.
+   ===================================================== */
+
+.commandBar {}
+.commandItem {}
+
+/* END ACROSS COMMAND BAR EXPORTS */

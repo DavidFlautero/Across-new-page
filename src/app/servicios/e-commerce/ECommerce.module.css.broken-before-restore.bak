@@ -2963,7 +2963,7 @@
       rgba(5, 6, 9, .55) 100%
     ),
     radial-gradient(circle at 18% 18%, rgba(23, 50, 71, .16), transparent 24rem),
-    url("/images/almacen.png") !important;
+    url("/images/ecommerce.png") !important;
   background-size: cover !important;
   background-position: center 48% !important;
   background-repeat: no-repeat !important;
@@ -3065,7 +3065,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/almacen.png") !important;
+    url("/images/ecommerce.png") !important;
   background-size: cover !important;
   background-position: center 55% !important;
   background-repeat: no-repeat !important;
@@ -3104,7 +3104,7 @@
   .services {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.90)),
-      url("/images/almacen.png") !important;
+      url("/images/ecommerce.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3116,7 +3116,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/almacen.png") !important;
+      url("/images/ecommerce.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3134,7 +3134,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/almacenHero.png") !important;
+    url("/images/heroecommerce.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3144,7 +3144,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/almacenHero.png") !important;
+      url("/images/heroecommerce.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3162,7 +3162,7 @@
       rgba(5, 6, 9, .44) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/almacensegunda.png") !important;
+    url("/images/segundaecommerce.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3172,7 +3172,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/almacensegunda.png") !important;
+      url("/images/segundaecommerce.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -4043,53 +4043,6 @@
 
 
 /* =====================================================
-   ALMACÉN - MOBILE USA MISMAS IMÁGENES QUE DESKTOP
-   No cambia diseño, solo fuerza consistencia visual.
-   ===================================================== */
-
-@media (max-width: 760px) {
-  .heroImageDesktop {
-    display: none !important;
-  }
-
-  .heroImageMobile {
-    display: block !important;
-  }
-
-  .heroImage {
-    object-fit: cover !important;
-    object-position: center center !important;
-  }
-
-  .darkBandImage,
-  .finalImage {
-    display: block !important;
-  }
-
-  .darkBandImage img,
-  .finalImage img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-    display: block !important;
-  }
-}
-
-/* iPhone SE */
-@media (max-width: 380px) {
-  .heroImage {
-    object-position: center center !important;
-  }
-
-  .darkBandImage img,
-  .finalImage img {
-    object-position: center center !important;
-  }
-}
-
-
-/* =====================================================
    GLOBAL SERVICE FIX - MOBILE USA IMÁGENES DESKTOP
    Evita crear imágenes dobles por cada sección.
    ===================================================== */
@@ -4135,15 +4088,6 @@
    SERVICE MOBILE MASTER RESET V2
    Corrige secciones partidas, imágenes sueltas y ancho roto.
    Desktop/tablet intactos.
-   Página: almacen-distribucion
-   ===================================================== */
-
-@media (max-width: 760px) {
-  .page {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-    background: #f4f1eb !important;
   }
 
   .hero,
@@ -4191,7 +4135,7 @@
     position: absolute !important;
     inset: 0 !important;
     z-index: 0 !important;
-    background-image: url("/images/almacen.png") !important;
+    background-image: url("/images/ecommerce.png") !important;
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
@@ -4274,7 +4218,7 @@
     position: absolute !important;
     inset: 0 !important;
     z-index: 0 !important;
-    background-image: url("/images/almacen.png") !important;
+    background-image: url("/images/ecommerce.png") !important;
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
@@ -4355,7 +4299,7 @@
     position: absolute !important;
     inset: 0 !important;
     z-index: 0 !important;
-    background-image: url("/images/almacenHero.png") !important;
+    background-image: url("/images/heroecommerce.png") !important;
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
@@ -5984,34 +5928,34 @@
 }
 
 /* =====================================================
-   ZZZ ALMACEN DISTRIBUCION FINAL MOBILE/TABLET SYSTEM
+   ZZZ ECOMMERCE FINAL MOBILE/TABLET SYSTEM
    Desktop grande queda intacto.
-   Replica sistema aprobado:
-   - sin nieblas/pseudos viejos
-   - hero tablet/mobile ordenado
-   - CTA compacta
-   - trustBar 2x2
-   - overview con márgenes correctas
-   - oculta cards/pilares en mobile/tablet
+   Sistema igual a las otras:
+   - hero responsive ordenado
+   - card fuera en tablet/mobile
+   - trustBar 2x2 compacta
+   - overview con márgenes
+   - oculta cards/pilares en mobile
+   - deja una sola CTA final
    ===================================================== */
 
-.page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] {
+.page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] {
   position: relative !important;
   overflow: hidden !important;
   isolation: isolate !important;
   background: #07111d !important;
 }
 
-/* Quitar decoraciones/nieblas coladas del hero */
+/* Quitar decoraciones/nieblas del hero */
 @media (max-width: 900px) {
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"]::before,
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"]::after,
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] .heroInner::before,
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] .heroInner::after,
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] .heroContent::before,
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] .heroContent::after,
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="title"]::before,
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="title"]::after {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"]::before,
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"]::after,
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] .heroInner::before,
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] .heroInner::after,
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] .heroContent::before,
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] .heroContent::after,
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="title"]::before,
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="title"]::after {
     content: none !important;
     display: none !important;
     opacity: 0 !important;
@@ -6023,9 +5967,9 @@
     backdrop-filter: none !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="desktop-image"],
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="mobile-image"],
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] .heroImage {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="desktop-image"],
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="mobile-image"],
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] .heroImage {
     position: absolute !important;
     inset: 0 !important;
     width: 100% !important;
@@ -6037,8 +5981,8 @@
     filter: brightness(1.08) contrast(1.06) saturate(1.14) !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="overlay"],
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] .heroOverlay {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="overlay"],
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] .heroOverlay {
     position: absolute !important;
     inset: 0 !important;
     z-index: -3 !important;
@@ -6047,25 +5991,15 @@
     filter: none !important;
     backdrop-filter: none !important;
     background:
-      linear-gradient(
-        90deg,
-        rgba(3, 7, 13, .64) 0%,
-        rgba(3, 7, 13, .40) 48%,
-        rgba(3, 7, 13, .10) 100%
-      ),
-      linear-gradient(
-        180deg,
-        rgba(3, 7, 13, .08) 0%,
-        rgba(3, 7, 13, .06) 44%,
-        rgba(3, 7, 13, .22) 100%
-      ) !important;
+      linear-gradient(90deg, rgba(3,7,13,.64) 0%, rgba(3,7,13,.40) 48%, rgba(3,7,13,.10) 100%),
+      linear-gradient(180deg, rgba(3,7,13,.08) 0%, rgba(3,7,13,.06) 44%, rgba(3,7,13,.22) 100%) !important;
   }
 }
 
 /* Card lateral fuera en tablet/mobile */
 @media (max-width: 1200px) {
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="card"],
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] .operationCard {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="card"],
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] .operationCard {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
@@ -6075,7 +6009,7 @@
 
 /* TABLET / NEST HUB LANDSCAPE */
 @media (min-width: 901px) and (max-width: 1200px) {
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] {
     height: 500px !important;
     min-height: 500px !important;
     max-height: 500px !important;
@@ -6083,16 +6017,16 @@
     margin: 0 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="desktop-image"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="desktop-image"] {
     display: block !important;
     object-position: center center !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="mobile-image"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="mobile-image"] {
     display: none !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="inner"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="inner"] {
     position: absolute !important;
     z-index: 5 !important;
     top: 145px !important;
@@ -6106,13 +6040,13 @@
     transform: none !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="content"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="content"] {
     max-width: 520px !important;
     margin: 0 !important;
     padding: 0 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="eyebrow"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="eyebrow"] {
     display: block !important;
     max-width: 520px !important;
     margin: 0 0 .55rem !important;
@@ -6124,7 +6058,7 @@
     text-transform: uppercase !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="title"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="title"] {
     max-width: 520px !important;
     margin: 0 !important;
     color: #fff !important;
@@ -6135,7 +6069,7 @@
     text-wrap: balance !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="text"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="text"] {
     max-width: 445px !important;
     margin: .78rem 0 0 !important;
     color: rgba(255,255,255,.9) !important;
@@ -6144,14 +6078,14 @@
     font-weight: 650 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="actions"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="actions"] {
     display: flex !important;
     gap: .62rem !important;
     margin: 1rem 0 0 !important;
     padding: 0 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="actions"] a {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="actions"] a {
     min-height: 36px !important;
     padding: 0 1.05rem !important;
     border-radius: 999px !important;
@@ -6170,23 +6104,23 @@
 
 /* Nest Hub 1024x600 */
 @media (min-width: 980px) and (max-width: 1100px) and (max-height: 650px) {
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] {
     height: 480px !important;
     min-height: 480px !important;
     max-height: 480px !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="inner"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="inner"] {
     top: 142px !important;
     left: 58px !important;
     right: 58px !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="title"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="title"] {
     font-size: 2.48rem !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="text"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="text"] {
     max-width: 430px !important;
     font-size: .74rem !important;
   }
@@ -6194,7 +6128,7 @@
 
 /* TABLET VERTICAL / iPad / Surface */
 @media (min-width: 701px) and (max-width: 1024px) and (orientation: portrait) {
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] {
     height: 560px !important;
     min-height: 560px !important;
     max-height: 560px !important;
@@ -6202,16 +6136,16 @@
     margin: 0 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="desktop-image"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="desktop-image"] {
     display: block !important;
     object-position: center center !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="mobile-image"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="mobile-image"] {
     display: none !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="inner"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="inner"] {
     position: absolute !important;
     z-index: 5 !important;
     top: 122px !important;
@@ -6225,13 +6159,13 @@
     transform: none !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="content"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="content"] {
     max-width: 430px !important;
     margin: 0 !important;
     padding: 0 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="title"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="title"] {
     max-width: 430px !important;
     margin: 0 !important;
     font-size: clamp(2.05rem, 5.1vw, 2.58rem) !important;
@@ -6240,7 +6174,7 @@
     font-weight: 950 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="text"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="text"] {
     max-width: 370px !important;
     margin: .8rem 0 0 !important;
     font-size: .76rem !important;
@@ -6248,13 +6182,13 @@
     font-weight: 650 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="actions"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="actions"] {
     display: flex !important;
     gap: .58rem !important;
     margin: 1rem 0 0 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="actions"] a {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="actions"] a {
     min-height: 36px !important;
     padding: 0 1rem !important;
     font-size: .54rem !important;
@@ -6263,7 +6197,7 @@
 
 /* MOBILE */
 @media (max-width: 700px) {
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] {
     height: 465px !important;
     min-height: 465px !important;
     max-height: 465px !important;
@@ -6271,16 +6205,16 @@
     margin: 0 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="desktop-image"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="desktop-image"] {
     display: none !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="mobile-image"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="mobile-image"] {
     display: block !important;
     object-position: center center !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="inner"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="inner"] {
     position: absolute !important;
     z-index: 5 !important;
     top: 86px !important;
@@ -6294,13 +6228,13 @@
     transform: none !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="content"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="content"] {
     max-width: 318px !important;
     margin: 0 !important;
     padding: 0 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="eyebrow"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="eyebrow"] {
     max-width: 318px !important;
     margin: 0 0 .5rem !important;
     color: #d6c08d !important;
@@ -6311,7 +6245,7 @@
     text-transform: uppercase !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="title"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="title"] {
     max-width: 318px !important;
     margin: 0 !important;
     color: #fff !important;
@@ -6321,7 +6255,7 @@
     font-weight: 950 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="text"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="text"] {
     max-width: 292px !important;
     margin: .68rem 0 0 !important;
     color: rgba(255,255,255,.9) !important;
@@ -6330,7 +6264,7 @@
     font-weight: 650 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="actions"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="actions"] {
     display: grid !important;
     grid-template-columns: 1fr !important;
     max-width: 250px !important;
@@ -6339,7 +6273,7 @@
     padding: 0 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="actions"] a {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="actions"] a {
     width: 100% !important;
     min-height: 34px !important;
     padding: 0 .8rem !important;
@@ -6356,7 +6290,7 @@
     justify-content: center !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="actions"] a:nth-of-type(2) {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="actions"] a:nth-of-type(2) {
     display: none !important;
   }
 
@@ -6371,9 +6305,9 @@
     padding: 0 !important;
     margin: 0 !important;
     gap: 0 !important;
-    background: #05101b !important;
-    border-top: 1px solid rgba(255,255,255,.08) !important;
-    border-bottom: 1px solid rgba(255,255,255,.08) !important;
+    background: linear-gradient(90deg, rgba(3, 10, 18, .98), rgba(5, 18, 31, .98)) !important;
+    border-top: 1px solid rgba(199, 169, 107, .38) !important;
+    border-bottom: 1px solid rgba(199, 169, 107, .38) !important;
     overflow: hidden !important;
   }
 
@@ -6386,8 +6320,8 @@
     grid-template-columns: 30px 1fr !important;
     align-items: center !important;
     column-gap: .55rem !important;
-    border-right: 1px solid rgba(255,255,255,.08) !important;
-    border-bottom: 1px solid rgba(255,255,255,.08) !important;
+    border-right: 1px solid rgba(199, 169, 107, .22) !important;
+    border-bottom: 1px solid rgba(199, 169, 107, .38) !important;
   }
 
   .page .trustBar i {
@@ -6405,10 +6339,10 @@
     margin: 0 0 .08rem !important;
     font-size: .56rem !important;
     line-height: 1.05 !important;
-    letter-spacing: .035em !important;
-    font-weight: 950 !important;
+    letter-spacing: .16em !important;
+    font-weight: 900 !important;
     text-transform: uppercase !important;
-    color: #fff !important;
+    color: #c7a96b !important;
   }
 
   .page .trustBar span,
@@ -6418,7 +6352,7 @@
     margin: 0 !important;
     font-size: .5rem !important;
     line-height: 1.08 !important;
-    color: rgba(255,255,255,.72) !important;
+    color: rgba(244, 239, 229, .88) !important;
   }
 
   /* overview con márgenes */
@@ -6453,7 +6387,7 @@
     margin: 0 0 .72rem !important;
     font-size: .55rem !important;
     line-height: 1 !important;
-    letter-spacing: .17em !important;
+    letter-spacing: .16em !important;
   }
 
   .page .overview h2 {
@@ -6461,7 +6395,7 @@
     margin: 0 !important;
     font-size: clamp(1.9rem, 8.2vw, 2.35rem) !important;
     line-height: .98 !important;
-    letter-spacing: -.055em !important;
+    letter-spacing: .16em !important;
   }
 
   .page .overview p {
@@ -6486,10 +6420,10 @@
     text-wrap: balance !important;
     font-size: .66rem !important;
     line-height: 1.08 !important;
-    letter-spacing: .045em !important;
+    letter-spacing: .16em !important;
   }
 
-  /* ocultar sección de cards/pilares */
+  /* ocultar cards/pilares en mobile */
   .page .pillars,
   .page .pillarGrid,
   .page .features,
@@ -6512,7 +6446,7 @@
   }
 }
 
-/* Ocultar cards/pilares también en tablet vertical */
+/* Tablet vertical: ocultar cards si ensucian */
 @media (min-width: 701px) and (max-width: 900px) {
   .page .pillars,
   .page .pillarGrid,
@@ -6534,46 +6468,37 @@
 }
 
 /* CTA: dejar solo la final en tablet/mobile */
-.page [data-almacen-cta="true"],
-.page [data-almacen-extra-cta="true"] {
+.page [data-ecommerce-cta="true"],
+.page [data-ecommerce-extra-cta="true"] {
   position: relative !important;
   overflow: hidden !important;
   isolation: isolate !important;
   color: #fff !important;
   background:
-    linear-gradient(
-      90deg,
-      rgba(3, 7, 13, .88) 0%,
-      rgba(3, 7, 13, .76) 48%,
-      rgba(3, 7, 13, .58) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(3, 7, 13, .50) 0%,
-      rgba(3, 7, 13, .78) 100%
-    ),
-    url("/public/images/almacenHero.png") center center / cover no-repeat !important;
+    linear-gradient(90deg, rgba(3,7,13,.88) 0%, rgba(3,7,13,.76) 48%, rgba(3,7,13,.58) 100%),
+    linear-gradient(180deg, rgba(3,7,13,.50) 0%, rgba(3,7,13,.78) 100%),
+    url("/images/heroecommerce.png") center center / cover no-repeat !important;
 }
 
-.page [data-almacen-cta="true"] img,
-.page [data-almacen-cta="true"] picture,
-.page [data-almacen-cta="true"] [class*="image"],
-.page [data-almacen-cta="true"] [class*="Image"],
-.page [data-almacen-cta="true"] [class*="media"],
-.page [data-almacen-cta="true"] [class*="Media"],
-.page [data-almacen-extra-cta="true"] img,
-.page [data-almacen-extra-cta="true"] picture,
-.page [data-almacen-extra-cta="true"] [class*="image"],
-.page [data-almacen-extra-cta="true"] [class*="Image"],
-.page [data-almacen-extra-cta="true"] [class*="media"],
-.page [data-almacen-extra-cta="true"] [class*="Media"] {
+.page [data-ecommerce-cta="true"] img,
+.page [data-ecommerce-cta="true"] picture,
+.page [data-ecommerce-cta="true"] [class*="image"],
+.page [data-ecommerce-cta="true"] [class*="Image"],
+.page [data-ecommerce-cta="true"] [class*="media"],
+.page [data-ecommerce-cta="true"] [class*="Media"],
+.page [data-ecommerce-extra-cta="true"] img,
+.page [data-ecommerce-extra-cta="true"] picture,
+.page [data-ecommerce-extra-cta="true"] [class*="image"],
+.page [data-ecommerce-extra-cta="true"] [class*="Image"],
+.page [data-ecommerce-extra-cta="true"] [class*="media"],
+.page [data-ecommerce-extra-cta="true"] [class*="Media"] {
   display: none !important;
 }
 
-.page [data-almacen-cta="true"]::before,
-.page [data-almacen-cta="true"]::after,
-.page [data-almacen-extra-cta="true"]::before,
-.page [data-almacen-extra-cta="true"]::after {
+.page [data-ecommerce-cta="true"]::before,
+.page [data-ecommerce-cta="true"]::after,
+.page [data-ecommerce-extra-cta="true"]::before,
+.page [data-ecommerce-extra-cta="true"]::after {
   content: none !important;
   display: none !important;
   opacity: 0 !important;
@@ -6582,26 +6507,26 @@
 }
 
 @media (max-width: 1200px) {
-  .page [data-almacen-extra-cta="true"] {
+  .page [data-ecommerce-extra-cta="true"] {
     display: none !important;
   }
 }
 
 @media (min-width: 701px) and (max-width: 1200px) {
-  .page [data-almacen-cta="true"] {
+  .page [data-ecommerce-cta="true"] {
     min-height: 420px !important;
     padding: 4rem clamp(42px, 6vw, 68px) !important;
     display: flex !important;
     align-items: center !important;
   }
 
-  .page [data-almacen-cta="true"] > * {
+  .page [data-ecommerce-cta="true"] > * {
     position: relative !important;
     z-index: 2 !important;
     max-width: 520px !important;
   }
 
-  .page [data-almacen-cta="true"] h2 {
+  .page [data-ecommerce-cta="true"] h2 {
     max-width: 520px !important;
     margin: 0 !important;
     color: #fff !important;
@@ -6610,7 +6535,7 @@
     letter-spacing: -.055em !important;
   }
 
-  .page [data-almacen-cta="true"] p {
+  .page [data-ecommerce-cta="true"] p {
     max-width: 460px !important;
     margin: 1rem 0 0 !important;
     color: rgba(255,255,255,.9) !important;
@@ -6618,7 +6543,7 @@
     line-height: 1.5 !important;
   }
 
-  .page [data-almacen-cta="true"] a {
+  .page [data-ecommerce-cta="true"] a {
     width: fit-content !important;
     max-width: 330px !important;
     min-height: 42px !important;
@@ -6634,14 +6559,14 @@
 }
 
 @media (max-width: 700px) {
-  .page [data-almacen-cta="true"] {
+  .page [data-ecommerce-cta="true"] {
     min-height: 420px !important;
     padding: 3.4rem 24px !important;
     display: flex !important;
     align-items: center !important;
   }
 
-  .page [data-almacen-cta="true"] h2 {
+  .page [data-ecommerce-cta="true"] h2 {
     max-width: 305px !important;
     margin: 0 !important;
     color: #fff !important;
@@ -6650,7 +6575,7 @@
     letter-spacing: -.055em !important;
   }
 
-  .page [data-almacen-cta="true"] p {
+  .page [data-ecommerce-cta="true"] p {
     max-width: 300px !important;
     margin: 1.1rem 0 0 !important;
     color: rgba(255,255,255,.9) !important;
@@ -6658,7 +6583,7 @@
     line-height: 1.55 !important;
   }
 
-  .page [data-almacen-cta="true"] a {
+  .page [data-ecommerce-cta="true"] a {
     width: 100% !important;
     max-width: 310px !important;
     min-height: 52px !important;
@@ -6675,28 +6600,28 @@
 }
 
 @media (max-width: 390px) {
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] {
     height: 455px !important;
     min-height: 455px !important;
     max-height: 455px !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="inner"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="inner"] {
     top: 84px !important;
     left: 18px !important;
     right: 18px !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="content"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="content"] {
     max-width: 300px !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="title"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="title"] {
     max-width: 300px !important;
     font-size: 1.74rem !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="almacen"] [data-hero-role="text"] {
+  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="ecommerce"] [data-hero-role="text"] {
     max-width: 282px !important;
     font-size: .6rem !important;
   }
@@ -6731,156 +6656,26 @@
     font-size: .9rem !important;
   }
 
-  .page [data-almacen-cta="true"] {
+  .page [data-ecommerce-cta="true"] {
     min-height: 400px !important;
     padding: 3.1rem 20px !important;
   }
 
-  .page [data-almacen-cta="true"] h2 {
+  .page [data-ecommerce-cta="true"] h2 {
     max-width: 290px !important;
     font-size: 2.05rem !important;
   }
 
-  .page [data-almacen-cta="true"] p {
+  .page [data-ecommerce-cta="true"] p {
     max-width: 285px !important;
     font-size: .9rem !important;
   }
 
-  .page [data-almacen-cta="true"] a {
+  .page [data-ecommerce-cta="true"] a {
     max-width: 295px !important;
     font-size: .62rem !important;
   }
-}
 
-
-
-/* =====================================================
-   ZZZ ALMACEN CTA BUTTON CUT FIX
-   Corrige sección final:
-   - no corta el segundo botón
-   - botones apilados limpios
-   - más aire inferior
-   ===================================================== */
-
-.page [data-almacen-cta="true"] {
-  overflow: hidden !important;
-}
-
-/* Tablet / laptop chica */
-@media (min-width: 701px) and (max-width: 1200px) {
-  .page [data-almacen-cta="true"] {
-    min-height: 520px !important;
-    padding-top: 4.4rem !important;
-    padding-bottom: 5.8rem !important;
-    align-items: center !important;
-  }
-
-  .page [data-almacen-cta="true"] > * {
-    max-width: 560px !important;
-  }
-
-  .page [data-almacen-cta="true"] div:has(> a),
-  .page [data-almacen-cta="true"] [class*="actions"],
-  .page [data-almacen-cta="true"] [class*="Actions"] {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: .85rem !important;
-    width: 100% !important;
-    max-width: 330px !important;
-    margin-top: 1.55rem !important;
-  }
-
-  .page [data-almacen-cta="true"] a {
-    width: 100% !important;
-    max-width: 330px !important;
-    min-height: 44px !important;
-    margin: 0 !important;
-    padding: 0 1.2rem !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-  .page [data-almacen-cta="true"] {
-    min-height: 460px !important;
-    padding-top: 3.5rem !important;
-    padding-bottom: 4.8rem !important;
-  }
-
-  .page [data-almacen-cta="true"] div:has(> a),
-  .page [data-almacen-cta="true"] [class*="actions"],
-  .page [data-almacen-cta="true"] [class*="Actions"] {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: .85rem !important;
-    width: 100% !important;
-    max-width: 310px !important;
-    margin-top: 1.6rem !important;
-  }
-
-  .page [data-almacen-cta="true"] a {
-    width: 100% !important;
-    max-width: 310px !important;
-    min-height: 52px !important;
-    margin: 0 !important;
-    padding: 0 1rem !important;
-    white-space: normal !important;
-    text-wrap: balance !important;
-    text-align: center !important;
-  }
-}
-
-/* Mobile chico */
-@media (max-width: 390px) {
-  .page [data-almacen-cta="true"] {
-    min-height: 450px !important;
-    padding-bottom: 4.5rem !important;
-  }
-
-  .page [data-almacen-cta="true"] div:has(> a),
-  .page [data-almacen-cta="true"] [class*="actions"],
-  .page [data-almacen-cta="true"] [class*="Actions"] {
-    max-width: 295px !important;
-    gap: .75rem !important;
-  }
-}
-
-/* =====================================================
-   ZZZ ALMACEN CTA BACKGROUND IMAGE FINAL
-   Usa la imagen almacen segunda como fondo de CTA final.
-   ===================================================== */
-
-.page [data-almacen-cta="true"],
-.page [data-almacen-extra-cta="true"] {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(3, 7, 13, .88) 0%,
-      rgba(3, 7, 13, .76) 48%,
-      rgba(3, 7, 13, .58) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(3, 7, 13, .50) 0%,
-      rgba(3, 7, 13, .78) 100%
-    ),
-    url("/images/almacensegunda.png") center center / cover no-repeat !important;
-}
-
-@media (max-width: 700px) {
-  .page [data-almacen-cta="true"] {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(3, 7, 13, .84) 0%,
-        rgba(3, 7, 13, .72) 48%,
-        rgba(3, 7, 13, .90) 100%
-      ),
-      url("/images/almacensegunda.png") center center / cover no-repeat !important;
-  }
 }
 
 /* =====================================================
@@ -8588,163 +8383,3 @@
     max-width: 285px !important;
   }
 }
-
-/* =====================================================
-   ZZZ UNIFIED DARK IMAGE OVERLAY FINAL
-   Oscurecido uniforme para secciones internas con imagen/video.
-   NO toca el hero.
-   Mood: imagen visible + velo azul oscuro premium.
-   ===================================================== */
-
-/* Secciones oscuras internas */
-.page .services,
-.page .darkBand,
-.page .finalCta,
-.page section[data-across-final-cta="true"],
-.page section[data-sector-final-cta="true"],
-.page section[data-energy-services-bg="true"],
-.page section[data-energy-final-video="true"] {
-  position: relative !important;
-  overflow: hidden !important;
-  isolation: isolate !important;
-}
-
-/* Overlay estándar: igual al look correcto de consumo/distribución */
-.page .services::before,
-.page .darkBand::before,
-.page .finalCta::before,
-.page section[data-across-final-cta="true"]::before,
-.page section[data-sector-final-cta="true"]::before,
-.page section[data-energy-services-bg="true"]::before,
-.page section[data-energy-final-video="true"]::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: 1 !important;
-  pointer-events: none !important;
-  display: block !important;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(3, 10, 18, .92) 0%,
-      rgba(3, 10, 18, .86) 30%,
-      rgba(5, 18, 31, .68) 62%,
-      rgba(7, 21, 34, .48) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(3, 10, 18, .18) 0%,
-      rgba(3, 10, 18, .72) 100%
-    ) !important;
-}
-
-/* Contenido siempre por encima del oscurecido */
-.page .services > *,
-.page .darkBand > *,
-.page .finalCta > *,
-.page section[data-across-final-cta="true"] > *,
-.page section[data-sector-final-cta="true"] > *,
-.page section[data-energy-services-bg="true"] > *,
-.page section[data-energy-final-video="true"] > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-/* Videos o imágenes de fondo quedan debajo del overlay */
-.page .darkBandVideoLayer,
-.page .darkBandVideo,
-.page .finalCtaVideoLayer,
-.page .finalCtaVideo {
-  z-index: 0 !important;
-}
-
-/* Evita capas sólidas encima de imagen/video */
-.page .services::after,
-.page .darkBand::after,
-.page .finalCta::after,
-.page section[data-across-final-cta="true"]::after,
-.page section[data-sector-final-cta="true"]::after,
-.page section[data-energy-services-bg="true"]::after,
-.page section[data-energy-final-video="true"]::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* Textos en secciones oscuras: marfil */
-.page .services h2,
-.page .services h3,
-.page .darkBand h2,
-.page .darkBand h3,
-.page .finalCta h2,
-.page .finalCta h3,
-.page section[data-across-final-cta="true"] h2,
-.page section[data-across-final-cta="true"] h3,
-.page section[data-sector-final-cta="true"] h2,
-.page section[data-sector-final-cta="true"] h3 {
-  color: #f4efe5 !important;
-  -webkit-text-fill-color: #f4efe5 !important;
-}
-
-.page .services p,
-.page .darkBand p,
-.page .finalCta p,
-.page section[data-across-final-cta="true"] p,
-.page section[data-sector-final-cta="true"] p {
-  color: rgba(244, 239, 229, .78) !important;
-  -webkit-text-fill-color: rgba(244, 239, 229, .78) !important;
-}
-
-/* Eyebrow dorado */
-.page .services .eyebrow,
-.page .darkBand .eyebrow,
-.page .finalCta .eyebrow,
-.page .services [class*="eyebrow"],
-.page .darkBand [class*="eyebrow"],
-.page .finalCta [class*="eyebrow"],
-.page section[data-across-final-cta="true"] [class*="eyebrow"],
-.page section[data-sector-final-cta="true"] [class*="eyebrow"] {
-  color: #c7a96b !important;
-  -webkit-text-fill-color: #c7a96b !important;
-}
-
-/* Cards internas sobre imagen oscura */
-.page .services article,
-.page .darkBand article {
-  background: rgba(3, 10, 18, .34) !important;
-  border-color: rgba(244, 239, 229, .16) !important;
-  backdrop-filter: blur(2px) !important;
-}
-
-/* Iconos */
-.page .services i,
-.page .darkBand i {
-  border-color: rgba(118, 188, 215, .38) !important;
-  background: rgba(18, 63, 89, .30) !important;
-  color: #76bcd7 !important;
-}
-
-.page .services svg,
-.page .darkBand svg {
-  stroke: #76bcd7 !important;
-}
-
-/* Mobile: mantener el mismo tono cuando la sección aparezca */
-@media (max-width: 900px) {
-  .page .services::before,
-  .page .darkBand::before,
-  .page .finalCta::before,
-  .page section[data-across-final-cta="true"]::before,
-  .page section[data-sector-final-cta="true"]::before,
-  .page section[data-energy-services-bg="true"]::before,
-  .page section[data-energy-final-video="true"]::before {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(3, 10, 18, .86) 0%,
-        rgba(5, 18, 31, .76) 48%,
-        rgba(3, 10, 18, .88) 100%
-      ) !important;
-  }
-}
-
-
