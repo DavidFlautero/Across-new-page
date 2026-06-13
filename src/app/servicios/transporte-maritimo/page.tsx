@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import type { CSSProperties } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -551,6 +551,105 @@ export default function TransporteMaritimoPage() {
       window.removeEventListener("across-locale-change", updateLocale);
     };
   }, []);
+
+  /* MARITIMO MOBILE COMMAND BAR FORCE START */
+  useLayoutEffect(() => {
+    const applyMobileCommandBar = () => {
+      const hero = document.querySelector(
+        'section[data-service-name="maritimo"]'
+      ) as HTMLElement | null;
+
+      const bar = hero?.querySelector(
+        '[class*="commandBar"]'
+      ) as HTMLElement | null;
+
+      if (!hero || !bar) return;
+
+      const items = Array.from(bar.children) as HTMLElement[];
+      const isMobile = window.matchMedia("(max-width: 900px)").matches;
+
+      const props = [
+        "position",
+        "top",
+        "bottom",
+        "left",
+        "right",
+        "width",
+        "height",
+        "min-height",
+        "max-height",
+        "display",
+        "grid-template-columns",
+        "z-index",
+      ];
+
+      const itemProps = [
+        "position",
+        "display",
+        "flex-direction",
+        "align-items",
+        "justify-content",
+        "height",
+        "min-height",
+        "padding",
+        "margin",
+        "width",
+        "min-width",
+      ];
+
+      if (!isMobile) {
+        props.forEach((prop) => bar.style.removeProperty(prop));
+        items.forEach((item) => {
+          itemProps.forEach((prop) => item.style.removeProperty(prop));
+        });
+        return;
+      }
+
+      hero.style.setProperty("position", "relative", "important");
+
+      bar.style.setProperty("position", "absolute", "important");
+      bar.style.setProperty("top", "auto", "important");
+      bar.style.setProperty("bottom", "0", "important");
+      bar.style.setProperty("left", "0", "important");
+      bar.style.setProperty("right", "0", "important");
+      bar.style.setProperty("width", "100%", "important");
+      bar.style.setProperty("height", "66px", "important");
+      bar.style.setProperty("min-height", "66px", "important");
+      bar.style.setProperty("max-height", "66px", "important");
+      bar.style.setProperty("display", "grid", "important");
+      bar.style.setProperty(
+        "grid-template-columns",
+        "repeat(4, minmax(0, 1fr))",
+        "important"
+      );
+      bar.style.setProperty("z-index", "60", "important");
+
+      items.forEach((item) => {
+        item.style.setProperty("position", "static", "important");
+        item.style.setProperty("display", "flex", "important");
+        item.style.setProperty("flex-direction", "column", "important");
+        item.style.setProperty("align-items", "center", "important");
+        item.style.setProperty("justify-content", "center", "important");
+        item.style.setProperty("height", "66px", "important");
+        item.style.setProperty("min-height", "66px", "important");
+        item.style.setProperty("padding", "8px 4px", "important");
+        item.style.setProperty("margin", "0", "important");
+        item.style.setProperty("width", "auto", "important");
+        item.style.setProperty("min-width", "0", "important");
+      });
+    };
+
+    applyMobileCommandBar();
+
+    window.addEventListener("resize", applyMobileCommandBar);
+    window.addEventListener("orientationchange", applyMobileCommandBar);
+
+    return () => {
+      window.removeEventListener("resize", applyMobileCommandBar);
+      window.removeEventListener("orientationchange", applyMobileCommandBar);
+    };
+  }, []);
+  /* MARITIMO MOBILE COMMAND BAR FORCE END */
 
   const t = copy[locale];
 

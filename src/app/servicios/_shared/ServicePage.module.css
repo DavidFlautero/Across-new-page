@@ -2564,28 +2564,3 @@
   filter: brightness(1.18) contrast(1.05) saturate(1.12) !important;
   transform: scale(1.035) !important;
 }
-
-/* ZZZ FINAL HERO DESKTOP TABLET 100VH NO MENU
-   Corrige solo medidas del hero en desktop/tablet.
-   No toca commandBar.
-   No toca imágenes.
-   No toca textos.
-*/
-@media (min-width: 701px) {
-  .hero {
-    height: 100vh !important;
-    min-height: 100vh !important;
-    max-height: none !important;
-  }
-
-  .heroInner,
-  .hero [data-hero-role="inner"],
-  .hero [class*="heroInner"] {
-    height: 100vh !important;
-    min-height: 100vh !important;
-    max-height: 100vh !important;
-    box-sizing: border-box !important;
-  }
-}
-/* END ZZZ FINAL HERO DESKTOP TABLET 100VH NO MENU */
-

@@ -9749,38 +9749,107 @@
 }
 /* END ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED */
 
-/* ZZZ FINAL HERO 100VH HIGH SPECIFICITY NO MENU
-   Corrige SOLO altura del hero.
-   Gana contra reglas viejas .page .hero con !important.
-   No toca commandBar.
-   No toca imagen.
-   No toca textos.
-*/
-@media (min-width: 701px) {
-  .page .hero.hero,
-  .page .hero.hero[data-service-name],
-  .page .hero.hero[data-sector-name],
-  .page .hero.hero[data-standard-service-hero="true"],
-  .page .hero.hero[data-standard-sector-hero="true"],
-  .page .hero.hero[data-service-hero],
-  .page .hero.hero[data-sector-hero],
-  .page .hero.hero[data-aereo-hero="true"] {
-    height: 100vh !important;
-    min-height: 100vh !important;
-    max-height: 100vh !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    box-sizing: border-box !important;
+/* =====================================================
+   MARITIMO MOBILE ONLY: TEXTO + BOTON + BARRA INFERIOR
+   No toca hero height.
+   No toca heroInner.
+   No toca imágenes.
+   No toca overlay.
+   ===================================================== */
+@media (max-width: 900px) {
+  .heroContent {
+    transform: translateY(-82px) !important;
   }
 
-  .page .hero.hero .heroInner.heroInner,
-  .page .hero.hero [data-hero-role="inner"],
-  .page .hero.hero [class*="heroInner"] {
-    height: 100vh !important;
-    min-height: 100vh !important;
-    max-height: 100vh !important;
-    box-sizing: border-box !important;
+  .heroContent h1 {
+    max-width: 292px !important;
+    font-size: 49.75px !important;
+    line-height: .95 !important;
+  }
+
+  .heroContent p {
+    max-width: 282px !important;
+    margin-top: 9.92px !important;
+    font-size: 14px !important;
+    line-height: 1.45 !important;
+  }
+
+  .actions {
+    width: 250px !important;
+    margin-top: 13.12px !important;
+  }
+
+  .actions a {
+    min-height: 34px !important;
+    height: 34px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .commandBar {
+    position: absolute !important;
+    top: auto !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: 66px !important;
+    min-height: 66px !important;
+    max-height: 66px !important;
+    z-index: 20 !important;
+  }
+
+  .commandItem {
+    height: 66px !important;
+    min-height: 66px !important;
+    max-height: 66px !important;
+    padding-top: 9.92px !important;
+    padding-bottom: 9.92px !important;
+  }
+
+  .commandItem small {
+    display: none !important;
   }
 }
-/* END ZZZ FINAL HERO 100VH HIGH SPECIFICITY NO MENU */
 
+/* =====================================================
+   MARITIMO ONLY - COMMAND BAR MOBILE BOTTOM
+   Solo baja la barra del hero.
+   No toca hero.
+   No toca heroInner.
+   No toca imagen.
+   No toca titulo/texto/boton.
+   ===================================================== */
+@media (max-width: 900px) {
+  .hero > .commandBar {
+    position: absolute !important;
+    top: auto !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: 66px !important;
+    min-height: 66px !important;
+    max-height: 66px !important;
+    margin: 0 !important;
+    transform: none !important;
+    z-index: 40 !important;
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+
+  .hero > .commandBar > .commandItem {
+    height: 66px !important;
+    min-height: 66px !important;
+    max-height: 66px !important;
+    padding: 9.92px 3.52px !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .hero > .commandBar > .commandItem small {
+    display: none !important;
+  }
+}

@@ -9205,39 +9205,3 @@
   }
 }
 /* END ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED */
-
-/* ZZZ FINAL HERO 100VH HIGH SPECIFICITY NO MENU
-   Corrige SOLO altura del hero.
-   Gana contra reglas viejas .page .hero con !important.
-   No toca commandBar.
-   No toca imagen.
-   No toca textos.
-*/
-@media (min-width: 701px) {
-  .page .hero.hero,
-  .page .hero.hero[data-service-name],
-  .page .hero.hero[data-sector-name],
-  .page .hero.hero[data-standard-service-hero="true"],
-  .page .hero.hero[data-standard-sector-hero="true"],
-  .page .hero.hero[data-service-hero],
-  .page .hero.hero[data-sector-hero],
-  .page .hero.hero[data-aereo-hero="true"] {
-    height: 100vh !important;
-    min-height: 100vh !important;
-    max-height: 100vh !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    box-sizing: border-box !important;
-  }
-
-  .page .hero.hero .heroInner.heroInner,
-  .page .hero.hero [data-hero-role="inner"],
-  .page .hero.hero [class*="heroInner"] {
-    height: 100vh !important;
-    min-height: 100vh !important;
-    max-height: 100vh !important;
-    box-sizing: border-box !important;
-  }
-}
-/* END ZZZ FINAL HERO 100VH HIGH SPECIFICITY NO MENU */
-

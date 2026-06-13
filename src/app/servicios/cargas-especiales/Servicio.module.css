@@ -6773,28 +6773,3 @@
   }
 }
 /* END ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL */
-
-/* ZZZ FINAL HERO DESKTOP TABLET 100VH NO MENU
-   Corrige solo medidas del hero en desktop/tablet.
-   No toca commandBar.
-   No toca imágenes.
-   No toca textos.
-*/
-@media (min-width: 701px) {
-  .hero {
-    height: 100vh !important;
-    min-height: 100vh !important;
-    max-height: none !important;
-  }
-
-  .heroInner,
-  .hero [data-hero-role="inner"],
-  .hero [class*="heroInner"] {
-    height: 100vh !important;
-    min-height: 100vh !important;
-    max-height: 100vh !important;
-    box-sizing: border-box !important;
-  }
-}
-/* END ZZZ FINAL HERO DESKTOP TABLET 100VH NO MENU */
-
