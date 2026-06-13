@@ -844,7 +844,8 @@ export default function EnergiasRenovablesPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={`${styles.hero} acrossPageHero`} data-sector-hero="true" data-standard-service-hero="true" data-sector-name="energias-renovables">
+        <section className={`${styles.hero} acrossPageHero`} data-sector-hero="true" data-standard-service-hero="true" data-sector-name="energias-renovables"
+      >
           <Image
             src="/images/sectores/energiasrenovables.png"
             alt={t.heroTitle}
@@ -867,7 +868,8 @@ export default function EnergiasRenovablesPage() {
 
           <div data-hero-role="overlay" className={styles.heroOverlay} />
 
-          <div data-hero-role="inner" className={styles.heroInner}>
+          <div data-hero-role="inner" className={styles.heroInner}
+      >
             <div data-hero-role="content" className={styles.heroContent}>
               <span data-hero-role="eyebrow" className={styles.eyebrow}>{t.heroEyebrow}</span>
               <h1 data-hero-role="title">{t.heroTitle}</h1>

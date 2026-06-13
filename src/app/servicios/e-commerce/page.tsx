@@ -788,7 +788,8 @@ export default function EcommercePage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={`${styles.hero} acrossPageHero`} data-service-hero="compact" data-standard-service-hero="true" data-service-name="ecommerce">
+        <section className={`${styles.hero} acrossPageHero`} data-service-hero="compact" data-standard-service-hero="true" data-service-name="ecommerce"
+      >
           <Image
             src="/images/heroecommerce.png"
             alt={t.heroTitle}
@@ -811,7 +812,8 @@ export default function EcommercePage() {
 
           <div data-hero-role="overlay" className={styles.heroOverlay} />
 
-          <div data-hero-role="inner" className={styles.heroInner}>
+          <div data-hero-role="inner" className={styles.heroInner}
+      >
             <div data-hero-role="content" className={styles.heroContent}>
               <span data-hero-role="eyebrow" className={styles.eyebrow}>{t.heroEyebrow}</span>
               <h1 data-hero-role="title">{t.heroTitle}</h1>

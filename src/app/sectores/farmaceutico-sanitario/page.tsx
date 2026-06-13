@@ -788,7 +788,8 @@ export default function FarmaceuticoSanitarioPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={`${styles.hero} acrossPageHero`} data-sector-hero="true" data-standard-service-hero="true" data-sector-name="farmaceutico-sanitario">
+        <section className={`${styles.hero} acrossPageHero`} data-sector-hero="true" data-standard-service-hero="true" data-sector-name="farmaceutico-sanitario"
+      >
           <Image
             src="/images/sectores/herofarmaseutico.png"
             alt={t.heroTitle}
@@ -811,7 +812,8 @@ export default function FarmaceuticoSanitarioPage() {
 
           <div data-hero-role="overlay" className={styles.heroOverlay} />
 
-          <div data-hero-role="inner" className={styles.heroInner}>
+          <div data-hero-role="inner" className={styles.heroInner}
+      >
             <div data-hero-role="content" className={styles.heroContent}>
               <span data-hero-role="eyebrow" className={styles.eyebrow}>{t.heroEyebrow}</span>
               <h1 data-hero-role="title">{t.heroTitle}</h1>

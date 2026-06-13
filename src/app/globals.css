@@ -4831,3 +4831,86 @@ main [class*="_process"] a {
 }
 
 /* END ACROSS LIGHT SECTIONS DARK TEXT FIX */
+
+/* =====================================================
+   GLOBAL HERO HEIGHT FIX - SERVICIOS + SECTORES
+   Solo corrige altura inicial del hero.
+   No toca commandBar.
+   No toca menu.
+   No toca imagenes.
+   Evita el salto de 500px a 100vh.
+   ===================================================== */
+@media (max-width: 1100px) {
+  section[data-service-name],
+  section[data-sector-name],
+  section[data-standard-service-hero="true"],
+  section[data-standard-sector-hero="true"],
+  section[data-aereo-hero="true"],
+  section[data-service-hero],
+  section[data-sector-hero] {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    max-height: none !important;
+  }
+
+  section[data-service-name] [data-hero-role="inner"],
+  section[data-service-name] [class*="heroInner"],
+  section[data-sector-name] [data-hero-role="inner"],
+  section[data-sector-name] [class*="heroInner"],
+  section[data-standard-service-hero="true"] [data-hero-role="inner"],
+  section[data-standard-service-hero="true"] [class*="heroInner"],
+  section[data-standard-sector-hero="true"] [data-hero-role="inner"],
+  section[data-standard-sector-hero="true"] [class*="heroInner"],
+  section[data-aereo-hero="true"] [data-hero-role="inner"],
+  section[data-aereo-hero="true"] [class*="heroInner"],
+  section[data-service-hero] [data-hero-role="inner"],
+  section[data-service-hero] [class*="heroInner"],
+  section[data-sector-hero] [data-hero-role="inner"],
+  section[data-sector-hero] [class*="heroInner"] {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    max-height: 100vh !important;
+  }
+}
+/* END GLOBAL HERO HEIGHT FIX - SERVICIOS + SECTORES */
+
+/* HARD FIX HERO 100VH SPECIFICITY - SERVICIOS SECTORES
+   Solo altura del hero y del inner.
+   No toca commandBar.
+   No toca menú.
+   No toca imágenes.
+*/
+@media (max-width: 1100px) {
+  html body main[class] section[data-service-name],
+  html body main[class] section[data-sector-name],
+  html body main[class] section[data-standard-service-hero="true"],
+  html body main[class] section[data-standard-sector-hero="true"],
+  html body main[class] section[data-service-hero],
+  html body main[class] section[data-sector-hero],
+  html body main[class] section[data-aereo-hero="true"] {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    max-height: none !important;
+  }
+
+  html body main[class] section[data-service-name] [data-hero-role="inner"],
+  html body main[class] section[data-service-name] [class*="heroInner"],
+  html body main[class] section[data-sector-name] [data-hero-role="inner"],
+  html body main[class] section[data-sector-name] [class*="heroInner"],
+  html body main[class] section[data-standard-service-hero="true"] [data-hero-role="inner"],
+  html body main[class] section[data-standard-service-hero="true"] [class*="heroInner"],
+  html body main[class] section[data-standard-sector-hero="true"] [data-hero-role="inner"],
+  html body main[class] section[data-standard-sector-hero="true"] [class*="heroInner"],
+  html body main[class] section[data-service-hero] [data-hero-role="inner"],
+  html body main[class] section[data-service-hero] [class*="heroInner"],
+  html body main[class] section[data-sector-hero] [data-hero-role="inner"],
+  html body main[class] section[data-sector-hero] [class*="heroInner"],
+  html body main[class] section[data-aereo-hero="true"] [data-hero-role="inner"],
+  html body main[class] section[data-aereo-hero="true"] [class*="heroInner"] {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    max-height: 100vh !important;
+  }
+}
+/* END HARD FIX HERO 100VH SPECIFICITY - SERVICIOS SECTORES */
+

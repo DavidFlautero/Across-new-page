@@ -559,7 +559,8 @@ export default function TransporteAereoPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={styles.hero} data-aereo-hero="true" data-service-hero-home="true">
+        <section className={styles.hero} data-aereo-hero="true" data-service-hero-home="true"
+      >
           <Image
             src="/images/hero/cargaAereahero.png"
             alt={t.heroTitle}
@@ -580,7 +581,8 @@ export default function TransporteAereoPage() {
 
           <div className={styles.heroOverlay} />
 
-          <div className={styles.heroInner}>
+          <div className={styles.heroInner}
+      >
             <div className={styles.heroContent}>
               <span className={styles.eyebrow}>{t.heroEyebrow}</span>
               <h1 className={styles.title}>{t.heroTitle}</h1>

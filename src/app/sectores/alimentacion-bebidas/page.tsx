@@ -788,7 +788,8 @@ export default function AlimentacionBebidasPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={`${styles.hero} acrossPageHero`} data-sector-hero="true" data-standard-service-hero="true" data-sector-name="alimentacion-bebidas">
+        <section className={`${styles.hero} acrossPageHero`} data-sector-hero="true" data-standard-service-hero="true" data-sector-name="alimentacion-bebidas"
+      >
           <Image
             src="/images/sectores/alimentosybebidas.png"
             alt={t.heroTitle}
@@ -811,7 +812,8 @@ export default function AlimentacionBebidasPage() {
 
           <div data-hero-role="overlay" className={styles.heroOverlay} />
 
-          <div data-hero-role="inner" className={styles.heroInner}>
+          <div data-hero-role="inner" className={styles.heroInner}
+      >
             <div data-hero-role="content" className={styles.heroContent}>
               <span data-hero-role="eyebrow" className={styles.eyebrow}>{t.heroEyebrow}</span>
               <h1 data-hero-role="title">{t.heroTitle}</h1>

@@ -788,7 +788,8 @@ export default function TecnologicoPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={`${styles.hero} acrossPageHero`} data-sector-hero="true" data-standard-service-hero="true" data-sector-name="tecnologico">
+        <section className={`${styles.hero} acrossPageHero`} data-sector-hero="true" data-standard-service-hero="true" data-sector-name="tecnologico"
+      >
           <Image
             src="/images/sectores/transporte-logistica-tecnologia.png"
             alt={t.heroTitle}
@@ -811,7 +812,8 @@ export default function TecnologicoPage() {
 
           <div data-hero-role="overlay" className={styles.heroOverlay} />
 
-          <div data-hero-role="inner" className={styles.heroInner}>
+          <div data-hero-role="inner" className={styles.heroInner}
+      >
             <div data-hero-role="content" className={styles.heroContent}>
               <span data-hero-role="eyebrow" className={styles.eyebrow}>{t.heroEyebrow}</span>
               <h1 data-hero-role="title">{t.heroTitle}</h1>
