@@ -1,0 +1,1410 @@
+========================================
+1) CSS IMPORTADO POR CADA SERVICIO
+========================================
+src/app/servicios/aduanas/page.tsx:11:import styles from "./Aduanas.module.css";
+src/app/servicios/almacen-distribucion/page.tsx:11:import styles from "./AlmacenDistribucion.module.css";
+src/app/servicios/cargas-especiales/page.tsx:11:import styles from "./CargasEspeciales.module.css";
+src/app/servicios/e-commerce/page.tsx:11:import styles from "./ECommerce.module.css";
+src/app/servicios/temperatura-controlada/page.tsx:11:import styles from "./TemperaturaControlada.module.css";
+src/app/servicios/transporte-aereo/page.tsx:11:import styles from "./TransporteAereo.module.css";
+src/app/servicios/transporte-maritimo/page.tsx:11:import styles from "./Servicio.module.css";
+src/app/servicios/transporte-terrestre/page.tsx:11:import styles from "./Servicio.module.css";
+
+========================================
+2) ESTRUCTURA JSX HERO POR SERVICIO
+========================================
+src/app/servicios/aduanas/page.tsx:791:        <section className={`${styles.hero} acrossPageHero`} data-service-hero="compact" data-standard-service-hero="true" data-service-name="aduanas"
+src/app/servicios/aduanas/page.tsx:815:          <div data-hero-role="inner" className={styles.heroInner}
+src/app/servicios/aduanas/page.tsx:817:            <div data-hero-role="content" className={styles.heroContent}>
+src/app/servicios/aduanas/page.tsx:828:            <div data-hero-role="card" className={styles.operationCard}>
+src/app/servicios/aduanas/page.tsx:846:          <div className={styles.commandBar}>
+src/app/servicios/aduanas/page.tsx:851:          <div key={title} className={styles.commandItem}>
+src/app/servicios/almacen-distribucion/page.tsx:791:        <section className={`${styles.hero} acrossPageHero`} data-service-hero="compact" data-standard-service-hero="true" data-service-name="almacen"
+src/app/servicios/almacen-distribucion/page.tsx:815:          <div data-hero-role="inner" className={styles.heroInner}
+src/app/servicios/almacen-distribucion/page.tsx:817:            <div data-hero-role="content" className={styles.heroContent}>
+src/app/servicios/almacen-distribucion/page.tsx:828:            <div data-hero-role="card" className={styles.operationCard}>
+src/app/servicios/almacen-distribucion/page.tsx:846:          <div className={styles.commandBar}>
+src/app/servicios/almacen-distribucion/page.tsx:851:          <div key={title} className={styles.commandItem}>
+src/app/servicios/cargas-especiales/page.tsx:562:        <section className={`${styles.hero} acrossPageHero`} data-service-hero="compact" data-standard-service-hero="true" data-service-name="cargas"
+src/app/servicios/cargas-especiales/page.tsx:586:          <div data-hero-role="inner" className={styles.heroInner}
+src/app/servicios/cargas-especiales/page.tsx:588:            <div data-hero-role="content" className={styles.heroContent}>
+src/app/servicios/cargas-especiales/page.tsx:599:            <div data-hero-role="card" className={styles.operationCard}>
+src/app/servicios/cargas-especiales/page.tsx:617:          <div className={styles.commandBar}>
+src/app/servicios/cargas-especiales/page.tsx:622:          <div key={title} className={styles.commandItem}>
+src/app/servicios/e-commerce/page.tsx:791:        <section className={`${styles.hero} acrossPageHero`} data-service-hero="compact" data-standard-service-hero="true" data-service-name="ecommerce"
+src/app/servicios/e-commerce/page.tsx:815:          <div data-hero-role="inner" className={styles.heroInner}
+src/app/servicios/e-commerce/page.tsx:817:            <div data-hero-role="content" className={styles.heroContent}>
+src/app/servicios/e-commerce/page.tsx:828:            <div data-hero-role="card" className={styles.operationCard}>
+src/app/servicios/e-commerce/page.tsx:846:          <div className={styles.commandBar}>
+src/app/servicios/e-commerce/page.tsx:851:          <div key={title} className={styles.commandItem}>
+src/app/servicios/temperatura-controlada/page.tsx:791:        <section className={`${styles.hero} acrossPageHero`} data-service-hero="compact" data-standard-service-hero="true" data-service-name="temperatura"
+src/app/servicios/temperatura-controlada/page.tsx:815:          <div data-hero-role="inner" className={styles.heroInner}
+src/app/servicios/temperatura-controlada/page.tsx:817:            <div data-hero-role="content" className={styles.heroContent}>
+src/app/servicios/temperatura-controlada/page.tsx:828:            <div data-hero-role="card" className={styles.operationCard}>
+src/app/servicios/temperatura-controlada/page.tsx:846:          <div className={styles.commandBar}>
+src/app/servicios/temperatura-controlada/page.tsx:851:          <div key={title} className={styles.commandItem}>
+src/app/servicios/transporte-aereo/page.tsx:562:        <section className={styles.hero} data-aereo-hero="true" data-service-hero-home="true"
+src/app/servicios/transporte-aereo/page.tsx:584:          <div className={styles.heroInner}
+src/app/servicios/transporte-aereo/page.tsx:586:            <div className={styles.heroContent}>
+src/app/servicios/transporte-aereo/page.tsx:597:            <div className={styles.operationCard}>
+src/app/servicios/transporte-aereo/page.tsx:614:          <div className={styles.commandBar} data-aereo-trust="true">
+src/app/servicios/transporte-aereo/page.tsx:619:                <div key={title} className={styles.commandItem}>
+src/app/servicios/transporte-maritimo/page.tsx:563:        <section className={`${styles.hero} acrossPageHero`} data-service-hero="compact" data-standard-service-hero="true" data-service-name="maritimo"
+src/app/servicios/transporte-maritimo/page.tsx:587:          <div data-hero-role="inner" className={styles.heroInner}
+src/app/servicios/transporte-maritimo/page.tsx:589:            <div data-hero-role="content" className={styles.heroContent}>
+src/app/servicios/transporte-maritimo/page.tsx:603:          <div className={styles.commandBar}>
+src/app/servicios/transporte-maritimo/page.tsx:608:          <div key={title} className={styles.commandItem}>
+src/app/servicios/transporte-terrestre/page.tsx:562:        <section className={`${styles.hero} acrossPageHero`} data-service-hero="compact" data-standard-service-hero="true" data-service-name="terrestre"
+src/app/servicios/transporte-terrestre/page.tsx:586:          <div data-hero-role="inner" className={styles.heroInner}
+src/app/servicios/transporte-terrestre/page.tsx:588:            <div data-hero-role="content" className={styles.heroContent}>
+src/app/servicios/transporte-terrestre/page.tsx:599:            <div data-hero-role="card" className={styles.operationCard}>
+src/app/servicios/transporte-terrestre/page.tsx:617:          <div className={styles.commandBar}>
+src/app/servicios/transporte-terrestre/page.tsx:622:          <div key={title} className={styles.commandItem}>
+
+========================================
+3) AEREO CSS HERO / BARRA / MOBILE / DESKTOP
+========================================
+FILE: src/app/servicios/transporte-aereo/TransporteAereo.module.css
+4:  overflow: hidden;
+7:.hero {
+8:  position: relative;
+9:  min-height: 78vh;
+10:  display: flex;
+12:  padding: 8.5rem 6vw 5.5rem;
+16:  overflow: hidden;
+19:.heroImage {
+24:.heroImageMobile {
+25:  display: none;
+28:.heroOverlay {
+29:  position: absolute;
+37:.hero::after {
+39:  position: absolute;
+42:  bottom: -1px;
+43:  height: 90px;
+48:.heroInner {
+50:  margin: 0 auto;
+51:  display: grid;
+52:  grid-template-columns: minmax(0, 1fr) 340px;
+57:.heroContent {
+58:  max-width: 760px;
+62:  display: inline-flex;
+63:  margin-bottom: 1rem;
+65:  font-size: .78rem;
+68:  text-transform: uppercase;
+71:.heroContent h1 {
+72:  margin: 0;
+73:  max-width: 760px;
+74:  font-size: clamp(2.6rem, 5.5vw, 5.6rem);
+75:  line-height: .92;
+80:.heroContent p {
+81:  max-width: 650px;
+82:  margin: 1.45rem 0 0;
+84:  font-size: clamp(1rem, 1.3vw, 1.14rem);
+85:  line-height: 1.72;
+88:.actions,
+90:  display: flex;
+93:  margin-top: 2rem;
+96:.actions a,
+99:  display: inline-flex;
+102:  min-height: 48px;
+103:  padding: 0 1.25rem;
+105:  text-transform: uppercase;
+106:  font-size: .78rem;
+111:.actions a:first-child,
+119:.actions a:first-child::after,
+123:  margin-left: .7rem;
+126:.actions a:last-child,
+134:.operationCard {
+137:  padding: 2rem;
+144:.operationCard > span {
+145:  display: inline-flex;
+146:  margin-bottom: 1rem;
+148:  font-size: .7rem;
+151:  text-transform: uppercase;
+154:.operationCard > span::before {
+156:  margin-right: .65rem;
+160:.operationCard strong {
+161:  display: block;
+162:  font-size: 1.75rem;
+163:  line-height: 1;
+167:.operationCard p {
+168:  margin: 1.35rem 0;
+173:.operationCard div {
+174:  display: flex;
+177:  margin-top: .7rem;
+180:.operationCard small {
+185:.operationCard b,
+186:.operationCard em {
+187:  display: inline-flex;
+189:  min-height: 24px;
+190:  padding: 0 .65rem;
+192:  font-size: .72rem;
+197:.operationCard b {
+202:.operationCard em {
+208:  display: grid;
+209:  grid-template-columns: repeat(4, 1fr);
+212:  border-top: 1px solid rgba(255, 255, 255, .08);
+213:  border-bottom: 1px solid rgba(255, 255, 255, .08);
+217:  min-height: 96px;
+218:  display: flex;
+221:  padding: 1.3rem 6vw;
+230:  display: inline-grid;
+233:  height: 36px;
+243:  display: block;
+247:  text-transform: uppercase;
+248:  font-size: .78rem;
+253:  margin-top: .22rem;
+255:  font-size: .82rem;
+260:  margin: 5rem auto;
+261:  display: grid;
+262:  grid-template-columns: .88fr 1.12fr;
+271:  margin: 0;
+273:  font-size: clamp(2rem, 3.5vw, 3.7rem);
+274:  line-height: 1;
+280:  margin: 1.35rem 0 0;
+282:  font-size: 1rem;
+283:  line-height: 1.72;
+287:  margin-top: 1.8rem;
+291:  display: grid;
+292:  grid-template-columns: repeat(4, 1fr);
+298:  min-height: 220px;
+299:  padding: 1.6rem 1.25rem;
+307:  display: inline-grid;
+310:  height: 48px;
+311:  margin-bottom: 1.1rem;
+316:  font-size: 1.3rem;
+324:  margin: 0;
+326:  font-size: 1rem;
+327:  line-height: 1.15;
+336:  margin: .8rem 0 0;
+338:  font-size: .92rem;
+339:  line-height: 1.58;
+346:  margin: 5.2rem auto;
+350:  max-width: 780px;
+351:  margin: 0 auto 2.2rem;
+356:  display: grid;
+357:  grid-template-columns: repeat(6, 1fr);
+364:  min-height: 260px;
+365:  padding: 1.7rem 1.25rem;
+375:  display: grid;
+376:  grid-template-columns: repeat(6, 1fr);
+381:  min-height: 210px;
+382:  padding: 1.5rem 1rem;
+392:  padding-top: 1rem;
+396:  display: grid;
+397:  grid-template-columns: repeat(6, 1fr);
+399:  position: relative;
+404:  position: absolute;
+405:  top: 28px;
+408:  height: 1px;
+413:  position: relative;
+414:  min-height: 170px;
+415:  padding: 0 1rem;
+420:  position: relative;
+422:  display: inline-grid;
+425:  height: 56px;
+426:  margin-bottom: 1rem;
+436:  min-height: 360px;
+437:  display: grid;
+438:  grid-template-columns: .48fr .52fr;
+441:  overflow: hidden;
+445:  position: relative;
+446:  min-height: 360px;
+455:  padding: clamp(3rem, 5vw, 5rem) 6vw;
+461:  max-width: 680px;
+465:  max-width: 680px;
+466:  margin: 1.25rem 0 0;
+468:  font-size: 1rem;
+469:  line-height: 1.72;
+473:  display: grid;
+474:  grid-template-columns: repeat(4, 1fr);
+476:  margin-top: 2.4rem;
+480:  padding: 0 1.2rem;
+485:  padding-left: 0;
+493:  display: block;
+495:  text-transform: uppercase;
+496:  font-size: .86rem;
+497:  line-height: 1.15;
+502:  display: block;
+503:  margin-top: .7rem;
+505:  font-size: .82rem;
+506:  line-height: 1.45;
+512:  min-height: 360px;
+513:  display: grid;
+514:  grid-template-columns: .52fr .48fr;
+519:  padding: clamp(3rem, 5vw, 5rem) 6vw;
+524:  max-width: 620px;
+525:  margin: 1.1rem 0 0;
+527:  line-height: 1.65;
+537:  position: relative;
+538:  min-height: 360px;
+539:  overflow: hidden;
+547:@media (max-width: 1180px) {
+548:  .heroInner {
+549:    grid-template-columns: 1fr;
+552:  .operationCard {
+557:    grid-template-columns: 1fr;
+562:    grid-template-columns: repeat(2, 1fr);
+568:    grid-template-columns: repeat(3, 1fr);
+583:    display: none;
+587:    grid-template-columns: repeat(2, 1fr);
+593:    padding: 0;
+597:@media (max-width: 900px) {
+598:  .hero {
+599:    min-height: 74vh;
+600:    padding: 7rem 22px 4rem;
+603:  .heroImageDesktop {
+604:    display: none;
+607:  .heroImageMobile {
+608:    display: block;
+611:  .heroOverlay {
+616:  .operationCard {
+617:    display: none;
+621:    grid-template-columns: 1fr 1fr;
+625:    min-height: 88px;
+626:    padding: 1.1rem 20px;
+634:    margin: 3.7rem auto;
+643:    grid-template-columns: 1fr;
+651:    border-bottom: 1px solid rgba(8, 11, 16, .1);
+656:    min-height: auto;
+657:    padding: 1.6rem 1.2rem;
+661:    min-height: auto;
+662:    padding: 0;
+667:    min-height: 260px;
+675:@media (max-width: 560px) {
+676:  .heroContent h1 {
+677:    font-size: clamp(2.25rem, 13vw, 3.55rem);
+680:  .heroContent p {
+681:    font-size: .96rem;
+684:  .actions,
+689:  .actions a,
+696:    grid-template-columns: 1fr;
+701:    border-bottom: 1px solid rgba(255, 255, 255, .12);
+708:    font-size: clamp(2rem, 10vw, 3rem);
+712:    grid-template-columns: 1fr;
+723:  height: 100%;
+724:  display: block;
+738:  display: inline-grid;
+741:  height: 34px;
+742:  margin-bottom: .8rem;
+747:  display: flex;
+753:  margin-bottom: .8rem;
+756:/* Desktop: que los 6 servicios respiren mejor */
+757:@media (min-width: 1181px) {
+759:    min-height: 245px;
+763:    min-height: 205px;
+768:    max-width: 150px;
+769:    margin-left: auto;
+770:    margin-right: auto;
+775:    max-width: 170px;
+776:    margin-left: auto;
+777:    margin-right: auto;
+781:/* Laptop: no apretar 6 columnas */
+782:@media (max-width: 1180px) and (min-width: 901px) {
+786:    grid-template-columns: repeat(3, 1fr);
+791:    border-bottom: 1px solid rgba(8, 11, 16, .1);
+796:@media (max-width: 430px) {
+800:    height: 28px;
+801:    margin: 0 0 .45rem;
+806:    display: grid;
+807:    grid-template-columns: 44px 1fr;
+816:@media (min-width: 901px) {
+817:  .hero {
+818:    min-height: 640px !important;
+819:    height: calc(100svh - 34px) !important;
+820:    max-height: 760px !important;
+821:    padding: 7.2rem 6vw 3.8rem !important;
+823:    overflow: hidden !important;
+827:  .heroImage {
+829:    object-position: center 48% !important;
+833:  .heroOverlay {
+863:  .hero::before {
+865:    position: absolute !important;
+867:    top: 18% !important;
+869:    height: min(44vw, 620px) !important;
+880:  .hero::after {
+881:    height: 120px !important;
+891:  .heroInner {
+893:    grid-template-columns: minmax(480px, 610px) 1fr !important;
+898:  .heroContent {
+899:    max-width: 610px !important;
+904:    margin-bottom: 1rem !important;
+905:    font-size: .76rem !important;
+909:  .heroContent h1 {
+910:    max-width: 600px !important;
+911:    font-size: clamp(3.45rem, 4.55vw, 5.6rem) !important;
+912:    line-height: .9 !important;
+917:  .heroContent h1::after {
+922:  .heroContent p {
+923:    max-width: 560px !important;
+924:    margin-top: 1.35rem !important;
+925:    font-size: clamp(1rem, 1.05vw, 1.13rem) !important;
+926:    line-height: 1.62 !important;
+930:  .actions {
+931:    margin-top: 1.8rem !important;
+935:  .actions a {
+936:    min-height: 48px !important;
+937:    padding: 0 1.5rem !important;
+938:    font-size: .76rem !important;
+941:  /* Sacamos la tarjeta Madrid → Bogotá en desktop: ensuciaba el hero */
+942:  .operationCard {
+943:    display: none !important;
+947:/* Desktop bajo / notebook: que entre completo sin sentirse aplastado */
+948:@media (min-width: 901px) and (max-height: 760px) {
+949:  .hero {
+950:    min-height: 590px !important;
+951:    height: calc(100svh - 20px) !important;
+952:    padding-top: 6.2rem !important;
+953:    padding-bottom: 3rem !important;
+956:  .heroContent h1 {
+957:    font-size: clamp(3.05rem, 4.15vw, 4.85rem) !important;
+958:    line-height: .9 !important;
+961:  .heroContent p {
+962:    max-width: 530px !important;
+963:    line-height: 1.52 !important;
+966:  .actions {
+967:    margin-top: 1.35rem !important;
+971:/* Desktop ancho: más vida al avión, menos sombra plana */
+972:@media (min-width: 1400px) {
+973:  .heroImage {
+974:    object-position: center 46% !important;
+977:  .heroOverlay {
+1010:@media (min-width: 901px) {
+1011:  .hero {
+1012:    min-height: 620px !important;
+1013:    height: calc(100svh - 24px) !important;
+1014:    max-height: 760px !important;
+1019:  .hero::after {
+1020:    display: none !important;
+1024:  .heroOverlay {
+1048:  .heroImage {
+1050:    object-position: center 48% !important;
+1067:  display: none !important;
+1085:/* Desktop limpio: primer pantallazo fuerte, sin título monstruoso */
+1086:@media (min-width: 901px) {
+1087:  .hero {
+1088:    min-height: 620px !important;
+1089:    height: calc(100svh - 20px) !important;
+1090:    max-height: 740px !important;
+1091:    padding: 6.8rem 6vw 3.4rem !important;
+1095:  .heroContent {
+1096:    max-width: 620px !important;
+1099:  .heroContent h1 {
+1100:    max-width: 620px !important;
+1101:    font-size: clamp(3.35rem, 4.6vw, 5.7rem) !important;
+1102:    line-height: .9 !important;
+1106:  .heroContent p {
+1107:    max-width: 540px !important;
+1108:    font-size: clamp(.98rem, 1vw, 1.08rem) !important;
+1109:    line-height: 1.6 !important;
+1112:  .heroImage {
+1113:    object-position: center 48% !important;
+1117:  .heroOverlay {
+1124:  .operationCard {
+1125:    display: none !important;
+1130:@media (max-width: 900px) {
+1131:  .hero {
+1132:    min-height: 560px !important;
+1133:    height: auto !important;
+1134:    padding: 5.8rem 24px 3.2rem !important;
+1138:  .heroInner {
+1139:    display: block !important;
+1142:  .heroContent {
+1143:    max-width: 100% !important;
+1147:    font-size: .66rem !important;
+1149:    margin-bottom: .8rem !important;
+1152:  .heroContent h1 {
+1153:    max-width: 440px !important;
+1154:    font-size: clamp(2.25rem, 9vw, 3.6rem) !important;
+1155:    line-height: .95 !important;
+1159:  .heroContent p {
+1160:    max-width: 430px !important;
+1161:    margin-top: 1rem !important;
+1162:    font-size: .95rem !important;
+1163:    line-height: 1.55 !important;
+1166:  .actions {
+1167:    display: grid !important;
+1168:    grid-template-columns: 1fr !important;
+1169:    max-width: 360px !important;
+1171:    margin-top: 1.35rem !important;
+1174:  .actions a {
+1176:    min-height: 46px !important;
+1180:  .heroOverlay {
+1186:  .operationCard {
+1187:    display: none !important;
+1192:@media (max-width: 430px) {
+1193:  .hero {
+1194:    min-height: 520px !important;
+1195:    padding: 5.4rem 18px 2.6rem !important;
+1198:  .heroContent h1 {
+1199:    font-size: clamp(2rem, 10.5vw, 2.8rem) !important;
+1200:    line-height: .96 !important;
+1203:  .heroContent p {
+1204:    font-size: .9rem !important;
+1205:    line-height: 1.5 !important;
+1208:  .actions {
+1209:    max-width: 100% !important;
+1213:    grid-template-columns: 1fr 1fr !important;
+1217:    padding: .85rem 14px !important;
+1221:    font-size: .68rem !important;
+1225:    font-size: .72rem !important;
+1234:  margin-top: 2.4rem !important;
+1235:  margin-bottom: 4rem !important;
+1238:/* En desktop grande, que no quede ese hueco gigante */
+1239:@media (min-width: 901px) {
+1241:    margin-top: 2.2rem !important;
+1245:    font-size: clamp(2.7rem, 3.6vw, 4.6rem) !important;
+1246:    line-height: .96 !important;
+1250:    max-width: 650px !important;
+1251:    margin-top: 1.15rem !important;
+1255:    min-height: 190px !important;
+1256:    padding-top: 1.35rem !important;
+1257:    padding-bottom: 1.35rem !important;
+1262:@media (max-width: 900px) {
+1264:    margin-top: 2rem !important;
+1265:    margin-bottom: 3rem !important;
+1285:  max-width: none !important;
+1286:  margin: 4.8rem 50% 0 !important;
+1287:  transform: translateX(-50%) !important;
+1288:  padding: clamp(4rem, 6vw, 6rem) max(24px, calc((100vw - 1180px) / 2)) !important;
+1297:  margin: 0 0 2.4rem !important;
+1298:  max-width: 740px !important;
+1303:  max-width: 720px !important;
+1312:  display: grid !important;
+1313:  grid-template-columns: repeat(3, 1fr) !important;
+1321:  min-height: 190px !important;
+1322:  padding: 1.6rem !important;
+1332:  height: 46px !important;
+1333:  margin-bottom: 1rem !important;
+1341:  height: 25px !important;
+1346:  max-width: none !important;
+1347:  margin: 0 !important;
+1348:  font-size: 1.05rem !important;
+1353:  max-width: 260px !important;
+1354:  margin: .75rem 0 0 !important;
+1359:  margin-top: 0 !important;
+1360:  padding-top: 4.8rem !important;
+1399:@media (max-width: 1180px) {
+
+========================================
+4) MARITIMO CSS HERO / BARRA / MOBILE / DESKTOP
+========================================
+FILE: src/app/servicios/transporte-maritimo/Servicio.module.css
+4:  overflow: hidden;
+7:.hero {
+8:  position: relative;
+9:  min-height: 78vh;
+10:  display: flex;
+12:  padding: 8.5rem 6vw 5.5rem;
+16:  overflow: hidden;
+19:.heroImage {
+24:.heroImageMobile {
+25:  display: none;
+28:.heroOverlay {
+29:  position: absolute;
+37:.hero::after {
+39:  position: absolute;
+42:  bottom: -1px;
+43:  height: 90px;
+48:.heroInner {
+50:  margin: 0 auto;
+51:  display: grid;
+52:  grid-template-columns: minmax(0, 1fr) 340px;
+57:.heroContent {
+58:  max-width: 760px;
+62:  display: inline-flex;
+63:  margin-bottom: 1rem;
+65:  font-size: .78rem;
+68:  text-transform: uppercase;
+71:.heroContent h1 {
+72:  margin: 0;
+73:  max-width: 760px;
+74:  font-size: clamp(2.6rem, 5.5vw, 5.6rem);
+75:  line-height: .92;
+80:.heroContent p {
+81:  max-width: 650px;
+82:  margin: 1.45rem 0 0;
+84:  font-size: clamp(1rem, 1.3vw, 1.14rem);
+85:  line-height: 1.72;
+88:.actions,
+90:  display: flex;
+93:  margin-top: 2rem;
+96:.actions a,
+99:  display: inline-flex;
+102:  min-height: 48px;
+103:  padding: 0 1.25rem;
+105:  text-transform: uppercase;
+106:  font-size: .78rem;
+111:.actions a:first-child,
+119:.actions a:first-child::after,
+123:  margin-left: .7rem;
+126:.actions a:last-child,
+134:.operationCard {
+137:  padding: 2rem;
+144:.operationCard > span {
+145:  display: inline-flex;
+146:  margin-bottom: 1rem;
+148:  font-size: .7rem;
+151:  text-transform: uppercase;
+154:.operationCard > span::before {
+156:  margin-right: .65rem;
+160:.operationCard strong {
+161:  display: block;
+162:  font-size: 1.75rem;
+163:  line-height: 1;
+167:.operationCard p {
+168:  margin: 1.35rem 0;
+173:.operationCard div {
+174:  display: flex;
+177:  margin-top: .7rem;
+180:.operationCard small {
+185:.operationCard b,
+186:.operationCard em {
+187:  display: inline-flex;
+189:  min-height: 24px;
+190:  padding: 0 .65rem;
+192:  font-size: .72rem;
+197:.operationCard b {
+202:.operationCard em {
+208:  display: grid;
+209:  grid-template-columns: repeat(4, 1fr);
+212:  border-top: 1px solid rgba(255, 255, 255, .08);
+213:  border-bottom: 1px solid rgba(255, 255, 255, .08);
+217:  min-height: 96px;
+218:  display: flex;
+221:  padding: 1.3rem 6vw;
+230:  display: inline-grid;
+233:  height: 36px;
+243:  display: block;
+247:  text-transform: uppercase;
+248:  font-size: .78rem;
+253:  margin-top: .22rem;
+255:  font-size: .82rem;
+260:  margin: 5rem auto;
+261:  display: grid;
+262:  grid-template-columns: .88fr 1.12fr;
+271:  margin: 0;
+273:  font-size: clamp(2rem, 3.5vw, 3.7rem);
+274:  line-height: 1;
+280:  margin: 1.35rem 0 0;
+282:  font-size: 1rem;
+283:  line-height: 1.72;
+287:  margin-top: 1.8rem;
+291:  display: grid;
+292:  grid-template-columns: repeat(4, 1fr);
+298:  min-height: 220px;
+299:  padding: 1.6rem 1.25rem;
+307:  display: inline-grid;
+310:  height: 48px;
+311:  margin-bottom: 1.1rem;
+316:  font-size: 1.3rem;
+324:  margin: 0;
+326:  font-size: 1rem;
+327:  line-height: 1.15;
+336:  margin: .8rem 0 0;
+338:  font-size: .92rem;
+339:  line-height: 1.58;
+346:  margin: 5.2rem auto;
+350:  max-width: 780px;
+351:  margin: 0 auto 2.2rem;
+356:  display: grid;
+357:  grid-template-columns: repeat(6, 1fr);
+364:  min-height: 260px;
+365:  padding: 1.7rem 1.25rem;
+375:  display: grid;
+376:  grid-template-columns: repeat(6, 1fr);
+381:  min-height: 210px;
+382:  padding: 1.5rem 1rem;
+392:  padding-top: 1rem;
+396:  display: grid;
+397:  grid-template-columns: repeat(6, 1fr);
+399:  position: relative;
+404:  position: absolute;
+405:  top: 28px;
+408:  height: 1px;
+413:  position: relative;
+414:  min-height: 170px;
+415:  padding: 0 1rem;
+420:  position: relative;
+422:  display: inline-grid;
+425:  height: 56px;
+426:  margin-bottom: 1rem;
+436:  min-height: 360px;
+437:  display: grid;
+438:  grid-template-columns: .48fr .52fr;
+441:  overflow: hidden;
+445:  position: relative;
+446:  min-height: 360px;
+455:  padding: clamp(3rem, 5vw, 5rem) 6vw;
+461:  max-width: 680px;
+465:  max-width: 680px;
+466:  margin: 1.25rem 0 0;
+468:  font-size: 1rem;
+469:  line-height: 1.72;
+473:  display: grid;
+474:  grid-template-columns: repeat(4, 1fr);
+476:  margin-top: 2.4rem;
+480:  padding: 0 1.2rem;
+485:  padding-left: 0;
+493:  display: block;
+495:  text-transform: uppercase;
+496:  font-size: .86rem;
+497:  line-height: 1.15;
+502:  display: block;
+503:  margin-top: .7rem;
+505:  font-size: .82rem;
+506:  line-height: 1.45;
+512:  min-height: 360px;
+513:  display: grid;
+514:  grid-template-columns: .52fr .48fr;
+519:  padding: clamp(3rem, 5vw, 5rem) 6vw;
+524:  max-width: 620px;
+525:  margin: 1.1rem 0 0;
+527:  line-height: 1.65;
+537:  position: relative;
+538:  min-height: 360px;
+539:  overflow: hidden;
+547:@media (max-width: 1180px) {
+548:  .heroInner {
+549:    grid-template-columns: 1fr;
+552:  .operationCard {
+557:    grid-template-columns: 1fr;
+562:    grid-template-columns: repeat(2, 1fr);
+568:    grid-template-columns: repeat(3, 1fr);
+583:    display: none;
+587:    grid-template-columns: repeat(2, 1fr);
+593:    padding: 0;
+597:@media (max-width: 900px) {
+598:  .hero {
+599:    min-height: 74vh;
+600:    padding: 7rem 22px 4rem;
+603:  .heroImageDesktop {
+604:    display: none;
+607:  .heroImageMobile {
+608:    display: block;
+611:  .heroOverlay {
+616:  .operationCard {
+617:    display: none;
+621:    grid-template-columns: 1fr 1fr;
+625:    min-height: 88px;
+626:    padding: 1.1rem 20px;
+634:    margin: 3.7rem auto;
+643:    grid-template-columns: 1fr;
+651:    border-bottom: 1px solid rgba(8, 11, 16, .1);
+656:    min-height: auto;
+657:    padding: 1.6rem 1.2rem;
+661:    min-height: auto;
+662:    padding: 0;
+667:    min-height: 260px;
+675:@media (max-width: 560px) {
+676:  .heroContent h1 {
+677:    font-size: clamp(2.25rem, 13vw, 3.55rem);
+680:  .heroContent p {
+681:    font-size: .96rem;
+684:  .actions,
+689:  .actions a,
+696:    grid-template-columns: 1fr;
+701:    border-bottom: 1px solid rgba(255, 255, 255, .12);
+708:    font-size: clamp(2rem, 10vw, 3rem);
+712:    grid-template-columns: 1fr;
+723:  height: 100%;
+724:  display: block;
+738:  display: inline-grid;
+741:  height: 34px;
+742:  margin-bottom: .8rem;
+747:  display: flex;
+753:  margin-bottom: .8rem;
+756:/* Desktop: que los 6 servicios respiren mejor */
+757:@media (min-width: 1181px) {
+759:    min-height: 245px;
+763:    min-height: 205px;
+768:    max-width: 150px;
+769:    margin-left: auto;
+770:    margin-right: auto;
+775:    max-width: 170px;
+776:    margin-left: auto;
+777:    margin-right: auto;
+781:/* Laptop: no apretar 6 columnas */
+782:@media (max-width: 1180px) and (min-width: 901px) {
+786:    grid-template-columns: repeat(3, 1fr);
+791:    border-bottom: 1px solid rgba(8, 11, 16, .1);
+796:@media (max-width: 430px) {
+800:    height: 28px;
+801:    margin: 0 0 .45rem;
+806:    display: grid;
+807:    grid-template-columns: 44px 1fr;
+816:@media (min-width: 901px) {
+817:  .hero {
+818:    min-height: 640px !important;
+819:    height: calc(100svh - 34px) !important;
+820:    max-height: 760px !important;
+821:    padding: 7.2rem 6vw 3.8rem !important;
+823:    overflow: hidden !important;
+827:  .heroImage {
+829:    object-position: center 48% !important;
+833:  .heroOverlay {
+863:  .hero::before {
+865:    position: absolute !important;
+867:    top: 18% !important;
+869:    height: min(44vw, 620px) !important;
+880:  .hero::after {
+881:    height: 120px !important;
+891:  .heroInner {
+893:    grid-template-columns: minmax(480px, 610px) 1fr !important;
+898:  .heroContent {
+899:    max-width: 610px !important;
+904:    margin-bottom: 1rem !important;
+905:    font-size: .76rem !important;
+909:  .heroContent h1 {
+910:    max-width: 600px !important;
+911:    font-size: clamp(3.45rem, 4.55vw, 5.6rem) !important;
+912:    line-height: .9 !important;
+917:  .heroContent h1::after {
+922:  .heroContent p {
+923:    max-width: 560px !important;
+924:    margin-top: 1.35rem !important;
+925:    font-size: clamp(1rem, 1.05vw, 1.13rem) !important;
+926:    line-height: 1.62 !important;
+930:  .actions {
+931:    margin-top: 1.8rem !important;
+935:  .actions a {
+936:    min-height: 48px !important;
+937:    padding: 0 1.5rem !important;
+938:    font-size: .76rem !important;
+941:  /* Sacamos la tarjeta Madrid → Bogotá en desktop: ensuciaba el hero */
+942:  .operationCard {
+943:    display: none !important;
+947:/* Desktop bajo / notebook: que entre completo sin sentirse aplastado */
+948:@media (min-width: 901px) and (max-height: 760px) {
+949:  .hero {
+950:    min-height: 590px !important;
+951:    height: calc(100svh - 20px) !important;
+952:    padding-top: 6.2rem !important;
+953:    padding-bottom: 3rem !important;
+956:  .heroContent h1 {
+957:    font-size: clamp(3.05rem, 4.15vw, 4.85rem) !important;
+958:    line-height: .9 !important;
+961:  .heroContent p {
+962:    max-width: 530px !important;
+963:    line-height: 1.52 !important;
+966:  .actions {
+967:    margin-top: 1.35rem !important;
+971:/* Desktop ancho: más vida al avión, menos sombra plana */
+972:@media (min-width: 1400px) {
+973:  .heroImage {
+974:    object-position: center 46% !important;
+977:  .heroOverlay {
+1010:@media (min-width: 901px) {
+1011:  .hero {
+1012:    min-height: 620px !important;
+1013:    height: calc(100svh - 24px) !important;
+1014:    max-height: 760px !important;
+1019:  .hero::after {
+1020:    display: none !important;
+1024:  .heroOverlay {
+1048:  .heroImage {
+1050:    object-position: center 48% !important;
+1067:  display: none !important;
+1085:/* Desktop limpio: primer pantallazo fuerte, sin título monstruoso */
+1086:@media (min-width: 901px) {
+1087:  .hero {
+1088:    min-height: 620px !important;
+1089:    height: calc(100svh - 20px) !important;
+1090:    max-height: 740px !important;
+1091:    padding: 6.8rem 6vw 3.4rem !important;
+1095:  .heroContent {
+1096:    max-width: 620px !important;
+1099:  .heroContent h1 {
+1100:    max-width: 620px !important;
+1101:    font-size: clamp(3.35rem, 4.6vw, 5.7rem) !important;
+1102:    line-height: .9 !important;
+1106:  .heroContent p {
+1107:    max-width: 540px !important;
+1108:    font-size: clamp(.98rem, 1vw, 1.08rem) !important;
+1109:    line-height: 1.6 !important;
+1112:  .heroImage {
+1113:    object-position: center 48% !important;
+1117:  .heroOverlay {
+1124:  .operationCard {
+1125:    display: none !important;
+1130:@media (max-width: 900px) {
+1131:  .hero {
+1132:    min-height: 560px !important;
+1133:    height: auto !important;
+1134:    padding: 5.8rem 24px 3.2rem !important;
+1138:  .heroInner {
+1139:    display: block !important;
+1142:  .heroContent {
+1143:    max-width: 100% !important;
+1147:    font-size: .66rem !important;
+1149:    margin-bottom: .8rem !important;
+1152:  .heroContent h1 {
+1153:    max-width: 440px !important;
+1154:    font-size: clamp(2.25rem, 9vw, 3.6rem) !important;
+1155:    line-height: .95 !important;
+1159:  .heroContent p {
+1160:    max-width: 430px !important;
+1161:    margin-top: 1rem !important;
+1162:    font-size: .95rem !important;
+1163:    line-height: 1.55 !important;
+1166:  .actions {
+1167:    display: grid !important;
+1168:    grid-template-columns: 1fr !important;
+1169:    max-width: 360px !important;
+1171:    margin-top: 1.35rem !important;
+1174:  .actions a {
+1176:    min-height: 46px !important;
+1180:  .heroOverlay {
+1186:  .operationCard {
+1187:    display: none !important;
+1192:@media (max-width: 430px) {
+1193:  .hero {
+1194:    min-height: 520px !important;
+1195:    padding: 5.4rem 18px 2.6rem !important;
+1198:  .heroContent h1 {
+1199:    font-size: clamp(2rem, 10.5vw, 2.8rem) !important;
+1200:    line-height: .96 !important;
+1203:  .heroContent p {
+1204:    font-size: .9rem !important;
+1205:    line-height: 1.5 !important;
+1208:  .actions {
+1209:    max-width: 100% !important;
+1213:    grid-template-columns: 1fr 1fr !important;
+1217:    padding: .85rem 14px !important;
+1221:    font-size: .68rem !important;
+1225:    font-size: .72rem !important;
+1234:  margin-top: 2.4rem !important;
+1235:  margin-bottom: 4rem !important;
+1238:/* En desktop grande, que no quede ese hueco gigante */
+1239:@media (min-width: 901px) {
+1241:    margin-top: 2.2rem !important;
+1245:    font-size: clamp(2.7rem, 3.6vw, 4.6rem) !important;
+1246:    line-height: .96 !important;
+1250:    max-width: 650px !important;
+1251:    margin-top: 1.15rem !important;
+1255:    min-height: 190px !important;
+1256:    padding-top: 1.35rem !important;
+1257:    padding-bottom: 1.35rem !important;
+1262:@media (max-width: 900px) {
+1264:    margin-top: 2rem !important;
+1265:    margin-bottom: 3rem !important;
+1285:  max-width: none !important;
+1286:  margin: 4.8rem 50% 0 !important;
+1287:  transform: translateX(-50%) !important;
+1288:  padding: clamp(4rem, 6vw, 6rem) max(24px, calc((100vw - 1180px) / 2)) !important;
+1297:  margin: 0 0 2.4rem !important;
+1298:  max-width: 740px !important;
+1303:  max-width: 720px !important;
+1312:  display: grid !important;
+1313:  grid-template-columns: repeat(3, 1fr) !important;
+1321:  min-height: 190px !important;
+1322:  padding: 1.6rem !important;
+1332:  height: 46px !important;
+1333:  margin-bottom: 1rem !important;
+1341:  height: 25px !important;
+1346:  max-width: none !important;
+1347:  margin: 0 !important;
+1348:  font-size: 1.05rem !important;
+1353:  max-width: 260px !important;
+1354:  margin: .75rem 0 0 !important;
+1359:  margin-top: 0 !important;
+1360:  padding-top: 4.8rem !important;
+1399:@media (max-width: 1180px) {
+1401:    grid-template-columns: repeat(2, 1fr) !important;
+1406:@media (max-width: 700px) {
+1408:    margin-top: 3.5rem !important;
+1409:    padding: 3.2rem 18px !important;
+1417:    grid-template-columns: 1fr !important;
+1421:    min-height: auto !important;
+1441:  max-width: none !important;
+1442:  margin: 4.8rem 50% 0 !important;
+1443:  transform: translateX(-50%) !important;
+1444:  padding: clamp(4rem, 6vw, 6rem) max(24px, calc((100vw - 1180px) / 2)) !important;
+1453:  margin: 0 0 2.4rem !important;
+1454:  max-width: 740px !important;
+1459:  max-width: 720px !important;
+1468:  display: grid !important;
+1469:  grid-template-columns: repeat(3, 1fr) !important;
+1477:  min-height: 190px !important;
+1478:  padding: 1.6rem !important;
+1488:  height: 46px !important;
+1489:  margin-bottom: 1rem !important;
+1497:  height: 25px !important;
+1502:  max-width: none !important;
+1503:  margin: 0 !important;
+1504:  font-size: 1.05rem !important;
+1509:  max-width: 260px !important;
+1510:  margin: .75rem 0 0 !important;
+1515:  margin-top: 0 !important;
+1516:  padding-top: 4.8rem !important;
+1555:@media (max-width: 1180px) {
+1557:    grid-template-columns: repeat(2, 1fr) !important;
+1562:@media (max-width: 700px) {
+1564:    margin-top: 3.5rem !important;
+1565:    padding: 3.2rem 18px !important;
+1573:    grid-template-columns: 1fr !important;
+1577:    min-height: auto !important;
+1584:  display: none !important;
+1589:  margin-top: 4.8rem !important;
+1594:  margin-bottom: 0 !important;
+1597:@media (max-width: 900px) {
+1599:    margin-top: 3.2rem !important;
+1606:  margin-top: 0 !important;
+1607:  margin-bottom: 0 !important;
+1608:  padding: clamp(2.8rem, 4.5vw, 4.2rem) 0 clamp(3rem, 4.5vw, 4.4rem) !important;
+1612:  margin-bottom: 2rem !important;
+1616:  max-width: 820px !important;
+1617:  margin-left: auto !important;
+1618:  margin-right: auto !important;
+1619:  font-size: clamp(2.5rem, 3.7vw, 4.3rem) !important;
+1620:  line-height: .96 !important;
+1624:  max-width: 980px !important;
+1625:  margin: 0 auto !important;
+1629:  min-height: 128px !important;
+1634:  height: 48px !important;
+1635:  margin-bottom: .65rem !important;
+1640:  height: 28px !important;
+1641:  margin-bottom: .55rem !important;
+1645:  font-size: .9rem !important;
+1646:  line-height: 1.15 !important;
+1650:  margin-top: .45rem !important;
+1651:  font-size: .82rem !important;
+1652:  line-height: 1.45 !important;
+1655:/* Laptop */
+1656:@media (max-width: 1180px) {
+1658:    padding-top: 3rem !important;
+1659:    padding-bottom: 3.4rem !important;
+1663:    max-width: 900px !important;
+1668:@media (max-width: 900px) {
+1670:    padding: 2.8rem 0 3rem !important;
+1674:    margin-bottom: 1.5rem !important;
+1678:    font-size: clamp(2rem, 8vw, 3rem) !important;
+1682:    min-height: auto !important;
+1688:@media (min-width: 901px) {
+1691:    max-width: none !important;
+1692:    margin: 0 50% !important;
+1693:    transform: translateX(-50%) !important;
+1694:    padding: 2.15rem max(24px, calc((100vw - 1240px) / 2)) 2.45rem !important;
+1699:    max-width: 760px !important;
+1700:    margin: 0 auto 1.25rem !important;
+1705:    margin-bottom: .45rem !important;
+1706:    font-size: .66rem !important;
+1712:    max-width: 760px !important;
+1713:    margin: 0 auto !important;
+1714:    font-size: clamp(1.75rem, 2.25vw, 2.65rem) !important;
+1715:    line-height: 1.05 !important;
+1721:    max-width: 1240px !important;
+1722:    margin: 0 auto !important;
+1723:    display: grid !important;
+1724:    grid-template-columns: repeat(6, 1fr) !important;
+1726:    position: relative !important;
+1730:    display: none !important;
+1734:    position: relative !important;
+1735:    min-height: 118px !important;
+1736:    padding: 0 1.05rem 0 1.05rem !important;
+1737:    display: grid !important;
+1738:    grid-template-columns: 44px 1fr !important;
+1739:    grid-template-rows: 42px auto auto !important;
+1755:    height: 34px !important;
+1756:    margin: 0 !important;
+1757:    display: grid !important;
+1762:    font-size: .82rem !important;
+1771:    height: 28px !important;
+
+========================================
+5) COMPARAR TAMAÑO DE ARCHIVOS CSS SERVICIOS
+========================================
+     62 src/app/servicios/transporte-terrestre/TransporteTerrestre.module.css
+   2566 src/app/servicios/_shared/ServicePage.module.css
+   5643 src/app/servicios/temperatura-controlada/Servicio.module.css
+   6001 src/app/servicios/aduanas/Servicio.module.css
+   6001 src/app/servicios/e-commerce/Servicio.module.css
+   6048 src/app/servicios/almacen-distribucion/Servicio.module.css
+   6775 src/app/servicios/cargas-especiales/Servicio.module.css
+   9160 src/app/servicios/e-commerce/ECommerce.module.css
+   9207 src/app/servicios/aduanas/Aduanas.module.css
+   9357 src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css
+   9630 src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css
+   9653 src/app/servicios/transporte-aereo/TransporteAereo.module.css
+   9750 src/app/servicios/transporte-terrestre/Servicio.module.css
+   9926 src/app/servicios/cargas-especiales/CargasEspeciales.module.css
+   9949 src/app/servicios/transporte-maritimo/Servicio.module.css
+ 109728 total
+
+========================================
+6) BUSCAR BASURA / PARCHES VIEJOS HERO
+========================================
+src/app/servicios/aduanas/Aduanas.module.css:1009:/* === FINAL HERO / SECTION CONSISTENCY: NO PAGE GRADIENT === */
+src/app/servicios/aduanas/Aduanas.module.css:5940:   ZZZ ADUANAS FINAL MOBILE/TABLET SYSTEM
+src/app/servicios/aduanas/Aduanas.module.css:6693:   ZZZ ADUANAS MOBILE REMOVE DARK SERVICES BAND
+src/app/servicios/aduanas/Aduanas.module.css:6737:   ZZZ MOBILE FLOW AFTER CERTIFICATIONS CLEAN FINAL
+src/app/servicios/aduanas/Aduanas.module.css:6796:   ZZZ MOBILE FINAL CTA ONLY ONE BUTTON
+src/app/servicios/aduanas/Aduanas.module.css:6818:   ZZZ MOBILE OVERVIEW LIGHT TYPOGRAPHY LOCK
+src/app/servicios/aduanas/Aduanas.module.css:6894:   ZZZ MOBILE OVERVIEW FORCE DARK TEXT FINAL
+src/app/servicios/aduanas/Aduanas.module.css:6961:   ZZZ MOBILE CLEAR SECTIONS TYPOGRAPHY FINAL
+src/app/servicios/aduanas/Aduanas.module.css:7106:   ZZZ HERO IVORY TYPOGRAPHY FINAL
+src/app/servicios/aduanas/Aduanas.module.css:7165:   ZZZ PROCESS EYEBROW CLEAN FINAL
+src/app/servicios/aduanas/Aduanas.module.css:7207:   ZZZ IVORY TEXT ON DARK AREAS FINAL
+src/app/servicios/aduanas/Aduanas.module.css:7320:   ZZZ MOBILE PROCESS COMPACT PREMIUM FINAL
+src/app/servicios/aduanas/Aduanas.module.css:7481:   ZZZ AFTER CERT MOBILE PREMIUM REAL CLASSES
+src/app/servicios/aduanas/Aduanas.module.css:7762:   ZZZ PROCESS MOBILE NO NUMBERS PREMIUM FINAL
+src/app/servicios/aduanas/Aduanas.module.css:7923:   ZZZ PROCESS MOBILE SPACED TRANSPARENT NUMBERS FINAL
+src/app/servicios/aduanas/Aduanas.module.css:8111:   ZZZ TYPOGRAPHIC HIERARCHY HERO WINS FINAL
+src/app/servicios/aduanas/Aduanas.module.css:8308:   ZZZ MOBILE HERO WINS REAL FINAL
+src/app/servicios/aduanas/Aduanas.module.css:8442:/* ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL
+src/app/servicios/aduanas/Aduanas.module.css:8504:/* END ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL */
+src/app/servicios/aduanas/Aduanas.module.css:8506:/* ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL
+src/app/servicios/aduanas/Aduanas.module.css:8584:/* END ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL */
+src/app/servicios/aduanas/Aduanas.module.css:8599:/* ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED
+src/app/servicios/aduanas/Aduanas.module.css:8709:/* END ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED */
+src/app/servicios/aduanas/Aduanas.module.css:8711:/* ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL
+src/app/servicios/aduanas/Aduanas.module.css:8838:/* END ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL */
+src/app/servicios/aduanas/Aduanas.module.css:8840:/* ZZZ SERVICIOS SERVICES USE OWN MOBILE BG FINAL
+src/app/servicios/aduanas/Aduanas.module.css:8872:/* END ZZZ SERVICIOS SERVICES USE OWN MOBILE BG FINAL */
+src/app/servicios/aduanas/Aduanas.module.css:8874:/* ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL
+src/app/servicios/aduanas/Aduanas.module.css:8976:/* END ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL */
+src/app/servicios/aduanas/Aduanas.module.css:8978:/* ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL
+src/app/servicios/aduanas/Aduanas.module.css:9038:/* END ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL */
+src/app/servicios/aduanas/Aduanas.module.css:9040:/* ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED
+src/app/servicios/aduanas/Aduanas.module.css:9207:/* END ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED */
+src/app/servicios/aduanas/Servicio.module.css:1009:/* === FINAL HERO / SECTION CONSISTENCY: NO PAGE GRADIENT === */
+src/app/servicios/aduanas/Servicio.module.css:5939:/* ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL
+src/app/servicios/aduanas/Servicio.module.css:6001:/* END ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL */
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:1009:/* === FINAL HERO / SECTION CONSISTENCY: NO PAGE GRADIENT === */
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:5987:   ZZZ ALMACEN DISTRIBUCION FINAL MOBILE/TABLET SYSTEM
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:6758:   ZZZ ALMACEN CTA BUTTON CUT FIX
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:6852:   ZZZ ALMACEN CTA BACKGROUND IMAGE FINAL
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:6887:   ZZZ MOBILE FLOW AFTER CERTIFICATIONS CLEAN FINAL
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:6946:   ZZZ MOBILE FINAL CTA ONLY ONE BUTTON
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:6968:   ZZZ MOBILE OVERVIEW LIGHT TYPOGRAPHY LOCK
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:7044:   ZZZ MOBILE OVERVIEW FORCE DARK TEXT FINAL
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:7111:   ZZZ MOBILE CLEAR SECTIONS TYPOGRAPHY FINAL
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:7256:   ZZZ HERO IVORY TYPOGRAPHY FINAL
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:7315:   ZZZ PROCESS EYEBROW CLEAN FINAL
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:7357:   ZZZ IVORY TEXT ON DARK AREAS FINAL
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:7470:   ZZZ MOBILE PROCESS COMPACT PREMIUM FINAL
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:7631:   ZZZ AFTER CERT MOBILE PREMIUM REAL CLASSES
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:7912:   ZZZ PROCESS MOBILE NO NUMBERS PREMIUM FINAL
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:8073:   ZZZ PROCESS MOBILE SPACED TRANSPARENT NUMBERS FINAL
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:8261:   ZZZ TYPOGRAPHIC HIERARCHY HERO WINS FINAL
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:8458:   ZZZ MOBILE HERO WINS REAL FINAL
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:8592:/* ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:8654:/* END ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL */
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:8656:/* ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:8734:/* END ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL */
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:8749:/* ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:8859:/* END ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED */
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:8861:/* ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:8988:/* END ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL */
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:8990:/* ZZZ SERVICIOS SERVICES USE OWN MOBILE BG FINAL
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:9022:/* END ZZZ SERVICIOS SERVICES USE OWN MOBILE BG FINAL */
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:9024:/* ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:9126:/* END ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL */
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:9128:/* ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:9188:/* END ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL */
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:9190:/* ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:9357:/* END ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED */
+src/app/servicios/almacen-distribucion/Servicio.module.css:1009:/* === FINAL HERO / SECTION CONSISTENCY: NO PAGE GRADIENT === */
+src/app/servicios/almacen-distribucion/Servicio.module.css:5986:/* ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL
+src/app/servicios/almacen-distribucion/Servicio.module.css:6048:/* END ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL */
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:1009:/* === FINAL HERO / SECTION CONSISTENCY: NO PAGE GRADIENT === */
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:6225:   ZZZ CARGAS HERO MOBILE/TABLET FINAL LOCK
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:6716:   ZZZ CARGAS ESPECIALES FINAL MOBILE/TABLET SYSTEM
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:7310:   ZZZ CARGAS MOBILE BUTTON + DARK SECTIONS POLISH
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:7388:   ZZZ CARGAS IPAD/TABLET IMAGE FIX
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:7456:   ZZZ MOBILE FLOW AFTER CERTIFICATIONS CLEAN FINAL
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:7515:   ZZZ MOBILE FINAL CTA ONLY ONE BUTTON
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:7537:   ZZZ MOBILE OVERVIEW LIGHT TYPOGRAPHY LOCK
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:7613:   ZZZ MOBILE OVERVIEW FORCE DARK TEXT FINAL
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:7680:   ZZZ MOBILE CLEAR SECTIONS TYPOGRAPHY FINAL
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:7825:   ZZZ HERO IVORY TYPOGRAPHY FINAL
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:7884:   ZZZ PROCESS EYEBROW CLEAN FINAL
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:7926:   ZZZ IVORY TEXT ON DARK AREAS FINAL
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:8039:   ZZZ MOBILE PROCESS COMPACT PREMIUM FINAL
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:8200:   ZZZ AFTER CERT MOBILE PREMIUM REAL CLASSES
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:8481:   ZZZ PROCESS MOBILE NO NUMBERS PREMIUM FINAL
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:8642:   ZZZ PROCESS MOBILE SPACED TRANSPARENT NUMBERS FINAL
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:8830:   ZZZ TYPOGRAPHIC HIERARCHY HERO WINS FINAL
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:9027:   ZZZ MOBILE HERO WINS REAL FINAL
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:9161:/* ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:9223:/* END ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL */
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:9225:/* ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:9303:/* END ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL */
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:9318:/* ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:9428:/* END ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED */
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:9430:/* ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:9557:/* END ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL */
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:9559:/* ZZZ SERVICIOS SERVICES USE OWN MOBILE BG FINAL
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:9591:/* END ZZZ SERVICIOS SERVICES USE OWN MOBILE BG FINAL */
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:9593:/* ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:9695:/* END ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL */
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:9697:/* ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:9757:/* END ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL */
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:9759:/* ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:9926:/* END ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED */
+src/app/servicios/cargas-especiales/Servicio.module.css:1009:/* === FINAL HERO / SECTION CONSISTENCY: NO PAGE GRADIENT === */
+src/app/servicios/cargas-especiales/Servicio.module.css:6225:   ZZZ CARGAS HERO MOBILE/TABLET FINAL LOCK
+src/app/servicios/cargas-especiales/Servicio.module.css:6713:/* ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL
+src/app/servicios/cargas-especiales/Servicio.module.css:6775:/* END ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL */
+src/app/servicios/e-commerce/ECommerce.module.css:1009:/* === FINAL HERO / SECTION CONSISTENCY: NO PAGE GRADIENT === */
+src/app/servicios/e-commerce/ECommerce.module.css:5940:   ZZZ ECOMMERCE FINAL MOBILE/TABLET SYSTEM
+src/app/servicios/e-commerce/ECommerce.module.css:6690:   ZZZ MOBILE FLOW AFTER CERTIFICATIONS CLEAN FINAL
+src/app/servicios/e-commerce/ECommerce.module.css:6749:   ZZZ MOBILE FINAL CTA ONLY ONE BUTTON
+src/app/servicios/e-commerce/ECommerce.module.css:6771:   ZZZ MOBILE OVERVIEW LIGHT TYPOGRAPHY LOCK
+src/app/servicios/e-commerce/ECommerce.module.css:6847:   ZZZ MOBILE OVERVIEW FORCE DARK TEXT FINAL
+src/app/servicios/e-commerce/ECommerce.module.css:6914:   ZZZ MOBILE CLEAR SECTIONS TYPOGRAPHY FINAL
+src/app/servicios/e-commerce/ECommerce.module.css:7059:   ZZZ HERO IVORY TYPOGRAPHY FINAL
+src/app/servicios/e-commerce/ECommerce.module.css:7118:   ZZZ PROCESS EYEBROW CLEAN FINAL
+src/app/servicios/e-commerce/ECommerce.module.css:7160:   ZZZ IVORY TEXT ON DARK AREAS FINAL
+src/app/servicios/e-commerce/ECommerce.module.css:7273:   ZZZ MOBILE PROCESS COMPACT PREMIUM FINAL
+src/app/servicios/e-commerce/ECommerce.module.css:7434:   ZZZ AFTER CERT MOBILE PREMIUM REAL CLASSES
+src/app/servicios/e-commerce/ECommerce.module.css:7715:   ZZZ PROCESS MOBILE NO NUMBERS PREMIUM FINAL
+src/app/servicios/e-commerce/ECommerce.module.css:7876:   ZZZ PROCESS MOBILE SPACED TRANSPARENT NUMBERS FINAL
+src/app/servicios/e-commerce/ECommerce.module.css:8064:   ZZZ TYPOGRAPHIC HIERARCHY HERO WINS FINAL
+src/app/servicios/e-commerce/ECommerce.module.css:8261:   ZZZ MOBILE HERO WINS REAL FINAL
+src/app/servicios/e-commerce/ECommerce.module.css:8395:/* ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL
+src/app/servicios/e-commerce/ECommerce.module.css:8457:/* END ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL */
+src/app/servicios/e-commerce/ECommerce.module.css:8459:/* ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL
+src/app/servicios/e-commerce/ECommerce.module.css:8537:/* END ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL */
+src/app/servicios/e-commerce/ECommerce.module.css:8552:/* ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED
+src/app/servicios/e-commerce/ECommerce.module.css:8662:/* END ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED */
+src/app/servicios/e-commerce/ECommerce.module.css:8664:/* ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL
+src/app/servicios/e-commerce/ECommerce.module.css:8791:/* END ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL */
+src/app/servicios/e-commerce/ECommerce.module.css:8793:/* ZZZ SERVICIOS SERVICES USE OWN MOBILE BG FINAL
+src/app/servicios/e-commerce/ECommerce.module.css:8825:/* END ZZZ SERVICIOS SERVICES USE OWN MOBILE BG FINAL */
+src/app/servicios/e-commerce/ECommerce.module.css:8827:/* ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL
+src/app/servicios/e-commerce/ECommerce.module.css:8929:/* END ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL */
+src/app/servicios/e-commerce/ECommerce.module.css:8931:/* ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL
+src/app/servicios/e-commerce/ECommerce.module.css:8991:/* END ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL */
+src/app/servicios/e-commerce/ECommerce.module.css:8993:/* ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED
+src/app/servicios/e-commerce/ECommerce.module.css:9160:/* END ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED */
+src/app/servicios/e-commerce/Servicio.module.css:1009:/* === FINAL HERO / SECTION CONSISTENCY: NO PAGE GRADIENT === */
+src/app/servicios/e-commerce/Servicio.module.css:5939:/* ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL
+src/app/servicios/e-commerce/Servicio.module.css:6001:/* END ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL */
+src/app/servicios/temperatura-controlada/Servicio.module.css:1009:/* === FINAL HERO / SECTION CONSISTENCY: NO PAGE GRADIENT === */
+src/app/servicios/temperatura-controlada/Servicio.module.css:5581:/* ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL
+src/app/servicios/temperatura-controlada/Servicio.module.css:5643:/* END ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL */
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:1009:/* === FINAL HERO / SECTION CONSISTENCY: NO PAGE GRADIENT === */
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:5582:   ZZZ TEMPERATURA CONTROLADA FINAL MOBILE/TABLET SYSTEM
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:6171:   ZZZ TEMPERATURA CONTROLADA FINAL MOBILE/TABLET SYSTEM
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:6759:   ZZZ TEMPERATURA CTA FINAL ONLY DARK CLEAN
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:6948:   ZZZ TEMPERATURA CTA SINGLE FINAL DECISION
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:7160:   ZZZ MOBILE FLOW AFTER CERTIFICATIONS CLEAN FINAL
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:7219:   ZZZ MOBILE FINAL CTA ONLY ONE BUTTON
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:7241:   ZZZ MOBILE OVERVIEW LIGHT TYPOGRAPHY LOCK
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:7317:   ZZZ MOBILE OVERVIEW FORCE DARK TEXT FINAL
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:7384:   ZZZ MOBILE CLEAR SECTIONS TYPOGRAPHY FINAL
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:7529:   ZZZ HERO IVORY TYPOGRAPHY FINAL
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:7588:   ZZZ PROCESS EYEBROW CLEAN FINAL
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:7630:   ZZZ IVORY TEXT ON DARK AREAS FINAL
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:7743:   ZZZ MOBILE PROCESS COMPACT PREMIUM FINAL
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:7904:   ZZZ AFTER CERT MOBILE PREMIUM REAL CLASSES
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:8185:   ZZZ PROCESS MOBILE NO NUMBERS PREMIUM FINAL
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:8346:   ZZZ PROCESS MOBILE SPACED TRANSPARENT NUMBERS FINAL
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:8534:   ZZZ TYPOGRAPHIC HIERARCHY HERO WINS FINAL
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:8731:   ZZZ MOBILE HERO WINS REAL FINAL
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:8865:/* ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:8927:/* END ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL */
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:8929:/* ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:9007:/* END ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL */
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:9022:/* ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:9132:/* END ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED */
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:9134:/* ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:9261:/* END ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL */
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:9263:/* ZZZ SERVICIOS SERVICES USE OWN MOBILE BG FINAL
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:9295:/* END ZZZ SERVICIOS SERVICES USE OWN MOBILE BG FINAL */
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:9297:/* ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:9399:/* END ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL */
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:9401:/* ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:9461:/* END ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL */
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:9463:/* ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED
+src/app/servicios/temperatura-controlada/TemperaturaControlada.module.css:9630:/* END ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED */
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:1009:/* === FINAL HERO / SECTION CONSISTENCY: NO PAGE GRADIENT === */
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:7014:   ZZZ MOBILE FLOW AFTER CERTIFICATIONS CLEAN FINAL
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:7073:   ZZZ MOBILE FINAL CTA ONLY ONE BUTTON
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:7095:   ZZZ MOBILE OVERVIEW LIGHT TYPOGRAPHY LOCK
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:7171:   ZZZ MOBILE OVERVIEW FORCE DARK TEXT FINAL
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:7238:   ZZZ MOBILE CLEAR SECTIONS TYPOGRAPHY FINAL
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:7383:   ZZZ HERO IVORY TYPOGRAPHY FINAL
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:7442:   ZZZ PROCESS EYEBROW CLEAN FINAL
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:7484:   ZZZ IVORY TEXT ON DARK AREAS FINAL
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:7597:   ZZZ MOBILE PROCESS COMPACT PREMIUM FINAL
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:7758:   ZZZ AFTER CERT MOBILE PREMIUM REAL CLASSES
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:8039:   ZZZ PROCESS MOBILE NO NUMBERS PREMIUM FINAL
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:8200:   ZZZ PROCESS MOBILE SPACED TRANSPARENT NUMBERS FINAL
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:8388:   ZZZ TYPOGRAPHIC HIERARCHY HERO WINS FINAL
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:8585:   ZZZ MOBILE HERO WINS REAL FINAL
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:8719:/* ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:8781:/* END ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL */
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:8783:/* ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:8861:/* END ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL */
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:8874:/* ZZZ AEREO SERVICES LITERAL DARKBAND AUTOMOCION FINAL
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:8915:/* END ZZZ AEREO SERVICES LITERAL DARKBAND AUTOMOCION FINAL */
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:8917:/* ZZZ AEREO SERVICES SAME AS AUTOMOCION DARKBAND FINAL
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:8964:/* END ZZZ AEREO SERVICES SAME AS AUTOMOCION DARKBAND FINAL */
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:8966:/* ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:9076:/* END ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED */
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:9078:/* ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:9205:/* END ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL */
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:9207:/* ZZZ SERVICIOS SERVICES USE OWN MOBILE BG FINAL
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:9239:/* END ZZZ SERVICIOS SERVICES USE OWN MOBILE BG FINAL */
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:9241:/* ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:9343:/* END ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL */
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:9345:/* ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:9405:/* END ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL */
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:9407:/* ZZZ AEREO SERVICES SEAM ONLY FINAL
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:9427:/* END ZZZ AEREO SERVICES SEAM ONLY FINAL */
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:9429:/* ZZZ AEREO MOBILE HERO TITLE DOWN FINAL
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:9446:/* END ZZZ AEREO MOBILE HERO TITLE DOWN FINAL */
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:9448:/* ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:9615:/* END ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED */
+src/app/servicios/transporte-maritimo/Servicio.module.css:1009:/* === FINAL HERO / SECTION CONSISTENCY: NO PAGE GRADIENT === */
+src/app/servicios/transporte-maritimo/Servicio.module.css:6296:   ZZZ TERRESTRE PAGE FLOW LIKE PREVIOUS FINAL
+src/app/servicios/transporte-maritimo/Servicio.module.css:6535:   ZZZ TERRESTRE PAGE FLOW LIKE PREVIOUS FINAL
+src/app/servicios/transporte-maritimo/Servicio.module.css:6774:   ZZZ TERRESTRE MOBILE REAL STRUCTURE FIX
+src/app/servicios/transporte-maritimo/Servicio.module.css:7040:   ZZZ TERRESTRE HERO WHITE STRIP KILL SWITCH
+src/app/servicios/transporte-maritimo/Servicio.module.css:7134:   ZZZ TERRESTRE OVERVIEW MOBILE MARGINS FINAL
+src/app/servicios/transporte-maritimo/Servicio.module.css:7220:   ZZZ MOBILE FLOW AFTER CERTIFICATIONS CLEAN FINAL
+src/app/servicios/transporte-maritimo/Servicio.module.css:7279:   ZZZ MOBILE FINAL CTA ONLY ONE BUTTON
+src/app/servicios/transporte-maritimo/Servicio.module.css:7301:   ZZZ MOBILE OVERVIEW LIGHT TYPOGRAPHY LOCK
+src/app/servicios/transporte-maritimo/Servicio.module.css:7377:   ZZZ MOBILE OVERVIEW FORCE DARK TEXT FINAL
+src/app/servicios/transporte-maritimo/Servicio.module.css:7444:   ZZZ MOBILE CLEAR SECTIONS TYPOGRAPHY FINAL
+src/app/servicios/transporte-maritimo/Servicio.module.css:7589:   ZZZ HERO IVORY TYPOGRAPHY FINAL
+src/app/servicios/transporte-maritimo/Servicio.module.css:7648:   ZZZ PROCESS EYEBROW CLEAN FINAL
+src/app/servicios/transporte-maritimo/Servicio.module.css:7690:   ZZZ IVORY TEXT ON DARK AREAS FINAL
+src/app/servicios/transporte-maritimo/Servicio.module.css:7803:   ZZZ MOBILE PROCESS COMPACT PREMIUM FINAL
+src/app/servicios/transporte-maritimo/Servicio.module.css:7964:   ZZZ AFTER CERT MOBILE PREMIUM REAL CLASSES
+src/app/servicios/transporte-maritimo/Servicio.module.css:8245:   ZZZ PROCESS MOBILE NO NUMBERS PREMIUM FINAL
+src/app/servicios/transporte-maritimo/Servicio.module.css:8406:   ZZZ PROCESS MOBILE SPACED TRANSPARENT NUMBERS FINAL
+src/app/servicios/transporte-maritimo/Servicio.module.css:8594:   ZZZ TYPOGRAPHIC HIERARCHY HERO WINS FINAL
+src/app/servicios/transporte-maritimo/Servicio.module.css:8791:   ZZZ MOBILE HERO WINS REAL FINAL
+src/app/servicios/transporte-maritimo/Servicio.module.css:8925:/* ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL
+src/app/servicios/transporte-maritimo/Servicio.module.css:8987:/* END ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL */
+src/app/servicios/transporte-maritimo/Servicio.module.css:8990:/* ZZZ TRANSPORTE TERRESTRE HERO SECTOR SIZE FINAL
+src/app/servicios/transporte-maritimo/Servicio.module.css:9047:/* END ZZZ TRANSPORTE TERRESTRE HERO SECTOR SIZE FINAL */
+src/app/servicios/transporte-maritimo/Servicio.module.css:9049:/* ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL
+src/app/servicios/transporte-maritimo/Servicio.module.css:9127:/* END ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL */
+src/app/servicios/transporte-maritimo/Servicio.module.css:9142:/* ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED
+src/app/servicios/transporte-maritimo/Servicio.module.css:9252:/* END ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED */
+src/app/servicios/transporte-maritimo/Servicio.module.css:9254:/* ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL
+src/app/servicios/transporte-maritimo/Servicio.module.css:9381:/* END ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL */
+src/app/servicios/transporte-maritimo/Servicio.module.css:9383:/* ZZZ SERVICIOS SERVICES USE OWN MOBILE BG FINAL
+src/app/servicios/transporte-maritimo/Servicio.module.css:9415:/* END ZZZ SERVICIOS SERVICES USE OWN MOBILE BG FINAL */
+src/app/servicios/transporte-maritimo/Servicio.module.css:9417:/* ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL
+src/app/servicios/transporte-maritimo/Servicio.module.css:9519:/* END ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL */
+src/app/servicios/transporte-maritimo/Servicio.module.css:9521:/* ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL
+src/app/servicios/transporte-maritimo/Servicio.module.css:9581:/* END ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL */
+src/app/servicios/transporte-maritimo/Servicio.module.css:9583:/* ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED
+src/app/servicios/transporte-maritimo/Servicio.module.css:9750:/* END ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED */
+src/app/servicios/transporte-terrestre/Servicio.module.css:1009:/* === FINAL HERO / SECTION CONSISTENCY: NO PAGE GRADIENT === */
+src/app/servicios/transporte-terrestre/Servicio.module.css:6296:   ZZZ TERRESTRE PAGE FLOW LIKE PREVIOUS FINAL
+src/app/servicios/transporte-terrestre/Servicio.module.css:6535:   ZZZ TERRESTRE PAGE FLOW LIKE PREVIOUS FINAL
+src/app/servicios/transporte-terrestre/Servicio.module.css:6774:   ZZZ TERRESTRE MOBILE REAL STRUCTURE FIX
+src/app/servicios/transporte-terrestre/Servicio.module.css:7040:   ZZZ TERRESTRE HERO WHITE STRIP KILL SWITCH
+src/app/servicios/transporte-terrestre/Servicio.module.css:7134:   ZZZ TERRESTRE OVERVIEW MOBILE MARGINS FINAL
+src/app/servicios/transporte-terrestre/Servicio.module.css:7220:   ZZZ MOBILE FLOW AFTER CERTIFICATIONS CLEAN FINAL
+src/app/servicios/transporte-terrestre/Servicio.module.css:7279:   ZZZ MOBILE FINAL CTA ONLY ONE BUTTON
+src/app/servicios/transporte-terrestre/Servicio.module.css:7301:   ZZZ MOBILE OVERVIEW LIGHT TYPOGRAPHY LOCK
+src/app/servicios/transporte-terrestre/Servicio.module.css:7377:   ZZZ MOBILE OVERVIEW FORCE DARK TEXT FINAL
+src/app/servicios/transporte-terrestre/Servicio.module.css:7444:   ZZZ MOBILE CLEAR SECTIONS TYPOGRAPHY FINAL
+src/app/servicios/transporte-terrestre/Servicio.module.css:7589:   ZZZ HERO IVORY TYPOGRAPHY FINAL
+src/app/servicios/transporte-terrestre/Servicio.module.css:7648:   ZZZ PROCESS EYEBROW CLEAN FINAL
+src/app/servicios/transporte-terrestre/Servicio.module.css:7690:   ZZZ IVORY TEXT ON DARK AREAS FINAL
+src/app/servicios/transporte-terrestre/Servicio.module.css:7803:   ZZZ MOBILE PROCESS COMPACT PREMIUM FINAL
+src/app/servicios/transporte-terrestre/Servicio.module.css:7964:   ZZZ AFTER CERT MOBILE PREMIUM REAL CLASSES
+src/app/servicios/transporte-terrestre/Servicio.module.css:8245:   ZZZ PROCESS MOBILE NO NUMBERS PREMIUM FINAL
+src/app/servicios/transporte-terrestre/Servicio.module.css:8406:   ZZZ PROCESS MOBILE SPACED TRANSPARENT NUMBERS FINAL
+src/app/servicios/transporte-terrestre/Servicio.module.css:8594:   ZZZ TYPOGRAPHIC HIERARCHY HERO WINS FINAL
+src/app/servicios/transporte-terrestre/Servicio.module.css:8791:   ZZZ MOBILE HERO WINS REAL FINAL
+src/app/servicios/transporte-terrestre/Servicio.module.css:8925:/* ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL
+src/app/servicios/transporte-terrestre/Servicio.module.css:8987:/* END ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL */
+src/app/servicios/transporte-terrestre/Servicio.module.css:8990:/* ZZZ TRANSPORTE TERRESTRE HERO SECTOR SIZE FINAL
+src/app/servicios/transporte-terrestre/Servicio.module.css:9047:/* END ZZZ TRANSPORTE TERRESTRE HERO SECTOR SIZE FINAL */
+src/app/servicios/transporte-terrestre/Servicio.module.css:9049:/* ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL
+src/app/servicios/transporte-terrestre/Servicio.module.css:9127:/* END ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL */
+src/app/servicios/transporte-terrestre/Servicio.module.css:9142:/* ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED
+src/app/servicios/transporte-terrestre/Servicio.module.css:9252:/* END ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED */
+src/app/servicios/transporte-terrestre/Servicio.module.css:9254:/* ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL
+src/app/servicios/transporte-terrestre/Servicio.module.css:9381:/* END ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL */
+src/app/servicios/transporte-terrestre/Servicio.module.css:9383:/* ZZZ SERVICIOS SERVICES USE OWN MOBILE BG FINAL
+src/app/servicios/transporte-terrestre/Servicio.module.css:9415:/* END ZZZ SERVICIOS SERVICES USE OWN MOBILE BG FINAL */
+src/app/servicios/transporte-terrestre/Servicio.module.css:9417:/* ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL
+src/app/servicios/transporte-terrestre/Servicio.module.css:9519:/* END ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL */
+src/app/servicios/transporte-terrestre/Servicio.module.css:9521:/* ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL
+src/app/servicios/transporte-terrestre/Servicio.module.css:9581:/* END ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL */
+src/app/servicios/transporte-terrestre/Servicio.module.css:9583:/* ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED
+src/app/servicios/transporte-terrestre/Servicio.module.css:9750:/* END ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED */
+src/app/globals.css:2616:   ZZZ ACROSS INTERNAL HERO MASTER OVERRIDE
+src/app/globals.css:2821:   ZZZ ACROSS GLOBAL BUTTON OVERRIDE
+src/app/globals.css:4877:/* HARD FIX HERO 100VH SPECIFICITY - SERVICIOS SECTORES
+src/app/globals.css:4915:/* END HARD FIX HERO 100VH SPECIFICITY - SERVICIOS SECTORES */
+src/components/sections/Hero.module.css:2932:   ACROSS FINAL HERO SYSTEM
+src/components/sections/HomeCorporateFinal.module.css:3352:/* ZZZ HOME SERVICES READABLE CORPORATE FINAL
+src/components/sections/HomeCorporateFinal.module.css:3502:/* END ZZZ HOME SERVICES READABLE CORPORATE FINAL */
+src/components/ui/MobileHeroCommandBarFix.tsx:93:        hero.style.setProperty("position", "relative", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:95:        bar.style.setProperty("position", "absolute", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:96:        bar.style.setProperty("top", "auto", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:97:        bar.style.setProperty("bottom", "0", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:98:        bar.style.setProperty("left", "0", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:99:        bar.style.setProperty("right", "0", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:100:        bar.style.setProperty("width", "100%", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:101:        bar.style.setProperty("height", "66px", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:102:        bar.style.setProperty("min-height", "66px", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:103:        bar.style.setProperty("max-height", "66px", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:104:        bar.style.setProperty("display", "grid", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:105:        bar.style.setProperty(
+src/components/ui/MobileHeroCommandBarFix.tsx:110:        bar.style.setProperty("align-items", "stretch", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:111:        bar.style.setProperty("gap", "0", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:112:        bar.style.setProperty("overflow", "hidden", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:113:        bar.style.setProperty("z-index", "60", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:114:        bar.style.setProperty("margin", "0", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:115:        bar.style.setProperty("transform", "none", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:118:          item.style.setProperty("position", "static", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:119:          item.style.setProperty("display", "flex", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:120:          item.style.setProperty("flex-direction", "column", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:121:          item.style.setProperty("align-items", "center", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:122:          item.style.setProperty("justify-content", "center", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:123:          item.style.setProperty("gap", "4px", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:124:          item.style.setProperty("height", "66px", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:125:          item.style.setProperty("min-height", "66px", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:126:          item.style.setProperty("max-height", "66px", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:127:          item.style.setProperty("padding", "8px 4px", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:128:          item.style.setProperty("margin", "0", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:129:          item.style.setProperty("width", "auto", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:130:          item.style.setProperty("min-width", "0", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:131:          item.style.setProperty("text-align", "center", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:132:          item.style.setProperty("border-right", "0", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:139:          icon?.style.setProperty("width", "18px", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:140:          icon?.style.setProperty("height", "18px", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:141:          icon?.style.setProperty("min-width", "18px", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:142:          icon?.style.setProperty("margin", "0", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:143:          icon?.style.setProperty("display", "grid", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:144:          icon?.style.setProperty("place-items", "center", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:146:          svg?.style.setProperty("width", "16px", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:147:          svg?.style.setProperty("height", "16px", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:149:          strong?.style.setProperty("display", "block", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:150:          strong?.style.setProperty("max-width", "100%", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:151:          strong?.style.setProperty("font-size", "10px", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:152:          strong?.style.setProperty("line-height", "1.05", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:153:          strong?.style.setProperty("white-space", "normal", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:154:          strong?.style.setProperty("overflow", "hidden", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:155:          strong?.style.setProperty("text-overflow", "ellipsis", "important");
+src/components/ui/MobileHeroCommandBarFix.tsx:157:          small?.style.setProperty("display", "none", "important");
+
+========================================
+7) ARCHIVOS CLAVE PARA ABRIR EN NOTEPAD
+========================================
+AEREO PAGE:
+src/app/servicios/transporte-aereo/page.tsx
+
+AEREO CSS:
+src/app/servicios/transporte-aereo/TransporteAereo.module.css
+
+MARITIMO PAGE:
+src/app/servicios/transporte-maritimo/page.tsx
+
+MARITIMO CSS:
+src/app/servicios/transporte-maritimo/Servicio.module.css
+
+GLOBAL:
+src/app/globals.css

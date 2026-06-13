@@ -2963,7 +2963,7 @@
       rgba(5, 6, 9, .55) 100%
     ),
     radial-gradient(circle at 18% 18%, rgba(23, 50, 71, .16), transparent 24rem),
-    url("/images/caduana.png") !important;
+    url("/images/cargaaerea.png") !important;
   background-size: cover !important;
   background-position: center 48% !important;
   background-repeat: no-repeat !important;
@@ -3065,7 +3065,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/caduana.png") !important;
+    url("/images/cargaaerea.png") !important;
   background-size: cover !important;
   background-position: center 55% !important;
   background-repeat: no-repeat !important;
@@ -3104,7 +3104,7 @@
   .services {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.90)),
-      url("/images/caduana.png") !important;
+      url("/images/cargaaerea.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3116,7 +3116,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/caduana.png") !important;
+      url("/images/cargaaerea.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3134,7 +3134,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/aduanashero.png") !important;
+    url("/images/hero/cargaAereahero.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3144,7 +3144,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/aduanashero.png") !important;
+      url("/images/hero/cargaAereahero.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3162,7 +3162,7 @@
       rgba(5, 6, 9, .44) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/segundaaduana.png") !important;
+    url("/images/cargaaerea1.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3172,7 +3172,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/segundaaduana.png") !important;
+      url("/images/cargaaerea1.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -4038,361 +4038,6 @@
 
   .actions a {
     min-height: 42px !important;
-  }
-}
-
-
-/* =====================================================
-   GLOBAL SERVICE FIX - MOBILE USA IMÁGENES DESKTOP
-   Evita crear imágenes dobles por cada sección.
-   ===================================================== */
-
-@media (max-width: 760px) {
-  .heroImageDesktop {
-    display: none !important;
-  }
-
-  .heroImageMobile {
-    display: block !important;
-  }
-
-  .heroImage {
-    object-fit: cover !important;
-    object-position: center center !important;
-  }
-
-  .darkBandImage,
-  .finalImage {
-    display: block !important;
-  }
-
-  .darkBandImage img,
-  .finalImage img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-    display: block !important;
-  }
-}
-
-@media (max-width: 380px) {
-  .heroImage,
-  .darkBandImage img,
-  .finalImage img {
-    object-position: center center !important;
-  }
-}
-
-/* =====================================================
-   SERVICE MOBILE MASTER RESET V2
-   Corrige secciones partidas, imágenes sueltas y ancho roto.
-   Desktop/tablet intactos.
-   Página: aduanas
-   ===================================================== */
-
-@media (max-width: 760px) {
-  .page {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-    background: #f4f1eb !important;
-  }
-
-  .hero,
-  .overview,
-  .services,
-  .process,
-  .darkBand,
-  .useCases,
-  .finalCta,
-  .trustBar,
-  .pillars {
-    width: 100vw !important;
-    max-width: none !important;
-    margin-left: calc(50% - 50vw) !important;
-    margin-right: calc(50% - 50vw) !important;
-    box-sizing: border-box !important;
-    overflow-x: hidden !important;
-    transform: none !important;
-  }
-
-  .heroImageDesktop {
-    display: none !important;
-  }
-
-  .heroImageMobile {
-    display: block !important;
-  }
-
-  .heroImage {
-    object-fit: cover !important;
-    object-position: center center !important;
-  }
-
-  .services {
-    position: relative !important;
-    isolation: isolate !important;
-    display: block !important;
-    padding: 3.5rem 18px 3.8rem !important;
-    background: #050609 !important;
-    color: #fff !important;
-  }
-
-  .services::before {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 0 !important;
-    background-image: url("/images/caduana.png") !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    opacity: .86 !important;
-    filter: brightness(.44) contrast(1.15) saturate(.96) !important;
-    pointer-events: none !important;
-  }
-
-  .services::after {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 1 !important;
-    background:
-      radial-gradient(circle at 22% 10%, rgba(23, 50, 71, .17), transparent 18rem),
-      linear-gradient(180deg, rgba(5,6,9,.92) 0%, rgba(5,6,9,.76) 44%, rgba(5,6,9,.97) 100%) !important;
-    pointer-events: none !important;
-  }
-
-  .services > *,
-  .services .sectionHead,
-  .services .serviceGrid,
-  .serviceGrid,
-  .serviceGrid > * {
-    position: relative !important;
-    z-index: 2 !important;
-  }
-
-  .services .sectionHead {
-    width: 100% !important;
-    max-width: 100% !important;
-    display: block !important;
-    margin: 0 0 1.8rem !important;
-    padding: 0 !important;
-    transform: none !important;
-  }
-
-  .services .sectionHead h2 {
-    width: 100% !important;
-    max-width: 430px !important;
-    margin: 0 !important;
-    color: #fff !important;
-    font-size: clamp(2.05rem, 9.5vw, 3.15rem) !important;
-    line-height: .96 !important;
-    letter-spacing: -.055em !important;
-  }
-
-  .services .eyebrow {
-    color: #173247 !important;
-  }
-
-  .serviceGrid {
-    width: 100% !important;
-    max-width: 100% !important;
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: .85rem !important;
-  }
-
-  .serviceGrid article,
-  .operationCard {
-    width: 100% !important;
-    max-width: 100% !important;
-    background: rgba(7, 9, 14, .72) !important;
-    border: 1px solid rgba(255,255,255,.14) !important;
-    backdrop-filter: blur(6px) !important;
-  }
-
-  .darkBand {
-    position: relative !important;
-    isolation: isolate !important;
-    display: block !important;
-    padding: 3.2rem 18px !important;
-    background: #050609 !important;
-    color: #fff !important;
-  }
-
-  .darkBand::before {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 0 !important;
-    background-image: url("/images/caduana.png") !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    opacity: .80 !important;
-    filter: brightness(.40) contrast(1.12) saturate(.96) !important;
-    pointer-events: none !important;
-  }
-
-  .darkBand::after {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 1 !important;
-    background:
-      radial-gradient(circle at 75% 18%, rgba(23, 50, 71, .14), transparent 20rem),
-      linear-gradient(180deg, rgba(5,6,9,.92) 0%, rgba(5,6,9,.80) 45%, rgba(5,6,9,.98) 100%) !important;
-    pointer-events: none !important;
-  }
-
-  .darkBandContent,
-  .darkBand .stats,
-  .darkBandActions {
-    position: relative !important;
-    z-index: 2 !important;
-  }
-
-  .darkBandContent {
-    width: 100% !important;
-    max-width: 430px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    display: block !important;
-    transform: none !important;
-  }
-
-  .darkBandContent h2 {
-    max-width: 430px !important;
-    margin: 0 !important;
-    color: #fff !important;
-    font-size: clamp(2rem, 9.4vw, 3rem) !important;
-    line-height: .96 !important;
-    letter-spacing: -.055em !important;
-  }
-
-  .darkBandContent p {
-    max-width: 430px !important;
-    margin: 1rem 0 0 !important;
-    font-size: .9rem !important;
-    line-height: 1.55 !important;
-  }
-
-  .darkBandActions {
-    width: 100% !important;
-    max-width: 430px !important;
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: .75rem !important;
-    margin-top: 1.5rem !important;
-  }
-
-  .darkBandActions a {
-    width: 100% !important;
-    min-height: 46px !important;
-    border-radius: 999px !important;
-  }
-
-  .finalCta {
-    position: relative !important;
-    isolation: isolate !important;
-    display: block !important;
-    padding: 3.2rem 18px !important;
-    background: #050609 !important;
-    color: #fff !important;
-  }
-
-  .finalCta::before {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 0 !important;
-    background-image: url("/images/aduanashero.png") !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    opacity: .78 !important;
-    filter: brightness(.40) contrast(1.12) saturate(.96) !important;
-    pointer-events: none !important;
-  }
-
-  .finalCta::after {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 1 !important;
-    background:
-      radial-gradient(circle at 75% 18%, rgba(23, 50, 71, .14), transparent 20rem),
-      linear-gradient(180deg, rgba(5,6,9,.92) 0%, rgba(5,6,9,.80) 45%, rgba(5,6,9,.98) 100%) !important;
-    pointer-events: none !important;
-  }
-
-  .finalCta > *:not(.finalImage),
-  .finalActions {
-    position: relative !important;
-    z-index: 2 !important;
-  }
-
-  .finalCta h2 {
-    max-width: 430px !important;
-    margin: 0 !important;
-    color: #fff !important;
-    font-size: clamp(2rem, 9.4vw, 3rem) !important;
-    line-height: .96 !important;
-    letter-spacing: -.055em !important;
-  }
-
-  .finalCta p {
-    max-width: 430px !important;
-    margin: 1rem 0 0 !important;
-    font-size: .9rem !important;
-    line-height: 1.55 !important;
-  }
-
-  .finalActions {
-    width: 100% !important;
-    max-width: 430px !important;
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: .75rem !important;
-    margin-top: 1.5rem !important;
-  }
-
-  .finalActions a {
-    width: 100% !important;
-    min-height: 46px !important;
-    border-radius: 999px !important;
-  }
-
-  .darkBandImage,
-  .finalImage {
-    display: none !important;
-    visibility: hidden !important;
-    width: 0 !important;
-    height: 0 !important;
-    min-height: 0 !important;
-    max-height: 0 !important;
-    overflow: hidden !important;
-    position: absolute !important;
-    pointer-events: none !important;
-  }
-}
-
-@media (max-width: 380px) {
-  .services {
-    padding: 3.2rem 14px 3.4rem !important;
-  }
-
-  .darkBand,
-  .finalCta {
-    padding: 2.8rem 14px !important;
-  }
-
-  .services .sectionHead h2,
-  .darkBandContent h2,
-  .finalCta h2 {
-    font-size: clamp(1.85rem, 9.6vw, 2.55rem) !important;
   }
 }
 
@@ -5937,799 +5582,1431 @@
 }
 
 /* =====================================================
-   ZZZ ADUANAS FINAL MOBILE/TABLET SYSTEM
-   Desktop grande queda intacto.
-   Replica sistema aprobado:
-   - sin nieblas/pseudos viejos
-   - hero responsive ordenado
-   - card fuera en tablet/mobile
-   - trustBar 2x2 compacta
-   - overview con márgenes correctas
-   - oculta cards/pilares en mobile
-   - deja una sola CTA final
+   ADUANAS VIEWPORT LOCK FINAL
+   El hero NO puede comerse el bloque azul.
+   Hero + trustBar = 100svh
    ===================================================== */
 
-.page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] {
+/* Base */
+.page {
+  --aduanas-trust-h: 88px;
+}
+
+.page .hero {
+  height: calc(100svh - var(--aduanas-trust-h)) !important;
+  min-height: calc(100svh - var(--aduanas-trust-h)) !important;
+  max-height: calc(100svh - var(--aduanas-trust-h)) !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.page .trustBar {
+  height: var(--aduanas-trust-h) !important;
+  min-height: var(--aduanas-trust-h) !important;
+  max-height: var(--aduanas-trust-h) !important;
+  overflow: hidden !important;
+}
+
+/* Desktop normal */
+@media (min-width: 901px) {
+  .page {
+    --aduanas-trust-h: 88px;
+  }
+
+  .page .content {
+    position: absolute !important;
+    top: clamp(118px, 16svh, 155px) !important;
+    left: clamp(52px, 6vw, 82px) !important;
+    right: clamp(52px, 6vw, 82px) !important;
+    bottom: 24px !important;
+    width: auto !important;
+    max-width: 1240px !important;
+    margin: 0 auto !important;
+  }
+
+  .page .title {
+    font-size: clamp(2.7rem, 4.4vw, 4.8rem) !important;
+    max-width: 620px !important;
+    line-height: .9 !important;
+  }
+
+  .page .subtitle {
+    max-width: 520px !important;
+    font-size: .9rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .page .actions {
+    margin-top: .9rem !important;
+  }
+
+  .page .actions a {
+    min-height: 38px !important;
+    font-size: .58rem !important;
+  }
+
+  .page .trustBar {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+
+  .page .trustBar div {
+    height: 88px !important;
+    min-height: 88px !important;
+    padding: .65rem 1rem !important;
+  }
+}
+
+/* Desktop bajo tipo Nest Hub */
+@media (min-width: 901px) and (max-height: 700px) {
+  .page {
+    --aduanas-trust-h: 78px;
+  }
+
+  .page .content {
+    top: 112px !important;
+  }
+
+  .page .title {
+    font-size: clamp(2.45rem, 4vw, 3.9rem) !important;
+    max-width: 590px !important;
+  }
+
+  .page .subtitle {
+    font-size: .78rem !important;
+    line-height: 1.3 !important;
+    max-width: 500px !important;
+  }
+
+  .page .actions a {
+    min-height: 34px !important;
+    font-size: .52rem !important;
+  }
+
+  .page .trustBar div {
+    height: 78px !important;
+    min-height: 78px !important;
+  }
+}
+
+/* iPad / tablets */
+@media (min-width: 701px) and (max-width: 900px) {
+  .page {
+    --aduanas-trust-h: 108px;
+  }
+
+  .page .content {
+    position: absolute !important;
+    top: 118px !important;
+    left: 34px !important;
+    right: 34px !important;
+    bottom: 20px !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  .page .title {
+    font-size: clamp(2.45rem, 5.8vw, 3.45rem) !important;
+    max-width: 540px !important;
+    line-height: .9 !important;
+  }
+
+  .page .subtitle {
+    max-width: 470px !important;
+    font-size: .76rem !important;
+    line-height: 1.28 !important;
+  }
+
+  .page .actions {
+    margin-top: .75rem !important;
+    gap: .55rem !important;
+  }
+
+  .page .actions a {
+    min-height: 34px !important;
+    font-size: .5rem !important;
+  }
+
+  .page .trustBar {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .page .trustBar div {
+    height: 54px !important;
+    min-height: 54px !important;
+    padding: .45rem .75rem !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .page {
+    --aduanas-trust-h: 108px;
+  }
+
+  .page .hero {
+    min-height: calc(100svh - var(--aduanas-trust-h)) !important;
+  }
+
+  .page .content {
+    position: absolute !important;
+    top: 100px !important;
+    left: 24px !important;
+    right: 20px !important;
+    bottom: 18px !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  .page .title {
+    font-size: clamp(1.72rem, 8.6vw, 2.2rem) !important;
+    max-width: 315px !important;
+    line-height: .92 !important;
+  }
+
+  .page .subtitle {
+    max-width: 300px !important;
+    font-size: .66rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .page .actions {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    max-width: 250px !important;
+    gap: .45rem !important;
+    margin-top: .62rem !important;
+  }
+
+  .page .actions a {
+    width: 100% !important;
+    min-height: 32px !important;
+    font-size: .5rem !important;
+  }
+
+  .page .trustBar {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .page .trustBar div {
+    height: 54px !important;
+    min-height: 54px !important;
+    padding: .45rem .65rem !important;
+  }
+}
+
+/* =====================================================
+   ADUANAS HERO REAL JSX FINAL
+   Usa las clases reales:
+   hero / heroImage / heroOverlay / heroInner / heroContent /
+   eyebrow / title / subtitle / actions / trustBar
+   ===================================================== */
+
+.page > .hero {
   position: relative !important;
+  width: 100% !important;
   overflow: hidden !important;
   isolation: isolate !important;
   background: #07111d !important;
+  color: #fff !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
-/* Quitar decoraciones/nieblas del hero */
-@media (max-width: 900px) {
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"]::before,
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"]::after,
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] .heroInner::before,
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] .heroInner::after,
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] .heroContent::before,
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] .heroContent::after,
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="title"]::before,
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="title"]::after {
-    content: none !important;
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-    background: transparent !important;
-    background-image: none !important;
-    box-shadow: none !important;
-    filter: none !important;
-    backdrop-filter: none !important;
-  }
-
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="desktop-image"],
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="mobile-image"],
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] .heroImage {
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    z-index: -4 !important;
-    opacity: 1 !important;
-    mix-blend-mode: normal !important;
-    filter: brightness(1.08) contrast(1.06) saturate(1.14) !important;
-  }
-
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="overlay"],
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] .heroOverlay {
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: -3 !important;
-    pointer-events: none !important;
-    opacity: 1 !important;
-    filter: none !important;
-    backdrop-filter: none !important;
-    background:
-      linear-gradient(90deg, rgba(3,7,13,.64) 0%, rgba(3,7,13,.40) 48%, rgba(3,7,13,.10) 100%),
-      linear-gradient(180deg, rgba(3,7,13,.08) 0%, rgba(3,7,13,.06) 44%, rgba(3,7,13,.22) 100%) !important;
-  }
+.page > .hero .heroImage {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  z-index: -4 !important;
+  filter: brightness(.72) contrast(1.08) saturate(1.08) !important;
 }
 
-/* Card lateral fuera en tablet/mobile */
-@media (max-width: 1200px) {
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="card"],
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] .operationCard {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-  }
+.page > .hero .heroOverlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -3 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(90deg, rgba(3,7,13,.92) 0%, rgba(3,7,13,.66) 46%, rgba(3,7,13,.20) 100%),
+    linear-gradient(180deg, rgba(3,7,13,.12) 0%, rgba(3,7,13,.22) 46%, rgba(3,7,13,.68) 100%) !important;
 }
 
-/* TABLET / NEST HUB LANDSCAPE */
-@media (min-width: 901px) and (max-width: 1200px) {
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] {
-    height: 500px !important;
-    min-height: 500px !important;
-    max-height: 500px !important;
-    padding: 0 !important;
-    margin: 0 !important;
+.page > .hero .heroInner {
+  position: absolute !important;
+  z-index: 5 !important;
+  display: block !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+}
+
+.page > .hero .heroContent {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.page > .hero .operationCard {
+  display: none !important;
+}
+
+.page > .hero .eyebrow {
+  display: block !important;
+  color: #d6c08d !important;
+  font-weight: 950 !important;
+  text-transform: uppercase !important;
+  line-height: 1 !important;
+}
+
+.page > .hero .title {
+  margin: 0 !important;
+  color: #fff !important;
+  font-weight: 950 !important;
+  line-height: .9 !important;
+  letter-spacing: -.055em !important;
+  text-wrap: balance !important;
+  text-shadow: 0 18px 48px rgba(0,0,0,.40) !important;
+}
+
+.page > .hero .subtitle {
+  margin: 0 !important;
+  color: rgba(255,255,255,.90) !important;
+  font-weight: 650 !important;
+  text-shadow: 0 10px 28px rgba(0,0,0,.40) !important;
+}
+
+.page > .hero .actions {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+
+.page > .hero .actions a,
+.page > .hero .primaryBtn,
+.page > .hero .secondaryBtn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 999px !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  font-weight: 950 !important;
+  line-height: 1.05 !important;
+  white-space: nowrap !important;
+  letter-spacing: .035em !important;
+}
+
+/* DESKTOP GRANDE */
+@media (min-width: 1201px) {
+  .page > .hero {
+    height: 620px !important;
+    min-height: 620px !important;
+    max-height: 620px !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="desktop-image"] {
+  .page > .hero .heroImageDesktop {
     display: block !important;
-    object-position: center center !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="mobile-image"] {
+  .page > .hero .heroImageMobile {
     display: none !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="inner"] {
-    position: absolute !important;
-    z-index: 5 !important;
-    top: 145px !important;
-    left: clamp(46px, 5.8vw, 64px) !important;
-    right: clamp(42px, 5.8vw, 64px) !important;
-    width: auto !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    display: block !important;
-    transform: none !important;
+  .page > .hero .heroImage {
+    object-position: 58% 50% !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="content"] {
-    max-width: 520px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="eyebrow"] {
-    display: block !important;
-    max-width: 520px !important;
-    margin: 0 0 .55rem !important;
-    color: #d6c08d !important;
-    font-size: .56rem !important;
-    line-height: 1 !important;
-    letter-spacing: .17em !important;
-    font-weight: 950 !important;
-    text-transform: uppercase !important;
-  }
-
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="title"] {
-    max-width: 520px !important;
-    margin: 0 !important;
-    color: #fff !important;
-    font-size: clamp(2.22rem, 4vw, 2.72rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.045em !important;
-    font-weight: 950 !important;
-    text-wrap: balance !important;
-  }
-
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="text"] {
-    max-width: 445px !important;
-    margin: .78rem 0 0 !important;
-    color: rgba(255,255,255,.9) !important;
-    font-size: .76rem !important;
-    line-height: 1.42 !important;
-    font-weight: 650 !important;
-  }
-
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="actions"] {
-    display: flex !important;
-    gap: .62rem !important;
-    margin: 1rem 0 0 !important;
-    padding: 0 !important;
-  }
-
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="actions"] a {
-    min-height: 36px !important;
-    padding: 0 1.05rem !important;
-    border-radius: 999px !important;
-    font-size: .54rem !important;
-    line-height: 1 !important;
-    letter-spacing: .05em !important;
-    font-weight: 950 !important;
-    text-transform: uppercase !important;
-    text-decoration: none !important;
-    white-space: nowrap !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-}
-
-/* Nest Hub 1024x600 */
-@media (min-width: 980px) and (max-width: 1100px) and (max-height: 650px) {
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] {
-    height: 480px !important;
-    min-height: 480px !important;
-    max-height: 480px !important;
-  }
-
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="inner"] {
+  .page > .hero .heroInner {
     top: 142px !important;
-    left: 58px !important;
-    right: 58px !important;
+    left: clamp(76px, 8vw, 130px) !important;
+    right: clamp(76px, 8vw, 130px) !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="title"] {
-    font-size: 2.48rem !important;
+  .page > .hero .heroContent {
+    max-width: 660px !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="text"] {
-    max-width: 430px !important;
-    font-size: .74rem !important;
+  .page > .hero .eyebrow {
+    margin-bottom: .65rem !important;
+    font-size: .72rem !important;
+    letter-spacing: .22em !important;
+  }
+
+  .page > .hero .title {
+    max-width: 660px !important;
+    font-size: clamp(3.5rem, 4.8vw, 5.15rem) !important;
+  }
+
+  .page > .hero .subtitle {
+    max-width: 560px !important;
+    margin-top: .95rem !important;
+    font-size: .98rem !important;
+    line-height: 1.42 !important;
+  }
+
+  .page > .hero .actions {
+    gap: .78rem !important;
+    margin-top: 1.15rem !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 44px !important;
+    padding: 0 1.35rem !important;
+    font-size: .68rem !important;
   }
 }
 
-/* TABLET VERTICAL / iPad / Surface */
-@media (min-width: 701px) and (max-width: 1024px) and (orientation: portrait) {
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] {
-    height: 560px !important;
-    min-height: 560px !important;
-    max-height: 560px !important;
-    padding: 0 !important;
-    margin: 0 !important;
+/* DESKTOP/TABLET HORIZONTAL 901-1200 */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .page > .hero {
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="desktop-image"] {
+  .page > .hero .heroImageDesktop {
     display: block !important;
-    object-position: center center !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="mobile-image"] {
+  .page > .hero .heroImageMobile {
     display: none !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="inner"] {
-    position: absolute !important;
-    z-index: 5 !important;
-    top: 122px !important;
-    left: clamp(46px, 7vw, 62px) !important;
-    right: clamp(46px, 7vw, 62px) !important;
-    width: auto !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    display: block !important;
-    transform: none !important;
+  .page > .hero .heroImage {
+    object-position: 60% 50% !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="content"] {
-    max-width: 430px !important;
-    margin: 0 !important;
-    padding: 0 !important;
+  .page > .hero .heroInner {
+    top: 118px !important;
+    left: clamp(58px, 7vw, 86px) !important;
+    right: clamp(58px, 7vw, 86px) !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="title"] {
-    max-width: 430px !important;
-    margin: 0 !important;
-    font-size: clamp(2.05rem, 5.1vw, 2.58rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.045em !important;
-    font-weight: 950 !important;
+  .page > .hero .heroContent {
+    max-width: 560px !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="text"] {
-    max-width: 370px !important;
-    margin: .8rem 0 0 !important;
-    font-size: .76rem !important;
-    line-height: 1.42 !important;
-    font-weight: 650 !important;
+  .page > .hero .eyebrow {
+    margin-bottom: .55rem !important;
+    font-size: .6rem !important;
+    letter-spacing: .20em !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="actions"] {
-    display: flex !important;
-    gap: .58rem !important;
-    margin: 1rem 0 0 !important;
+  .page > .hero .title {
+    max-width: 560px !important;
+    font-size: clamp(2.65rem, 4.6vw, 3.95rem) !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="actions"] a {
+  .page > .hero .subtitle {
+    max-width: 500px !important;
+    margin-top: .72rem !important;
+    font-size: .82rem !important;
+    line-height: 1.34 !important;
+  }
+
+  .page > .hero .actions {
+    gap: .62rem !important;
+    margin-top: .85rem !important;
+  }
+
+  .page > .hero .actions a {
     min-height: 36px !important;
     padding: 0 1rem !important;
     font-size: .54rem !important;
   }
 }
 
-/* MOBILE */
+/* iPAD / TABLET 701-900 */
+@media (min-width: 701px) and (max-width: 900px) {
+  .page > .hero {
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+  }
+
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: block !important;
+  }
+
+  .page > .hero .heroImage {
+    object-position: 62% 50% !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 122px !important;
+    left: clamp(46px, 7vw, 62px) !important;
+    right: clamp(46px, 7vw, 62px) !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 520px !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin-bottom: .52rem !important;
+    font-size: .58rem !important;
+    letter-spacing: .19em !important;
+  }
+
+  .page > .hero .title {
+    max-width: 520px !important;
+    font-size: clamp(2.4rem, 5.5vw, 3.3rem) !important;
+  }
+
+  .page > .hero .subtitle {
+    max-width: 455px !important;
+    margin-top: .68rem !important;
+    font-size: .76rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .page > .hero .actions {
+    gap: .55rem !important;
+    margin-top: .78rem !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 35px !important;
+    padding: 0 .95rem !important;
+    font-size: .5rem !important;
+  }
+}
+
+/* MOBILE / FOLD <=700: SOLO 1 BOTÓN */
 @media (max-width: 700px) {
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] {
+  .page > .hero {
     height: 465px !important;
     min-height: 465px !important;
     max-height: 465px !important;
-    padding: 0 !important;
-    margin: 0 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="desktop-image"] {
+  .page > .hero .heroImageDesktop {
     display: none !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="mobile-image"] {
+  .page > .hero .heroImageMobile {
     display: block !important;
-    object-position: center center !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="inner"] {
-    position: absolute !important;
-    z-index: 5 !important;
-    top: 86px !important;
-    left: 20px !important;
-    right: 20px !important;
-    width: auto !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    display: block !important;
-    transform: none !important;
+  .page > .hero .heroImage {
+    object-position: 70% 54% !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="content"] {
-    max-width: 318px !important;
-    margin: 0 !important;
-    padding: 0 !important;
+  .page > .hero .heroInner {
+    top: 100px !important;
+    left: clamp(26px, 7vw, 38px) !important;
+    right: clamp(26px, 7vw, 38px) !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="eyebrow"] {
-    max-width: 318px !important;
-    margin: 0 0 .5rem !important;
-    color: #d6c08d !important;
-    font-size: .5rem !important;
-    line-height: 1 !important;
+  .page > .hero .heroContent {
+    max-width: 315px !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin-bottom: .4rem !important;
+    font-size: .52rem !important;
     letter-spacing: .15em !important;
-    font-weight: 950 !important;
-    text-transform: uppercase !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="title"] {
-    max-width: 318px !important;
-    margin: 0 !important;
-    color: #fff !important;
-    font-size: clamp(1.68rem, 8.1vw, 2.08rem) !important;
-    line-height: .96 !important;
-    letter-spacing: -.045em !important;
-    font-weight: 950 !important;
+  .page > .hero .title {
+    max-width: 315px !important;
+    font-size: clamp(1.72rem, 8.4vw, 2.18rem) !important;
+    line-height: .92 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="text"] {
-    max-width: 292px !important;
-    margin: .68rem 0 0 !important;
-    color: rgba(255,255,255,.9) !important;
-    font-size: .62rem !important;
-    line-height: 1.36 !important;
-    font-weight: 650 !important;
+  .page > .hero .subtitle {
+    max-width: 300px !important;
+    margin-top: .5rem !important;
+    font-size: .66rem !important;
+    line-height: 1.25 !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="actions"] {
+  .page > .hero .actions {
     display: grid !important;
     grid-template-columns: 1fr !important;
     max-width: 250px !important;
-    margin: .92rem 0 0 !important;
-    gap: .5rem !important;
-    padding: 0 !important;
+    gap: .45rem !important;
+    margin-top: .62rem !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="actions"] a {
+  .page > .hero .actions a {
     width: 100% !important;
-    min-height: 34px !important;
-    padding: 0 .8rem !important;
-    border-radius: 999px !important;
-    font-size: .52rem !important;
-    line-height: 1.05 !important;
-    letter-spacing: .045em !important;
-    font-weight: 950 !important;
-    text-transform: uppercase !important;
-    text-decoration: none !important;
-    white-space: nowrap !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    min-height: 32px !important;
+    padding: 0 .75rem !important;
+    font-size: .5rem !important;
   }
 
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="actions"] a:nth-of-type(2) {
+  .page > .hero .secondaryBtn,
+  .page > .hero .actions a:nth-of-type(2) {
     display: none !important;
   }
+}
 
-  /* trustBar compacta */
-  .page .trustBar {
+/* TRUSTBAR FINAL */
+@media (min-width: 901px) {
+  .page > .trustBar {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    height: 84px !important;
+    min-height: 84px !important;
+    max-height: 84px !important;
+    overflow: hidden !important;
+  }
+
+  .page > .trustBar div {
+    height: 84px !important;
+    min-height: 84px !important;
+    padding: .6rem .9rem !important;
+    gap: .6rem !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .page > .trustBar {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
     height: 108px !important;
     min-height: 108px !important;
     max-height: 108px !important;
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    grid-template-rows: repeat(2, 54px) !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    gap: 0 !important;
-    background: #05101b !important;
-    border-top: 1px solid rgba(255,255,255,.08) !important;
-    border-bottom: 1px solid rgba(255,255,255,.08) !important;
     overflow: hidden !important;
   }
 
-  .page .trustBar > div {
+  .page > .trustBar div {
     height: 54px !important;
     min-height: 54px !important;
-    padding: 0 .85rem !important;
-    margin: 0 !important;
-    display: grid !important;
-    grid-template-columns: 30px 1fr !important;
-    align-items: center !important;
-    column-gap: .55rem !important;
-    border-right: 1px solid rgba(255,255,255,.08) !important;
-    border-bottom: 1px solid rgba(255,255,255,.08) !important;
+    padding: .45rem .65rem !important;
+    gap: .55rem !important;
+  }
+}
+
+.page > .trustBar i {
+  width: 25px !important;
+  height: 25px !important;
+  min-width: 25px !important;
+}
+
+.page > .trustBar strong,
+.page > .trustBar small {
+  font-size: .56rem !important;
+  line-height: 1.05 !important;
+}
+
+
+/* =====================================================
+   ADUANAS HERO TEXT SPACING ONLY
+   Solo mejora aire entre eyebrow, título, texto y botones.
+   No toca altura, fondo ni trustBar.
+   ===================================================== */
+
+.page > .hero .eyebrow {
+  margin-bottom: .72rem !important;
+}
+
+.page > .hero .title {
+  line-height: .96 !important;
+  letter-spacing: -.05em !important;
+}
+
+.page > .hero .subtitle {
+  margin-top: .9rem !important;
+  line-height: 1.44 !important;
+}
+
+.page > .hero .actions {
+  margin-top: 1.15rem !important;
+  gap: .72rem !important;
+}
+
+.page > .hero .actions a,
+.page > .hero .primaryBtn,
+.page > .hero .secondaryBtn {
+  letter-spacing: .055em !important;
+  line-height: 1.1 !important;
+}
+
+/* Tablet */
+@media (min-width: 701px) and (max-width: 900px) {
+  .page > .hero .eyebrow {
+    margin-bottom: .68rem !important;
   }
 
-  .page .trustBar i {
-    width: 26px !important;
-    height: 26px !important;
-    min-width: 26px !important;
-    margin: 0 !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+  .page > .hero .title {
+    line-height: .95 !important;
   }
 
-  .page .trustBar strong {
-    display: block !important;
-    margin: 0 0 .08rem !important;
-    font-size: .56rem !important;
-    line-height: 1.05 !important;
-    letter-spacing: .035em !important;
-    font-weight: 950 !important;
-    text-transform: uppercase !important;
-    color: #fff !important;
+  .page > .hero .subtitle {
+    margin-top: .82rem !important;
+    line-height: 1.4 !important;
   }
 
-  .page .trustBar span,
-  .page .trustBar p,
-  .page .trustBar small {
-    display: block !important;
-    margin: 0 !important;
-    font-size: .5rem !important;
-    line-height: 1.08 !important;
-    color: rgba(255,255,255,.72) !important;
+  .page > .hero .actions {
+    margin-top: 1rem !important;
+    gap: .65rem !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .page > .hero .eyebrow {
+    margin-bottom: .58rem !important;
   }
 
-  /* overview con márgenes */
-  .page .overview {
-    padding-top: 1.25rem !important;
-    padding-left: clamp(22px, 6vw, 30px) !important;
-    padding-right: clamp(22px, 6vw, 30px) !important;
-    padding-bottom: 2.4rem !important;
-    margin-top: 0 !important;
-    overflow: hidden !important;
+  .page > .hero .title {
+    line-height: .96 !important;
+    letter-spacing: -.045em !important;
   }
 
-  .page .overviewCopy,
-  .page .overviewContent,
-  .page .overviewInner,
-  .page .overviewGrid {
+  .page > .hero .subtitle {
+    margin-top: .72rem !important;
+    line-height: 1.36 !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: .95rem !important;
+    gap: .58rem !important;
+  }
+
+  .page > .hero .actions a,
+  .page > .hero .primaryBtn,
+  .page > .hero .secondaryBtn {
+    letter-spacing: .05em !important;
+  }
+}
+
+
+/* =====================================================
+   ADUANAS HERO EXTRA BLOCK SPACING
+   Separa mejor título, texto y botón. Solo aire interno.
+   ===================================================== */
+
+.page > .hero .title {
+  margin-bottom: 0 !important;
+}
+
+.page > .hero .subtitle {
+  margin-top: 1.15rem !important;
+  margin-bottom: 0 !important;
+}
+
+.page > .hero .actions {
+  margin-top: 1.45rem !important;
+}
+
+/* Tablet */
+@media (min-width: 701px) and (max-width: 900px) {
+  .page > .hero .subtitle {
+    margin-top: 1rem !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: 1.25rem !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .page > .hero .subtitle {
+    margin-top: .9rem !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: 1.15rem !important;
+  }
+}
+
+
+/* =====================================================
+   ADUANAS MOBILE FINAL TWEAK
+   Más aire entre menú y primer texto.
+   Oculta imágenes decorativas internas en mobile.
+   No toca el fondo del hero.
+   ===================================================== */
+
+@media (max-width: 700px) {
+  .page > .hero .heroInner {
+    top: 122px !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin-bottom: .52rem !important;
+  }
+}
+
+/* iPhone chico */
+@media (max-width: 390px) {
+  .page > .hero .heroInner {
+    top: 116px !important;
+  }
+}
+
+/* Suprimir bloques de imagen decorativa en mobile, no el hero */
+@media (max-width: 700px) {
+  .overview img,
+  .overview picture,
+  .overview [class*="Image"],
+  .overview [class*="image"],
+  .darkBandImage,
+  .finalImage {
+    display: none !important;
+  }
+
+  .overview,
+  .overviewCopy {
+    padding-top: 3rem !important;
+  }
+}
+
+
+/* =====================================================
+   ADUANAS HERO IMAGE COLOR / LIGHT FINAL
+   Solo mejora luz, contraste y overlay del fondo.
+   No toca estructura, textos, botones ni trustBar.
+   ===================================================== */
+
+.page > .hero .heroImage {
+  filter: brightness(.96) contrast(1.08) saturate(1.18) !important;
+}
+
+/* Overlay más limpio: oscuro donde está el texto, libre donde está el avión */
+.page > .hero .heroOverlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 7, 13, .82) 0%,
+      rgba(3, 7, 13, .62) 28%,
+      rgba(3, 7, 13, .30) 52%,
+      rgba(3, 7, 13, .08) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 7, 13, .10) 0%,
+      rgba(3, 7, 13, .08) 42%,
+      rgba(3, 7, 13, .22) 100%
+    ) !important;
+}
+
+/* Un toque cálido sobre la zona del sol/avión */
+.page > .hero::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -2 !important;
+  pointer-events: none !important;
+  background:
+    radial-gradient(
+      circle at 56% 68%,
+      rgba(218, 170, 82, .22),
+      transparent 34%
+    ) !important;
+}
+
+/* Tablet y mobile: un poco más oscuro para que el texto siga leyendo */
+@media (max-width: 900px) {
+  .page > .hero .heroImage {
+    filter: brightness(.90) contrast(1.08) saturate(1.14) !important;
+  }
+
+  .page > .hero .heroOverlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(3, 7, 13, .84) 0%,
+        rgba(3, 7, 13, .58) 46%,
+        rgba(3, 7, 13, .16) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(3, 7, 13, .12) 0%,
+        rgba(3, 7, 13, .10) 45%,
+        rgba(3, 7, 13, .30) 100%
+      ) !important;
+  }
+}
+
+
+/* =====================================================
+   ADUANAS HERO LIGHT RIGHT + MOBILE IMAGE HIDE
+   Más iluminación a la derecha y ocultar imágenes decorativas en mobile
+   ===================================================== */
+
+/* Más vida en la imagen */
+.page > .hero .heroImage {
+  filter: brightness(1.04) contrast(1.08) saturate(1.22) !important;
+}
+
+/* Overlay menos pesado del lado derecho */
+.page > .hero .heroOverlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 7, 13, .84) 0%,
+      rgba(3, 7, 13, .62) 28%,
+      rgba(3, 7, 13, .26) 54%,
+      rgba(3, 7, 13, .02) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 7, 13, .08) 0%,
+      rgba(3, 7, 13, .06) 46%,
+      rgba(3, 7, 13, .18) 100%
+    ) !important;
+}
+
+/* Luz cálida en zona del avión / cielo derecho */
+.page > .hero::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -2 !important;
+  pointer-events: none !important;
+  background:
+    radial-gradient(
+      circle at 78% 42%,
+      rgba(255, 220, 150, .34),
+      rgba(255, 190, 96, .16) 24%,
+      transparent 48%
+    ),
+    radial-gradient(
+      circle at 58% 72%,
+      rgba(224, 162, 72, .24),
+      transparent 36%
+    ) !important;
+}
+
+/* En tablet/mobile mantenemos lectura pero sin apagar tanto */
+@media (max-width: 900px) {
+  .page > .hero .heroImage {
+    filter: brightness(.98) contrast(1.08) saturate(1.18) !important;
+  }
+
+  .page > .hero .heroOverlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(3, 7, 13, .84) 0%,
+        rgba(3, 7, 13, .58) 44%,
+        rgba(3, 7, 13, .12) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(3, 7, 13, .10) 0%,
+        rgba(3, 7, 13, .08) 46%,
+        rgba(3, 7, 13, .24) 100%
+      ) !important;
+  }
+
+  .page > .hero::after {
+    background:
+      radial-gradient(
+        circle at 76% 44%,
+        rgba(255, 220, 150, .26),
+        rgba(255, 190, 96, .12) 24%,
+        transparent 48%
+      ) !important;
+  }
+}
+
+/* =====================================================
+   MOBILE: OCULTAR IMÁGENES DECORATIVAS INTERNAS
+   No toca la imagen del hero.
+   ===================================================== */
+
+@media (max-width: 700px) {
+  .overview img,
+  .overview picture,
+  .overview figure,
+  .overview [class*="image"],
+  .overview [class*="Image"],
+  .overview [class*="media"],
+  .overview [class*="Media"],
+  .overview [class*="visual"],
+  .overview [class*="Visual"],
+  .darkBandImage,
+  .finalImage {
+    display: none !important;
+  }
+
+  .darkBand [class*="image"],
+  .darkBand [class*="Image"],
+  .darkBand [class*="media"],
+  .darkBand [class*="Media"],
+  .finalCta [class*="image"],
+  .finalCta [class*="Image"],
+  .finalCta [class*="media"],
+  .finalCta [class*="Media"] {
+    display: none !important;
+  }
+
+  .overview,
+  .darkBand,
+  .finalCta {
+    background-image: none !important;
+  }
+
+  .overviewCopy,
+  .darkBandContent {
     width: 100% !important;
     max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
+  }
+}
+
+
+/* =====================================================
+   ADUANAS MOBILE HIDE PILLARS SECTION
+   Oculta las cards/pilares en dispositivos menores a tablet.
+   No toca hero, trustBar ni certificaciones.
+   ===================================================== */
+
+@media (max-width: 700px) {
+  .pillars {
+    display: none !important;
   }
 
-  .page .overview::before,
-  .page .overview::after {
+  .overview {
+    padding-bottom: 3rem !important;
+  }
+}
+
+
+/* =====================================================
+   ADUANAS DESKTOP BUTTON SAFE FIX
+   Solo desktop grande: evita que los botones toquen el trustBar.
+   ===================================================== */
+
+@media (min-width: 1201px) {
+  .page > .hero {
+    height: clamp(700px, calc(100svh - 86px), 800px) !important;
+    min-height: 700px !important;
+    max-height: 800px !important;
+  }
+
+  .page > .hero .heroInner {
+    top: clamp(145px, 16svh, 175px) !important;
+    left: clamp(76px, 7vw, 130px) !important;
+    right: clamp(76px, 7vw, 130px) !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 680px !important;
+  }
+
+  .page > .hero .title {
+    max-width: 680px !important;
+    font-size: clamp(4.1rem, 5.1vw, 5.8rem) !important;
+    line-height: .92 !important;
+  }
+
+  .page > .hero .subtitle {
+    max-width: 600px !important;
+    margin-top: 1.1rem !important;
+    font-size: 1.02rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: 1.35rem !important;
+    gap: .9rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .page > .hero .actions a,
+  .page > .hero .primaryBtn,
+  .page > .hero .secondaryBtn {
+    min-height: 46px !important;
+    padding: 0 1.45rem !important;
+    font-size: .68rem !important;
+  }
+
+  .page > .trustBar {
+    height: 86px !important;
+    min-height: 86px !important;
+    max-height: 86px !important;
+  }
+}
+
+/* Desktop ancho pero bajo: evita corte de botones */
+@media (min-width: 1201px) and (max-height: 820px) {
+  .page > .hero {
+    height: 680px !important;
+    min-height: 680px !important;
+    max-height: 680px !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 128px !important;
+  }
+
+  .page > .hero .title {
+    font-size: clamp(3.65rem, 4.7vw, 5.15rem) !important;
+  }
+
+  .page > .hero .subtitle {
+    margin-top: .95rem !important;
+    font-size: .95rem !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: 1.05rem !important;
+  }
+}
+
+
+/* =====================================================
+   ADUANAS HERO IMAGE NO ZOOM FINAL
+   Quita el recorte/zoom del hero principal.
+   ===================================================== */
+
+.page > .hero .heroImage {
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: #07111d !important;
+}
+
+/* Desktop usa imagen desktop */
+@media (min-width: 901px) {
+  .page > .hero .heroImageDesktop {
+    display: block !important;
+  }
+
+  .page > .hero .heroImageMobile {
     display: none !important;
-    content: none !important;
+  }
+}
+
+/* Mobile/tablet usa imagen mobile */
+@media (max-width: 900px) {
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: block !important;
+  }
+}
+
+
+/* =====================================================
+   ADUANAS HERO MOBILE IMAGE SOURCE FIX
+   Desktop usa horizontal. Mobile usa vertical.
+   ===================================================== */
+
+@media (min-width: 901px) {
+  .page > .hero .heroImageDesktop {
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+}
+
+
+/* =====================================================
+   ADUANAS DESKTOP TITLE REFINEMENT
+   Solo pantallas grandes: título más elegante y menos monstruoso.
+   No toca mobile ni tablet.
+   ===================================================== */
+
+@media (min-width: 1400px) {
+  .page > .hero .heroInner {
+    top: 155px !important;
+    left: clamp(90px, 7vw, 140px) !important;
+    right: clamp(90px, 7vw, 140px) !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 620px !important;
+  }
+
+  .page > .hero .title {
+    max-width: 620px !important;
+    font-size: clamp(3.45rem, 4.15vw, 4.75rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.045em !important;
+  }
+
+  .page > .hero .subtitle {
+    max-width: 560px !important;
+    margin-top: 1.15rem !important;
+    font-size: 1rem !important;
+    line-height: 1.48 !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: 1.35rem !important;
+    gap: .9rem !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 46px !important;
+    padding: 0 1.45rem !important;
+    font-size: .66rem !important;
+    letter-spacing: .055em !important;
+  }
+}
+
+/* Desktop grande pero bajo de alto */
+@media (min-width: 1400px) and (max-height: 820px) {
+  .page > .hero .heroInner {
+    top: 132px !important;
+  }
+
+  .page > .hero .title {
+    font-size: clamp(3.2rem, 3.85vw, 4.35rem) !important;
+    line-height: .95 !important;
+  }
+
+  .page > .hero .subtitle {
+    margin-top: 1rem !important;
+    font-size: .94rem !important;
+    line-height: 1.42 !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: 1.1rem !important;
+  }
+}
+
+
+/* =====================================================
+   ADUANAS HERO BRIGHT CORPORATE FINAL
+   Más luz al hero sin tocar estructura, texto ni botones.
+   ===================================================== */
+
+.page > .hero .heroImage {
+  filter: brightness(1.12) contrast(1.06) saturate(1.20) !important;
+}
+
+/* Menos sombra general: mantiene lectura en izquierda y deja vivir el avión */
+.page > .hero .heroOverlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 7, 13, .78) 0%,
+      rgba(3, 7, 13, .56) 28%,
+      rgba(3, 7, 13, .24) 52%,
+      rgba(3, 7, 13, .02) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 7, 13, .06) 0%,
+      rgba(3, 7, 13, .04) 46%,
+      rgba(3, 7, 13, .14) 100%
+    ) !important;
+}
+
+/* Luz cálida en avión / cielo / pista */
+.page > .hero::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -2 !important;
+  pointer-events: none !important;
+  background:
+    radial-gradient(
+      circle at 74% 38%,
+      rgba(255, 226, 170, .36),
+      rgba(255, 195, 105, .18) 26%,
+      transparent 52%
+    ),
+    radial-gradient(
+      circle at 55% 68%,
+      rgba(255, 180, 70, .26),
+      transparent 38%
+    ) !important;
+}
+
+/* Mobile/tablet: un poco menos de luz para que el texto no pierda contraste */
+@media (max-width: 900px) {
+  .page > .hero .heroImage {
+    filter: brightness(1.04) contrast(1.06) saturate(1.16) !important;
+  }
+
+  .page > .hero .heroOverlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(3, 7, 13, .80) 0%,
+        rgba(3, 7, 13, .56) 44%,
+        rgba(3, 7, 13, .14) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(3, 7, 13, .08) 0%,
+        rgba(3, 7, 13, .06) 48%,
+        rgba(3, 7, 13, .20) 100%
+      ) !important;
+  }
+
+  .page > .hero::after {
+    background:
+      radial-gradient(
+        circle at 74% 44%,
+        rgba(255, 220, 150, .24),
+        rgba(255, 190, 96, .12) 25%,
+        transparent 50%
+      ) !important;
+  }
+}
+
+
+/* =====================================================
+   ADUANAS HERO REAL IMAGE SWITCH HARD LOCK
+   Fuerza desktop/mobile con las clases reales del JSX.
+   ===================================================== */
+
+.page > .hero .heroImageDesktop {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: -4 !important;
+}
+
+.page > .hero .heroImageMobile {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  z-index: -5 !important;
+}
+
+@media (max-width: 900px) {
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    z-index: -5 !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: -4 !important;
+  }
+}
+
+@media (min-width: 901px) {
+  .page > .hero .heroImageDesktop {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: -4 !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    z-index: -5 !important;
+  }
+}
+
+
+/* =====================================================
+   ADUANAS HERO REAL IMAGE SWITCH HARD LOCK
+   Fuerza desktop/mobile con las clases reales del JSX.
+   ===================================================== */
+
+.page > .hero .heroImageDesktop {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: -4 !important;
+}
+
+.page > .hero .heroImageMobile {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  z-index: -5 !important;
+}
+
+@media (max-width: 900px) {
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    z-index: -5 !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: -4 !important;
+  }
+}
+
+@media (min-width: 901px) {
+  .page > .hero .heroImageDesktop {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: -4 !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    z-index: -5 !important;
+  }
+}
+
+
+/* =====================================================
+   ADUANAS MOBILE CERTIFICATIONS GAP FIX
+   Reduce espacio vacío entre certificaciones y overview.
+   ===================================================== */
+
+@media (max-width: 700px) {
+  .page .overview {
+    padding-top: 1.6rem !important;
+    margin-top: 0 !important;
+  }
+
+  .page .overviewCopy {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
   }
 
   .page .overview .eyebrow,
   .page .overview [class*="eyebrow"],
   .page .overview [class*="Eyebrow"] {
-    margin: 0 0 .72rem !important;
-    font-size: .55rem !important;
-    line-height: 1 !important;
-    letter-spacing: .17em !important;
-  }
-
-  .page .overview h2 {
-    max-width: 330px !important;
-    margin: 0 !important;
-    font-size: clamp(1.9rem, 8.2vw, 2.35rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.055em !important;
-  }
-
-  .page .overview p {
-    max-width: 320px !important;
-    margin: 1.25rem 0 0 !important;
-    font-size: .95rem !important;
-    line-height: 1.62 !important;
-  }
-
-  .page .overview a {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-height: 50px !important;
-    margin: 1.65rem 0 0 !important;
-    padding: 0 .95rem !important;
-    border-radius: 999px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    white-space: normal !important;
-    text-wrap: balance !important;
-    font-size: .66rem !important;
-    line-height: 1.08 !important;
-    letter-spacing: .045em !important;
-  }
-
-  /* ocultar sección de cards/pilares en mobile */
-  .page .pillars,
-  .page .pillarGrid,
-  .page .features,
-  .page .featureGrid,
-  .page .featureCards,
-  .page .overviewCards,
-  .page .benefitsGrid,
-  .page .serviceGrid,
-  .page [class*="pillars"],
-  .page [class*="Pillars"],
-  .page [class*="pillar"],
-  .page [class*="Pillar"],
-  .page [class*="features"],
-  .page [class*="Features"],
-  .page [class*="featureGrid"],
-  .page [class*="FeatureGrid"],
-  .page [class*="overviewCards"],
-  .page [class*="OverviewCards"] {
-    display: none !important;
-  }
-}
-
-/* Tablet vertical: ocultar cards si ensucian */
-@media (min-width: 701px) and (max-width: 900px) {
-  .page .pillars,
-  .page .pillarGrid,
-  .page .features,
-  .page .featureGrid,
-  .page .featureCards,
-  .page .overviewCards,
-  .page [class*="pillars"],
-  .page [class*="Pillars"],
-  .page [class*="pillar"],
-  .page [class*="Pillar"] {
-    display: none !important;
-  }
-
-  .page .overview {
-    padding-top: 1.35rem !important;
     margin-top: 0 !important;
   }
-}
 
-/* CTA: dejar solo la final en tablet/mobile */
-.page [data-aduanas-cta="true"],
-.page [data-aduanas-extra-cta="true"] {
-  position: relative !important;
-  overflow: hidden !important;
-  isolation: isolate !important;
-  color: #fff !important;
-  background:
-    linear-gradient(90deg, rgba(3,7,13,.88) 0%, rgba(3,7,13,.76) 48%, rgba(3,7,13,.58) 100%),
-    linear-gradient(180deg, rgba(3,7,13,.50) 0%, rgba(3,7,13,.78) 100%),
-    url("/images/caduana.png") center center / cover no-repeat !important;
-}
-
-.page [data-aduanas-cta="true"] img,
-.page [data-aduanas-cta="true"] picture,
-.page [data-aduanas-cta="true"] [class*="image"],
-.page [data-aduanas-cta="true"] [class*="Image"],
-.page [data-aduanas-cta="true"] [class*="media"],
-.page [data-aduanas-cta="true"] [class*="Media"],
-.page [data-aduanas-extra-cta="true"] img,
-.page [data-aduanas-extra-cta="true"] picture,
-.page [data-aduanas-extra-cta="true"] [class*="image"],
-.page [data-aduanas-extra-cta="true"] [class*="Image"],
-.page [data-aduanas-extra-cta="true"] [class*="media"],
-.page [data-aduanas-extra-cta="true"] [class*="Media"] {
-  display: none !important;
-}
-
-.page [data-aduanas-cta="true"]::before,
-.page [data-aduanas-cta="true"]::after,
-.page [data-aduanas-extra-cta="true"]::before,
-.page [data-aduanas-extra-cta="true"]::after {
-  content: none !important;
-  display: none !important;
-  opacity: 0 !important;
-  background: transparent !important;
-  background-image: none !important;
-}
-
-@media (max-width: 1200px) {
-  .page [data-aduanas-extra-cta="true"] {
-    display: none !important;
-  }
-}
-
-@media (min-width: 701px) and (max-width: 1200px) {
-  .page [data-aduanas-cta="true"] {
-    min-height: 420px !important;
-    padding: 4rem clamp(42px, 6vw, 68px) !important;
-    display: flex !important;
-    align-items: center !important;
-  }
-
-  .page [data-aduanas-cta="true"] > * {
-    position: relative !important;
-    z-index: 2 !important;
-    max-width: 520px !important;
-  }
-
-  .page [data-aduanas-cta="true"] h2 {
-    max-width: 520px !important;
-    margin: 0 !important;
-    color: #fff !important;
-    font-size: clamp(2.25rem, 4vw, 3rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.055em !important;
-  }
-
-  .page [data-aduanas-cta="true"] p {
-    max-width: 460px !important;
-    margin: 1rem 0 0 !important;
-    color: rgba(255,255,255,.9) !important;
-    font-size: .92rem !important;
-    line-height: 1.5 !important;
-  }
-
-  .page [data-aduanas-cta="true"] a {
-    width: fit-content !important;
-    max-width: 330px !important;
-    min-height: 42px !important;
-    margin-top: 1.35rem !important;
-    padding: 0 1.25rem !important;
-    border-radius: 999px !important;
-    white-space: normal !important;
-    text-align: center !important;
-    font-size: .64rem !important;
-    line-height: 1.08 !important;
-    letter-spacing: .045em !important;
-  }
-}
-
-@media (max-width: 700px) {
-  .page [data-aduanas-cta="true"] {
-    min-height: 420px !important;
-    padding: 3.4rem 24px !important;
-    display: flex !important;
-    align-items: center !important;
-  }
-
-  .page [data-aduanas-cta="true"] h2 {
-    max-width: 305px !important;
-    margin: 0 !important;
-    color: #fff !important;
-    font-size: clamp(2rem, 8.8vw, 2.55rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.055em !important;
-  }
-
-  .page [data-aduanas-cta="true"] p {
-    max-width: 300px !important;
-    margin: 1.1rem 0 0 !important;
-    color: rgba(255,255,255,.9) !important;
-    font-size: .95rem !important;
-    line-height: 1.55 !important;
-  }
-
-  .page [data-aduanas-cta="true"] a {
-    width: 100% !important;
-    max-width: 310px !important;
-    min-height: 52px !important;
-    margin: 1.65rem 0 0 !important;
-    padding: 0 1rem !important;
-    border-radius: 999px !important;
-    white-space: normal !important;
-    text-wrap: balance !important;
-    text-align: center !important;
-    font-size: .66rem !important;
-    line-height: 1.08 !important;
-    letter-spacing: .045em !important;
+  /* Por si el espacio viene del componente de certificaciones */
+  .page section + .overview {
+    margin-top: 0 !important;
   }
 }
 
 @media (max-width: 390px) {
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] {
-    height: 455px !important;
-    min-height: 455px !important;
-    max-height: 455px !important;
-  }
-
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="inner"] {
-    top: 84px !important;
-    left: 18px !important;
-    right: 18px !important;
-  }
-
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="content"] {
-    max-width: 300px !important;
-  }
-
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="title"] {
-    max-width: 300px !important;
-    font-size: 1.74rem !important;
-  }
-
-  .page.page > .hero.hero[data-standard-service-hero="true"][data-service-name="aduanas"] [data-hero-role="text"] {
-    max-width: 282px !important;
-    font-size: .6rem !important;
-  }
-
-  .page .trustBar {
-    height: 104px !important;
-    min-height: 104px !important;
-    max-height: 104px !important;
-    grid-template-rows: repeat(2, 52px) !important;
-  }
-
-  .page .trustBar > div {
-    height: 52px !important;
-    min-height: 52px !important;
-    padding: 0 .72rem !important;
-    grid-template-columns: 28px 1fr !important;
-    column-gap: .48rem !important;
-  }
-
   .page .overview {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
-
-  .page .overview h2 {
-    max-width: 300px !important;
-    font-size: 1.95rem !important;
-  }
-
-  .page .overview p {
-    max-width: 295px !important;
-    font-size: .9rem !important;
-  }
-
-  .page [data-aduanas-cta="true"] {
-    min-height: 400px !important;
-    padding: 3.1rem 20px !important;
-  }
-
-  .page [data-aduanas-cta="true"] h2 {
-    max-width: 290px !important;
-    font-size: 2.05rem !important;
-  }
-
-  .page [data-aduanas-cta="true"] p {
-    max-width: 285px !important;
-    font-size: .9rem !important;
-  }
-
-  .page [data-aduanas-cta="true"] a {
-    max-width: 295px !important;
-    font-size: .62rem !important;
-  }
-}
-
-
-
-/* =====================================================
-   ZZZ ADUANAS MOBILE REMOVE DARK SERVICES BAND
-   Quita en mobile la franja oscura "Nuestros servicios aduaneros"
-   porque rompe el flujo visual.
-   ===================================================== */
-
-@media (max-width: 700px) {
-  /* La sección oscura que viene justo después del overview */
-  .page .overview + section:not([data-across-final-cta="true"]) {
-    display: none !important;
-  }
-
-  /* La sección siguiente sube limpia, con aire correcto */
-  .page .overview + section:not([data-across-final-cta="true"]) + section {
-    padding-top: 2.2rem !important;
-    margin-top: 0 !important;
-  }
-
-  .page .overview + section:not([data-across-final-cta="true"]) + section h2 {
-    max-width: 330px !important;
-    margin: 0 !important;
-    font-size: clamp(1.95rem, 8.2vw, 2.35rem) !important;
-    line-height: .98 !important;
-    letter-spacing: -.055em !important;
-  }
-
-  .page .overview + section:not([data-across-final-cta="true"]) + section p {
-    max-width: 320px !important;
-    font-size: .95rem !important;
-    line-height: 1.62 !important;
-  }
-}
-
-/* Tablet chica también: si aparece rara, la ocultamos */
-@media (min-width: 701px) and (max-width: 900px) {
-  .page .overview + section:not([data-across-final-cta="true"]) {
-    display: none !important;
-  }
-
-  .page .overview + section:not([data-across-final-cta="true"]) + section {
-    padding-top: 3rem !important;
+    padding-top: 1.25rem !important;
   }
 }
 
@@ -7249,10 +7526,10 @@
 .page .trustBar span,
 .page .trustBar small,
 .page .trustBar p,
-.page [data-aereo-trust="true"] strong,
-.page [data-aereo-trust="true"] span,
-.page [data-aereo-trust="true"] small,
-.page [data-aereo-trust="true"] p {
+.page [data-aduanas-trust="true"] strong,
+.page [data-aduanas-trust="true"] span,
+.page [data-aduanas-trust="true"] small,
+.page [data-aduanas-trust="true"] p {
   color: var(--across-ivory-soft) !important;
   -webkit-text-fill-color: var(--across-ivory-soft) !important;
 }
@@ -8583,8 +8860,6 @@
 }
 /* END ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL */
 
-
-
 /* =====================================================
    ACROSS COMMAND BAR EXPORTS
    Necesario para que CSS Modules exporte styles.commandBar/item.
@@ -8595,6 +8870,98 @@
 .commandItem {}
 
 /* END ACROSS COMMAND BAR EXPORTS */
+
+/* ZZZ ADUANAS SERVICES LITERAL DARKBAND AUTOMOCION FINAL
+   Copia LITERAL del darkBand de Automoción.
+*/
+.page .services {
+  position: relative !important;
+  isolation: isolate !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+  background-image: url("/images/sectores/automocion2.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-blend-mode: normal !important;
+}
+
+.page .services::before {
+  content: "" !important;
+  opacity: 0 !important;
+  background: none !important;
+  background-image: none !important;
+}
+
+.page .services::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  opacity: 1 !important;
+  background:
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(18, 63, 89, .42) 0%,
+      rgba(3, 10, 18, .20) 60%,
+      rgba(3, 10, 18, .45) 100%
+    ) !important;
+}
+
+.page .services > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+/* END ZZZ ADUANAS SERVICES LITERAL DARKBAND AUTOMOCION FINAL */
+
+/* ZZZ ADUANAS SERVICES SAME AS AUTOMOCION DARKBAND FINAL
+   Copia el sombreado/degradado de darkBand Automoción.
+   No copia la imagen de Automoción; conserva la imagen de fondo de Aduanas.
+*/
+.page .services {
+  position: relative !important;
+  isolation: isolate !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+  background-blend-mode: normal !important;
+}
+
+.page .services::before {
+  content: "" !important;
+  opacity: 0 !important;
+  background: none !important;
+  background-image: none !important;
+}
+
+.page .services::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+  opacity: 1 !important;
+  background:
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(18, 63, 89, .42) 0%,
+      rgba(3, 10, 18, .20) 60%,
+      rgba(3, 10, 18, .45) 100%
+    ) !important;
+}
+
+.page .services > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.page .services article,
+.page .services [class*="card"],
+.page .services [class*="Card"] {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.018)) !important;
+  border: 1px solid rgba(244, 239, 229, .16) !important;
+  box-shadow: 0 14px 34px rgba(0,0,0,.18) !important;
+}
+/* END ZZZ ADUANAS SERVICES SAME AS AUTOMOCION DARKBAND FINAL */
 
 /* ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED
    Tablet / iPad chico:
@@ -8873,7 +9240,7 @@
 
 /* ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL
    DarkBand restaurado correctamente:
-   - usa SU imagen original del page.tsx: /images/caduana.png
+   - usa SU imagen original del page.tsx: /images/cargaaerea.png
    - no usa imagen del CTA
    - elimina capas oscuras viejas
    - mantiene el estilo azul/premium
@@ -8897,7 +9264,7 @@
       rgba(244,239,229,.025) 0%,
       rgba(3,10,18,.16) 100%
     ),
-    url("/images/caduana.png") center center / cover no-repeat !important;
+    url("/images/cargaaerea.png") center center / cover no-repeat !important;
 }
 
 .page .darkBand::before {
@@ -9036,6 +9403,47 @@
   }
 }
 /* END ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL */
+
+/* ZZZ ADUANAS SERVICES SEAM ONLY FINAL
+   Tapa la línea/seam superior del bloque services sin cambiar imagen.
+*/
+.page .services {
+  margin-top: -6px !important;
+  padding-top: calc(76.8px + 6px) !important;
+  border-top: 0 !important;
+  outline: 0 !important;
+  background-position:
+    center center,
+    center center,
+    center center,
+    center -6px !important;
+}
+
+.page .services::before,
+.page .services::after {
+  top: -6px !important;
+  height: calc(100% + 6px) !important;
+}
+/* END ZZZ ADUANAS SERVICES SEAM ONLY FINAL */
+
+/* ZZZ ADUANAS MOBILE HERO TITLE DOWN FINAL
+   Baja un poco el título del hero en mobile.
+   No toca desktop/tablet.
+*/
+@media (max-width: 700px) {
+  .page .hero [class*="content"],
+  .page .hero [class*="heroContent"],
+  .page .hero [class*="copy"],
+  .page .hero [class*="HeroCopy"] {
+    padding-top: 2.2rem !important;
+    transform: translateY(1.4rem) !important;
+  }
+
+  .page .hero h1 {
+    margin-top: .9rem !important;
+  }
+}
+/* END ZZZ ADUANAS MOBILE HERO TITLE DOWN FINAL */
 
 /* ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED
    Tablet / iPad chico:
@@ -9205,3 +9613,41 @@
   }
 }
 /* END ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED */
+
+/* =====================================================
+   ADUANAS MOBILE HEIGHT LIKE MARITIMO
+   Solo iguala el alto del hero mobile.
+   No toca barra, titulo, texto, boton ni imagen.
+   ===================================================== */
+@media (max-width: 900px) {
+  .hero {
+    height: 100svh !important;
+    min-height: 100svh !important;
+    max-height: none !important;
+  }
+
+  .heroInner {
+    height: 100svh !important;
+    min-height: 100svh !important;
+    max-height: 100svh !important;
+  }
+}
+
+/* =====================================================
+   ADUANAS MOBILE HEIGHT LIKE MARITIMO
+   Solo iguala el alto del hero mobile.
+   No toca barra, titulo, texto, boton ni imagen.
+   ===================================================== */
+@media (max-width: 900px) {
+  .hero {
+    height: 100svh !important;
+    min-height: 100svh !important;
+    max-height: none !important;
+  }
+
+  .heroInner {
+    height: 100svh !important;
+    min-height: 100svh !important;
+    max-height: 100svh !important;
+  }
+}

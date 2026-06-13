@@ -788,7 +788,7 @@ export default function AlmacenDistribucionPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={`${styles.hero} acrossPageHero`} data-service-hero="compact" data-standard-service-hero="true" data-service-name="almacen"
+        <section className={styles.hero} data-service-name="almacen-distribucion" data-service-hero-home="true"
       >
           <Image
             src="/images/almacenHero.png"
@@ -796,36 +796,34 @@ export default function AlmacenDistribucionPage() {
             fill
             priority
             sizes="(max-width: 900px) 0px, 100vw"
-            data-hero-role="desktop-image"
             className={`${styles.heroImage} ${styles.heroImageDesktop}`}
           />
 
           <Image
-            src="/images/almacenHero.png"
+            src="/images/almacen.png"
             alt={t.heroTitle}
             fill
             priority
             sizes="(max-width: 900px) 100vw, 0px"
-            data-hero-role="mobile-image"
             className={`${styles.heroImage} ${styles.heroImageMobile}`}
           />
 
-          <div data-hero-role="overlay" className={styles.heroOverlay} />
+          <div className={styles.heroOverlay} />
 
-          <div data-hero-role="inner" className={styles.heroInner}
+          <div className={styles.heroInner}
       >
-            <div data-hero-role="content" className={styles.heroContent}>
-              <span data-hero-role="eyebrow" className={styles.eyebrow}>{t.heroEyebrow}</span>
-              <h1 data-hero-role="title">{t.heroTitle}</h1>
-              <p data-hero-role="text">{t.heroText}</p>
+            <div className={styles.heroContent}>
+              <span className={styles.eyebrow}>{t.heroEyebrow}</span>
+              <h1 className={styles.title}>{t.heroTitle}</h1>
+              <p className={styles.subtitle}>{t.heroText}</p>
 
-              <div data-hero-role="actions" className={styles.actions}>
-                <Link href="/cotizacion">{t.primaryCta}</Link>
-                <Link href="/contacto">{t.secondaryCta}</Link>
+              <div className={styles.actions}>
+                <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>
+                <Link href="/contacto" className={styles.secondaryBtn}>{t.secondaryCta}</Link>
               </div>
             </div>
 
-            <div data-hero-role="card" className={styles.operationCard}>
+            <div className={styles.operationCard}>
               <span>{t.activeLabel}</span>
               <strong>{t.activeRoute}</strong>
               <p>{t.activeCargo}</p>
@@ -841,28 +839,25 @@ export default function AlmacenDistribucionPage() {
               </div>
             </div>
           </div>
-        
 
-          <div className={styles.commandBar}>
-          {t.trust.map(([title, text]: string[], index: number) => {
-          const icons: IconName[] = ["timer", "shield", "document", "tracking"];
+          <div className={styles.commandBar} data-service-trust="almacen-distribucion">
+            {t.trust.map(([title, text]: string[], index: number) => {
+              const icons: IconName[] = ["timer", "shield", "document", "tracking"];
 
-          return (
-          <div key={title} className={styles.commandItem}>
-          <i>
-          <Icon name={icons[index]} />
-          </i>
-          <span>
-          <strong>{title}</strong>
-          <small>{text}</small>
-          </span>
-          </div>
-          );
-          })}
+              return (
+                <div key={title} className={styles.commandItem}>
+                  <i>
+                    <Icon name={icons[index]} />
+                  </i>
+                  <span>
+                    <strong>{title}</strong>
+                    <small>{text}</small>
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </section>
-
-
 
         <Certifications />
 
@@ -891,7 +886,7 @@ export default function AlmacenDistribucionPage() {
           </div>
         </section>
 
-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/almacen.png')" } as CSSProperties}>
+        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/almacenHero.png')" } as CSSProperties}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -961,10 +956,10 @@ export default function AlmacenDistribucionPage() {
           </div>
         </section>
 
-        <section className={styles.darkBand} data-mobile-hide-after-cert="true" data-almacen-extra-cta="true">
+        <section className={styles.darkBand} data-mobile-hide-after-cert="true">
           <div className={styles.darkBandImage}>
             <Image
-              src="/images/almacen.png"
+              src="/images/cargaaerea.png"
               alt={t.bandTitle}
               fill
               sizes="(max-width: 900px) 100vw, 42vw"
@@ -991,7 +986,7 @@ export default function AlmacenDistribucionPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/almacenHero.png')" } as CSSProperties} data-almacen-cta="true" data-across-final-cta="true">
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/almacenHero.png')" } as CSSProperties} data-across-final-cta="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>
@@ -1012,7 +1007,7 @@ export default function AlmacenDistribucionPage() {
           </div>
         </section>
 
-        <RelatedServices current="almacen-distribucion" locale={locale} />
+        <RelatedServices current="transporte-aereo" locale={locale} />
       </main>
 
       <Footer />

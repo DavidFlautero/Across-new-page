@@ -2963,7 +2963,7 @@
       rgba(5, 6, 9, .55) 100%
     ),
     radial-gradient(circle at 18% 18%, rgba(23, 50, 71, .16), transparent 24rem),
-    url("/images/caduana.png") !important;
+    url("/images/cargaaerea.png") !important;
   background-size: cover !important;
   background-position: center 48% !important;
   background-repeat: no-repeat !important;
@@ -3065,7 +3065,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/caduana.png") !important;
+    url("/images/cargaaerea.png") !important;
   background-size: cover !important;
   background-position: center 55% !important;
   background-repeat: no-repeat !important;
@@ -3104,7 +3104,7 @@
   .services {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.90)),
-      url("/images/caduana.png") !important;
+      url("/images/cargaaerea.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3116,7 +3116,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/caduana.png") !important;
+      url("/images/cargaaerea.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3134,7 +3134,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/aduanashero.png") !important;
+    url("/images/hero/cargaAereahero.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3144,7 +3144,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/aduanashero.png") !important;
+      url("/images/hero/cargaAereahero.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3162,7 +3162,7 @@
       rgba(5, 6, 9, .44) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/segundaaduana.png") !important;
+    url("/images/cargaaerea1.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3172,7 +3172,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/segundaaduana.png") !important;
+      url("/images/cargaaerea1.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -4223,6 +4223,9 @@
     font-size: clamp(1.85rem, 9.6vw, 2.55rem) !important;
   }
 }
+
+/* END SERVICE MOBILE UNIFIED SYSTEM V3 */
+
 
 /* =====================================================
    HERO CTA BUTTONS PILL SYSTEM V2
@@ -5578,6 +5581,3141 @@
     inset 0 1px 0 rgba(255,255,255,.82) !important;
 }
 
+/* =====================================================
+   TEMPERATURA-CONTROLADA VIEWPORT LOCK FINAL
+   El hero NO puede comerse el bloque azul.
+   Hero + trustBar = 100svh
+   ===================================================== */
+
+/* Base */
+.page {
+  --temperatura-controlada-trust-h: 88px;
+}
+
+.page .hero {
+  height: calc(100svh - var(--temperatura-controlada-trust-h)) !important;
+  min-height: calc(100svh - var(--temperatura-controlada-trust-h)) !important;
+  max-height: calc(100svh - var(--temperatura-controlada-trust-h)) !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.page .trustBar {
+  height: var(--temperatura-controlada-trust-h) !important;
+  min-height: var(--temperatura-controlada-trust-h) !important;
+  max-height: var(--temperatura-controlada-trust-h) !important;
+  overflow: hidden !important;
+}
+
+/* Desktop normal */
+@media (min-width: 901px) {
+  .page {
+    --temperatura-controlada-trust-h: 88px;
+  }
+
+  .page .content {
+    position: absolute !important;
+    top: clamp(118px, 16svh, 155px) !important;
+    left: clamp(52px, 6vw, 82px) !important;
+    right: clamp(52px, 6vw, 82px) !important;
+    bottom: 24px !important;
+    width: auto !important;
+    max-width: 1240px !important;
+    margin: 0 auto !important;
+  }
+
+  .page .title {
+    font-size: clamp(2.7rem, 4.4vw, 4.8rem) !important;
+    max-width: 620px !important;
+    line-height: .9 !important;
+  }
+
+  .page .subtitle {
+    max-width: 520px !important;
+    font-size: .9rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .page .actions {
+    margin-top: .9rem !important;
+  }
+
+  .page .actions a {
+    min-height: 38px !important;
+    font-size: .58rem !important;
+  }
+
+  .page .trustBar {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+
+  .page .trustBar div {
+    height: 88px !important;
+    min-height: 88px !important;
+    padding: .65rem 1rem !important;
+  }
+}
+
+/* Desktop bajo tipo Nest Hub */
+@media (min-width: 901px) and (max-height: 700px) {
+  .page {
+    --temperatura-controlada-trust-h: 78px;
+  }
+
+  .page .content {
+    top: 112px !important;
+  }
+
+  .page .title {
+    font-size: clamp(2.45rem, 4vw, 3.9rem) !important;
+    max-width: 590px !important;
+  }
+
+  .page .subtitle {
+    font-size: .78rem !important;
+    line-height: 1.3 !important;
+    max-width: 500px !important;
+  }
+
+  .page .actions a {
+    min-height: 34px !important;
+    font-size: .52rem !important;
+  }
+
+  .page .trustBar div {
+    height: 78px !important;
+    min-height: 78px !important;
+  }
+}
+
+/* iPad / tablets */
+@media (min-width: 701px) and (max-width: 900px) {
+  .page {
+    --temperatura-controlada-trust-h: 108px;
+  }
+
+  .page .content {
+    position: absolute !important;
+    top: 118px !important;
+    left: 34px !important;
+    right: 34px !important;
+    bottom: 20px !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  .page .title {
+    font-size: clamp(2.45rem, 5.8vw, 3.45rem) !important;
+    max-width: 540px !important;
+    line-height: .9 !important;
+  }
+
+  .page .subtitle {
+    max-width: 470px !important;
+    font-size: .76rem !important;
+    line-height: 1.28 !important;
+  }
+
+  .page .actions {
+    margin-top: .75rem !important;
+    gap: .55rem !important;
+  }
+
+  .page .actions a {
+    min-height: 34px !important;
+    font-size: .5rem !important;
+  }
+
+  .page .trustBar {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .page .trustBar div {
+    height: 54px !important;
+    min-height: 54px !important;
+    padding: .45rem .75rem !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .page {
+    --temperatura-controlada-trust-h: 108px;
+  }
+
+  .page .hero {
+    min-height: calc(100svh - var(--temperatura-controlada-trust-h)) !important;
+  }
+
+  .page .content {
+    position: absolute !important;
+    top: 100px !important;
+    left: 24px !important;
+    right: 20px !important;
+    bottom: 18px !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  .page .title {
+    font-size: clamp(1.72rem, 8.6vw, 2.2rem) !important;
+    max-width: 315px !important;
+    line-height: .92 !important;
+  }
+
+  .page .subtitle {
+    max-width: 300px !important;
+    font-size: .66rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .page .actions {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    max-width: 250px !important;
+    gap: .45rem !important;
+    margin-top: .62rem !important;
+  }
+
+  .page .actions a {
+    width: 100% !important;
+    min-height: 32px !important;
+    font-size: .5rem !important;
+  }
+
+  .page .trustBar {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .page .trustBar div {
+    height: 54px !important;
+    min-height: 54px !important;
+    padding: .45rem .65rem !important;
+  }
+}
+
+/* =====================================================
+   TEMPERATURA-CONTROLADA HERO REAL JSX FINAL
+   Usa las clases reales:
+   hero / heroImage / heroOverlay / heroInner / heroContent /
+   eyebrow / title / subtitle / actions / trustBar
+   ===================================================== */
+
+.page > .hero {
+  position: relative !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background: #07111d !important;
+  color: #fff !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.page > .hero .heroImage {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  z-index: -4 !important;
+  filter: brightness(.72) contrast(1.08) saturate(1.08) !important;
+}
+
+.page > .hero .heroOverlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -3 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(90deg, rgba(3,7,13,.92) 0%, rgba(3,7,13,.66) 46%, rgba(3,7,13,.20) 100%),
+    linear-gradient(180deg, rgba(3,7,13,.12) 0%, rgba(3,7,13,.22) 46%, rgba(3,7,13,.68) 100%) !important;
+}
+
+.page > .hero .heroInner {
+  position: absolute !important;
+  z-index: 5 !important;
+  display: block !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+}
+
+.page > .hero .heroContent {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.page > .hero .operationCard {
+  display: none !important;
+}
+
+.page > .hero .eyebrow {
+  display: block !important;
+  color: #d6c08d !important;
+  font-weight: 950 !important;
+  text-transform: uppercase !important;
+  line-height: 1 !important;
+}
+
+.page > .hero .title {
+  margin: 0 !important;
+  color: #fff !important;
+  font-weight: 950 !important;
+  line-height: .9 !important;
+  letter-spacing: -.055em !important;
+  text-wrap: balance !important;
+  text-shadow: 0 18px 48px rgba(0,0,0,.40) !important;
+}
+
+.page > .hero .subtitle {
+  margin: 0 !important;
+  color: rgba(255,255,255,.90) !important;
+  font-weight: 650 !important;
+  text-shadow: 0 10px 28px rgba(0,0,0,.40) !important;
+}
+
+.page > .hero .actions {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+
+.page > .hero .actions a,
+.page > .hero .primaryBtn,
+.page > .hero .secondaryBtn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 999px !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  font-weight: 950 !important;
+  line-height: 1.05 !important;
+  white-space: nowrap !important;
+  letter-spacing: .035em !important;
+}
+
+/* DESKTOP GRANDE */
+@media (min-width: 1201px) {
+  .page > .hero {
+    height: 620px !important;
+    min-height: 620px !important;
+    max-height: 620px !important;
+  }
+
+  .page > .hero .heroImageDesktop {
+    display: block !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: none !important;
+  }
+
+  .page > .hero .heroImage {
+    object-position: 58% 50% !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 142px !important;
+    left: clamp(76px, 8vw, 130px) !important;
+    right: clamp(76px, 8vw, 130px) !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 660px !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin-bottom: .65rem !important;
+    font-size: .72rem !important;
+    letter-spacing: .22em !important;
+  }
+
+  .page > .hero .title {
+    max-width: 660px !important;
+    font-size: clamp(3.5rem, 4.8vw, 5.15rem) !important;
+  }
+
+  .page > .hero .subtitle {
+    max-width: 560px !important;
+    margin-top: .95rem !important;
+    font-size: .98rem !important;
+    line-height: 1.42 !important;
+  }
+
+  .page > .hero .actions {
+    gap: .78rem !important;
+    margin-top: 1.15rem !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 44px !important;
+    padding: 0 1.35rem !important;
+    font-size: .68rem !important;
+  }
+}
+
+/* DESKTOP/TABLET HORIZONTAL 901-1200 */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .page > .hero {
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+  }
+
+  .page > .hero .heroImageDesktop {
+    display: block !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: none !important;
+  }
+
+  .page > .hero .heroImage {
+    object-position: 60% 50% !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 118px !important;
+    left: clamp(58px, 7vw, 86px) !important;
+    right: clamp(58px, 7vw, 86px) !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 560px !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin-bottom: .55rem !important;
+    font-size: .6rem !important;
+    letter-spacing: .20em !important;
+  }
+
+  .page > .hero .title {
+    max-width: 560px !important;
+    font-size: clamp(2.65rem, 4.6vw, 3.95rem) !important;
+  }
+
+  .page > .hero .subtitle {
+    max-width: 500px !important;
+    margin-top: .72rem !important;
+    font-size: .82rem !important;
+    line-height: 1.34 !important;
+  }
+
+  .page > .hero .actions {
+    gap: .62rem !important;
+    margin-top: .85rem !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 36px !important;
+    padding: 0 1rem !important;
+    font-size: .54rem !important;
+  }
+}
+
+/* iPAD / TABLET 701-900 */
+@media (min-width: 701px) and (max-width: 900px) {
+  .page > .hero {
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+  }
+
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: block !important;
+  }
+
+  .page > .hero .heroImage {
+    object-position: 62% 50% !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 122px !important;
+    left: clamp(46px, 7vw, 62px) !important;
+    right: clamp(46px, 7vw, 62px) !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 520px !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin-bottom: .52rem !important;
+    font-size: .58rem !important;
+    letter-spacing: .19em !important;
+  }
+
+  .page > .hero .title {
+    max-width: 520px !important;
+    font-size: clamp(2.4rem, 5.5vw, 3.3rem) !important;
+  }
+
+  .page > .hero .subtitle {
+    max-width: 455px !important;
+    margin-top: .68rem !important;
+    font-size: .76rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .page > .hero .actions {
+    gap: .55rem !important;
+    margin-top: .78rem !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 35px !important;
+    padding: 0 .95rem !important;
+    font-size: .5rem !important;
+  }
+}
+
+/* MOBILE / FOLD <=700: SOLO 1 BOTÓN */
+@media (max-width: 700px) {
+  .page > .hero {
+    height: 465px !important;
+    min-height: 465px !important;
+    max-height: 465px !important;
+  }
+
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: block !important;
+  }
+
+  .page > .hero .heroImage {
+    object-position: 70% 54% !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 100px !important;
+    left: clamp(26px, 7vw, 38px) !important;
+    right: clamp(26px, 7vw, 38px) !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 315px !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin-bottom: .4rem !important;
+    font-size: .52rem !important;
+    letter-spacing: .15em !important;
+  }
+
+  .page > .hero .title {
+    max-width: 315px !important;
+    font-size: clamp(1.72rem, 8.4vw, 2.18rem) !important;
+    line-height: .92 !important;
+  }
+
+  .page > .hero .subtitle {
+    max-width: 300px !important;
+    margin-top: .5rem !important;
+    font-size: .66rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .page > .hero .actions {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    max-width: 250px !important;
+    gap: .45rem !important;
+    margin-top: .62rem !important;
+  }
+
+  .page > .hero .actions a {
+    width: 100% !important;
+    min-height: 32px !important;
+    padding: 0 .75rem !important;
+    font-size: .5rem !important;
+  }
+
+  .page > .hero .secondaryBtn,
+  .page > .hero .actions a:nth-of-type(2) {
+    display: none !important;
+  }
+}
+
+/* TRUSTBAR FINAL */
+@media (min-width: 901px) {
+  .page > .trustBar {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    height: 84px !important;
+    min-height: 84px !important;
+    max-height: 84px !important;
+    overflow: hidden !important;
+  }
+
+  .page > .trustBar div {
+    height: 84px !important;
+    min-height: 84px !important;
+    padding: .6rem .9rem !important;
+    gap: .6rem !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .page > .trustBar {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    height: 108px !important;
+    min-height: 108px !important;
+    max-height: 108px !important;
+    overflow: hidden !important;
+  }
+
+  .page > .trustBar div {
+    height: 54px !important;
+    min-height: 54px !important;
+    padding: .45rem .65rem !important;
+    gap: .55rem !important;
+  }
+}
+
+.page > .trustBar i {
+  width: 25px !important;
+  height: 25px !important;
+  min-width: 25px !important;
+}
+
+.page > .trustBar strong,
+.page > .trustBar small {
+  font-size: .56rem !important;
+  line-height: 1.05 !important;
+}
+
+
+/* =====================================================
+   TEMPERATURA-CONTROLADA HERO TEXT SPACING ONLY
+   Solo mejora aire entre eyebrow, título, texto y botones.
+   No toca altura, fondo ni trustBar.
+   ===================================================== */
+
+.page > .hero .eyebrow {
+  margin-bottom: .72rem !important;
+}
+
+.page > .hero .title {
+  line-height: .96 !important;
+  letter-spacing: -.05em !important;
+}
+
+.page > .hero .subtitle {
+  margin-top: .9rem !important;
+  line-height: 1.44 !important;
+}
+
+.page > .hero .actions {
+  margin-top: 1.15rem !important;
+  gap: .72rem !important;
+}
+
+.page > .hero .actions a,
+.page > .hero .primaryBtn,
+.page > .hero .secondaryBtn {
+  letter-spacing: .055em !important;
+  line-height: 1.1 !important;
+}
+
+/* Tablet */
+@media (min-width: 701px) and (max-width: 900px) {
+  .page > .hero .eyebrow {
+    margin-bottom: .68rem !important;
+  }
+
+  .page > .hero .title {
+    line-height: .95 !important;
+  }
+
+  .page > .hero .subtitle {
+    margin-top: .82rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: 1rem !important;
+    gap: .65rem !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .page > .hero .eyebrow {
+    margin-bottom: .58rem !important;
+  }
+
+  .page > .hero .title {
+    line-height: .96 !important;
+    letter-spacing: -.045em !important;
+  }
+
+  .page > .hero .subtitle {
+    margin-top: .72rem !important;
+    line-height: 1.36 !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: .95rem !important;
+    gap: .58rem !important;
+  }
+
+  .page > .hero .actions a,
+  .page > .hero .primaryBtn,
+  .page > .hero .secondaryBtn {
+    letter-spacing: .05em !important;
+  }
+}
+
+
+/* =====================================================
+   TEMPERATURA-CONTROLADA HERO EXTRA BLOCK SPACING
+   Separa mejor título, texto y botón. Solo aire interno.
+   ===================================================== */
+
+.page > .hero .title {
+  margin-bottom: 0 !important;
+}
+
+.page > .hero .subtitle {
+  margin-top: 1.15rem !important;
+  margin-bottom: 0 !important;
+}
+
+.page > .hero .actions {
+  margin-top: 1.45rem !important;
+}
+
+/* Tablet */
+@media (min-width: 701px) and (max-width: 900px) {
+  .page > .hero .subtitle {
+    margin-top: 1rem !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: 1.25rem !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .page > .hero .subtitle {
+    margin-top: .9rem !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: 1.15rem !important;
+  }
+}
+
+
+/* =====================================================
+   TEMPERATURA-CONTROLADA MOBILE FINAL TWEAK
+   Más aire entre menú y primer texto.
+   Oculta imágenes decorativas internas en mobile.
+   No toca el fondo del hero.
+   ===================================================== */
+
+@media (max-width: 700px) {
+  .page > .hero .heroInner {
+    top: 122px !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin-bottom: .52rem !important;
+  }
+}
+
+/* iPhone chico */
+@media (max-width: 390px) {
+  .page > .hero .heroInner {
+    top: 116px !important;
+  }
+}
+
+/* Suprimir bloques de imagen decorativa en mobile, no el hero */
+@media (max-width: 700px) {
+  .overview img,
+  .overview picture,
+  .overview [class*="Image"],
+  .overview [class*="image"],
+  .darkBandImage,
+  .finalImage {
+    display: none !important;
+  }
+
+  .overview,
+  .overviewCopy {
+    padding-top: 3rem !important;
+  }
+}
+
+
+/* =====================================================
+   TEMPERATURA-CONTROLADA HERO IMAGE COLOR / LIGHT FINAL
+   Solo mejora luz, contraste y overlay del fondo.
+   No toca estructura, textos, botones ni trustBar.
+   ===================================================== */
+
+.page > .hero .heroImage {
+  filter: brightness(.96) contrast(1.08) saturate(1.18) !important;
+}
+
+/* Overlay más limpio: oscuro donde está el texto, libre donde está el avión */
+.page > .hero .heroOverlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 7, 13, .82) 0%,
+      rgba(3, 7, 13, .62) 28%,
+      rgba(3, 7, 13, .30) 52%,
+      rgba(3, 7, 13, .08) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 7, 13, .10) 0%,
+      rgba(3, 7, 13, .08) 42%,
+      rgba(3, 7, 13, .22) 100%
+    ) !important;
+}
+
+/* Un toque cálido sobre la zona del sol/avión */
+.page > .hero::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -2 !important;
+  pointer-events: none !important;
+  background:
+    radial-gradient(
+      circle at 56% 68%,
+      rgba(218, 170, 82, .22),
+      transparent 34%
+    ) !important;
+}
+
+/* Tablet y mobile: un poco más oscuro para que el texto siga leyendo */
+@media (max-width: 900px) {
+  .page > .hero .heroImage {
+    filter: brightness(.90) contrast(1.08) saturate(1.14) !important;
+  }
+
+  .page > .hero .heroOverlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(3, 7, 13, .84) 0%,
+        rgba(3, 7, 13, .58) 46%,
+        rgba(3, 7, 13, .16) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(3, 7, 13, .12) 0%,
+        rgba(3, 7, 13, .10) 45%,
+        rgba(3, 7, 13, .30) 100%
+      ) !important;
+  }
+}
+
+
+/* =====================================================
+   TEMPERATURA-CONTROLADA HERO LIGHT RIGHT + MOBILE IMAGE HIDE
+   Más iluminación a la derecha y ocultar imágenes decorativas en mobile
+   ===================================================== */
+
+/* Más vida en la imagen */
+.page > .hero .heroImage {
+  filter: brightness(1.04) contrast(1.08) saturate(1.22) !important;
+}
+
+/* Overlay menos pesado del lado derecho */
+.page > .hero .heroOverlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 7, 13, .84) 0%,
+      rgba(3, 7, 13, .62) 28%,
+      rgba(3, 7, 13, .26) 54%,
+      rgba(3, 7, 13, .02) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 7, 13, .08) 0%,
+      rgba(3, 7, 13, .06) 46%,
+      rgba(3, 7, 13, .18) 100%
+    ) !important;
+}
+
+/* Luz cálida en zona del avión / cielo derecho */
+.page > .hero::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -2 !important;
+  pointer-events: none !important;
+  background:
+    radial-gradient(
+      circle at 78% 42%,
+      rgba(255, 220, 150, .34),
+      rgba(255, 190, 96, .16) 24%,
+      transparent 48%
+    ),
+    radial-gradient(
+      circle at 58% 72%,
+      rgba(224, 162, 72, .24),
+      transparent 36%
+    ) !important;
+}
+
+/* En tablet/mobile mantenemos lectura pero sin apagar tanto */
+@media (max-width: 900px) {
+  .page > .hero .heroImage {
+    filter: brightness(.98) contrast(1.08) saturate(1.18) !important;
+  }
+
+  .page > .hero .heroOverlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(3, 7, 13, .84) 0%,
+        rgba(3, 7, 13, .58) 44%,
+        rgba(3, 7, 13, .12) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(3, 7, 13, .10) 0%,
+        rgba(3, 7, 13, .08) 46%,
+        rgba(3, 7, 13, .24) 100%
+      ) !important;
+  }
+
+  .page > .hero::after {
+    background:
+      radial-gradient(
+        circle at 76% 44%,
+        rgba(255, 220, 150, .26),
+        rgba(255, 190, 96, .12) 24%,
+        transparent 48%
+      ) !important;
+  }
+}
+
+/* =====================================================
+   MOBILE: OCULTAR IMÁGENES DECORATIVAS INTERNAS
+   No toca la imagen del hero.
+   ===================================================== */
+
+@media (max-width: 700px) {
+  .overview img,
+  .overview picture,
+  .overview figure,
+  .overview [class*="image"],
+  .overview [class*="Image"],
+  .overview [class*="media"],
+  .overview [class*="Media"],
+  .overview [class*="visual"],
+  .overview [class*="Visual"],
+  .darkBandImage,
+  .finalImage {
+    display: none !important;
+  }
+
+  .darkBand [class*="image"],
+  .darkBand [class*="Image"],
+  .darkBand [class*="media"],
+  .darkBand [class*="Media"],
+  .finalCta [class*="image"],
+  .finalCta [class*="Image"],
+  .finalCta [class*="media"],
+  .finalCta [class*="Media"] {
+    display: none !important;
+  }
+
+  .overview,
+  .darkBand,
+  .finalCta {
+    background-image: none !important;
+  }
+
+  .overviewCopy,
+  .darkBandContent {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+
+/* =====================================================
+   TEMPERATURA-CONTROLADA MOBILE HIDE PILLARS SECTION
+   Oculta las cards/pilares en dispositivos menores a tablet.
+   No toca hero, trustBar ni certificaciones.
+   ===================================================== */
+
+@media (max-width: 700px) {
+  .pillars {
+    display: none !important;
+  }
+
+  .overview {
+    padding-bottom: 3rem !important;
+  }
+}
+
+
+/* =====================================================
+   TEMPERATURA-CONTROLADA DESKTOP BUTTON SAFE FIX
+   Solo desktop grande: evita que los botones toquen el trustBar.
+   ===================================================== */
+
+@media (min-width: 1201px) {
+  .page > .hero {
+    height: clamp(700px, calc(100svh - 86px), 800px) !important;
+    min-height: 700px !important;
+    max-height: 800px !important;
+  }
+
+  .page > .hero .heroInner {
+    top: clamp(145px, 16svh, 175px) !important;
+    left: clamp(76px, 7vw, 130px) !important;
+    right: clamp(76px, 7vw, 130px) !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 680px !important;
+  }
+
+  .page > .hero .title {
+    max-width: 680px !important;
+    font-size: clamp(4.1rem, 5.1vw, 5.8rem) !important;
+    line-height: .92 !important;
+  }
+
+  .page > .hero .subtitle {
+    max-width: 600px !important;
+    margin-top: 1.1rem !important;
+    font-size: 1.02rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: 1.35rem !important;
+    gap: .9rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .page > .hero .actions a,
+  .page > .hero .primaryBtn,
+  .page > .hero .secondaryBtn {
+    min-height: 46px !important;
+    padding: 0 1.45rem !important;
+    font-size: .68rem !important;
+  }
+
+  .page > .trustBar {
+    height: 86px !important;
+    min-height: 86px !important;
+    max-height: 86px !important;
+  }
+}
+
+/* Desktop ancho pero bajo: evita corte de botones */
+@media (min-width: 1201px) and (max-height: 820px) {
+  .page > .hero {
+    height: 680px !important;
+    min-height: 680px !important;
+    max-height: 680px !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 128px !important;
+  }
+
+  .page > .hero .title {
+    font-size: clamp(3.65rem, 4.7vw, 5.15rem) !important;
+  }
+
+  .page > .hero .subtitle {
+    margin-top: .95rem !important;
+    font-size: .95rem !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: 1.05rem !important;
+  }
+}
+
+
+/* =====================================================
+   TEMPERATURA-CONTROLADA HERO IMAGE NO ZOOM FINAL
+   Quita el recorte/zoom del hero principal.
+   ===================================================== */
+
+.page > .hero .heroImage {
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: #07111d !important;
+}
+
+/* Desktop usa imagen desktop */
+@media (min-width: 901px) {
+  .page > .hero .heroImageDesktop {
+    display: block !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: none !important;
+  }
+}
+
+/* Mobile/tablet usa imagen mobile */
+@media (max-width: 900px) {
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: block !important;
+  }
+}
+
+
+/* =====================================================
+   TEMPERATURA-CONTROLADA HERO MOBILE IMAGE SOURCE FIX
+   Desktop usa horizontal. Mobile usa vertical.
+   ===================================================== */
+
+@media (min-width: 901px) {
+  .page > .hero .heroImageDesktop {
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+}
+
+
+/* =====================================================
+   TEMPERATURA-CONTROLADA DESKTOP TITLE REFINEMENT
+   Solo pantallas grandes: título más elegante y menos monstruoso.
+   No toca mobile ni tablet.
+   ===================================================== */
+
+@media (min-width: 1400px) {
+  .page > .hero .heroInner {
+    top: 155px !important;
+    left: clamp(90px, 7vw, 140px) !important;
+    right: clamp(90px, 7vw, 140px) !important;
+  }
+
+  .page > .hero .heroContent {
+    max-width: 620px !important;
+  }
+
+  .page > .hero .title {
+    max-width: 620px !important;
+    font-size: clamp(3.45rem, 4.15vw, 4.75rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.045em !important;
+  }
+
+  .page > .hero .subtitle {
+    max-width: 560px !important;
+    margin-top: 1.15rem !important;
+    font-size: 1rem !important;
+    line-height: 1.48 !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: 1.35rem !important;
+    gap: .9rem !important;
+  }
+
+  .page > .hero .actions a {
+    min-height: 46px !important;
+    padding: 0 1.45rem !important;
+    font-size: .66rem !important;
+    letter-spacing: .055em !important;
+  }
+}
+
+/* Desktop grande pero bajo de alto */
+@media (min-width: 1400px) and (max-height: 820px) {
+  .page > .hero .heroInner {
+    top: 132px !important;
+  }
+
+  .page > .hero .title {
+    font-size: clamp(3.2rem, 3.85vw, 4.35rem) !important;
+    line-height: .95 !important;
+  }
+
+  .page > .hero .subtitle {
+    margin-top: 1rem !important;
+    font-size: .94rem !important;
+    line-height: 1.42 !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: 1.1rem !important;
+  }
+}
+
+
+/* =====================================================
+   TEMPERATURA-CONTROLADA HERO BRIGHT CORPORATE FINAL
+   Más luz al hero sin tocar estructura, texto ni botones.
+   ===================================================== */
+
+.page > .hero .heroImage {
+  filter: brightness(1.12) contrast(1.06) saturate(1.20) !important;
+}
+
+/* Menos sombra general: mantiene lectura en izquierda y deja vivir el avión */
+.page > .hero .heroOverlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 7, 13, .78) 0%,
+      rgba(3, 7, 13, .56) 28%,
+      rgba(3, 7, 13, .24) 52%,
+      rgba(3, 7, 13, .02) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 7, 13, .06) 0%,
+      rgba(3, 7, 13, .04) 46%,
+      rgba(3, 7, 13, .14) 100%
+    ) !important;
+}
+
+/* Luz cálida en avión / cielo / pista */
+.page > .hero::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -2 !important;
+  pointer-events: none !important;
+  background:
+    radial-gradient(
+      circle at 74% 38%,
+      rgba(255, 226, 170, .36),
+      rgba(255, 195, 105, .18) 26%,
+      transparent 52%
+    ),
+    radial-gradient(
+      circle at 55% 68%,
+      rgba(255, 180, 70, .26),
+      transparent 38%
+    ) !important;
+}
+
+/* Mobile/tablet: un poco menos de luz para que el texto no pierda contraste */
+@media (max-width: 900px) {
+  .page > .hero .heroImage {
+    filter: brightness(1.04) contrast(1.06) saturate(1.16) !important;
+  }
+
+  .page > .hero .heroOverlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(3, 7, 13, .80) 0%,
+        rgba(3, 7, 13, .56) 44%,
+        rgba(3, 7, 13, .14) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(3, 7, 13, .08) 0%,
+        rgba(3, 7, 13, .06) 48%,
+        rgba(3, 7, 13, .20) 100%
+      ) !important;
+  }
+
+  .page > .hero::after {
+    background:
+      radial-gradient(
+        circle at 74% 44%,
+        rgba(255, 220, 150, .24),
+        rgba(255, 190, 96, .12) 25%,
+        transparent 50%
+      ) !important;
+  }
+}
+
+
+/* =====================================================
+   TEMPERATURA-CONTROLADA HERO REAL IMAGE SWITCH HARD LOCK
+   Fuerza desktop/mobile con las clases reales del JSX.
+   ===================================================== */
+
+.page > .hero .heroImageDesktop {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: -4 !important;
+}
+
+.page > .hero .heroImageMobile {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  z-index: -5 !important;
+}
+
+@media (max-width: 900px) {
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    z-index: -5 !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: -4 !important;
+  }
+}
+
+@media (min-width: 901px) {
+  .page > .hero .heroImageDesktop {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: -4 !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    z-index: -5 !important;
+  }
+}
+
+
+/* =====================================================
+   TEMPERATURA-CONTROLADA HERO REAL IMAGE SWITCH HARD LOCK
+   Fuerza desktop/mobile con las clases reales del JSX.
+   ===================================================== */
+
+.page > .hero .heroImageDesktop {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: -4 !important;
+}
+
+.page > .hero .heroImageMobile {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  z-index: -5 !important;
+}
+
+@media (max-width: 900px) {
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    z-index: -5 !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: -4 !important;
+  }
+}
+
+@media (min-width: 901px) {
+  .page > .hero .heroImageDesktop {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: -4 !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    z-index: -5 !important;
+  }
+}
+
+
+/* =====================================================
+   TEMPERATURA-CONTROLADA MOBILE CERTIFICATIONS GAP FIX
+   Reduce espacio vacío entre certificaciones y overview.
+   ===================================================== */
+
+@media (max-width: 700px) {
+  .page .overview {
+    padding-top: 1.6rem !important;
+    margin-top: 0 !important;
+  }
+
+  .page .overviewCopy {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .page .overview .eyebrow,
+  .page .overview [class*="eyebrow"],
+  .page .overview [class*="Eyebrow"] {
+    margin-top: 0 !important;
+  }
+
+  /* Por si el espacio viene del componente de certificaciones */
+  .page section + .overview {
+    margin-top: 0 !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .page .overview {
+    padding-top: 1.25rem !important;
+  }
+}
+
+/* =====================================================
+   ZZZ MOBILE FLOW AFTER CERTIFICATIONS CLEAN FINAL
+   Mobile/tablet:
+   Después de certificaciones la página queda clara.
+   Se ocultan services/useCases/darkBand.
+   La única sección oscura con imagen queda antes de RelatedServices:
+   finalCta / data-across-final-cta.
+   ===================================================== */
+
+@media (max-width: 900px) {
+  .page section[data-mobile-hide-after-cert="true"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .page section[data-mobile-hide-after-cert="true"] + section {
+    margin-top: 0 !important;
+  }
+
+  /* El proceso queda limpio después del overview */
+  .page .process {
+    margin-top: 0 !important;
+    padding-top: 2.2rem !important;
+    background: #f4f1eb !important;
+  }
+
+  .page .process h2 {
+    max-width: 330px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    font-size: clamp(1.9rem, 8.2vw, 2.35rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.055em !important;
+    text-align: left !important;
+  }
+
+  .page .processGrid {
+    margin-top: 1.6rem !important;
+  }
+
+  /* La CTA final sí queda visible antes de RelatedServices/oficinas */
+  .page section[data-across-final-cta="true"] {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    min-height: 400px !important;
+    margin: 0 !important;
+  }
+}
+
+/* =====================================================
+   ZZZ MOBILE FINAL CTA ONLY ONE BUTTON
+   En mobile la CTA final queda con un solo botón.
+   ===================================================== */
+
+@media (max-width: 700px) {
+  .page section[data-across-final-cta="true"] a:nth-of-type(2),
+  .page section[data-sector-final-cta="true"] a:nth-of-type(2),
+  .page .finalCta a:nth-of-type(2) {
+    display: none !important;
+  }
+
+  .page section[data-across-final-cta="true"] a:first-of-type,
+  .page section[data-sector-final-cta="true"] a:first-of-type,
+  .page .finalCta a:first-of-type {
+    width: 100% !important;
+    max-width: 310px !important;
+    min-height: 52px !important;
+    margin-top: 1.45rem !important;
+  }
+}
+
+/* =====================================================
+   ZZZ MOBILE OVERVIEW LIGHT TYPOGRAPHY LOCK
+   Después de certificaciones:
+   - fondo claro
+   - títulos oscuros
+   - sin imagen/overlay oscuro
+   - coherente con la home y servicios ya corregidos
+   ===================================================== */
+
+@media (max-width: 900px) {
+  .page .overview,
+  .page .overviewMobileBg,
+  .page section[class*="overview"],
+  .page section[class*="Overview"] {
+    background: #f4f1eb !important;
+    background-image: none !important;
+    color: #07111d !important;
+    position: relative !important;
+    isolation: auto !important;
+    overflow: hidden !important;
+  }
+
+  .page .overview::before,
+  .page .overview::after,
+  .page .overviewMobileBg::before,
+  .page .overviewMobileBg::after,
+  .page section[class*="overview"]::before,
+  .page section[class*="overview"]::after,
+  .page section[class*="Overview"]::before,
+  .page section[class*="Overview"]::after {
+    content: none !important;
+    display: none !important;
+    opacity: 0 !important;
+    background: transparent !important;
+    background-image: none !important;
+  }
+
+  .page .overview h1,
+  .page .overview h2,
+  .page .overview h3,
+  .page .overviewMobileBg h1,
+  .page .overviewMobileBg h2,
+  .page .overviewMobileBg h3,
+  .page section[class*="overview"] h1,
+  .page section[class*="overview"] h2,
+  .page section[class*="overview"] h3,
+  .page section[class*="Overview"] h1,
+  .page section[class*="Overview"] h2,
+  .page section[class*="Overview"] h3 {
+    color: #07111d !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+    mix-blend-mode: normal !important;
+  }
+
+  .page .overview p,
+  .page .overviewMobileBg p,
+  .page section[class*="overview"] p,
+  .page section[class*="Overview"] p {
+    color: rgba(5, 12, 22, .78) !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+  }
+
+  .page .overview .eyebrow,
+  .page .overviewMobileBg .eyebrow,
+  .page .overview [class*="eyebrow"],
+  .page .overviewMobileBg [class*="eyebrow"],
+  .page section[class*="overview"] [class*="eyebrow"],
+  .page section[class*="Overview"] [class*="Eyebrow"] {
+    color: #c7a96b !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* =====================================================
+   ZZZ MOBILE OVERVIEW FORCE DARK TEXT FINAL
+   Mata blanco heredado en títulos del overview mobile:
+   color, text-fill, background-clip, blend y filtros.
+   ===================================================== */
+
+@media (max-width: 900px) {
+  .page .overview,
+  .page .overviewMobileBg {
+    background: #f4f1eb !important;
+    background-image: none !important;
+  }
+
+  .page .overview *,
+  .page .overviewMobileBg * {
+    mix-blend-mode: normal !important;
+    filter: none !important;
+  }
+
+  .page .overview h1,
+  .page .overview h2,
+  .page .overview h3,
+  .page .overviewCopy h1,
+  .page .overviewCopy h2,
+  .page .overviewCopy h3,
+  .page .overviewMobileBg h1,
+  .page .overviewMobileBg h2,
+  .page .overviewMobileBg h3 {
+    color: #07111d !important;
+    -webkit-text-fill-color: #07111d !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+    background: transparent !important;
+    background-image: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+    mix-blend-mode: normal !important;
+    filter: none !important;
+  }
+
+  .page .overview p,
+  .page .overviewCopy p,
+  .page .overviewMobileBg p {
+    color: rgba(5, 12, 22, .78) !important;
+    -webkit-text-fill-color: rgba(5, 12, 22, .78) !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+    background: transparent !important;
+    background-image: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+  }
+
+  .page .overview .eyebrow,
+  .page .overviewCopy .eyebrow,
+  .page .overviewMobileBg .eyebrow,
+  .page .overview [class*="eyebrow"],
+  .page .overviewCopy [class*="eyebrow"],
+  .page .overviewMobileBg [class*="eyebrow"] {
+    color: #c7a96b !important;
+    -webkit-text-fill-color: #c7a96b !important;
+    background: transparent !important;
+    background-image: none !important;
+    text-shadow: none !important;
+  }
+}
+
+/* =====================================================
+   ZZZ MOBILE CLEAR SECTIONS TYPOGRAPHY FINAL
+   Secciones claras después de certificaciones:
+   mismo negro, tamaño, peso y espaciado.
+   No toca hero.
+   ===================================================== */
+
+@media (max-width: 900px) {
+  .page .overview,
+  .page .overviewMobileBg,
+  .page .process {
+    background: #f4f1eb !important;
+    background-image: none !important;
+    color: #07111d !important;
+  }
+
+  .page .overview h1,
+  .page .overview h2,
+  .page .overview h3,
+  .page .overviewCopy h1,
+  .page .overviewCopy h2,
+  .page .overviewCopy h3,
+  .page .overviewMobileBg h1,
+  .page .overviewMobileBg h2,
+  .page .overviewMobileBg h3,
+  .page .process h1,
+  .page .process h2,
+  .page .process h3 {
+    color: #07111d !important;
+    -webkit-text-fill-color: #07111d !important;
+    font-family: inherit !important;
+    font-weight: 950 !important;
+    font-size: clamp(1.9rem, 8.2vw, 2.35rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.055em !important;
+    text-align: left !important;
+    text-wrap: balance !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+    background: transparent !important;
+    background-image: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+    mix-blend-mode: normal !important;
+    filter: none !important;
+  }
+
+  .page .overview p,
+  .page .overviewCopy p,
+  .page .overviewMobileBg p,
+  .page .process p {
+    color: rgba(5, 12, 22, .78) !important;
+    -webkit-text-fill-color: rgba(5, 12, 22, .78) !important;
+    font-family: inherit !important;
+    font-weight: 450 !important;
+    font-size: .95rem !important;
+    line-height: 1.62 !important;
+    letter-spacing: 0 !important;
+    text-align: left !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+    background: transparent !important;
+    background-image: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+  }
+
+  .page .overview .eyebrow,
+  .page .overviewCopy .eyebrow,
+  .page .overviewMobileBg .eyebrow,
+  .page .process .eyebrow,
+  .page .overview [class*="eyebrow"],
+  .page .overviewCopy [class*="eyebrow"],
+  .page .overviewMobileBg [class*="eyebrow"],
+  .page .process [class*="eyebrow"] {
+    color: #c7a96b !important;
+    -webkit-text-fill-color: #c7a96b !important;
+    font-family: inherit !important;
+    font-weight: 950 !important;
+    font-size: .55rem !important;
+    line-height: 1 !important;
+    letter-spacing: .17em !important;
+    text-transform: uppercase !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    background-image: none !important;
+  }
+
+  .page .overview,
+  .page .overviewMobileBg {
+    padding-top: 1.45rem !important;
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  .page .process {
+    padding-top: 2.2rem !important;
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+    padding-bottom: 2.8rem !important;
+  }
+
+  .page .overview h2,
+  .page .overviewCopy h2,
+  .page .overviewMobileBg h2,
+  .page .process h2 {
+    max-width: 330px !important;
+    margin: 0 !important;
+  }
+
+  .page .overview p,
+  .page .overviewCopy p,
+  .page .overviewMobileBg p,
+  .page .process p {
+    max-width: 320px !important;
+    margin-top: 1.15rem !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .page .overview,
+  .page .overviewMobileBg,
+  .page .process {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .page .overview h2,
+  .page .overviewCopy h2,
+  .page .overviewMobileBg h2,
+  .page .process h2 {
+    max-width: 300px !important;
+    font-size: 1.95rem !important;
+  }
+
+  .page .overview p,
+  .page .overviewCopy p,
+  .page .overviewMobileBg p,
+  .page .process p {
+    max-width: 295px !important;
+    font-size: .9rem !important;
+  }
+}
+
+/* =====================================================
+   ZZZ HERO IVORY TYPOGRAPHY FINAL
+   Los textos del HERO no son blanco puro.
+   Across usa marfil / blanco cálido premium.
+   Solo afecta hero, no overview ni process.
+   ===================================================== */
+
+.page > .hero {
+  --hero-ivory: #f4efe5;
+  --hero-ivory-soft: rgba(244, 239, 229, .88);
+  --hero-ivory-muted: rgba(244, 239, 229, .74);
+  --hero-gold: #c7a96b;
+}
+
+/* Título hero */
+.page > .hero h1,
+.page > .hero [data-hero-role="title"],
+.page > .hero .title,
+.page > .hero [class*="title"],
+.page > .hero [class*="Title"] {
+  color: var(--hero-ivory) !important;
+  -webkit-text-fill-color: var(--hero-ivory) !important;
+  text-shadow: 0 18px 44px rgba(0, 0, 0, .36) !important;
+  background: transparent !important;
+  background-image: none !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+}
+
+/* Texto/subtítulo hero */
+.page > .hero p,
+.page > .hero [data-hero-role="text"],
+.page > .hero .subtitle,
+.page > .hero [class*="subtitle"],
+.page > .hero [class*="Subtitle"] {
+  color: var(--hero-ivory-soft) !important;
+  -webkit-text-fill-color: var(--hero-ivory-soft) !important;
+  text-shadow: 0 12px 30px rgba(0, 0, 0, .28) !important;
+}
+
+/* Eyebrow hero */
+.page > .hero .eyebrow,
+.page > .hero [data-hero-role="eyebrow"],
+.page > .hero [class*="eyebrow"],
+.page > .hero [class*="Eyebrow"] {
+  color: var(--hero-gold) !important;
+  -webkit-text-fill-color: var(--hero-gold) !important;
+  text-shadow: 0 10px 26px rgba(0, 0, 0, .28) !important;
+}
+
+/* Botones hero: texto marfil */
+.page > .hero a,
+.page > .hero button,
+.page > .hero [data-hero-role="actions"] a,
+.page > .hero .actions a {
+  color: var(--hero-ivory) !important;
+  -webkit-text-fill-color: var(--hero-ivory) !important;
+}
+
+/* =====================================================
+   ZZZ PROCESS EYEBROW CLEAN FINAL
+   Quita sombra/fondo azul del eyebrow del proceso.
+   Debe quedar dorado limpio sobre fondo claro.
+   ===================================================== */
+
+.page .process .eyebrow,
+.page .process [class*="eyebrow"],
+.page .process [class*="Eyebrow"],
+.page section[class*="process"] .eyebrow,
+.page section[class*="process"] [class*="eyebrow"],
+.page section[class*="Process"] .eyebrow,
+.page section[class*="Process"] [class*="Eyebrow"] {
+  color: #c7a96b !important;
+  -webkit-text-fill-color: #c7a96b !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  border: 0 !important;
+  outline: 0 !important;
+  padding: 0 !important;
+  display: inline-block !important;
+  mix-blend-mode: normal !important;
+  filter: none !important;
+}
+
+.page .process .eyebrow::before,
+.page .process .eyebrow::after,
+.page .process [class*="eyebrow"]::before,
+.page .process [class*="eyebrow"]::after,
+.page section[class*="process"] [class*="eyebrow"]::before,
+.page section[class*="process"] [class*="eyebrow"]::after,
+.page section[class*="Process"] [class*="Eyebrow"]::before,
+.page section[class*="Process"] [class*="Eyebrow"]::after {
+  content: none !important;
+  display: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* =====================================================
+   ZZZ IVORY TEXT ON DARK AREAS FINAL
+   Todo texto que antes iba blanco puro en zonas oscuras
+   pasa a marfil premium Across.
+   No toca textos oscuros sobre fondo claro.
+   ===================================================== */
+
+.page {
+  --across-ivory: #f4efe5;
+  --across-ivory-soft: rgba(244, 239, 229, .88);
+  --across-ivory-muted: rgba(244, 239, 229, .74);
+}
+
+/* HERO: títulos, textos y botones */
+.page > .hero h1,
+.page > .hero h2,
+.page > .hero h3,
+.page > .hero p,
+.page > .hero a,
+.page > .hero button,
+.page > .hero strong,
+.page > .hero small,
+.page > .hero em,
+.page > .hero span:not(.eyebrow),
+.page > .hero [data-hero-role="title"],
+.page > .hero [data-hero-role="text"],
+.page > .hero [data-hero-role="actions"] a {
+  color: var(--across-ivory) !important;
+  -webkit-text-fill-color: var(--across-ivory) !important;
+}
+
+/* Texto secundario del hero un poco más suave */
+.page > .hero p,
+.page > .hero [data-hero-role="text"],
+.page > .hero .subtitle,
+.page > .hero [class*="subtitle"],
+.page > .hero [class*="Subtitle"] {
+  color: var(--across-ivory-soft) !important;
+  -webkit-text-fill-color: var(--across-ivory-soft) !important;
+}
+
+/* TrustBar / beneficios sobre fondo oscuro */
+.page .trustBar strong,
+.page .trustBar span,
+.page .trustBar small,
+.page .trustBar p,
+.page [data-temperatura-controlada-trust="true"] strong,
+.page [data-temperatura-controlada-trust="true"] span,
+.page [data-temperatura-controlada-trust="true"] small,
+.page [data-temperatura-controlada-trust="true"] p {
+  color: var(--across-ivory-soft) !important;
+  -webkit-text-fill-color: var(--across-ivory-soft) !important;
+}
+
+/* Bandas oscuras internas, si aparecen en desktop */
+.page .darkBand h1,
+.page .darkBand h2,
+.page .darkBand h3,
+.page .darkBand p,
+.page .darkBand a,
+.page .darkBand strong,
+.page .darkBand span,
+.page .darkBand small,
+.page section[data-sector-dark-band="true"] h1,
+.page section[data-sector-dark-band="true"] h2,
+.page section[data-sector-dark-band="true"] h3,
+.page section[data-sector-dark-band="true"] p,
+.page section[data-sector-dark-band="true"] a,
+.page section[data-sector-dark-band="true"] strong,
+.page section[data-sector-dark-band="true"] span,
+.page section[data-sector-dark-band="true"] small {
+  color: var(--across-ivory) !important;
+  -webkit-text-fill-color: var(--across-ivory) !important;
+}
+
+/* CTA final oscura */
+.page .finalCta h1,
+.page .finalCta h2,
+.page .finalCta h3,
+.page .finalCta p,
+.page .finalCta a,
+.page .finalCta button,
+.page .finalCta strong,
+.page .finalCta span,
+.page .finalCta small,
+.page section[data-across-final-cta="true"] h1,
+.page section[data-across-final-cta="true"] h2,
+.page section[data-across-final-cta="true"] h3,
+.page section[data-across-final-cta="true"] p,
+.page section[data-across-final-cta="true"] a,
+.page section[data-across-final-cta="true"] button,
+.page section[data-across-final-cta="true"] strong,
+.page section[data-across-final-cta="true"] span,
+.page section[data-across-final-cta="true"] small {
+  color: var(--across-ivory) !important;
+  -webkit-text-fill-color: var(--across-ivory) !important;
+}
+
+/* Párrafos de CTA final más suaves */
+.page .finalCta p,
+.page section[data-across-final-cta="true"] p {
+  color: var(--across-ivory-soft) !important;
+  -webkit-text-fill-color: var(--across-ivory-soft) !important;
+}
+
+/* Evita que queden títulos con blanco nuclear por text-fill */
+.page > .hero *,
+.page .darkBand *,
+.page .finalCta *,
+.page section[data-across-final-cta="true"] * {
+  text-shadow-color: rgba(0, 0, 0, .34) !important;
+}
+
+/* =====================================================
+   ZZZ MOBILE PROCESS COMPACT PREMIUM FINAL
+   Proceso operativo mobile:
+   - compacto
+   - elegante
+   - sin cards gigantes
+   - estilo lista premium
+   ===================================================== */
+
+@media (max-width: 700px) {
+  .page .process {
+    padding: 2.1rem 20px 2.6rem !important;
+    background: #f4f1eb !important;
+    overflow: hidden !important;
+  }
+
+  .page .process h2 {
+    max-width: 320px !important;
+    margin: 0 !important;
+    color: #07111d !important;
+    -webkit-text-fill-color: #07111d !important;
+    font-size: clamp(1.75rem, 7.6vw, 2.15rem) !important;
+    line-height: 1 !important;
+    letter-spacing: -.052em !important;
+    text-align: left !important;
+  }
+
+  .page .processGrid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: .72rem !important;
+    margin: 1.45rem 0 0 !important;
+    padding: 0 !important;
+  }
+
+  .page .processGrid > article,
+  .page .process article {
+    position: relative !important;
+    min-height: auto !important;
+    padding: .92rem .95rem .95rem 3.25rem !important;
+    margin: 0 !important;
+    border: 1px solid rgba(7, 17, 29, .10) !important;
+    border-radius: 18px !important;
+    background: rgba(255, 255, 255, .38) !important;
+    box-shadow: 0 14px 34px rgba(7, 17, 29, .045) !important;
+    display: block !important;
+    overflow: hidden !important;
+  }
+
+  /* Número del paso */
+  .page .processGrid > article > span:first-child,
+  .page .process article > span:first-child {
+    position: absolute !important;
+    top: .95rem !important;
+    left: .85rem !important;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    border-radius: 999px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #123f59 !important;
+    color: #f4efe5 !important;
+    -webkit-text-fill-color: #f4efe5 !important;
+    font-size: .72rem !important;
+    font-weight: 950 !important;
+    line-height: 1 !important;
+    box-shadow: 0 10px 24px rgba(18, 63, 89, .18) !important;
+  }
+
+  /* Icono */
+  .page .processGrid > article i,
+  .page .process article i {
+    display: inline-flex !important;
+    width: 20px !important;
+    height: 20px !important;
+    margin: 0 .42rem 0 0 !important;
+    vertical-align: -3px !important;
+    color: #123f59 !important;
+  }
+
+  .page .processGrid > article svg,
+  .page .process article svg {
+    width: 18px !important;
+    height: 18px !important;
+    stroke: #123f59 !important;
+  }
+
+  .page .processGrid > article h3,
+  .page .process article h3 {
+    display: inline !important;
+    margin: 0 !important;
+    color: #07111d !important;
+    -webkit-text-fill-color: #07111d !important;
+    font-size: 1.05rem !important;
+    line-height: 1.08 !important;
+    letter-spacing: -.035em !important;
+    font-weight: 950 !important;
+    text-wrap: balance !important;
+  }
+
+  .page .processGrid > article p,
+  .page .process article p {
+    max-width: 100% !important;
+    margin: .48rem 0 0 !important;
+    color: rgba(5, 12, 22, .68) !important;
+    -webkit-text-fill-color: rgba(5, 12, 22, .68) !important;
+    font-size: .84rem !important;
+    line-height: 1.42 !important;
+    font-weight: 450 !important;
+  }
+
+  /* Quitar flechas/líneas que ensucian en mobile */
+  .page .processGrid > article::before,
+  .page .processGrid > article::after,
+  .page .process article::before,
+  .page .process article::after {
+    content: none !important;
+    display: none !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .page .process {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .page .process h2 {
+    font-size: 1.82rem !important;
+    max-width: 300px !important;
+  }
+
+  .page .processGrid > article,
+  .page .process article {
+    padding: .86rem .85rem .9rem 3rem !important;
+    border-radius: 16px !important;
+  }
+
+  .page .processGrid > article > span:first-child,
+  .page .process article > span:first-child {
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+    min-height: 30px !important;
+    left: .78rem !important;
+  }
+
+  .page .processGrid > article h3,
+  .page .process article h3 {
+    font-size: 1rem !important;
+  }
+
+  .page .processGrid > article p,
+  .page .process article p {
+    font-size: .8rem !important;
+  }
+}
+
+/* =====================================================
+   ZZZ AFTER CERT MOBILE PREMIUM REAL CLASSES
+   Bloque claro post-certificaciones con clases reales:
+   overview + process.
+   Compacto, elegante, sin cards gigantes.
+   ===================================================== */
+
+@media (max-width: 700px) {
+  /* =========================
+     BLOQUE CLARO POST-CERTIFICACIONES
+     ========================= */
+
+  .page .overview,
+  .page .overviewMobileBg {
+    background: #f4f1eb !important;
+    background-image: none !important;
+    padding: 2.1rem 20px 2.35rem !important;
+    margin: 0 !important;
+    color: #07111d !important;
+    overflow: hidden !important;
+  }
+
+  .page .overview::before,
+  .page .overview::after,
+  .page .overviewMobileBg::before,
+  .page .overviewMobileBg::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .page .overview .eyebrow,
+  .page .overviewMobileBg .eyebrow,
+  .page .overview [class*="eyebrow"],
+  .page .overviewMobileBg [class*="eyebrow"] {
+    display: block !important;
+    margin: 0 0 .7rem !important;
+    color: #c8a96a !important;
+    -webkit-text-fill-color: #c8a96a !important;
+    font-size: .54rem !important;
+    line-height: 1 !important;
+    letter-spacing: .20em !important;
+    text-transform: uppercase !important;
+    font-weight: 950 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  .page .overview h2,
+  .page .overviewMobileBg h2 {
+    margin: 0 !important;
+    max-width: 320px !important;
+    color: #07111d !important;
+    -webkit-text-fill-color: #07111d !important;
+    font-size: clamp(1.85rem, 8vw, 2.22rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.052em !important;
+    font-weight: 950 !important;
+    text-wrap: balance !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    background-image: none !important;
+  }
+
+  .page .overview p,
+  .page .overviewMobileBg p {
+    margin: 1rem 0 0 !important;
+    max-width: 320px !important;
+    color: rgba(7, 17, 29, .72) !important;
+    -webkit-text-fill-color: rgba(7, 17, 29, .72) !important;
+    font-size: .92rem !important;
+    line-height: 1.58 !important;
+    font-weight: 450 !important;
+  }
+
+  .page .overview a,
+  .page .overviewMobileBg a {
+    width: 100% !important;
+    max-width: 320px !important;
+    min-height: 50px !important;
+    margin: 1.45rem 0 0 !important;
+    padding: 0 .95rem !important;
+    border-radius: 999px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #123f59 !important;
+    color: #f4efe5 !important;
+    -webkit-text-fill-color: #f4efe5 !important;
+    text-decoration: none !important;
+    font-size: .62rem !important;
+    line-height: 1.08 !important;
+    font-weight: 950 !important;
+    letter-spacing: .045em !important;
+    text-transform: uppercase !important;
+    box-shadow: 0 16px 34px rgba(18, 63, 89, .14) !important;
+  }
+
+  .page .pillars,
+  .page .pillarGrid,
+  .page .overview .pillars,
+  .page .overview .pillarGrid {
+    display: none !important;
+  }
+
+  /* =========================
+     PROCESO OPERATIVO MOBILE PREMIUM
+     ========================= */
+
+  .page .process {
+    background: #f4f1eb !important;
+    padding: 2rem 20px 2.5rem !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .page .process .eyebrow,
+  .page .process [class*="eyebrow"] {
+    display: block !important;
+    margin: 0 0 .75rem !important;
+    color: #c8a96a !important;
+    -webkit-text-fill-color: #c8a96a !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    font-size: .54rem !important;
+    line-height: 1 !important;
+    letter-spacing: .20em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+  }
+
+  .page .process h2 {
+    max-width: 320px !important;
+    margin: 0 !important;
+    color: #07111d !important;
+    -webkit-text-fill-color: #07111d !important;
+    font-size: clamp(1.78rem, 7.6vw, 2.12rem) !important;
+    line-height: 1 !important;
+    letter-spacing: -.052em !important;
+    font-weight: 950 !important;
+    text-align: left !important;
+    text-wrap: balance !important;
+  }
+
+  .page .processGrid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+    margin: 1.35rem 0 0 !important;
+    padding: 0 !important;
+    border-top: 1px solid rgba(7, 17, 29, .10) !important;
+  }
+
+  .page .processGrid > article,
+  .page .process article {
+    position: relative !important;
+    min-height: auto !important;
+    padding: 1rem 0 1rem 3.05rem !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-bottom: 1px solid rgba(7, 17, 29, .10) !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  .page .processGrid > article > span:first-child,
+  .page .process article > span:first-child {
+    position: absolute !important;
+    top: 1rem !important;
+    left: 0 !important;
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    min-height: 34px !important;
+    border-radius: 999px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #123f59 !important;
+    color: #f4efe5 !important;
+    -webkit-text-fill-color: #f4efe5 !important;
+    font-size: .72rem !important;
+    font-weight: 950 !important;
+    line-height: 1 !important;
+    box-shadow: none !important;
+  }
+
+  .page .processGrid > article i,
+  .page .process article i {
+    display: inline-flex !important;
+    width: 18px !important;
+    height: 18px !important;
+    margin: 0 .38rem 0 0 !important;
+    vertical-align: -3px !important;
+    color: #123f59 !important;
+    border: 0 !important;
+  }
+
+  .page .processGrid > article svg,
+  .page .process article svg {
+    width: 17px !important;
+    height: 17px !important;
+    stroke: #123f59 !important;
+  }
+
+  .page .processGrid > article h3,
+  .page .process article h3 {
+    display: inline !important;
+    margin: 0 !important;
+    color: #07111d !important;
+    -webkit-text-fill-color: #07111d !important;
+    font-size: 1.02rem !important;
+    line-height: 1.1 !important;
+    letter-spacing: -.035em !important;
+    font-weight: 950 !important;
+    text-wrap: balance !important;
+  }
+
+  .page .processGrid > article p,
+  .page .process article p {
+    max-width: 100% !important;
+    margin: .45rem 0 0 !important;
+    color: rgba(5, 12, 22, .66) !important;
+    -webkit-text-fill-color: rgba(5, 12, 22, .66) !important;
+    font-size: .82rem !important;
+    line-height: 1.42 !important;
+    font-weight: 450 !important;
+  }
+
+  .page .processGrid > article::before,
+  .page .processGrid > article::after,
+  .page .process article::before,
+  .page .process article::after {
+    content: none !important;
+    display: none !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .page .overview,
+  .page .overviewMobileBg,
+  .page .process {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .page .overview h2,
+  .page .overviewMobileBg h2,
+  .page .process h2 {
+    max-width: 300px !important;
+    font-size: 1.82rem !important;
+  }
+
+  .page .processGrid > article,
+  .page .process article {
+    padding-left: 2.9rem !important;
+  }
+
+  .page .processGrid > article > span:first-child,
+  .page .process article > span:first-child {
+    width: 31px !important;
+    height: 31px !important;
+    min-width: 31px !important;
+    min-height: 31px !important;
+  }
+
+  .page .processGrid > article h3,
+  .page .process article h3 {
+    font-size: .98rem !important;
+  }
+
+  .page .processGrid > article p,
+  .page .process article p {
+    font-size: .79rem !important;
+  }
+}
+
+/* =====================================================
+   ZZZ PROCESS MOBILE NO NUMBERS PREMIUM FINAL
+   Mobile/tablet:
+   Proceso sin números. Solo icono + título + texto.
+   Más limpio, premium y empresarial.
+   ===================================================== */
+
+@media (max-width: 900px) {
+  .page .process {
+    background: #f4f1eb !important;
+    padding: 2rem 20px 2.55rem !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .page .processGrid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+    margin: 1.35rem 0 0 !important;
+    padding: 0 !important;
+    border-top: 1px solid rgba(7, 17, 29, .10) !important;
+  }
+
+  .page .processGrid > article,
+  .page .process article {
+    position: relative !important;
+    min-height: auto !important;
+    padding: 1rem 0 1.05rem !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-bottom: 1px solid rgba(7, 17, 29, .10) !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    display: grid !important;
+    grid-template-columns: 24px minmax(0, 1fr) !important;
+    grid-template-areas:
+      "icon title"
+      ". text" !important;
+    column-gap: .62rem !important;
+    align-items: start !important;
+    overflow: visible !important;
+  }
+
+  /* Ocultar número */
+  .page .processGrid > article > span:first-child,
+  .page .process article > span:first-child {
+    display: none !important;
+  }
+
+  /* Icono */
+  .page .processGrid > article i,
+  .page .process article i {
+    grid-area: icon !important;
+    width: 22px !important;
+    height: 22px !important;
+    min-width: 22px !important;
+    min-height: 22px !important;
+    margin: .05rem 0 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #123f59 !important;
+    border: 1px solid rgba(18, 63, 89, .22) !important;
+    border-radius: 999px !important;
+    background: rgba(18, 63, 89, .035) !important;
+  }
+
+  .page .processGrid > article svg,
+  .page .process article svg {
+    width: 13px !important;
+    height: 13px !important;
+    min-width: 13px !important;
+    min-height: 13px !important;
+    stroke: #123f59 !important;
+    stroke-width: 2 !important;
+  }
+
+  /* Título */
+  .page .processGrid > article h3,
+  .page .process article h3 {
+    grid-area: title !important;
+    display: block !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    color: #07111d !important;
+    -webkit-text-fill-color: #07111d !important;
+    font-size: 1.02rem !important;
+    line-height: 1.08 !important;
+    letter-spacing: -.035em !important;
+    font-weight: 950 !important;
+    text-align: left !important;
+    text-wrap: balance !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  /* Texto */
+  .page .processGrid > article p,
+  .page .process article p {
+    grid-area: text !important;
+    max-width: 100% !important;
+    margin: .38rem 0 0 !important;
+    color: rgba(5, 12, 22, .66) !important;
+    -webkit-text-fill-color: rgba(5, 12, 22, .66) !important;
+    font-size: .8rem !important;
+    line-height: 1.42 !important;
+    font-weight: 450 !important;
+    text-align: left !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .page .processGrid > article::before,
+  .page .processGrid > article::after,
+  .page .process article::before,
+  .page .process article::after {
+    content: none !important;
+    display: none !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .page .process {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .page .processGrid > article,
+  .page .process article {
+    grid-template-columns: 22px minmax(0, 1fr) !important;
+    column-gap: .56rem !important;
+    padding: .92rem 0 .98rem !important;
+  }
+
+  .page .processGrid > article i,
+  .page .process article i {
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    min-height: 20px !important;
+  }
+
+  .page .processGrid > article svg,
+  .page .process article svg {
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  .page .processGrid > article h3,
+  .page .process article h3 {
+    font-size: .96rem !important;
+  }
+
+  .page .processGrid > article p,
+  .page .process article p {
+    font-size: .78rem !important;
+  }
+}
+
+/* =====================================================
+   ZZZ PROCESS MOBILE SPACED TRANSPARENT NUMBERS FINAL
+   Mobile/tablet:
+   - números visibles pero azul transparente
+   - más separación entre número, icono y texto
+   - lista limpia y premium
+   ===================================================== */
+
+@media (max-width: 900px) {
+  .page .process {
+    background: #f4f1eb !important;
+    padding: 2rem 20px 2.6rem !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .page .processGrid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+    margin: 1.45rem 0 0 !important;
+    padding: 0 !important;
+    border-top: 1px solid rgba(7, 17, 29, .10) !important;
+  }
+
+  .page .processGrid > article,
+  .page .process article {
+    position: relative !important;
+    min-height: auto !important;
+    padding: 1.08rem 0 1.15rem !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-bottom: 1px solid rgba(7, 17, 29, .10) !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    display: grid !important;
+    grid-template-columns: 34px 24px minmax(0, 1fr) !important;
+    grid-template-areas:
+      "num icon title"
+      "num . text" !important;
+    column-gap: .78rem !important;
+    row-gap: .12rem !important;
+    align-items: start !important;
+    overflow: visible !important;
+  }
+
+  /* Número: vuelve, pero transparente y premium */
+  .page .processGrid > article > span:first-child,
+  .page .process article > span:first-child {
+    grid-area: num !important;
+    position: static !important;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    margin: 0 !important;
+    border-radius: 999px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: rgba(18, 63, 89, .12) !important;
+    border: 1px solid rgba(18, 63, 89, .22) !important;
+    color: rgba(18, 63, 89, .88) !important;
+    -webkit-text-fill-color: rgba(18, 63, 89, .88) !important;
+    font-size: .7rem !important;
+    font-weight: 950 !important;
+    line-height: 1 !important;
+    box-shadow: none !important;
+  }
+
+  /* Icono separado del título */
+  .page .processGrid > article i,
+  .page .process article i {
+    grid-area: icon !important;
+    width: 22px !important;
+    height: 22px !important;
+    min-width: 22px !important;
+    min-height: 22px !important;
+    margin: .08rem 0 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: rgba(18, 63, 89, .82) !important;
+    border: 1px solid rgba(18, 63, 89, .18) !important;
+    border-radius: 999px !important;
+    background: rgba(18, 63, 89, .045) !important;
+  }
+
+  .page .processGrid > article svg,
+  .page .process article svg {
+    width: 13px !important;
+    height: 13px !important;
+    min-width: 13px !important;
+    min-height: 13px !important;
+    stroke: rgba(18, 63, 89, .88) !important;
+    stroke-width: 2 !important;
+  }
+
+  .page .processGrid > article h3,
+  .page .process article h3 {
+    grid-area: title !important;
+    display: block !important;
+    max-width: 100% !important;
+    margin: .02rem 0 0 !important;
+    color: #07111d !important;
+    -webkit-text-fill-color: #07111d !important;
+    font-size: 1.02rem !important;
+    line-height: 1.1 !important;
+    letter-spacing: -.035em !important;
+    font-weight: 950 !important;
+    text-align: left !important;
+    text-wrap: balance !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .page .processGrid > article p,
+  .page .process article p {
+    grid-area: text !important;
+    max-width: 100% !important;
+    margin: .48rem 0 0 !important;
+    color: rgba(5, 12, 22, .66) !important;
+    -webkit-text-fill-color: rgba(5, 12, 22, .66) !important;
+    font-size: .8rem !important;
+    line-height: 1.46 !important;
+    font-weight: 450 !important;
+    text-align: left !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .page .processGrid > article::before,
+  .page .processGrid > article::after,
+  .page .process article::before,
+  .page .process article::after {
+    content: none !important;
+    display: none !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .page .process {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .page .processGrid > article,
+  .page .process article {
+    grid-template-columns: 31px 22px minmax(0, 1fr) !important;
+    column-gap: .68rem !important;
+    padding: 1rem 0 1.05rem !important;
+  }
+
+  .page .processGrid > article > span:first-child,
+  .page .process article > span:first-child {
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+    min-height: 30px !important;
+    font-size: .66rem !important;
+  }
+
+  .page .processGrid > article i,
+  .page .process article i {
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    min-height: 20px !important;
+  }
+
+  .page .processGrid > article svg,
+  .page .process article svg {
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  .page .processGrid > article h3,
+  .page .process article h3 {
+    font-size: .96rem !important;
+  }
+
+  .page .processGrid > article p,
+  .page .process article p {
+    font-size: .78rem !important;
+  }
+}
+
+/* =====================================================
+   ZZZ TYPOGRAPHIC HIERARCHY HERO WINS FINAL
+   Regla visual:
+   - El HERO siempre tiene el título más grande.
+   - Ningún h2/h3 interno compite con el hero.
+   - Aplica a overview, process, finalCta, related, cards.
+   - NO toca .hero.
+   ===================================================== */
+
+/* =========================
+   DESKTOP
+   ========================= */
+
+@media (min-width: 901px) {
+  .page section:not(.hero) h1,
+  .page section:not(.hero) h2 {
+    font-size: clamp(2rem, 2.65vw, 3rem) !important;
+    line-height: 1 !important;
+    letter-spacing: -.05em !important;
+    font-weight: 950 !important;
+    text-wrap: balance !important;
+  }
+
+  .page section:not(.hero) h3 {
+    font-size: clamp(1.05rem, 1.45vw, 1.35rem) !important;
+    line-height: 1.08 !important;
+    letter-spacing: -.035em !important;
+    font-weight: 900 !important;
+  }
+
+  .page .overview h2,
+  .page .overviewMobileBg h2 {
+    max-width: 620px !important;
+    font-size: clamp(2.1rem, 2.75vw, 3.05rem) !important;
+  }
+
+  .page .process h2 {
+    max-width: 620px !important;
+    font-size: clamp(2rem, 2.55vw, 2.8rem) !important;
+  }
+
+  .page .finalCta h2,
+  .page section[data-across-final-cta="true"] h2,
+  .page section[data-sector-final-cta="true"] h2 {
+    max-width: 640px !important;
+    font-size: clamp(2rem, 2.65vw, 2.9rem) !important;
+  }
+
+  .page .processGrid > article h3,
+  .page .process article h3 {
+    font-size: clamp(1rem, 1.35vw, 1.22rem) !important;
+    line-height: 1.08 !important;
+  }
+
+  .page .stats article h3,
+  .page .pillars article h3,
+  .page .services article h3,
+  .page .useCases article h3 {
+    font-size: clamp(1rem, 1.28vw, 1.2rem) !important;
+    line-height: 1.08 !important;
+  }
+}
+
+/* =========================
+   TABLET / NEST / FOLD
+   ========================= */
+
+@media (min-width: 701px) and (max-width: 900px) {
+  .page section:not(.hero) h1,
+  .page section:not(.hero) h2 {
+    font-size: clamp(1.85rem, 4.4vw, 2.25rem) !important;
+    line-height: 1 !important;
+    letter-spacing: -.05em !important;
+    font-weight: 950 !important;
+  }
+
+  .page section:not(.hero) h3 {
+    font-size: clamp(1rem, 2.5vw, 1.18rem) !important;
+    line-height: 1.08 !important;
+    letter-spacing: -.035em !important;
+  }
+
+  .page .overview h2,
+  .page .overviewMobileBg h2,
+  .page .process h2,
+  .page .finalCta h2,
+  .page section[data-across-final-cta="true"] h2,
+  .page section[data-sector-final-cta="true"] h2 {
+    max-width: 460px !important;
+    font-size: clamp(1.85rem, 4.4vw, 2.18rem) !important;
+  }
+
+  .page .processGrid > article h3,
+  .page .process article h3 {
+    font-size: 1rem !important;
+    line-height: 1.1 !important;
+  }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+  .page section:not(.hero) h1,
+  .page section:not(.hero) h2 {
+    font-size: clamp(1.52rem, 6.4vw, 1.82rem) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -.045em !important;
+    font-weight: 950 !important;
+    text-wrap: balance !important;
+  }
+
+  .page section:not(.hero) h3 {
+    font-size: clamp(.92rem, 4.2vw, 1.02rem) !important;
+    line-height: 1.1 !important;
+    letter-spacing: -.03em !important;
+    font-weight: 900 !important;
+  }
+
+  .page .overview h2,
+  .page .overviewMobileBg h2 {
+    max-width: 310px !important;
+    font-size: clamp(1.55rem, 6.6vw, 1.85rem) !important;
+  }
+
+  .page .process h2 {
+    max-width: 310px !important;
+    font-size: clamp(1.5rem, 6.2vw, 1.78rem) !important;
+  }
+
+  .page .finalCta h2,
+  .page section[data-across-final-cta="true"] h2,
+  .page section[data-sector-final-cta="true"] h2 {
+    max-width: 310px !important;
+    font-size: clamp(1.58rem, 6.8vw, 1.9rem) !important;
+  }
+
+  .page .processGrid > article h3,
+  .page .process article h3 {
+    font-size: .96rem !important;
+    line-height: 1.1 !important;
+    letter-spacing: -.03em !important;
+  }
+
+  .page .stats article h3,
+  .page .pillars article h3,
+  .page .services article h3,
+  .page .useCases article h3 {
+    font-size: .96rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .page section:not(.hero) p {
+    font-size: .82rem !important;
+    line-height: 1.48 !important;
+  }
+
+  .page .overview p,
+  .page .overviewMobileBg p,
+  .page .process p,
+  .page .finalCta p,
+  .page section[data-across-final-cta="true"] p,
+  .page section[data-sector-final-cta="true"] p {
+    font-size: .82rem !important;
+    line-height: 1.48 !important;
+  }
+}
+
+/* =========================
+   MOBILE CHICO
+   ========================= */
+
+@media (max-width: 390px) {
+  .page section:not(.hero) h1,
+  .page section:not(.hero) h2,
+  .page .overview h2,
+  .page .overviewMobileBg h2,
+  .page .process h2,
+  .page .finalCta h2,
+  .page section[data-across-final-cta="true"] h2,
+  .page section[data-sector-final-cta="true"] h2 {
+    font-size: 1.58rem !important;
+    line-height: 1.02 !important;
+  }
+
+  .page .processGrid > article h3,
+  .page .process article h3 {
+    font-size: .92rem !important;
+  }
+
+  .page section:not(.hero) p {
+    font-size: .78rem !important;
+    line-height: 1.46 !important;
+  }
+}
+
+/* =====================================================
+   ZZZ MOBILE HERO WINS REAL FINAL
+   Mobile real:
+   - Hero h1 es el mayor, pero controlado.
+   - Overview/process/finalCta nunca compiten con hero.
+   - Corrige títulos gigantes post-certificaciones.
+   ===================================================== */
+
+@media (max-width: 700px) {
+  /* HERO MOBILE CONTROLADO */
+  .page > .hero {
+    height: 455px !important;
+    min-height: 455px !important;
+    max-height: 455px !important;
+  }
+
+  .page > .hero [data-hero-role="inner"],
+  .page > .hero .heroInner {
+    top: 92px !important;
+    left: 20px !important;
+    right: 20px !important;
+    max-width: none !important;
+  }
+
+  .page > .hero [data-hero-role="content"],
+  .page > .hero .heroContent {
+    max-width: 305px !important;
+  }
+
+  .page > .hero h1,
+  .page > .hero [data-hero-role="title"],
+  .page > .hero .title {
+    max-width: 305px !important;
+    font-size: clamp(1.58rem, 7.2vw, 1.92rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.045em !important;
+    font-weight: 950 !important;
+  }
+
+  .page > .hero p,
+  .page > .hero [data-hero-role="text"],
+  .page > .hero .subtitle {
+    max-width: 282px !important;
+    margin-top: .62rem !important;
+    font-size: .58rem !important;
+    line-height: 1.34 !important;
+  }
+
+  .page > .hero [data-hero-role="actions"],
+  .page > .hero .actions {
+    max-width: 250px !important;
+    margin-top: .82rem !important;
+  }
+
+  .page > .hero [data-hero-role="actions"] a,
+  .page > .hero .actions a {
+    min-height: 34px !important;
+    font-size: .5rem !important;
+  }
+
+  .page > .hero [data-hero-role="actions"] a:nth-of-type(2),
+  .page > .hero .actions a:nth-of-type(2) {
+    display: none !important;
+  }
+
+  /* TODO LO DE ABAJO MENOR QUE HERO */
+  .page section:not(.hero) h1,
+  .page section:not(.hero) h2 {
+    max-width: 300px !important;
+    font-size: clamp(1.34rem, 5.8vw, 1.62rem) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -.04em !important;
+    font-weight: 950 !important;
+  }
+
+  .page .overview h2,
+  .page .overviewMobileBg h2,
+  .page .process h2,
+  .page .finalCta h2,
+  .page section[data-across-final-cta="true"] h2,
+  .page section[data-sector-final-cta="true"] h2 {
+    max-width: 300px !important;
+    font-size: clamp(1.34rem, 5.8vw, 1.62rem) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -.04em !important;
+  }
+
+  .page section:not(.hero) h3 {
+    font-size: .92rem !important;
+    line-height: 1.1 !important;
+    letter-spacing: -.025em !important;
+  }
+
+  .page section:not(.hero) p {
+    font-size: .78rem !important;
+    line-height: 1.48 !important;
+  }
+
+  /* Post certificaciones más compacto */
+  .page .overview,
+  .page .overviewMobileBg {
+    padding-top: 1.55rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .page .process {
+    padding-top: 1.85rem !important;
+    padding-bottom: 2.35rem !important;
+  }
+
+  .page .processGrid {
+    margin-top: 1.15rem !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .page > .hero h1,
+  .page > .hero [data-hero-role="title"],
+  .page > .hero .title {
+    font-size: 1.62rem !important;
+    max-width: 292px !important;
+  }
+
+  .page section:not(.hero) h1,
+  .page section:not(.hero) h2,
+  .page .overview h2,
+  .page .overviewMobileBg h2,
+  .page .process h2,
+  .page .finalCta h2,
+  .page section[data-across-final-cta="true"] h2 {
+    font-size: 1.38rem !important;
+    max-width: 285px !important;
+  }
+}
+
 /* ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL
    Barra debajo del hero en servicios:
    borde dorado, títulos dorados, iconos azul Across.
@@ -5641,3 +8779,875 @@
   }
 }
 /* END ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL */
+
+/* ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL
+   Hero de servicios con presencia tipo home.
+   Scopeado por data-service-hero-home para no romper otras secciones.
+*/
+.page > .hero[data-service-hero-home="true"] {
+  position: relative !important;
+  width: 100vw !important;
+  max-width: none !important;
+  margin-left: 50% !important;
+  margin-right: 50% !important;
+  transform: translateX(-50%) !important;
+
+  min-height: 100svh !important;
+  height: 100svh !important;
+  max-height: 920px !important;
+
+  padding: 0 !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+}
+
+.page > .hero[data-service-hero-home="true"] img,
+.page > .hero[data-service-hero-home="true"] video,
+.page > .hero[data-service-hero-home="true"] [data-hero-role="desktop-image"],
+.page > .hero[data-service-hero-home="true"] [data-hero-role="mobile-image"],
+.page > .hero[data-service-hero-home="true"] [data-hero-role="video"] {
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+.page > .hero[data-service-hero-home="true"] [data-hero-role="inner"],
+.page > .hero[data-service-hero-home="true"] .heroInner {
+  min-height: 100% !important;
+  height: 100% !important;
+  max-height: inherit !important;
+  padding-bottom: 112px !important;
+}
+
+.page > .hero[data-service-hero-home="true"] [data-hero-role="content"],
+.page > .hero[data-service-hero-home="true"] .heroContent {
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+/* TrustBar integrada abajo como en el home */
+.page > .hero[data-service-hero-home="true"] + .trustBar,
+.page > .hero[data-service-hero-home="true"] + section[class*="trustBar"] {
+  position: relative !important;
+  z-index: 5 !important;
+  margin-top: -96px !important;
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 900px) {
+  .page > .hero[data-service-hero-home="true"] {
+    min-height: 86svh !important;
+    height: 86svh !important;
+    max-height: 760px !important;
+  }
+
+  .page > .hero[data-service-hero-home="true"] [data-hero-role="inner"],
+  .page > .hero[data-service-hero-home="true"] .heroInner {
+    padding-bottom: 0 !important;
+  }
+
+  .page > .hero[data-service-hero-home="true"] + .trustBar,
+  .page > .hero[data-service-hero-home="true"] + section[class*="trustBar"] {
+    margin-top: 0 !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .page > .hero[data-service-hero-home="true"] {
+    min-height: 82svh !important;
+    height: 82svh !important;
+    max-height: 690px !important;
+  }
+}
+/* END ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL */
+
+/* =====================================================
+   ACROSS COMMAND BAR EXPORTS
+   Necesario para que CSS Modules exporte styles.commandBar/item.
+   El estilo visual real vive en globals.css.
+   ===================================================== */
+
+.commandBar {}
+.commandItem {}
+
+/* END ACROSS COMMAND BAR EXPORTS */
+
+/* ZZZ TEMPERATURA-CONTROLADA SERVICES LITERAL DARKBAND AUTOMOCION FINAL
+   Copia LITERAL del darkBand de Automoción.
+*/
+.page .services {
+  position: relative !important;
+  isolation: isolate !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+  background-image: url("/images/sectores/automocion2.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-blend-mode: normal !important;
+}
+
+.page .services::before {
+  content: "" !important;
+  opacity: 0 !important;
+  background: none !important;
+  background-image: none !important;
+}
+
+.page .services::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  opacity: 1 !important;
+  background:
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(18, 63, 89, .42) 0%,
+      rgba(3, 10, 18, .20) 60%,
+      rgba(3, 10, 18, .45) 100%
+    ) !important;
+}
+
+.page .services > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+/* END ZZZ TEMPERATURA-CONTROLADA SERVICES LITERAL DARKBAND AUTOMOCION FINAL */
+
+/* ZZZ TEMPERATURA-CONTROLADA SERVICES SAME AS AUTOMOCION DARKBAND FINAL
+   Copia el sombreado/degradado de darkBand Automoción.
+   No copia la imagen de Automoción; conserva la imagen de fondo de TemperaturaControlada.
+*/
+.page .services {
+  position: relative !important;
+  isolation: isolate !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+  background-blend-mode: normal !important;
+}
+
+.page .services::before {
+  content: "" !important;
+  opacity: 0 !important;
+  background: none !important;
+  background-image: none !important;
+}
+
+.page .services::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+  opacity: 1 !important;
+  background:
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(18, 63, 89, .42) 0%,
+      rgba(3, 10, 18, .20) 60%,
+      rgba(3, 10, 18, .45) 100%
+    ) !important;
+}
+
+.page .services > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.page .services article,
+.page .services [class*="card"],
+.page .services [class*="Card"] {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.018)) !important;
+  border: 1px solid rgba(244, 239, 229, .16) !important;
+  box-shadow: 0 14px 34px rgba(0,0,0,.18) !important;
+}
+/* END ZZZ TEMPERATURA-CONTROLADA SERVICES SAME AS AUTOMOCION DARKBAND FINAL */
+
+/* ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED
+   Tablet / iPad chico:
+   Orden aprobado:
+   1) texto
+   2) iconos/cards
+   3) botón abajo centrado
+*/
+@media (min-width: 701px) and (max-width: 900px) {
+  .page .overview {
+    display: flex !important;
+    flex-direction: column !important;
+    width: min(100% - 48px, 820px) !important;
+    margin: 2.6rem auto 3.2rem !important;
+    padding: 0 !important;
+    gap: 1.8rem !important;
+  }
+
+  .page .overviewCopy {
+    display: contents !important;
+  }
+
+  .page .airKicker {
+    order: 1 !important;
+    margin-bottom: -.9rem !important;
+  }
+
+  .page .overviewCopy > h2 {
+    order: 2 !important;
+    width: 100% !important;
+    max-width: 560px !important;
+    font-size: clamp(2.45rem, 5.4vw, 3.25rem) !important;
+    line-height: .92 !important;
+    letter-spacing: -.055em !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+
+  .page .overviewCopy > p {
+    order: 3 !important;
+    width: 100% !important;
+    max-width: 560px !important;
+    font-size: .94rem !important;
+    line-height: 1.58 !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+
+  .page .pillars {
+    order: 4 !important;
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 0 !important;
+    width: 100% !important;
+    margin-top: .35rem !important;
+  }
+
+  .page .pillars article {
+    min-height: 185px !important;
+    padding: 1rem .8rem !important;
+    border-left: 1px solid rgba(3, 18, 30, .12) !important;
+    border-right: 0 !important;
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .page .pillars article:last-child {
+    border-right: 1px solid rgba(3, 18, 30, .12) !important;
+  }
+
+  .page .pillars i {
+    width: 2.35rem !important;
+    height: 2.35rem !important;
+    margin: 0 auto .85rem !important;
+  }
+
+  .page .pillars i svg {
+    width: 1.35rem !important;
+    height: 1.35rem !important;
+  }
+
+  .page .pillars h3 {
+    font-size: .98rem !important;
+    line-height: .96 !important;
+    letter-spacing: -.035em !important;
+    max-width: 120px !important;
+    margin: 0 auto .65rem !important;
+    text-align: center !important;
+  }
+
+  .page .pillars p {
+    font-size: .78rem !important;
+    line-height: 1.45 !important;
+    max-width: 122px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  .page .overviewCopy > a,
+  .page .overviewCopy > button {
+    order: 5 !important;
+    align-self: center !important;
+    margin: .2rem auto 0 !important;
+    transform: scale(.95) !important;
+    transform-origin: center center !important;
+  }
+}
+/* END ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED */
+
+/* ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL
+   iPad / tablet chico 701px-900px:
+   CTA final aprobado por consola:
+   - imagen acoplada al cuadro 100% x 100%
+   - sin bandas azules arriba/abajo
+   - alto compacto
+   - usa --mobile-bg de cada página
+*/
+@media (min-width: 701px) and (max-width: 900px) {
+  .page .finalCta,
+  .page section[data-across-final-cta="true"] {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 390px !important;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 3.2rem !important;
+
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+    padding-left: 3.2rem !important;
+    padding-right: 3.2rem !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+
+    border-radius: 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    transform: none !important;
+
+    background-color: #0d2838 !important;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(3,10,18,.72) 0%,
+        rgba(3,10,18,.50) 42%,
+        rgba(3,10,18,.16) 100%
+      ),
+      radial-gradient(circle at 70% 32%, rgba(15,111,150,.13), transparent 42%),
+      var(--mobile-bg, url("/images/hero/cargaAereahero.png")) center center / 100% 100% no-repeat !important;
+  }
+
+  .page .finalCta::before,
+  .page .finalCta::after,
+  .page section[data-across-final-cta="true"]::before,
+  .page section[data-across-final-cta="true"]::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .page .finalCta .finalImage,
+  .page .finalCta [class*="finalImage"],
+  .page section[data-across-final-cta="true"] .finalImage,
+  .page section[data-across-final-cta="true"] [class*="finalImage"] {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .page .finalCta > div:first-child,
+  .page section[data-across-final-cta="true"] > div:first-child {
+    position: relative !important;
+    z-index: 3 !important;
+    max-width: 520px !important;
+    width: 100% !important;
+  }
+
+  .page .finalCta h2,
+  .page section[data-across-final-cta="true"] h2 {
+    max-width: 520px !important;
+    margin: 0 0 1.35rem !important;
+
+    font-size: clamp(2.45rem, 5.1vw, 3.25rem) !important;
+    line-height: .94 !important;
+    letter-spacing: -.055em !important;
+
+    color: #f4efe5 !important;
+    -webkit-text-fill-color: #f4efe5 !important;
+    text-shadow: 0 5px 22px rgba(0,0,0,.42) !important;
+  }
+
+  .page .finalCta p,
+  .page section[data-across-final-cta="true"] p {
+    max-width: 500px !important;
+    margin: 0 0 1.9rem !important;
+
+    font-size: .96rem !important;
+    line-height: 1.58 !important;
+
+    color: rgba(244,239,229,.90) !important;
+    -webkit-text-fill-color: rgba(244,239,229,.90) !important;
+    text-shadow: 0 2px 12px rgba(0,0,0,.32) !important;
+  }
+
+  .page .finalCta .finalActions,
+  .page .finalCta [class*="finalActions"],
+  .page section[data-across-final-cta="true"] [class*="finalActions"] {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: .85rem !important;
+    align-items: center !important;
+  }
+
+  .page .finalCta .finalActions a,
+  .page .finalCta [class*="finalActions"] a,
+  .page section[data-across-final-cta="true"] [class*="finalActions"] a {
+    min-height: 3.05rem !important;
+    padding: 0 1.45rem !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 999px !important;
+    font-size: .75rem !important;
+    letter-spacing: .045em !important;
+    white-space: nowrap !important;
+  }
+}
+/* END ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL */
+
+/* ZZZ SERVICIOS SERVICES USE OWN MOBILE BG FINAL
+   Cada .services usa su propia imagen del page.tsx:
+   style={ "--mobile-bg": "url(...)" }
+   No mezcla con finalCta.
+*/
+.page .services {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 18, 30, .46) 0%,
+      rgba(5, 18, 31, .30) 48%,
+      rgba(8, 32, 48, .18) 100%
+    ),
+    radial-gradient(circle at 78% 18%, rgba(15,111,150,.14), transparent 38%),
+    linear-gradient(
+      180deg,
+      rgba(244,239,229,.025) 0%,
+      rgba(3,10,18,.20) 100%
+    ),
+    var(--mobile-bg) center center / cover no-repeat !important;
+
+  background-color: #0d2838 !important;
+}
+
+.page .services > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+/* END ZZZ SERVICIOS SERVICES USE OWN MOBILE BG FINAL */
+
+/* ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL
+   DarkBand restaurado correctamente:
+   - usa SU imagen original del page.tsx: /images/cargaaerea.png
+   - no usa imagen del CTA
+   - elimina capas oscuras viejas
+   - mantiene el estilo azul/premium
+*/
+.page .darkBand {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+
+  background-color: #0d2838 !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 10, 18, .54) 0%,
+      rgba(3, 10, 18, .34) 42%,
+      rgba(3, 10, 18, .14) 100%
+    ),
+    radial-gradient(circle at 76% 20%, rgba(15,111,150,.16), transparent 40%),
+    linear-gradient(
+      180deg,
+      rgba(244,239,229,.025) 0%,
+      rgba(3,10,18,.16) 100%
+    ),
+    url("/images/cargaaerea.png") center center / cover no-repeat !important;
+}
+
+.page .darkBand::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  opacity: .22 !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3,18,30,.34) 0%,
+      rgba(12,47,68,.16) 52%,
+      rgba(15,111,150,.06) 100%
+    ) !important;
+}
+
+.page .darkBand::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  opacity: .34 !important;
+  background:
+    radial-gradient(circle at 72% 22%, rgba(15,111,150,.12), transparent 40%),
+    linear-gradient(180deg, rgba(3,10,18,.04), rgba(3,10,18,.14)) !important;
+}
+
+.page .darkBand > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.page .darkBand .darkBandImage,
+.page .darkBand [class*="darkBandImage"] {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.page .darkBand h2 {
+  color: #f4efe5 !important;
+  -webkit-text-fill-color: #f4efe5 !important;
+  text-shadow: 0 5px 22px rgba(0,0,0,.42) !important;
+}
+
+.page .darkBand p {
+  color: rgba(244,239,229,.90) !important;
+  -webkit-text-fill-color: rgba(244,239,229,.90) !important;
+  text-shadow: 0 2px 12px rgba(0,0,0,.32) !important;
+}
+
+.page .darkBand article,
+.page .darkBand [class*="stat"],
+.page .darkBand [class*="Stat"] {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(3, 10, 18, .72),
+      rgba(4, 18, 29, .58)
+    ) !important;
+
+  border: 1px solid rgba(244, 239, 229, .34) !important;
+
+  box-shadow:
+    0 18px 44px rgba(0,0,0,.34),
+    inset 0 1px 0 rgba(255,255,255,.09),
+    inset 0 0 0 1px rgba(255,255,255,.035) !important;
+
+  backdrop-filter: blur(5px) saturate(1.05) !important;
+  -webkit-backdrop-filter: blur(5px) saturate(1.05) !important;
+}
+/* END ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL */
+
+/* ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL
+   Mobile real <=700px:
+   finalCta usa SU PROPIA imagen definida en --mobile-bg del page.tsx.
+   No usa imagen de services ni darkBand.
+*/
+@media (max-width: 700px) {
+  .page .finalCta,
+  .page section[data-across-final-cta="true"] {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 470px !important;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 3.2rem !important;
+
+    padding-top: 3.4rem !important;
+    padding-bottom: 3.4rem !important;
+
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+
+    background-color: #0d2838 !important;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(3,10,18,.76) 0%,
+        rgba(3,10,18,.54) 48%,
+        rgba(3,10,18,.24) 100%
+      ),
+      radial-gradient(circle at 70% 32%, rgba(15,111,150,.13), transparent 42%),
+      var(--mobile-bg) center center / 100% 100% no-repeat !important;
+  }
+
+  .page .finalCta::before,
+  .page .finalCta::after,
+  .page section[data-across-final-cta="true"]::before,
+  .page section[data-across-final-cta="true"]::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .page .finalCta .finalImage,
+  .page .finalCta [class*="finalImage"],
+  .page section[data-across-final-cta="true"] .finalImage,
+  .page section[data-across-final-cta="true"] [class*="finalImage"] {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .page .finalCta > div:first-child,
+  .page section[data-across-final-cta="true"] > div:first-child {
+    position: relative !important;
+    z-index: 3 !important;
+    width: 100% !important;
+  }
+}
+/* END ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL */
+
+/* ZZZ TEMPERATURA-CONTROLADA SERVICES SEAM ONLY FINAL
+   Tapa la línea/seam superior del bloque services sin cambiar imagen.
+*/
+.page .services {
+  margin-top: -6px !important;
+  padding-top: calc(76.8px + 6px) !important;
+  border-top: 0 !important;
+  outline: 0 !important;
+  background-position:
+    center center,
+    center center,
+    center center,
+    center -6px !important;
+}
+
+.page .services::before,
+.page .services::after {
+  top: -6px !important;
+  height: calc(100% + 6px) !important;
+}
+/* END ZZZ TEMPERATURA-CONTROLADA SERVICES SEAM ONLY FINAL */
+
+/* ZZZ TEMPERATURA-CONTROLADA MOBILE HERO TITLE DOWN FINAL
+   Baja un poco el título del hero en mobile.
+   No toca desktop/tablet.
+*/
+@media (max-width: 700px) {
+  .page .hero [class*="content"],
+  .page .hero [class*="heroContent"],
+  .page .hero [class*="copy"],
+  .page .hero [class*="HeroCopy"] {
+    padding-top: 2.2rem !important;
+    transform: translateY(1.4rem) !important;
+  }
+
+  .page .hero h1 {
+    margin-top: .9rem !important;
+  }
+}
+/* END ZZZ TEMPERATURA-CONTROLADA MOBILE HERO TITLE DOWN FINAL */
+
+/* ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED
+   Tablet / iPad chico:
+   Proceso operativo aprobado:
+   - título centrado
+   - pasos en 3 columnas x 2 filas
+   - número a la izquierda
+   - icono sutil a la derecha
+   - sin descripción chica para evitar cortes horribles
+*/
+@media (min-width: 701px) and (max-width: 900px) {
+  .page .process {
+    width: min(100% - 48px, 820px) !important;
+    margin: 0 auto !important;
+    padding: 3.2rem 0 3.4rem !important;
+    overflow: hidden !important;
+  }
+
+  .page .process .sectionHead,
+  .page .process header {
+    max-width: 720px !important;
+    margin: 0 auto 2.35rem !important;
+    text-align: center !important;
+  }
+
+  .page .process .eyebrow,
+  .page .process small {
+    display: block !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: .75rem !important;
+  }
+
+  .page .process h2 {
+    max-width: 640px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    font-size: clamp(2.5rem, 5.3vw, 3.25rem) !important;
+    line-height: .94 !important;
+    letter-spacing: -.055em !important;
+  }
+
+  .page .processGrid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1rem !important;
+    width: 100% !important;
+  }
+
+  .page .processGrid article {
+    min-height: 132px !important;
+    padding: 1.1rem 1rem !important;
+
+    display: grid !important;
+    grid-template-columns: 2.45rem 1fr 2rem !important;
+    grid-template-rows: auto 1fr !important;
+    column-gap: .7rem !important;
+    row-gap: .45rem !important;
+    align-items: center !important;
+
+    text-align: left !important;
+    position: relative !important;
+
+    border: 1px solid rgba(3, 18, 30, .10) !important;
+    border-radius: 1.05rem !important;
+
+    background:
+      linear-gradient(145deg, rgba(255,255,255,.58), rgba(244,239,229,.28)) !important;
+
+    box-shadow:
+      0 16px 34px rgba(3, 10, 18, .06),
+      inset 0 1px 0 rgba(255,255,255,.65) !important;
+  }
+
+  .page .processGrid article::before,
+  .page .processGrid article::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  .page .processGrid article strong {
+    position: static !important;
+    grid-column: 1 !important;
+    grid-row: 1 / span 2 !important;
+
+    width: 2.28rem !important;
+    height: 2.28rem !important;
+    min-width: 2.28rem !important;
+    min-height: 2.28rem !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin: 0 !important;
+    border-radius: 999px !important;
+
+    background:
+      radial-gradient(circle at 35% 25%, rgba(244,239,229,.22), transparent 34%),
+      linear-gradient(145deg, #12384e 0%, #061d2d 100%) !important;
+
+    color: #f4efe5 !important;
+    -webkit-text-fill-color: #f4efe5 !important;
+
+    border: 1px solid rgba(199, 169, 107, .48) !important;
+
+    box-shadow:
+      0 8px 18px rgba(3, 10, 18, .16),
+      inset 0 1px 0 rgba(255,255,255,.14),
+      0 0 0 5px rgba(15, 111, 150, .045) !important;
+
+    font-size: .78rem !important;
+    font-weight: 900 !important;
+    line-height: 1 !important;
+    z-index: 3 !important;
+  }
+
+  .page .processGrid article strong::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  .page .processGrid article i {
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+
+    width: 1.75rem !important;
+    height: 1.75rem !important;
+    margin: 0 !important;
+    justify-self: end !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 999px !important;
+    background: rgba(15, 111, 150, .07) !important;
+    border: 1px solid rgba(15, 111, 150, .18) !important;
+  }
+
+  .page .processGrid article i svg,
+  .page .processGrid article svg {
+    width: .95rem !important;
+    height: .95rem !important;
+    color: #0f6f96 !important;
+    stroke: #0f6f96 !important;
+    opacity: .95 !important;
+  }
+
+  .page .processGrid article h3 {
+    grid-column: 2 / span 2 !important;
+    grid-row: 1 / span 2 !important;
+
+    font-size: 1.02rem !important;
+    line-height: 1.02 !important;
+    letter-spacing: -.035em !important;
+    max-width: none !important;
+
+    margin: 0 !important;
+    align-self: center !important;
+    text-align: left !important;
+  }
+
+  .page .processGrid article p {
+    display: none !important;
+  }
+}
+/* END ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED */
+
+/* =====================================================
+   TEMPERATURA-CONTROLADA MOBILE HEIGHT LIKE MARITIMO
+   Solo iguala el alto del hero mobile.
+   No toca barra, titulo, texto, boton ni imagen.
+   ===================================================== */
+@media (max-width: 900px) {
+  .hero {
+    height: 100svh !important;
+    min-height: 100svh !important;
+    max-height: none !important;
+  }
+
+  .heroInner {
+    height: 100svh !important;
+    min-height: 100svh !important;
+    max-height: 100svh !important;
+  }
+}
+
+/* =====================================================
+   TEMPERATURA-CONTROLADA MOBILE HEIGHT LIKE MARITIMO
+   Solo iguala el alto del hero mobile.
+   No toca barra, titulo, texto, boton ni imagen.
+   ===================================================== */
+@media (max-width: 900px) {
+  .hero {
+    height: 100svh !important;
+    min-height: 100svh !important;
+    max-height: none !important;
+  }
+
+  .heroInner {
+    height: 100svh !important;
+    min-height: 100svh !important;
+    max-height: 100svh !important;
+  }
+}

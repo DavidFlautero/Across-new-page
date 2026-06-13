@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -552,105 +552,6 @@ export default function TransporteMaritimoPage() {
     };
   }, []);
 
-  /* MARITIMO MOBILE COMMAND BAR FORCE START */
-  useLayoutEffect(() => {
-    const applyMobileCommandBar = () => {
-      const hero = document.querySelector(
-        'section[data-service-name="maritimo"]'
-      ) as HTMLElement | null;
-
-      const bar = hero?.querySelector(
-        '[class*="commandBar"]'
-      ) as HTMLElement | null;
-
-      if (!hero || !bar) return;
-
-      const items = Array.from(bar.children) as HTMLElement[];
-      const isMobile = window.matchMedia("(max-width: 900px)").matches;
-
-      const props = [
-        "position",
-        "top",
-        "bottom",
-        "left",
-        "right",
-        "width",
-        "height",
-        "min-height",
-        "max-height",
-        "display",
-        "grid-template-columns",
-        "z-index",
-      ];
-
-      const itemProps = [
-        "position",
-        "display",
-        "flex-direction",
-        "align-items",
-        "justify-content",
-        "height",
-        "min-height",
-        "padding",
-        "margin",
-        "width",
-        "min-width",
-      ];
-
-      if (!isMobile) {
-        props.forEach((prop) => bar.style.removeProperty(prop));
-        items.forEach((item) => {
-          itemProps.forEach((prop) => item.style.removeProperty(prop));
-        });
-        return;
-      }
-
-      hero.style.setProperty("position", "relative", "important");
-
-      bar.style.setProperty("position", "absolute", "important");
-      bar.style.setProperty("top", "auto", "important");
-      bar.style.setProperty("bottom", "0", "important");
-      bar.style.setProperty("left", "0", "important");
-      bar.style.setProperty("right", "0", "important");
-      bar.style.setProperty("width", "100%", "important");
-      bar.style.setProperty("height", "66px", "important");
-      bar.style.setProperty("min-height", "66px", "important");
-      bar.style.setProperty("max-height", "66px", "important");
-      bar.style.setProperty("display", "grid", "important");
-      bar.style.setProperty(
-        "grid-template-columns",
-        "repeat(4, minmax(0, 1fr))",
-        "important"
-      );
-      bar.style.setProperty("z-index", "60", "important");
-
-      items.forEach((item) => {
-        item.style.setProperty("position", "static", "important");
-        item.style.setProperty("display", "flex", "important");
-        item.style.setProperty("flex-direction", "column", "important");
-        item.style.setProperty("align-items", "center", "important");
-        item.style.setProperty("justify-content", "center", "important");
-        item.style.setProperty("height", "66px", "important");
-        item.style.setProperty("min-height", "66px", "important");
-        item.style.setProperty("padding", "8px 4px", "important");
-        item.style.setProperty("margin", "0", "important");
-        item.style.setProperty("width", "auto", "important");
-        item.style.setProperty("min-width", "0", "important");
-      });
-    };
-
-    applyMobileCommandBar();
-
-    window.addEventListener("resize", applyMobileCommandBar);
-    window.addEventListener("orientationchange", applyMobileCommandBar);
-
-    return () => {
-      window.removeEventListener("resize", applyMobileCommandBar);
-      window.removeEventListener("orientationchange", applyMobileCommandBar);
-    };
-  }, []);
-  /* MARITIMO MOBILE COMMAND BAR FORCE END */
-
   const t = copy[locale];
 
   return (
@@ -658,7 +559,7 @@ export default function TransporteMaritimoPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={`${styles.hero} acrossPageHero`} data-service-hero="compact" data-standard-service-hero="true" data-service-name="maritimo"
+        <section className={styles.hero} data-aereo-hero="true" data-service-hero-home="true"
       >
           <Image
             src="/images/maritimo.png"
@@ -666,7 +567,6 @@ export default function TransporteMaritimoPage() {
             fill
             priority
             sizes="(max-width: 900px) 0px, 100vw"
-            data-hero-role="desktop-image"
             className={`${styles.heroImage} ${styles.heroImageDesktop}`}
           />
 
@@ -676,48 +576,59 @@ export default function TransporteMaritimoPage() {
             fill
             priority
             sizes="(max-width: 900px) 100vw, 0px"
-            data-hero-role="mobile-image"
             className={`${styles.heroImage} ${styles.heroImageMobile}`}
           />
 
-          <div data-hero-role="overlay" className={styles.heroOverlay} />
+          <div className={styles.heroOverlay} />
 
-          <div data-hero-role="inner" className={styles.heroInner}
+          <div className={styles.heroInner}
       >
-            <div data-hero-role="content" className={styles.heroContent}>
-              <span data-hero-role="eyebrow" className={styles.eyebrow}>{t.heroEyebrow}</span>
-              <h1 data-hero-role="title">{t.heroTitle}</h1>
-              <p data-hero-role="text">{t.heroText}</p>
+            <div className={styles.heroContent}>
+              <span className={styles.eyebrow}>{t.heroEyebrow}</span>
+              <h1 className={styles.title}>{t.heroTitle}</h1>
+              <p className={styles.subtitle}>{t.heroText}</p>
 
-              <div data-hero-role="actions" className={styles.actions}>
-                <Link href="/cotizacion">{t.primaryCta}</Link>
-                <Link href="/contacto">{t.secondaryCta}</Link>
+              <div className={styles.actions}>
+                <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>
+                <Link href="/contacto" className={styles.secondaryBtn}>{t.secondaryCta}</Link>
               </div>
             </div>
 
-          </div>
-        
+            <div className={styles.operationCard}>
+              <span>{t.activeLabel}</span>
+              <strong>{t.activeRoute}</strong>
+              <p>{t.activeCargo}</p>
 
-          <div className={styles.commandBar}>
-          {t.trust.map(([title, text]: string[], index: number) => {
-          const icons: IconName[] = ["timer", "shield", "document", "tracking"];
+              <div>
+                <small>{t.activeStatusLabel}</small>
+                <b>{t.activeStatus}</b>
+              </div>
 
-          return (
-          <div key={title} className={styles.commandItem}>
-          <i>
-          <Icon name={icons[index]} />
-          </i>
-          <span>
-          <strong>{title}</strong>
-          <small>{text}</small>
-          </span>
+              <div>
+                <small>{t.activeEtaLabel}</small>
+                <em>{t.activeEta}</em>
+              </div>
+            </div>
           </div>
-          );
-          })}
+
+          <div className={styles.commandBar} data-service-trust="maritimo">
+            {t.trust.map(([title, text]: string[], index: number) => {
+              const icons: IconName[] = ["timer", "shield", "document", "tracking"];
+
+              return (
+                <div key={title} className={styles.commandItem}>
+                  <i>
+                    <Icon name={icons[index]} />
+                  </i>
+                  <span>
+                    <strong>{title}</strong>
+                    <small>{text}</small>
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </section>
-
-
 
         <Certifications />
 
@@ -746,7 +657,7 @@ export default function TransporteMaritimoPage() {
           </div>
         </section>
 
-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/transporte-maritimo-mobile/maritimo-mobile.png')" } as CSSProperties}>
+        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/maritimo.png')" } as CSSProperties}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -819,7 +730,7 @@ export default function TransporteMaritimoPage() {
         <section className={styles.darkBand} data-mobile-hide-after-cert="true">
           <div className={styles.darkBandImage}>
             <Image
-              src="/images/transporte-maritimo-mobile/maritimo-mobile.png"
+              src="/images/cargaaerea.png"
               alt={t.bandTitle}
               fill
               sizes="(max-width: 900px) 100vw, 42vw"
@@ -846,7 +757,7 @@ export default function TransporteMaritimoPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/transporte-maritimo-mobile/maritimo2-mobile.png')" } as CSSProperties} data-across-final-cta="true">
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/maritimo.png')" } as CSSProperties} data-across-final-cta="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>
@@ -859,7 +770,7 @@ export default function TransporteMaritimoPage() {
 
           <div className={styles.finalImage}>
             <Image
-              src="/images/transporte-maritimo-mobile/maritimo2-mobile.png"
+              src="/images/maritimo.png"
               alt={t.finalTitle}
               fill
               sizes="(max-width: 900px) 100vw, 44vw"
@@ -867,7 +778,7 @@ export default function TransporteMaritimoPage() {
           </div>
         </section>
 
-        <RelatedServices current="transporte-maritimo" locale={locale} />
+        <RelatedServices current="transporte-aereo" locale={locale} />
       </main>
 
       <Footer />
