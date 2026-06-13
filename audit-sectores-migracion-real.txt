@@ -1,0 +1,214 @@
+========================================
+1) LISTA DE SECTORES
+========================================
+src/app/sectores/Sectores.module.css
+src/app/sectores/alimentacion-bebidas/AlimentacionBebidas.module.css
+src/app/sectores/alimentacion-bebidas/page.tsx
+src/app/sectores/automocion/Automocion.module.css
+src/app/sectores/automocion/page.tsx
+src/app/sectores/consumo-distribucion/ConsumoDistribucion.module.css
+src/app/sectores/consumo-distribucion/page.tsx
+src/app/sectores/energias-renovables/EnergiasRenovables.module.css
+src/app/sectores/energias-renovables/page.tsx
+src/app/sectores/farmaceutico-sanitario/FarmaceuticoSanitario.module.css
+src/app/sectores/farmaceutico-sanitario/page.tsx
+src/app/sectores/page.tsx
+src/app/sectores/quimico/Quimico.module.css
+src/app/sectores/quimico/page.tsx
+src/app/sectores/tecnologico/Servicio.module.css
+src/app/sectores/tecnologico/page.tsx
+
+========================================
+2) IMPORT CSS EN CADA SECTOR
+========================================
+src/app/sectores/alimentacion-bebidas/page.tsx:10:import styles from "./AlimentacionBebidas.module.css";
+src/app/sectores/automocion/page.tsx:10:import styles from "./Automocion.module.css";
+src/app/sectores/consumo-distribucion/page.tsx:10:import styles from "./ConsumoDistribucion.module.css";
+src/app/sectores/energias-renovables/page.tsx:10:import styles from "./EnergiasRenovables.module.css";
+src/app/sectores/farmaceutico-sanitario/page.tsx:10:import styles from "./FarmaceuticoSanitario.module.css";
+src/app/sectores/quimico/page.tsx:10:import styles from "./Quimico.module.css";
+src/app/sectores/tecnologico/page.tsx:10:import styles from "./Servicio.module.css";
+
+========================================
+3) COMO SE LLAMAN LOS BLOQUES DE TEXTO
+========================================
+src/app/sectores/alimentacion-bebidas/page.tsx:12:type Locale = "es" | "en" | "zh";
+src/app/sectores/alimentacion-bebidas/page.tsx:14:const copy = {
+src/app/sectores/alimentacion-bebidas/page.tsx:501:} satisfies Record<Locale, any>;
+src/app/sectores/automocion/page.tsx:12:type Locale = "es" | "en" | "zh";
+src/app/sectores/automocion/page.tsx:14:const copy = {
+src/app/sectores/automocion/page.tsx:501:} satisfies Record<Locale, any>;
+src/app/sectores/consumo-distribucion/page.tsx:12:type Locale = "es" | "en" | "zh";
+src/app/sectores/consumo-distribucion/page.tsx:14:const copy = {
+src/app/sectores/consumo-distribucion/page.tsx:501:} satisfies Record<Locale, any>;
+src/app/sectores/energias-renovables/page.tsx:12:type Locale = "es" | "en" | "zh";
+src/app/sectores/energias-renovables/page.tsx:14:const copy = {
+src/app/sectores/energias-renovables/page.tsx:501:} satisfies Record<Locale, any>;
+src/app/sectores/farmaceutico-sanitario/page.tsx:12:type Locale = "es" | "en" | "zh";
+src/app/sectores/farmaceutico-sanitario/page.tsx:14:const copy = {
+src/app/sectores/farmaceutico-sanitario/page.tsx:501:} satisfies Record<Locale, any>;
+src/app/sectores/quimico/page.tsx:12:type Locale = "es" | "en" | "zh";
+src/app/sectores/quimico/page.tsx:14:const copy = {
+src/app/sectores/quimico/page.tsx:501:} satisfies Record<Locale, any>;
+src/app/sectores/tecnologico/page.tsx:12:type Locale = "es" | "en" | "zh";
+src/app/sectores/tecnologico/page.tsx:14:const copy = {
+src/app/sectores/tecnologico/page.tsx:501:} satisfies Record<Locale, any>;
+
+========================================
+4) HERO ACTUAL EN CADA SECTOR
+========================================
+src/app/sectores/alimentacion-bebidas/page.tsx:790:        <section className={styles.hero} data-sector-name="alimentacion-bebidas" data-sector-hero-home="true"
+src/app/sectores/alimentacion-bebidas/page.tsx:812:          <div className={styles.heroInner}
+src/app/sectores/alimentacion-bebidas/page.tsx:814:            <div className={styles.heroContent}>
+src/app/sectores/alimentacion-bebidas/page.tsx:825:            <div className={styles.operationCard}>
+src/app/sectores/alimentacion-bebidas/page.tsx:842:          <div className={styles.commandBar} data-sector-trust="alimentacion-bebidas">
+src/app/sectores/alimentacion-bebidas/page.tsx:847:                <div key={title} className={styles.commandItem}>
+src/app/sectores/automocion/page.tsx:790:        <section className={styles.hero} data-sector-name="automocion" data-sector-hero-home="true"
+src/app/sectores/automocion/page.tsx:812:          <div className={styles.heroInner}
+src/app/sectores/automocion/page.tsx:814:            <div className={styles.heroContent}>
+src/app/sectores/automocion/page.tsx:825:            <div className={styles.operationCard}>
+src/app/sectores/automocion/page.tsx:842:          <div className={styles.commandBar} data-sector-trust="automocion">
+src/app/sectores/automocion/page.tsx:847:                <div key={title} className={styles.commandItem}>
+src/app/sectores/consumo-distribucion/page.tsx:790:        <section className={styles.hero} data-sector-name="consumo-distribucion" data-sector-hero-home="true"
+src/app/sectores/consumo-distribucion/page.tsx:812:          <div className={styles.heroInner}
+src/app/sectores/consumo-distribucion/page.tsx:814:            <div className={styles.heroContent}>
+src/app/sectores/consumo-distribucion/page.tsx:825:            <div className={styles.operationCard}>
+src/app/sectores/consumo-distribucion/page.tsx:842:          <div className={styles.commandBar} data-sector-trust="consumo-distribucion">
+src/app/sectores/consumo-distribucion/page.tsx:847:                <div key={title} className={styles.commandItem}>
+src/app/sectores/energias-renovables/page.tsx:790:        <section className={styles.hero} data-sector-name="energias-renovables" data-sector-hero-home="true"
+src/app/sectores/energias-renovables/page.tsx:812:          <div className={styles.heroInner}
+src/app/sectores/energias-renovables/page.tsx:814:            <div className={styles.heroContent}>
+src/app/sectores/energias-renovables/page.tsx:825:            <div className={styles.operationCard}>
+src/app/sectores/energias-renovables/page.tsx:842:          <div className={styles.commandBar} data-sector-trust="energias-renovables">
+src/app/sectores/energias-renovables/page.tsx:847:                <div key={title} className={styles.commandItem}>
+src/app/sectores/farmaceutico-sanitario/page.tsx:790:        <section className={styles.hero} data-sector-name="farmaceutico-sanitario" data-sector-hero-home="true"
+src/app/sectores/farmaceutico-sanitario/page.tsx:812:          <div className={styles.heroInner}
+src/app/sectores/farmaceutico-sanitario/page.tsx:814:            <div className={styles.heroContent}>
+src/app/sectores/farmaceutico-sanitario/page.tsx:825:            <div className={styles.operationCard}>
+src/app/sectores/farmaceutico-sanitario/page.tsx:842:          <div className={styles.commandBar} data-sector-trust="farmaceutico-sanitario">
+src/app/sectores/farmaceutico-sanitario/page.tsx:847:                <div key={title} className={styles.commandItem}>
+src/app/sectores/farmaceutico-sanitario/page.tsx:888:        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/sectores/herofarmaseutico.png')" } as CSSProperties}>
+src/app/sectores/farmaceutico-sanitario/page.tsx:988:        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/sectores/herofarmaseutico.png')" } as CSSProperties} data-across-final-cta="true">
+src/app/sectores/quimico/page.tsx:790:        <section className={styles.hero} data-sector-name="quimico" data-sector-hero-home="true"
+src/app/sectores/quimico/page.tsx:812:          <div className={styles.heroInner}
+src/app/sectores/quimico/page.tsx:814:            <div className={styles.heroContent}>
+src/app/sectores/quimico/page.tsx:825:            <div className={styles.operationCard}>
+src/app/sectores/quimico/page.tsx:842:          <div className={styles.commandBar} data-sector-trust="quimico">
+src/app/sectores/quimico/page.tsx:847:                <div key={title} className={styles.commandItem}>
+src/app/sectores/quimico/page.tsx:888:        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/sectores/quimicohero.png')" } as CSSProperties}>
+src/app/sectores/quimico/page.tsx:988:        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/sectores/quimicohero.png')" } as CSSProperties} data-across-final-cta="true">
+src/app/sectores/tecnologico/page.tsx:790:        <section className={styles.hero} data-sector-name="tecnologico" data-sector-hero-home="true"
+src/app/sectores/tecnologico/page.tsx:812:          <div className={styles.heroInner}
+src/app/sectores/tecnologico/page.tsx:814:            <div className={styles.heroContent}>
+src/app/sectores/tecnologico/page.tsx:825:            <div className={styles.operationCard}>
+src/app/sectores/tecnologico/page.tsx:842:          <div className={styles.commandBar} data-sector-trust="tecnologico">
+src/app/sectores/tecnologico/page.tsx:847:                <div key={title} className={styles.commandItem}>
+
+========================================
+5) IMAGENES USADAS EN CADA SECTOR
+========================================
+src/app/sectores/alimentacion-bebidas/page.tsx:793:            src="/images/sectores/alimentosybebidas.png"
+src/app/sectores/alimentacion-bebidas/page.tsx:802:            src="/images/sectores/alimentosybebidas2.png"
+src/app/sectores/alimentacion-bebidas/page.tsx:961:              src="/images/cargaaerea.png"
+src/app/sectores/alimentacion-bebidas/page.tsx:1001:              src="/images/sectores/alimentosybebidas.png"
+src/app/sectores/automocion/page.tsx:793:            src="/images/sectores/transporte-logistica-automocion.png"
+src/app/sectores/automocion/page.tsx:802:            src="/images/sectores/automocion2.png"
+src/app/sectores/automocion/page.tsx:961:              src="/images/cargaaerea.png"
+src/app/sectores/automocion/page.tsx:1001:              src="/images/sectores/transporte-logistica-automocion.png"
+src/app/sectores/consumo-distribucion/page.tsx:793:            src="/images/sectores/consumo1.png"
+src/app/sectores/consumo-distribucion/page.tsx:802:            src="/images/sectores/consumo2.png"
+src/app/sectores/consumo-distribucion/page.tsx:961:              src="/images/cargaaerea.png"
+src/app/sectores/consumo-distribucion/page.tsx:1001:              src="/images/sectores/consumo1.png"
+src/app/sectores/energias-renovables/page.tsx:793:            src="/images/sectores/energiasrenovables.png"
+src/app/sectores/energias-renovables/page.tsx:802:            src="/images/sectores/energiasrenovables2.mp4"
+src/app/sectores/energias-renovables/page.tsx:961:              src="/images/cargaaerea.png"
+src/app/sectores/energias-renovables/page.tsx:1001:              src="/images/sectores/energiasrenovables.png"
+src/app/sectores/farmaceutico-sanitario/page.tsx:793:            src="/images/sectores/herofarmaseutico.png"
+src/app/sectores/farmaceutico-sanitario/page.tsx:802:            src="/images/sectores/herofarmaceutico2.png"
+src/app/sectores/farmaceutico-sanitario/page.tsx:961:              src="/images/cargaaerea.png"
+src/app/sectores/farmaceutico-sanitario/page.tsx:1001:              src="/images/sectores/herofarmaseutico.png"
+src/app/sectores/quimico/page.tsx:793:            src="/images/sectores/quimicohero.png"
+src/app/sectores/quimico/page.tsx:802:            src="/images/sectores/quimico2.png"
+src/app/sectores/quimico/page.tsx:961:              src="/images/cargaaerea.png"
+src/app/sectores/quimico/page.tsx:1001:              src="/images/sectores/quimicohero.png"
+src/app/sectores/tecnologico/page.tsx:793:            src="/images/sectores/transporte-logistica-tecnologia.png"
+src/app/sectores/tecnologico/page.tsx:802:            src="/images/sectores/tecnologico.png"
+src/app/sectores/tecnologico/page.tsx:961:              src="/images/cargaaerea.png"
+src/app/sectores/tecnologico/page.tsx:1001:              src="/images/sectores/transporte-logistica-tecnologia.png"
+src/app/sectores/alimentacion-bebidas/AlimentacionBebidas.module.css:2966:    url("/images/cargaaerea.png") !important;
+src/app/sectores/alimentacion-bebidas/AlimentacionBebidas.module.css:3068:    url("/images/cargaaerea.png") !important;
+src/app/sectores/alimentacion-bebidas/AlimentacionBebidas.module.css:3107:      url("/images/cargaaerea.png") !important;
+src/app/sectores/alimentacion-bebidas/AlimentacionBebidas.module.css:3119:      url("/images/cargaaerea.png") !important;
+src/app/sectores/alimentacion-bebidas/AlimentacionBebidas.module.css:3137:    url("/images/hero/cargaAereahero.png") !important;
+src/app/sectores/alimentacion-bebidas/AlimentacionBebidas.module.css:3147:      url("/images/hero/cargaAereahero.png") !important;
+src/app/sectores/alimentacion-bebidas/AlimentacionBebidas.module.css:3165:    url("/images/cargaaerea1.png") !important;
+src/app/sectores/alimentacion-bebidas/AlimentacionBebidas.module.css:3175:      url("/images/cargaaerea1.png") !important;
+src/app/sectores/alimentacion-bebidas/AlimentacionBebidas.module.css:8881:  background-image: url("/images/sectores/automocion2.png") !important;
+src/app/sectores/alimentacion-bebidas/AlimentacionBebidas.module.css:9124:      var(--mobile-bg, url("/images/hero/cargaAereahero.png")) center center / 100% 100% no-repeat !important;
+src/app/sectores/alimentacion-bebidas/AlimentacionBebidas.module.css:9267:    url("/images/cargaaerea.png") center center / cover no-repeat !important;
+src/app/sectores/automocion/Automocion.module.css:2966:    url("/images/cargaaerea.png") !important;
+src/app/sectores/automocion/Automocion.module.css:3068:    url("/images/cargaaerea.png") !important;
+src/app/sectores/automocion/Automocion.module.css:3107:      url("/images/cargaaerea.png") !important;
+src/app/sectores/automocion/Automocion.module.css:3119:      url("/images/cargaaerea.png") !important;
+src/app/sectores/automocion/Automocion.module.css:3137:    url("/images/hero/cargaAereahero.png") !important;
+src/app/sectores/automocion/Automocion.module.css:3147:      url("/images/hero/cargaAereahero.png") !important;
+src/app/sectores/automocion/Automocion.module.css:3165:    url("/images/cargaaerea1.png") !important;
+src/app/sectores/automocion/Automocion.module.css:3175:      url("/images/cargaaerea1.png") !important;
+src/app/sectores/automocion/Automocion.module.css:8881:  background-image: url("/images/sectores/automocion2.png") !important;
+src/app/sectores/automocion/Automocion.module.css:9124:      var(--mobile-bg, url("/images/hero/cargaAereahero.png")) center center / 100% 100% no-repeat !important;
+src/app/sectores/automocion/Automocion.module.css:9267:    url("/images/cargaaerea.png") center center / cover no-repeat !important;
+src/app/sectores/consumo-distribucion/ConsumoDistribucion.module.css:2966:    url("/images/cargaaerea.png") !important;
+src/app/sectores/consumo-distribucion/ConsumoDistribucion.module.css:3068:    url("/images/cargaaerea.png") !important;
+src/app/sectores/consumo-distribucion/ConsumoDistribucion.module.css:3107:      url("/images/cargaaerea.png") !important;
+src/app/sectores/consumo-distribucion/ConsumoDistribucion.module.css:3119:      url("/images/cargaaerea.png") !important;
+src/app/sectores/consumo-distribucion/ConsumoDistribucion.module.css:3137:    url("/images/hero/cargaAereahero.png") !important;
+src/app/sectores/consumo-distribucion/ConsumoDistribucion.module.css:3147:      url("/images/hero/cargaAereahero.png") !important;
+src/app/sectores/consumo-distribucion/ConsumoDistribucion.module.css:3165:    url("/images/cargaaerea1.png") !important;
+src/app/sectores/consumo-distribucion/ConsumoDistribucion.module.css:3175:      url("/images/cargaaerea1.png") !important;
+src/app/sectores/consumo-distribucion/ConsumoDistribucion.module.css:8881:  background-image: url("/images/sectores/automocion2.png") !important;
+src/app/sectores/consumo-distribucion/ConsumoDistribucion.module.css:9124:      var(--mobile-bg, url("/images/hero/cargaAereahero.png")) center center / 100% 100% no-repeat !important;
+src/app/sectores/consumo-distribucion/ConsumoDistribucion.module.css:9267:    url("/images/cargaaerea.png") center center / cover no-repeat !important;
+src/app/sectores/energias-renovables/EnergiasRenovables.module.css:2966:    url("/images/cargaaerea.png") !important;
+src/app/sectores/energias-renovables/EnergiasRenovables.module.css:3068:    url("/images/cargaaerea.png") !important;
+src/app/sectores/energias-renovables/EnergiasRenovables.module.css:3107:      url("/images/cargaaerea.png") !important;
+src/app/sectores/energias-renovables/EnergiasRenovables.module.css:3119:      url("/images/cargaaerea.png") !important;
+src/app/sectores/energias-renovables/EnergiasRenovables.module.css:3137:    url("/images/hero/cargaAereahero.png") !important;
+src/app/sectores/energias-renovables/EnergiasRenovables.module.css:3147:      url("/images/hero/cargaAereahero.png") !important;
+src/app/sectores/energias-renovables/EnergiasRenovables.module.css:3165:    url("/images/cargaaerea1.png") !important;
+src/app/sectores/energias-renovables/EnergiasRenovables.module.css:3175:      url("/images/cargaaerea1.png") !important;
+src/app/sectores/energias-renovables/EnergiasRenovables.module.css:8881:  background-image: url("/images/sectores/automocion2.png") !important;
+src/app/sectores/energias-renovables/EnergiasRenovables.module.css:9124:      var(--mobile-bg, url("/images/hero/cargaAereahero.png")) center center / 100% 100% no-repeat !important;
+src/app/sectores/energias-renovables/EnergiasRenovables.module.css:9267:    url("/images/cargaaerea.png") center center / cover no-repeat !important;
+src/app/sectores/farmaceutico-sanitario/FarmaceuticoSanitario.module.css:2966:    url("/images/cargaaerea.png") !important;
+src/app/sectores/farmaceutico-sanitario/FarmaceuticoSanitario.module.css:3068:    url("/images/cargaaerea.png") !important;
+src/app/sectores/farmaceutico-sanitario/FarmaceuticoSanitario.module.css:3107:      url("/images/cargaaerea.png") !important;
+src/app/sectores/farmaceutico-sanitario/FarmaceuticoSanitario.module.css:3119:      url("/images/cargaaerea.png") !important;
+src/app/sectores/farmaceutico-sanitario/FarmaceuticoSanitario.module.css:3137:    url("/images/hero/cargaAereahero.png") !important;
+src/app/sectores/farmaceutico-sanitario/FarmaceuticoSanitario.module.css:3147:      url("/images/hero/cargaAereahero.png") !important;
+src/app/sectores/farmaceutico-sanitario/FarmaceuticoSanitario.module.css:3165:    url("/images/cargaaerea1.png") !important;
+src/app/sectores/farmaceutico-sanitario/FarmaceuticoSanitario.module.css:3175:      url("/images/cargaaerea1.png") !important;
+src/app/sectores/farmaceutico-sanitario/FarmaceuticoSanitario.module.css:8881:  background-image: url("/images/sectores/automocion2.png") !important;
+src/app/sectores/farmaceutico-sanitario/FarmaceuticoSanitario.module.css:9124:      var(--mobile-bg, url("/images/hero/cargaAereahero.png")) center center / 100% 100% no-repeat !important;
+src/app/sectores/farmaceutico-sanitario/FarmaceuticoSanitario.module.css:9267:    url("/images/cargaaerea.png") center center / cover no-repeat !important;
+src/app/sectores/quimico/Quimico.module.css:2966:    url("/images/cargaaerea.png") !important;
+src/app/sectores/quimico/Quimico.module.css:3068:    url("/images/cargaaerea.png") !important;
+src/app/sectores/quimico/Quimico.module.css:3107:      url("/images/cargaaerea.png") !important;
+src/app/sectores/quimico/Quimico.module.css:3119:      url("/images/cargaaerea.png") !important;
+src/app/sectores/quimico/Quimico.module.css:3137:    url("/images/hero/cargaAereahero.png") !important;
+src/app/sectores/quimico/Quimico.module.css:3147:      url("/images/hero/cargaAereahero.png") !important;
+src/app/sectores/quimico/Quimico.module.css:3165:    url("/images/cargaaerea1.png") !important;
+src/app/sectores/quimico/Quimico.module.css:3175:      url("/images/cargaaerea1.png") !important;
+src/app/sectores/quimico/Quimico.module.css:8881:  background-image: url("/images/sectores/automocion2.png") !important;
+src/app/sectores/quimico/Quimico.module.css:9124:      var(--mobile-bg, url("/images/hero/cargaAereahero.png")) center center / 100% 100% no-repeat !important;
+src/app/sectores/quimico/Quimico.module.css:9267:    url("/images/cargaaerea.png") center center / cover no-repeat !important;
+src/app/sectores/tecnologico/Servicio.module.css:2966:    url("/images/cargaaerea.png") !important;
+src/app/sectores/tecnologico/Servicio.module.css:3068:    url("/images/cargaaerea.png") !important;
+src/app/sectores/tecnologico/Servicio.module.css:3107:      url("/images/cargaaerea.png") !important;
+src/app/sectores/tecnologico/Servicio.module.css:3119:      url("/images/cargaaerea.png") !important;
+src/app/sectores/tecnologico/Servicio.module.css:3137:    url("/images/hero/cargaAereahero.png") !important;
+src/app/sectores/tecnologico/Servicio.module.css:3147:      url("/images/hero/cargaAereahero.png") !important;
+src/app/sectores/tecnologico/Servicio.module.css:3165:    url("/images/cargaaerea1.png") !important;
+src/app/sectores/tecnologico/Servicio.module.css:3175:      url("/images/cargaaerea1.png") !important;
+src/app/sectores/tecnologico/Servicio.module.css:8881:  background-image: url("/images/sectores/automocion2.png") !important;
+src/app/sectores/tecnologico/Servicio.module.css:9124:      var(--mobile-bg, url("/images/hero/cargaAereahero.png")) center center / 100% 100% no-repeat !important;
+src/app/sectores/tecnologico/Servicio.module.css:9267:    url("/images/cargaaerea.png") center center / cover no-repeat !important;

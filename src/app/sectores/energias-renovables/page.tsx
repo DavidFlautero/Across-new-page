@@ -1,14 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
-import RelatedServices from "@/app/servicios/_shared/RelatedServices";
-import styles from "./EnergiasRenovables.module.css";
+import styles from "./Sector.module.css";
 
 type Locale = "es" | "en" | "zh";
 
@@ -740,10 +739,8 @@ function Icon({ name }: { name: IconName }) {
   }
 }
 
-export default function EnergiasRenovablesPage() {
+export default function EnergiasRenovablesSectorPage() {
   const [locale, setLocale] = useState<Locale>("es");
-  const finalCtaVideoRef = useRef<HTMLVideoElement | null>(null);
-  const darkBandVideoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
     const updateLocale = (event?: Event) => {
@@ -783,60 +780,6 @@ export default function EnergiasRenovablesPage() {
     };
   }, []);
 
-
-  /* ENERGIAS DARK BAND VIDEO SLOWDOWN */
-  useEffect(() => {
-    const video = darkBandVideoRef.current;
-
-    if (!video) return;
-
-    video.playbackRate = 0.45;
-  }, []);
-
-
-  /* ENERGIAS MP4 REAL AUTOPLAY */
-  useEffect(() => {
-    const video = darkBandVideoRef.current;
-    if (!video) return;
-
-    video.muted = true;
-    video.defaultMuted = true;
-    video.playsInline = true;
-    video.playbackRate = 0.42;
-
-    const playVideo = async () => {
-      try {
-        await video.play();
-      } catch {
-        // Autoplay puede esperar interacción en casos raros.
-      }
-    };
-
-    playVideo();
-  }, []);
-
-
-  /* ENERGIAS FINAL CTA VIDEO REAL AUTOPLAY */
-  useEffect(() => {
-    const video = finalCtaVideoRef.current;
-    if (!video) return;
-
-    video.muted = true;
-    video.defaultMuted = true;
-    video.playsInline = true;
-    video.playbackRate = 0.42;
-
-    const start = async () => {
-      try {
-        await video.play();
-      } catch {
-        // Autoplay puede esperar interacción en casos raros.
-      }
-    };
-
-    start();
-  }, []);
-
   const t = copy[locale];
 
   return (
@@ -844,7 +787,7 @@ export default function EnergiasRenovablesPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={`${styles.hero} acrossPageHero`} data-sector-hero="true" data-standard-service-hero="true" data-sector-name="energias-renovables"
+        <section className={styles.hero} data-aereo-hero="true" data-service-hero-home="true"
       >
           <Image
             src="/images/sectores/energiasrenovables.png"
@@ -852,36 +795,34 @@ export default function EnergiasRenovablesPage() {
             fill
             priority
             sizes="(max-width: 900px) 0px, 100vw"
-            data-hero-role="desktop-image"
             className={`${styles.heroImage} ${styles.heroImageDesktop}`}
           />
 
           <Image
-            src="/images/sectores/energiasrenovables.png"
+            src="/images/sectores/energiasrenovables2.mp4"
             alt={t.heroTitle}
             fill
             priority
             sizes="(max-width: 900px) 100vw, 0px"
-            data-hero-role="mobile-image"
             className={`${styles.heroImage} ${styles.heroImageMobile}`}
           />
 
-          <div data-hero-role="overlay" className={styles.heroOverlay} />
+          <div className={styles.heroOverlay} />
 
-          <div data-hero-role="inner" className={styles.heroInner}
+          <div className={styles.heroInner}
       >
-            <div data-hero-role="content" className={styles.heroContent}>
-              <span data-hero-role="eyebrow" className={styles.eyebrow}>{t.heroEyebrow}</span>
-              <h1 data-hero-role="title">{t.heroTitle}</h1>
-              <p data-hero-role="text">{t.heroText}</p>
+            <div className={styles.heroContent}>
+              <span className={styles.eyebrow}>{t.heroEyebrow}</span>
+              <h1 className={styles.title}>{t.heroTitle}</h1>
+              <p className={styles.subtitle}>{t.heroText}</p>
 
-              <div data-hero-role="actions" className={styles.actions}>
-                <Link href="/cotizacion">{t.primaryCta}</Link>
-                <Link href="/contacto">{t.secondaryCta}</Link>
+              <div className={styles.actions}>
+                <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>
+                <Link href="/contacto" className={styles.secondaryBtn}>{t.secondaryCta}</Link>
               </div>
             </div>
 
-            <div data-hero-role="card" className={styles.operationCard}>
+            <div className={styles.operationCard}>
               <span>{t.activeLabel}</span>
               <strong>{t.activeRoute}</strong>
               <p>{t.activeCargo}</p>
@@ -897,32 +838,29 @@ export default function EnergiasRenovablesPage() {
               </div>
             </div>
           </div>
-        
 
-          <div className={styles.commandBar}>
-          {t.trust.map(([title, text]: string[], index: number) => {
-          const icons: IconName[] = ["timer", "shield", "document", "tracking"];
+          <div className={styles.commandBar} data-aereo-trust="true">
+            {t.trust.map(([title, text]: string[], index: number) => {
+              const icons: IconName[] = ["timer", "shield", "document", "tracking"];
 
-          return (
-          <div key={title} className={styles.commandItem}>
-          <i>
-          <Icon name={icons[index]} />
-          </i>
-          <span>
-          <strong>{title}</strong>
-          <small>{text}</small>
-          </span>
-          </div>
-          );
-          })}
+              return (
+                <div key={title} className={styles.commandItem}>
+                  <i>
+                    <Icon name={icons[index]} />
+                  </i>
+                  <span>
+                    <strong>{title}</strong>
+                    <small>{text}</small>
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </section>
 
-
-
         <Certifications />
 
-        <section className={`${styles.overview} ${styles.overviewMobileBg}`} data-after-cert-overview="true" style={{ "--sector-overview-bg": "url('/images/sectores/energiasrenovables1.png')" } as CSSProperties}>
+        <section className={styles.overview}>
           <div className={styles.overviewCopy}>
             <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
             <h2>{t.overviewTitle}</h2>
@@ -947,7 +885,7 @@ export default function EnergiasRenovablesPage() {
           </div>
         </section>
 
-        <section className={styles.cleanServices} data-mobile-hide-after-cert="true">
+        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/sectores/energiasrenovables.png')" } as CSSProperties}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -955,7 +893,7 @@ export default function EnergiasRenovablesPage() {
 
           <div className={styles.serviceGrid}>
             {t.services.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["gear", "truck", "package", "route", "globe", "document"];
+              const icons: IconName[] = ["plane", "box", "diamond", "charter", "globe", "door"];
 
               return (
                 <article key={title}>
@@ -1001,7 +939,7 @@ export default function EnergiasRenovablesPage() {
 
           <div className={styles.processGrid}>
             {t.process.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["search", "package", "document", "route", "tracking", "truck"];
+              const icons: IconName[] = ["search", "route", "document", "plane", "tracking", "truck"];
 
               return (
                 <article key={title}>
@@ -1017,19 +955,14 @@ export default function EnergiasRenovablesPage() {
           </div>
         </section>
 
-        <section className={styles.darkBand} data-mobile-hide-after-cert="true" data-sector-dark-band="true">
-          <div className={styles.darkBandVideoLayer} aria-hidden="true">
-            <video
-              ref={darkBandVideoRef}
-              className={styles.darkBandVideo}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-            >
-              <source src="/images/sectores/energiasrenovables2.mp4" type="video/mp4" />
-            </video>
+        <section className={styles.darkBand} data-mobile-hide-after-cert="true">
+          <div className={styles.darkBandImage}>
+            <Image
+              src="/images/sectores/energiasrenovables.png"
+              alt={t.bandTitle}
+              fill
+              sizes="(max-width: 900px) 100vw, 42vw"
+            />
           </div>
 
           <div className={styles.darkBandContent}>
@@ -1052,24 +985,7 @@ export default function EnergiasRenovablesPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} data-energy-final-video="true" data-sector-final-cta="true" data-across-final-cta="true">
-          <div className={styles.finalCtaVideoLayer} aria-hidden="true">
-            <video
-              ref={finalCtaVideoRef}
-              className={styles.finalCtaVideo}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-              onLoadedData={(event) => {
-                event.currentTarget.playbackRate = 0.42;
-                event.currentTarget.play().catch(() => undefined);
-              }}
-            >
-              <source src="/images/sectores/energiasrenovables2.mp4" type="video/mp4" />
-            </video>
-          </div>
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/sectores/energiasrenovables.png')" } as CSSProperties} data-across-final-cta="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>
@@ -1089,9 +1005,7 @@ export default function EnergiasRenovablesPage() {
             />
           </div>
         </section>
-
-        <RelatedServices current="e-commerce" locale={locale} />
-      </main>
+</main>
 
       <Footer />
     </div>

@@ -1,0 +1,488 @@
+========================================
+1) EXISTEN LOS ARCHIVOS?
+========================================
+-rw-r--r-- 1 david 197609 243783 Jun 13 09:21 src/app/sectores/quimico/Sector.module.css
+-rw-r--r-- 1 david 197609  32868 Jun 13 09:21 src/app/sectores/quimico/page.tsx
+-rw-r--r-- 1 david 197609 243745 Jun 13 08:13 src/app/servicios/transporte-aereo/TransporteAereo.module.css
+-rw-r--r-- 1 david 197609  29550 Jun 13 06:26 src/app/servicios/transporte-aereo/page.tsx
+
+========================================
+2) HASH / TAMAÑO
+Si el CSS de químico fue copiado exacto de aéreo, el hash debe coincidir
+========================================
+a0c109b7d014c8bf4a7d23593ad38514984fd2b80a0c3e42483e7e9d6fc72357 *src/app/servicios/transporte-aereo/TransporteAereo.module.css
+78943afdec04de4815afdc82e1d7912f54a53f970859402192c0123f9a3a4777 *src/app/sectores/quimico/Sector.module.css
+   787 src/app/servicios/transporte-aereo/page.tsx
+  1013 src/app/sectores/quimico/page.tsx
+  9653 src/app/servicios/transporte-aereo/TransporteAereo.module.css
+  9653 src/app/sectores/quimico/Sector.module.css
+ 21106 total
+
+========================================
+3) CSS ES EXACTAMENTE IGUAL?
+========================================
+MAL: CSS QUIMICO NO ES IDENTICO AL CSS AEREO
+
+Primeras diferencias:
+--- src/app/servicios/transporte-aereo/TransporteAereo.module.css	2026-06-13 08:13:01.454135700 -0500
++++ src/app/sectores/quimico/Sector.module.css	2026-06-13 09:21:24.265027800 -0500
+@@ -9613,41 +9613,41 @@
+   }
+ }
+ /* END ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED */
+-
+-/* =====================================================
+-   AEREO MOBILE HEIGHT LIKE MARITIMO
+-   Solo iguala el alto del hero mobile.
+-   No toca barra, titulo, texto, boton ni imagen.
+-   ===================================================== */
+-@media (max-width: 900px) {
+-  .hero {
+-    height: 100svh !important;
+-    min-height: 100svh !important;
+-    max-height: none !important;
+-  }
+-
+-  .heroInner {
+-    height: 100svh !important;
+-    min-height: 100svh !important;
+-    max-height: 100svh !important;
+-  }
+-}
+-
+-/* =====================================================
+-   AEREO MOBILE HEIGHT LIKE MARITIMO
+-   Solo iguala el alto del hero mobile.
+-   No toca barra, titulo, texto, boton ni imagen.
+-   ===================================================== */
+-@media (max-width: 900px) {
+-  .hero {
+-    height: 100svh !important;
+-    min-height: 100svh !important;
+-    max-height: none !important;
+-  }
+-
+-  .heroInner {
+-    height: 100svh !important;
+-    min-height: 100svh !important;
+-    max-height: 100svh !important;
+-  }
+-}
++
++/* =====================================================
++   AEREO MOBILE HEIGHT LIKE MARITIMO
++   Solo iguala el alto del hero mobile.
++   No toca barra, titulo, texto, boton ni imagen.
++   ===================================================== */
++@media (max-width: 900px) {
++  .hero {
++    height: 100svh !important;
++    min-height: 100svh !important;
++    max-height: none !important;
++  }
++
++  .heroInner {
++    height: 100svh !important;
++    min-height: 100svh !important;
++    max-height: 100svh !important;
++  }
++}
++
++/* =====================================================
++   AEREO MOBILE HEIGHT LIKE MARITIMO
++   Solo iguala el alto del hero mobile.
++   No toca barra, titulo, texto, boton ni imagen.
++   ===================================================== */
++@media (max-width: 900px) {
++  .hero {
++    height: 100svh !important;
++    min-height: 100svh !important;
++    max-height: none !important;
++  }
++
++  .heroInner {
++    height: 100svh !important;
++    min-height: 100svh !important;
++    max-height: 100svh !important;
++  }
++}
+
+========================================
+4) IMPORT CSS REAL
+========================================
+src/app/servicios/transporte-aereo/page.tsx:11:import styles from "./TransporteAereo.module.css";
+src/app/sectores/quimico/page.tsx:10:import styles from "./Sector.module.css";
+
+========================================
+5) HERO AEREO
+========================================
+552-    };
+553-  }, []);
+554-
+555-  const t = copy[locale];
+556-
+557-  return (
+558-    <div className="page-shell">
+559-      <Header />
+560-
+561-      <main className={styles.page}>
+562:        <section className={styles.hero} data-aereo-hero="true" data-service-hero-home="true"
+563-      >
+564-          <Image
+565-            src="/images/hero/cargaAereahero.png"
+566-            alt={t.heroTitle}
+567-            fill
+568-            priority
+569-            sizes="(max-width: 900px) 0px, 100vw"
+570-            className={`${styles.heroImage} ${styles.heroImageDesktop}`}
+571-          />
+572-
+573-          <Image
+574-            src="/images/hero/cargaAereahero-mobile.png"
+575-            alt={t.heroTitle}
+576-            fill
+577-            priority
+578-            sizes="(max-width: 900px) 100vw, 0px"
+579-            className={`${styles.heroImage} ${styles.heroImageMobile}`}
+580-          />
+581-
+582-          <div className={styles.heroOverlay} />
+583-
+584-          <div className={styles.heroInner}
+585-      >
+586-            <div className={styles.heroContent}>
+587-              <span className={styles.eyebrow}>{t.heroEyebrow}</span>
+588-              <h1 className={styles.title}>{t.heroTitle}</h1>
+589-              <p className={styles.subtitle}>{t.heroText}</p>
+590-
+591-              <div className={styles.actions}>
+592-                <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>
+593-                <Link href="/contacto" className={styles.secondaryBtn}>{t.secondaryCta}</Link>
+594-              </div>
+595-            </div>
+596-
+597-            <div className={styles.operationCard}>
+598-              <span>{t.activeLabel}</span>
+599-              <strong>{t.activeRoute}</strong>
+600-              <p>{t.activeCargo}</p>
+601-
+602-              <div>
+603-                <small>{t.activeStatusLabel}</small>
+604-                <b>{t.activeStatus}</b>
+605-              </div>
+606-
+607-              <div>
+608-                <small>{t.activeEtaLabel}</small>
+609-                <em>{t.activeEta}</em>
+610-              </div>
+611-            </div>
+612-          </div>
+613-
+614-          <div className={styles.commandBar} data-aereo-trust="true">
+615-            {t.trust.map(([title, text]: string[], index: number) => {
+616-              const icons: IconName[] = ["timer", "shield", "document", "tracking"];
+617-
+618-              return (
+619-                <div key={title} className={styles.commandItem}>
+620-                  <i>
+621-                    <Icon name={icons[index]} />
+622-                  </i>
+623-                  <span>
+624-                    <strong>{title}</strong>
+625-                    <small>{text}</small>
+626-                  </span>
+627-                </div>
+628-              );
+629-            })}
+630-          </div>
+631-        </section>
+632-
+633-        <Certifications />
+634-
+635-        <section className={styles.overview}>
+636-          <div className={styles.overviewCopy}>
+637-            <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
+638-            <h2>{t.overviewTitle}</h2>
+639-            <p>{t.overviewText}</p>
+640-            <Link href="/contacto">{t.overviewButton}</Link>
+641-          </div>
+642-
+643-          <div className={styles.pillars}>
+644-            {t.pillars.map(([title, text]: string[], index: number) => {
+645-              const icons: IconName[] = ["airport", "document", "tracking", "truck"];
+646-
+647-              return (
+648-                <article key={title}>
+649-                  <i>
+650-                    <Icon name={icons[index]} />
+651-                  </i>
+652-                  <h3>{title}</h3>
+653-                  <p>{text}</p>
+654-                </article>
+655-              );
+656-            })}
+657-          </div>
+658-        </section>
+659-
+660-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/hero/cargaAereahero.png')" } as CSSProperties}>
+661-          <div className={styles.sectionHead}>
+662-            <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
+
+========================================
+6) HERO QUIMICO
+========================================
+780-    };
+781-  }, []);
+782-
+783-  const t = copy[locale];
+784-
+785-  return (
+786-    <div className="page-shell">
+787-      <Header />
+788-
+789-      <main className={styles.page}>
+790:        <section className={styles.hero} data-sector-name="quimico" data-sector-hero-home="true"
+791-      >
+792-          <Image
+793-            src="/images/sectores/quimicohero.png"
+794-            alt={t.heroTitle}
+795-            fill
+796-            priority
+797-            sizes="(max-width: 900px) 0px, 100vw"
+798-            className={`${styles.heroImage} ${styles.heroImageDesktop}`}
+799-          />
+800-
+801-          <Image
+802-            src="/images/sectores/quimicohero.png"
+803-            alt={t.heroTitle}
+804-            fill
+805-            priority
+806-            sizes="(max-width: 900px) 100vw, 0px"
+807-            className={`${styles.heroImage} ${styles.heroImageMobile}`}
+808-          />
+809-
+810-          <div className={styles.heroOverlay} />
+811-
+812-          <div className={styles.heroInner}
+813-      >
+814-            <div className={styles.heroContent}>
+815-              <span className={styles.eyebrow}>{t.heroEyebrow}</span>
+816-              <h1 className={styles.title}>{t.heroTitle}</h1>
+817-              <p className={styles.subtitle}>{t.heroText}</p>
+818-
+819-              <div className={styles.actions}>
+820-                <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>
+821-                <Link href="/contacto" className={styles.secondaryBtn}>{t.secondaryCta}</Link>
+822-              </div>
+823-            </div>
+824-
+825-            <div className={styles.operationCard}>
+826-              <span>{t.activeLabel}</span>
+827-              <strong>{t.activeRoute}</strong>
+828-              <p>{t.activeCargo}</p>
+829-
+830-              <div>
+831-                <small>{t.activeStatusLabel}</small>
+832-                <b>{t.activeStatus}</b>
+833-              </div>
+834-
+835-              <div>
+836-                <small>{t.activeEtaLabel}</small>
+837-                <em>{t.activeEta}</em>
+838-              </div>
+839-            </div>
+840-          </div>
+841-
+842-          <div className={styles.commandBar} data-sector-trust="quimico">
+843-            {t.trust.map(([title, text]: string[], index: number) => {
+844-              const icons: IconName[] = ["timer", "shield", "document", "tracking"];
+845-
+846-              return (
+847-                <div key={title} className={styles.commandItem}>
+848-                  <i>
+849-                    <Icon name={icons[index]} />
+850-                  </i>
+851-                  <span>
+852-                    <strong>{title}</strong>
+853-                    <small>{text}</small>
+854-                  </span>
+855-                </div>
+856-              );
+857-            })}
+858-          </div>
+859-        </section>
+860-
+861-        <Certifications />
+862-
+863-        <section className={styles.overview}>
+864-          <div className={styles.overviewCopy}>
+865-            <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
+866-            <h2>{t.overviewTitle}</h2>
+867-            <p>{t.overviewText}</p>
+868-            <Link href="/contacto">{t.overviewButton}</Link>
+869-          </div>
+870-
+871-          <div className={styles.pillars}>
+872-            {t.pillars.map(([title, text]: string[], index: number) => {
+873-              const icons: IconName[] = ["airport", "document", "tracking", "truck"];
+874-
+875-              return (
+876-                <article key={title}>
+877-                  <i>
+878-                    <Icon name={icons[index]} />
+879-                  </i>
+880-                  <h3>{title}</h3>
+881-                  <p>{text}</p>
+882-                </article>
+883-              );
+884-            })}
+885-          </div>
+886-        </section>
+887-
+888-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/sectores/quimicohero.png')" } as CSSProperties}>
+889-          <div className={styles.sectionHead}>
+890-            <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
+
+========================================
+7) CLASES styles.xxx USADAS EN AEREO
+========================================
+styles.actions
+styles.commandBar
+styles.commandItem
+styles.darkBand
+styles.darkBandActions
+styles.darkBandContent
+styles.darkBandImage
+styles.eyebrow
+styles.finalActions
+styles.finalCta
+styles.finalImage
+styles.hero
+styles.heroContent
+styles.heroImage
+styles.heroImageDesktop
+styles.heroImageMobile
+styles.heroInner
+styles.heroOverlay
+styles.operationCard
+styles.overview
+styles.overviewCopy
+styles.page
+styles.pillars
+styles.primaryBtn
+styles.process
+styles.processGrid
+styles.secondaryBtn
+styles.sectionHead
+styles.serviceGrid
+styles.services
+styles.stats
+styles.subtitle
+styles.title
+styles.useCaseGrid
+styles.useCases
+
+========================================
+8) CLASES styles.xxx USADAS EN QUIMICO
+========================================
+styles.actions
+styles.commandBar
+styles.commandItem
+styles.darkBand
+styles.darkBandActions
+styles.darkBandContent
+styles.darkBandImage
+styles.eyebrow
+styles.finalActions
+styles.finalCta
+styles.finalImage
+styles.hero
+styles.heroContent
+styles.heroImage
+styles.heroImageDesktop
+styles.heroImageMobile
+styles.heroInner
+styles.heroOverlay
+styles.operationCard
+styles.overview
+styles.overviewCopy
+styles.page
+styles.pillars
+styles.primaryBtn
+styles.process
+styles.processGrid
+styles.secondaryBtn
+styles.sectionHead
+styles.serviceGrid
+styles.services
+styles.stats
+styles.subtitle
+styles.title
+styles.useCaseGrid
+styles.useCases
+
+========================================
+9) DIFERENCIA DE CLASES
+Si químico tiene clases que aéreo no tiene, no es misma estructura
+========================================
+
+========================================
+10) RASTROS DE ESTRUCTURA VIEJA EN QUIMICO
+========================================
+src/app/sectores/quimico/Sector.module.css:3437:/* Galaxy Fold angosto: texto más compacto, sin romper */
+src/app/sectores/quimico/Sector.module.css:3459:/* Tablets / Fold abierto / Surface: no hacerlo gigante */
+src/app/sectores/quimico/Sector.module.css:3647:/* iPhone SE / Fold angosto */
+src/app/sectores/quimico/Sector.module.css:3805:/* iPhone SE / Fold angosto */
+src/app/sectores/quimico/Sector.module.css:7393:  --hero-gold: #c7a96b;
+src/app/sectores/quimico/Sector.module.css:7427:  color: var(--hero-gold) !important;
+src/app/sectores/quimico/Sector.module.css:7428:  -webkit-text-fill-color: var(--hero-gold) !important;
+src/app/sectores/quimico/Sector.module.css:7529:.page [data-aereo-trust="true"] strong,
+src/app/sectores/quimico/Sector.module.css:7530:.page [data-aereo-trust="true"] span,
+src/app/sectores/quimico/Sector.module.css:7531:.page [data-aereo-trust="true"] small,
+src/app/sectores/quimico/Sector.module.css:7532:.page [data-aereo-trust="true"] p {
+
+========================================
+11) RASTROS DE IMAGENES AEREO EN QUIMICO
+========================================
+src/app/sectores/quimico/Sector.module.css:3137:    url("/images/hero/cargaAereahero.png") !important;
+src/app/sectores/quimico/Sector.module.css:3147:      url("/images/hero/cargaAereahero.png") !important;
+src/app/sectores/quimico/Sector.module.css:9124:      var(--mobile-bg, url("/images/hero/cargaAereahero.png")) center center / 100% 100% no-repeat !important;
+
+========================================
+12) IMAGENES REALES EN QUIMICO
+========================================
+src/app/sectores/quimico/page.tsx:793:            src="/images/sectores/quimicohero.png"
+src/app/sectores/quimico/page.tsx:802:            src="/images/sectores/quimicohero.png"
+src/app/sectores/quimico/page.tsx:961:              src="/images/cargaaerea.png"
+src/app/sectores/quimico/page.tsx:1001:              src="/images/sectores/quimicohero.png"
+src/app/sectores/quimico/Sector.module.css:2966:    url("/images/cargaaerea.png") !important;
+src/app/sectores/quimico/Sector.module.css:3068:    url("/images/cargaaerea.png") !important;
+src/app/sectores/quimico/Sector.module.css:3107:      url("/images/cargaaerea.png") !important;
+src/app/sectores/quimico/Sector.module.css:3119:      url("/images/cargaaerea.png") !important;
+src/app/sectores/quimico/Sector.module.css:3137:    url("/images/hero/cargaAereahero.png") !important;
+src/app/sectores/quimico/Sector.module.css:3147:      url("/images/hero/cargaAereahero.png") !important;
+src/app/sectores/quimico/Sector.module.css:3165:    url("/images/cargaaerea1.png") !important;
+src/app/sectores/quimico/Sector.module.css:3175:      url("/images/cargaaerea1.png") !important;
+src/app/sectores/quimico/Sector.module.css:8881:  background-image: url("/images/sectores/automocion2.png") !important;
+src/app/sectores/quimico/Sector.module.css:9124:      var(--mobile-bg, url("/images/hero/cargaAereahero.png")) center center / 100% 100% no-repeat !important;
+src/app/sectores/quimico/Sector.module.css:9267:    url("/images/cargaaerea.png") center center / cover no-repeat !important;
+
+========================================
+13) BUSCAR DUPLICADOS CSS EN CARPETA QUIMICO
+========================================
+src/app/sectores/quimico/page.tsx
+1013 src/app/sectores/quimico/page.tsx
+src/app/sectores/quimico/Sector.module.css
+9653 src/app/sectores/quimico/Sector.module.css
+
+========================================
+14) VER SI HAY OTRO QUIMICO DUPLICADO
+========================================
+src/app/sectores/quimico
+src/app/sectores/quimico/Sector.module.css
+src/app/sectores/quimico/page.tsx
+
+========================================
+15) BUILD NO SE EJECUTA
+Solo audit. No se toca nada.
+========================================

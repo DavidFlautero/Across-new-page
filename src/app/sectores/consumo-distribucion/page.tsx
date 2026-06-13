@@ -7,8 +7,7 @@ import Footer from "@/components/layout/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
-import RelatedServices from "@/app/servicios/_shared/RelatedServices";
-import styles from "./ConsumoDistribucion.module.css";
+import styles from "./Sector.module.css";
 
 type Locale = "es" | "en" | "zh";
 
@@ -740,7 +739,7 @@ function Icon({ name }: { name: IconName }) {
   }
 }
 
-export default function ConsumoDistribucionPage() {
+export default function ConsumoDistribucionSectorPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
@@ -788,7 +787,7 @@ export default function ConsumoDistribucionPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={`${styles.hero} acrossPageHero`} data-sector-hero="true" data-standard-service-hero="true" data-sector-name="consumo-distribucion"
+        <section className={styles.hero} data-aereo-hero="true" data-service-hero-home="true"
       >
           <Image
             src="/images/sectores/consumo1.png"
@@ -796,7 +795,6 @@ export default function ConsumoDistribucionPage() {
             fill
             priority
             sizes="(max-width: 900px) 0px, 100vw"
-            data-hero-role="desktop-image"
             className={`${styles.heroImage} ${styles.heroImageDesktop}`}
           />
 
@@ -806,26 +804,25 @@ export default function ConsumoDistribucionPage() {
             fill
             priority
             sizes="(max-width: 900px) 100vw, 0px"
-            data-hero-role="mobile-image"
             className={`${styles.heroImage} ${styles.heroImageMobile}`}
           />
 
-          <div data-hero-role="overlay" className={styles.heroOverlay} />
+          <div className={styles.heroOverlay} />
 
-          <div data-hero-role="inner" className={styles.heroInner}
+          <div className={styles.heroInner}
       >
-            <div data-hero-role="content" className={styles.heroContent}>
-              <span data-hero-role="eyebrow" className={styles.eyebrow}>{t.heroEyebrow}</span>
-              <h1 data-hero-role="title">{t.heroTitle}</h1>
-              <p data-hero-role="text">{t.heroText}</p>
+            <div className={styles.heroContent}>
+              <span className={styles.eyebrow}>{t.heroEyebrow}</span>
+              <h1 className={styles.title}>{t.heroTitle}</h1>
+              <p className={styles.subtitle}>{t.heroText}</p>
 
-              <div data-hero-role="actions" className={styles.actions}>
-                <Link href="/cotizacion">{t.primaryCta}</Link>
-                <Link href="/contacto">{t.secondaryCta}</Link>
+              <div className={styles.actions}>
+                <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>
+                <Link href="/contacto" className={styles.secondaryBtn}>{t.secondaryCta}</Link>
               </div>
             </div>
 
-            <div data-hero-role="card" className={styles.operationCard}>
+            <div className={styles.operationCard}>
               <span>{t.activeLabel}</span>
               <strong>{t.activeRoute}</strong>
               <p>{t.activeCargo}</p>
@@ -841,32 +838,29 @@ export default function ConsumoDistribucionPage() {
               </div>
             </div>
           </div>
-        
 
-          <div className={styles.commandBar}>
-          {t.trust.map(([title, text]: string[], index: number) => {
-          const icons: IconName[] = ["package", "truck", "tracking", "door", "globe", "document"];
+          <div className={styles.commandBar} data-aereo-trust="true">
+            {t.trust.map(([title, text]: string[], index: number) => {
+              const icons: IconName[] = ["timer", "shield", "document", "tracking"];
 
-          return (
-          <div key={title} className={styles.commandItem}>
-          <i>
-          <Icon name={icons[index]} />
-          </i>
-          <span>
-          <strong>{title}</strong>
-          <small>{text}</small>
-          </span>
-          </div>
-          );
-          })}
+              return (
+                <div key={title} className={styles.commandItem}>
+                  <i>
+                    <Icon name={icons[index]} />
+                  </i>
+                  <span>
+                    <strong>{title}</strong>
+                    <small>{text}</small>
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </section>
 
-
-
         <Certifications />
 
-        <section className={`${styles.overview} ${styles.overviewMobileBg}`} data-after-cert-overview="true" style={{ "--sector-overview-bg": "url('/images/sectores/consumo2.png')" } as CSSProperties}>
+        <section className={styles.overview}>
           <div className={styles.overviewCopy}>
             <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
             <h2>{t.overviewTitle}</h2>
@@ -876,7 +870,7 @@ export default function ConsumoDistribucionPage() {
 
           <div className={styles.pillars}>
             {t.pillars.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["search", "package", "document", "route", "tracking", "truck"];
+              const icons: IconName[] = ["airport", "document", "tracking", "truck"];
 
               return (
                 <article key={title}>
@@ -891,7 +885,7 @@ export default function ConsumoDistribucionPage() {
           </div>
         </section>
 
-        <section className={styles.cleanServices} data-mobile-hide-after-cert="true">
+        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/sectores/consumo1.png')" } as CSSProperties}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -961,10 +955,10 @@ export default function ConsumoDistribucionPage() {
           </div>
         </section>
 
-        <section className={styles.darkBand} data-mobile-hide-after-cert="true" data-sector-dark-band="true">
+        <section className={styles.darkBand} data-mobile-hide-after-cert="true">
           <div className={styles.darkBandImage}>
             <Image
-              src="/images/sectores/consumo2.png"
+              src="/images/sectores/consumo1.png"
               alt={t.bandTitle}
               fill
               sizes="(max-width: 900px) 100vw, 42vw"
@@ -991,7 +985,7 @@ export default function ConsumoDistribucionPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} data-sector-final-cta="true" data-across-final-cta="true">
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/sectores/consumo1.png')" } as CSSProperties} data-across-final-cta="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>
@@ -1011,9 +1005,7 @@ export default function ConsumoDistribucionPage() {
             />
           </div>
         </section>
-
-        <RelatedServices current="e-commerce" locale={locale} />
-      </main>
+</main>
 
       <Footer />
     </div>
