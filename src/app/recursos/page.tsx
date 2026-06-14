@@ -10,6 +10,51 @@ import heroStyles from "../empresa/quienes-somos/QuienesSomos.module.css";
 
 type Locale = "es" | "en" | "zh";
 
+
+type ResourceIconName = "faq" | "download" | "contact" | "guide";
+
+function ResourceIcon({ name }: { name: ResourceIconName }) {
+  if (name === "faq") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 18h.01" />
+        <path d="M9.2 9.1a3 3 0 1 1 4.9 2.3c-1.2.8-2.1 1.5-2.1 3.1" />
+        <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+      </svg>
+    );
+  }
+
+  if (name === "download") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 3v10" />
+        <path d="m8 10 4 4 4-4" />
+        <path d="M5 17v3h14v-3" />
+        <path d="M7 4h10" />
+      </svg>
+    );
+  }
+
+  if (name === "contact") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7A2.5 2.5 0 0 1 17.5 16H9l-5 4v-13.5Z" />
+        <path d="M8 9h8" />
+        <path d="M8 12h5" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M5 4.5A2.5 2.5 0 0 1 7.5 2H20v17H7.5A2.5 2.5 0 0 0 5 21.5v-17Z" />
+      <path d="M5 19a2.5 2.5 0 0 1 2.5-2.5H20" />
+      <path d="M9 6h7" />
+      <path d="M9 9h5" />
+    </svg>
+  );
+}
+
 const copy = {
   es: {
     heroEyebrow: "Recursos",
@@ -346,6 +391,7 @@ export default function RecursosPage() {
   }, []);
 
   const t = copy[locale];
+  const resourceIcons: ResourceIconName[] = ["faq", "download", "contact", "guide"];
 
   return (
     <div className={styles.page}>
@@ -410,9 +456,9 @@ export default function RecursosPage() {
           </div>
 
           <div className={heroStyles.commandBar} data-aereo-trust="true">
-            {t.quick.map(([title, text]) => (
+            {t.quick.map(([title, text], index) => (
               <div key={title} className={heroStyles.commandItem}>
-                <i aria-hidden="true" />
+                <i aria-hidden="true"><ResourceIcon name={resourceIcons[index] ?? "faq"} /></i>
                 <span>
                   <strong>{title}</strong>
                   <small>{text}</small>

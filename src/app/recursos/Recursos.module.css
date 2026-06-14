@@ -792,3 +792,99 @@
 }
 
 /* END RECURSOS HERO SAME AS QUIENES FINAL */
+
+/* RECURSOS HERO COMMAND BAR ICONS FINAL
+   Barra inferior del hero igual al sistema visual de las páginas premium.
+*/
+
+.page [data-aereo-trust="true"] {
+  background:
+    linear-gradient(90deg, rgba(5, 11, 18, .88), rgba(5, 11, 18, .76)) !important;
+  border: 1px solid rgba(255, 255, 255, .10) !important;
+  box-shadow:
+    0 18px 48px rgba(0, 0, 0, .24),
+    inset 0 1px 0 rgba(255, 255, 255, .08) !important;
+  backdrop-filter: blur(18px) !important;
+}
+
+.page [data-aereo-trust="true"] > div {
+  background: rgba(255, 255, 255, .025) !important;
+  border-right: 1px solid rgba(255, 255, 255, .10) !important;
+}
+
+.page [data-aereo-trust="true"] > div:last-child {
+  border-right: 0 !important;
+}
+
+.page [data-aereo-trust="true"] i {
+  width: 38px !important;
+  height: 38px !important;
+  min-width: 38px !important;
+  border-radius: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #d6c08d !important;
+  border: 1px solid rgba(214, 192, 141, .42) !important;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(214, 192, 141, .16), transparent 62%),
+    rgba(7, 17, 29, .32) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .08),
+    0 8px 22px rgba(0, 0, 0, .18) !important;
+}
+
+.page [data-aereo-trust="true"] i svg {
+  width: 19px !important;
+  height: 19px !important;
+  display: block !important;
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 1.8 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+}
+
+.page [data-aereo-trust="true"] strong {
+  color: rgba(255, 255, 255, .96) !important;
+  font-weight: 900 !important;
+  letter-spacing: -.015em !important;
+}
+
+.page [data-aereo-trust="true"] small {
+  color: rgba(255, 255, 255, .68) !important;
+  font-weight: 750 !important;
+}
+
+/* Hover sutil desktop */
+@media (min-width: 901px) {
+  .page [data-aereo-trust="true"] > div {
+    transition: background .22s ease, transform .22s ease;
+  }
+
+  .page [data-aereo-trust="true"] > div:hover {
+    background: rgba(214, 192, 141, .055) !important;
+  }
+
+  .page [data-aereo-trust="true"] > div:hover i {
+    border-color: rgba(214, 192, 141, .70) !important;
+    background:
+      radial-gradient(circle at 50% 50%, rgba(214, 192, 141, .24), transparent 62%),
+      rgba(7, 17, 29, .38) !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .page [data-aereo-trust="true"] i {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+  }
+
+  .page [data-aereo-trust="true"] i svg {
+    width: 17px !important;
+    height: 17px !important;
+  }
+}
+
+/* END RECURSOS HERO COMMAND BAR ICONS FINAL */
