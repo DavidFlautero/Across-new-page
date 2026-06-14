@@ -14,7 +14,7 @@ type Locale = "es" | "en" | "zh";
 const copy = {
   es: {
     heroEyebrow: "Quiénes somos",
-    heroTitle: "Logística internacional para empresas que necesitan control, precisión y capacidad operativa global.",
+    heroTitle: "Logística internacional con control global.",
     heroText:
       "Conectamos empresas, mercados y cadenas de suministro mediante soluciones logísticas integrales, combinando cobertura internacional, experiencia operativa, tecnología, cumplimiento documental y atención especializada.",
     primaryCta: "Conocer nuestras soluciones",
@@ -100,7 +100,7 @@ const copy = {
 
   en: {
     heroEyebrow: "About us",
-    heroTitle: "International logistics for companies that need control, precision and global operational capacity.",
+    heroTitle: "International logistics with global control.",
     heroText:
       "We connect companies, markets and supply chains through integrated logistics solutions, combining international coverage, operational experience, technology, document compliance and specialized attention.",
     primaryCta: "Explore our solutions",
@@ -186,7 +186,7 @@ const copy = {
 
   zh: {
     heroEyebrow: "关于我们",
-    heroTitle: "为需要控制力、精准度和全球运营能力的企业提供国际物流服务。",
+    heroTitle: "具备全球控制力的国际物流。",
     heroText:
       "我们通过一体化物流解决方案连接企业、市场与供应链，结合国际覆盖、运营经验、技术、文件合规和专业服务。",
     primaryCta: "了解我们的解决方案",

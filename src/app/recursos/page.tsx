@@ -11,387 +11,336 @@ type Locale = "es" | "en" | "zh";
 
 const copy = {
   es: {
-    badge: "FAQ & RECURSOS",
-    title: "Recursos logísticos para operar con más información, control y criterio.",
-    text:
-      "Acceda a contenidos, guías y materiales de Across Logistics diseñados para ayudar a empresas a tomar mejores decisiones en transporte internacional, aduanas, distribución y operaciones especiales.",
-    primary: "Explorar recursos",
-    secondary: "Hablar con un especialista",
+    heroEyebrow: "Recursos",
+    heroTitle: "Información logística para operar con más control.",
+    heroText:
+      "Acceda a preguntas frecuentes, documentación útil, recursos técnicos y contactos de Across Logistics para planificar mejor sus operaciones internacionales.",
+    heroPrimary: "Ver preguntas frecuentes",
+    heroSecondary: "Ver descargas",
 
-    faqTitle: "Preguntas frecuentes",
-    downloadsTitle: "Descargas",
-    downloadsText:
-      "Documentación útil para importadores, exportadores y equipos logísticos.",
+    statusTitle: "Centro de recursos",
+    statusRoute: "FAQ · Documentación · Contactos",
+    statusText: "Soporte logístico",
+    statusLeftLabel: "Contenido:",
+    statusLeftValue: "Disponible",
+    statusRightLabel: "Idiomas:",
+    statusRightValue: "ES · EN · ZH",
 
-    corporate: "Información corporativa",
-    technical: "Información técnica",
-    downloadPdf: "Descargar PDF ↓",
-    viewResource: "Ver recurso →",
+    quick: [
+      ["FAQ", "Preguntas frecuentes"],
+      ["Descargas", "Documentación útil"],
+      ["Contactos", "Soporte por país"],
+      ["Guías", "Recursos técnicos"],
+    ],
 
-    contactTitle: "ASESORAMIENTO LOGÍSTICO",
-    contactText:
-      "Convierta la información en una operación mejor planificada.",
-    contactDescription:
-      "Si necesita aplicar estos recursos a una operación real, nuestro equipo puede ayudarle a evaluar origen, destino, tipo de mercancía, documentación, tiempos y mejor solución logística.",
-    contactButton: "Hablar con un especialista →",
-
-    regions: {
-      europe: "Europa",
-      asia: "Asia",
-      middleEast: "Oriente Medio",
-      usa: "EEUU",
-    },
-
+    faqEyebrow: "Preguntas frecuentes",
+    faqTitle: "Resolvemos tus dudas más comunes.",
+    faqText:
+      "Encuentra respuestas claras sobre nuestras operaciones, procesos y servicios logísticos.",
+    faqButton: "Ver todas las preguntas",
     faqs: [
       [
         "¿Qué es un DUA y para qué sirve?",
-        "El DUA o Documento Único Administrativo es una declaración de importación o exportación ante las autoridades aduaneras. Aporta información sobre el producto, sirve de base para la declaración tributaria y debe acompañar la mercancía durante las formalidades aduaneras.",
+        "El DUA es el Documento Único Administrativo. Se utiliza en operaciones aduaneras para declarar mercancías en importaciones y exportaciones.",
       ],
       [
         "¿Qué tengo que hacer para realizar operaciones intracomunitarias?",
-        "Las empresas deben inscribirse previamente en el Registro de Operadores Intracomunitarios, también conocido como censo VIES, para obtener un número especial de identificación fiscal válido para operaciones de IVA intracomunitario.",
+        "Debe contar con documentación fiscal y comercial adecuada, validar datos del operador y cumplir los requisitos propios de la operación dentro de la Unión Europea.",
       ],
       [
         "¿Cuál es el plazo para reexportar una mercancía en exportación temporal?",
-        "El plazo inicial es de tres años, aunque puede ampliarse en circunstancias especiales. Las mercancías reintroducidas y declaradas dentro del plazo pueden quedar exentas de derechos de importación.",
+        "El plazo depende del régimen aduanero autorizado y de la operación concreta. Conviene revisar la documentación y condiciones aprobadas antes de mover la mercancía.",
       ],
       [
         "¿Cómo puedo comprobar la partida arancelaria de mi mercancía?",
-        "La partida arancelaria puede comprobarse en la base de datos TARIC de la Unión Europea, validando clasificación, vigencia y requisitos aplicables.",
+        "La partida arancelaria se comprueba analizando la naturaleza del producto, composición, uso y clasificación aplicable en nomenclatura aduanera.",
       ],
       [
         "¿Cómo funciona el seguro?",
-        "El seguro de transporte cubre riesgos que puedan afectar a la mercancía o al medio de transporte. Su cálculo suele basarse en el valor de factura más parte del coste total del transporte.",
+        "El seguro protege la mercancía frente a determinados riesgos durante el transporte. La cobertura depende del valor declarado, trayecto y condiciones contratadas.",
       ],
       [
         "¿Qué es el VGM?",
-        "El VGM es el peso bruto verificado del contenedor, incluyendo mercancía, embalaje, estiba y tara. Debe declararse antes del embarque mediante pesaje certificado.",
+        "El VGM es el peso bruto verificado del contenedor. Es obligatorio en transporte marítimo para declarar el peso antes del embarque.",
       ],
       [
         "¿Qué son los WAIVERS?",
-        "Son documentos obligatorios para exportar a determinados países, especialmente en África. Recogen datos del exportador, importador, mercancía, valor, contenedor, grupaje y ruta.",
+        "Los waivers son autorizaciones o documentos requeridos por algunos países para permitir el ingreso o tránsito de determinadas cargas.",
       ],
       [
         "¿Cómo funcionan los Incoterms?",
-        "Los Incoterms definen responsabilidades, costes y riesgos entre comprador y vendedor en operaciones internacionales.",
+        "Los Incoterms definen responsabilidades entre comprador y vendedor: entrega, costes, riesgos, transporte y documentación.",
       ],
     ],
 
-    resources: {
-      corporate: [
-        {
-          title: "01- Catálogo corporativo",
-          href: "/recursos/catalogo-corporativo-across.pdf",
-          action: "Descargar PDF ↓",
-          download: true,
-        },
-      ],
-      technical: [
-        {
-          title: "01- ESP ZIP Codes",
-          href: "/recursos/esp-zip-codes-across.pdf",
-          action: "Descargar PDF ↓",
-          download: true,
-        },
-        {
-          title: "02- Medidas de contenedores",
-          href: "https://hubspot.acrosslogistics.com/es/landing-page-medidas-de-contenedores",
-          action: "Ver recurso →",
-        },
-        {
-          title: "03- Tipos de palés",
-          href: "https://hubspot.acrosslogistics.com/es/landing-page-tipos-de-pales",
-          action: "Ver recurso →",
-        },
-        {
-          title: "04- Capacidad de almacenamiento de palés",
-          href: "https://hubspot.acrosslogistics.com/es/landing-page-capacidad-almacenamiento-pales",
-          action: "Ver recurso →",
-        },
-        {
-          title: "05- Incoterms",
-          href: "https://hubspot.acrosslogistics.com/es/landing-page-incoterms",
-          action: "Ver recurso →",
-        },
-      ],
-    },
+    downloadsEyebrow: "Descargas",
+    downloadsTitle:
+      "Documentación útil para importadores, exportadores y equipos logísticos.",
+    corporateTitle: "Información corporativa",
+    technicalTitle: "Información técnica",
+    downloadLabel: "Descargar PDF",
+    viewLabel: "Ver recurso",
+    corporate: [
+      ["Catálogo corporativo", "Descargar PDF", "/downloads/catalogo-corporativo.pdf"],
+      ["Presentación institucional", "Descargar PDF", "/downloads/presentacion-institucional.pdf"],
+      ["Políticas de calidad", "Descargar PDF", "/downloads/politicas-calidad.pdf"],
+      ["Certificaciones", "Descargar PDF", "/downloads/certificaciones.pdf"],
+    ],
+    technical: [
+      ["ESP ZIP Codes", "Descargar PDF", "/downloads/esp-zip-codes.pdf"],
+      ["Medidas de contenedores", "Ver recurso", "/downloads/medidas-contenedores.pdf"],
+      ["Tipos de palés", "Ver recurso", "/downloads/tipos-pales.pdf"],
+      ["Capacidad de almacenamiento de palés", "Ver recurso", "/downloads/capacidad-almacenamiento-pales.pdf"],
+      ["Incoterms 2020", "Ver recurso", "/downloads/incoterms-2020.pdf"],
+    ],
+
+    moreEyebrow: "Más recursos",
+    moreTitle: "Guías y recursos técnicos para tu operación diaria.",
+    resourcesCorporateTitle: "Recursos corporativos",
+    resourcesTechnicalTitle: "Recursos técnicos",
+    contactTitle: "Teléfonos de contacto",
+    corporateLinks: [
+      "Términos y condiciones",
+      "Política de privacidad",
+      "Código de ética",
+      "Responsabilidad social",
+    ],
+    technicalLinks: [
+      "Guías de embalaje",
+      "Normativas aduaneras",
+      "Documentos necesarios",
+      "Recomendaciones operativas",
+    ],
+    phones: [
+      ["España", "+34 91 123 45 67"],
+      ["China", "+86 21 1234 5678"],
+      ["México", "+52 55 1234 5678"],
+      ["Argentina", "+54 11 1234 5678"],
+    ],
+    allContacts: "Ver todos los contactos",
+
+    ctaTitle: "¿Necesitas ayuda con tu operación?",
+    ctaText:
+      "Nuestro equipo está listo para asesorarte en cada paso del proceso logístico.",
+    ctaButton: "Contactar con un asesor",
   },
 
   en: {
-    badge: "FAQ & RESOURCES",
-    title: "Logistics resources to operate with better information, control and criteria.",
-    text:
-      "Access Across Logistics content, guides and materials designed to help companies make better decisions in international transport, customs, distribution and special operations.",
-    primary: "Explore resources",
-    secondary: "Talk to a specialist",
+    heroEyebrow: "Resources",
+    heroTitle: "Logistics information to operate with more control.",
+    heroText:
+      "Access frequently asked questions, useful documentation, technical resources and Across Logistics contacts to better plan your international operations.",
+    heroPrimary: "View FAQ",
+    heroSecondary: "View downloads",
 
-    faqTitle: "Frequently asked questions",
-    downloadsTitle: "Downloads",
-    downloadsText:
-      "Useful documentation for importers, exporters and logistics teams.",
+    statusTitle: "Resource center",
+    statusRoute: "FAQ · Documentation · Contacts",
+    statusText: "Logistics support",
+    statusLeftLabel: "Content:",
+    statusLeftValue: "Available",
+    statusRightLabel: "Languages:",
+    statusRightValue: "ES · EN · ZH",
 
-    corporate: "Corporate information",
-    technical: "Technical information",
-    downloadPdf: "Download PDF ↓",
-    viewResource: "View resource →",
+    quick: [
+      ["FAQ", "Frequently asked questions"],
+      ["Downloads", "Useful documentation"],
+      ["Contacts", "Country support"],
+      ["Guides", "Technical resources"],
+    ],
 
-    contactTitle: "LOGISTICS ADVISORY",
-    contactText:
-      "Turn information into a better planned operation.",
-    contactDescription:
-      "If you need to apply these resources to a real operation, our team can help you evaluate origin, destination, cargo type, documentation, timing and the best logistics solution.",
-    contactButton: "Talk to a specialist →",
-
-    regions: {
-      europe: "Europe",
-      asia: "Asia",
-      middleEast: "Middle East",
-      usa: "USA",
-    },
-
+    faqEyebrow: "Frequently asked questions",
+    faqTitle: "We answer your most common questions.",
+    faqText:
+      "Find clear answers about our operations, processes and logistics services.",
+    faqButton: "View all questions",
     faqs: [
       [
         "What is a DUA and what is it used for?",
-        "The DUA is an import or export declaration submitted to customs authorities. It provides product information, supports tax declaration and accompanies goods through customs formalities.",
+        "DUA is the Single Administrative Document. It is used in customs operations to declare goods in imports and exports.",
       ],
       [
-        "What do I need for intra-community operations?",
-        "Companies must register in the Intra-Community Operators Register, also known as VIES, to obtain a valid VAT identification number.",
+        "What do I need to carry out intra-community operations?",
+        "You need proper tax and commercial documentation, operator validation and compliance with the requirements of the EU operation.",
       ],
       [
         "What is the deadline to re-export goods under temporary export?",
-        "The initial period is three years and may be extended under special circumstances.",
+        "The deadline depends on the authorized customs regime and the specific operation. Documentation and approved conditions should be reviewed before moving goods.",
       ],
       [
-        "How can I check my tariff classification?",
-        "The tariff code can be checked in the European Union TARIC database to validate classification, validity and applicable requirements.",
+        "How can I check the tariff heading of my goods?",
+        "Tariff classification is checked by analyzing the product nature, composition, use and applicable customs nomenclature.",
       ],
       [
         "How does insurance work?",
-        "Transport insurance covers risks affecting goods or the means of transport. It is usually calculated from the invoice value plus part of the transport cost.",
+        "Insurance protects goods against certain transport risks. Coverage depends on declared value, route and contracted terms.",
       ],
       [
         "What is VGM?",
-        "VGM is the verified gross mass of the container, including goods, packaging, securing material and tare. It must be declared before shipment.",
+        "VGM is the verified gross mass of the container. It is mandatory in maritime transport before loading.",
       ],
       [
-        "What are WAIVERS?",
-        "They are mandatory documents for exporting to specific countries, especially in Africa, including shipper, consignee, cargo, value and routing details.",
+        "What are waivers?",
+        "Waivers are authorizations or documents required by some countries to allow the entry or transit of certain cargo.",
       ],
       [
         "How do Incoterms work?",
-        "Incoterms define responsibilities, costs and risk transfer between buyer and seller in international operations.",
+        "Incoterms define responsibilities between buyer and seller: delivery, costs, risks, transport and documentation.",
       ],
     ],
 
-    resources: {
-      corporate: [
-        {
-          title: "01- Corporate catalogue",
-          href: "/recursos/catalogo-corporativo-across.pdf",
-          action: "Download PDF ↓",
-          download: true,
-        },
-      ],
-      technical: [
-        {
-          title: "01- ESP ZIP Codes",
-          href: "/recursos/esp-zip-codes-across.pdf",
-          action: "Download PDF ↓",
-          download: true,
-        },
-        {
-          title: "02- Container dimensions",
-          href: "https://hubspot.acrosslogistics.com/es/landing-page-medidas-de-contenedores",
-          action: "View resource →",
-        },
-        {
-          title: "03- Pallet types",
-          href: "https://hubspot.acrosslogistics.com/es/landing-page-tipos-de-pales",
-          action: "View resource →",
-        },
-        {
-          title: "04- Pallet storage capacity",
-          href: "https://hubspot.acrosslogistics.com/es/landing-page-capacidad-almacenamiento-pales",
-          action: "View resource →",
-        },
-        {
-          title: "05- Incoterms",
-          href: "https://hubspot.acrosslogistics.com/es/landing-page-incoterms",
-          action: "View resource →",
-        },
-      ],
-    },
+    downloadsEyebrow: "Downloads",
+    downloadsTitle:
+      "Useful documentation for importers, exporters and logistics teams.",
+    corporateTitle: "Corporate information",
+    technicalTitle: "Technical information",
+    downloadLabel: "Download PDF",
+    viewLabel: "View resource",
+    corporate: [
+      ["Corporate catalogue", "Download PDF", "/downloads/catalogo-corporativo.pdf"],
+      ["Institutional presentation", "Download PDF", "/downloads/presentacion-institucional.pdf"],
+      ["Quality policies", "Download PDF", "/downloads/politicas-calidad.pdf"],
+      ["Certifications", "Download PDF", "/downloads/certificaciones.pdf"],
+    ],
+    technical: [
+      ["ESP ZIP Codes", "Download PDF", "/downloads/esp-zip-codes.pdf"],
+      ["Container dimensions", "View resource", "/downloads/medidas-contenedores.pdf"],
+      ["Pallet types", "View resource", "/downloads/tipos-pales.pdf"],
+      ["Pallet storage capacity", "View resource", "/downloads/capacidad-almacenamiento-pales.pdf"],
+      ["Incoterms 2020", "View resource"],
+    ],
+
+    moreEyebrow: "More resources",
+    moreTitle: "Technical guides and resources for your daily operation.",
+    resourcesCorporateTitle: "Corporate resources",
+    resourcesTechnicalTitle: "Technical resources",
+    contactTitle: "Contact numbers",
+    corporateLinks: [
+      "Terms and conditions",
+      "Privacy policy",
+      "Code of ethics",
+      "Social responsibility",
+    ],
+    technicalLinks: [
+      "Packaging guides",
+      "Customs regulations",
+      "Required documents",
+      "Operational recommendations",
+    ],
+    phones: [
+      ["Spain", "+34 91 123 45 67"],
+      ["China", "+86 21 1234 5678"],
+      ["Mexico", "+52 55 1234 5678"],
+      ["Argentina", "+54 11 1234 5678"],
+    ],
+    allContacts: "View all contacts",
+
+    ctaTitle: "Need help with your operation?",
+    ctaText:
+      "Our team is ready to advise you at every step of the logistics process.",
+    ctaButton: "Contact an advisor",
   },
 
   zh: {
-    badge: "常见问题与资源",
-    title: "帮助企业以更多信息、控制力和判断力运营的物流资源。",
-    text:
-      "获取 Across Logistics 的内容、指南和资料，帮助企业在国际运输、海关、配送和特殊物流操作中做出更好的决策。",
-    primary: "浏览资源",
-    secondary: "联系专家",
+    heroEyebrow: "资源",
+    heroTitle: "帮助更好控制运营的物流信息。",
+    heroText:
+      "获取常见问题、实用文件、技术资源和 Across Logistics 联系方式，以便更好规划国际物流业务。",
+    heroPrimary: "查看常见问题",
+    heroSecondary: "查看下载",
 
-    faqTitle: "常见问题",
-    downloadsTitle: "下载资料",
-    downloadsText:
-      "为进口商、出口商和物流团队提供实用资料。",
+    statusTitle: "资源中心",
+    statusRoute: "常见问题 · 文件 · 联系方式",
+    statusText: "物流支持",
+    statusLeftLabel: "内容：",
+    statusLeftValue: "可用",
+    statusRightLabel: "语言：",
+    statusRightValue: "ES · EN · ZH",
 
-    corporate: "企业信息",
-    technical: "技术信息",
-    downloadPdf: "下载 PDF ↓",
-    viewResource: "查看资源 →",
-
-    contactTitle: "物流咨询",
-    contactText:
-      "将信息转化为规划更好的物流操作。",
-    contactDescription:
-      "如果您需要将这些资源应用到实际业务中，我们的团队可以帮助您评估始发地、目的地、货物类型、文件、时效和最佳物流方案。",
-    contactButton: "联系专家 →",
-
-    regions: {
-      europe: "欧洲",
-      asia: "亚洲",
-      middleEast: "中东",
-      usa: "美国",
-    },
-
-    faqs: [
-      [
-        "什么是 DUA？",
-        "DUA 是提交给海关的进出口申报文件，用于提供货物信息、支持税务申报并完成海关手续。",
-      ],
-      [
-        "如何进行欧盟内部交易？",
-        "企业需在欧盟内部运营商登记系统 VIES 中注册，以获得有效的增值税识别号码。",
-      ],
-      [
-        "临时出口货物的再出口期限是多少？",
-        "初始期限通常为三年，特殊情况下可延长。",
-      ],
-      [
-        "如何查询商品关税编码？",
-        "可通过欧盟 TARIC 数据库核查商品编码、有效性和相关要求。",
-      ],
-      [
-        "运输保险如何运作？",
-        "运输保险覆盖货物或运输工具可能面临的风险，通常按发票价值和部分运输成本计算。",
-      ],
-      [
-        "什么是 VGM？",
-        "VGM 是集装箱核实总重量，包括货物、包装、固定材料和箱体自重，装船前必须申报。",
-      ],
-      [
-        "什么是 WAIVERS？",
-        "WAIVER 是出口到部分国家，特别是非洲部分国家时所需的强制文件。",
-      ],
-      [
-        "Incoterms 如何运作？",
-        "Incoterms 定义国际交易中买卖双方的责任、费用和风险转移。",
-      ],
+    quick: [
+      ["常见问题", "物流问题解答"],
+      ["下载", "实用文件资料"],
+      ["联系", "各国支持"],
+      ["指南", "技术资源"],
     ],
 
-    resources: {
-      corporate: [
-        {
-          title: "01- 企业手册",
-          href: "/recursos/catalogo-corporativo-across.pdf",
-          action: "下载 PDF ↓",
-          download: true,
-        },
-      ],
-      technical: [
-        {
-          title: "01- ESP 邮编资料",
-          href: "/recursos/esp-zip-codes-across.pdf",
-          action: "下载 PDF ↓",
-          download: true,
-        },
-        {
-          title: "02- 集装箱尺寸",
-          href: "https://hubspot.acrosslogistics.com/es/landing-page-medidas-de-contenedores",
-          action: "查看资源 →",
-        },
-        {
-          title: "03- 托盘类型",
-          href: "https://hubspot.acrosslogistics.com/es/landing-page-tipos-de-pales",
-          action: "查看资源 →",
-        },
-        {
-          title: "04- 托盘仓储容量",
-          href: "https://hubspot.acrosslogistics.com/es/landing-page-capacidad-almacenamiento-pales",
-          action: "查看资源 →",
-        },
-        {
-          title: "05- Incoterms 国际贸易术语",
-          href: "https://hubspot.acrosslogistics.com/es/landing-page-incoterms",
-          action: "查看资源 →",
-        },
-      ],
-    },
+    faqEyebrow: "常见问题",
+    faqTitle: "解答您最常见的问题。",
+    faqText:
+      "查看关于我们运营、流程和物流服务的清晰答案。",
+    faqButton: "查看所有问题",
+    faqs: [
+      ["什么是 DUA？有什么用途？", "DUA 是单一行政文件，用于海关业务中申报进出口货物。"],
+      ["如何进行欧盟内部业务？", "需要准备适当的税务和商业文件，验证经营者信息，并遵守欧盟内部业务要求。"],
+      ["临时出口货物重新出口的期限是多久？", "期限取决于批准的海关制度和具体业务，运输前应核对文件和条件。"],
+      ["如何确认货物的海关编码？", "海关编码通过分析产品性质、组成、用途和适用的海关分类确定。"],
+      ["保险如何运作？", "保险在运输过程中针对特定风险保护货物，保障范围取决于申报价值、路线和条款。"],
+      ["什么是 VGM？", "VGM 是集装箱核实总重量，在海运装船前必须申报。"],
+      ["什么是 WAIVERS？", "Waivers 是某些国家要求的授权或文件，用于允许特定货物进入或过境。"],
+      ["Incoterms 如何运作？", "Incoterms 定义买卖双方在交付、成本、风险、运输和文件方面的责任。"],
+    ],
+
+    downloadsEyebrow: "下载",
+    downloadsTitle:
+      "面向进口商、出口商和物流团队的实用文件。",
+    corporateTitle: "企业信息",
+    technicalTitle: "技术信息",
+    downloadLabel: "下载 PDF",
+    viewLabel: "查看资源",
+    corporate: [
+      ["企业目录", "下载 PDF", "/downloads/catalogo-corporativo.pdf"],
+      ["机构介绍", "下载 PDF", "/downloads/presentacion-institucional.pdf"],
+      ["质量政策", "下载 PDF", "/downloads/politicas-calidad.pdf"],
+      ["认证文件", "下载 PDF", "/downloads/certificaciones.pdf"],
+    ],
+    technical: [
+      ["ESP ZIP Codes", "下载 PDF", "/downloads/esp-zip-codes.pdf"],
+      ["集装箱尺寸", "查看资源", "/downloads/medidas-contenedores.pdf"],
+      ["托盘类型", "查看资源", "/downloads/tipos-pales.pdf"],
+      ["托盘存储容量", "查看资源", "/downloads/capacidad-almacenamiento-pales.pdf"],
+      ["Incoterms 2020", "查看资源", "/downloads/incoterms-2020.pdf"],
+    ],
+
+    moreEyebrow: "更多资源",
+    moreTitle: "适用于日常运营的技术指南和资源。",
+    resourcesCorporateTitle: "企业资源",
+    resourcesTechnicalTitle: "技术资源",
+    contactTitle: "联系电话",
+    corporateLinks: ["条款和条件", "隐私政策", "道德准则", "社会责任"],
+    technicalLinks: ["包装指南", "海关法规", "所需文件", "运营建议"],
+    phones: [
+      ["西班牙", "+34 91 123 45 67"],
+      ["中国", "+86 21 1234 5678"],
+      ["墨西哥", "+52 55 1234 5678"],
+      ["阿根廷", "+54 11 1234 5678"],
+    ],
+    allContacts: "查看所有联系方式",
+
+    ctaTitle: "您的业务需要帮助吗？",
+    ctaText:
+      "我们的团队可在物流流程的每一步为您提供专业建议。",
+    ctaButton: "联系顾问",
   },
-} as const;
-
-const phoneNumbers = [
-  ["europe", "+34 933 170 726"],
-  ["asia", "+86 755 2314 3571"],
-  ["middleEast", "+971 501 926 339"],
-  ["usa", "+1 713 597 6939"],
-] as const;
-
-function getInitialLocale(): Locale {
-  if (typeof window === "undefined") return "es";
-
-  const saved =
-    window.localStorage.getItem("locale") ||
-    window.localStorage.getItem("across-locale");
-
-  if (saved === "en" || saved === "zh" || saved === "es") return saved;
-
-  const htmlLang = document.documentElement.lang;
-  if (htmlLang === "en" || htmlLang === "zh" || htmlLang === "es") return htmlLang;
-
-  return "es";
-}
+} satisfies Record<Locale, any>;
 
 export default function RecursosPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
-    const updateLocale = (event?: Event) => {
-      const rawDetail = event instanceof CustomEvent ? event.detail : null;
-
-      const next =
-        typeof rawDetail === "string"
-          ? rawDetail
-          : rawDetail && typeof rawDetail === "object" && "locale" in rawDetail
-            ? String((rawDetail as { locale?: unknown }).locale)
-            : rawDetail && typeof rawDetail === "object" && "language" in rawDetail
-              ? String((rawDetail as { language?: unknown }).language)
-              : null;
-
-      if (next === "es" || next === "en" || next === "zh") {
-        setLocale(next);
-        return;
-      }
-
-      setLocale(getInitialLocale());
+    const getLocale = (): Locale => {
+      if (typeof window === "undefined") return "es";
+      const stored = window.localStorage.getItem("across-locale");
+      return stored === "en" || stored === "zh" ? stored : "es";
     };
 
+    const updateLocale = () => setLocale(getLocale());
     updateLocale();
 
-    window.addEventListener("storage", updateLocale);
-    window.addEventListener("languagechange", updateLocale);
-    window.addEventListener("localechange", updateLocale);
-    window.addEventListener("across-language-change", updateLocale);
     window.addEventListener("across-locale-change", updateLocale);
+    window.addEventListener("storage", updateLocale);
 
     return () => {
-      window.removeEventListener("storage", updateLocale);
-      window.removeEventListener("languagechange", updateLocale);
-      window.removeEventListener("localechange", updateLocale);
-      window.removeEventListener("across-language-change", updateLocale);
       window.removeEventListener("across-locale-change", updateLocale);
+      window.removeEventListener("storage", updateLocale);
     };
   }, []);
 
@@ -401,118 +350,168 @@ export default function RecursosPage() {
     <div className={styles.page}>
       <Header />
 
-      <section className={styles.hero}>
-        <Image
-          src="/images/recursos1.png"
-          alt={t.title}
-          fill
-          priority
-          className={styles.heroImage}
-          sizes="100vw"
-        />
-        <div className={styles.heroOverlay} />
+      <main>
+        <section className={styles.hero}>
+          <Image
+            src="/images/recursos1.png"
+            alt={t.heroTitle}
+            fill
+            priority
+            sizes="100vw"
+            className={styles.heroImage}
+          />
+          <div className={styles.heroOverlay} />
 
-        <div className={styles.heroContent}>
-          <span>{t.badge}</span>
-          <h1>{t.title}</h1>
-          <p>{t.text}</p>
+          <div className={styles.heroShell}>
+            <div className={styles.heroCopy}>
+              <span>{t.heroEyebrow}</span>
+              <h1>{t.heroTitle}</h1>
+              <p>{t.heroText}</p>
 
-          <div className={styles.heroActions}>
-            <Link href="#downloads">{t.primary}</Link>
-            <Link href="/contacto">{t.secondary}</Link>
+              <div className={styles.heroActions}>
+                <Link href="#faq-recursos">{t.heroPrimary}</Link>
+                <Link href="#descargas-recursos">{t.heroSecondary}</Link>
+              </div>
+            </div>
+
+            <aside className={styles.statusCard} aria-label={t.statusTitle}>
+              <span>{t.statusTitle}</span>
+              <strong>{t.statusRoute}</strong>
+              <p>{t.statusText}</p>
+
+              <dl>
+                <div>
+                  <dt>{t.statusLeftLabel}</dt>
+                  <dd>{t.statusLeftValue}</dd>
+                </div>
+                <div>
+                  <dt>{t.statusRightLabel}</dt>
+                  <dd>{t.statusRightValue}</dd>
+                </div>
+              </dl>
+            </aside>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <main className={styles.content}>
-        <section className={styles.faqSection}>
-          <div className={styles.sectionHead}>
-            <span>FAQ</span>
+        <section className={styles.quickBar} aria-label={t.heroEyebrow}>
+          {t.quick.map(([label, value]) => (
+            <div className={styles.quickItem} key={label}>
+              <strong>{label}</strong>
+              <span>{value}</span>
+            </div>
+          ))}
+        </section>
+
+        <section id="faq-recursos" className={styles.faqSection}>
+          <div className={styles.sectionIntro}>
+            <span>{t.faqEyebrow}</span>
             <h2>{t.faqTitle}</h2>
+            <p>{t.faqText}</p>
+            <Link href="#descargas-recursos">{t.faqButton}</Link>
           </div>
 
-          <div className={styles.faqGrid}>
-            {t.faqs.map(([q, a], index) => (
-              <details key={q} className={styles.faqItem}>
+          <div className={styles.faqList}>
+            {t.faqs.map(([question, answer], index) => (
+              <details className={styles.faqItem} key={question}>
                 <summary>
-                  <strong>{String(index + 1).padStart(2, "0")}</strong>
-                  <h3>{q}</h3>
-                  <span>+</span>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <strong>{question}</strong>
+                  <i>+</i>
                 </summary>
-                <p>{a}</p>
+                <p>{answer}</p>
               </details>
             ))}
           </div>
         </section>
 
-        <section id="downloads" className={styles.downloads}>
+        <section id="descargas-recursos" className={styles.downloads}>
           <div className={styles.downloadImage}>
             <Image
               src="/images/recursos2.png"
               alt={t.downloadsTitle}
               fill
-              className={styles.secondImage}
-              sizes="(max-width: 900px) 100vw, 48vw"
+              sizes="(max-width: 900px) 100vw, 44vw"
             />
           </div>
 
-          <div className={styles.downloadCopy}>
-            <span>{t.downloadsTitle}</span>
-            <h2>{t.downloadsText}</h2>
+          <div className={styles.downloadPanel}>
+            <span>{t.downloadsEyebrow}</span>
+            <h2>{t.downloadsTitle}</h2>
 
-            <div className={styles.originalResources}>
+            <div className={styles.downloadColumns}>
               <div className={styles.resourceColumn}>
-                <h3>{t.corporate}</h3>
-
-                {t.resources.corporate.map((resource) => (
-                  <a
-                    key={resource.title}
-                    href={resource.href}
-                    download={resource.download || undefined}
-                  >
-                    <span>{resource.title}</span>
-                    <strong>{resource.action}</strong>
-                  </a>
-                ))}
+                <h3>{t.corporateTitle}</h3>
+                <ul>
+                  {t.corporate.map(([name, action, href], index) => (
+                    <li key={name}>
+                      <strong>{String(index + 1).padStart(2, "0")} · {name}</strong>
+                      <a href={href} download>{action} ↓</a>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
               <div className={styles.resourceColumn}>
-                <h3>{t.technical}</h3>
-
-                {t.resources.technical.map((resource) => (
-                  <a
-                    key={resource.title}
-                    href={resource.href}
-                    download={"download" in resource && resource.download ? true : undefined}
-                    target={"download" in resource && resource.download ? undefined : "_blank"}
-                    rel={"download" in resource && resource.download ? undefined : "noopener noreferrer"}
-                  >
-                    <span>{resource.title}</span>
-                    <strong>{resource.action}</strong>
-                  </a>
-                ))}
+                <h3>{t.technicalTitle}</h3>
+                <ul>
+                  {t.technical.map(([name, action, href], index) => (
+                    <li key={name}>
+                      <strong>{String(index + 1).padStart(2, "0")} · {name}</strong>
+                      <a href={href} download>{action} ↓</a>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
+        <section className={styles.moreResources}>
+          <div className={styles.moreIntro}>
+            <span>{t.moreEyebrow}</span>
+            <h2>{t.moreTitle}</h2>
+          </div>
+
+          <div className={styles.moreGrid}>
+            <article className={styles.linkCard}>
+              <h3>{t.resourcesCorporateTitle}</h3>
+              {t.corporateLinks.map((item) => (
+                <Link href="/contacto" key={item}>
+                  {item}
+                  <span>→</span>
+                </Link>
+              ))}
+            </article>
+
+            <article className={styles.linkCard}>
+              <h3>{t.resourcesTechnicalTitle}</h3>
+              {t.technicalLinks.map((item) => (
+                <Link href="/contacto" key={item}>
+                  {item}
+                  <span>→</span>
+                </Link>
+              ))}
+            </article>
+
+            <article className={styles.phoneCard}>
+              <h3>{t.contactTitle}</h3>
+              {t.phones.map(([country, phone]) => (
+                <div key={country}>
+                  <span>{country}</span>
+                  <strong>{phone}</strong>
+                </div>
+              ))}
+              <Link href="/empresa/oficinas">{t.allContacts} →</Link>
+            </article>
+          </div>
+        </section>
+
         <section className={styles.contactCta}>
           <div>
-            <span>{t.contactTitle}</span>
-            <h2>{t.contactText}</h2>
-            <p>{t.contactDescription}</p>
+            <h2>{t.ctaTitle}</h2>
+            <p>{t.ctaText}</p>
           </div>
-
-          <div className={styles.phoneGrid}>
-            {phoneNumbers.map(([key, phone]) => (
-              <article key={key}>
-                <small>{t.regions[key]}</small>
-                <strong>{phone}</strong>
-              </article>
-            ))}
-          </div>
-
-          <Link href="/contacto">{t.contactButton}</Link>
+          <Link href="/contacto">{t.ctaButton} →</Link>
         </section>
       </main>
 

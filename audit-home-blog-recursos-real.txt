@@ -1,0 +1,131 @@
+========================================
+HOME
+========================================
+Archivo:
+-rw-r--r-- 1 david 197609 486 Jun 14 05:39 src/app/page.tsx
+
+Imports:
+1:import Header from "@/components/layout/Header";
+2:import Footer from "@/components/layout/Footer";
+4:import Hero from "@/components/sections/Hero";
+5:import HomeCorporateFinal from "@/components/sections/HomeCorporateFinal";
+
+Clases styles:
+
+Imagenes:
+
+========================================
+BLOG
+========================================
+-rw-r--r-- 1 david 197609 8190 Jun 14 05:39 src/app/blog/Blog.module.css
+-rw-r--r-- 1 david 197609 8950 Jun 14 05:39 src/app/blog/page.tsx
+
+Imports:
+3:import { useEffect, useMemo, useState } from "react";
+4:import Image from "next/image";
+5:import Header from "@/components/layout/Header";
+6:import Footer from "@/components/layout/Footer";
+7:import styles from "./Blog.module.css";
+
+Clases styles:
+styles.active
+styles.blogWrap
+styles.hero
+styles.heroContent
+styles.heroImage
+styles.heroOverlay
+styles.imageBox
+styles.loading
+styles.page
+styles.postBody
+styles.postCard
+styles.postsColumn
+styles.postsGrid
+styles.sidebar
+styles.titleBlock
+
+Estructura:
+18:  category: string;
+44:    categoryLabels: {
+66:    empty: "No articles available for this category.",
+78:    categoryLabels: {
+112:    categoryLabels: {
+142:  const [posts, setPosts] = useState<Post[]>([]);
+187:    fetch(`/api/blog-posts?locale=${locale}&limit=24`)
+189:      .then((data) => setPosts(Array.isArray(data.posts) ? data.posts : []))
+197:    const filtered =
+199:        ? posts
+200:        : posts.filter((p) =>
+201:            (p.category || "").toLowerCase().includes(active.toLowerCase())
+204:    return filtered.slice(0, 4);
+205:  }, [posts, active]);
+211:      <section className={styles.hero}>
+229:      <main className={styles.blogWrap}>
+230:        <section className={styles.postsColumn}>
+242:          <div className={styles.postsGrid}>
+243:            {visiblePosts.map((post) => (
+287:          {t.categoriesList.map((category) => (
+289:              key={category}
+291:              className={active === category ? styles.active : ""}
+292:              onClick={() => setActive(category)}
+294:              {t.categoryLabels[category]}
+
+Imagenes:
+213:          src="/images/recursos1.png"
+252:                  {post.image && <img src={post.image} alt={post.title} />}
+
+========================================
+RECURSOS
+========================================
+src/app/recursos/page.tsx
+src/app/recursos/Recursos.module.css
+
+Imports recursos:
+src/app/recursos/page.tsx:3:import { useEffect, useState } from "react";
+src/app/recursos/page.tsx:4:import Image from "next/image";
+src/app/recursos/page.tsx:5:import Link from "next/link";
+src/app/recursos/page.tsx:6:import Header from "@/components/layout/Header";
+src/app/recursos/page.tsx:7:import Footer from "@/components/layout/Footer";
+src/app/recursos/page.tsx:8:import styles from "./Recursos.module.css";
+
+Clases styles recursos:
+src/app/recursos/page.tsx:styles.contactCta
+src/app/recursos/page.tsx:styles.content
+src/app/recursos/page.tsx:styles.downloadCopy
+src/app/recursos/page.tsx:styles.downloadImage
+src/app/recursos/page.tsx:styles.downloads
+src/app/recursos/page.tsx:styles.faqGrid
+src/app/recursos/page.tsx:styles.faqItem
+src/app/recursos/page.tsx:styles.faqSection
+src/app/recursos/page.tsx:styles.hero
+src/app/recursos/page.tsx:styles.heroActions
+src/app/recursos/page.tsx:styles.heroContent
+src/app/recursos/page.tsx:styles.heroImage
+src/app/recursos/page.tsx:styles.heroOverlay
+src/app/recursos/page.tsx:styles.originalResources
+src/app/recursos/page.tsx:styles.page
+src/app/recursos/page.tsx:styles.phoneGrid
+src/app/recursos/page.tsx:styles.resourceColumn
+src/app/recursos/page.tsx:styles.secondImage
+src/app/recursos/page.tsx:styles.sectionHead
+
+Acordeones / details / summary:
+src/app/recursos/page.tsx:21:    faqTitle: "Preguntas frecuentes",
+src/app/recursos/page.tsx:45:    faqs: [
+src/app/recursos/page.tsx:128:    faqTitle: "Frequently asked questions",
+src/app/recursos/page.tsx:152:    faqs: [
+src/app/recursos/page.tsx:235:    faqTitle: "常见问题",
+src/app/recursos/page.tsx:259:    faqs: [
+src/app/recursos/page.tsx:428:        <section className={styles.faqSection}>
+src/app/recursos/page.tsx:431:            <h2>{t.faqTitle}</h2>
+src/app/recursos/page.tsx:434:          <div className={styles.faqGrid}>
+src/app/recursos/page.tsx:435:            {t.faqs.map(([q, a], index) => (
+src/app/recursos/page.tsx:436:              <details key={q} className={styles.faqItem}>
+src/app/recursos/page.tsx:437:                <summary>
+src/app/recursos/page.tsx:467:                {t.resources.corporate.map((resource) => (
+src/app/recursos/page.tsx:482:                {t.resources.technical.map((resource) => (
+src/app/recursos/page.tsx:507:            {phoneNumbers.map(([key, phone]) => (
+
+Imagenes recursos:
+src/app/recursos/page.tsx:406:          src="/images/recursos1.png"
+src/app/recursos/page.tsx:451:              src="/images/recursos2.png"
