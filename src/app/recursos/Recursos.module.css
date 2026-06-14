@@ -714,3 +714,81 @@
     font-size: 2rem;
   }
 }
+
+/* RECURSOS HERO SAME AS QUIENES FINAL
+   Valores reales medidos en /empresa/quienes-somos desktop:
+   H1: 60.16px / 55.3472px / 950 / -3.008px / width 680
+   P: 15.2px / 22.04px / 650 / width 600
+   Este bloque gana sobre reglas generales de Recursos.module.css.
+*/
+
+.page [data-aereo-hero="true"] h1,
+.page [data-service-hero-home="true"] h1 {
+  font-size: 60.16px !important;
+  line-height: 55.3472px !important;
+  font-weight: 950 !important;
+  letter-spacing: -3.008px !important;
+  width: 680px !important;
+  max-width: 680px !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.page [data-aereo-hero="true"] p,
+.page [data-service-hero-home="true"] p {
+  font-size: 15.2px !important;
+  line-height: 22.04px !important;
+  font-weight: 650 !important;
+  letter-spacing: normal !important;
+  width: 600px !important;
+  max-width: 600px !important;
+  margin-top: 15.2px !important;
+  margin-bottom: 0 !important;
+}
+
+/* No tocar h2/h3 del contenido, solo hero */
+.page [data-aereo-hero="true"] a,
+.page [data-service-hero-home="true"] a {
+  font-size: inherit;
+}
+
+/* Tablet y mobile mantienen proporción del sistema */
+@media (max-width: 900px) {
+  .page [data-aereo-hero="true"] h1,
+  .page [data-service-hero-home="true"] h1 {
+    width: auto !important;
+    max-width: 680px !important;
+    font-size: clamp(2.7rem, 9.2vw, 4.4rem) !important;
+    line-height: .92 !important;
+    font-weight: 950 !important;
+    letter-spacing: -.05em !important;
+  }
+
+  .page [data-aereo-hero="true"] p,
+  .page [data-service-hero-home="true"] p {
+    width: auto !important;
+    max-width: 600px !important;
+    font-size: .95rem !important;
+    line-height: 1.45 !important;
+    font-weight: 650 !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .page [data-aereo-hero="true"] h1,
+  .page [data-service-hero-home="true"] h1 {
+    font-size: clamp(2.25rem, 11vw, 3.35rem) !important;
+    line-height: .94 !important;
+    font-weight: 950 !important;
+    letter-spacing: -.048em !important;
+  }
+
+  .page [data-aereo-hero="true"] p,
+  .page [data-service-hero-home="true"] p {
+    font-size: .92rem !important;
+    line-height: 1.48 !important;
+    font-weight: 650 !important;
+  }
+}
+
+/* END RECURSOS HERO SAME AS QUIENES FINAL */

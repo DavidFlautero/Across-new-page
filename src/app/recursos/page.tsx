@@ -6,13 +6,14 @@ import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import styles from "./Recursos.module.css";
+import heroStyles from "../empresa/quienes-somos/QuienesSomos.module.css";
 
 type Locale = "es" | "en" | "zh";
 
 const copy = {
   es: {
     heroEyebrow: "Recursos",
-    heroTitle: "Información logística para operar con más control.",
+    heroTitle: "Centro de recursos logísticos.",
     heroText:
       "Acceda a preguntas frecuentes, documentación útil, recursos técnicos y contactos de Across Logistics para planificar mejor sus operaciones internacionales.",
     heroPrimary: "Ver preguntas frecuentes",
@@ -127,7 +128,7 @@ const copy = {
 
   en: {
     heroEyebrow: "Resources",
-    heroTitle: "Logistics information to operate with more control.",
+    heroTitle: "Logistics resource center.",
     heroText:
       "Access frequently asked questions, useful documentation, technical resources and Across Logistics contacts to better plan your international operations.",
     heroPrimary: "View FAQ",
@@ -242,7 +243,7 @@ const copy = {
 
   zh: {
     heroEyebrow: "资源",
-    heroTitle: "帮助更好控制运营的物流信息。",
+    heroTitle: "物流资源中心。",
     heroText:
       "获取常见问题、实用文件、技术资源和 Across Logistics 联系方式，以便更好规划国际物流业务。",
     heroPrimary: "查看常见问题",
@@ -349,57 +350,76 @@ export default function RecursosPage() {
   return (
     <div className={styles.page}>
       <Header />
-
-      <main>
-        <section className={styles.hero}>
+<main>
+        <section
+          className={heroStyles.hero}
+          data-aereo-hero="true"
+          data-service-hero-home="true"
+        >
           <Image
             src="/images/recursos1.png"
             alt={t.heroTitle}
             fill
             priority
-            sizes="100vw"
-            className={styles.heroImage}
+            sizes="(max-width: 900px) 0px, 100vw"
+            className={`${heroStyles.heroImage} ${heroStyles.heroImageDesktop}`}
           />
-          <div className={styles.heroOverlay} />
 
-          <div className={styles.heroShell}>
-            <div className={styles.heroCopy}>
-              <span>{t.heroEyebrow}</span>
-              <h1>{t.heroTitle}</h1>
-              <p>{t.heroText}</p>
+          <Image
+            src="/images/recursos1.png"
+            alt={t.heroTitle}
+            fill
+            priority
+            sizes="(max-width: 900px) 100vw, 0px"
+            className={`${heroStyles.heroImage} ${heroStyles.heroImageMobile}`}
+          />
 
-              <div className={styles.heroActions}>
-                <Link href="#faq-recursos">{t.heroPrimary}</Link>
-                <Link href="#descargas-recursos">{t.heroSecondary}</Link>
+          <div className={heroStyles.heroOverlay} />
+
+          <div className={heroStyles.heroInner}>
+            <div className={heroStyles.heroContent}>
+              <span className={heroStyles.eyebrow}>{t.heroEyebrow}</span>
+              <h1 className={heroStyles.title}>{t.heroTitle}</h1>
+              <p className={heroStyles.subtitle}>{t.heroText}</p>
+
+              <div className={heroStyles.actions}>
+                <Link href="#faq-recursos" className={heroStyles.primaryBtn}>
+                  {t.heroPrimary}
+                </Link>
+                <Link href="#descargas-recursos" className={heroStyles.secondaryBtn}>
+                  {t.heroSecondary}
+                </Link>
               </div>
             </div>
 
-            <aside className={styles.statusCard} aria-label={t.statusTitle}>
+            <div className={heroStyles.operationCard}>
               <span>{t.statusTitle}</span>
               <strong>{t.statusRoute}</strong>
               <p>{t.statusText}</p>
 
-              <dl>
-                <div>
-                  <dt>{t.statusLeftLabel}</dt>
-                  <dd>{t.statusLeftValue}</dd>
-                </div>
-                <div>
-                  <dt>{t.statusRightLabel}</dt>
-                  <dd>{t.statusRightValue}</dd>
-                </div>
-              </dl>
-            </aside>
-          </div>
-        </section>
+              <div>
+                <small>{t.statusLeftLabel}</small>
+                <b>{t.statusLeftValue}</b>
+              </div>
 
-        <section className={styles.quickBar} aria-label={t.heroEyebrow}>
-          {t.quick.map(([label, value]) => (
-            <div className={styles.quickItem} key={label}>
-              <strong>{label}</strong>
-              <span>{value}</span>
+              <div>
+                <small>{t.statusRightLabel}</small>
+                <em>{t.statusRightValue}</em>
+              </div>
             </div>
-          ))}
+          </div>
+
+          <div className={heroStyles.commandBar} data-aereo-trust="true">
+            {t.quick.map(([title, text]) => (
+              <div key={title} className={heroStyles.commandItem}>
+                <i aria-hidden="true" />
+                <span>
+                  <strong>{title}</strong>
+                  <small>{text}</small>
+                </span>
+              </div>
+            ))}
+          </div>
         </section>
 
         <section id="faq-recursos" className={styles.faqSection}>

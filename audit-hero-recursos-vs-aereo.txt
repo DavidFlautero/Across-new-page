@@ -1,0 +1,633 @@
+========================================
+1) ARCHIVOS
+========================================
+-rw-r--r-- 1 david 197609  14072 Jun 14 06:31 src/app/recursos/Recursos.module.css
+-rw-r--r-- 1 david 197609  20737 Jun 14 06:37 src/app/recursos/page.tsx
+-rw-r--r-- 1 david 197609 243745 Jun 13 08:13 src/app/servicios/transporte-aereo/TransporteAereo.module.css
+-rw-r--r-- 1 david 197609  29550 Jun 13 06:26 src/app/servicios/transporte-aereo/page.tsx
+
+========================================
+2) IMPORTS
+========================================
+--- AEREO PAGE IMPORTS ---
+3:import { useEffect, useState } from "react";
+4:import type { CSSProperties } from "react";
+5:import Header from "@/components/layout/Header";
+6:import Footer from "@/components/layout/Footer";
+7:import Image from "next/image";
+8:import Link from "next/link";
+9:import Certifications from "@/components/sections/Certifications";
+10:import RelatedServices from "../_shared/RelatedServices";
+11:import styles from "./TransporteAereo.module.css";
+
+--- RECURSOS PAGE IMPORTS ---
+3:import { useEffect, useState } from "react";
+4:import Image from "next/image";
+5:import Link from "next/link";
+6:import Header from "@/components/layout/Header";
+7:import Footer from "@/components/layout/Footer";
+8:import styles from "./Recursos.module.css";
+
+========================================
+3) HERO JSX AEREO
+========================================
+542-    window.addEventListener("localechange", updateLocale);
+543-    window.addEventListener("across-language-change", updateLocale);
+544-    window.addEventListener("across-locale-change", updateLocale);
+545-
+546-    return () => {
+547-      window.removeEventListener("storage", updateLocale);
+548-      window.removeEventListener("languagechange", updateLocale);
+549-      window.removeEventListener("localechange", updateLocale);
+550-      window.removeEventListener("across-language-change", updateLocale);
+551-      window.removeEventListener("across-locale-change", updateLocale);
+552-    };
+553-  }, []);
+554-
+555-  const t = copy[locale];
+556-
+557-  return (
+558-    <div className="page-shell">
+559-      <Header />
+560-
+561-      <main className={styles.page}>
+562:        <section className={styles.hero} data-aereo-hero="true" data-service-hero-home="true"
+563-      >
+564-          <Image
+565-            src="/images/hero/cargaAereahero.png"
+566-            alt={t.heroTitle}
+567-            fill
+568-            priority
+569-            sizes="(max-width: 900px) 0px, 100vw"
+570-            className={`${styles.heroImage} ${styles.heroImageDesktop}`}
+571-          />
+572-
+573-          <Image
+574-            src="/images/hero/cargaAereahero-mobile.png"
+575-            alt={t.heroTitle}
+576-            fill
+577-            priority
+578-            sizes="(max-width: 900px) 100vw, 0px"
+579-            className={`${styles.heroImage} ${styles.heroImageMobile}`}
+580-          />
+581-
+582-          <div className={styles.heroOverlay} />
+583-
+584-          <div className={styles.heroInner}
+585-      >
+586-            <div className={styles.heroContent}>
+587-              <span className={styles.eyebrow}>{t.heroEyebrow}</span>
+588-              <h1 className={styles.title}>{t.heroTitle}</h1>
+589-              <p className={styles.subtitle}>{t.heroText}</p>
+590-
+591-              <div className={styles.actions}>
+592-                <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>
+593-                <Link href="/contacto" className={styles.secondaryBtn}>{t.secondaryCta}</Link>
+594-              </div>
+595-            </div>
+596-
+597-            <div className={styles.operationCard}>
+598-              <span>{t.activeLabel}</span>
+599-              <strong>{t.activeRoute}</strong>
+600-              <p>{t.activeCargo}</p>
+601-
+602-              <div>
+603-                <small>{t.activeStatusLabel}</small>
+604-                <b>{t.activeStatus}</b>
+605-              </div>
+606-
+607-              <div>
+608-                <small>{t.activeEtaLabel}</small>
+609-                <em>{t.activeEta}</em>
+610-              </div>
+611-            </div>
+612-          </div>
+613-
+614-          <div className={styles.commandBar} data-aereo-trust="true">
+615-            {t.trust.map(([title, text]: string[], index: number) => {
+616-              const icons: IconName[] = ["timer", "shield", "document", "tracking"];
+617-
+618-              return (
+619-                <div key={title} className={styles.commandItem}>
+620-                  <i>
+621-                    <Icon name={icons[index]} />
+622-                  </i>
+623-                  <span>
+624-                    <strong>{title}</strong>
+625-                    <small>{text}</small>
+626-                  </span>
+627-                </div>
+628-              );
+629-            })}
+630-          </div>
+631-        </section>
+632-
+633-        <Certifications />
+634-
+635-        <section className={styles.overview}>
+636-          <div className={styles.overviewCopy}>
+637-            <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
+638-            <h2>{t.overviewTitle}</h2>
+639-            <p>{t.overviewText}</p>
+640-            <Link href="/contacto">{t.overviewButton}</Link>
+641-          </div>
+642-
+643-          <div className={styles.pillars}>
+644-            {t.pillars.map(([title, text]: string[], index: number) => {
+645-              const icons: IconName[] = ["airport", "document", "tracking", "truck"];
+646-
+647-              return (
+648-                <article key={title}>
+649-                  <i>
+650-                    <Icon name={icons[index]} />
+651-                  </i>
+652-                  <h3>{title}</h3>
+653-                  <p>{text}</p>
+654-                </article>
+655-              );
+656-            })}
+657-          </div>
+658-        </section>
+659-
+660-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/hero/cargaAereahero.png')" } as CSSProperties}>
+661-          <div className={styles.sectionHead}>
+662-            <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
+663-            <h2>{t.servicesTitle}</h2>
+664-          </div>
+665-
+666-          <div className={styles.serviceGrid}>
+667-            {t.services.map(([title, text]: string[], index: number) => {
+668-              const icons: IconName[] = ["plane", "box", "diamond", "charter", "globe", "door"];
+669-
+670-              return (
+671-                <article key={title}>
+672-                  <i>
+673-                    <Icon name={icons[index]} />
+674-                  </i>
+675-                  <h3>{title}</h3>
+676-                  <p>{text}</p>
+677-                </article>
+678-              );
+679-            })}
+680-          </div>
+681-        </section>
+682-
+683-        <section className={styles.useCases} data-mobile-hide-after-cert="true">
+684-          <div className={styles.sectionHead}>
+685-            <span className={styles.eyebrow}>{t.useCasesEyebrow}</span>
+686-            <h2>{t.useCasesTitle}</h2>
+687-          </div>
+688-
+689-          <div className={styles.useCaseGrid}>
+690-            {t.useCases.map(([title, text]: string[], index: number) => {
+691-              const icons: IconName[] = ["gear", "laptop", "package", "medical", "cart", "document"];
+692-
+
+========================================
+4) HERO JSX RECURSOS
+========================================
+334-
+335-    const updateLocale = () => setLocale(getLocale());
+336-    updateLocale();
+337-
+338-    window.addEventListener("across-locale-change", updateLocale);
+339-    window.addEventListener("storage", updateLocale);
+340-
+341-    return () => {
+342-      window.removeEventListener("across-locale-change", updateLocale);
+343-      window.removeEventListener("storage", updateLocale);
+344-    };
+345-  }, []);
+346-
+347-  const t = copy[locale];
+348-
+349-  return (
+350-    <div className={styles.page}>
+351-      <Header />
+352-
+353-      <main>
+354:        <section className={styles.hero}>
+355-          <Image
+356-            src="/images/recursos1.png"
+357-            alt={t.heroTitle}
+358-            fill
+359-            priority
+360-            sizes="100vw"
+361-            className={styles.heroImage}
+362-          />
+363-          <div className={styles.heroOverlay} />
+364-
+365-          <div className={styles.heroShell}>
+366-            <div className={styles.heroCopy}>
+367-              <span>{t.heroEyebrow}</span>
+368-              <h1>{t.heroTitle}</h1>
+369-              <p>{t.heroText}</p>
+370-
+371-              <div className={styles.heroActions}>
+372-                <Link href="#faq-recursos">{t.heroPrimary}</Link>
+373-                <Link href="#descargas-recursos">{t.heroSecondary}</Link>
+374-              </div>
+375-            </div>
+376-
+377-            <aside className={styles.statusCard} aria-label={t.statusTitle}>
+378-              <span>{t.statusTitle}</span>
+379-              <strong>{t.statusRoute}</strong>
+380-              <p>{t.statusText}</p>
+381-
+382-              <dl>
+383-                <div>
+384-                  <dt>{t.statusLeftLabel}</dt>
+385-                  <dd>{t.statusLeftValue}</dd>
+386-                </div>
+387-                <div>
+388-                  <dt>{t.statusRightLabel}</dt>
+389-                  <dd>{t.statusRightValue}</dd>
+390-                </div>
+391-              </dl>
+392-            </aside>
+393-          </div>
+394-        </section>
+395-
+396-        <section className={styles.quickBar} aria-label={t.heroEyebrow}>
+397-          {t.quick.map(([label, value]) => (
+398-            <div className={styles.quickItem} key={label}>
+399-              <strong>{label}</strong>
+400-              <span>{value}</span>
+401-            </div>
+402-          ))}
+403-        </section>
+404-
+405-        <section id="faq-recursos" className={styles.faqSection}>
+406-          <div className={styles.sectionIntro}>
+407-            <span>{t.faqEyebrow}</span>
+408-            <h2>{t.faqTitle}</h2>
+409-            <p>{t.faqText}</p>
+410-            <Link href="#descargas-recursos">{t.faqButton}</Link>
+411-          </div>
+412-
+413-          <div className={styles.faqList}>
+414-            {t.faqs.map(([question, answer], index) => (
+415-              <details className={styles.faqItem} key={question}>
+416-                <summary>
+417-                  <span>{String(index + 1).padStart(2, "0")}</span>
+418-                  <strong>{question}</strong>
+419-                  <i>+</i>
+420-                </summary>
+421-                <p>{answer}</p>
+422-              </details>
+423-            ))}
+424-          </div>
+425-        </section>
+426-
+427-        <section id="descargas-recursos" className={styles.downloads}>
+428-          <div className={styles.downloadImage}>
+429-            <Image
+430-              src="/images/recursos2.png"
+431-              alt={t.downloadsTitle}
+432-              fill
+433-              sizes="(max-width: 900px) 100vw, 44vw"
+434-            />
+435-          </div>
+436-
+437-          <div className={styles.downloadPanel}>
+438-            <span>{t.downloadsEyebrow}</span>
+439-            <h2>{t.downloadsTitle}</h2>
+440-
+441-            <div className={styles.downloadColumns}>
+442-              <div className={styles.resourceColumn}>
+443-                <h3>{t.corporateTitle}</h3>
+444-                <ul>
+445-                  {t.corporate.map(([name, action, href], index) => (
+446-                    <li key={name}>
+447-                      <strong>{String(index + 1).padStart(2, "0")} · {name}</strong>
+448-                      <a href={href} download>{action} ↓</a>
+449-                    </li>
+450-                  ))}
+451-                </ul>
+452-              </div>
+453-
+454-              <div className={styles.resourceColumn}>
+455-                <h3>{t.technicalTitle}</h3>
+456-                <ul>
+457-                  {t.technical.map(([name, action, href], index) => (
+458-                    <li key={name}>
+459-                      <strong>{String(index + 1).padStart(2, "0")} · {name}</strong>
+460-                      <a href={href} download>{action} ↓</a>
+461-                    </li>
+462-                  ))}
+463-                </ul>
+464-              </div>
+465-            </div>
+466-          </div>
+467-        </section>
+468-
+469-        <section className={styles.moreResources}>
+470-          <div className={styles.moreIntro}>
+471-            <span>{t.moreEyebrow}</span>
+472-            <h2>{t.moreTitle}</h2>
+473-          </div>
+474-
+475-          <div className={styles.moreGrid}>
+476-            <article className={styles.linkCard}>
+477-              <h3>{t.resourcesCorporateTitle}</h3>
+478-              {t.corporateLinks.map((item) => (
+479-                <Link href="/contacto" key={item}>
+480-                  {item}
+481-                  <span>→</span>
+482-                </Link>
+483-              ))}
+484-            </article>
+485-
+486-            <article className={styles.linkCard}>
+487-              <h3>{t.resourcesTechnicalTitle}</h3>
+488-              {t.technicalLinks.map((item) => (
+489-                <Link href="/contacto" key={item}>
+490-                  {item}
+491-                  <span>→</span>
+492-                </Link>
+493-              ))}
+494-            </article>
+495-
+496-            <article className={styles.phoneCard}>
+497-              <h3>{t.contactTitle}</h3>
+498-              {t.phones.map(([country, phone]) => (
+499-                <div key={country}>
+500-                  <span>{country}</span>
+501-                  <strong>{phone}</strong>
+502-                </div>
+503-              ))}
+504-              <Link href="/empresa/oficinas">{t.allContacts} →</Link>
+
+========================================
+5) CLASES DEL HERO EN AEREO
+========================================
+styles.finalCta
+styles.hero
+styles.heroContent
+styles.heroImage
+styles.heroImageDesktop
+styles.heroImageMobile
+styles.heroInner
+styles.heroOverlay
+styles.overviewCopy
+
+========================================
+6) CLASES DEL HERO EN RECURSOS
+========================================
+styles.contactCta
+styles.hero
+styles.heroActions
+styles.heroCopy
+styles.heroImage
+styles.heroOverlay
+styles.heroShell
+styles.quickBar
+styles.quickItem
+styles.statusCard
+
+========================================
+7) CSS HERO AEREO
+========================================
+7:.hero {
+19:.heroImage {
+24:.heroImageMobile {
+28:.heroOverlay {
+37:.hero::after {
+48:.heroInner {
+57:.heroContent {
+71:.heroContent h1 {
+80:.heroContent p {
+207:.trustBar {
+216:.trustBar div {
+225:.trustBar div:last-child {
+229:.trustBar i {
+241:.trustBar strong,
+242:.trustBar small {
+246:.trustBar strong {
+252:.trustBar small {
+547:@media (max-width: 1180px) {
+597:@media (max-width: 900px) {
+675:@media (max-width: 560px) {
+717:.trustBar i svg,
+733:.trustBar i {
+757:@media (min-width: 1181px) {
+782:@media (max-width: 1180px) and (min-width: 901px) {
+796:@media (max-width: 430px) {
+816:@media (min-width: 901px) {
+948:@media (min-width: 901px) and (max-height: 760px) {
+972:@media (min-width: 1400px) {
+1010:@media (min-width: 901px) {
+1086:@media (min-width: 901px) {
+1130:@media (max-width: 900px) {
+1192:@media (max-width: 430px) {
+1239:@media (min-width: 901px) {
+1262:@media (max-width: 900px) {
+1399:@media (max-width: 1180px) {
+1406:@media (max-width: 700px) {
+1555:@media (max-width: 1180px) {
+1562:@media (max-width: 700px) {
+1597:@media (max-width: 900px) {
+1656:@media (max-width: 1180px) {
+1668:@media (max-width: 900px) {
+1688:@media (min-width: 901px) {
+1824:@media (min-width: 901px) and (max-width: 1180px) {
+1845:@media (max-width: 900px) {
+2005:@media (max-width: 1180px) {
+2034:@media (max-width: 700px) {
+2228:@media (max-width: 1180px) {
+2240:@media (max-width: 700px) {
+2276:@media (max-width: 430px) {
+2434:@media (max-width: 1180px) {
+2446:@media (max-width: 700px) {
+2482:@media (max-width: 430px) {
+2584:@media (max-width: 900px) {
+2701:@media (max-width: 1180px) {
+2717:@media (max-width: 700px) {
+2930:@media (max-width: 900px) {
+2941:@media (max-width: 520px) {
+3103:@media (max-width: 900px) {
+3143:@media (max-width: 900px) {
+3171:@media (max-width: 900px) {
+3183:@media (max-width: 430px) {
+3254:@media (max-width: 380px) {
+3288:@media (max-width: 900px) {
+3349:@media (min-width: 390px) and (max-width: 900px) and (min-height: 760px) {
+3365:@media (max-width: 380px) and (max-height: 740px) {
+3438:@media (max-width: 360px) {
+3460:@media (min-width: 700px) and (max-width: 1100px) {
+3495:@media (min-width: 901px) {
+3516:@media (min-width: 641px) and (max-width: 900px) {
+3554:@media (max-width: 640px) {
+3648:@media (max-width: 380px) {
+3688:@media (max-width: 900px) {
+3806:@media (max-width: 380px) {
+3852:@media (max-width: 900px) {
+3926:@media (max-width: 430px) {
+3960:@media (min-width: 901px) and (max-height: 700px) {
+4019:@media (min-width: 901px) and (max-width: 1100px) and (max-height: 700px) {
+4052:@media (max-width: 760px) {
+4212:@media (max-width: 380px) {
+4303:@media (max-width: 760px) {
+4321:@media (max-width: 380px) {
+4335:.hero {
+4344:.heroImage {
+4361:.heroImageDesktop {
+4366:.heroImageMobile {
+4371:.heroOverlay {
+4386:.hero::after {
+4398:.hero::before {
+4402:.heroInner {
+4412:.heroContent {
+4416:.heroContent h1 {
+4425:.heroContent p {
+4442:@media (max-width: 760px) {
+4514:@media (max-width: 390px) {
+4537:@media (max-width: 760px) {
+4572:@media (max-width: 390px) {
+4587:@media (max-width: 760px) {
+4622:@media (max-width: 390px) {
+4637:.hero {
+4648:.heroImage {
+4666:.heroImageDesktop {
+4672:.heroImageMobile {
+4677:.heroOverlay {
+4692:.hero::before {
+4705:.hero::after {
+4720:.heroInner {
+4731:.heroContent {
+4748:.heroContent h1 {
+4763:.heroContent h1::after {
+4767:.heroContent p {
+4779:.heroContent a,
+4780:.heroContent button {
+4793:.heroContent a:first-of-type {
+4805:.heroContent a:first-of-type:hover {
+4813:.heroContent a:nth-of-type(2) {
+4824:@media (max-width: 760px) {
+4903:@media (max-width: 390px) {
+4941:@media (max-width: 760px) {
+4976:@media (max-width: 390px) {
+4993:@media (max-width: 760px) {
+5243:@media (max-width: 390px) {
+5280:@media (max-width: 760px) {
+5343:@media (max-width: 390px) {
+5370:@media (max-width: 760px) {
+5475:@media (max-width: 390px) {
+5519:.heroContent a:first-of-type {
+5533:.heroContent a:nth-of-type(2) {
+5550:.heroContent h1,
+5556:.heroContent p,
+5611:@media (min-width: 901px) {
+5660:@media (min-width: 901px) and (max-height: 700px) {
+5692:@media (min-width: 701px) and (max-width: 900px) {
+5742:@media (max-width: 700px) {
+5904:@media (min-width: 1201px) {
+5964:@media (min-width: 901px) and (max-width: 1200px) {
+6024:@media (min-width: 701px) and (max-width: 900px) {
+6084:@media (max-width: 700px) {
+6154:@media (min-width: 901px) {
+6172:@media (max-width: 900px) {
+6236:@media (min-width: 701px) and (max-width: 900px) {
+6257:@media (max-width: 700px) {
+6304:@media (min-width: 701px) and (max-width: 900px) {
+6315:@media (max-width: 700px) {
+6333:@media (max-width: 700px) {
+6344:@media (max-width: 390px) {
+6351:@media (max-width: 700px) {
+6412:@media (max-width: 900px) {
+6485:@media (max-width: 900px) {
+6522:@media (max-width: 700px) {
+6568:@media (max-width: 700px) {
+6584:@media (min-width: 1201px) {
+6636:@media (min-width: 1201px) and (max-height: 820px) {
+6674:@media (min-width: 901px) {
+6685:@media (max-width: 900px) {
+6701:@media (min-width: 901px) {
+6713:@media (max-width: 900px) {
+6732:@media (min-width: 1400px) {
+6771:@media (min-width: 1400px) and (max-height: 820px) {
+6842:@media (max-width: 900px) {
+6894:@media (max-width: 900px) {
+6910:@media (min-width: 901px) {
+6946:@media (max-width: 900px) {
+6962:@media (min-width: 901px) {
+6984:@media (max-width: 700px) {
+7007:@media (max-width: 390px) {
+7022:@media (max-width: 900px) {
+7077:@media (max-width: 700px) {
+7103:@media (max-width: 900px) {
+7176:@media (max-width: 900px) {
+7244:@media (max-width: 900px) {
+7357:@media (max-width: 390px) {
+7605:@media (max-width: 700px) {
+7720:@media (max-width: 390px) {
+7764:@media (max-width: 700px) {
+7999:@media (max-width: 390px) {
+8045:@media (max-width: 900px) {
+8161:@media (max-width: 390px) {
+8207:@media (max-width: 900px) {
+8340:@media (max-width: 390px) {
+8400:@media (min-width: 901px) {
+8454:@media (min-width: 701px) and (max-width: 900px) {
+8490:@media (max-width: 700px) {
+8560:@media (max-width: 390px) {
+8592:@media (max-width: 700px) {
+8699:@media (max-width: 390px) {
+8774:@media (max-width: 900px) {
+8836:@media (max-width: 900px) {
+8854:@media (max-width: 520px) {
+8973:@media (min-width: 701px) and (max-width: 900px) {
+9086:@media (min-width: 701px) and (max-width: 900px) {
+9350:@media (max-width: 700px) {
+9433:@media (max-width: 700px) {
+9457:@media (min-width: 701px) and (max-width: 900px) {
+9622:@media (max-width: 900px) {
+9641:@media (max-width: 900px) {
+
+========================================
+8) CSS HERO RECURSOS
+========================================
+22:.hero {
+34:.heroImage {
+42:.heroOverlay {
+53:.heroShell {
+65:.heroCopy span,
+66:.statusCard > span {
+74:.heroCopy h1 {
+84:.heroCopy p {
+92:.heroActions {
+99:.heroActions a,
+113:.heroActions a:first-child,
+123:.heroActions a:last-child {
+129:.heroActions a:hover,
+134:.statusCard {
+148:.statusCard strong {
+155:.statusCard p {
+160:.statusCard dl {
+169:.statusCard dt {
+175:.statusCard dd {
+183:.quickBar {
+199:.quickItem {
+211:.quickItem::before {
+221:.quickItem strong {
+228:.quickItem span {
+581:@media (max-width: 1100px) {
+607:@media (max-width: 760px) {
+706:@media (max-width: 380px) {
+
+========================================
+9) MEDIDAS DIRECTAS HERO EN RECURSOS
+========================================
+
+========================================
+10) MEDIDAS DIRECTAS HERO EN AEREO
+========================================
+941:  /* Sacamos la tarjeta Madrid → Bogotá en desktop: ensuciaba el hero */
+4360:/* Desktop: sujeto hacia la derecha, aire para texto a la izquierda */
+5596:  height: calc(100svh - var(--aereo-trust-h)) !important;
+5597:  min-height: calc(100svh - var(--aereo-trust-h)) !important;
+5598:  max-height: calc(100svh - var(--aereo-trust-h)) !important;
+5604:  height: var(--aereo-trust-h) !important;
+5605:  min-height: var(--aereo-trust-h) !important;
+5606:  max-height: var(--aereo-trust-h) !important;
+5748:    min-height: calc(100svh - var(--aereo-trust-h)) !important;
