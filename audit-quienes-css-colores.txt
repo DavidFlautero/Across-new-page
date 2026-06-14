@@ -1,0 +1,1040 @@
+========================================
+1) ARCHIVOS REALES
+========================================
+-rw-r--r-- 1 david 197609  13694 Jun 13 16:25 src/app/empresa/quienes-somos/QuienesSomos.module.css
+-rw-r--r-- 1 david 197609  17440 Jun  8 05:34 src/app/empresa/quienes-somos/page.tsx
+-rw-r--r-- 1 david 197609 157213 Jun 13 08:25 src/app/globals.css
+-rw-r--r-- 1 david 197609   9746 Jun  8 14:59 src/app/mobile-polish.css
+
+========================================
+2) IMPORTS DE LA PAGINA
+========================================
+3:import { useEffect, useState } from "react";
+4:import Image from "next/image";
+5:import Link from "next/link";
+6:import Header from "@/components/layout/Header";
+7:import Footer from "@/components/layout/Footer";
+8:import Certifications from "@/components/sections/Certifications";
+9:import styles from "./QuienesSomos.module.css";
+
+========================================
+3) CLASES styles.xxx QUE USA PAGE.TSX
+========================================
+styles.accordion
+styles.actions
+styles.block
+styles.compactCta
+styles.compactCtaActions
+styles.content
+styles.hero
+styles.heroContent
+styles.heroImage
+styles.heroOverlay
+styles.page
+styles.serviceItem
+styles.servicesCopy
+styles.servicesImage
+styles.servicesImageWrap
+styles.servicesPanel
+styles.teamCard
+styles.teamGrid
+styles.teamHead
+styles.teamImage
+styles.teamInfo
+styles.teamOverlay
+styles.teamSection
+
+========================================
+4) SELECTORES CSS PRINCIPALES EN QUIENES SOMOS
+========================================
+1:.page {
+9:/* =========================
+13:.hero {
+24:.heroImage {
+32:.heroOverlay {
+44:.heroContent {
+53:.heroContent > span {
+65:.heroContent > span::before {
+72:.heroContent h1 {
+82:.heroContent h1::after {
+87:.heroContent p {
+95:.heroContent div {
+102:.heroContent a {
+116:.heroContent a:first-child {
+122:.heroContent a:last-child {
+129:.heroContent a:hover {
+133:/* =========================
+137:.block {
+147:.block > span {
+158:.block > span::after {
+165:.block h2 {
+174:.block p {
+183:/* =========================
+187:.servicesPanel {
+206:.servicesPanel::before {
+216:.servicesPanel > div:first-child {
+221:.servicesPanel h2 {
+230:.serviceItem {
+236:.serviceItem:last-child {
+240:.serviceItem summary {
+249:.serviceItem summary::-webkit-details-marker {
+253:.serviceItem summary::after {
+266:.serviceItem[open] summary::after {
+272:.serviceItem h3 {
+280:.serviceItem p {
+288:.servicesPanel img {
+292:.servicesPanel > div:last-child,
+293:.servicesPanel figure,
+294:.servicesPanel picture {
+299:.servicesPanel > div:last-child {
+306:.servicesPanel > div:last-child::after {
+316:/* =========================
+320:.teamSection {
+327:.teamSection > div:first-child {
+332:.teamSection span {
+340:.teamSection h2 {
+350:.teamSection p {
+358:.teamSection > div:last-child {
+366:.teamSection article {
+376:.teamSection article img {
+382:.teamSection article:hover img {
+387:.teamSection article::after {
+396:.teamSection article > div {
+404:.teamSection article h3 {
+412:.teamSection article p {
+419:/* =========================
+423:.compactCta {
+442:.compactCta::before {
+451:.compactCta span {
+459:.compactCta h2 {
+469:.compactCta p {
+477:.compactCtaActions {
+484:.compactCtaActions a {
+497:.compactCtaActions a:first-child {
+502:.compactCtaActions a:last-child {
+508:/* =========================
+512:@media (max-width: 1100px) {
+526:@media (max-width: 900px) {
+602:@media (max-width: 560px) {
+682:@media (max-width: 380px) {
+
+========================================
+5) COLORES ACTUALES EN QUIENES SOMOS CSS
+========================================
+2:  background:
+3:    radial-gradient(circle at 82% 0%, rgba(225, 19, 67, .08), transparent 32rem),
+4:    linear-gradient(180deg, #f4f1eb 0%, #fbfaf7 36%, #f4f1eb 100%);
+5:  color: #080b10;
+21:  background: #050609;
+37:  background:
+38:    radial-gradient(circle at 74% 24%, rgba(237, 27, 47, .20), transparent 30rem),
+39:    radial-gradient(circle at 22% 80%, rgba(199, 169, 107, .10), transparent 28rem),
+40:    linear-gradient(90deg, rgba(3, 5, 9, .96) 0%, rgba(5, 7, 12, .84) 42%, rgba(5, 7, 12, .42) 68%, rgba(5, 7, 12, .28) 100%),
+41:    linear-gradient(180deg, rgba(0,0,0,.08) 0%, rgba(0,0,0,.22) 56%, rgba(0,0,0,.72) 100%);
+50:  color: #fff;
+58:  color: #d5a85b;
+69:  background: linear-gradient(90deg, #ed1b2f, #d5a85b);
+75:  color: #fff;
+84:  color: #ed1b2f;
+90:  color: rgba(255,255,255,.82);
+113:  transition: transform .22s ease, border-color .22s ease, background .22s ease;
+117:  color: #fff;
+118:  background: linear-gradient(135deg, #f0183d 0%, #d70c31 55%, #a80625 100%);
+119:  box-shadow: 0 24px 58px rgba(237, 27, 47, .28);
+123:  color: #fff;
+124:  border: 1px solid rgba(255,255,255,.28);
+125:  background: rgba(255,255,255,.075);
+151:  color: #b8092b;
+162:  background: linear-gradient(90deg, #b8092b, rgba(181,137,67,.45));
+167:  color: #07090f;
+178:  color: rgba(8,11,16,.68);
+198:  background:
+199:    radial-gradient(circle at 88% 12%, rgba(237,27,47,.18), transparent 28rem),
+200:    radial-gradient(circle at 0% 100%, rgba(213,168,91,.14), transparent 28rem),
+201:    linear-gradient(135deg, #080b10 0%, #111827 52%, #240916 100%);
+202:  color: #fff;
+203:  box-shadow: 0 34px 90px rgba(8,11,16,.18);
+212:  border: 1px solid rgba(255,255,255,.10);
+223:  color: #fff;
+232:  border-top: 1px solid rgba(255,255,255,.12);
+237:  border-bottom: 1px solid rgba(255,255,255,.12);
+261:  color: #fff;
+262:  background: rgba(255,255,255,.08);
+263:  border: 1px solid rgba(255,255,255,.16);
+268:  background: #ed1b2f;
+269:  border-color: #ed1b2f;
+274:  color: #fff;
+283:  color: rgba(255,255,255,.70);
+303:  background: rgba(255,255,255,.06);
+310:  background:
+311:    radial-gradient(circle at 78% 14%, rgba(237,27,47,.22), transparent 18rem),
+312:    linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.50));
+322:  background:
+323:    radial-gradient(circle at 10% 0%, rgba(237,27,47,.06), transparent 28rem),
+324:    linear-gradient(180deg, #fbfaf7 0%, #f4f1eb 100%);
+333:  color: #b8092b;
+343:  color: #080b10;
+353:  color: rgba(8,11,16,.64);
+371:  background: #080b10;
+372:  color: #fff;
+373:  box-shadow: 0 22px 70px rgba(8,11,16,.13);
+391:  background:
+392:    linear-gradient(180deg, rgba(0,0,0,0) 28%, rgba(0,0,0,.62) 68%, rgba(0,0,0,.92) 100%);
+406:  color: #fff;
+414:  color: rgba(255,255,255,.72);
+435:  color: #fff;
+436:  background:
+437:    radial-gradient(circle at 86% 18%, rgba(237,27,47,.24), transparent 24rem),
+438:    linear-gradient(135deg, #080b10 0%, #1b0912 55%, #2a0a18 100%);
+439:  box-shadow: 0 36px 90px rgba(8,11,16,.16);
+447:  border: 1px solid rgba(255,255,255,.10);
+452:  color: #d5a85b;
+462:  color: #fff;
+472:  color: rgba(255,255,255,.70);
+498:  color: #fff;
+499:  background: linear-gradient(135deg, #f0183d 0%, #d70c31 55%, #a80625 100%);
+503:  color: #fff;
+504:  border: 1px solid rgba(255,255,255,.22);
+505:  background: rgba(255,255,255,.075);
+614:    background:
+615:      radial-gradient(circle at 70% 12%, rgba(237, 27, 47, .18), transparent 18rem),
+616:      linear-gradient(90deg, rgba(3, 5, 9, .95) 0%, rgba(5, 7, 12, .82) 58%, rgba(5, 7, 12, .52) 100%),
+617:      linear-gradient(180deg, rgba(0,0,0,.10) 0%, rgba(0,0,0,.36) 58%, rgba(0,0,0,.78) 100%);
+
+========================================
+6) VARIABLES / COLORES GLOBALES DISPONIBLES
+========================================
+src/app/globals.css:7:  font-family: var(--font-body);
+src/app/globals.css:25:    background: linear-gradient(180deg, rgba(7,8,12,.92), rgba(7,8,12,.98)) !important;
+src/app/globals.css:26:    border: 1px solid rgba(255,255,255,.08) !important;
+src/app/globals.css:43:    border-right: 1px solid rgba(255,255,255,.07) !important;
+src/app/globals.css:96:  background: #f4f1eb !important;
+src/app/globals.css:100:  background: #f4f1eb !important;
+src/app/globals.css:101:  background-color: #f4f1eb !important;
+src/app/globals.css:106:  background: #f4f1eb !important;
+src/app/globals.css:107:  background-color: #f4f1eb !important;
+src/app/globals.css:124:  border: 1px solid rgba(0,0,0,.08) !important;
+src/app/globals.css:125:  box-shadow: 0 22px 60px rgba(0,0,0,.14) !important;
+src/app/globals.css:132:      rgba(0,0,0,.04) 0%,
+src/app/globals.css:133:      rgba(0,0,0,.16) 45%,
+src/app/globals.css:134:      rgba(0,0,0,.74) 100%
+src/app/globals.css:140:  background: #f4f1eb !important;
+src/app/globals.css:144:  background: #f4f1eb !important;
+src/app/globals.css:145:  background-color: #f4f1eb !important;
+src/app/globals.css:150:  background: #f4f1eb !important;
+src/app/globals.css:151:  background-color: #f4f1eb !important;
+src/app/globals.css:168:  border: 1px solid rgba(0,0,0,.08) !important;
+src/app/globals.css:169:  box-shadow: 0 22px 60px rgba(0,0,0,.14) !important;
+src/app/globals.css:176:      rgba(0,0,0,.04) 0%,
+src/app/globals.css:177:      rgba(0,0,0,.16) 45%,
+src/app/globals.css:178:      rgba(0,0,0,.74) 100%
+src/app/globals.css:184:  background: #f4f1eb !important;
+src/app/globals.css:188:  background: #f4f1eb !important;
+src/app/globals.css:189:  background-color: #f4f1eb !important;
+src/app/globals.css:194:  background: #f4f1eb !important;
+src/app/globals.css:195:  background-color: #f4f1eb !important;
+src/app/globals.css:212:  border: 1px solid rgba(0,0,0,.08) !important;
+src/app/globals.css:213:  box-shadow: 0 22px 60px rgba(0,0,0,.14) !important;
+src/app/globals.css:220:      rgba(0,0,0,.04) 0%,
+src/app/globals.css:221:      rgba(0,0,0,.16) 45%,
+src/app/globals.css:222:      rgba(0,0,0,.74) 100%
+src/app/globals.css:228:  background: #f4f1eb !important;
+src/app/globals.css:232:  background: #f4f1eb !important;
+src/app/globals.css:233:  background-color: #f4f1eb !important;
+src/app/globals.css:238:  background: #f4f1eb !important;
+src/app/globals.css:239:  background-color: #f4f1eb !important;
+src/app/globals.css:256:  border: 1px solid rgba(0,0,0,.08) !important;
+src/app/globals.css:257:  box-shadow: 0 22px 60px rgba(0,0,0,.14) !important;
+src/app/globals.css:264:      rgba(0,0,0,.04) 0%,
+src/app/globals.css:265:      rgba(0,0,0,.16) 45%,
+src/app/globals.css:266:      rgba(0,0,0,.74) 100%
+src/app/globals.css:315:  color: #fff !important;
+src/app/globals.css:451:/* -----------------------------
+src/app/globals.css:453:   ----------------------------- */
+src/app/globals.css:459:    background: rgba(255, 255, 255, .94) !important;
+src/app/globals.css:460:    border: 1px solid rgba(0, 0, 0, .08) !important;
+src/app/globals.css:461:    border-bottom-color: rgba(0, 0, 0, .10) !important;
+src/app/globals.css:462:    box-shadow: 0 14px 38px rgba(0, 0, 0, .08) !important;
+src/app/globals.css:488:    background: rgba(23, 50, 71, .07) !important;
+src/app/globals.css:495:    color: #fff !important;
+src/app/globals.css:504:    color: #fff !important;
+src/app/globals.css:510:    background: rgba(255, 255, 255, .72) !important;
+src/app/globals.css:511:    border-color: rgba(0, 0, 0, .10) !important;
+src/app/globals.css:516:/* -----------------------------
+src/app/globals.css:518:   ----------------------------- */
+src/app/globals.css:528:    background: rgba(255, 255, 255, .95) !important;
+src/app/globals.css:529:    border: 1px solid rgba(0, 0, 0, .10) !important;
+src/app/globals.css:531:    box-shadow: 0 14px 36px rgba(0, 0, 0, .14) !important;
+src/app/globals.css:552:    background: #fff !important;
+src/app/globals.css:553:    border: 1px solid rgba(0, 0, 0, .12) !important;
+src/app/globals.css:554:    box-shadow: 0 4px 12px rgba(0, 0, 0, .08) !important;
+src/app/globals.css:561:    color: #fff !important;
+src/app/globals.css:570:    stroke: #fff !important;
+src/app/globals.css:577:    background: #fff !important;
+src/app/globals.css:579:    border-left: 1px solid rgba(0, 0, 0, .10) !important;
+src/app/globals.css:580:    box-shadow: -18px 0 48px rgba(0, 0, 0, .18) !important;
+src/app/globals.css:593:    border-bottom: 1px solid rgba(0, 0, 0, .10) !important;
+src/app/globals.css:611:/* -----------------------------
+src/app/globals.css:613:   ----------------------------- */
+src/app/globals.css:620:  border-top: 1px solid rgba(0, 0, 0, .10) !important;
+src/app/globals.css:647:  color: rgba(17, 17, 17, .66) !important;
+src/app/globals.css:652:  color: rgba(17, 17, 17, .72) !important;
+src/app/globals.css:663:  border: 1px solid rgba(23, 50, 71, .22) !important;
+src/app/globals.css:665:  background: #fff !important;
+src/app/globals.css:671:  color: #fff !important;
+src/app/globals.css:686:    color: rgba(17, 17, 17, .76) !important;
+src/app/globals.css:697:    background: rgba(255,255,255,.92) !important;
+src/app/globals.css:698:    border-color: rgba(17,17,17,.10) !important;
+src/app/globals.css:700:      0 14px 36px rgba(0,0,0,.14),
+src/app/globals.css:701:      inset 0 1px 0 rgba(255,255,255,.86) !important;
+src/app/globals.css:707:    background: #fff !important;
+src/app/globals.css:709:    border-color: rgba(17,17,17,.14) !important;
+src/app/globals.css:735:/* -----------------------------
+src/app/globals.css:737:   ----------------------------- */
+src/app/globals.css:741:    background: rgba(255,255,255,.10) !important;
+src/app/globals.css:742:    border: 1px solid rgba(255,255,255,.18) !important;
+src/app/globals.css:744:      0 16px 42px rgba(0,0,0,.18),
+src/app/globals.css:745:      inset 0 1px 0 rgba(255,255,255,.18) !important;
+src/app/globals.css:752:    background: rgba(8,10,14,.78) !important;
+src/app/globals.css:755:      0 10px 24px rgba(0,0,0,.18),
+src/app/globals.css:756:      inset 0 1px 0 rgba(255,255,255,.08) !important;
+src/app/globals.css:762:    background: rgba(8,10,14,.82) !important;
+src/app/globals.css:763:    color: #fff !important;
+src/app/globals.css:764:    border: 1px solid rgba(255,255,255,.14) !important;
+src/app/globals.css:770:    stroke: #fff !important;
+src/app/globals.css:776:    background: rgba(255,255,255,.16) !important;
+src/app/globals.css:777:    border: 1px solid rgba(255,255,255,.22) !important;
+src/app/globals.css:778:    box-shadow: 0 8px 18px rgba(0,0,0,.14) !important;
+src/app/globals.css:782:/* -----------------------------
+src/app/globals.css:784:   ----------------------------- */
+src/app/globals.css:788:    background: rgba(255,255,255,.96) !important;
+src/app/globals.css:789:    border: 1px solid rgba(17,17,17,.10) !important;
+src/app/globals.css:791:      0 14px 36px rgba(0,0,0,.12),
+src/app/globals.css:792:      inset 0 1px 0 rgba(255,255,255,.90) !important;
+src/app/globals.css:799:    background: rgba(8,10,14,.92) !important;
+src/app/globals.css:801:    box-shadow: 0 8px 20px rgba(0,0,0,.12) !important;
+src/app/globals.css:807:    background: #fff !important;
+src/app/globals.css:809:    border: 1px solid rgba(17,17,17,.14) !important;
+src/app/globals.css:810:    box-shadow: 0 8px 20px rgba(0,0,0,.08) !important;
+src/app/globals.css:822:    background: #fff !important;
+src/app/globals.css:823:    border: 1px solid rgba(17,17,17,.12) !important;
+src/app/globals.css:824:    box-shadow: 0 6px 14px rgba(0,0,0,.08) !important;
+src/app/globals.css:828:/* -----------------------------
+src/app/globals.css:830:   ----------------------------- */
+src/app/globals.css:834:    background: rgba(255,255,255,.08) !important;
+src/app/globals.css:835:    border: 1px solid rgba(255,255,255,.16) !important;
+src/app/globals.css:837:      0 16px 42px rgba(0,0,0,.16),
+src/app/globals.css:838:      inset 0 1px 0 rgba(255,255,255,.12) !important;
+src/app/globals.css:847:    color: rgba(255,255,255,.92) !important;
+src/app/globals.css:852:    background: rgba(8,10,14,.78) !important;
+src/app/globals.css:857:/* -----------------------------
+src/app/globals.css:859:   ----------------------------- */
+src/app/globals.css:863:    background: rgba(255,255,255,.96) !important;
+src/app/globals.css:864:    border: 1px solid rgba(17,17,17,.10) !important;
+src/app/globals.css:866:      0 14px 36px rgba(0,0,0,.10),
+src/app/globals.css:867:      inset 0 1px 0 rgba(255,255,255,.90) !important;
+src/app/globals.css:882:    background: rgba(23,50,71,.07) !important;
+src/app/globals.css:887:    background: rgba(8,10,14,.92) !important;
+src/app/globals.css:929:  background: rgba(255,255,255,.10) !important;
+src/app/globals.css:930:  border: 1px solid rgba(255,255,255,.18) !important;
+src/app/globals.css:932:    0 14px 34px rgba(0,0,0,.16),
+src/app/globals.css:933:    inset 0 1px 0 rgba(255,255,255,.16) !important;
+src/app/globals.css:941:  background: rgba(8,10,14,.84) !important;
+src/app/globals.css:942:  border: 1px solid rgba(255,255,255,.12) !important;
+src/app/globals.css:945:    0 10px 24px rgba(0,0,0,.18),
+src/app/globals.css:946:    inset 0 1px 0 rgba(255,255,255,.08) !important;
+src/app/globals.css:953:  background: rgba(255,255,255,.18) !important;
+src/app/globals.css:954:  border: 1px solid rgba(255,255,255,.22) !important;
+src/app/globals.css:955:  box-shadow: 0 8px 18px rgba(0,0,0,.12) !important;
+src/app/globals.css:962:  background: rgba(8,10,14,.86) !important;
+src/app/globals.css:963:  color: #fff !important;
+src/app/globals.css:964:  border: 1px solid rgba(255,255,255,.16) !important;
+src/app/globals.css:966:    0 8px 20px rgba(0,0,0,.16),
+src/app/globals.css:967:    inset 0 1px 0 rgba(255,255,255,.08) !important;
+src/app/globals.css:973:  stroke: #fff !important;
+src/app/globals.css:987:  background: rgba(255,255,255,.96) !important;
+src/app/globals.css:988:  border: 1px solid rgba(17,17,17,.10) !important;
+src/app/globals.css:990:    0 14px 36px rgba(0,0,0,.12),
+src/app/globals.css:991:    inset 0 1px 0 rgba(255,255,255,.90) !important;
+src/app/globals.css:999:  background: rgba(8,10,14,.92) !important;
+src/app/globals.css:1007:  background: #fff !important;
+src/app/globals.css:1009:  border: 1px solid rgba(17,17,17,.14) !important;
+src/app/globals.css:1010:  box-shadow: 0 8px 20px rgba(0,0,0,.08) !important;
+src/app/globals.css:1025:    color: rgba(255,255,255,.94) !important;
+src/app/globals.css:1073:  background: rgba(255,255,255,.10) !important;
+src/app/globals.css:1074:  border: 1px solid rgba(255,255,255,.18) !important;
+src/app/globals.css:1076:    0 14px 34px rgba(0,0,0,.16),
+src/app/globals.css:1077:    inset 0 1px 0 rgba(255,255,255,.16) !important;
+src/app/globals.css:1085:  background: rgba(8,10,14,.84) !important;
+src/app/globals.css:1086:  border: 1px solid rgba(255,255,255,.12) !important;
+src/app/globals.css:1089:    0 10px 24px rgba(0,0,0,.18),
+src/app/globals.css:1090:    inset 0 1px 0 rgba(255,255,255,.08) !important;
+src/app/globals.css:1097:  background: rgba(255,255,255,.18) !important;
+src/app/globals.css:1098:  border: 1px solid rgba(255,255,255,.22) !important;
+src/app/globals.css:1099:  box-shadow: 0 8px 18px rgba(0,0,0,.12) !important;
+src/app/globals.css:1106:  background: rgba(8,10,14,.86) !important;
+src/app/globals.css:1107:  color: #fff !important;
+src/app/globals.css:1108:  border: 1px solid rgba(255,255,255,.16) !important;
+src/app/globals.css:1110:    0 8px 20px rgba(0,0,0,.16),
+src/app/globals.css:1111:    inset 0 1px 0 rgba(255,255,255,.08) !important;
+src/app/globals.css:1117:  stroke: #fff !important;
+src/app/globals.css:1131:  background: rgba(255,255,255,.96) !important;
+src/app/globals.css:1132:  border: 1px solid rgba(17,17,17,.10) !important;
+src/app/globals.css:1134:    0 14px 36px rgba(0,0,0,.12),
+src/app/globals.css:1135:    inset 0 1px 0 rgba(255,255,255,.90) !important;
+src/app/globals.css:1143:  background: rgba(8,10,14,.92) !important;
+src/app/globals.css:1151:  background: #fff !important;
+src/app/globals.css:1153:  border: 1px solid rgba(17,17,17,.14) !important;
+src/app/globals.css:1154:  box-shadow: 0 8px 20px rgba(0,0,0,.08) !important;
+src/app/globals.css:1169:    color: rgba(255,255,255,.94) !important;
+src/app/globals.css:1185::root {
+src/app/globals.css:1186:  --across-accent: #0f3d5e;
+src/app/globals.css:1187:  --across-accent-soft: #1f6f94;
+src/app/globals.css:1188:  --across-accent-light: #8ecae6;
+src/app/globals.css:1192:  background: rgba(15, 61, 94, .22);
+src/app/globals.css:1201::root {
+src/app/globals.css:1202:  --font-corporate: Arial, Helvetica, sans-serif;
+src/app/globals.css:1203:  --color-ink: #101820;
+src/app/globals.css:1204:  --color-ink-soft: rgba(16, 24, 32, .72);
+src/app/globals.css:1205:  --color-accent: #173247;
+src/app/globals.css:1206:  --color-accent-soft: #214a64;
+src/app/globals.css:1207:  --color-champagne: #cdbb8d;
+src/app/globals.css:1213:  font-family: var(--font-corporate) !important;
+src/app/globals.css:1214:  color: var(--color-ink);
+src/app/globals.css:1226:  font-family: var(--font-corporate) !important;
+src/app/globals.css:1227:  color: var(--color-ink);
+src/app/globals.css:1252:  font-family: var(--font-corporate) !important;
+src/app/globals.css:1253:  color: var(--color-ink-soft);
+src/app/globals.css:1261:  font-family: var(--font-corporate) !important;
+src/app/globals.css:1267:  font-family: var(--font-corporate) !important;
+src/app/globals.css:1279:  font-family: var(--font-corporate) !important;
+src/app/globals.css:1413:      rgba(5, 11, 18, .72) 0%,
+src/app/globals.css:1414:      rgba(7, 17, 29, .56) 34%,
+src/app/globals.css:1415:      rgba(7, 17, 29, .26) 64%,
+src/app/globals.css:1416:      rgba(7, 17, 29, .08) 100%
+src/app/globals.css:1420:      rgba(5, 11, 18, .08) 0%,
+src/app/globals.css:1421:      rgba(5, 11, 18, .10) 55%,
+src/app/globals.css:1422:      rgba(5, 11, 18, .30) 100%
+src/app/globals.css:1437:    radial-gradient(circle at 76% 18%, rgba(214, 192, 141, .16), transparent 25rem),
+src/app/globals.css:1438:    radial-gradient(circle at 12% 18%, rgba(255,255,255,.07), transparent 21rem) !important;
+src/app/globals.css:1452:      rgba(255,255,255,.02) 0%,
+src/app/globals.css:1453:      rgba(5,11,18,.04) 46%,
+src/app/globals.css:1454:      rgba(5,11,18,.28) 100%
+src/app/globals.css:1492:  text-shadow: 0 10px 26px rgba(0,0,0,.22) !important;
+src/app/globals.css:1501:  color: #ffffff !important;
+src/app/globals.css:1509:    0 22px 54px rgba(0,0,0,.34),
+src/app/globals.css:1510:    0 2px 8px rgba(0,0,0,.18) !important;
+src/app/globals.css:1525:  color: rgba(255,255,255,.84) !important;
+src/app/globals.css:1530:  text-shadow: 0 14px 34px rgba(0,0,0,.24) !important;
+src/app/globals.css:1556:    radial-gradient(circle at 18% 0%, rgba(255,255,255,.18), transparent 36%),
+src/app/globals.css:1558:  color: #ffffff !important;
+src/app/globals.css:1559:  border: 1px solid rgba(214,192,141,.34) !important;
+src/app/globals.css:1561:    0 20px 44px rgba(7,17,29,.34),
+src/app/globals.css:1562:    0 6px 18px rgba(23,50,71,.24),
+src/app/globals.css:1563:    inset 0 1px 0 rgba(255,255,255,.18) !important;
+src/app/globals.css:1571:    0 24px 54px rgba(7,17,29,.40),
+src/app/globals.css:1572:    0 8px 22px rgba(23,50,71,.28),
+src/app/globals.css:1573:    inset 0 1px 0 rgba(255,255,255,.22) !important;
+src/app/globals.css:1579:  background: rgba(255,255,255,.16) !important;
+src/app/globals.css:1580:  color: #ffffff !important;
+src/app/globals.css:1581:  border: 1px solid rgba(255,255,255,.28) !important;
+src/app/globals.css:1584:    0 14px 34px rgba(0,0,0,.22),
+src/app/globals.css:1585:    inset 0 1px 0 rgba(255,255,255,.18) !important;
+src/app/globals.css:1631:        rgba(5, 11, 18, .40) 0%,
+src/app/globals.css:1632:        rgba(7, 17, 29, .32) 28%,
+src/app/globals.css:1633:        rgba(7, 17, 29, .24) 58%,
+src/app/globals.css:1634:        rgba(5, 11, 18, .48) 100%
+src/app/globals.css:1638:        rgba(5, 11, 18, .56) 0%,
+src/app/globals.css:1639:        rgba(7, 17, 29, .30) 54%,
+src/app/globals.css:1640:        rgba(7, 17, 29, .08) 100%
+src/app/globals.css:1774:      rgba(5, 11, 18, .70) 0%,
+src/app/globals.css:1775:      rgba(7, 17, 29, .54) 36%,
+src/app/globals.css:1776:      rgba(7, 17, 29, .23) 66%,
+src/app/globals.css:1777:      rgba(7, 17, 29, .07) 100%
+src/app/globals.css:1781:      rgba(5, 11, 18, .06) 0%,
+src/app/globals.css:1782:      rgba(5, 11, 18, .10) 56%,
+src/app/globals.css:1783:      rgba(5, 11, 18, .34) 100%
+src/app/globals.css:1796:    radial-gradient(circle at 78% 22%, rgba(214, 192, 141, .15), transparent 24rem),
+src/app/globals.css:1797:    radial-gradient(circle at 10% 20%, rgba(255,255,255,.07), transparent 20rem) !important;
+src/app/globals.css:1810:      rgba(255,255,255,.02) 0%,
+src/app/globals.css:1811:      rgba(5,11,18,.03) 44%,
+src/app/globals.css:1812:      rgba(5,11,18,.30) 100%
+src/app/globals.css:1850:  text-shadow: 0 10px 26px rgba(0,0,0,.24) !important;
+src/app/globals.css:1858:  color: #ffffff !important;
+src/app/globals.css:1866:    0 22px 54px rgba(0,0,0,.34),
+src/app/globals.css:1867:    0 2px 8px rgba(0,0,0,.18) !important;
+src/app/globals.css:1879:  color: rgba(255,255,255,.84) !important;
+src/app/globals.css:1884:  text-shadow: 0 14px 34px rgba(0,0,0,.24) !important;
+src/app/globals.css:1921:    radial-gradient(circle at 18% 0%, rgba(255,255,255,.18), transparent 36%),
+src/app/globals.css:1923:  color: #ffffff !important;
+src/app/globals.css:1924:  border: 1px solid rgba(214,192,141,.34) !important;
+src/app/globals.css:1926:    0 20px 44px rgba(7,17,29,.34),
+src/app/globals.css:1927:    0 6px 18px rgba(23,50,71,.24),
+src/app/globals.css:1928:    inset 0 1px 0 rgba(255,255,255,.18) !important;
+src/app/globals.css:1933:  background: rgba(255,255,255,.16) !important;
+src/app/globals.css:1934:  color: #ffffff !important;
+src/app/globals.css:1935:  border: 1px solid rgba(255,255,255,.28) !important;
+src/app/globals.css:1938:    0 14px 34px rgba(0,0,0,.22),
+src/app/globals.css:1939:    inset 0 1px 0 rgba(255,255,255,.18) !important;
+src/app/globals.css:1956:  background: rgba(255,255,255,.92) !important;
+src/app/globals.css:1957:  border: 1px solid rgba(255,255,255,.46) !important;
+src/app/globals.css:1960:    0 24px 70px rgba(5,11,18,.25),
+src/app/globals.css:1961:    inset 0 1px 0 rgba(255,255,255,.75) !important;
+src/app/globals.css:1974:  border-right: 1px solid rgba(16,24,32,.10) !important;
+src/app/globals.css:1988:  background: rgba(23,50,71,.065) !important;
+src/app/globals.css:2002:  color: rgba(16,24,32,.56) !important;
+src/app/globals.css:2033:        rgba(5, 11, 18, .38) 0%,
+src/app/globals.css:2034:        rgba(7, 17, 29, .30) 28%,
+src/app/globals.css:2035:        rgba(7, 17, 29, .22) 58%,
+src/app/globals.css:2036:        rgba(5, 11, 18, .48) 100%
+src/app/globals.css:2040:        rgba(5, 11, 18, .55) 0%,
+src/app/globals.css:2041:        rgba(7, 17, 29, .30) 54%,
+src/app/globals.css:2042:        rgba(7, 17, 29, .08) 100%
+src/app/globals.css:2111:    background: rgba(255,255,255,.94) !important;
+src/app/globals.css:2165:    background: rgba(255,255,255,.94) !important;
+src/app/globals.css:2166:    border: 1px solid rgba(255,255,255,.46) !important;
+src/app/globals.css:2169:      0 24px 70px rgba(5,11,18,.25),
+src/app/globals.css:2170:      inset 0 1px 0 rgba(255,255,255,.75) !important;
+src/app/globals.css:2182:    border-right: 1px solid rgba(16,24,32,.10) !important;
+src/app/globals.css:2210::root {
+src/app/globals.css:2211:  --across-ink: #07111d;
+src/app/globals.css:2212:  --across-ink-2: #0d1c2b;
+src/app/globals.css:2213:  --across-ink-3: #173247;
+src/app/globals.css:2215:  --across-champagne: #d6c08d;
+src/app/globals.css:2216:  --across-champagne-light: #f1ddb0;
+src/app/globals.css:2218:  --across-ivory: #f4efe4;
+src/app/globals.css:2219:  --across-ivory-2: #f7f3ea;
+src/app/globals.css:2220:  --across-warm: #efe8dc;
+src/app/globals.css:2222:  --across-slate: #09233a;
+src/app/globals.css:2223:  --across-muted: rgba(7, 17, 29, .72);
+src/app/globals.css:2225:  --across-radius-pill: 999px;
+src/app/globals.css:2226:  --across-radius-card: 18px;
+src/app/globals.css:2228:  --across-shadow-strong:
+src/app/globals.css:2229:    0 24px 54px rgba(7,17,29,.42),
+src/app/globals.css:2230:    0 8px 22px rgba(214,192,141,.10),
+src/app/globals.css:2231:    inset 0 1px 0 rgba(255,255,255,.16);
+src/app/globals.css:2233:  --across-shadow-soft:
+src/app/globals.css:2234:    0 18px 48px rgba(7,17,29,.075),
+src/app/globals.css:2235:    inset 0 1px 0 rgba(255,255,255,.70);
+src/app/globals.css:2241:    radial-gradient(circle at 8% 0%, rgba(214,192,141,.13), transparent 24rem),
+src/app/globals.css:2242:    radial-gradient(circle at 88% 16%, rgba(142,177,203,.10), transparent 26rem),
+src/app/globals.css:2243:    linear-gradient(180deg, var(--across-ivory-2) 0%, #f3eee4 48%, var(--across-warm) 100%);
+src/app/globals.css:2244:  color: var(--across-ink);
+src/app/globals.css:2250:    radial-gradient(circle at 70% 18%, rgba(142,202,230,.12), transparent 18rem),
+src/app/globals.css:2252:  color: var(--across-ivory);
+src/app/globals.css:2262:  border-radius: var(--across-radius-pill);
+src/app/globals.css:2268:  color: var(--across-ivory);
+src/app/globals.css:2270:    radial-gradient(circle at 18% 0%, rgba(255,255,255,.16), transparent 34%),
+src/app/globals.css:2271:    linear-gradient(135deg, var(--across-ink) 0%, var(--across-ink-2) 48%, var(--across-ink-3) 100%);
+src/app/globals.css:2272:  border: 1px solid rgba(214,192,141,.42);
+src/app/globals.css:2273:  box-shadow: var(--across-shadow-strong);
+src/app/globals.css:2283:  border-color: rgba(241,221,176,.78);
+src/app/globals.css:2284:  color: #ffffff;
+src/app/globals.css:2294:  border-radius: var(--across-radius-pill);
+src/app/globals.css:2300:  color: var(--across-slate);
+src/app/globals.css:2302:    linear-gradient(180deg, rgba(247,243,234,.94), rgba(221,231,236,.86));
+src/app/globals.css:2303:  border: 1px solid rgba(214,192,141,.34);
+src/app/globals.css:2305:    0 18px 42px rgba(5,11,18,.18),
+src/app/globals.css:2306:    0 6px 18px rgba(214,192,141,.08),
+src/app/globals.css:2307:    inset 0 1px 0 rgba(255,255,255,.70);
+src/app/globals.css:2316:  color: var(--across-ink);
+src/app/globals.css:2317:  border-color: rgba(241,221,176,.62);
+src/app/globals.css:2323:    linear-gradient(180deg, rgba(255,255,255,.78), rgba(247,243,234,.82));
+src/app/globals.css:2324:  border: 1px solid rgba(7,17,29,.09);
+src/app/globals.css:2325:  border-radius: var(--across-radius-card);
+src/app/globals.css:2326:  box-shadow: var(--across-shadow-soft);
+src/app/globals.css:2335:  border-color: rgba(214,192,141,.26);
+src/app/globals.css:2337:    0 24px 58px rgba(7,17,29,.12),
+src/app/globals.css:2338:    0 8px 24px rgba(214,192,141,.09),
+src/app/globals.css:2339:    inset 0 1px 0 rgba(255,255,255,.82);
+src/app/globals.css:2345:    linear-gradient(180deg, rgba(244,239,228,.075), rgba(244,239,228,.035));
+src/app/globals.css:2346:  border: 1px solid rgba(244,239,228,.14);
+src/app/globals.css:2347:  border-radius: var(--across-radius-card);
+src/app/globals.css:2348:  color: var(--across-ivory);
+src/app/globals.css:2355:  color: var(--across-champagne);
+src/app/globals.css:2362:  color: var(--across-ink);
+src/app/globals.css:2369:  color: var(--across-ivory);
+src/app/globals.css:2377:  color: var(--across-slate);
+src/app/globals.css:2399::root {
+src/app/globals.css:2400:  --across-ink: #07111d;
+src/app/globals.css:2401:  --across-ink-2: #0d1c2b;
+src/app/globals.css:2402:  --across-ink-3: #173247;
+src/app/globals.css:2403:  --across-champagne: #d6c08d;
+src/app/globals.css:2404:  --across-champagne-light: #f1ddb0;
+src/app/globals.css:2405:  --across-ivory: #f4efe4;
+src/app/globals.css:2406:  --across-ivory-2: #f7f3ea;
+src/app/globals.css:2407:  --across-warm: #efe8dc;
+
+========================================
+7) COMPONENTES QUE ENTRAN EN QUIENES SOMOS
+========================================
+4:import Image from "next/image";
+5:import Link from "next/link";
+6:import Header from "@/components/layout/Header";
+7:import Footer from "@/components/layout/Footer";
+8:import Certifications from "@/components/sections/Certifications";
+393:      <Header />
+396:        <Image
+401:          className={styles.heroImage}
+413:            <Link href="/servicios">{t.primary}</Link>
+414:            <Link href="/empresa/oficinas">{t.secondary}</Link>
+419:      <Certifications />
+446:          <div className={styles.servicesImageWrap}>
+447:            <Image
+451:              className={styles.servicesImage}
+470:                <Image
+474:                  className={styles.teamImage}
+497:            <Link href="/contacto">{t.ctaPrimary}</Link>
+498:            <Link href="/empresa/oficinas">{t.ctaSecondary}</Link>
+503:      <Footer />
+
+========================================
+8) CSS DE CERTIFICATIONS / HEADER / FOOTER QUE PUEDE AFECTAR
+========================================
+src/components/layout/Footer.module.css:1:.footer {
+src/components/layout/Footer.module.css:4:  background: linear-gradient(180deg, #0c0d12 0%, #05060a 100%);
+src/components/layout/Footer.module.css:5:  color: #e5e7eb;
+src/components/layout/Footer.module.css:52:  color: #e5e7eb;
+src/components/layout/Footer.module.css:58:  background: rgba(255, 255, 255, 0.04);
+src/components/layout/Footer.module.css:59:  transition: background 0.2s ease, transform 0.2s ease;
+src/components/layout/Footer.module.css:63:  background: #e11343f2;
+src/components/layout/Footer.module.css:68:  color: #cbd5e1;
+src/components/layout/Footer.module.css:76:  color: #fff;
+src/components/layout/Footer.module.css:92:  color: #fff;
+src/components/layout/Footer.module.css:112:  color: #cbd5e1;
+src/components/layout/Footer.module.css:119:  color: #f8fafc;
+src/components/layout/Footer.module.css:127:  color: #94a3b8;
+src/components/layout/Footer.module.css:140:  color: #cbd5e1;
+src/components/layout/Footer.module.css:145:  transition: color 0.2s ease;
+src/components/layout/Footer.module.css:149:  color: #fff;
+src/components/layout/Footer.module.css:151:  text-decoration-color: #e11343f2;
+src/components/layout/Footer.module.css:162:  color: #94a3b8;
+src/components/layout/Footer.module.css:186:  .footer {
+src/components/layout/Footer.module.css:220:    background: rgba(255,255,255,.035);
+src/components/layout/Footer.module.css:251:    color: #fff;
+src/components/layout/Footer.module.css:252:    background: rgba(255, 255, 255, 0.08);
+src/components/layout/Footer.module.css:255:    transition: transform .22s ease, background .22s ease;
+src/components/layout/Footer.module.css:260:    background: #e11343f2;
+src/components/layout/Footer.module.css:282:    background: rgba(255, 255, 255, .045);
+src/components/layout/Footer.module.css:316:  .footer {
+src/components/layout/Footer.module.css:396:   FOOTER PREMIUM INK POLISH
+src/components/layout/Footer.module.css:397:   Misma estructura/acordeón. Solo color, sombra y tipografía.
+src/components/layout/Footer.module.css:400:.footer {
+src/components/layout/Footer.module.css:401:  background:
+src/components/layout/Footer.module.css:404:  color: rgba(255,255,255,.84) !important;
+src/components/layout/Footer.module.css:416:  color: rgba(255,255,255,.86) !important;
+src/components/layout/Footer.module.css:418:  background:
+src/components/layout/Footer.module.css:426:  color: #ffffff !important;
+src/components/layout/Footer.module.css:427:  background:
+src/components/layout/Footer.module.css:429:  border-color: rgba(205,187,141,.34) !important;
+src/components/layout/Footer.module.css:434:  color: rgba(255,255,255,.72) !important;
+src/components/layout/Footer.module.css:440:  color: #cdbb8d !important;
+src/components/layout/Footer.module.css:444:  color: #ffffff !important;
+src/components/layout/Footer.module.css:453:  color: rgba(255,255,255,.72) !important;
+src/components/layout/Footer.module.css:459:  color: #ffffff !important;
+src/components/layout/Footer.module.css:464:  color: rgba(255,255,255,.54) !important;
+src/components/layout/Footer.module.css:468:  color: rgba(255,255,255,.70) !important;
+src/components/layout/Footer.module.css:474:  color: #ffffff !important;
+src/components/layout/Footer.module.css:475:  text-decoration-color: #cdbb8d !important;
+src/components/layout/Footer.module.css:480:  color: rgba(255,255,255,.50) !important;
+src/components/layout/Footer.module.css:491:    background:
+src/components/layout/Footer.module.css:500:    color: rgba(255,255,255,.92) !important;
+src/components/layout/Footer.module.css:507:    color: #ffffff !important;
+src/components/layout/Footer.module.css:508:    background:
+src/components/layout/Footer.module.css:514:    background:
+src/components/layout/Footer.module.css:516:    border-color: rgba(205,187,141,.32) !important;
+src/components/layout/Footer.module.css:517:    color: #ffffff !important;
+src/components/layout/Footer.module.css:521:    background: rgba(255,255,255,.045) !important;
+src/components/layout/Footer.module.css:526:    color: rgba(255,255,255,.74) !important;
+src/components/layout/Footer.module.css:530:    color: #ffffff !important;
+src/components/layout/Footer.module.css:536:  .footer {
+src/components/layout/Footer.module.css:578:   FOOTER FINAL MOBILE REFINEMENT
+src/components/layout/Footer.module.css:582:.footer {
+src/components/layout/Footer.module.css:588:  .footer {
+src/components/layout/Footer.module.css:604:    color: rgba(255,255,255,.68) !important;
+src/components/layout/Footer.module.css:609:    background:
+src/components/layout/Footer.module.css:611:    border-color: rgba(255,255,255,.105) !important;
+src/components/layout/Footer.module.css:631:    background: rgba(255,255,255,.07) !important;
+src/components/layout/Footer.module.css:637:    color: rgba(255,255,255,.43) !important;
+src/components/layout/Footer.module.css:642:   FOOTER FINAL MOBILE REFINEMENT
+src/components/layout/Footer.module.css:646:.footer {
+src/components/layout/Footer.module.css:652:  .footer {
+src/components/layout/Footer.module.css:668:    color: rgba(255,255,255,.68) !important;
+src/components/layout/Footer.module.css:673:    background:
+src/components/layout/Footer.module.css:675:    border-color: rgba(255,255,255,.105) !important;
+src/components/layout/Footer.module.css:695:    background: rgba(255,255,255,.07) !important;
+src/components/layout/Footer.module.css:701:    color: rgba(255,255,255,.43) !important;
+src/components/layout/Footer.tsx:6:import styles from "./Footer.module.css";
+src/components/layout/Footer.tsx:197:function useCompactFooter() {
+src/components/layout/Footer.tsx:211:export default function Footer() {
+src/components/layout/Footer.tsx:213:  const isCompactFooter = useCompactFooter();
+src/components/layout/Footer.tsx:239:    if (!isCompactFooter) return;
+src/components/layout/Footer.tsx:245:    if (!isCompactFooter) return true;
+src/components/layout/Footer.tsx:250:    <footer className={styles.footer}>
+src/components/layout/Footer.tsx:327:    </footer>
+src/components/layout/Header.module.css:9:.header {
+src/components/layout/Header.module.css:21:  background:
+src/components/layout/Header.module.css:38:.header::after {
+src/components/layout/Header.module.css:46:  background:
+src/components/layout/Header.module.css:80:  color: rgba(255,255,255,.78);
+src/components/layout/Header.module.css:82:  background: transparent;
+src/components/layout/Header.module.css:89:  transition: color .22s ease, opacity .22s ease, background .22s ease;
+src/components/layout/Header.module.css:94:  color: #fff;
+src/components/layout/Header.module.css:95:  background: rgba(255,255,255,.035);
+src/components/layout/Header.module.css:101:  background: rgba(255,255,255,.14);
+src/components/layout/Header.module.css:127:  background: rgba(7,8,13,.72);
+src/components/layout/Header.module.css:157:  background: rgba(255,255,255,.045);
+src/components/layout/Header.module.css:175:  background: rgba(255,255,255,.035);
+src/components/layout/Header.module.css:176:  color: rgba(255,255,255,.78);
+src/components/layout/Header.module.css:183:  background: rgba(255,255,255,.11) !important;
+src/components/layout/Header.module.css:184:  color: white !important;
+src/components/layout/Header.module.css:199:  .header {
+src/components/layout/Header.module.css:228:    background: rgba(255,255,255,.06);
+src/components/layout/Header.module.css:229:    color: white;
+src/components/layout/Header.module.css:241:    background: linear-gradient(135deg, rgba(20,20,26,.95), rgba(10,10,14,.88));
+src/components/layout/Header.module.css:242:    color: white;
+src/components/layout/Header.module.css:255:    background: rgba(0,0,0,.48);
+src/components/layout/Header.module.css:280:    background:
+src/components/layout/Header.module.css:299:    background: rgba(255,255,255,.06);
+src/components/layout/Header.module.css:300:    color: white;
+src/components/layout/Header.module.css:323:    color: rgba(255,255,255,.92);
+src/components/layout/Header.module.css:326:    background: rgba(255,255,255,.045);
+src/components/layout/Header.module.css:331:    background: linear-gradient(90deg, rgba(210,12,52,.28), rgba(255,255,255,.06));
+src/components/layout/Header.module.css:340:  .header {
+src/components/layout/Header.module.css:367:  .header {
+src/components/layout/Header.module.css:418:  .header {
+src/components/layout/Header.module.css:463:/* === FIX MOBILE HEADER WIDTH === */
+src/components/layout/Header.module.css:471:  .header {
+src/components/layout/Header.module.css:503:/* === FIX MOBILE HEADER WIDTH === */
+src/components/layout/Header.module.css:511:  .header {
+src/components/layout/Header.module.css:556:  background: linear-gradient(135deg, rgba(183,0,48,.95), rgba(225,19,67,.95));
+src/components/layout/Header.module.css:557:  color: #fff !important;
+src/components/layout/Header.module.css:567:  background: linear-gradient(135deg, rgba(195,0,52,1), rgba(235,32,78,1));
+src/components/layout/Header.module.css:572:.header {
+src/components/layout/Header.module.css:573:  background:
+src/components/layout/Header.module.css:586:.header::after {
+src/components/layout/Header.module.css:592:  background:
+src/components/layout/Header.module.css:612:  color: rgba(255,255,255,.76) !important;
+src/components/layout/Header.module.css:622:.header {
+src/components/layout/Header.module.css:623:  background:
+src/components/layout/Header.module.css:626:  border-color: rgba(255,255,255,.18) !important;
+src/components/layout/Header.module.css:637:.header::after {
+src/components/layout/Header.module.css:642:  background: rgba(255,58,96,.42) !important;
+src/components/layout/Header.module.css:654:  color: rgba(255,255,255,.72) !important;
+src/components/layout/Header.module.css:659:  color: rgba(255,255,255,.96) !important;
+src/components/layout/Header.module.css:664:.header {
+src/components/layout/Header.module.css:665:  background:
+src/components/layout/Header.module.css:673:.header::after {
+src/components/layout/Header.module.css:688:.header {
+src/components/layout/Header.module.css:694:.header::after {
+src/components/layout/Header.module.css:715:.header::after {
+src/components/layout/Header.module.css:723:  background:
+src/components/layout/Header.module.css:749:    background:
+src/components/layout/Header.module.css:780:    background:
+src/components/layout/Header.module.css:801:    background: rgba(255,255,255,.07) !important;
+src/components/layout/Header.module.css:802:    color: #fff !important;
+src/components/layout/Header.module.css:839:    background:
+src/components/layout/Header.module.css:841:    color: rgba(255,255,255,.93) !important;
+src/components/layout/Header.module.css:855:    color: #e11343f2 !important;
+src/components/layout/Header.module.css:863:    color: #fff !important;
+src/components/layout/Header.module.css:864:    background: linear-gradient(135deg, #9d0b28, #e11343f2) !important;
+src/components/layout/Header.module.css:865:    border-color: rgba(225,19,67,.42) !important;
+src/components/layout/Header.module.css:880:    color: #fff !important;
+src/components/layout/Header.module.css:881:    background:
+src/components/layout/Header.module.css:883:    border-color: rgba(225,19,67,.28) !important;
+src/components/layout/Header.module.css:961:/* === HEADER FULL WIDTH + FLOATING BUTTON SAFE AREA === */
+src/components/layout/Header.module.css:967:.header {
+src/components/layout/Header.module.css:978:  .header {
+src/components/layout/Header.module.css:997:  .header {
+src/components/layout/Header.module.css:1011:/* === FINAL OVERRIDE: MOBILE HEADER FULL WIDTH === */
+src/components/layout/Header.module.css:1021:  .header {
+src/components/layout/Header.module.css:1030:    background:
+src/components/layout/Header.module.css:1042:  .header::after {
+src/components/layout/Header.module.css:1074:  .header {
+src/components/layout/Header.module.css:1097:/* Mobile drawer always above the header */
+src/components/layout/Header.module.css:1108:/* === FINAL OVERRIDE: MOBILE HEADER FULL WIDTH === */
+src/components/layout/Header.module.css:1118:  .header {
+src/components/layout/Header.module.css:1127:    background:
+src/components/layout/Header.module.css:1139:  .header::after {
+src/components/layout/Header.module.css:1171:  .header {
+src/components/layout/Header.module.css:1194:/* Mobile drawer always above the header */
+src/components/layout/Header.module.css:1205:/* HEADER RESPONSIVE WIDTH FINAL */
+src/components/layout/Header.module.css:1268:   HEADER MENU COLOR POLISH
+src/components/layout/Header.module.css:1274:  .header {
+src/components/layout/Header.module.css:1275:    background: rgba(8, 10, 14, .76) !important;
+src/components/layout/Header.module.css:1284:    color: rgba(255,255,255,.88) !important;
+src/components/layout/Header.module.css:1293:    color: #fff !important;
+src/components/layout/Header.module.css:1294:    background: rgba(255,255,255,.08) !important;
+src/components/layout/Header.module.css:1299:    color: #fff !important;
+src/components/layout/Header.module.css:1305:    background: #b40032 !important;
+src/components/layout/Header.module.css:1306:    color: #fff !important;
+src/components/layout/Header.module.css:1314:    background: rgba(255,255,255,.08) !important;
+src/components/layout/Header.module.css:1316:    color: #fff !important;
+src/components/layout/Header.module.css:1322:  .header {
+src/components/layout/Header.module.css:1323:    background: rgba(8, 10, 14, .88) !important;
+src/components/layout/Header.module.css:1330:    color: #fff !important;
+src/components/layout/Header.module.css:1335:    background: rgba(255,255,255,.10) !important;
+src/components/layout/Header.module.css:1337:    color: #fff !important;
+src/components/layout/Header.module.css:1343:    background: #111 !important;
+src/components/layout/Header.module.css:1344:    color: #fff !important;
+src/components/layout/Header.module.css:1358:    background: #fff !important;
+src/components/layout/Header.module.css:1359:    color: #111 !important;
+src/components/layout/Header.module.css:1370:    color: #111 !important;
+src/components/layout/Header.module.css:1383:    background: #f3f3f3 !important;
+src/components/layout/Header.module.css:1384:    color: #b40032 !important;
+src/components/layout/Header.module.css:1389:   HEADER FINAL LIGHT CORPORATE POLISH
+src/components/layout/Header.module.css:1390:   Header claro, corporativo, sin bloque negro pesado.
+src/components/layout/Header.module.css:1395:  .header {
+src/components/layout/Header.module.css:1401:    background: rgba(255,255,255,.92) !important;
+src/components/layout/Header.module.css:1421:    background: linear-gradient(135deg, #101216, #1b1d23) !important;
+src/components/layout/Header.module.css:1439:    background: #fff !important;
+src/components/layout/Header.module.css:1450:    background: #fff !important;
+src/components/layout/Header.module.css:1451:    color: #111 !important;
+src/components/layout/Header.module.css:1466:  .header {
+src/components/layout/Header.module.css:1467:    background: rgba(255,255,255,.88) !important;
+src/components/layout/Header.module.css:1480:    background: linear-gradient(135deg, #101216, #1b1d23) !important;
+src/components/layout/Header.module.css:1487:    color: #111 !important;
+src/components/layout/Header.module.css:1493:    background: rgba(180,0,50,.07) !important;
+src/components/layout/Header.module.css:1494:    color: #b40032 !important;
+src/components/layout/Header.module.css:1499:   HEADER REAL TRANSPARENT HERO FIX
+src/components/layout/Header.module.css:1500:   Corrige el header blanco sólido sobre el hero.
+src/components/layout/Header.module.css:1507:  :global(body:not(.across-header-solid)) .header {
+src/components/layout/Header.module.css:1508:    background: rgba(255, 255, 255, .08) !important;
+src/components/layout/Header.module.css:1517:  :global(body:not(.across-header-solid)) .inner {
+src/components/layout/Header.module.css:1518:    background: transparent !important;
+src/components/layout/Header.module.css:1521:  :global(body:not(.across-header-solid)) .brand,
+src/components/layout/Header.module.css:1522:  :global(body:not(.across-header-solid)) .logo {
+src/components/layout/Header.module.css:1523:    background: rgba(8, 10, 14, .82) !important;
+src/components/layout/Header.module.css:1531:  :global(body:not(.across-header-solid)) .menuButton,
+src/components/layout/Header.module.css:1532:  :global(body:not(.across-header-solid)) .mobileToggle,
+src/components/layout/Header.module.css:1533:  :global(body:not(.across-header-solid)) .burger {
+src/components/layout/Header.module.css:1534:    background: rgba(8, 10, 14, .86) !important;
+src/components/layout/Header.module.css:1535:    color: #fff !important;
+src/components/layout/Header.module.css:1542:  :global(body:not(.across-header-solid)) .menuButton svg,
+src/components/layout/Header.module.css:1543:  :global(body:not(.across-header-solid)) .mobileToggle svg,
+src/components/layout/Header.module.css:1544:  :global(body:not(.across-header-solid)) .burger svg {
+src/components/layout/Header.module.css:1548:  :global(body:not(.across-header-solid)) .languageButton,
+src/components/layout/Header.module.css:1549:  :global(body:not(.across-header-solid)) .localeButton,
+src/components/layout/Header.module.css:1550:  :global(body:not(.across-header-solid)) .flagButton {
+src/components/layout/Header.module.css:1551:    background: rgba(255, 255, 255, .18) !important;
+src/components/layout/Header.module.css:1559:  :global(body.across-header-solid) .header {
+src/components/layout/Header.module.css:1560:    background: rgba(255, 255, 255, .96) !important;
+src/components/layout/Header.module.css:1569:  :global(body.across-header-solid) .brand,
+src/components/layout/Header.module.css:1570:  :global(body.across-header-solid) .logo {
+src/components/layout/Header.module.css:1571:    background: rgba(8, 10, 14, .92) !important;
+src/components/layout/Header.module.css:1575:  :global(body.across-header-solid) .menuButton,
+src/components/layout/Header.module.css:1576:  :global(body.across-header-solid) .mobileToggle,
+src/components/layout/Header.module.css:1577:  :global(body.across-header-solid) .burger {
+src/components/layout/Header.module.css:1578:    background: #fff !important;
+src/components/layout/Header.module.css:1579:    color: #111 !important;
+src/components/layout/Header.module.css:1583:  :global(body.across-header-solid) .menuButton svg,
+src/components/layout/Header.module.css:1584:  :global(body.across-header-solid) .mobileToggle svg,
+src/components/layout/Header.module.css:1585:  :global(body.across-header-solid) .burger svg {
+src/components/layout/Header.module.css:1592:  :global(body:not(.across-header-solid)) .header {
+src/components/layout/Header.module.css:1593:    background: rgba(255, 255, 255, .07) !important;
+src/components/layout/Header.module.css:1602:  :global(body:not(.across-header-solid)) .inner {
+src/components/layout/Header.module.css:1603:    background: transparent !important;
+src/components/layout/Header.module.css:1606:  :global(body:not(.across-header-solid)) .brand,
+src/components/layout/Header.module.css:1607:  :global(body:not(.across-header-solid)) .logo {
+src/components/layout/Header.module.css:1608:    background: rgba(8, 10, 14, .82) !important;
+src/components/layout/Header.module.css:1613:  :global(body:not(.across-header-solid)) .nav a,
+src/components/layout/Header.module.css:1614:  :global(body:not(.across-header-solid)) .nav button,
+src/components/layout/Header.module.css:1615:  :global(body:not(.across-header-solid)) .actions a,
+src/components/layout/Header.module.css:1616:  :global(body:not(.across-header-solid)) .actions button {
+src/components/layout/Header.module.css:1617:    color: rgba(255, 255, 255, .94) !important;
+src/components/layout/Header.module.css:1623:  :global(body.across-header-solid) .header {
+src/components/layout/Header.module.css:1624:    background: rgba(255, 255, 255, .96) !important;
+src/components/layout/Header.module.css:1631:  :global(body.across-header-solid) .nav a,
+src/components/layout/Header.module.css:1632:  :global(body.across-header-solid) .nav button,
+src/components/layout/Header.module.css:1633:  :global(body.across-header-solid) .actions a,
+src/components/layout/Header.module.css:1634:  :global(body.across-header-solid) .actions button {
+src/components/layout/Header.module.css:1635:    color: #111 !important;
+src/components/layout/Header.module.css:1640:   HEADER REAL CLASSES FINAL FIX
+src/components/layout/Header.module.css:1642:   wrapper > header > logo/nav/language/mobileButton
+src/components/layout/Header.module.css:1650:.header::before,
+src/components/layout/Header.module.css:1651:.header::after {
+src/components/layout/Header.module.css:1654:  background: transparent !important;
+src/components/layout/Header.module.css:1662::global(body:not(.across-header-solid)) .wrapper {
+src/components/layout/Header.module.css:1663:  background: transparent !important;
+src/components/layout/Header.module.css:1668::global(body:not(.across-header-solid)) .header {
+src/components/layout/Header.module.css:1669:  background: rgba(255, 255, 255, .10) !important;
+src/components/layout/Header.module.css:1679::global(body:not(.across-header-solid)) .logo {
+src/components/layout/Header.module.css:1680:  background: rgba(8, 10, 14, .86) !important;
+src/components/layout/Header.module.css:1689::global(body:not(.across-header-solid)) .language button,
+src/components/layout/Header.module.css:1690::global(body:not(.across-header-solid)) .mobileLang button {
+src/components/layout/Header.module.css:1691:  background: rgba(255, 255, 255, .18) !important;
+src/components/layout/Header.module.css:1697::global(body:not(.across-header-solid)) .mobileButton {
+src/components/layout/Header.module.css:1698:  background: rgba(8, 10, 14, .88) !important;
+src/components/layout/Header.module.css:1699:  color: #fff !important;
+src/components/layout/Header.module.css:1706::global(body:not(.across-header-solid)) .mobileButton svg {
+src/components/layout/Header.module.css:1712:  :global(body:not(.across-header-solid)) .nav a,
+src/components/layout/Header.module.css:1713:  :global(body:not(.across-header-solid)) .nav button {
+src/components/layout/Header.module.css:1714:    color: rgba(255, 255, 255, .94) !important;
+src/components/layout/Header.module.css:1722::global(body.across-header-solid) .wrapper {
+src/components/layout/Header.module.css:1723:  background: transparent !important;
+src/components/layout/Header.module.css:1728::global(body.across-header-solid) .header {
+src/components/layout/Header.module.css:1729:  background: rgba(255, 255, 255, .96) !important;
+src/components/layout/Header.module.css:1738::global(body.across-header-solid) .logo {
+src/components/layout/Header.module.css:1739:  background: rgba(8, 10, 14, .92) !important;
+src/components/layout/Header.module.css:1744::global(body.across-header-solid) .mobileButton {
+src/components/layout/Header.module.css:1745:  background: #fff !important;
+src/components/layout/Header.module.css:1746:  color: #111 !important;
+src/components/layout/Header.module.css:1751::global(body.across-header-solid) .mobileButton svg {
+src/components/layout/Header.module.css:1755::global(body.across-header-solid) .language button,
+src/components/layout/Header.module.css:1756::global(body.across-header-solid) .mobileLang button {
+src/components/layout/Header.module.css:1757:  background: #fff !important;
+src/components/layout/Header.module.css:1763:  :global(body.across-header-solid) .nav a,
+src/components/layout/Header.module.css:1764:  :global(body.across-header-solid) .nav button {
+src/components/layout/Header.module.css:1765:    color: #111 !important;
+src/components/layout/Header.module.css:1768:  :global(body.across-header-solid) .nav a:hover,
+src/components/layout/Header.module.css:1769:  :global(body.across-header-solid) .nav button:hover {
+src/components/layout/Header.module.css:1770:    color: #b40032 !important;
+src/components/layout/Header.module.css:1771:    background: rgba(180, 0, 50, .07) !important;
+src/components/layout/Header.module.css:1776:   HEADER SOLID WHITE AFTER HERO
+src/components/layout/Header.module.css:1781::global(body.across-header-solid) .header {
+src/components/layout/Header.module.css:1782:  background: #ffffff !important;
+src/components/layout/Header.module.css:1789::global(body.across-header-solid) .wrapper {
+src/components/layout/Header.module.css:1790:  background: transparent !important;
+src/components/layout/Header.module.css:1795::global(body.across-header-solid) .language button,
+src/components/layout/Header.module.css:1796::global(body.across-header-solid) .mobileLang button {
+src/components/layout/Header.module.css:1797:  background: #ffffff !important;
+src/components/layout/Header.module.css:1802::global(body.across-header-solid) .mobileButton {
+src/components/layout/Header.module.css:1803:  background: #111 !important;
+src/components/layout/Header.module.css:1804:  color: #fff !important;
+src/components/layout/Header.module.css:1808::global(body.across-header-solid) .mobileButton svg {
+src/components/layout/Header.module.css:1813:   HEADER FINAL CLEAN REAL
+src/components/layout/Header.module.css:1822:.header::before,
+src/components/layout/Header.module.css:1823:.header::after {
+src/components/layout/Header.module.css:1830:  background: transparent !important;
+src/components/layout/Header.module.css:1835:.header {
+src/components/layout/Header.module.css:1839:  transition: background .22s ease, box-shadow .22s ease, border-color .22s ease !important;
+src/components/layout/Header.module.css:1859::global(body:not(.across-header-solid)) .header {
+src/components/layout/Header.module.css:1860:  background: rgba(255,255,255,.08) !important;
+src/components/layout/Header.module.css:1867::global(body:not(.across-header-solid)) .logo {
+src/components/layout/Header.module.css:1868:  background: rgba(8,10,14,.86) !important;
+src/components/layout/Header.module.css:1873::global(body:not(.across-header-solid)) .nav a,
+src/components/layout/Header.module.css:1874::global(body:not(.across-header-solid)) .nav button,
+src/components/layout/Header.module.css:1875::global(body:not(.across-header-solid)) .dropdownTrigger {
+src/components/layout/Header.module.css:1876:  color: rgba(255,255,255,.94) !important;
+src/components/layout/Header.module.css:1879::global(body:not(.across-header-solid)) .mobileButton {
+src/components/layout/Header.module.css:1880:  background: rgba(8,10,14,.88) !important;
+src/components/layout/Header.module.css:1881:  color: #fff !important;
+src/components/layout/Header.module.css:1885::global(body:not(.across-header-solid)) .mobileButton svg {
+src/components/layout/Header.module.css:1890::global(body.across-header-solid) .header {
+src/components/layout/Header.module.css:1891:  background: #fff !important;
+src/components/layout/Header.module.css:1898::global(body.across-header-solid) .logo {
+src/components/layout/Header.module.css:1899:  background: #111 !important;
+src/components/layout/Header.module.css:1904::global(body.across-header-solid) .nav a,
+src/components/layout/Header.module.css:1905::global(body.across-header-solid) .nav button,
+src/components/layout/Header.module.css:1906::global(body.across-header-solid) .dropdownTrigger {
+src/components/layout/Header.module.css:1907:  color: #111 !important;
+src/components/layout/Header.module.css:1910::global(body.across-header-solid) .nav a:hover,
+src/components/layout/Header.module.css:1911::global(body.across-header-solid) .nav button:hover,
+src/components/layout/Header.module.css:1912::global(body.across-header-solid) .dropdownTrigger:hover {
+src/components/layout/Header.module.css:1913:  color: #b40032 !important;
+src/components/layout/Header.module.css:1914:  background: rgba(180,0,50,.07) !important;
+src/components/layout/Header.module.css:1917::global(body.across-header-solid) .mobileButton {
+src/components/layout/Header.module.css:1918:  background: #111 !important;
+src/components/layout/Header.module.css:1919:  color: #fff !important;
+src/components/layout/Header.module.css:1923::global(body.across-header-solid) .mobileButton svg {
+src/components/layout/Header.module.css:1929:  .header {
+src/components/layout/Header.module.css:1956:   HEADER FINAL CLEAN REAL
+src/components/layout/Header.module.css:1965:.header::before,
+src/components/layout/Header.module.css:1966:.header::after {
+src/components/layout/Header.module.css:1973:  background: transparent !important;
+src/components/layout/Header.module.css:1978:.header {
+src/components/layout/Header.module.css:1982:  transition: background .22s ease, box-shadow .22s ease, border-color .22s ease !important;
+src/components/layout/Header.module.css:2002::global(body:not(.across-header-solid)) .header {
+src/components/layout/Header.module.css:2003:  background: rgba(255,255,255,.08) !important;
+src/components/layout/Header.module.css:2010::global(body:not(.across-header-solid)) .logo {
+src/components/layout/Header.module.css:2011:  background: rgba(8,10,14,.86) !important;
+src/components/layout/Header.module.css:2016::global(body:not(.across-header-solid)) .nav a,
+src/components/layout/Header.module.css:2017::global(body:not(.across-header-solid)) .nav button,
+src/components/layout/Header.module.css:2018::global(body:not(.across-header-solid)) .dropdownTrigger {
+src/components/layout/Header.module.css:2019:  color: rgba(255,255,255,.94) !important;
+src/components/layout/Header.module.css:2022::global(body:not(.across-header-solid)) .mobileButton {
+src/components/layout/Header.module.css:2023:  background: rgba(8,10,14,.88) !important;
+src/components/layout/Header.module.css:2024:  color: #fff !important;
+src/components/layout/Header.module.css:2028::global(body:not(.across-header-solid)) .mobileButton svg {
+src/components/layout/Header.module.css:2033::global(body.across-header-solid) .header {
+src/components/layout/Header.module.css:2034:  background: #fff !important;
+src/components/layout/Header.module.css:2041::global(body.across-header-solid) .logo {
+src/components/layout/Header.module.css:2042:  background: #111 !important;
+src/components/layout/Header.module.css:2047::global(body.across-header-solid) .nav a,
+src/components/layout/Header.module.css:2048::global(body.across-header-solid) .nav button,
+src/components/layout/Header.module.css:2049::global(body.across-header-solid) .dropdownTrigger {
+src/components/layout/Header.module.css:2050:  color: #111 !important;
+src/components/layout/Header.module.css:2053::global(body.across-header-solid) .nav a:hover,
+src/components/layout/Header.module.css:2054::global(body.across-header-solid) .nav button:hover,
+src/components/layout/Header.module.css:2055::global(body.across-header-solid) .dropdownTrigger:hover {
+src/components/layout/Header.module.css:2056:  color: #b40032 !important;
+src/components/layout/Header.module.css:2057:  background: rgba(180,0,50,.07) !important;
+src/components/layout/Header.module.css:2060::global(body.across-header-solid) .mobileButton {
+src/components/layout/Header.module.css:2061:  background: #111 !important;
+src/components/layout/Header.module.css:2062:  color: #fff !important;
+src/components/layout/Header.module.css:2066::global(body.across-header-solid) .mobileButton svg {
+src/components/layout/Header.module.css:2072:  .header {
+src/components/layout/Header.module.css:2099:   HEADER LOGO + MENU CLEAN LIGHT
+src/components/layout/Header.module.css:2114:  background: transparent !important;
+src/components/layout/Header.module.css:2133::global(body:not(.across-header-solid)) .logo {
+src/components/layout/Header.module.css:2134:  background: transparent !important;
+src/components/layout/Header.module.css:2140::global(body.across-header-solid) .logo {
+src/components/layout/Header.module.css:2141:  background: transparent !important;
+src/components/layout/Header.module.css:2147::global(body:not(.across-header-solid)) .mobileButton {
+src/components/layout/Header.module.css:2148:  background: rgba(255,255,255,.86) !important;
+src/components/layout/Header.module.css:2149:  color: #111 !important;
+src/components/layout/Header.module.css:2156::global(body:not(.across-header-solid)) .mobileButton svg {
+src/components/layout/Header.module.css:2161::global(body.across-header-solid) .mobileButton {
+src/components/layout/Header.module.css:2162:  background: #fff !important;
+src/components/layout/Header.module.css:2163:  color: #111 !important;
+src/components/layout/Header.module.css:2168::global(body.across-header-solid) .mobileButton svg {
+src/components/layout/Header.module.css:2172:/* Header sobre hero: glass limpio, sin bloque blanco pesado */
+src/components/layout/Header.module.css:2173::global(body:not(.across-header-solid)) .header {
+src/components/layout/Header.module.css:2174:  background: rgba(255,255,255,.12) !important;
+src/components/layout/Header.module.css:2178:/* Header después del hero: blanco sólido */
+src/components/layout/Header.module.css:2179::global(body.across-header-solid) .header {
+src/components/layout/Header.module.css:2180:  background: #fff !important;
+src/components/layout/Header.module.css:2214::global(body:not(.across-header-solid)) .logo,
+src/components/layout/Header.module.css:2215::global(body.across-header-solid) .logo {
+src/components/layout/Header.module.css:2224:  background: transparent !important;
+src/components/layout/Header.module.css:2233::global(body:not(.across-header-solid)) .logo img,
+src/components/layout/Header.module.css:2234::global(body.across-header-solid) .logo img {
+src/components/layout/Header.module.css:2244:/* En header blanco, mantenemos el logo visible con sombra suave */
+src/components/layout/Header.module.css:2245::global(body.across-header-solid) .logo img {
+src/components/layout/Header.module.css:2253::global(body:not(.across-header-solid)) .mobileButton,
+src/components/layout/Header.module.css:2254::global(body.across-header-solid) .mobileButton {
+src/components/layout/Header.module.css:2258:  background:
+src/components/layout/Header.module.css:2260:  color: #111 !important;
+src/components/layout/Header.module.css:2268::global(body:not(.across-header-solid)) .mobileButton svg,
+src/components/layout/Header.module.css:2269::global(body.across-header-solid) .mobileButton svg {
+src/components/layout/Header.module.css:2275:  :global(body:not(.across-header-solid)) .logo img,
+src/components/layout/Header.module.css:2276:  :global(body.across-header-solid) .logo img {
+src/components/layout/Header.module.css:2281:  .header {
+src/components/layout/Header.module.css:2293::global(body:not(.across-header-solid)) .logo,
+
+========================================
+9) IMAGENES QUE USA QUIENES SOMOS
+========================================
+16:    image: "/images/team/vicente_420x280_ok.jpg",
+25:    image: "/images/team/isa_420x280_ok.jpg",
+34:    image: "/images/team/juan_420x280.jpg",
+43:    image: "/images/team/manel_420x280.jpg",
+52:    image: "/images/team/ramon_420x280.jpg",
+61:    image: "/images/team/gonzalo_420x280.jpg",
+70:    image: "/images/team/simone_serra_420x280.png",
+79:    image: "/images/team/xavi_420x280.jpg",
+88:    image: "/images/team/nieves_420x280.jpg",
+97:    image: "/images/team/ignacio_420x280.jpg",
+106:    image: "/images/team/alex_iglesias_420x280.png",
+115:    image: "/images/team/miguel_gimenez_420x280.png",
+124:    image: "/images/team/marta_guillot_420x280.png",
+133:    image: "/images/team/vicente_420x280_ok.jpg",
+142:    image: "/images/team/andreia_monteiro_420x280.png",
+151:    image: "/images/team/jesus_espinosa_420x280.png",
+397:          src="/images/quienes1.png"
+448:              src="/images/quienes2.png"
+471:                  src={person.image}
+
+========================================
+10) POSIBLES PARCHES VIEJOS / BASURA
+========================================

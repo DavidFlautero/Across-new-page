@@ -1,0 +1,1083 @@
+========================================
+1) BUSCAR RUTAS POSIBLES
+========================================
+src/app/empresa/Empresa.module.css
+src/app/empresa/canal-denuncia/page.tsx
+src/app/empresa/oficinas/Oficinas.module.css
+src/app/empresa/oficinas/[slug]/page.tsx
+src/app/empresa/oficinas/page.tsx
+src/app/empresa/page.tsx
+src/app/empresa/quienes-somos/QuienesSomos.module.css
+src/app/empresa/quienes-somos/page.tsx
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css
+src/app/empresa/sostenibilidad/page.tsx
+src/app/empresa/trabaja-con-nosotros/page.tsx
+
+========================================
+2) BUSCAR TEXTOS CLAVE EN TODO APP
+========================================
+src/app/api/contacto/route.ts:16:    const company = value(body.company);
+src/app/api/contacto/route.ts:22:    if (!name || !company || !email || !phone || !country || !message || !body.privacyAccepted) {
+src/app/api/contacto/route.ts:37:        { name: "company", value: company },
+src/app/api/cotizacion/route.ts:17:    const company = value(body.company);
+src/app/api/cotizacion/route.ts:21:    if (!name || !company || !email || !phone || !body.privacyAccepted) {
+src/app/api/cotizacion/route.ts:69:        { name: "company", value: company },
+src/app/contacto/page.tsx:27:    company: "Empresa*",
+src/app/contacto/page.tsx:50:    company: "Company*",
+src/app/contacto/page.tsx:73:    company: "公司*",
+src/app/contacto/page.tsx:160:    const company = String(form.get("company") || "").trim();
+src/app/contacto/page.tsx:169:    if (!company) return contactRequiredMessage(t.company);
+src/app/contacto/page.tsx:205:        company: form.get("company"),
+src/app/contacto/page.tsx:255:              <input name="company" placeholder={t.company} required minLength={2} className={styles.formControl} />
+src/app/cotizacion/page.tsx:229:    company: "Empresa*",
+src/app/cotizacion/page.tsx:230:    companyPlaceholder: "Nombre de la empresa",
+src/app/cotizacion/page.tsx:232:    emailPlaceholder: "empresa@dominio.com",
+src/app/cotizacion/page.tsx:332:    company: "Company*",
+src/app/cotizacion/page.tsx:333:    companyPlaceholder: "Company name",
+src/app/cotizacion/page.tsx:335:    emailPlaceholder: "company@domain.com",
+src/app/cotizacion/page.tsx:435:    company: "公司*",
+src/app/cotizacion/page.tsx:436:    companyPlaceholder: "公司名称",
+src/app/cotizacion/page.tsx:438:    emailPlaceholder: "company@domain.com",
+src/app/cotizacion/page.tsx:530:  company: "",
+src/app/cotizacion/page.tsx:895:      if (!isFilled(form.company)) return requiredMessage(t.company);
+src/app/cotizacion/page.tsx:1143:                {t.company}
+src/app/cotizacion/page.tsx:1144:                <input type="text" placeholder={t.companyPlaceholder} value={form.company} onChange={(e) => setValue("company", e.target.value)} required />
+src/app/empresa/oficinas/page.tsx:142:            src="/images/hero/hero-empresas.png"
+src/app/empresa/oficinas/[slug]/page.tsx:28:          <Link href="/empresa/oficinas" className={styles.back}>
+src/app/empresa/page.tsx:9:import styles from "./Empresa.module.css";
+src/app/empresa/page.tsx:17:    text: "Ayudamos a empresas que operan internacionalmente a mover mercancía con más control, menos fricción y mayor capacidad de respuesta. No trasladamos problemas: diseñamos soluciones logísticas claras, eficientes y ejecutables.",
+src/app/empresa/page.tsx:64:export default function EmpresaPage() {
+src/app/empresa/page.tsx:87:        <Image src="/images/hero/hero-empresas.png" alt="Across Logistics empresa" fill priority className={styles.heroImage} sizes="100vw" />
+src/app/empresa/page.tsx:97:            <Link href="/empresa/oficinas">{t.secondary}</Link>
+src/app/empresa/page.tsx:123:          <Link href="/empresa/oficinas">{t.button}</Link>
+src/app/empresa/quienes-somos/page.tsx:162:    eyebrow: "QUIÉNES SOMOS",
+src/app/empresa/quienes-somos/page.tsx:163:    title: "Logística internacional para empresas que necesitan control, precisión y capacidad operativa global.",
+src/app/empresa/quienes-somos/page.tsx:165:      "Conectamos empresas, mercados y cadenas de suministro mediante soluciones logísticas integrales, combinando cobertura internacional, experiencia operativa, tecnología, cumplimiento documental y atención especializada.",
+src/app/empresa/quienes-somos/page.tsx:172:      "Across Logistics acompaña a empresas que necesitan mover mercancías con seguridad, control y eficiencia. Coordinamos transporte, aduanas, almacenaje, distribución y operaciones especiales para cadenas de suministro nacionales e internacionales.",
+src/app/empresa/quienes-somos/page.tsx:219:    eyebrow: "ABOUT US",
+src/app/empresa/quienes-somos/page.tsx:414:            <Link href="/empresa/oficinas">{t.secondary}</Link>
+src/app/empresa/quienes-somos/page.tsx:498:            <Link href="/empresa/oficinas">{t.ctaSecondary}</Link>
+src/app/empresa/quienes-somos/QuienesSomos.module.css:503:/* === QUIENES SOMOS: ocultar lista larga en mobile === */
+src/app/empresa/quienes-somos/QuienesSomos.module.css:519:/* === QUIENES SOMOS: limpiar bloque "forma de operar" en mobile === */
+src/app/empresa/trabaja-con-nosotros/page.tsx:13:      trabaja-con-nosotros
+src/app/mobile-polish.css:42:     Hero: menos grito, más empresa
+src/app/politica-de-cookies/page.tsx:236:					<p>Las cookies de funcionalidad permiten que el sitio web proporcione una mejor funcionalidad y personalización. Pueden ser establecidas por nosotros o por proveedores externos cuyos servicios hemos añadido a nuestras páginas. A continuación se describen algunas de estas cookies:</p>
+src/app/politica-de-privacidad-web/page.tsx:11:					<p>La empresa responsable del tratamiento de sus datos en virtud de esta Política de privacidad es:</p>
+src/app/politica-de-privacidad-web/page.tsx:56:					<p>Sus datos no se comunicarán ni serán cedidos a terceros, salvo que exista alguna obligación legal o a aquellas empresas del grupo para fines administrativos y de gestión interna que actuarán como Encargados del Tratamiento.</p>
+src/app/politica-de-privacidad-web/page.tsx:76:					<p>Tiene derecho a acceder a sus datos y a obtener confirmación sobre su tratamiento, así como una copia de los datos personales objeto de tratamiento. Tiene derecho a actualizarlos y solicitar la rectificación de los datos que sean inexactos o solicitar la supresión cuando los datos no sean necesarios para los fines para los que fueron recabados. Puede solicitar la limitación en el tratamiento de sus datos y oponerse al tratamiento de los mismos revocando su consentimiento, así como ejercer el derecho a la portabilidad de los datos. Del mismo modo, tiene derecho a no ser objeto de decisiones basadas únicamente en el tratamiento automatizado de sus datos personales. Puede ejercer sus derechos contactando con nosotros Pol. Ind. Casanova, Avda. Corregers, 21 - 46394 Ribarroja del Turia (València). E-mail: derechosprotecciondatos@acrosslogistics.com. Si considera que sus derechos no se han atendido debidamente, tiene derecho a presentar una reclamación ante la Autoridad de Control en www.aepd.es</p>
+src/app/politica-de-redes-sociales/page.tsx:80:					<p>Se prohíbe expresamente cualquier publicación en la red social, ya sean textos, gráficos, fotografías, vídeos, etc. que atenten o sean susceptibles de atentar contra la moral, la ética, el buen gusto o el decoro, y/o que infrinjan, violen o quebranten los derechos de propiedad intelectual o industrial, el derecho a la imagen o la Ley. No se tolerarán comentarios o contenido ofensivo, difamatorio, ilegal o inapropiado en los perfiles de la empresa. La Empresa se reserva el derecho de eliminar dichos comentarios o contenido y bloquear a los usuarios responsables.</p>
+src/app/recursos/page.tsx:17:      "Acceda a contenidos, guías y materiales de Across Logistics diseñados para ayudar a empresas a tomar mejores decisiones en transporte internacional, aduanas, distribución y operaciones especiales.",
+src/app/recursos/page.tsx:52:        "Las empresas deben inscribirse previamente en el Registro de Operadores Intracomunitarios, también conocido como censo VIES, para obtener un número especial de identificación fiscal válido para operaciones de IVA intracomunitario.",
+src/app/sectores/alimentacion-bebidas/page.tsx:153:    "bandText": "Nuestro equipo coordina operaciones para empresas que necesitan puntualidad, trazabilidad y respuesta profesional en alimentos, bebidas y productos de consumo.",
+src/app/sectores/alimentacion-bebidas/Sector.module.css:2954:/* Servicios aéreos con imagen integrada, estilo empresa internacional */
+src/app/sectores/alimentacion-bebidas/Sector.module.css:8042:   Más limpio, premium y empresarial.
+src/app/sectores/automocion/page.tsx:153:    "bandText": "Nuestro equipo coordina operaciones para empresas que necesitan puntualidad, control documental y respuesta profesional en cadenas automotrices.",
+src/app/sectores/automocion/Sector.module.css:2954:/* Servicios aéreos con imagen integrada, estilo empresa internacional */
+src/app/sectores/automocion/Sector.module.css:8042:   Más limpio, premium y empresarial.
+src/app/sectores/consumo-distribucion/Sector.module.css:2954:/* Servicios aéreos con imagen integrada, estilo empresa internacional */
+src/app/sectores/consumo-distribucion/Sector.module.css:8042:   Más limpio, premium y empresarial.
+src/app/sectores/energias-renovables/page.tsx:153:    "bandText": "Nuestro equipo coordina operaciones para empresas energéticas que necesitan planificación técnica, control documental y ejecución precisa en cada etapa.",
+src/app/sectores/energias-renovables/Sector.module.css:2954:/* Servicios aéreos con imagen integrada, estilo empresa internacional */
+src/app/sectores/energias-renovables/Sector.module.css:8042:   Más limpio, premium y empresarial.
+src/app/sectores/farmaceutico-sanitario/page.tsx:153:    "bandText": "Nuestro equipo coordina operaciones para empresas que necesitan cumplimiento, trazabilidad y respuesta profesional en productos farmacéuticos y sanitarios.",
+src/app/sectores/farmaceutico-sanitario/page.tsx:315:    "bandText": "Nuestro equipo coordina operaciones para empresas que necesitan cumplimiento, trazabilidad y respuesta profesional en productos farmacéuticos y sanitarios.",
+src/app/sectores/farmaceutico-sanitario/page.tsx:477:    "bandText": "Nuestro equipo coordina operaciones para empresas que necesitan cumplimiento, trazabilidad y respuesta profesional en productos farmacéuticos y sanitarios.",
+src/app/sectores/farmaceutico-sanitario/Sector.module.css:2954:/* Servicios aéreos con imagen integrada, estilo empresa internacional */
+src/app/sectores/farmaceutico-sanitario/Sector.module.css:8042:   Más limpio, premium y empresarial.
+src/app/sectores/quimico/page.tsx:153:    "bandText": "Nuestro equipo coordina operaciones para empresas químicas e industriales que necesitan cumplimiento, trazabilidad y respuesta profesional en cada etapa logística.",
+src/app/sectores/quimico/Sector.module.css:2954:/* Servicios aéreos con imagen integrada, estilo empresa internacional */
+src/app/sectores/quimico/Sector.module.css:8042:   Más limpio, premium y empresarial.
+src/app/sectores/tecnologico/page.tsx:89:        "Entregas a empresas, centros técnicos, retailers o integradores."
+src/app/sectores/tecnologico/page.tsx:153:    "bandText": "Nuestro equipo coordina operaciones para empresas que necesitan seguridad, precisión documental y trazabilidad en productos tecnológicos.",
+src/app/sectores/tecnologico/Sector.module.css:2954:/* Servicios aéreos con imagen integrada, estilo empresa internacional */
+src/app/sectores/tecnologico/Sector.module.css:8042:   Más limpio, premium y empresarial.
+src/app/servicios/aduanas/Aduanas.module.css:2954:/* Servicios aéreos con imagen integrada, estilo empresa internacional */
+src/app/servicios/aduanas/Aduanas.module.css:8042:   Más limpio, premium y empresarial.
+src/app/servicios/aduanas/page.tsx:154:    "bandText": "Nuestro equipo coordina procesos aduaneros para empresas que necesitan cumplimiento, precisión documental y continuidad operativa en comercio internacional.",
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:2954:/* Servicios aéreos con imagen integrada, estilo empresa internacional */
+src/app/servicios/almacen-distribucion/AlmacenDistribucion.module.css:8042:   Más limpio, premium y empresarial.
+src/app/servicios/almacen-distribucion/page.tsx:19:    "heroText": "Coordinamos soluciones de almacenaje, preparación de pedidos, distribución y control operativo para empresas que necesitan visibilidad, orden y continuidad logística.",
+src/app/servicios/almacen-distribucion/page.tsx:94:        "Soluciones para empresas, retail, e-commerce y distribución comercial."
+src/app/servicios/almacen-distribucion/page.tsx:154:    "bandText": "Nuestro equipo coordina soluciones para empresas que necesitan control de stock, preparación eficiente y distribución confiable.",
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:2954:/* Servicios aéreos con imagen integrada, estilo empresa internacional */
+src/app/servicios/cargas-especiales/CargasEspeciales.module.css:8042:   Más limpio, premium y empresarial.
+src/app/servicios/cargas-especiales/page.tsx:87:      "Nuestro equipo coordina cargas industriales y especiales para empresas que necesitan planificación técnica, control operativo y respuesta profesional ante movimientos complejos.",
+src/app/servicios/e-commerce/ECommerce.module.css:2954:/* Servicios aéreos con imagen integrada, estilo empresa internacional */
+src/app/servicios/e-commerce/ECommerce.module.css:8042:   Más limpio, premium y empresarial.
+src/app/servicios/temperatura-controlada/page.tsx:154:    "bandText": "Nuestro equipo coordina soluciones para empresas que necesitan preservar producto, cumplir protocolos y mantener trazabilidad en operaciones sensibles.",
+src/app/servicios/temperatura-controlada/Servicio.module.css:2954:/* Servicios aéreos con imagen integrada, estilo empresa internacional */
+src/app/servicios/temperatura-controlada/Servicio.module.css:8042:   Más limpio, premium y empresarial.
+src/app/servicios/transporte-aereo/page.tsx:87:      "Nuestro equipo coordina soluciones aéreas internacionales para empresas que necesitan rapidez, trazabilidad y respuesta profesional ante operaciones sensibles.",
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:2954:/* Servicios aéreos con imagen integrada, estilo empresa internacional */
+src/app/servicios/transporte-aereo/TransporteAereo.module.css:8042:   Más limpio, premium y empresarial.
+src/app/servicios/transporte-maritimo/page.tsx:87:      "Nuestro equipo coordina soluciones marítimas internacionales para empresas que necesitan rapidez, trazabilidad y respuesta profesional ante operaciones sensibles.",
+src/app/servicios/transporte-maritimo/Servicio.module.css:2954:/* Servicios aéreos con imagen integrada, estilo empresa internacional */
+src/app/servicios/transporte-maritimo/Servicio.module.css:8042:   Más limpio, premium y empresarial.
+src/app/servicios/transporte-terrestre/page.tsx:87:      "Nuestro equipo coordina transporte terrestre para empresas que necesitan continuidad, trazabilidad y respuesta profesional en cada tramo de la cadena logística.",
+src/app/servicios/transporte-terrestre/Servicio.module.css:2954:/* Servicios aéreos con imagen integrada, estilo empresa internacional */
+src/app/servicios/transporte-terrestre/Servicio.module.css:8042:   Más limpio, premium y empresarial.
+src/app/servicios/_shared/RelatedServices.tsx:33:    image: "/images/hero/hero-empresas.png",
+src/components/layout/FloatingCallModal.tsx:16:    company: "Empresa",
+src/components/layout/FloatingCallModal.tsx:30:    company: "Company",
+src/components/layout/FloatingCallModal.tsx:44:    company: "公司",
+src/components/layout/FloatingCallModal.tsx:108:              <label>{t.company}:<input type="text" /></label>
+src/components/layout/Footer.tsx:66:    company: "Empresa",
+src/components/layout/Footer.tsx:80:    companyLinks: [
+src/components/layout/Footer.tsx:81:      ["/empresa/quienes-somos", "Quiénes somos"],
+src/components/layout/Footer.tsx:82:      ["/empresa/oficinas", "Nuestras oficinas"],
+src/components/layout/Footer.tsx:83:      ["/empresa/sostenibilidad", "Sostenibilidad"],
+src/components/layout/Footer.tsx:85:      ["https://hubspot.acrosslogistics.com/work-with-us", "Trabaja con nosotros"],
+src/components/layout/Footer.tsx:105:    company: "Company",
+src/components/layout/Footer.tsx:119:    companyLinks: [
+src/components/layout/Footer.tsx:120:      ["/empresa/quienes-somos", "About us"],
+src/components/layout/Footer.tsx:121:      ["/empresa/oficinas", "Our offices"],
+src/components/layout/Footer.tsx:122:      ["/empresa/sostenibilidad", "Sustainability"],
+src/components/layout/Footer.tsx:144:    company: "公司",
+src/components/layout/Footer.tsx:158:    companyLinks: [
+src/components/layout/Footer.tsx:159:      ["/empresa/quienes-somos", "关于我们"],
+src/components/layout/Footer.tsx:160:      ["/empresa/oficinas", "我们的办公室"],
+src/components/layout/Footer.tsx:161:      ["/empresa/sostenibilidad", "可持续发展"],
+src/components/layout/Footer.tsx:183:  ["https://www.linkedin.com/company/across-logistics/", "in"],
+src/components/layout/Footer.tsx:219:    company: false,
+src/components/layout/Footer.tsx:291:          {/* Sección Empresa */}
+src/components/layout/Footer.tsx:292:          <div className={`${styles.section} ${isOpen('company') ? styles.open : ''}`}>
+src/components/layout/Footer.tsx:293:            <h3 onClick={() => toggleSection('company')}>{t.company}</h3>
+src/components/layout/Footer.tsx:296:                {t.companyLinks.map(([href, label]) => <SmartLink key={href} href={href}>{label}</SmartLink>)}
+src/components/layout/Header.tsx:35:    company: [
+src/components/layout/Header.tsx:36:      ["/empresa/quienes-somos", "Quiénes somos"],
+src/components/layout/Header.tsx:37:      ["/empresa/oficinas", "Nuestras oficinas"],
+src/components/layout/Header.tsx:38:      ["/empresa/sostenibilidad", "Sostenibilidad"],
+src/components/layout/Header.tsx:40:      ["https://hubspot.acrosslogistics.com/work-with-us?_gl=1*4r16p5*_ga*MTc2Mjc1OTc4MS4xNzgwMTM5MzAz*_ga_5YSHEDWDMT*czE3ODAyMzAxNDUkbzEwJGcxJHQxNzgwMjMwMTQ5JGo1NiRsMCRoMA..", "Trabaja con nosotros"],
+src/components/layout/Header.tsx:63:    company: [
+src/components/layout/Header.tsx:64:      ["/empresa/quienes-somos", "About us"],
+src/components/layout/Header.tsx:65:      ["/empresa/oficinas", "Our offices"],
+src/components/layout/Header.tsx:66:      ["/empresa/sostenibilidad", "Sustainability"],
+src/components/layout/Header.tsx:91:    company: [
+src/components/layout/Header.tsx:92:      ["/empresa/quienes-somos", "关于我们"],
+src/components/layout/Header.tsx:93:      ["/empresa/oficinas", "我们的办公室"],
+src/components/layout/Header.tsx:94:      ["/empresa/sostenibilidad", "可持续发展"],
+src/components/layout/Header.tsx:101:const company: [string, string][] = [
+src/components/layout/Header.tsx:102:  ["/empresa/quienes-somos", "Quiénes somos"],
+src/components/layout/Header.tsx:103:  ["/empresa/oficinas", "Nuestras oficinas"],
+src/components/layout/Header.tsx:104:  ["/empresa/sostenibilidad", "Sostenibilidad"],
+src/components/layout/Header.tsx:106:  ["https://hubspot.acrosslogistics.com/work-with-us?_gl=1*4r16p5*_ga*MTc2Mjc1OTc4MS4xNzgwMTM5MzAz*_ga_5YSHEDWDMT*czE3ODAyMzAxNDUkbzEwJGcxJHQxNzgwMjMwMTQ5JGo1NiRsMCRoMA..", "Trabaja con nosotros"],
+src/components/layout/Header.tsx:150:    null | "services" | "sectors" | "company" | "resources"
+src/components/layout/Header.tsx:225:          <div className={styles.dropdown} onMouseEnter={() => setOpenMenu("company")} onMouseLeave={() => setOpenMenu(null)}>
+src/components/layout/Header.tsx:226:            <button type="button" className={styles.dropdownTrigger}>{t.company} <span>▾</span></button>
+src/components/layout/Header.tsx:228:            <div className={`${styles.dropdownMenu} ${openMenu === "company" ? styles.dropdownVisible : ""}`}>
+src/components/layout/Header.tsx:229:              {renderLinks(menu.company)}
+src/components/layout/Header.tsx:330:              <button type="button" onClick={() => setMobileSection("company")}>
+src/components/layout/Header.tsx:331:                {t.company} <span>›</span>
+src/components/layout/Header.tsx:388:          {mobileSection === "company" && (
+src/components/layout/Header.tsx:398:              {menu.company.map(([href, label]) => (
+src/components/sections/ContactForm.tsx:25:    company: "Empresa*",
+src/components/sections/ContactForm.tsx:48:    company: "Company*",
+src/components/sections/ContactForm.tsx:71:    company: "公司*",
+src/components/sections/ContactForm.tsx:168:    const company = String(form.get("company") || "").trim();
+src/components/sections/ContactForm.tsx:177:    if (!company) return contactRequiredMessage(t.company);
+src/components/sections/ContactForm.tsx:206:        company: form.get("company"),
+src/components/sections/ContactForm.tsx:375:            <input name="company" placeholder={t.company} required minLength={2} style={inputStyle} />
+src/components/sections/Hero.tsx:80:Nosotros tampoco.`,
+src/components/sections/HomeCorporateFinal.tsx:162:    href: "/empresa/oficinas/barcelona",
+src/components/sections/HomeCorporateFinal.tsx:169:    href: "/empresa/oficinas/miami",
+src/components/sections/HomeCorporateFinal.tsx:176:    href: "/empresa/oficinas/madrid",
+src/components/sections/HomeCorporateFinal.tsx:183:    href: "/empresa/oficinas/shenzhen",
+src/components/sections/HomeCorporateFinal.tsx:283:            <Link href="/empresa/quienes-somos">{t.integratedLink}</Link>
+src/components/sections/HomeCorporateFinal.tsx:398:            <Link href="/empresa/oficinas" className={styles.allOfficesCard}>
+src/components/sections/LogisticsIntro.tsx:15:      "Diseñamos y gestionamos cadenas de suministro globales con altos estándares de confiabilidad, eficiencia y control operativo para empresas con operaciones internacionales.",
+src/components/sections/Quote.tsx:20:    company: "",
+src/components/sections/Quote.tsx:97:                <input placeholder="Empresa *" value={form.company} onChange={(e) => setForm({...form, company: e.target.value})} required />
+src/components/sections/ServicesOverview.tsx:15:      "Integramos transporte, almacenamiento, aduanas, fulfillment y distribución para empresas que operan a escala nacional e internacional.",
+
+========================================
+3) IMPORT CSS DE PAGINAS CANDIDATAS
+========================================
+src/app/empresa/oficinas/page.tsx:9:import styles from "./Oficinas.module.css";
+src/app/empresa/oficinas/[slug]/page.tsx:6:import styles from "../Oficinas.module.css";
+src/app/empresa/page.tsx:9:import styles from "./Empresa.module.css";
+src/app/empresa/quienes-somos/page.tsx:9:import styles from "./QuienesSomos.module.css";
+src/app/empresa/sostenibilidad/page.tsx:9:import styles from "./Sostenibilidad.module.css";
+
+========================================
+4) ESTRUCTURA HERO / SECCIONES CANDIDATAS
+========================================
+src/app/empresa/oficinas/page.tsx:16:    title: "Una red internacional preparada para responder en origen, tránsito y destino.",
+src/app/empresa/oficinas/page.tsx:18:      "Across Logistics conecta oficinas, equipos locales y partners estratégicos para coordinar operaciones logísticas internacionales con cercanía, control y capacidad de respuesta en cada mercado.",
+src/app/empresa/oficinas/page.tsx:23:    ctaEyebrow: "RED INTERNACIONAL",
+src/app/empresa/oficinas/page.tsx:24:    ctaTitle: "Conectemos su operación con la oficina adecuada.",
+src/app/empresa/oficinas/page.tsx:25:    ctaText:
+src/app/empresa/oficinas/page.tsx:27:    ctaPrimary: "Contactar oficina",
+src/app/empresa/oficinas/page.tsx:28:    ctaSecondary: "Solicitar cotización",
+src/app/empresa/oficinas/page.tsx:33:    title: "An international network ready to respond at origin, transit and destination.",
+src/app/empresa/oficinas/page.tsx:40:    ctaEyebrow: "INTERNATIONAL NETWORK",
+src/app/empresa/oficinas/page.tsx:41:    ctaTitle: "Connect your operation with the right office.",
+src/app/empresa/oficinas/page.tsx:42:    ctaText:
+src/app/empresa/oficinas/page.tsx:44:    ctaPrimary: "Contact office",
+src/app/empresa/oficinas/page.tsx:45:    ctaSecondary: "Request quotation",
+src/app/empresa/oficinas/page.tsx:50:    title: "覆盖始发地、运输过程与目的地的国际响应网络。",
+src/app/empresa/oficinas/page.tsx:57:    ctaEyebrow: "国际网络",
+src/app/empresa/oficinas/page.tsx:58:    ctaTitle: "将您的业务连接到合适的办公室。",
+src/app/empresa/oficinas/page.tsx:59:    ctaText:
+src/app/empresa/oficinas/page.tsx:61:    ctaPrimary: "联系办公室",
+src/app/empresa/oficinas/page.tsx:62:    ctaSecondary: "申请报价",
+src/app/empresa/oficinas/page.tsx:129:        <section className={styles.intro}>
+src/app/empresa/oficinas/page.tsx:131:          <h1>{t.title}</h1>
+src/app/empresa/oficinas/page.tsx:138:        </section>
+src/app/empresa/oficinas/page.tsx:140:        <section className={styles.heroStrip}>
+src/app/empresa/oficinas/page.tsx:142:            src="/images/hero/hero-empresas.png"
+src/app/empresa/oficinas/page.tsx:143:            alt={t.title}
+src/app/empresa/oficinas/page.tsx:146:            className={styles.heroImage}
+src/app/empresa/oficinas/page.tsx:148:          <div className={styles.heroOverlay} />
+src/app/empresa/oficinas/page.tsx:149:        </section>
+src/app/empresa/oficinas/page.tsx:151:        <section className={styles.grid}>
+src/app/empresa/oficinas/page.tsx:173:        </section>
+src/app/empresa/oficinas/page.tsx:175:        <section className={styles.networkCta}>
+src/app/empresa/oficinas/page.tsx:177:            <span>{t.ctaEyebrow}</span>
+src/app/empresa/oficinas/page.tsx:178:            <h2>{t.ctaTitle}</h2>
+src/app/empresa/oficinas/page.tsx:179:            <p>{t.ctaText}</p>
+src/app/empresa/oficinas/page.tsx:182:          <div className={styles.networkCtaActions}>
+src/app/empresa/oficinas/page.tsx:183:            <Link href="/contacto">{t.ctaPrimary}</Link>
+src/app/empresa/oficinas/page.tsx:184:            <Link href="/cotizacion">{t.ctaSecondary}</Link>
+src/app/empresa/oficinas/page.tsx:186:        </section>
+src/app/empresa/oficinas/[slug]/page.tsx:27:        <section className={styles.detail}>
+src/app/empresa/oficinas/[slug]/page.tsx:47:              <a href="/contacto">Contactar oficina</a>
+src/app/empresa/oficinas/[slug]/page.tsx:51:        </section>
+src/app/empresa/page.tsx:8:import Certifications from "@/components/sections/Certifications";
+src/app/empresa/page.tsx:15:    eyebrow: "ACROSS LOGISTICS",
+src/app/empresa/page.tsx:16:    title: "Soluciones logísticas integrales para operaciones globales.",
+src/app/empresa/page.tsx:18:    cta: "Solicitar información",
+src/app/empresa/page.tsx:20:    blockTitle: "Coordinamos transporte, aduanas, almacén y distribución con una visión completa.",
+src/app/empresa/page.tsx:23:      ["Red internacional", "Oficinas, agentes y partners conectados para operar en Europa, Asia, Oriente Medio y América."],
+src/app/empresa/page.tsx:31:    eyebrow: "ACROSS LOGISTICS",
+src/app/empresa/page.tsx:32:    title: "Integrated logistics solutions for global operations.",
+src/app/empresa/page.tsx:34:    cta: "Request information",
+src/app/empresa/page.tsx:36:    blockTitle: "We coordinate transport, customs, warehousing and distribution with an end-to-end vision.",
+src/app/empresa/page.tsx:41:      ["Sustainability", "Multimodal solutions and a responsible vision to reduce impact and improve efficiency."]
+src/app/empresa/page.tsx:47:    eyebrow: "ACROSS LOGISTICS",
+src/app/empresa/page.tsx:48:    title: "面向全球业务的一体化物流解决方案。",
+src/app/empresa/page.tsx:50:    cta: "申请信息",
+src/app/empresa/page.tsx:52:    blockTitle: "我们以端到端视角协调运输、海关、仓储与配送。",
+src/app/empresa/page.tsx:86:      <section className={styles.hero}>
+src/app/empresa/page.tsx:87:        <Image src="/images/hero/hero-empresas.png" alt="Across Logistics empresa" fill priority className={styles.heroImage} sizes="100vw" />
+src/app/empresa/page.tsx:90:        <div className={styles.heroContent}>
+src/app/empresa/page.tsx:91:          <span>{t.eyebrow}</span>
+src/app/empresa/page.tsx:92:          <h1>{t.title}</h1>
+src/app/empresa/page.tsx:96:            <Link href="/contacto">{t.cta}</Link>
+src/app/empresa/page.tsx:100:      </section>
+src/app/empresa/page.tsx:102:      <Certifications />
+src/app/empresa/page.tsx:105:        <section className={styles.intro}>
+src/app/empresa/page.tsx:106:          <span>{t.eyebrow}</span>
+src/app/empresa/page.tsx:107:          <h2>{t.blockTitle}</h2>
+src/app/empresa/page.tsx:109:        </section>
+src/app/empresa/page.tsx:111:        <section className={styles.cards}>
+src/app/empresa/page.tsx:112:          {t.cards.map(([title, text]: readonly [string, string]) => (
+src/app/empresa/page.tsx:113:            <article key={title}>
+src/app/empresa/page.tsx:115:              <h3>{title}</h3>
+src/app/empresa/page.tsx:119:        </section>
+src/app/empresa/page.tsx:121:        <section className={styles.network}>
+src/app/empresa/page.tsx:124:        </section>
+src/app/empresa/quienes-somos/page.tsx:8:import Certifications from "@/components/sections/Certifications";
+src/app/empresa/quienes-somos/page.tsx:162:    eyebrow: "QUIÉNES SOMOS",
+src/app/empresa/quienes-somos/page.tsx:163:    title: "Logística internacional para empresas que necesitan control, precisión y capacidad operativa global.",
+src/app/empresa/quienes-somos/page.tsx:165:      "Conectamos empresas, mercados y cadenas de suministro mediante soluciones logísticas integrales, combinando cobertura internacional, experiencia operativa, tecnología, cumplimiento documental y atención especializada.",
+src/app/empresa/quienes-somos/page.tsx:169:    blockEyebrow: "ACROSS LOGISTICS",
+src/app/empresa/quienes-somos/page.tsx:170:    blockTitle: "Logística internacional con visión operativa y compromiso de largo plazo.",
+src/app/empresa/quienes-somos/page.tsx:176:    servicesTitle: "Lo que define nuestra forma de operar.",
+src/app/empresa/quienes-somos/page.tsx:181:        "Diseñamos operaciones completas que conectan transporte, documentación, aduanas, almacenaje y distribución.",
+src/app/empresa/quienes-somos/page.tsx:185:        "Oficinas, agentes y partners conectados en Europa, Asia, Oriente Medio y América.",
+src/app/empresa/quienes-somos/page.tsx:205:    teamEyebrow: "NUESTRO EQUIPO",
+src/app/empresa/quienes-somos/page.tsx:206:    teamTitle: "Dirección global, experiencia local y coordinación internacional.",
+src/app/empresa/quienes-somos/page.tsx:208:      "Un equipo directivo conectado entre oficinas, países y áreas operativas para responder con precisión en cada mercado.",
+src/app/empresa/quienes-somos/page.tsx:210:    ctaEyebrow: "RED INTERNACIONAL",
+src/app/empresa/quienes-somos/page.tsx:211:    ctaTitle: "Conectemos su operación con nuestra red logística.",
+src/app/empresa/quienes-somos/page.tsx:212:    ctaText:
+src/app/empresa/quienes-somos/page.tsx:214:    ctaPrimary: "Hablar con un especialista",
+src/app/empresa/quienes-somos/page.tsx:215:    ctaSecondary: "Ver oficinas",
+src/app/empresa/quienes-somos/page.tsx:219:    eyebrow: "ABOUT US",
+src/app/empresa/quienes-somos/page.tsx:220:    title: "International logistics for companies that need control, precision and global operational capacity.",
+src/app/empresa/quienes-somos/page.tsx:226:    blockEyebrow: "ACROSS LOGISTICS",
+src/app/empresa/quienes-somos/page.tsx:227:    blockTitle: "International logistics with operational vision and long-term commitment.",
+src/app/empresa/quienes-somos/page.tsx:232:      "Our way of working combines expert teams, international network, certifications and operational methodology to respond with precision in every market.",
+src/app/empresa/quienes-somos/page.tsx:233:    servicesTitle: "What defines the way we operate.",
+src/app/empresa/quienes-somos/page.tsx:257:        "Sustainable vision",
+src/app/empresa/quienes-somos/page.tsx:262:    teamEyebrow: "OUR TEAM",
+src/app/empresa/quienes-somos/page.tsx:263:    teamTitle: "Global leadership, local expertise and international coordination.",
+src/app/empresa/quienes-somos/page.tsx:267:    ctaEyebrow: "INTERNATIONAL NETWORK",
+src/app/empresa/quienes-somos/page.tsx:268:    ctaTitle: "Connect your operation with our logistics network.",
+src/app/empresa/quienes-somos/page.tsx:269:    ctaText:
+src/app/empresa/quienes-somos/page.tsx:271:    ctaPrimary: "Talk to a specialist",
+src/app/empresa/quienes-somos/page.tsx:272:    ctaSecondary: "View offices",
+src/app/empresa/quienes-somos/page.tsx:276:    eyebrow: "关于我们",
+src/app/empresa/quienes-somos/page.tsx:277:    title: "为需要控制力、精准度和全球运营能力的企业提供国际物流服务。",
+src/app/empresa/quienes-somos/page.tsx:283:    blockEyebrow: "ACROSS LOGISTICS",
+src/app/empresa/quienes-somos/page.tsx:284:    blockTitle: "具备运营视野与长期承诺的国际物流。",
+src/app/empresa/quienes-somos/page.tsx:290:    servicesTitle: "定义我们运营方式的核心能力。",
+src/app/empresa/quienes-somos/page.tsx:319:    teamEyebrow: "我们的团队",
+src/app/empresa/quienes-somos/page.tsx:320:    teamTitle: "全球管理、本地经验与国际协调。",
+src/app/empresa/quienes-somos/page.tsx:324:    ctaEyebrow: "国际网络",
+src/app/empresa/quienes-somos/page.tsx:325:    ctaTitle: "将您的业务连接到我们的物流网络。",
+src/app/empresa/quienes-somos/page.tsx:326:    ctaText:
+src/app/empresa/quienes-somos/page.tsx:328:    ctaPrimary: "联系专家",
+src/app/empresa/quienes-somos/page.tsx:329:    ctaSecondary: "查看办公室",
+src/app/empresa/quienes-somos/page.tsx:395:      <section className={styles.hero}>
+src/app/empresa/quienes-somos/page.tsx:398:          alt={t.title}
+src/app/empresa/quienes-somos/page.tsx:401:          className={styles.heroImage}
+src/app/empresa/quienes-somos/page.tsx:405:        <div className={styles.heroOverlay} />
+src/app/empresa/quienes-somos/page.tsx:407:        <div className={styles.heroContent}>
+src/app/empresa/quienes-somos/page.tsx:408:          <span>{t.eyebrow}</span>
+src/app/empresa/quienes-somos/page.tsx:409:          <h1>{t.title}</h1>
+src/app/empresa/quienes-somos/page.tsx:417:      </section>
+src/app/empresa/quienes-somos/page.tsx:419:      <Certifications />
+src/app/empresa/quienes-somos/page.tsx:422:        <section className={styles.block}>
+src/app/empresa/quienes-somos/page.tsx:423:          <span>{t.blockEyebrow}</span>
+src/app/empresa/quienes-somos/page.tsx:424:          <h2>{t.blockTitle}</h2>
+src/app/empresa/quienes-somos/page.tsx:426:        </section>
+src/app/empresa/quienes-somos/page.tsx:428:        <section className={styles.servicesPanel}>
+src/app/empresa/quienes-somos/page.tsx:431:            <h2>{t.servicesTitle}</h2>
+src/app/empresa/quienes-somos/page.tsx:434:              {t.services.map(([title, description]: readonly [string, string]) => (
+src/app/empresa/quienes-somos/page.tsx:435:                <details key={title} className={styles.serviceItem}>
+src/app/empresa/quienes-somos/page.tsx:437:                    <h3>{title}</h3>
+src/app/empresa/quienes-somos/page.tsx:449:              alt={t.servicesTitle}
+src/app/empresa/quienes-somos/page.tsx:455:        </section>
+src/app/empresa/quienes-somos/page.tsx:457:        <section className={styles.teamSection}>
+src/app/empresa/quienes-somos/page.tsx:459:            <span>{t.teamEyebrow}</span>
+src/app/empresa/quienes-somos/page.tsx:460:            <h2>{t.teamTitle}</h2>
+src/app/empresa/quienes-somos/page.tsx:487:        </section>
+src/app/empresa/quienes-somos/page.tsx:489:        <section className={styles.compactCta}>
+src/app/empresa/quienes-somos/page.tsx:491:            <span>{t.ctaEyebrow}</span>
+src/app/empresa/quienes-somos/page.tsx:492:            <h2>{t.ctaTitle}</h2>
+src/app/empresa/quienes-somos/page.tsx:493:            <p>{t.ctaText}</p>
+src/app/empresa/quienes-somos/page.tsx:496:          <div className={styles.compactCtaActions}>
+src/app/empresa/quienes-somos/page.tsx:497:            <Link href="/contacto">{t.ctaPrimary}</Link>
+src/app/empresa/quienes-somos/page.tsx:498:            <Link href="/empresa/oficinas">{t.ctaSecondary}</Link>
+src/app/empresa/quienes-somos/page.tsx:500:        </section>
+src/app/empresa/sostenibilidad/page.tsx:8:import Certifications from "@/components/sections/Certifications";
+src/app/empresa/sostenibilidad/page.tsx:15:    eyebrow: "SUSTAINABLE LOGISTICS",
+src/app/empresa/sostenibilidad/page.tsx:16:    title: "Logística y sostenibilidad ambiental para cadenas de suministro responsables.",
+src/app/empresa/sostenibilidad/page.tsx:22:    blockEyebrow: "COMPROMISO AMBIENTAL",
+src/app/empresa/sostenibilidad/page.tsx:23:    blockTitle: "Tecnología, multimodalidad y reducción de impacto en cada proyecto.",
+src/app/empresa/sostenibilidad/page.tsx:29:    servicesTitle: "Ejes de nuestra sostenibilidad ambiental.",
+src/app/empresa/sostenibilidad/page.tsx:58:    ctaEyebrow: "NEUTRALIDAD EN CARBONO",
+src/app/empresa/sostenibilidad/page.tsx:59:    ctaTitle: "Avancemos hacia operaciones logísticas con menor impacto ambiental.",
+src/app/empresa/sostenibilidad/page.tsx:60:    ctaText:
+src/app/empresa/sostenibilidad/page.tsx:62:    ctaPrimary: "Hablar con un especialista",
+src/app/empresa/sostenibilidad/page.tsx:63:    ctaSecondary: "Conocer soluciones",
+src/app/empresa/sostenibilidad/page.tsx:67:    eyebrow: "SUSTAINABLE LOGISTICS",
+src/app/empresa/sostenibilidad/page.tsx:68:    title: "Logistics and environmental sustainability for responsible supply chains.",
+src/app/empresa/sostenibilidad/page.tsx:74:    blockEyebrow: "ENVIRONMENTAL COMMITMENT",
+src/app/empresa/sostenibilidad/page.tsx:75:    blockTitle: "Technology, multimodality and impact reduction in every project.",
+src/app/empresa/sostenibilidad/page.tsx:77:      "Our commitment is to seek alternative driving technologies, multimodal logistics solutions and operating models that help reduce emissions, optimize resources and move toward more responsible supply chains.",
+src/app/empresa/sostenibilidad/page.tsx:80:      "We work to fight climate change through logistics: better planning, lower impact, emissions offsetting and more sustainable operational decisions.",
+src/app/empresa/sostenibilidad/page.tsx:81:    servicesTitle: "Pillars of our environmental sustainability.",
+src/app/empresa/sostenibilidad/page.tsx:101:        "Emission reduction",
+src/app/empresa/sostenibilidad/page.tsx:110:    ctaEyebrow: "CARBON NEUTRALITY",
+src/app/empresa/sostenibilidad/page.tsx:111:    ctaTitle: "Let’s move toward logistics operations with lower environmental impact.",
+src/app/empresa/sostenibilidad/page.tsx:112:    ctaText:
+src/app/empresa/sostenibilidad/page.tsx:113:      "We offer our clients the possibility to offset CO₂ emissions through sustainable projects, combining logistics efficiency, multimodality and environmental commitment.",
+src/app/empresa/sostenibilidad/page.tsx:114:    ctaPrimary: "Talk to a specialist",
+src/app/empresa/sostenibilidad/page.tsx:115:    ctaSecondary: "Explore solutions",
+src/app/empresa/sostenibilidad/page.tsx:119:    eyebrow: "可持续物流",
+src/app/empresa/sostenibilidad/page.tsx:120:    title: "面向负责任供应链的物流与环境可持续发展。",
+src/app/empresa/sostenibilidad/page.tsx:126:    blockEyebrow: "环境承诺",
+src/app/empresa/sostenibilidad/page.tsx:127:    blockTitle: "在每个项目中结合技术、多式联运与影响降低。",
+src/app/empresa/sostenibilidad/page.tsx:133:    servicesTitle: "我们的环境可持续发展重点。",
+src/app/empresa/sostenibilidad/page.tsx:162:    ctaEyebrow: "碳中和",
+src/app/empresa/sostenibilidad/page.tsx:163:    ctaTitle: "让我们推动更低环境影响的物流运营。",
+src/app/empresa/sostenibilidad/page.tsx:164:    ctaText:
+src/app/empresa/sostenibilidad/page.tsx:166:    ctaPrimary: "联系专家",
+src/app/empresa/sostenibilidad/page.tsx:167:    ctaSecondary: "了解解决方案",
+src/app/empresa/sostenibilidad/page.tsx:233:      <section className={styles.hero}>
+src/app/empresa/sostenibilidad/page.tsx:236:          alt={t.title}
+src/app/empresa/sostenibilidad/page.tsx:239:          className={styles.heroImage}
+src/app/empresa/sostenibilidad/page.tsx:242:        <div className={styles.heroOverlay} />
+src/app/empresa/sostenibilidad/page.tsx:244:        <div className={styles.heroContent}>
+src/app/empresa/sostenibilidad/page.tsx:245:          <span>{t.eyebrow}</span>
+src/app/empresa/sostenibilidad/page.tsx:246:          <h1>{t.title}</h1>
+src/app/empresa/sostenibilidad/page.tsx:254:      </section>
+src/app/empresa/sostenibilidad/page.tsx:256:      <Certifications />
+src/app/empresa/sostenibilidad/page.tsx:259:        <section className={styles.block}>
+src/app/empresa/sostenibilidad/page.tsx:260:          <span>{t.blockEyebrow}</span>
+src/app/empresa/sostenibilidad/page.tsx:261:          <h2>{t.blockTitle}</h2>
+src/app/empresa/sostenibilidad/page.tsx:263:        </section>
+src/app/empresa/sostenibilidad/page.tsx:265:        <section className={styles.servicesPanel}>
+src/app/empresa/sostenibilidad/page.tsx:268:            <h2>{t.servicesTitle}</h2>
+src/app/empresa/sostenibilidad/page.tsx:271:              {t.services.map(([title, description]: readonly string[]) => (
+src/app/empresa/sostenibilidad/page.tsx:272:                <details key={title} className={styles.serviceItem}>
+src/app/empresa/sostenibilidad/page.tsx:274:                    <h3>{title}</h3>
+src/app/empresa/sostenibilidad/page.tsx:286:              alt={t.servicesTitle}
+src/app/empresa/sostenibilidad/page.tsx:292:        </section>
+src/app/empresa/sostenibilidad/page.tsx:294:        <section className={styles.compactCta}>
+src/app/empresa/sostenibilidad/page.tsx:296:            <span>{t.ctaEyebrow}</span>
+src/app/empresa/sostenibilidad/page.tsx:297:            <h2>{t.ctaTitle}</h2>
+src/app/empresa/sostenibilidad/page.tsx:298:            <p>{t.ctaText}</p>
+src/app/empresa/sostenibilidad/page.tsx:301:          <div className={styles.compactCtaActions}>
+src/app/empresa/sostenibilidad/page.tsx:302:            <Link href="/contacto">{t.ctaPrimary}</Link>
+src/app/empresa/sostenibilidad/page.tsx:303:            <Link href="/servicios">{t.ctaSecondary}</Link>
+src/app/empresa/sostenibilidad/page.tsx:305:        </section>
+src/app/politica-de-privacidad-web/page.tsx:76:					<p>Tiene derecho a acceder a sus datos y a obtener confirmación sobre su tratamiento, así como una copia de los datos personales objeto de tratamiento. Tiene derecho a actualizarlos y solicitar la rectificación de los datos que sean inexactos o solicitar la supresión cuando los datos no sean necesarios para los fines para los que fueron recabados. Puede solicitar la limitación en el tratamiento de sus datos y oponerse al tratamiento de los mismos revocando su consentimiento, así como ejercer el derecho a la portabilidad de los datos. Del mismo modo, tiene derecho a no ser objeto de decisiones basadas únicamente en el tratamiento automatizado de sus datos personales. Puede ejercer sus derechos contactando con nosotros Pol. Ind. Casanova, Avda. Corregers, 21 - 46394 Ribarroja del Turia (València). E-mail: derechosprotecciondatos@acrosslogistics.com. Si considera que sus derechos no se han atendido debidamente, tiene derecho a presentar una reclamación ante la Autoridad de Control en www.aepd.es</p>
+src/app/servicios/almacen-distribucion/page.tsx:19:    "heroText": "Coordinamos soluciones de almacenaje, preparación de pedidos, distribución y control operativo para empresas que necesitan visibilidad, orden y continuidad logística.",
+
+========================================
+5) IMAGENES USADAS EN EMPRESA / QUIENES
+========================================
+src/app/empresa/oficinas/page.tsx:142:            src="/images/hero/hero-empresas.png"
+src/app/empresa/page.tsx:87:        <Image src="/images/hero/hero-empresas.png" alt="Across Logistics empresa" fill priority className={styles.heroImage} sizes="100vw" />
+src/app/empresa/quienes-somos/page.tsx:16:    image: "/images/team/vicente_420x280_ok.jpg",
+src/app/empresa/quienes-somos/page.tsx:25:    image: "/images/team/isa_420x280_ok.jpg",
+src/app/empresa/quienes-somos/page.tsx:34:    image: "/images/team/juan_420x280.jpg",
+src/app/empresa/quienes-somos/page.tsx:43:    image: "/images/team/manel_420x280.jpg",
+src/app/empresa/quienes-somos/page.tsx:52:    image: "/images/team/ramon_420x280.jpg",
+src/app/empresa/quienes-somos/page.tsx:61:    image: "/images/team/gonzalo_420x280.jpg",
+src/app/empresa/quienes-somos/page.tsx:70:    image: "/images/team/simone_serra_420x280.png",
+src/app/empresa/quienes-somos/page.tsx:79:    image: "/images/team/xavi_420x280.jpg",
+src/app/empresa/quienes-somos/page.tsx:88:    image: "/images/team/nieves_420x280.jpg",
+src/app/empresa/quienes-somos/page.tsx:97:    image: "/images/team/ignacio_420x280.jpg",
+src/app/empresa/quienes-somos/page.tsx:106:    image: "/images/team/alex_iglesias_420x280.png",
+src/app/empresa/quienes-somos/page.tsx:115:    image: "/images/team/miguel_gimenez_420x280.png",
+src/app/empresa/quienes-somos/page.tsx:124:    image: "/images/team/marta_guillot_420x280.png",
+src/app/empresa/quienes-somos/page.tsx:133:    image: "/images/team/vicente_420x280_ok.jpg",
+src/app/empresa/quienes-somos/page.tsx:142:    image: "/images/team/andreia_monteiro_420x280.png",
+src/app/empresa/quienes-somos/page.tsx:151:    image: "/images/team/jesus_espinosa_420x280.png",
+src/app/empresa/quienes-somos/page.tsx:397:          src="/images/quienes1.png"
+src/app/empresa/quienes-somos/page.tsx:448:              src="/images/quienes2.png"
+src/app/empresa/sostenibilidad/page.tsx:235:          src="/images/sosten1.png"
+src/app/empresa/sostenibilidad/page.tsx:285:              src="/images/sosten2.png"
+src/app/servicios/_shared/RelatedServices.tsx:33:    image: "/images/hero/hero-empresas.png",
+
+========================================
+6) CSS RELACIONADO
+========================================
+
+----- src/app/empresa/Empresa.module.css -----
+2:  background: #07080b;
+3:  color: white;
+7:.hero {
+17:.heroImage {
+27:  background:
+28:    radial-gradient(circle at 82% 18%, rgba(190,18,55,.32), transparent 34rem),
+29:    linear-gradient(90deg, rgba(4,5,8,.94), rgba(4,5,8,.68) 42%, rgba(4,5,8,.18)),
+30:    linear-gradient(180deg, rgba(4,5,8,.1), #07080b 100%);
+33:.heroContent {
+37:.heroContent span,
+39:  color: #d5a85b;
+46:.heroContent h1 {
+54:.heroContent p {
+57:  color: rgba(255,255,255,.82);
+83:  background: linear-gradient(135deg, #9c0b29, #e11343);
+84:  color: white;
+89:  color: white;
+91:  background: rgba(255,255,255,.08);
+97:  background:
+98:    radial-gradient(circle at 88% 0%, rgba(190,18,55,.15), transparent 34rem),
+99:    linear-gradient(180deg, #07080b, #050608);
+103:.cards,
+112:  background:
+113:    linear-gradient(90deg, rgba(3,6,14,1), rgba(65,12,28,.82), rgba(20,12,18,.18));
+130:  color: rgba(255,255,255,.72);
+135:.cards {
+137:  display: grid;
+138:  grid-template-columns: repeat(3, 1fr);
+142:.cards article {
+146:  background: rgba(255,255,255,.045);
+151:.cards article > span {
+156:  background: #e11343;
+159:.cards h3 {
+164:.cards p {
+165:  color: rgba(255,255,255,.66);
+173:  background:
+174:    radial-gradient(circle at 80% 20%, rgba(255,35,82,.2), transparent 24rem),
+183:@media (max-width: 900px) {
+184:  .hero {
+188:  .cards {
+189:    grid-template-columns: 1fr;
+193:  .cards,
+210:   ACROSS CTA BUTTON POLISH V1
+211:   Botones premium corporativos para hero / CTA.
+217:.compactCtaActions {
+227:.compactCtaActions a {
+246:    border-color .22s ease,
+247:    background .22s ease,
+248:    color .22s ease;
+255:.compactCtaActions a:first-child {
+256:  color: #fff !important;
+257:  background:
+258:    linear-gradient(135deg, #f0183d 0%, #d70c31 52%, #b70627 100%) !important;
+269:.compactCtaActions a:last-child {
+270:  color: rgba(255,255,255,.94) !important;
+271:  background:
+272:    linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.035)) !important;
+284:.compactCtaActions a:first-child::after {
+291:/* Hover desktop */
+292:@media (hover: hover) {
+296:  .compactCtaActions a:hover {
+303:  .compactCtaActions a:first-child:hover {
+312:  .compactCtaActions a:last-child:hover {
+313:    border-color: rgba(255,255,255,.42) !important;
+314:    background:
+315:      linear-gradient(135deg, rgba(255,255,255,.13), rgba(255,255,255,.055)) !important;
+319:/* Mobile */
+320:@media (max-width: 760px) {
+324:  .compactCtaActions {
+326:    display: grid !important;
+327:    grid-template-columns: 1fr !important;
+334:  .compactCtaActions a {
+343:@media (max-width: 380px) {
+347:  .compactCtaActions a {
+353:/* END ACROSS CTA BUTTON POLISH V1 */
+
+----- src/app/empresa/oficinas/Oficinas.module.css -----
+3:  background: #f4f1eb;
+4:  color: #080b10;
+9:   HERO GLOBAL PREMIUM
+19:  background: transparent;
+20:  color: #fff;
+26:  color: #ed1b2f;
+36:  color: #fff;
+47:  color: #ed1b2f;
+53:  color: rgba(255,255,255,.84);
+80:  background: #ed1b2f;
+81:  color: #fff;
+91:  color: #fff;
+92:  background: rgba(255,255,255,.04);
+96:.heroStrip {
+102:  background: #050609;
+105:.heroImage {
+112:.heroOverlay,
+113:.heroStrip::before {
+119:.heroStrip::before {
+122:  background:
+123:    radial-gradient(circle at 72% 42%, rgba(237, 27, 47, .12), transparent 28rem),
+124:    linear-gradient(90deg, rgba(2,4,8,.97) 0%, rgba(2,4,8,.82) 34%, rgba(2,4,8,.44) 62%, rgba(2,4,8,.30) 100%),
+125:    linear-gradient(180deg, rgba(0,0,0,.08) 0%, rgba(0,0,0,.38) 62%, rgba(0,0,0,.72) 100%);
+128:.heroOverlay {
+130:  background:
+131:    radial-gradient(circle at 82% 20%, rgba(237, 27, 47, .10), transparent 30rem),
+132:    linear-gradient(180deg, transparent 0%, #f4f1eb 100%);
+139:.grid {
+143:  display: grid;
+144:  grid-template-columns: repeat(4, minmax(0, 1fr));
+146:  background:
+147:    radial-gradient(circle at 86% 0%, rgba(237, 27, 47, .07), transparent 28rem),
+148:    linear-gradient(180deg, #f4f1eb 0%, #fbfaf7 100%);
+152:.card {
+156:  color: #fff;
+158:  background: #080b10;
+163:  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+166:.card::after {
+175:  background: linear-gradient(90deg, transparent, rgba(237,27,47,.85), transparent);
+180:.card:hover {
+182:  border-color: rgba(237, 27, 47, .34);
+188:.cardImage {
+193:.card:hover .cardImage {
+197:.cardOverlay {
+201:  background:
+202:    radial-gradient(circle at 82% 18%, rgba(237,27,47,.18), transparent 15rem),
+203:    linear-gradient(180deg, rgba(0,0,0,.06) 0%, rgba(0,0,0,.42) 38%, rgba(0,0,0,.92) 100%);
+206:.cardContent {
+213:.cardContent small {
+215:  color: #d5a85b;
+222:.cardContent h2 {
+224:  color: #fff;
+233:.cardContent p {
+237:  color: rgba(255,255,255,.76);
+243:.cardContent strong {
+250:  color: #fff;
+251:  background: rgba(0,0,0,.62);
+259:.cardContent span {
+263:  color: #ff2d58;
+270:   CTA FINAL GLOBAL
+273:.networkCta {
+277:  background:
+278:    radial-gradient(circle at 88% 22%, rgba(237,27,47,.18), transparent 22rem),
+279:    linear-gradient(135deg, #100711 0%, #2b1020 100%);
+280:  color: #fff;
+289:.networkCta span {
+292:  color: #ed1b2f;
+299:.networkCta h2 {
+302:  color: #fff;
+308:.networkCta h2::after {
+310:  color: #ed1b2f;
+313:.networkCta p {
+316:  color: rgba(255,255,255,.74);
+321:.networkCtaActions {
+329:.networkCtaActions a {
+342:.networkCtaActions a:first-child {
+343:  background: #ed1b2f;
+344:  color: #fff;
+347:.networkCtaActions a:first-child::after {
+352:.networkCtaActions a:last-child {
+353:  color: #fff;
+354:  background: rgba(255,255,255,.10);
+364:  background: #f4f1eb;
+365:  color: #080b10;
+371:  color: #ed1b2f;
+377:  color: #ed1b2f;
+387:  color: #080b10;
+395:.detailCard {
+399:  background: rgba(255,255,255,.72);
+406:.detailCard small {
+407:  color: #a9823e;
+413:.detailCard p {
+415:  color: rgba(8,11,16,.68);
+441:  color: #fff;
+442:  background: #ed1b2f;
+446:  color: #080b10;
+448:  background: rgba(255,255,255,.72);
+455:@media (max-width: 1200px) {
+456:  .grid {
+457:    grid-template-columns: repeat(3, minmax(0, 1fr));
+461:@media (max-width: 900px) {
+479:  .heroStrip {
+483:  .grid {
+484:    grid-template-columns: repeat(2, minmax(0, 1fr));
+488:  .networkCta {
+495:  .networkCtaActions {
+499:  .networkCtaActions a {
+505:@media (max-width: 560px) {
+526:    display: grid;
+527:    grid-template-columns: 1fr;
+539:  .heroStrip {
+543:  .grid {
+544:    grid-template-columns: 1fr;
+549:  .card {
+553:  .cardContent {
+557:  .networkCta {
+563:  .networkCta h2 {
+567:  .networkCtaActions {
+568:    display: grid;
+569:    grid-template-columns: 1fr;
+572:  .networkCtaActions a {
+578:   OFICINAS — MATCH REAL CON HERO GLOBAL
+583:  background: #f4f1eb !important;
+584:  color: #080b10 !important;
+587:/* Hero con dimensiones globales */
+588:.heroStrip {
+595:  background: #050609 !important;
+598:/* Imagen como servicios/sectores */
+599:.heroImage {
+607:.heroStrip::before {
+613:  background:
+614:    radial-gradient(circle at 72% 42%, rgba(237, 27, 47, .12), transparent 28rem),
+615:    linear-gradient(90deg, rgba(2,4,8,.97) 0%, rgba(2,4,8,.86) 34%, rgba(2,4,8,.48) 62%, rgba(2,4,8,.26) 100%),
+616:    linear-gradient(180deg, rgba(0,0,0,.08) 0%, rgba(0,0,0,.38) 62%, rgba(0,0,0,.62) 100%) !important;
+619:.heroOverlay {
+623:/* Intro funciona como heroContent global */
+632:  background: transparent !important;
+633:  color: #fff !important;
+636:/* Eyebrow global */
+644:  background: transparent !important;
+648:  color: #ed1b2f !important;
+663:  color: #fff !important;
+674:  color: #ed1b2f !important;
+684:  color: rgba(255,255,255,.84) !important;
+715:  background: #ed1b2f !important;
+716:  color: #fff !important;
+727:  color: #fff !important;
+728:  background: rgba(255,255,255,.04) !important;
+733:/* Debajo del hero: blanco global */
+734:.grid {
+735:  background:
+736:    radial-gradient(circle at 86% 0%, rgba(237, 27, 47, .06), transparent 28rem),
+737:    linear-gradient(180deg, #f4f1eb 0%, #fbfaf7 100%) !important;
+742:.grid::before {
+746:/* CTA final oscuro como complemento */
+747:.networkCta {
+748:  background:
+749:    radial-gradient(circle at 88% 22%, rgba(237,27,47,.18), transparent 22rem),
+750:    linear-gradient(135deg, #100711 0%, #2b1020 100%) !important;
+753:/* Desktop bajo */
+754:@media (min-width: 901px) and (max-height: 700px) {
+755:  .heroStrip {
+777:/* Mobile */
+778:@media (max-width: 700px) {
+779:  .heroStrip {
+805:    display: grid !important;
+806:    grid-template-columns: 1fr !important;
+816:  .grid {
+822:@media (max-width: 380px) {
+823:  .heroStrip {
+848:   ACROSS CTA BUTTON POLISH V1
+849:   Botones premium corporativos para hero / CTA.
+855:.compactCtaActions {
+865:.compactCtaActions a {
+884:    border-color .22s ease,
+885:    background .22s ease,
+886:    color .22s ease;
+893:.compactCtaActions a:first-child {
+894:  color: #fff !important;
+895:  background:
+896:    linear-gradient(135deg, #f0183d 0%, #d70c31 52%, #b70627 100%) !important;
+907:.compactCtaActions a:last-child {
+908:  color: rgba(255,255,255,.94) !important;
+909:  background:
+910:    linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.035)) !important;
+922:.compactCtaActions a:first-child::after {
+929:/* Hover desktop */
+930:@media (hover: hover) {
+934:  .compactCtaActions a:hover {
+941:  .compactCtaActions a:first-child:hover {
+950:  .compactCtaActions a:last-child:hover {
+951:    border-color: rgba(255,255,255,.42) !important;
+952:    background:
+953:      linear-gradient(135deg, rgba(255,255,255,.13), rgba(255,255,255,.055)) !important;
+957:/* Mobile */
+958:@media (max-width: 760px) {
+962:  .compactCtaActions {
+964:    display: grid !important;
+965:    grid-template-columns: 1fr !important;
+972:  .compactCtaActions a {
+981:@media (max-width: 380px) {
+985:  .compactCtaActions a {
+991:/* END ACROSS CTA BUTTON POLISH V1 */
+
+----- src/app/empresa/quienes-somos/QuienesSomos.module.css -----
+4:  background: #f4f1eb;
+5:  color: #080b10;
+8:/* HERO INSTITUCIONAL PREMIUM */
+9:.hero {
+17:  background: #050609;
+18:  color: #fff;
+21:.heroImage {
+32:.heroOverlay {
+36:  background:
+37:    radial-gradient(circle at 76% 38%, rgba(237, 27, 47, .16), transparent 30rem),
+38:    linear-gradient(90deg, rgba(2,4,8,.98) 0%, rgba(2,4,8,.88) 34%, rgba(2,4,8,.52) 64%, rgba(2,4,8,.24) 100%),
+39:    linear-gradient(180deg, rgba(0,0,0,.08) 0%, rgba(0,0,0,.38) 58%, rgba(0,0,0,.64) 100%);
+42:.heroContent {
+48:.heroContent > span {
+51:  color: #ed1b2f;
+58:.heroContent h1 {
+61:  color: #fff;
+67:.heroContent h1::after {
+69:  color: #ed1b2f;
+72:.heroContent p {
+75:  color: rgba(255,255,255,.84);
+88:.compactCtaActions a {
+102:.compactCtaActions a:first-child {
+103:  background: #ed1b2f;
+104:  color: #fff;
+109:.compactCtaActions a:first-child::after {
+115:.compactCtaActions a:last-child {
+116:  color: #fff;
+117:  background: rgba(255,255,255,.04);
+123:  background: #f4f1eb;
+137:  color: #ed1b2f;
+149:  color: #080b10;
+160:  color: rgba(8, 11, 16, .72);
+165:/* BLOQUE OSCURO CON IMAGEN */
+173:  display: grid;
+174:  grid-template-columns: minmax(0, .95fr) minmax(360px, 1fr);
+177:  background:
+178:    radial-gradient(circle at 18% 18%, rgba(237,27,47,.15), transparent 24rem),
+179:    linear-gradient(180deg, #08090e 0%, #050609 100%);
+180:  color: #fff;
+185:  color: #fff;
+189:  color: rgba(255,255,255,.76);
+192:.servicesImageWrap {
+200:.servicesImage {
+208:  display: grid;
+209:  grid-template-columns: repeat(2, minmax(0, 1fr));
+219:  background:
+220:    linear-gradient(145deg, rgba(255,255,255,.075), rgba(255,255,255,.026));
+221:  color: #fff;
+229:  color: #ed1b2f;
+235:  color: #fff;
+243:  color: rgba(255,255,255,.72);
+249:.teamSection {
+256:  display: grid;
+257:  grid-template-columns: minmax(0, .9fr) minmax(360px, .75fr);
+267:.teamGrid {
+268:  display: grid;
+269:  grid-template-columns: repeat(4, minmax(0, 1fr));
+273:.teamCard {
+277:  background: #101216;
+282:.teamImage {
+290:.teamCard:hover .teamImage {
+298:  background:
+299:    linear-gradient(180deg, transparent 35%, rgba(0,0,0,.78) 100%);
+308:  color: #fff;
+320:  color: rgba(255,255,255,.76);
+325:/* CTA FINAL */
+326:.compactCta {
+333:  background:
+334:    radial-gradient(circle at 82% 28%, rgba(237,27,47,.14), transparent 22rem),
+335:    linear-gradient(180deg, #07080c 0%, #050609 100%);
+336:  color: #fff;
+341:.compactCta h2 {
+344:  color: #fff;
+350:.compactCta p {
+353:  color: rgba(255,255,255,.74);
+358:.compactCtaActions {
+366:@media (min-width: 901px) and (max-height: 700px) {
+367:  .hero {
+372:  .heroContent h1 {
+381:@media (max-width: 1180px) {
+382:  .teamGrid {
+383:    grid-template-columns: repeat(3, minmax(0, 1fr));
+387:    grid-template-columns: 1fr;
+390:  .servicesImageWrap {
+395:@media (max-width: 900px) {
+397:    grid-template-columns: 1fr;
+400:  .teamGrid {
+401:    grid-template-columns: repeat(2, minmax(0, 1fr));
+405:    grid-template-columns: 1fr;
+409:@media (max-width: 700px) {
+410:  .hero {
+416:  .heroContent h1 {
+422:  .heroContent p {
+429:  .compactCtaActions {
+430:    display: grid;
+431:    grid-template-columns: 1fr;
+436:  .compactCtaActions a {
+443:  .teamSection {
+461:  .servicesImageWrap {
+465:  .teamGrid {
+466:    grid-template-columns: 1fr;
+469:  .teamCard {
+473:  .compactCta {
+480:  .compactCta h2 {
+485:@media (max-width: 380px) {
+486:  .hero {
+490:  .heroContent h1 {
+494:  .heroContent p {
+498:  .teamCard {
+503:/* === QUIENES SOMOS: ocultar lista larga en mobile === */
+504:@media (max-width: 768px) {
+519:/* === QUIENES SOMOS: limpiar bloque "forma de operar" en mobile === */
+520:@media (max-width: 768px) {
+524:    background:
+525:      radial-gradient(circle at 20% 0%, rgba(237, 27, 47, .16), transparent 18rem),
+526:      linear-gradient(180deg, #100711 0%, #050609 100%) !important;
+542:    color: rgba(255,255,255,.68) !important;
+554:  .servicesImageWrap {
+563:  .servicesImage {
+569:@media (max-width: 380px) {
+583:  .servicesImageWrap {
+590:   ACROSS CTA BUTTON POLISH V1
+591:   Botones premium corporativos para hero / CTA.
+597:.compactCtaActions {
+607:.compactCtaActions a {
+626:    border-color .22s ease,
+627:    background .22s ease,
+628:    color .22s ease;
+635:.compactCtaActions a:first-child {
+636:  color: #fff !important;
+637:  background:
+638:    linear-gradient(135deg, #f0183d 0%, #d70c31 52%, #b70627 100%) !important;
+649:.compactCtaActions a:last-child {
+650:  color: rgba(255,255,255,.94) !important;
+651:  background:
+652:    linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.035)) !important;
+664:.compactCtaActions a:first-child::after {
+671:/* Hover desktop */
+672:@media (hover: hover) {
+676:  .compactCtaActions a:hover {
+683:  .compactCtaActions a:first-child:hover {
+692:  .compactCtaActions a:last-child:hover {
+693:    border-color: rgba(255,255,255,.42) !important;
+694:    background:
+695:      linear-gradient(135deg, rgba(255,255,255,.13), rgba(255,255,255,.055)) !important;
+699:/* Mobile */
+700:@media (max-width: 760px) {
+704:  .compactCtaActions {
+706:    display: grid !important;
+707:    grid-template-columns: 1fr !important;
+714:  .compactCtaActions a {
+723:@media (max-width: 380px) {
+727:  .compactCtaActions a {
+733:/* END ACROSS CTA BUTTON POLISH V1 */
+
+----- src/app/empresa/sostenibilidad/Sostenibilidad.module.css -----
+4:  background: #f4f1eb;
+5:  color: #080b10;
+9:   HERO ENTERPRISE
+12:.hero {
+20:  background: #050609;
+21:  color: #fff;
+24:.heroImage {
+35:.heroOverlay {
+39:  background:
+40:    radial-gradient(circle at 74% 34%, rgba(48, 160, 102, .18), transparent 30rem),
+41:    radial-gradient(circle at 72% 42%, rgba(237, 27, 47, .08), transparent 28rem),
+42:    linear-gradient(90deg, rgba(2,4,8,.97) 0%, rgba(2,4,8,.86) 34%, rgba(2,4,8,.50) 62%, rgba(2,4,8,.28) 100%),
+43:    linear-gradient(180deg, rgba(0,0,0,.08) 0%, rgba(0,0,0,.38) 62%, rgba(0,0,0,.62) 100%);
+46:.heroContent {
+52:.heroContent span {
+55:  color: #ed1b2f;
+62:.heroContent h1 {
+65:  color: #fff;
+71:.heroContent h1::after {
+73:  color: #ed1b2f;
+76:.heroContent p {
+79:  color: rgba(255,255,255,.84);
+92:.compactCtaActions a {
+106:.compactCtaActions a:first-child {
+107:  background: #ed1b2f;
+108:  color: #fff;
+113:.compactCtaActions a:first-child::after {
+119:.compactCtaActions a:last-child {
+120:  color: #fff;
+121:  background: rgba(255,255,255,.04);
+130:  background: #f4f1eb;
+138:  display: grid;
+139:  grid-template-columns: minmax(0, .85fr) minmax(360px, .9fr);
+146:.compactCta span {
+149:  color: #ed1b2f;
+159:  color: #080b10;
+167:  color: #ed1b2f;
+173:  color: rgba(8, 11, 16, .70);
+189:  display: grid;
+190:  grid-template-columns: minmax(0, .95fr) minmax(380px, 1fr);
+193:  background:
+194:    radial-gradient(circle at 20% 10%, rgba(48,160,102,.14), transparent 25rem),
+195:    radial-gradient(circle at 88% 20%, rgba(237,27,47,.10), transparent 24rem),
+196:    linear-gradient(180deg, #08090e 0%, #050609 100%);
+197:  color: #fff;
+204:  color: rgba(255,255,255,.74);
+212:  color: #fff;
+220:  color: #30a066;
+224:  display: grid;
+225:  grid-template-columns: repeat(2, minmax(0, 1fr));
+233:  background:
+234:    linear-gradient(145deg, rgba(255,255,255,.075), rgba(255,255,255,.026));
+235:  color: #fff;
+256:  color: #fff;
+264:  color: #30a066;
+273:  color: rgba(255,255,255,.70);
+278:.servicesImageWrap {
+286:.servicesImage {
+294:   CTA CARBONO
+297:.compactCta {
+301:  background:
+302:    radial-gradient(circle at 85% 18%, rgba(48,160,102,.18), transparent 24rem),
+303:    linear-gradient(135deg, #07100c 0%, #102219 54%, #07090b 100%);
+304:  color: #fff;
+313:.compactCta span {
+314:  color: #30a066;
+317:.compactCta h2 {
+320:  color: #fff;
+326:.compactCta h2::after {
+328:  color: #30a066;
+331:.compactCta p {
+334:  color: rgba(255,255,255,.76);
+339:.compactCtaActions {
+346:.compactCtaActions a:first-child {
+347:  background: #ed1b2f;
+350:.compactCtaActions a:last-child {
+351:  color: #fff;
+352:  background: rgba(255,255,255,.08);
+360:@media (min-width: 901px) and (max-height: 700px) {
+361:  .hero {
+366:  .heroContent h1 {
+370:  .heroContent p {
+380:@media (max-width: 1100px) {
+383:    grid-template-columns: 1fr;
+386:  .compactCta {
+391:  .compactCtaActions {
+395:  .compactCtaActions a {
+400:@media (max-width: 760px) {
+401:  .hero {
+407:  .heroContent h1 {
+413:  .heroContent p {
+420:    display: grid;
+421:    grid-template-columns: 1fr;
+455:    grid-template-columns: 1fr;
+462:  .servicesImageWrap {
+467:  .compactCta {
+473:  .compactCta h2 {
+477:  .compactCtaActions {
+478:    display: grid;
+479:    grid-template-columns: 1fr;
+482:  .compactCtaActions a {
+488:@media (max-width: 380px) {
+489:  .hero {
+493:  .heroContent h1 {
+497:  .heroContent p {
+506:  .compactCta {
+513:   ACROSS CTA BUTTON POLISH V1
+514:   Botones premium corporativos para hero / CTA.
+520:.compactCtaActions {
+530:.compactCtaActions a {
+549:    border-color .22s ease,
+550:    background .22s ease,
+551:    color .22s ease;
+558:.compactCtaActions a:first-child {
+559:  color: #fff !important;
+560:  background:
+561:    linear-gradient(135deg, #f0183d 0%, #d70c31 52%, #b70627 100%) !important;
+572:.compactCtaActions a:last-child {
+573:  color: rgba(255,255,255,.94) !important;
+574:  background:
+575:    linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.035)) !important;
+587:.compactCtaActions a:first-child::after {
+594:/* Hover desktop */
+595:@media (hover: hover) {
+599:  .compactCtaActions a:hover {
+606:  .compactCtaActions a:first-child:hover {
+615:  .compactCtaActions a:last-child:hover {
+616:    border-color: rgba(255,255,255,.42) !important;
+617:    background:
+618:      linear-gradient(135deg, rgba(255,255,255,.13), rgba(255,255,255,.055)) !important;
+622:/* Mobile */
+623:@media (max-width: 760px) {
+627:  .compactCtaActions {
+629:    display: grid !important;
+630:    grid-template-columns: 1fr !important;
+637:  .compactCtaActions a {
+646:@media (max-width: 380px) {
+650:  .compactCtaActions a {
+656:/* END ACROSS CTA BUTTON POLISH V1 */
+
+========================================
+7) POSIBLES BLOQUES SUCIOS / PARCHES VIEJOS
+========================================
+src/app/cotizacion/page.tsx:230:    companyPlaceholder: "Nombre de la empresa",
+src/app/cotizacion/page.tsx:232:    emailPlaceholder: "empresa@dominio.com",
+src/app/empresa/Empresa.module.css:215:.finalActions,
+src/app/empresa/Empresa.module.css:225:.finalActions a,
+src/app/empresa/Empresa.module.css:253:.finalActions a:first-child,
+src/app/empresa/Empresa.module.css:267:.finalActions a:last-child,
+src/app/empresa/Empresa.module.css:282:.finalActions a:first-child::after,
+src/app/empresa/Empresa.module.css:294:  .finalActions a:hover,
+src/app/empresa/Empresa.module.css:301:  .finalActions a:first-child:hover,
+src/app/empresa/Empresa.module.css:310:  .finalActions a:last-child:hover,
+src/app/empresa/Empresa.module.css:322:  .finalActions,
+src/app/empresa/Empresa.module.css:332:  .finalActions a,
+src/app/empresa/Empresa.module.css:345:  .finalActions a,
+src/app/empresa/oficinas/Oficinas.module.css:270:   CTA FINAL GLOBAL
+src/app/empresa/oficinas/Oficinas.module.css:746:/* CTA final oscuro como complemento */
+src/app/empresa/oficinas/Oficinas.module.css:853:.finalActions,
+src/app/empresa/oficinas/Oficinas.module.css:863:.finalActions a,
+src/app/empresa/oficinas/Oficinas.module.css:891:.finalActions a:first-child,
+src/app/empresa/oficinas/Oficinas.module.css:905:.finalActions a:last-child,
+src/app/empresa/oficinas/Oficinas.module.css:920:.finalActions a:first-child::after,
+src/app/empresa/oficinas/Oficinas.module.css:932:  .finalActions a:hover,
+src/app/empresa/oficinas/Oficinas.module.css:939:  .finalActions a:first-child:hover,
+src/app/empresa/oficinas/Oficinas.module.css:948:  .finalActions a:last-child:hover,
+src/app/empresa/oficinas/Oficinas.module.css:960:  .finalActions,
+src/app/empresa/oficinas/Oficinas.module.css:970:  .finalActions a,
+src/app/empresa/oficinas/Oficinas.module.css:983:  .finalActions a,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:325:/* CTA FINAL */
+src/app/empresa/quienes-somos/QuienesSomos.module.css:595:.finalActions,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:605:.finalActions a,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:633:.finalActions a:first-child,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:647:.finalActions a:last-child,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:662:.finalActions a:first-child::after,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:674:  .finalActions a:hover,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:681:  .finalActions a:first-child:hover,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:690:  .finalActions a:last-child:hover,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:702:  .finalActions,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:712:  .finalActions a,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:725:  .finalActions a,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:518:.finalActions,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:528:.finalActions a,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:556:.finalActions a:first-child,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:570:.finalActions a:last-child,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:585:.finalActions a:first-child::after,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:597:  .finalActions a:hover,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:604:  .finalActions a:first-child:hover,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:613:  .finalActions a:last-child:hover,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:625:  .finalActions,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:635:  .finalActions a,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:648:  .finalActions a,
+src/components/sections/Quote.tsx:97:                <input placeholder="Empresa *" value={form.company} onChange={(e) => setForm({...form, company: e.target.value})} required />

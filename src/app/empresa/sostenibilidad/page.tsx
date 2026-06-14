@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
+import type { CSSProperties } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import Image from "next/image";
+import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import styles from "./Sostenibilidad.module.css";
 
@@ -12,161 +13,224 @@ type Locale = "es" | "en" | "zh";
 
 const copy = {
   es: {
-    eyebrow: "SUSTAINABLE LOGISTICS",
-    title: "Logística y sostenibilidad ambiental para cadenas de suministro responsables.",
-    description:
-      "La sostenibilidad es un factor clave para la estabilidad económica y el crecimiento a largo plazo. En Across Logistics integramos el pensamiento ecológico en nuestra forma de planificar, coordinar y optimizar cada operación.",
-    primary: "Conocer nuestras soluciones",
-    secondary: "Hablar con un especialista",
-
-    blockEyebrow: "COMPROMISO AMBIENTAL",
-    blockTitle: "Tecnología, multimodalidad y reducción de impacto en cada proyecto.",
-    blockText:
-      "Nuestro compromiso es buscar tecnologías de conducción alternativas, soluciones logísticas multimodales y modelos operativos que ayuden a reducir emisiones, optimizar recursos y avanzar hacia cadenas de suministro más responsables.",
-
-    servicesIntro:
-      "Trabajamos para combatir el cambio climático desde la logística: mejor planificación, menor impacto, compensación de emisiones y decisiones operativas más sostenibles.",
-    servicesTitle: "Ejes de nuestra sostenibilidad ambiental.",
-
-    services: [
-      [
-        "Optimización de rutas",
-        "Planificamos recorridos, conexiones y tiempos para reducir trayectos innecesarios, esperas y consumo operativo.",
-      ],
-      [
-        "Soluciones multimodales",
-        "Integramos transporte marítimo, terrestre, aéreo y almacenaje para elegir la alternativa más eficiente según cada operación.",
-      ],
-      [
-        "Consolidación de cargas",
-        "Agrupamos mercancías cuando la operación lo permite para mejorar ocupación, reducir movimientos y optimizar costes.",
-      ],
-      [
-        "Eficiencia energética",
-        "Impulsamos procesos logísticos más eficientes para disminuir desperdicio operativo y consumo innecesario de recursos.",
-      ],
-      [
-        "Reducción de emisiones",
-        "Buscamos alternativas de transporte y planificación que contribuyan a reducir la huella ambiental de la cadena logística.",
-      ],
-      [
-        "Mejora continua",
-        "Medimos, revisamos y optimizamos procesos para avanzar hacia operaciones más limpias, responsables y eficientes.",
-      ],
+    heroEyebrow: "Sostenibilidad",
+    heroTitle: "Logística y sostenibilidad ambiental para cadenas de suministro responsables.",
+    heroText: "Trabajamos para reducir impacto, optimizar recursos y avanzar hacia operaciones logísticas más eficientes, trazables y responsables.",
+    primaryCta: "Hablar con un especialista",
+    secondaryCta: "Conocer soluciones",
+    overviewEyebrow: "Compromiso ambiental",
+    overviewTitle: "Tecnología, multimodalidad y reducción de impacto en cada proyecto.",
+    overviewText: "Buscamos alternativas operativas que ayuden a reducir emisiones, optimizar rutas y mejorar la eficiencia logística.",
+    overviewButton: "Conocer soluciones",
+    servicesEyebrow: "Ejes sostenibles",
+    servicesTitle: "Nuestra sostenibilidad se construye desde la operación.",
+    useCasesEyebrow: "Impacto responsable",
+    useCasesTitle: "Soluciones logísticas con menor impacto ambiental.",
+    processEyebrow: "Mejora continua",
+    processTitle: "Medimos, optimizamos y acompañamos cada decisión logística.",
+    bandTitle: "Operaciones logísticas con visión sostenible.",
+    bandText: "Combinamos eficiencia, multimodalidad y compromiso ambiental para ayudar a nuestros clientes a avanzar hacia cadenas más responsables.",
+    finalTitle: "Avancemos hacia operaciones logísticas con menor impacto ambiental.",
+    finalText: "Nuestro equipo puede ayudarle a diseñar soluciones logísticas más eficientes y responsables.",
+    finalPrimary: "Hablar con un especialista",
+    finalSecondary: "Conocer soluciones",
+    activeLabel: "Operación activa",
+    activeRoute: "Across Logistics",
+    activeCargo: "Coordinación internacional",
+    activeStatusLabel: "Enfoque:",
+    activeStatus: "Control operativo",
+    activeEtaLabel: "Red:",
+    activeEta: "Global",
+    trust: [
+      ["Control", "Seguimiento operativo"],
+      ["Red global", "Cobertura internacional"],
+      ["Cumplimiento", "Gestión documental"],
+      ["Equipo experto", "Atención especializada"]
     ],
-
-    ctaEyebrow: "NEUTRALIDAD EN CARBONO",
-    ctaTitle: "Avancemos hacia operaciones logísticas con menor impacto ambiental.",
-    ctaText:
-      "Ofrecemos a nuestros clientes la posibilidad de compensar emisiones de CO₂ mediante proyectos sostenibles, combinando eficiencia logística, multimodalidad y compromiso ambiental.",
-    ctaPrimary: "Hablar con un especialista",
-    ctaSecondary: "Conocer soluciones",
+    pillars: [
+      ["Red internacional", "Oficinas, agentes y partners conectados para responder en mercados clave."],
+      ["Control documental", "Procesos claros para operaciones internacionales exigentes."],
+      ["Tecnología y visibilidad", "Seguimiento operativo para tomar mejores decisiones."],
+      ["Atención especializada", "Equipos preparados para acompañar cada operación."]
+    ],
+    services: [
+      ["Planificación", "Diseñamos operaciones de acuerdo con origen, destino, carga y urgencia."],
+      ["Coordinación", "Integramos equipos, agentes y proveedores en una operación clara."],
+      ["Documentación", "Gestionamos requisitos comerciales, aduaneros y operativos."],
+      ["Seguimiento", "Mantenemos visibilidad sobre cada etapa de la operación."],
+      ["Respuesta", "Acompañamos incidencias y decisiones críticas con criterio profesional."],
+      ["Mejora", "Optimizamos procesos para futuras operaciones."]
+    ],
+    useCases: [
+      ["Importación y exportación", "Operaciones internacionales con control documental."],
+      ["Cargas sensibles", "Mercancías que requieren seguimiento y atención especializada."],
+      ["Red de oficinas", "Coordinación entre origen, tránsito y destino."],
+      ["Aduanas", "Gestión regulatoria para continuidad operativa."],
+      ["Distribución", "Conexión entre almacenaje, transporte y entrega final."],
+      ["Proyectos especiales", "Operaciones que requieren planificación técnica."]
+    ],
+    process: [
+      ["Análisis", "Entendemos la necesidad operativa."],
+      ["Diseño", "Definimos ruta, modalidad y estructura."],
+      ["Coordinación", "Conectamos equipos y proveedores."],
+      ["Documentación", "Validamos requisitos clave."],
+      ["Seguimiento", "Monitoreamos el avance."],
+      ["Optimización", "Mejoramos futuras operaciones."]
+    ],
+    stats: [
+      ["Red internacional", "Cobertura global"],
+      ["Control", "Trazabilidad operativa"],
+      ["Cumplimiento", "Gestión documental"],
+      ["Equipo experto", "Atención especializada"]
+    ],
   },
 
   en: {
-    eyebrow: "SUSTAINABLE LOGISTICS",
-    title: "Logistics and environmental sustainability for responsible supply chains.",
-    description:
-      "Sustainability is a key factor for economic stability and long-term growth. At Across Logistics, we integrate ecological thinking into the way we plan, coordinate and optimize every operation.",
-    primary: "Explore our solutions",
-    secondary: "Talk to a specialist",
-
-    blockEyebrow: "ENVIRONMENTAL COMMITMENT",
-    blockTitle: "Technology, multimodality and impact reduction in every project.",
-    blockText:
-      "Our commitment is to seek alternative driving technologies, multimodal logistics solutions and operating models that help reduce emissions, optimize resources and move toward more responsible supply chains.",
-
-    servicesIntro:
-      "We work to fight climate change through logistics: better planning, lower impact, emissions offsetting and more sustainable operational decisions.",
-    servicesTitle: "Pillars of our environmental sustainability.",
-
-    services: [
-      [
-        "Route optimization",
-        "We plan routes, connections and timing to reduce unnecessary trips, waiting times and operational consumption.",
-      ],
-      [
-        "Multimodal solutions",
-        "We integrate ocean, road, air transport and warehousing to choose the most efficient alternative for each operation.",
-      ],
-      [
-        "Cargo consolidation",
-        "We group shipments whenever the operation allows it to improve utilization, reduce movements and optimize costs.",
-      ],
-      [
-        "Energy efficiency",
-        "We promote more efficient logistics processes to reduce operational waste and unnecessary resource consumption.",
-      ],
-      [
-        "Emission reduction",
-        "We seek transport and planning alternatives that help reduce the environmental footprint of the logistics chain.",
-      ],
-      [
-        "Continuous improvement",
-        "We measure, review and optimize processes to move toward cleaner, more responsible and efficient operations.",
-      ],
+    heroEyebrow: "Sustainability",
+    heroTitle: "Logistics and environmental sustainability for responsible supply chains.",
+    heroText: "We work to reduce impact, optimize resources and move toward more efficient, traceable and responsible logistics operations.",
+    primaryCta: "Talk to a specialist",
+    secondaryCta: "Explore solutions",
+    overviewEyebrow: "Environmental commitment",
+    overviewTitle: "Technology, multimodality and impact reduction in every project.",
+    overviewText: "We seek operational alternatives that help reduce emissions, optimize routes and improve logistics efficiency.",
+    overviewButton: "Explore solutions",
+    servicesEyebrow: "Sustainable pillars",
+    servicesTitle: "Our sustainability is built from operations.",
+    useCasesEyebrow: "Responsible impact",
+    useCasesTitle: "Logistics solutions with lower environmental impact.",
+    processEyebrow: "Continuous improvement",
+    processTitle: "We measure, optimize and support every logistics decision.",
+    bandTitle: "Logistics operations with sustainable vision.",
+    bandText: "We combine efficiency, multimodality and environmental commitment to help clients move toward more responsible chains.",
+    finalTitle: "Let’s move toward logistics operations with lower environmental impact.",
+    finalText: "Our team can help you design more efficient and responsible logistics solutions.",
+    finalPrimary: "Talk to a specialist",
+    finalSecondary: "Explore solutions",
+    activeLabel: "Active operation",
+    activeRoute: "Across Logistics",
+    activeCargo: "International coordination",
+    activeStatusLabel: "Focus:",
+    activeStatus: "Operational control",
+    activeEtaLabel: "Network:",
+    activeEta: "Global",
+    trust: [
+      ["Control", "Operational tracking"],
+      ["Global network", "International coverage"],
+      ["Compliance", "Document management"],
+      ["Expert team", "Specialized attention"]
     ],
-
-    ctaEyebrow: "CARBON NEUTRALITY",
-    ctaTitle: "Let’s move toward logistics operations with lower environmental impact.",
-    ctaText:
-      "We offer our clients the possibility to offset CO₂ emissions through sustainable projects, combining logistics efficiency, multimodality and environmental commitment.",
-    ctaPrimary: "Talk to a specialist",
-    ctaSecondary: "Explore solutions",
+    pillars: [
+      ["International network", "Offices, agents and partners connected in key markets."],
+      ["Document control", "Clear processes for demanding international operations."],
+      ["Technology and visibility", "Operational tracking to support better decisions."],
+      ["Specialized attention", "Teams prepared to support each operation."]
+    ],
+    services: [
+      ["Planning", "We design operations according to origin, destination, cargo and urgency."],
+      ["Coordination", "We integrate teams, agents and providers into a clear operation."],
+      ["Documentation", "We manage commercial, customs and operational requirements."],
+      ["Tracking", "We maintain visibility over every stage of the operation."],
+      ["Response", "We support incidents and critical decisions with professional judgment."],
+      ["Improvement", "We optimize processes for future operations."]
+    ],
+    useCases: [
+      ["Import and export", "International operations with document control."],
+      ["Sensitive cargo", "Goods requiring tracking and specialized attention."],
+      ["Office network", "Coordination between origin, transit and destination."],
+      ["Customs", "Regulatory management for operational continuity."],
+      ["Distribution", "Connection between warehousing, transport and final delivery."],
+      ["Special projects", "Operations requiring technical planning."]
+    ],
+    process: [
+      ["Analysis", "We understand the operational need."],
+      ["Design", "We define route, modality and structure."],
+      ["Coordination", "We connect teams and providers."],
+      ["Documentation", "We validate key requirements."],
+      ["Tracking", "We monitor progress."],
+      ["Optimization", "We improve future operations."]
+    ],
+    stats: [
+      ["International network", "Global coverage"],
+      ["Control", "Operational traceability"],
+      ["Compliance", "Document management"],
+      ["Expert team", "Specialized attention"]
+    ],
   },
 
   zh: {
-    eyebrow: "可持续物流",
-    title: "面向负责任供应链的物流与环境可持续发展。",
-    description:
-      "可持续发展是经济稳定和长期增长的关键因素。在 Across Logistics，我们将生态思维融入每一次物流操作的规划、协调和优化。",
-    primary: "了解我们的解决方案",
-    secondary: "联系专家",
-
-    blockEyebrow: "环境承诺",
-    blockTitle: "在每个项目中结合技术、多式联运与影响降低。",
-    blockText:
-      "我们的承诺是寻找替代驾驶技术、多式联运物流方案和运营模式，以帮助减少排放、优化资源并推动更负责任的供应链。",
-
-    servicesIntro:
-      "我们通过物流应对气候变化：更好的规划、更低的影响、排放补偿以及更可持续的运营决策。",
-    servicesTitle: "我们的环境可持续发展重点。",
-
-    services: [
-      [
-        "路线优化",
-        "规划路线、连接和时效，减少不必要行程、等待时间和运营消耗。",
-      ],
-      [
-        "多式联运方案",
-        "整合海运、陆运、空运与仓储，为每项业务选择更高效的方案。",
-      ],
-      [
-        "货物合并",
-        "在条件允许时合并货物，提高装载率、减少移动并优化成本。",
-      ],
-      [
-        "能源效率",
-        "推动更高效的物流流程，减少运营浪费和不必要资源消耗。",
-      ],
-      [
-        "减少排放",
-        "寻找有助于降低物流链环境足迹的运输与规划方案。",
-      ],
-      [
-        "持续改进",
-        "持续测量、审查和优化流程，推动更清洁、更负责任和更高效的运营。",
-      ],
+    heroEyebrow: "可持续发展",
+    heroTitle: "面向负责任供应链的物流与环境可持续发展。",
+    heroText: "我们致力于降低影响、优化资源，并推动更高效、可追溯和负责任的物流运营。",
+    primaryCta: "联系专家",
+    secondaryCta: "了解解决方案",
+    overviewEyebrow: "环境承诺",
+    overviewTitle: "在每个项目中结合技术、多式联运与影响降低。",
+    overviewText: "我们寻求有助于减少排放、优化路线和提升物流效率的运营方案。",
+    overviewButton: "了解解决方案",
+    servicesEyebrow: "可持续重点",
+    servicesTitle: "我们的可持续发展建立在运营之上。",
+    useCasesEyebrow: "负责任影响",
+    useCasesTitle: "环境影响更低的物流解决方案。",
+    processEyebrow: "持续改进",
+    processTitle: "我们衡量、优化并支持每项物流决策。",
+    bandTitle: "具备可持续视野的物流运营。",
+    bandText: "我们结合效率、多式联运和环境承诺，帮助客户迈向更负责任的供应链。",
+    finalTitle: "让我们推动更低环境影响的物流运营。",
+    finalText: "我们的团队可以帮助您设计更高效、更负责任的物流方案。",
+    finalPrimary: "联系专家",
+    finalSecondary: "了解解决方案",
+    activeLabel: "进行中的业务",
+    activeRoute: "Across Logistics",
+    activeCargo: "国际协调",
+    activeStatusLabel: "重点：",
+    activeStatus: "运营控制",
+    activeEtaLabel: "网络：",
+    activeEta: "全球",
+    trust: [
+      ["控制", "运营跟踪"],
+      ["全球网络", "国际覆盖"],
+      ["合规", "文件管理"],
+      ["专家团队", "专项服务"]
     ],
-
-    ctaEyebrow: "碳中和",
-    ctaTitle: "让我们推动更低环境影响的物流运营。",
-    ctaText:
-      "我们为客户提供通过可持续项目补偿 CO₂ 排放的可能性，将物流效率、多式联运和环境承诺结合起来。",
-    ctaPrimary: "联系专家",
-    ctaSecondary: "了解解决方案",
-  },
-} as const;
+    pillars: [
+      ["国际网络", "办公室、代理和合作伙伴连接关键市场。"],
+      ["文件控制", "适用于高要求国际业务的清晰流程。"],
+      ["技术与可视化", "运营跟踪支持更好的决策。"],
+      ["专业服务", "准备充分的团队支持每项业务。"]
+    ],
+    services: [
+      ["规划", "根据始发地、目的地、货物和紧急程度设计业务。"],
+      ["协调", "将团队、代理和供应商整合为清晰运营。"],
+      ["文件", "管理商业、海关和运营要求。"],
+      ["跟踪", "保持每个阶段的可视性。"],
+      ["响应", "以专业判断支持突发情况和关键决策。"],
+      ["改进", "优化未来业务流程。"]
+    ],
+    useCases: [
+      ["进出口", "具备文件控制的国际业务。"],
+      ["敏感货物", "需要跟踪和专项服务的货物。"],
+      ["办公室网络", "始发地、运输过程和目的地之间的协调。"],
+      ["海关", "确保运营连续性的监管管理。"],
+      ["配送", "连接仓储、运输和最终交付。"],
+      ["特殊项目", "需要技术规划的业务。"]
+    ],
+    process: [
+      ["分析", "了解运营需求。"],
+      ["设计", "确定路线、模式和结构。"],
+      ["协调", "连接团队和供应商。"],
+      ["文件", "验证关键要求。"],
+      ["跟踪", "监控进度。"],
+      ["优化", "改进未来业务。"]
+    ],
+    stats: [
+      ["国际网络", "全球覆盖"],
+      ["控制", "运营可追溯性"],
+      ["合规", "文件管理"],
+      ["专家团队", "专项服务"]
+    ],
+  }
+} satisfies Record<Locale, any>;
 
 function getInitialLocale(): Locale {
   if (typeof window === "undefined") return "es";
@@ -181,6 +245,230 @@ function getInitialLocale(): Locale {
   if (htmlLang === "en" || htmlLang === "zh" || htmlLang === "es") return htmlLang;
 
   return "es";
+}
+
+type IconName =
+  | "timer"
+  | "shield"
+  | "document"
+  | "tracking"
+  | "airport"
+  | "box"
+  | "plane"
+  | "diamond"
+  | "charter"
+  | "globe"
+  | "door"
+  | "gear"
+  | "laptop"
+  | "medical"
+  | "cart"
+  | "search"
+  | "route"
+  | "package"
+  | "truck"
+  | "headset";
+
+function Icon({ name }: { name: IconName }) {
+  const common = {
+    width: 38,
+    height: 38,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 1.7,
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
+    "aria-hidden": true,
+  };
+
+  switch (name) {
+    case "timer":
+      return (
+        <svg {...common}>
+          <path d="M12 8v5l3 2" />
+          <path d="M9 2h6" />
+          <path d="M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16Z" />
+        </svg>
+      );
+
+    case "shield":
+      return (
+        <svg {...common}>
+          <path d="M12 3 5 6v5c0 4.4 2.8 8.3 7 10 4.2-1.7 7-5.6 7-10V6l-7-3Z" />
+          <path d="m9.5 12 1.8 1.8 3.7-4" />
+        </svg>
+      );
+
+    case "document":
+      return (
+        <svg {...common}>
+          <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z" />
+          <path d="M14 3v5h5" />
+          <path d="M8 13h8" />
+          <path d="M8 17h6" />
+        </svg>
+      );
+
+    case "tracking":
+      return (
+        <svg {...common}>
+          <path d="M12 21s7-5.2 7-11a7 7 0 0 0-14 0c0 5.8 7 11 7 11Z" />
+          <circle cx="12" cy="10" r="2.3" />
+        </svg>
+      );
+
+    case "airport":
+      return (
+        <svg {...common}>
+          <path d="M3 19h18" />
+          <path d="M5 19V9h14v10" />
+          <path d="M7 12h2" />
+          <path d="M11 12h2" />
+          <path d="M15 12h2" />
+          <path d="M8 19v-4h8v4" />
+          <path d="M4 9h16" />
+          <path d="M9 6h6" />
+          <path d="M12 3v3" />
+          <path d="M2.8 6.8 8.5 5.2" />
+          <path d="m15.5 5.2 5.7 1.6" />
+        </svg>
+      );
+
+    case "box":
+      return (
+        <svg {...common}>
+          <path d="m21 8-9-5-9 5 9 5 9-5Z" />
+          <path d="M3 8v8l9 5 9-5V8" />
+          <path d="M12 13v8" />
+        </svg>
+      );
+
+    case "plane":
+      return (
+        <svg {...common}>
+          <path d="M10.5 13.5 3 21l2.8-8.2L3 10l9 1 5.7-5.7a2.1 2.1 0 0 1 3 3L15 14l1 9-2.8-2.8L5 23l7.5-7.5" />
+        </svg>
+      );
+
+    case "diamond":
+      return (
+        <svg {...common}>
+          <path d="M6 3h12l4 6-10 12L2 9l4-6Z" />
+          <path d="M2 9h20" />
+          <path d="m9 3 3 6 3-6" />
+          <path d="m8 9 4 12 4-12" />
+        </svg>
+      );
+
+    case "charter":
+      return (
+        <svg {...common}>
+          <path d="M2 16 22 7l-7 10-4-4-4 7-2-2 3-6-6 4Z" />
+        </svg>
+      );
+
+    case "globe":
+      return (
+        <svg {...common}>
+          <circle cx="12" cy="12" r="9" />
+          <path d="M3 12h18" />
+          <path d="M12 3c2.3 2.5 3.5 5.5 3.5 9S14.3 18.5 12 21" />
+          <path d="M12 3c-2.3 2.5-3.5 5.5-3.5 9s1.2 6.5 3.5 9" />
+        </svg>
+      );
+
+    case "door":
+      return (
+        <svg {...common}>
+          <path d="M6 21V4a1 1 0 0 1 1-1h10v18" />
+          <path d="M10 12h.01" />
+          <path d="M4 21h16" />
+        </svg>
+      );
+
+    case "gear":
+      return (
+        <svg {...common}>
+          <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" />
+          <path d="M19.4 15a1.8 1.8 0 0 0 .36 2l.05.05a2 2 0 1 1-2.83 2.83l-.05-.05a1.8 1.8 0 0 0-2-.36 1.8 1.8 0 0 0-1 1.63V21a2 2 0 1 1-4 0v-.07a1.8 1.8 0 0 0-1-1.63 1.8 1.8 0 0 0-2 .36l-.05.05a2 2 0 1 1-2.83-2.83l.05-.05a1.8 1.8 0 0 0 .36-2 1.8 1.8 0 0 0-1.63-1H3a2 2 0 1 1 0-4h.07a1.8 1.8 0 0 0 1.63-1 1.8 1.8 0 0 0-.36-2l-.05-.05A2 2 0 1 1 7.12 3.95l.05.05a1.8 1.8 0 0 0 2 .36 1.8 1.8 0 0 0 1-1.63V3a2 2 0 1 1 4 0v.07a1.8 1.8 0 0 0 1 1.63 1.8 1.8 0 0 0 2-.36l.05-.05a2 2 0 1 1 2.83 2.83l-.05.05a1.8 1.8 0 0 0-.36 2 1.8 1.8 0 0 0 1.63 1H21a2 2 0 1 1 0 4h-.07a1.8 1.8 0 0 0-1.53 1Z" />
+        </svg>
+      );
+
+    case "laptop":
+      return (
+        <svg {...common}>
+          <path d="M5 5h14v10H5z" />
+          <path d="M3 19h18" />
+          <path d="M8 19h8" />
+        </svg>
+      );
+
+    case "medical":
+      return (
+        <svg {...common}>
+          <path d="M12 5v14" />
+          <path d="M5 12h14" />
+          <path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z" />
+        </svg>
+      );
+
+    case "cart":
+      return (
+        <svg {...common}>
+          <path d="M6 6h15l-2 8H8L6 3H3" />
+          <circle cx="9" cy="20" r="1" />
+          <circle cx="18" cy="20" r="1" />
+        </svg>
+      );
+
+    case "search":
+      return (
+        <svg {...common}>
+          <circle cx="10.5" cy="10.5" r="6.5" />
+          <path d="m16 16 5 5" />
+        </svg>
+      );
+
+    case "route":
+      return (
+        <svg {...common}>
+          <path d="M4 6h8a4 4 0 0 1 0 8H9a4 4 0 0 0 0 8h11" />
+          <path d="M4 6l3-3" />
+          <path d="M4 6l3 3" />
+        </svg>
+      );
+
+    case "package":
+      return (
+        <svg {...common}>
+          <path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5v-9Z" />
+          <path d="M12 12 4 7.5" />
+          <path d="M12 12v9" />
+          <path d="m12 12 8-4.5" />
+        </svg>
+      );
+
+    case "truck":
+      return (
+        <svg {...common}>
+          <path d="M3 7h11v9H3z" />
+          <path d="M14 10h4l3 3v3h-7z" />
+          <circle cx="7" cy="18" r="2" />
+          <circle cx="18" cy="18" r="2" />
+        </svg>
+      );
+
+    case "headset":
+      return (
+        <svg {...common}>
+          <path d="M4 13a8 8 0 0 1 16 0" />
+          <path d="M4 13v4a2 2 0 0 0 2 2h2v-7H6a2 2 0 0 0-2 2Z" />
+          <path d="M20 13v4a2 2 0 0 1-2 2h-2v-7h2a2 2 0 0 1 2 2Z" />
+          <path d="M16 19c0 1.1-.9 2-2 2h-2" />
+        </svg>
+      );
+  }
 }
 
 export default function SostenibilidadPage() {
@@ -227,83 +515,229 @@ export default function SostenibilidadPage() {
   const t = copy[locale];
 
   return (
-    <div className={styles.page}>
+    <div className="page-shell">
       <Header />
 
-      <section className={styles.hero}>
-        <Image
-          src="/images/sosten1.png"
-          alt={t.title}
-          fill
-          priority
-          className={styles.heroImage}
-          sizes="100vw"
-        />
-        <div className={styles.heroOverlay} />
+      <main className={styles.page}>
+        <section className={styles.hero} data-aereo-hero="true" data-service-hero-home="true"
+      >
+          <Image
+            src="/images/sosten1.png"
+            alt={t.heroTitle}
+            fill
+            priority
+            sizes="(max-width: 900px) 0px, 100vw"
+            className={`${styles.heroImage} ${styles.heroImageDesktop}`}
+          />
 
-        <div className={styles.heroContent}>
-          <span>{t.eyebrow}</span>
-          <h1>{t.title}</h1>
-          <p>{t.description}</p>
+          <Image
+            src="/images/sosten1.png"
+            alt={t.heroTitle}
+            fill
+            priority
+            sizes="(max-width: 900px) 100vw, 0px"
+            className={`${styles.heroImage} ${styles.heroImageMobile}`}
+          />
 
-          <div className={styles.actions}>
-            <Link href="/servicios">{t.primary}</Link>
-            <Link href="/contacto">{t.secondary}</Link>
-          </div>
-        </div>
-      </section>
+          <div className={styles.heroOverlay} />
 
-      <Certifications />
+          <div className={styles.heroInner}
+      >
+            <div className={styles.heroContent}>
+              <span className={styles.eyebrow}>{t.heroEyebrow}</span>
+              <h1 className={styles.title}>{t.heroTitle}</h1>
+              <p className={styles.subtitle}>{t.heroText}</p>
 
-      <main className={styles.content}>
-        <section className={styles.block}>
-          <span>{t.blockEyebrow}</span>
-          <h2>{t.blockTitle}</h2>
-          <p>{t.blockText}</p>
-        </section>
+              <div className={styles.actions}>
+                <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>
+                <Link href="/contacto" className={styles.secondaryBtn}>{t.secondaryCta}</Link>
+              </div>
+            </div>
 
-        <section className={styles.servicesPanel}>
-          <div className={styles.servicesCopy}>
-            <p>{t.servicesIntro}</p>
-            <h2>{t.servicesTitle}</h2>
+            <div className={styles.operationCard}>
+              <span>{t.activeLabel}</span>
+              <strong>{t.activeRoute}</strong>
+              <p>{t.activeCargo}</p>
 
-            <div className={styles.accordion}>
-              {t.services.map(([title, description]: readonly string[]) => (
-                <details key={title} className={styles.serviceItem}>
-                  <summary>
-                    <h3>{title}</h3>
-                    <span>+</span>
-                  </summary>
-                  <p>{description}</p>
-                </details>
-              ))}
+              <div>
+                <small>{t.activeStatusLabel}</small>
+                <b>{t.activeStatus}</b>
+              </div>
+
+              <div>
+                <small>{t.activeEtaLabel}</small>
+                <em>{t.activeEta}</em>
+              </div>
             </div>
           </div>
 
-          <div className={styles.servicesImageWrap}>
+          <div className={styles.commandBar} data-aereo-trust="true">
+            {t.trust.map(([title, text]: string[], index: number) => {
+              const icons: IconName[] = ["timer", "shield", "document", "tracking"];
+
+              return (
+                <div key={title} className={styles.commandItem}>
+                  <i>
+                    <Icon name={icons[index]} />
+                  </i>
+                  <span>
+                    <strong>{title}</strong>
+                    <small>{text}</small>
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        <Certifications />
+
+        <section className={styles.overview}>
+          <div className={styles.overviewCopy}>
+            <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
+            <h2>{t.overviewTitle}</h2>
+            <p>{t.overviewText}</p>
+            <Link href="/contacto">{t.overviewButton}</Link>
+          </div>
+
+          <div className={styles.pillars}>
+            {t.pillars.map(([title, text]: string[], index: number) => {
+              const icons: IconName[] = ["airport", "document", "tracking", "truck"];
+
+              return (
+                <article key={title}>
+                  <i>
+                    <Icon name={icons[index]} />
+                  </i>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
+        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/sosten1.png')" } as CSSProperties}>
+          <div className={styles.sectionHead}>
+            <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
+            <h2>{t.servicesTitle}</h2>
+          </div>
+
+          <div className={styles.serviceGrid}>
+            {t.services.map(([title, text]: string[], index: number) => {
+              const icons: IconName[] = ["plane", "box", "diamond", "charter", "globe", "door"];
+
+              return (
+                <article key={title}>
+                  <i>
+                    <Icon name={icons[index]} />
+                  </i>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
+        <section className={styles.useCases} data-mobile-hide-after-cert="true">
+          <div className={styles.sectionHead}>
+            <span className={styles.eyebrow}>{t.useCasesEyebrow}</span>
+            <h2>{t.useCasesTitle}</h2>
+          </div>
+
+          <div className={styles.useCaseGrid}>
+            {t.useCases.map(([title, text]: string[], index: number) => {
+              const icons: IconName[] = ["gear", "laptop", "package", "medical", "cart", "document"];
+
+              return (
+                <article key={title}>
+                  <i>
+                    <Icon name={icons[index]} />
+                  </i>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
+        <section className={styles.process}>
+          <div className={styles.sectionHead}>
+            <span className={styles.eyebrow}>{t.processEyebrow}</span>
+            <h2>{t.processTitle}</h2>
+          </div>
+
+          <div className={styles.processGrid}>
+            {t.process.map(([title, text]: string[], index: number) => {
+              const icons: IconName[] = ["search", "route", "document", "plane", "tracking", "truck"];
+
+              return (
+                <article key={title}>
+                  <strong>{index + 1}</strong>
+                  <i>
+                    <Icon name={icons[index]} />
+                  </i>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
+        <section className={styles.darkBand} data-mobile-hide-after-cert="true">
+          <div className={styles.darkBandImage}>
             <Image
-              src="/images/sosten2.png"
-              alt={t.servicesTitle}
+              src="/images/cargaaerea.png"
+              alt={t.bandTitle}
               fill
-              className={styles.servicesImage}
-              sizes="(max-width: 900px) 100vw, 50vw"
+              sizes="(max-width: 900px) 100vw, 42vw"
+            />
+          </div>
+
+          <div className={styles.darkBandContent}>
+            <h2>{t.bandTitle}</h2>
+            <p>{t.bandText}</p>
+
+            <div className={styles.stats}>
+              {t.stats.map(([value, label]: string[]) => (
+                <article key={value}>
+                  <strong>{value}</strong>
+                  <span>{label}</span>
+                </article>
+              ))}
+            </div>
+
+            <div className={styles.darkBandActions}>
+              <Link href="/cotizacion">{t.finalPrimary}</Link>
+              <Link href="/contacto">{t.finalSecondary}</Link>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/sosten1.png')" } as CSSProperties} data-across-final-cta="true">
+          <div>
+            <h2>{t.finalTitle}</h2>
+            <p>{t.finalText}</p>
+
+            <div className={styles.finalActions}>
+              <Link href="/cotizacion">{t.finalPrimary}</Link>
+              <Link href="/contacto">{t.finalSecondary}</Link>
+            </div>
+          </div>
+
+          <div className={styles.finalImage}>
+            <Image
+              src="/images/sosten1.png"
+              alt={t.finalTitle}
+              fill
+              sizes="(max-width: 900px) 100vw, 44vw"
             />
           </div>
         </section>
-
-        <section className={styles.compactCta}>
-          <div>
-            <span>{t.ctaEyebrow}</span>
-            <h2>{t.ctaTitle}</h2>
-            <p>{t.ctaText}</p>
-          </div>
-
-          <div className={styles.compactCtaActions}>
-            <Link href="/contacto">{t.ctaPrimary}</Link>
-            <Link href="/servicios">{t.ctaSecondary}</Link>
-          </div>
-        </section>
-      </main>
+</main>
 
       <Footer />
     </div>
