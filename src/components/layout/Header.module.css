@@ -857,7 +857,7 @@
     line-height: 1 !important;
   }
 
-  .mobileLinks a[href="/contacto"] {
+  .mobileLinks  {
     justify-content: center !important;
     margin-top: .5rem !important;
     color: #fff !important;
@@ -2846,3 +2846,179 @@
   }
 }
 
+/* HEADER ACROSS BLUE GLASS FINAL
+   Azul Across premium: elegante, internacional, no negro.
+   Gana contra reglas globales body.across-header-solid.
+*/
+
+.wrapper {
+  z-index: 9990 !important;
+}
+
+.header,
+:global(body.across-header-solid) .header,
+:global(body:not(.across-header-solid)) .header,
+.contactHeader .header,
+.contactHeader > .header {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(16, 55, 75, .88) 0%,
+      rgba(10, 42, 62, .84) 52%,
+      rgba(8, 35, 53, .88) 100%
+    ) !important;
+  border: 1px solid rgba(214, 192, 141, .18) !important;
+  box-shadow:
+    0 24px 70px rgba(7, 17, 29, .20),
+    0 8px 22px rgba(7, 17, 29, .13),
+    inset 0 1px 0 rgba(255, 255, 255, .16),
+    inset 0 -1px 0 rgba(214, 192, 141, .08) !important;
+  backdrop-filter: blur(22px) saturate(1.22) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(1.22) !important;
+}
+
+.header::before,
+.header::after {
+  opacity: .20 !important;
+  pointer-events: none !important;
+}
+
+.logo {
+  opacity: 1 !important;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,.14)) !important;
+}
+
+.logo img {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+.nav a,
+.nav button,
+.dropdownTrigger,
+:global(body.across-header-solid) .nav a,
+:global(body.across-header-solid) .nav button,
+:global(body.across-header-solid) .dropdownTrigger,
+:global(body:not(.across-header-solid)) .nav a,
+:global(body:not(.across-header-solid)) .nav button,
+:global(body:not(.across-header-solid)) .dropdownTrigger,
+.contactHeader a,
+.contactHeader button,
+.contactHeader span {
+  color: rgba(255, 255, 255, .94) !important;
+  opacity: 1 !important;
+  text-shadow: 0 1px 10px rgba(0,0,0,.16) !important;
+  font-weight: 850 !important;
+}
+
+.nav a:hover,
+.nav button:hover,
+.dropdownTrigger:hover,
+:global(body.across-header-solid) .nav a:hover,
+:global(body.across-header-solid) .nav button:hover,
+:global(body.across-header-solid) .dropdownTrigger:hover,
+:global(body:not(.across-header-solid)) .nav a:hover,
+:global(body:not(.across-header-solid)) .nav button:hover,
+:global(body:not(.across-header-solid)) .dropdownTrigger:hover {
+  color: #d6c08d !important;
+}
+
+.divider {
+  background: rgba(214, 192, 141, .24) !important;
+}
+
+/* contacto: que sea botón premium pero no negro */
+.nav > a:last-child {
+  color: #ffffff !important;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(11, 62, 88, .96) 0%,
+      rgba(8, 48, 72, .96) 100%
+    ) !important;
+  border: 1px solid rgba(214, 192, 141, .28) !important;
+  box-shadow:
+    0 10px 24px rgba(7,17,29,.16),
+    inset 0 1px 0 rgba(255,255,255,.18) !important;
+}
+
+.nav > a:last-child:hover {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(15, 76, 104, .98) 0%,
+      rgba(9, 55, 82, .98) 100%
+    ) !important;
+  color: #fff !important;
+  border-color: rgba(214, 192, 141, .42) !important;
+}
+
+/* banderas */
+.language button,
+.mobileLang button {
+  background: rgba(255, 255, 255, .13) !important;
+  border: 1px solid rgba(255, 255, 255, .18) !important;
+  color: rgba(255, 255, 255, .96) !important;
+  box-shadow:
+    0 8px 18px rgba(7,17,29,.12),
+    inset 0 1px 0 rgba(255,255,255,.14) !important;
+}
+
+.language button:hover,
+.mobileLang button:hover,
+.languageActive {
+  background: rgba(214, 192, 141, .16) !important;
+  border-color: rgba(214, 192, 141, .40) !important;
+}
+
+/* dropdown premium */
+.dropdownMenu {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(13, 50, 72, .97) 0%,
+      rgba(8, 34, 52, .98) 100%
+    ) !important;
+  border: 1px solid rgba(214, 192, 141, .20) !important;
+  box-shadow:
+    0 26px 70px rgba(7,17,29,.28),
+    inset 0 1px 0 rgba(255,255,255,.10) !important;
+  backdrop-filter: blur(20px) saturate(1.18) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(1.18) !important;
+}
+
+.dropdownMenu a {
+  color: rgba(255,255,255,.90) !important;
+}
+
+.dropdownMenu a:hover {
+  color: #d6c08d !important;
+  background: rgba(255,255,255,.07) !important;
+}
+
+/* mobile */
+.mobileButton {
+  background: rgba(255,255,255,.13) !important;
+  border: 1px solid rgba(255,255,255,.18) !important;
+  color: #fff !important;
+}
+
+.mobileButton svg {
+  color: #fff !important;
+  stroke: #fff !important;
+}
+
+@media (max-width: 900px) {
+  .header,
+  :global(body.across-header-solid) .header,
+  :global(body:not(.across-header-solid)) .header {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(13, 50, 72, .94) 0%,
+        rgba(8, 34, 52, .94) 100%
+      ) !important;
+  }
+}
+
+/* END HEADER ACROSS BLUE GLASS FINAL */

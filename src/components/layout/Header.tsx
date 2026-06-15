@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { acrossCopy, locales, type Locale } from "@/i18n/across";
@@ -144,7 +145,10 @@ function FlagIcon({ locale }: { locale: Locale }) {
 
 
 export default function Header() {
-  const [mobileOpen, setMobileOpen] = useState(false);
+  
+  const pathname = usePathname();
+  const isContactHeader = pathname === "/contacto" || pathname?.startsWith("/contacto/");
+const [mobileOpen, setMobileOpen] = useState(false);
 
   const [mobileSection, setMobileSection] = useState<
     null | "services" | "sectors" | "company" | "resources"
@@ -186,7 +190,7 @@ export default function Header() {
     });
 
   return (
-    <header className={styles.wrapper}>
+    <header className={`${styles.wrapper} ${isContactHeader ? styles.contactHeader : ""}`}>
       <div className={styles.header}>
         <Link href="/" className={styles.logo}>
           <Image

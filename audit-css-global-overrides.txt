@@ -1,0 +1,1094 @@
+1) Reglas globales sospechosas en CSS modules
+========================================
+src/app/empresa/Empresa.module.css:270:.finalCta h2 {
+src/app/empresa/Empresa.module.css:510:.finalCta {
+src/app/empresa/Empresa.module.css:518:.finalCta > div:first-child {
+src/app/empresa/Empresa.module.css:523:.finalCta p {
+src/app/empresa/Empresa.module.css:642:  .finalCta {
+src/app/empresa/Empresa.module.css:707:  .finalCta h2 {
+src/app/empresa/Empresa.module.css:1384:.finalCta {
+src/app/empresa/Empresa.module.css:1388:.finalCta > div:first-child {
+src/app/empresa/Empresa.module.css:1540:.finalCta {
+src/app/empresa/Empresa.module.css:1544:.finalCta > div:first-child {
+src/app/empresa/Empresa.module.css:1939:.finalCta {
+src/app/empresa/Empresa.module.css:1952:.finalCta > div:first-child {
+src/app/empresa/Empresa.module.css:1963:.finalCta h2 {
+src/app/empresa/Empresa.module.css:1971:.finalCta p {
+src/app/empresa/Empresa.module.css:2024:  .finalCta > div:first-child {
+src/app/empresa/Empresa.module.css:2060:  .finalCta > div:first-child {
+src/app/empresa/Empresa.module.css:2218:.finalCta {
+src/app/empresa/Empresa.module.css:2424:.finalCta {
+src/app/empresa/Empresa.module.css:2576:.finalCta {
+src/app/empresa/Empresa.module.css:4076:  .finalCta {
+src/app/empresa/Empresa.module.css:4096:  .finalCta {
+src/app/empresa/Empresa.module.css:4101:  .finalCta::before {
+src/app/empresa/Empresa.module.css:4116:  .finalCta::after {
+src/app/empresa/Empresa.module.css:4133:  .finalCta > *:not(.finalImage),
+src/app/empresa/Empresa.module.css:4147:  .finalCta h2 {
+src/app/empresa/Empresa.module.css:4175:  .finalCta > div:first-child {
+src/app/empresa/Empresa.module.css:4183:  .finalCta p {
+src/app/empresa/Empresa.module.css:4217:  .finalCta {
+src/app/empresa/Empresa.module.css:4222:  .finalCta h2 {
+src/app/empresa/Empresa.module.css:5516:.finalCta a,
+src/app/empresa/Empresa.module.css:5551:.finalCta h2,
+src/app/empresa/Empresa.module.css:5557:.finalCta p,
+src/app/empresa/Empresa.module.css:6541:  .finalCta [class*="image"],
+src/app/empresa/Empresa.module.css:6542:  .finalCta [class*="Image"],
+src/app/empresa/Empresa.module.css:6543:  .finalCta [class*="media"],
+src/app/empresa/Empresa.module.css:6544:  .finalCta [class*="Media"] {
+src/app/empresa/Empresa.module.css:6550:  .finalCta {
+src/app/empresa/Empresa.module.css:7062:  .page section[data-across-final-cta="true"] {
+src/app/empresa/Empresa.module.css:7078:  .page section[data-across-final-cta="true"] a:nth-of-type(2),
+src/app/empresa/Empresa.module.css:7079:  .page section[data-sector-final-cta="true"] a:nth-of-type(2),
+src/app/empresa/Empresa.module.css:7080:  .page .finalCta a:nth-of-type(2) {
+src/app/empresa/Empresa.module.css:7084:  .page section[data-across-final-cta="true"] a:first-of-type,
+src/app/empresa/Empresa.module.css:7085:  .page section[data-sector-final-cta="true"] a:first-of-type,
+src/app/empresa/Empresa.module.css:7086:  .page .finalCta a:first-of-type {
+src/app/empresa/Empresa.module.css:7559:.page .finalCta h1,
+src/app/empresa/Empresa.module.css:7560:.page .finalCta h2,
+src/app/empresa/Empresa.module.css:7561:.page .finalCta h3,
+src/app/empresa/Empresa.module.css:7562:.page .finalCta p,
+src/app/empresa/Empresa.module.css:7563:.page .finalCta a,
+src/app/empresa/Empresa.module.css:7564:.page .finalCta button,
+src/app/empresa/Empresa.module.css:7565:.page .finalCta strong,
+src/app/empresa/Empresa.module.css:7566:.page .finalCta span,
+src/app/empresa/Empresa.module.css:7567:.page .finalCta small,
+src/app/empresa/Empresa.module.css:7568:.page section[data-across-final-cta="true"] h1,
+src/app/empresa/Empresa.module.css:7569:.page section[data-across-final-cta="true"] h2,
+src/app/empresa/Empresa.module.css:7570:.page section[data-across-final-cta="true"] h3,
+src/app/empresa/Empresa.module.css:7571:.page section[data-across-final-cta="true"] p,
+src/app/empresa/Empresa.module.css:7572:.page section[data-across-final-cta="true"] a,
+src/app/empresa/Empresa.module.css:7573:.page section[data-across-final-cta="true"] button,
+src/app/empresa/Empresa.module.css:7574:.page section[data-across-final-cta="true"] strong,
+src/app/empresa/Empresa.module.css:7575:.page section[data-across-final-cta="true"] span,
+src/app/empresa/Empresa.module.css:7576:.page section[data-across-final-cta="true"] small {
+src/app/empresa/Empresa.module.css:7582:.page .finalCta p,
+src/app/empresa/Empresa.module.css:7583:.page section[data-across-final-cta="true"] p {
+src/app/empresa/Empresa.module.css:7591:.page .finalCta *,
+src/app/empresa/Empresa.module.css:7592:.page section[data-across-final-cta="true"] * {
+src/app/empresa/Empresa.module.css:8428:  .page .finalCta h2,
+src/app/empresa/Empresa.module.css:8429:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/Empresa.module.css:8430:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/Empresa.module.css:8472:  .page .finalCta h2,
+src/app/empresa/Empresa.module.css:8473:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/Empresa.module.css:8474:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/Empresa.module.css:8518:  .page .finalCta h2,
+src/app/empresa/Empresa.module.css:8519:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/Empresa.module.css:8520:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/Empresa.module.css:8548:  .page .finalCta p,
+src/app/empresa/Empresa.module.css:8549:  .page section[data-across-final-cta="true"] p,
+src/app/empresa/Empresa.module.css:8550:  .page section[data-sector-final-cta="true"] p {
+src/app/empresa/Empresa.module.css:8566:  .page .finalCta h2,
+src/app/empresa/Empresa.module.css:8567:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/Empresa.module.css:8568:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/Empresa.module.css:8662:  .page .finalCta h2,
+src/app/empresa/Empresa.module.css:8663:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/Empresa.module.css:8664:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/Empresa.module.css:8712:  .page .finalCta h2,
+src/app/empresa/Empresa.module.css:8713:  .page section[data-across-final-cta="true"] h2 {
+src/app/empresa/Empresa.module.css:9087:  .page .finalCta,
+src/app/empresa/Empresa.module.css:9088:  .page section[data-across-final-cta="true"] {
+src/app/empresa/Empresa.module.css:9127:  .page .finalCta::before,
+src/app/empresa/Empresa.module.css:9128:  .page .finalCta::after,
+src/app/empresa/Empresa.module.css:9129:  .page section[data-across-final-cta="true"]::before,
+src/app/empresa/Empresa.module.css:9130:  .page section[data-across-final-cta="true"]::after {
+src/app/empresa/Empresa.module.css:9135:  .page .finalCta .finalImage,
+src/app/empresa/Empresa.module.css:9136:  .page .finalCta [class*="finalImage"],
+src/app/empresa/Empresa.module.css:9137:  .page section[data-across-final-cta="true"] .finalImage,
+src/app/empresa/Empresa.module.css:9138:  .page section[data-across-final-cta="true"] [class*="finalImage"] {
+src/app/empresa/Empresa.module.css:9145:  .page .finalCta > div:first-child,
+src/app/empresa/Empresa.module.css:9146:  .page section[data-across-final-cta="true"] > div:first-child {
+src/app/empresa/Empresa.module.css:9153:  .page .finalCta h2,
+src/app/empresa/Empresa.module.css:9154:  .page section[data-across-final-cta="true"] h2 {
+src/app/empresa/Empresa.module.css:9167:  .page .finalCta p,
+src/app/empresa/Empresa.module.css:9168:  .page section[data-across-final-cta="true"] p {
+src/app/empresa/Empresa.module.css:9180:  .page .finalCta .finalActions,
+src/app/empresa/Empresa.module.css:9181:  .page .finalCta [class*="finalActions"],
+src/app/empresa/Empresa.module.css:9182:  .page section[data-across-final-cta="true"] [class*="finalActions"] {
+src/app/empresa/Empresa.module.css:9189:  .page .finalCta .finalActions a,
+src/app/empresa/Empresa.module.css:9190:  .page .finalCta [class*="finalActions"] a,
+src/app/empresa/Empresa.module.css:9191:  .page section[data-across-final-cta="true"] [class*="finalActions"] a {
+src/app/empresa/Empresa.module.css:9351:  .page .finalCta,
+src/app/empresa/Empresa.module.css:9352:  .page section[data-across-final-cta="true"] {
+src/app/empresa/Empresa.module.css:9380:  .page .finalCta::before,
+src/app/empresa/Empresa.module.css:9381:  .page .finalCta::after,
+src/app/empresa/Empresa.module.css:9382:  .page section[data-across-final-cta="true"]::before,
+src/app/empresa/Empresa.module.css:9383:  .page section[data-across-final-cta="true"]::after {
+src/app/empresa/Empresa.module.css:9388:  .page .finalCta .finalImage,
+src/app/empresa/Empresa.module.css:9389:  .page .finalCta [class*="finalImage"],
+src/app/empresa/Empresa.module.css:9390:  .page section[data-across-final-cta="true"] .finalImage,
+src/app/empresa/Empresa.module.css:9391:  .page section[data-across-final-cta="true"] [class*="finalImage"] {
+src/app/empresa/Empresa.module.css:9398:  .page .finalCta > div:first-child,
+src/app/empresa/Empresa.module.css:9399:  .page section[data-across-final-cta="true"] > div:first-child {
+src/app/empresa/oficinas/Oficinas.module.css:270:.finalCta h2 {
+src/app/empresa/oficinas/Oficinas.module.css:510:.finalCta {
+src/app/empresa/oficinas/Oficinas.module.css:518:.finalCta > div:first-child {
+src/app/empresa/oficinas/Oficinas.module.css:523:.finalCta p {
+src/app/empresa/oficinas/Oficinas.module.css:642:  .finalCta {
+src/app/empresa/oficinas/Oficinas.module.css:707:  .finalCta h2 {
+src/app/empresa/oficinas/Oficinas.module.css:1384:.finalCta {
+src/app/empresa/oficinas/Oficinas.module.css:1388:.finalCta > div:first-child {
+src/app/empresa/oficinas/Oficinas.module.css:1540:.finalCta {
+src/app/empresa/oficinas/Oficinas.module.css:1544:.finalCta > div:first-child {
+src/app/empresa/oficinas/Oficinas.module.css:1939:.finalCta {
+src/app/empresa/oficinas/Oficinas.module.css:1952:.finalCta > div:first-child {
+src/app/empresa/oficinas/Oficinas.module.css:1963:.finalCta h2 {
+src/app/empresa/oficinas/Oficinas.module.css:1971:.finalCta p {
+src/app/empresa/oficinas/Oficinas.module.css:2024:  .finalCta > div:first-child {
+src/app/empresa/oficinas/Oficinas.module.css:2060:  .finalCta > div:first-child {
+src/app/empresa/oficinas/Oficinas.module.css:2218:.finalCta {
+src/app/empresa/oficinas/Oficinas.module.css:2424:.finalCta {
+src/app/empresa/oficinas/Oficinas.module.css:2576:.finalCta {
+src/app/empresa/oficinas/Oficinas.module.css:4076:  .finalCta {
+src/app/empresa/oficinas/Oficinas.module.css:4096:  .finalCta {
+src/app/empresa/oficinas/Oficinas.module.css:4101:  .finalCta::before {
+src/app/empresa/oficinas/Oficinas.module.css:4116:  .finalCta::after {
+src/app/empresa/oficinas/Oficinas.module.css:4133:  .finalCta > *:not(.finalImage),
+src/app/empresa/oficinas/Oficinas.module.css:4147:  .finalCta h2 {
+src/app/empresa/oficinas/Oficinas.module.css:4175:  .finalCta > div:first-child {
+src/app/empresa/oficinas/Oficinas.module.css:4183:  .finalCta p {
+src/app/empresa/oficinas/Oficinas.module.css:4217:  .finalCta {
+src/app/empresa/oficinas/Oficinas.module.css:4222:  .finalCta h2 {
+src/app/empresa/oficinas/Oficinas.module.css:5516:.finalCta a,
+src/app/empresa/oficinas/Oficinas.module.css:5551:.finalCta h2,
+src/app/empresa/oficinas/Oficinas.module.css:5557:.finalCta p,
+src/app/empresa/oficinas/Oficinas.module.css:6541:  .finalCta [class*="image"],
+src/app/empresa/oficinas/Oficinas.module.css:6542:  .finalCta [class*="Image"],
+src/app/empresa/oficinas/Oficinas.module.css:6543:  .finalCta [class*="media"],
+src/app/empresa/oficinas/Oficinas.module.css:6544:  .finalCta [class*="Media"] {
+src/app/empresa/oficinas/Oficinas.module.css:6550:  .finalCta {
+src/app/empresa/oficinas/Oficinas.module.css:7062:  .page section[data-across-final-cta="true"] {
+src/app/empresa/oficinas/Oficinas.module.css:7078:  .page section[data-across-final-cta="true"] a:nth-of-type(2),
+src/app/empresa/oficinas/Oficinas.module.css:7079:  .page section[data-sector-final-cta="true"] a:nth-of-type(2),
+src/app/empresa/oficinas/Oficinas.module.css:7080:  .page .finalCta a:nth-of-type(2) {
+src/app/empresa/oficinas/Oficinas.module.css:7084:  .page section[data-across-final-cta="true"] a:first-of-type,
+src/app/empresa/oficinas/Oficinas.module.css:7085:  .page section[data-sector-final-cta="true"] a:first-of-type,
+src/app/empresa/oficinas/Oficinas.module.css:7086:  .page .finalCta a:first-of-type {
+src/app/empresa/oficinas/Oficinas.module.css:7559:.page .finalCta h1,
+src/app/empresa/oficinas/Oficinas.module.css:7560:.page .finalCta h2,
+src/app/empresa/oficinas/Oficinas.module.css:7561:.page .finalCta h3,
+src/app/empresa/oficinas/Oficinas.module.css:7562:.page .finalCta p,
+src/app/empresa/oficinas/Oficinas.module.css:7563:.page .finalCta a,
+src/app/empresa/oficinas/Oficinas.module.css:7564:.page .finalCta button,
+src/app/empresa/oficinas/Oficinas.module.css:7565:.page .finalCta strong,
+src/app/empresa/oficinas/Oficinas.module.css:7566:.page .finalCta span,
+src/app/empresa/oficinas/Oficinas.module.css:7567:.page .finalCta small,
+src/app/empresa/oficinas/Oficinas.module.css:7568:.page section[data-across-final-cta="true"] h1,
+src/app/empresa/oficinas/Oficinas.module.css:7569:.page section[data-across-final-cta="true"] h2,
+src/app/empresa/oficinas/Oficinas.module.css:7570:.page section[data-across-final-cta="true"] h3,
+src/app/empresa/oficinas/Oficinas.module.css:7571:.page section[data-across-final-cta="true"] p,
+src/app/empresa/oficinas/Oficinas.module.css:7572:.page section[data-across-final-cta="true"] a,
+src/app/empresa/oficinas/Oficinas.module.css:7573:.page section[data-across-final-cta="true"] button,
+src/app/empresa/oficinas/Oficinas.module.css:7574:.page section[data-across-final-cta="true"] strong,
+src/app/empresa/oficinas/Oficinas.module.css:7575:.page section[data-across-final-cta="true"] span,
+src/app/empresa/oficinas/Oficinas.module.css:7576:.page section[data-across-final-cta="true"] small {
+src/app/empresa/oficinas/Oficinas.module.css:7582:.page .finalCta p,
+src/app/empresa/oficinas/Oficinas.module.css:7583:.page section[data-across-final-cta="true"] p {
+src/app/empresa/oficinas/Oficinas.module.css:7591:.page .finalCta *,
+src/app/empresa/oficinas/Oficinas.module.css:7592:.page section[data-across-final-cta="true"] * {
+src/app/empresa/oficinas/Oficinas.module.css:8428:  .page .finalCta h2,
+src/app/empresa/oficinas/Oficinas.module.css:8429:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/oficinas/Oficinas.module.css:8430:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/oficinas/Oficinas.module.css:8472:  .page .finalCta h2,
+src/app/empresa/oficinas/Oficinas.module.css:8473:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/oficinas/Oficinas.module.css:8474:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/oficinas/Oficinas.module.css:8518:  .page .finalCta h2,
+src/app/empresa/oficinas/Oficinas.module.css:8519:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/oficinas/Oficinas.module.css:8520:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/oficinas/Oficinas.module.css:8548:  .page .finalCta p,
+src/app/empresa/oficinas/Oficinas.module.css:8549:  .page section[data-across-final-cta="true"] p,
+src/app/empresa/oficinas/Oficinas.module.css:8550:  .page section[data-sector-final-cta="true"] p {
+src/app/empresa/oficinas/Oficinas.module.css:8566:  .page .finalCta h2,
+src/app/empresa/oficinas/Oficinas.module.css:8567:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/oficinas/Oficinas.module.css:8568:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/oficinas/Oficinas.module.css:8662:  .page .finalCta h2,
+src/app/empresa/oficinas/Oficinas.module.css:8663:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/oficinas/Oficinas.module.css:8664:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/oficinas/Oficinas.module.css:8712:  .page .finalCta h2,
+src/app/empresa/oficinas/Oficinas.module.css:8713:  .page section[data-across-final-cta="true"] h2 {
+src/app/empresa/oficinas/Oficinas.module.css:9087:  .page .finalCta,
+src/app/empresa/oficinas/Oficinas.module.css:9088:  .page section[data-across-final-cta="true"] {
+src/app/empresa/oficinas/Oficinas.module.css:9127:  .page .finalCta::before,
+src/app/empresa/oficinas/Oficinas.module.css:9128:  .page .finalCta::after,
+src/app/empresa/oficinas/Oficinas.module.css:9129:  .page section[data-across-final-cta="true"]::before,
+src/app/empresa/oficinas/Oficinas.module.css:9130:  .page section[data-across-final-cta="true"]::after {
+src/app/empresa/oficinas/Oficinas.module.css:9135:  .page .finalCta .finalImage,
+src/app/empresa/oficinas/Oficinas.module.css:9136:  .page .finalCta [class*="finalImage"],
+src/app/empresa/oficinas/Oficinas.module.css:9137:  .page section[data-across-final-cta="true"] .finalImage,
+src/app/empresa/oficinas/Oficinas.module.css:9138:  .page section[data-across-final-cta="true"] [class*="finalImage"] {
+src/app/empresa/oficinas/Oficinas.module.css:9145:  .page .finalCta > div:first-child,
+src/app/empresa/oficinas/Oficinas.module.css:9146:  .page section[data-across-final-cta="true"] > div:first-child {
+src/app/empresa/oficinas/Oficinas.module.css:9153:  .page .finalCta h2,
+src/app/empresa/oficinas/Oficinas.module.css:9154:  .page section[data-across-final-cta="true"] h2 {
+src/app/empresa/oficinas/Oficinas.module.css:9167:  .page .finalCta p,
+src/app/empresa/oficinas/Oficinas.module.css:9168:  .page section[data-across-final-cta="true"] p {
+src/app/empresa/oficinas/Oficinas.module.css:9180:  .page .finalCta .finalActions,
+src/app/empresa/oficinas/Oficinas.module.css:9181:  .page .finalCta [class*="finalActions"],
+src/app/empresa/oficinas/Oficinas.module.css:9182:  .page section[data-across-final-cta="true"] [class*="finalActions"] {
+src/app/empresa/oficinas/Oficinas.module.css:9189:  .page .finalCta .finalActions a,
+src/app/empresa/oficinas/Oficinas.module.css:9190:  .page .finalCta [class*="finalActions"] a,
+src/app/empresa/oficinas/Oficinas.module.css:9191:  .page section[data-across-final-cta="true"] [class*="finalActions"] a {
+src/app/empresa/oficinas/Oficinas.module.css:9351:  .page .finalCta,
+src/app/empresa/oficinas/Oficinas.module.css:9352:  .page section[data-across-final-cta="true"] {
+src/app/empresa/oficinas/Oficinas.module.css:9380:  .page .finalCta::before,
+src/app/empresa/oficinas/Oficinas.module.css:9381:  .page .finalCta::after,
+src/app/empresa/oficinas/Oficinas.module.css:9382:  .page section[data-across-final-cta="true"]::before,
+src/app/empresa/oficinas/Oficinas.module.css:9383:  .page section[data-across-final-cta="true"]::after {
+src/app/empresa/oficinas/Oficinas.module.css:9388:  .page .finalCta .finalImage,
+src/app/empresa/oficinas/Oficinas.module.css:9389:  .page .finalCta [class*="finalImage"],
+src/app/empresa/oficinas/Oficinas.module.css:9390:  .page section[data-across-final-cta="true"] .finalImage,
+src/app/empresa/oficinas/Oficinas.module.css:9391:  .page section[data-across-final-cta="true"] [class*="finalImage"] {
+src/app/empresa/oficinas/Oficinas.module.css:9398:  .page .finalCta > div:first-child,
+src/app/empresa/oficinas/Oficinas.module.css:9399:  .page section[data-across-final-cta="true"] > div:first-child {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:270:.finalCta h2 {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:510:.finalCta {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:518:.finalCta > div:first-child {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:523:.finalCta p {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:642:  .finalCta {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:707:  .finalCta h2 {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:1384:.finalCta {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:1388:.finalCta > div:first-child {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:1540:.finalCta {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:1544:.finalCta > div:first-child {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:1939:.finalCta {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:1952:.finalCta > div:first-child {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:1963:.finalCta h2 {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:1971:.finalCta p {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:2024:  .finalCta > div:first-child {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:2060:  .finalCta > div:first-child {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:2218:.finalCta {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:2424:.finalCta {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:2576:.finalCta {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:4076:  .finalCta {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:4096:  .finalCta {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:4101:  .finalCta::before {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:4116:  .finalCta::after {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:4133:  .finalCta > *:not(.finalImage),
+src/app/empresa/quienes-somos/QuienesSomos.module.css:4147:  .finalCta h2 {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:4175:  .finalCta > div:first-child {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:4183:  .finalCta p {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:4217:  .finalCta {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:4222:  .finalCta h2 {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:5516:.finalCta a,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:5551:.finalCta h2,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:5557:.finalCta p,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:6541:  .finalCta [class*="image"],
+src/app/empresa/quienes-somos/QuienesSomos.module.css:6542:  .finalCta [class*="Image"],
+src/app/empresa/quienes-somos/QuienesSomos.module.css:6543:  .finalCta [class*="media"],
+src/app/empresa/quienes-somos/QuienesSomos.module.css:6544:  .finalCta [class*="Media"] {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:6550:  .finalCta {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7062:  .page section[data-across-final-cta="true"] {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7078:  .page section[data-across-final-cta="true"] a:nth-of-type(2),
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7079:  .page section[data-sector-final-cta="true"] a:nth-of-type(2),
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7080:  .page .finalCta a:nth-of-type(2) {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7084:  .page section[data-across-final-cta="true"] a:first-of-type,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7085:  .page section[data-sector-final-cta="true"] a:first-of-type,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7086:  .page .finalCta a:first-of-type {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7559:.page .finalCta h1,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7560:.page .finalCta h2,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7561:.page .finalCta h3,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7562:.page .finalCta p,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7563:.page .finalCta a,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7564:.page .finalCta button,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7565:.page .finalCta strong,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7566:.page .finalCta span,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7567:.page .finalCta small,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7568:.page section[data-across-final-cta="true"] h1,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7569:.page section[data-across-final-cta="true"] h2,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7570:.page section[data-across-final-cta="true"] h3,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7571:.page section[data-across-final-cta="true"] p,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7572:.page section[data-across-final-cta="true"] a,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7573:.page section[data-across-final-cta="true"] button,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7574:.page section[data-across-final-cta="true"] strong,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7575:.page section[data-across-final-cta="true"] span,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7576:.page section[data-across-final-cta="true"] small {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7582:.page .finalCta p,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7583:.page section[data-across-final-cta="true"] p {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7591:.page .finalCta *,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:7592:.page section[data-across-final-cta="true"] * {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:8428:  .page .finalCta h2,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:8429:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:8430:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:8472:  .page .finalCta h2,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:8473:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:8474:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:8518:  .page .finalCta h2,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:8519:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:8520:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:8548:  .page .finalCta p,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:8549:  .page section[data-across-final-cta="true"] p,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:8550:  .page section[data-sector-final-cta="true"] p {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:8566:  .page .finalCta h2,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:8567:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:8568:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:8662:  .page .finalCta h2,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:8663:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:8664:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:8712:  .page .finalCta h2,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:8713:  .page section[data-across-final-cta="true"] h2 {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9087:  .page .finalCta,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9088:  .page section[data-across-final-cta="true"] {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9127:  .page .finalCta::before,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9128:  .page .finalCta::after,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9129:  .page section[data-across-final-cta="true"]::before,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9130:  .page section[data-across-final-cta="true"]::after {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9135:  .page .finalCta .finalImage,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9136:  .page .finalCta [class*="finalImage"],
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9137:  .page section[data-across-final-cta="true"] .finalImage,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9138:  .page section[data-across-final-cta="true"] [class*="finalImage"] {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9145:  .page .finalCta > div:first-child,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9146:  .page section[data-across-final-cta="true"] > div:first-child {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9153:  .page .finalCta h2,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9154:  .page section[data-across-final-cta="true"] h2 {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9167:  .page .finalCta p,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9168:  .page section[data-across-final-cta="true"] p {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9180:  .page .finalCta .finalActions,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9181:  .page .finalCta [class*="finalActions"],
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9182:  .page section[data-across-final-cta="true"] [class*="finalActions"] {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9189:  .page .finalCta .finalActions a,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9190:  .page .finalCta [class*="finalActions"] a,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9191:  .page section[data-across-final-cta="true"] [class*="finalActions"] a {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9351:  .page .finalCta,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9352:  .page section[data-across-final-cta="true"] {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9380:  .page .finalCta::before,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9381:  .page .finalCta::after,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9382:  .page section[data-across-final-cta="true"]::before,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9383:  .page section[data-across-final-cta="true"]::after {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9388:  .page .finalCta .finalImage,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9389:  .page .finalCta [class*="finalImage"],
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9390:  .page section[data-across-final-cta="true"] .finalImage,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9391:  .page section[data-across-final-cta="true"] [class*="finalImage"] {
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9398:  .page .finalCta > div:first-child,
+src/app/empresa/quienes-somos/QuienesSomos.module.css:9399:  .page section[data-across-final-cta="true"] > div:first-child {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:270:.finalCta h2 {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:510:.finalCta {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:518:.finalCta > div:first-child {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:523:.finalCta p {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:642:  .finalCta {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:707:  .finalCta h2 {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:1384:.finalCta {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:1388:.finalCta > div:first-child {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:1540:.finalCta {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:1544:.finalCta > div:first-child {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:1939:.finalCta {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:1952:.finalCta > div:first-child {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:1963:.finalCta h2 {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:1971:.finalCta p {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:2024:  .finalCta > div:first-child {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:2060:  .finalCta > div:first-child {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:2218:.finalCta {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:2424:.finalCta {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:2576:.finalCta {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:4076:  .finalCta {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:4096:  .finalCta {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:4101:  .finalCta::before {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:4116:  .finalCta::after {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:4133:  .finalCta > *:not(.finalImage),
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:4147:  .finalCta h2 {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:4175:  .finalCta > div:first-child {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:4183:  .finalCta p {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:4217:  .finalCta {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:4222:  .finalCta h2 {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:5516:.finalCta a,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:5551:.finalCta h2,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:5557:.finalCta p,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:6541:  .finalCta [class*="image"],
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:6542:  .finalCta [class*="Image"],
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:6543:  .finalCta [class*="media"],
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:6544:  .finalCta [class*="Media"] {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:6550:  .finalCta {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7062:  .page section[data-across-final-cta="true"] {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7078:  .page section[data-across-final-cta="true"] a:nth-of-type(2),
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7079:  .page section[data-sector-final-cta="true"] a:nth-of-type(2),
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7080:  .page .finalCta a:nth-of-type(2) {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7084:  .page section[data-across-final-cta="true"] a:first-of-type,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7085:  .page section[data-sector-final-cta="true"] a:first-of-type,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7086:  .page .finalCta a:first-of-type {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7559:.page .finalCta h1,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7560:.page .finalCta h2,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7561:.page .finalCta h3,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7562:.page .finalCta p,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7563:.page .finalCta a,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7564:.page .finalCta button,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7565:.page .finalCta strong,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7566:.page .finalCta span,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7567:.page .finalCta small,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7568:.page section[data-across-final-cta="true"] h1,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7569:.page section[data-across-final-cta="true"] h2,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7570:.page section[data-across-final-cta="true"] h3,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7571:.page section[data-across-final-cta="true"] p,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7572:.page section[data-across-final-cta="true"] a,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7573:.page section[data-across-final-cta="true"] button,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7574:.page section[data-across-final-cta="true"] strong,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7575:.page section[data-across-final-cta="true"] span,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7576:.page section[data-across-final-cta="true"] small {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7582:.page .finalCta p,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7583:.page section[data-across-final-cta="true"] p {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7591:.page .finalCta *,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:7592:.page section[data-across-final-cta="true"] * {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:8428:  .page .finalCta h2,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:8429:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:8430:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:8472:  .page .finalCta h2,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:8473:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:8474:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:8518:  .page .finalCta h2,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:8519:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:8520:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:8548:  .page .finalCta p,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:8549:  .page section[data-across-final-cta="true"] p,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:8550:  .page section[data-sector-final-cta="true"] p {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:8566:  .page .finalCta h2,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:8567:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:8568:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:8662:  .page .finalCta h2,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:8663:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:8664:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:8712:  .page .finalCta h2,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:8713:  .page section[data-across-final-cta="true"] h2 {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9087:  .page .finalCta,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9088:  .page section[data-across-final-cta="true"] {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9127:  .page .finalCta::before,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9128:  .page .finalCta::after,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9129:  .page section[data-across-final-cta="true"]::before,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9130:  .page section[data-across-final-cta="true"]::after {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9135:  .page .finalCta .finalImage,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9136:  .page .finalCta [class*="finalImage"],
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9137:  .page section[data-across-final-cta="true"] .finalImage,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9138:  .page section[data-across-final-cta="true"] [class*="finalImage"] {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9145:  .page .finalCta > div:first-child,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9146:  .page section[data-across-final-cta="true"] > div:first-child {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9153:  .page .finalCta h2,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9154:  .page section[data-across-final-cta="true"] h2 {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9167:  .page .finalCta p,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9168:  .page section[data-across-final-cta="true"] p {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9180:  .page .finalCta .finalActions,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9181:  .page .finalCta [class*="finalActions"],
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9182:  .page section[data-across-final-cta="true"] [class*="finalActions"] {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9189:  .page .finalCta .finalActions a,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9190:  .page .finalCta [class*="finalActions"] a,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9191:  .page section[data-across-final-cta="true"] [class*="finalActions"] a {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9351:  .page .finalCta,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9352:  .page section[data-across-final-cta="true"] {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9380:  .page .finalCta::before,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9381:  .page .finalCta::after,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9382:  .page section[data-across-final-cta="true"]::before,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9383:  .page section[data-across-final-cta="true"]::after {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9388:  .page .finalCta .finalImage,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9389:  .page .finalCta [class*="finalImage"],
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9390:  .page section[data-across-final-cta="true"] .finalImage,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9391:  .page section[data-across-final-cta="true"] [class*="finalImage"] {
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9398:  .page .finalCta > div:first-child,
+src/app/empresa/sostenibilidad/Sostenibilidad.module.css:9399:  .page section[data-across-final-cta="true"] > div:first-child {
+src/app/Home.module.css:270:.finalCta h2 {
+src/app/Home.module.css:510:.finalCta {
+src/app/Home.module.css:518:.finalCta > div:first-child {
+src/app/Home.module.css:523:.finalCta p {
+src/app/Home.module.css:642:  .finalCta {
+src/app/Home.module.css:707:  .finalCta h2 {
+src/app/Home.module.css:1384:.finalCta {
+src/app/Home.module.css:1388:.finalCta > div:first-child {
+src/app/Home.module.css:1540:.finalCta {
+src/app/Home.module.css:1544:.finalCta > div:first-child {
+src/app/Home.module.css:1939:.finalCta {
+src/app/Home.module.css:1952:.finalCta > div:first-child {
+src/app/Home.module.css:1963:.finalCta h2 {
+src/app/Home.module.css:1971:.finalCta p {
+src/app/Home.module.css:2024:  .finalCta > div:first-child {
+src/app/Home.module.css:2060:  .finalCta > div:first-child {
+src/app/Home.module.css:2218:.finalCta {
+src/app/Home.module.css:2424:.finalCta {
+src/app/Home.module.css:2576:.finalCta {
+src/app/Home.module.css:4076:  .finalCta {
+src/app/Home.module.css:4096:  .finalCta {
+src/app/Home.module.css:4101:  .finalCta::before {
+src/app/Home.module.css:4116:  .finalCta::after {
+src/app/Home.module.css:4133:  .finalCta > *:not(.finalImage),
+src/app/Home.module.css:4147:  .finalCta h2 {
+src/app/Home.module.css:4175:  .finalCta > div:first-child {
+src/app/Home.module.css:4183:  .finalCta p {
+src/app/Home.module.css:4217:  .finalCta {
+src/app/Home.module.css:4222:  .finalCta h2 {
+src/app/Home.module.css:5516:.finalCta a,
+src/app/Home.module.css:5551:.finalCta h2,
+src/app/Home.module.css:5557:.finalCta p,
+src/app/Home.module.css:6541:  .finalCta [class*="image"],
+src/app/Home.module.css:6542:  .finalCta [class*="Image"],
+src/app/Home.module.css:6543:  .finalCta [class*="media"],
+src/app/Home.module.css:6544:  .finalCta [class*="Media"] {
+src/app/Home.module.css:6550:  .finalCta {
+src/app/Home.module.css:7062:  .page section[data-across-final-cta="true"] {
+src/app/Home.module.css:7078:  .page section[data-across-final-cta="true"] a:nth-of-type(2),
+src/app/Home.module.css:7079:  .page section[data-sector-final-cta="true"] a:nth-of-type(2),
+src/app/Home.module.css:7080:  .page .finalCta a:nth-of-type(2) {
+src/app/Home.module.css:7084:  .page section[data-across-final-cta="true"] a:first-of-type,
+src/app/Home.module.css:7085:  .page section[data-sector-final-cta="true"] a:first-of-type,
+src/app/Home.module.css:7086:  .page .finalCta a:first-of-type {
+src/app/Home.module.css:7559:.page .finalCta h1,
+src/app/Home.module.css:7560:.page .finalCta h2,
+src/app/Home.module.css:7561:.page .finalCta h3,
+src/app/Home.module.css:7562:.page .finalCta p,
+src/app/Home.module.css:7563:.page .finalCta a,
+src/app/Home.module.css:7564:.page .finalCta button,
+src/app/Home.module.css:7565:.page .finalCta strong,
+src/app/Home.module.css:7566:.page .finalCta span,
+src/app/Home.module.css:7567:.page .finalCta small,
+src/app/Home.module.css:7568:.page section[data-across-final-cta="true"] h1,
+src/app/Home.module.css:7569:.page section[data-across-final-cta="true"] h2,
+src/app/Home.module.css:7570:.page section[data-across-final-cta="true"] h3,
+src/app/Home.module.css:7571:.page section[data-across-final-cta="true"] p,
+src/app/Home.module.css:7572:.page section[data-across-final-cta="true"] a,
+src/app/Home.module.css:7573:.page section[data-across-final-cta="true"] button,
+src/app/Home.module.css:7574:.page section[data-across-final-cta="true"] strong,
+src/app/Home.module.css:7575:.page section[data-across-final-cta="true"] span,
+src/app/Home.module.css:7576:.page section[data-across-final-cta="true"] small {
+src/app/Home.module.css:7582:.page .finalCta p,
+src/app/Home.module.css:7583:.page section[data-across-final-cta="true"] p {
+src/app/Home.module.css:7591:.page .finalCta *,
+src/app/Home.module.css:7592:.page section[data-across-final-cta="true"] * {
+src/app/Home.module.css:8428:  .page .finalCta h2,
+src/app/Home.module.css:8429:  .page section[data-across-final-cta="true"] h2,
+src/app/Home.module.css:8430:  .page section[data-sector-final-cta="true"] h2 {
+src/app/Home.module.css:8472:  .page .finalCta h2,
+src/app/Home.module.css:8473:  .page section[data-across-final-cta="true"] h2,
+src/app/Home.module.css:8474:  .page section[data-sector-final-cta="true"] h2 {
+src/app/Home.module.css:8518:  .page .finalCta h2,
+src/app/Home.module.css:8519:  .page section[data-across-final-cta="true"] h2,
+src/app/Home.module.css:8520:  .page section[data-sector-final-cta="true"] h2 {
+src/app/Home.module.css:8548:  .page .finalCta p,
+src/app/Home.module.css:8549:  .page section[data-across-final-cta="true"] p,
+src/app/Home.module.css:8550:  .page section[data-sector-final-cta="true"] p {
+src/app/Home.module.css:8566:  .page .finalCta h2,
+src/app/Home.module.css:8567:  .page section[data-across-final-cta="true"] h2,
+src/app/Home.module.css:8568:  .page section[data-sector-final-cta="true"] h2 {
+src/app/Home.module.css:8662:  .page .finalCta h2,
+src/app/Home.module.css:8663:  .page section[data-across-final-cta="true"] h2,
+src/app/Home.module.css:8664:  .page section[data-sector-final-cta="true"] h2 {
+src/app/Home.module.css:8712:  .page .finalCta h2,
+src/app/Home.module.css:8713:  .page section[data-across-final-cta="true"] h2 {
+src/app/Home.module.css:9087:  .page .finalCta,
+src/app/Home.module.css:9088:  .page section[data-across-final-cta="true"] {
+src/app/Home.module.css:9127:  .page .finalCta::before,
+src/app/Home.module.css:9128:  .page .finalCta::after,
+src/app/Home.module.css:9129:  .page section[data-across-final-cta="true"]::before,
+src/app/Home.module.css:9130:  .page section[data-across-final-cta="true"]::after {
+src/app/Home.module.css:9135:  .page .finalCta .finalImage,
+src/app/Home.module.css:9136:  .page .finalCta [class*="finalImage"],
+src/app/Home.module.css:9137:  .page section[data-across-final-cta="true"] .finalImage,
+src/app/Home.module.css:9138:  .page section[data-across-final-cta="true"] [class*="finalImage"] {
+src/app/Home.module.css:9145:  .page .finalCta > div:first-child,
+src/app/Home.module.css:9146:  .page section[data-across-final-cta="true"] > div:first-child {
+src/app/Home.module.css:9153:  .page .finalCta h2,
+src/app/Home.module.css:9154:  .page section[data-across-final-cta="true"] h2 {
+src/app/Home.module.css:9167:  .page .finalCta p,
+src/app/Home.module.css:9168:  .page section[data-across-final-cta="true"] p {
+src/app/Home.module.css:9180:  .page .finalCta .finalActions,
+src/app/Home.module.css:9181:  .page .finalCta [class*="finalActions"],
+src/app/Home.module.css:9182:  .page section[data-across-final-cta="true"] [class*="finalActions"] {
+src/app/Home.module.css:9189:  .page .finalCta .finalActions a,
+src/app/Home.module.css:9190:  .page .finalCta [class*="finalActions"] a,
+src/app/Home.module.css:9191:  .page section[data-across-final-cta="true"] [class*="finalActions"] a {
+src/app/Home.module.css:9351:  .page .finalCta,
+src/app/Home.module.css:9352:  .page section[data-across-final-cta="true"] {
+src/app/Home.module.css:9380:  .page .finalCta::before,
+src/app/Home.module.css:9381:  .page .finalCta::after,
+src/app/Home.module.css:9382:  .page section[data-across-final-cta="true"]::before,
+src/app/Home.module.css:9383:  .page section[data-across-final-cta="true"]::after {
+src/app/Home.module.css:9388:  .page .finalCta .finalImage,
+src/app/Home.module.css:9389:  .page .finalCta [class*="finalImage"],
+src/app/Home.module.css:9390:  .page section[data-across-final-cta="true"] .finalImage,
+src/app/Home.module.css:9391:  .page section[data-across-final-cta="true"] [class*="finalImage"] {
+src/app/Home.module.css:9398:  .page .finalCta > div:first-child,
+src/app/Home.module.css:9399:  .page section[data-across-final-cta="true"] > div:first-child {
+src/app/recursos/Recursos.module.css:100:.contactCta a {
+src/app/recursos/Recursos.module.css:114:.contactCta a {
+src/app/recursos/Recursos.module.css:130:.contactCta a:hover {
+src/app/recursos/Recursos.module.css:545:.contactCta {
+src/app/recursos/Recursos.module.css:564:.contactCta h2 {
+src/app/recursos/Recursos.module.css:572:.contactCta p {
+src/app/recursos/Recursos.module.css:597:  .contactCta {
+src/app/recursos/Recursos.module.css:672:  .contactCta {
+src/app/recursos/Recursos.module.css:696:  .contactCta {
+src/app/recursos/Recursos.module.css:701:  .contactCta a {
+src/app/recursos/Recursos.module.css:713:  .contactCta h2 {
+src/app/recursos/Recursos.module.css:1682:.contactCta {
+src/app/recursos/Recursos.module.css:1701:.contactCta::before {
+src/app/recursos/Recursos.module.css:1712:.contactCta > div,
+src/app/recursos/Recursos.module.css:1713:.contactCta > a {
+src/app/recursos/Recursos.module.css:1718:.contactCta > div {
+src/app/recursos/Recursos.module.css:1723:.contactCta h2 {
+src/app/recursos/Recursos.module.css:1735:.contactCta p {
+src/app/recursos/Recursos.module.css:1744:.contactCta > a {
+src/app/recursos/Recursos.module.css:1778:  .contactCta {
+src/app/recursos/Recursos.module.css:1787:  .contactCta > div {
+src/app/recursos/Recursos.module.css:1791:  .contactCta h2 {
+src/app/recursos/Recursos.module.css:1795:  .contactCta p {
+src/app/recursos/Recursos.module.css:1799:  .contactCta > a {
+src/app/recursos/Recursos.module.css:2246:.contactCta {
+src/app/recursos/Recursos.module.css:2253:  .contactCta {
+src/app/recursos/Recursos.module.css:2262:  .contactCta {
+src/app/recursos/Recursos.module.css:2273:   homeFinalCta / homeFinalCtaInner.
+src/app/recursos/Recursos.module.css:2276:.homeFinalCta {
+src/app/recursos/Recursos.module.css:2289:.homeFinalCta::before {
+src/app/recursos/Recursos.module.css:2301:.homeFinalCtaInner {
+src/app/recursos/Recursos.module.css:2308:.homeFinalCtaInner > div {
+src/app/recursos/Recursos.module.css:2312:.homeFinalCta h2 {
+src/app/recursos/Recursos.module.css:2325:.homeFinalCta h2::after {
+src/app/recursos/Recursos.module.css:2330:.homeFinalCta p {
+src/app/recursos/Recursos.module.css:2339:.homeFinalCta a {
+src/app/recursos/Recursos.module.css:2366:  .homeFinalCta {
+src/app/recursos/Recursos.module.css:2376:  .homeFinalCtaInner {
+src/app/recursos/Recursos.module.css:2383:  .homeFinalCta h2 {
+src/app/recursos/Recursos.module.css:2389:  .homeFinalCta p {
+src/app/recursos/Recursos.module.css:2394:  .homeFinalCta a {
+src/app/recursos/Recursos.module.css:2420:.page section:not(:first-child)::before {
+src/app/recursos/Recursos.module.css:2461:.contactCta h2 {
+src/app/recursos/Recursos.module.css:2686:.contactCta {
+src/app/recursos/Recursos.module.css:2693:  .page section:not(:first-child)::before {
+src/app/recursos/Recursos.module.css:2979:.resourceFinalCta {
+src/app/recursos/Recursos.module.css:3015:.resourceFinalCta::after {
+src/app/recursos/Recursos.module.css:3026:.resourceFinalCtaInner {
+src/app/recursos/Recursos.module.css:3037:.resourceFinalCtaCopy {
+src/app/recursos/Recursos.module.css:3061:.resourceFinalCtaCopy h2 {
+src/app/recursos/Recursos.module.css:3073:.resourceFinalCtaCopy h2::after {
+src/app/recursos/Recursos.module.css:3078:.resourceFinalCtaCopy p {
+src/app/recursos/Recursos.module.css:3116:.resourceFinalCtaCopy a {
+src/app/recursos/Recursos.module.css:3141:  .resourceFinalCta {
+src/app/recursos/Recursos.module.css:3152:  .resourceFinalCtaInner {
+src/app/recursos/Recursos.module.css:3158:  .resourceFinalCtaCopy {
+src/app/recursos/Recursos.module.css:3162:  .resourceFinalCtaCopy h2 {
+src/app/recursos/Recursos.module.css:3167:  .resourceFinalCtaCopy p {
+src/app/recursos/Recursos.module.css:3174:  .resourceFinalCta {
+src/app/recursos/Recursos.module.css:3198:  .resourceFinalCta::after {
+src/app/recursos/Recursos.module.css:3203:  .resourceFinalCtaInner {
+src/app/recursos/Recursos.module.css:3210:  .resourceFinalCtaCopy {
+src/app/recursos/Recursos.module.css:3224:  .resourceFinalCtaCopy h2 {
+src/app/recursos/Recursos.module.css:3231:  .resourceFinalCtaCopy p {
+src/app/recursos/Recursos.module.css:3250:  .resourceFinalCtaCopy a {
+src/app/recursos/Recursos.module.css:3258:  .resourceFinalCta {
+src/app/recursos/Recursos.module.css:3264:  .resourceFinalCtaInner {
+src/app/recursos/Recursos.module.css:3269:  .resourceFinalCtaCopy h2 {
+src/app/recursos/Recursos.module.css:3274:  .resourceFinalCtaCopy p {
+src/app/recursos/Recursos.module.css:3286:.resourceFinalCta {
+src/app/recursos/Recursos.module.css:3294:.resourceFinalCta::before {
+src/app/recursos/Recursos.module.css:3298:.resourceFinalCta::after {
+src/app/recursos/Recursos.module.css:3314:.resourceFinalCtaBg {
+src/app/recursos/Recursos.module.css:3324:.resourceFinalCtaBg img {
+src/app/recursos/Recursos.module.css:3335:.resourceFinalCtaInner,
+src/app/recursos/Recursos.module.css:3336:.resourceFinalCtaCopy {
+src/app/recursos/Recursos.module.css:3343:  .resourceFinalCtaInner {
+src/app/recursos/Recursos.module.css:3351:  .resourceFinalCta {
+src/app/recursos/Recursos.module.css:3355:  .resourceFinalCta::after {
+src/app/recursos/Recursos.module.css:3372:  .resourceFinalCtaBg img {
+src/app/recursos/Recursos.module.css:3379:  .resourceFinalCtaInner {
+src/app/recursos/Recursos.module.css:3387:  .resourceFinalCta,
+src/app/recursos/Recursos.module.css:3388:  .resourceFinalCtaInner {
+src/app/recursos/Recursos.module.css:3392:  .resourceFinalCtaBg img {
+src/app/recursos/Recursos.module.css:3402:   El problema era .page .resourceFinalCta::after demasiado oscuro.
+src/app/recursos/Recursos.module.css:3407:.page .resourceFinalCta::after,
+src/app/recursos/Recursos.module.css:3408:.resourceFinalCta::after {
+src/app/recursos/Recursos.module.css:3424:.resourceFinalCtaBg img {
+src/app/recursos/Recursos.module.css:3431:  .page .resourceFinalCta::after,
+src/app/recursos/Recursos.module.css:3432:  .resourceFinalCta::after {
+src/app/recursos/Recursos.module.css:3449:  .resourceFinalCtaBg img {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:270:.finalCta h2 {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:510:.finalCta {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:518:.finalCta > div:first-child {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:523:.finalCta p {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:642:  .finalCta {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:707:  .finalCta h2 {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:1384:.finalCta {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:1388:.finalCta > div:first-child {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:1540:.finalCta {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:1544:.finalCta > div:first-child {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:1939:.finalCta {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:1952:.finalCta > div:first-child {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:1963:.finalCta h2 {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:1971:.finalCta p {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:2024:  .finalCta > div:first-child {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:2060:  .finalCta > div:first-child {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:2218:.finalCta {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:2424:.finalCta {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:2576:.finalCta {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:4076:  .finalCta {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:4096:  .finalCta {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:4101:  .finalCta::before {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:4116:  .finalCta::after {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:4133:  .finalCta > *:not(.finalImage),
+src/app/sectores/alimentacion-bebidas/Sector.module.css:4147:  .finalCta h2 {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:4175:  .finalCta > div:first-child {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:4183:  .finalCta p {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:4217:  .finalCta {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:4222:  .finalCta h2 {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:5516:.finalCta a,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:5551:.finalCta h2,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:5557:.finalCta p,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:6541:  .finalCta [class*="image"],
+src/app/sectores/alimentacion-bebidas/Sector.module.css:6542:  .finalCta [class*="Image"],
+src/app/sectores/alimentacion-bebidas/Sector.module.css:6543:  .finalCta [class*="media"],
+src/app/sectores/alimentacion-bebidas/Sector.module.css:6544:  .finalCta [class*="Media"] {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:6550:  .finalCta {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7062:  .page section[data-across-final-cta="true"] {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7078:  .page section[data-across-final-cta="true"] a:nth-of-type(2),
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7079:  .page section[data-sector-final-cta="true"] a:nth-of-type(2),
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7080:  .page .finalCta a:nth-of-type(2) {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7084:  .page section[data-across-final-cta="true"] a:first-of-type,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7085:  .page section[data-sector-final-cta="true"] a:first-of-type,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7086:  .page .finalCta a:first-of-type {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7559:.page .finalCta h1,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7560:.page .finalCta h2,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7561:.page .finalCta h3,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7562:.page .finalCta p,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7563:.page .finalCta a,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7564:.page .finalCta button,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7565:.page .finalCta strong,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7566:.page .finalCta span,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7567:.page .finalCta small,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7568:.page section[data-across-final-cta="true"] h1,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7569:.page section[data-across-final-cta="true"] h2,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7570:.page section[data-across-final-cta="true"] h3,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7571:.page section[data-across-final-cta="true"] p,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7572:.page section[data-across-final-cta="true"] a,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7573:.page section[data-across-final-cta="true"] button,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7574:.page section[data-across-final-cta="true"] strong,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7575:.page section[data-across-final-cta="true"] span,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7576:.page section[data-across-final-cta="true"] small {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7582:.page .finalCta p,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7583:.page section[data-across-final-cta="true"] p {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7591:.page .finalCta *,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:7592:.page section[data-across-final-cta="true"] * {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:8428:  .page .finalCta h2,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:8429:  .page section[data-across-final-cta="true"] h2,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:8430:  .page section[data-sector-final-cta="true"] h2 {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:8472:  .page .finalCta h2,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:8473:  .page section[data-across-final-cta="true"] h2,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:8474:  .page section[data-sector-final-cta="true"] h2 {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:8518:  .page .finalCta h2,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:8519:  .page section[data-across-final-cta="true"] h2,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:8520:  .page section[data-sector-final-cta="true"] h2 {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:8548:  .page .finalCta p,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:8549:  .page section[data-across-final-cta="true"] p,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:8550:  .page section[data-sector-final-cta="true"] p {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:8566:  .page .finalCta h2,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:8567:  .page section[data-across-final-cta="true"] h2,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:8568:  .page section[data-sector-final-cta="true"] h2 {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:8662:  .page .finalCta h2,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:8663:  .page section[data-across-final-cta="true"] h2,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:8664:  .page section[data-sector-final-cta="true"] h2 {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:8712:  .page .finalCta h2,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:8713:  .page section[data-across-final-cta="true"] h2 {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:9087:  .page .finalCta,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:9088:  .page section[data-across-final-cta="true"] {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:9127:  .page .finalCta::before,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:9128:  .page .finalCta::after,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:9129:  .page section[data-across-final-cta="true"]::before,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:9130:  .page section[data-across-final-cta="true"]::after {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:9135:  .page .finalCta .finalImage,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:9136:  .page .finalCta [class*="finalImage"],
+src/app/sectores/alimentacion-bebidas/Sector.module.css:9137:  .page section[data-across-final-cta="true"] .finalImage,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:9138:  .page section[data-across-final-cta="true"] [class*="finalImage"] {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:9145:  .page .finalCta > div:first-child,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:9146:  .page section[data-across-final-cta="true"] > div:first-child {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:9153:  .page .finalCta h2,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:9154:  .page section[data-across-final-cta="true"] h2 {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:9167:  .page .finalCta p,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:9168:  .page section[data-across-final-cta="true"] p {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:9180:  .page .finalCta .finalActions,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:9181:  .page .finalCta [class*="finalActions"],
+src/app/sectores/alimentacion-bebidas/Sector.module.css:9182:  .page section[data-across-final-cta="true"] [class*="finalActions"] {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:9189:  .page .finalCta .finalActions a,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:9190:  .page .finalCta [class*="finalActions"] a,
+src/app/sectores/alimentacion-bebidas/Sector.module.css:9191:  .page section[data-across-final-cta="true"] [class*="finalActions"] a {
+src/app/sectores/alimentacion-bebidas/Sector.module.css:9351:  .page .finalCta,
+
+2) Reglas con :global
+========================================
+src/components/layout/Header.module.css:1507:  :global(body:not(.across-header-solid)) .header {
+src/components/layout/Header.module.css:1517:  :global(body:not(.across-header-solid)) .inner {
+src/components/layout/Header.module.css:1521:  :global(body:not(.across-header-solid)) .brand,
+src/components/layout/Header.module.css:1522:  :global(body:not(.across-header-solid)) .logo {
+src/components/layout/Header.module.css:1531:  :global(body:not(.across-header-solid)) .menuButton,
+src/components/layout/Header.module.css:1532:  :global(body:not(.across-header-solid)) .mobileToggle,
+src/components/layout/Header.module.css:1533:  :global(body:not(.across-header-solid)) .burger {
+src/components/layout/Header.module.css:1542:  :global(body:not(.across-header-solid)) .menuButton svg,
+src/components/layout/Header.module.css:1543:  :global(body:not(.across-header-solid)) .mobileToggle svg,
+src/components/layout/Header.module.css:1544:  :global(body:not(.across-header-solid)) .burger svg {
+src/components/layout/Header.module.css:1548:  :global(body:not(.across-header-solid)) .languageButton,
+src/components/layout/Header.module.css:1549:  :global(body:not(.across-header-solid)) .localeButton,
+src/components/layout/Header.module.css:1550:  :global(body:not(.across-header-solid)) .flagButton {
+src/components/layout/Header.module.css:1559:  :global(body.across-header-solid) .header {
+src/components/layout/Header.module.css:1569:  :global(body.across-header-solid) .brand,
+src/components/layout/Header.module.css:1570:  :global(body.across-header-solid) .logo {
+src/components/layout/Header.module.css:1575:  :global(body.across-header-solid) .menuButton,
+src/components/layout/Header.module.css:1576:  :global(body.across-header-solid) .mobileToggle,
+src/components/layout/Header.module.css:1577:  :global(body.across-header-solid) .burger {
+src/components/layout/Header.module.css:1583:  :global(body.across-header-solid) .menuButton svg,
+src/components/layout/Header.module.css:1584:  :global(body.across-header-solid) .mobileToggle svg,
+src/components/layout/Header.module.css:1585:  :global(body.across-header-solid) .burger svg {
+src/components/layout/Header.module.css:1592:  :global(body:not(.across-header-solid)) .header {
+src/components/layout/Header.module.css:1602:  :global(body:not(.across-header-solid)) .inner {
+src/components/layout/Header.module.css:1606:  :global(body:not(.across-header-solid)) .brand,
+src/components/layout/Header.module.css:1607:  :global(body:not(.across-header-solid)) .logo {
+src/components/layout/Header.module.css:1613:  :global(body:not(.across-header-solid)) .nav a,
+src/components/layout/Header.module.css:1614:  :global(body:not(.across-header-solid)) .nav button,
+src/components/layout/Header.module.css:1615:  :global(body:not(.across-header-solid)) .actions a,
+src/components/layout/Header.module.css:1616:  :global(body:not(.across-header-solid)) .actions button {
+src/components/layout/Header.module.css:1623:  :global(body.across-header-solid) .header {
+src/components/layout/Header.module.css:1631:  :global(body.across-header-solid) .nav a,
+src/components/layout/Header.module.css:1632:  :global(body.across-header-solid) .nav button,
+src/components/layout/Header.module.css:1633:  :global(body.across-header-solid) .actions a,
+src/components/layout/Header.module.css:1634:  :global(body.across-header-solid) .actions button {
+src/components/layout/Header.module.css:1662::global(body:not(.across-header-solid)) .wrapper {
+src/components/layout/Header.module.css:1668::global(body:not(.across-header-solid)) .header {
+src/components/layout/Header.module.css:1679::global(body:not(.across-header-solid)) .logo {
+src/components/layout/Header.module.css:1689::global(body:not(.across-header-solid)) .language button,
+src/components/layout/Header.module.css:1690::global(body:not(.across-header-solid)) .mobileLang button {
+src/components/layout/Header.module.css:1697::global(body:not(.across-header-solid)) .mobileButton {
+src/components/layout/Header.module.css:1706::global(body:not(.across-header-solid)) .mobileButton svg {
+src/components/layout/Header.module.css:1712:  :global(body:not(.across-header-solid)) .nav a,
+src/components/layout/Header.module.css:1713:  :global(body:not(.across-header-solid)) .nav button {
+src/components/layout/Header.module.css:1722::global(body.across-header-solid) .wrapper {
+src/components/layout/Header.module.css:1728::global(body.across-header-solid) .header {
+src/components/layout/Header.module.css:1738::global(body.across-header-solid) .logo {
+src/components/layout/Header.module.css:1744::global(body.across-header-solid) .mobileButton {
+src/components/layout/Header.module.css:1751::global(body.across-header-solid) .mobileButton svg {
+src/components/layout/Header.module.css:1755::global(body.across-header-solid) .language button,
+src/components/layout/Header.module.css:1756::global(body.across-header-solid) .mobileLang button {
+src/components/layout/Header.module.css:1763:  :global(body.across-header-solid) .nav a,
+src/components/layout/Header.module.css:1764:  :global(body.across-header-solid) .nav button {
+src/components/layout/Header.module.css:1768:  :global(body.across-header-solid) .nav a:hover,
+src/components/layout/Header.module.css:1769:  :global(body.across-header-solid) .nav button:hover {
+src/components/layout/Header.module.css:1781::global(body.across-header-solid) .header {
+src/components/layout/Header.module.css:1789::global(body.across-header-solid) .wrapper {
+src/components/layout/Header.module.css:1795::global(body.across-header-solid) .language button,
+src/components/layout/Header.module.css:1796::global(body.across-header-solid) .mobileLang button {
+src/components/layout/Header.module.css:1802::global(body.across-header-solid) .mobileButton {
+src/components/layout/Header.module.css:1808::global(body.across-header-solid) .mobileButton svg {
+src/components/layout/Header.module.css:1859::global(body:not(.across-header-solid)) .header {
+src/components/layout/Header.module.css:1867::global(body:not(.across-header-solid)) .logo {
+src/components/layout/Header.module.css:1873::global(body:not(.across-header-solid)) .nav a,
+src/components/layout/Header.module.css:1874::global(body:not(.across-header-solid)) .nav button,
+src/components/layout/Header.module.css:1875::global(body:not(.across-header-solid)) .dropdownTrigger {
+src/components/layout/Header.module.css:1879::global(body:not(.across-header-solid)) .mobileButton {
+src/components/layout/Header.module.css:1885::global(body:not(.across-header-solid)) .mobileButton svg {
+src/components/layout/Header.module.css:1890::global(body.across-header-solid) .header {
+src/components/layout/Header.module.css:1898::global(body.across-header-solid) .logo {
+src/components/layout/Header.module.css:1904::global(body.across-header-solid) .nav a,
+src/components/layout/Header.module.css:1905::global(body.across-header-solid) .nav button,
+src/components/layout/Header.module.css:1906::global(body.across-header-solid) .dropdownTrigger {
+src/components/layout/Header.module.css:1910::global(body.across-header-solid) .nav a:hover,
+src/components/layout/Header.module.css:1911::global(body.across-header-solid) .nav button:hover,
+src/components/layout/Header.module.css:1912::global(body.across-header-solid) .dropdownTrigger:hover {
+src/components/layout/Header.module.css:1917::global(body.across-header-solid) .mobileButton {
+src/components/layout/Header.module.css:1923::global(body.across-header-solid) .mobileButton svg {
+src/components/layout/Header.module.css:2002::global(body:not(.across-header-solid)) .header {
+src/components/layout/Header.module.css:2010::global(body:not(.across-header-solid)) .logo {
+src/components/layout/Header.module.css:2016::global(body:not(.across-header-solid)) .nav a,
+src/components/layout/Header.module.css:2017::global(body:not(.across-header-solid)) .nav button,
+src/components/layout/Header.module.css:2018::global(body:not(.across-header-solid)) .dropdownTrigger {
+src/components/layout/Header.module.css:2022::global(body:not(.across-header-solid)) .mobileButton {
+src/components/layout/Header.module.css:2028::global(body:not(.across-header-solid)) .mobileButton svg {
+src/components/layout/Header.module.css:2033::global(body.across-header-solid) .header {
+src/components/layout/Header.module.css:2041::global(body.across-header-solid) .logo {
+src/components/layout/Header.module.css:2047::global(body.across-header-solid) .nav a,
+src/components/layout/Header.module.css:2048::global(body.across-header-solid) .nav button,
+src/components/layout/Header.module.css:2049::global(body.across-header-solid) .dropdownTrigger {
+src/components/layout/Header.module.css:2053::global(body.across-header-solid) .nav a:hover,
+src/components/layout/Header.module.css:2054::global(body.across-header-solid) .nav button:hover,
+src/components/layout/Header.module.css:2055::global(body.across-header-solid) .dropdownTrigger:hover {
+src/components/layout/Header.module.css:2060::global(body.across-header-solid) .mobileButton {
+src/components/layout/Header.module.css:2066::global(body.across-header-solid) .mobileButton svg {
+src/components/layout/Header.module.css:2133::global(body:not(.across-header-solid)) .logo {
+src/components/layout/Header.module.css:2140::global(body.across-header-solid) .logo {
+src/components/layout/Header.module.css:2147::global(body:not(.across-header-solid)) .mobileButton {
+src/components/layout/Header.module.css:2156::global(body:not(.across-header-solid)) .mobileButton svg {
+src/components/layout/Header.module.css:2161::global(body.across-header-solid) .mobileButton {
+src/components/layout/Header.module.css:2168::global(body.across-header-solid) .mobileButton svg {
+src/components/layout/Header.module.css:2173::global(body:not(.across-header-solid)) .header {
+src/components/layout/Header.module.css:2179::global(body.across-header-solid) .header {
+src/components/layout/Header.module.css:2214::global(body:not(.across-header-solid)) .logo,
+src/components/layout/Header.module.css:2215::global(body.across-header-solid) .logo {
+src/components/layout/Header.module.css:2233::global(body:not(.across-header-solid)) .logo img,
+src/components/layout/Header.module.css:2234::global(body.across-header-solid) .logo img {
+src/components/layout/Header.module.css:2245::global(body.across-header-solid) .logo img {
+src/components/layout/Header.module.css:2253::global(body:not(.across-header-solid)) .mobileButton,
+src/components/layout/Header.module.css:2254::global(body.across-header-solid) .mobileButton {
+src/components/layout/Header.module.css:2268::global(body:not(.across-header-solid)) .mobileButton svg,
+src/components/layout/Header.module.css:2269::global(body.across-header-solid) .mobileButton svg {
+src/components/layout/Header.module.css:2275:  :global(body:not(.across-header-solid)) .logo img,
+src/components/layout/Header.module.css:2276:  :global(body.across-header-solid) .logo img {
+src/components/layout/Header.module.css:2293::global(body:not(.across-header-solid)) .logo,
+src/components/layout/Header.module.css:2294::global(body.across-header-solid) .logo {
+src/components/layout/Header.module.css:2307::global(body:not(.across-header-solid)) .logo img,
+src/components/layout/Header.module.css:2308::global(body.across-header-solid) .logo img {
+src/components/layout/Header.module.css:2334:  :global(body:not(.across-header-solid)) .logo,
+src/components/layout/Header.module.css:2335:  :global(body.across-header-solid) .logo {
+src/components/layout/Header.module.css:2341:  :global(body:not(.across-header-solid)) .logo img,
+src/components/layout/Header.module.css:2342:  :global(body.across-header-solid) .logo img {
+src/components/layout/Header.module.css:2620:  :global(body.across-header-solid) .wrapper {
+src/components/layout/Header.module.css:2626:  :global(body.across-header-solid) .header {
+src/components/layout/Header.module.css:2634:  :global(body.across-header-solid) .logo img {
+src/components/layout/Header.module.css:2639:  :global(body.across-header-solid) .mobileButton {
+src/components/layout/Header.module.css:2645:  :global(body.across-header-solid) .mobileLang button {
+src/components/layout/Header.module.css:2665:  :global(body.across-header-hidden) .wrapper {
+src/components/layout/Header.module.css:2672:  :global(body:not(.across-header-hidden)) .wrapper {
+src/components/sections/Hero.module.css:1084:  .hero :global(.floatingCall),
+src/components/sections/Hero.module.css:1085:  .hero :global(.floating-call),
+src/components/sections/Hero.module.css:1086:  .hero :global([class*="floating"]),
+src/components/sections/Hero.module.css:1087:  .hero :global([class*="Floating"]),
+src/components/sections/Hero.module.css:1088:  .hero :global([class*="whatsapp"]),
+src/components/sections/Hero.module.css:1089:  .hero :global([class*="Whatsapp"]) {
+
+========================================
+
+4) Importaciones cruzadas de módulos CSS
+========================================
+src/app/aviso-legal/page.tsx:3:import styles from "@/app/_legal/LegalPage.module.css";
+src/app/blog/page.tsx:7:import styles from "./Blog.module.css";
+src/app/contacto/page.tsx:9:import styles from "./Contacto.module.css";
+src/app/cotizacion/page.tsx:7:import styles from "./Cotizacion.module.css";
+src/app/empresa/oficinas/page.tsx:10:import styles from "./Oficinas.module.css";
+src/app/empresa/oficinas/[slug]/page.tsx:6:import styles from "../Oficinas.module.css";
+src/app/empresa/page.tsx:10:import styles from "./Empresa.module.css";
+src/app/empresa/quienes-somos/page.tsx:10:import styles from "./QuienesSomos.module.css";
+src/app/empresa/sostenibilidad/page.tsx:10:import styles from "./Sostenibilidad.module.css";
+src/app/politica-de-calidad/page.tsx:3:import styles from "@/app/_legal/LegalPage.module.css";
+src/app/politica-de-cookies/page.tsx:3:import styles from "@/app/_legal/LegalPage.module.css";
+src/app/politica-de-privacidad-web/page.tsx:3:import styles from "@/app/_legal/LegalPage.module.css";
+src/app/politica-de-redes-sociales/page.tsx:3:import styles from "@/app/_legal/LegalPage.module.css";
+src/app/recursos/page.tsx:8:import styles from "./Recursos.module.css";
+src/app/recursos/page.tsx:9:import aereoStyles from "../servicios/transporte-aereo/TransporteAereo.module.css";
+src/app/recursos/page.tsx:10:import heroStyles from "../empresa/quienes-somos/QuienesSomos.module.css";
+src/app/sectores/alimentacion-bebidas/page.tsx:10:import styles from "./Sector.module.css";
+src/app/sectores/automocion/page.tsx:10:import styles from "./Sector.module.css";
+src/app/sectores/consumo-distribucion/page.tsx:10:import styles from "./Sector.module.css";
+src/app/sectores/energias-renovables/page.tsx:10:import styles from "./Sector.module.css";
+src/app/sectores/farmaceutico-sanitario/page.tsx:10:import styles from "./Sector.module.css";
+src/app/sectores/quimico/page.tsx:10:import styles from "./Sector.module.css";
+src/app/sectores/tecnologico/page.tsx:10:import styles from "./Sector.module.css";
+src/app/servicios/aduanas/page.tsx:11:import styles from "./Aduanas.module.css";
+src/app/servicios/almacen-distribucion/page.tsx:11:import styles from "./AlmacenDistribucion.module.css";
+src/app/servicios/cargas-especiales/page.tsx:11:import styles from "./CargasEspeciales.module.css";
+src/app/servicios/e-commerce/page.tsx:11:import styles from "./ECommerce.module.css";
+src/app/servicios/temperatura-controlada/page.tsx:11:import styles from "./Servicio.module.css";
+src/app/servicios/transporte-aereo/page.tsx:11:import styles from "./TransporteAereo.module.css";
+src/app/servicios/transporte-maritimo/page.tsx:11:import styles from "./Servicio.module.css";
+src/app/servicios/transporte-terrestre/page.tsx:11:import styles from "./Servicio.module.css";
+src/app/servicios/_shared/RelatedServices.tsx:3:import styles from "./ServicePage.module.css";
+src/app/tracking/page.tsx:6:import styles from "./Tracking.module.css";
+src/components/layout/FloatingCallModal.tsx:4:import styles from "./FloatingCallModal.module.css";
+src/components/layout/Footer.tsx:6:import styles from "./Footer.module.css";
+src/components/layout/Header.tsx:8:import styles from "./Header.module.css";
+src/components/legal/CookieConsent.tsx:5:import styles from "./CookieConsent.module.css";
+src/components/pages/PremiumPage.tsx:3:import styles from "./PremiumPage.module.css";
+src/components/sections/Certifications.tsx:6:import styles from "./Certifications.module.css";
+src/components/sections/ContactCTA.tsx:4:import styles from "./ContactCTA.module.css";
+src/components/sections/ContactForm.tsx:7:import styles from "@/app/contacto/Contacto.module.css";
+src/components/sections/Hero.tsx:5:import styles from "./Hero.module.css";
+src/components/sections/HomeCorporateFinal.tsx:6:import styles from "./HomeCorporateFinal.module.css";
+src/components/sections/Industries.tsx:5:import styles from "./Industries.module.css";
+src/components/sections/LogisticsIntro.tsx:6:import styles from "./LogisticsIntro.module.css";
+src/components/sections/Quote.tsx:3:import styles from "./Quote.module.css";
+src/components/sections/Services.tsx:5:import styles from "./Services.module.css";
+src/components/sections/ServicesOverview.tsx:6:import styles from "./ServicesOverview.module.css";
+src/components/sections/tracking-map/TrackingOperationalMap.tsx:1:import styles from "./TrackingOperationalMap.module.css";
+src/components/ui/Button.tsx:3:import styles from "./Button.module.css";
+src/components/ui/Container.tsx:3:import styles from "./Container.module.css";
+src/components/ui/FloatingCallButton.tsx:5:import styles from "./FloatingCallButton.module.css";
+src/components/ui/SectionLabel.tsx:1:import styles from "./SectionLabel.module.css";
+
+5) Recursos page clases CTA
+========================================
+src/app/recursos/page.tsx:566:<section className={styles.resourceFinalCta}>
+src/app/recursos/page.tsx:567:          <picture className={styles.resourceFinalCtaBg} aria-hidden="true">
+src/app/recursos/page.tsx:571:          <div className={styles.resourceFinalCtaInner}>
+src/app/recursos/page.tsx:572:            <div className={styles.resourceFinalCtaCopy}>
+src/app/recursos/Recursos.module.css:100:.contactCta a {
+src/app/recursos/Recursos.module.css:114:.contactCta a {
+src/app/recursos/Recursos.module.css:130:.contactCta a:hover {
+src/app/recursos/Recursos.module.css:545:.contactCta {
+src/app/recursos/Recursos.module.css:564:.contactCta h2 {
+src/app/recursos/Recursos.module.css:572:.contactCta p {
+src/app/recursos/Recursos.module.css:597:  .contactCta {
+src/app/recursos/Recursos.module.css:672:  .contactCta {
+src/app/recursos/Recursos.module.css:696:  .contactCta {
+src/app/recursos/Recursos.module.css:701:  .contactCta a {
+src/app/recursos/Recursos.module.css:713:  .contactCta h2 {
+src/app/recursos/Recursos.module.css:1682:.contactCta {
+src/app/recursos/Recursos.module.css:1701:.contactCta::before {
+src/app/recursos/Recursos.module.css:1712:.contactCta > div,
+src/app/recursos/Recursos.module.css:1713:.contactCta > a {
+src/app/recursos/Recursos.module.css:1718:.contactCta > div {
+src/app/recursos/Recursos.module.css:1723:.contactCta h2 {
+src/app/recursos/Recursos.module.css:1735:.contactCta p {
+src/app/recursos/Recursos.module.css:1744:.contactCta > a {
+src/app/recursos/Recursos.module.css:1778:  .contactCta {
+src/app/recursos/Recursos.module.css:1787:  .contactCta > div {
+src/app/recursos/Recursos.module.css:1791:  .contactCta h2 {
+src/app/recursos/Recursos.module.css:1795:  .contactCta p {
+src/app/recursos/Recursos.module.css:1799:  .contactCta > a {
+src/app/recursos/Recursos.module.css:2246:.contactCta {
+src/app/recursos/Recursos.module.css:2253:  .contactCta {
+src/app/recursos/Recursos.module.css:2262:  .contactCta {
+src/app/recursos/Recursos.module.css:2273:   homeFinalCta / homeFinalCtaInner.
+src/app/recursos/Recursos.module.css:2276:.homeFinalCta {
+src/app/recursos/Recursos.module.css:2289:.homeFinalCta::before {
+src/app/recursos/Recursos.module.css:2301:.homeFinalCtaInner {
+src/app/recursos/Recursos.module.css:2308:.homeFinalCtaInner > div {
+src/app/recursos/Recursos.module.css:2312:.homeFinalCta h2 {
+src/app/recursos/Recursos.module.css:2325:.homeFinalCta h2::after {
+src/app/recursos/Recursos.module.css:2330:.homeFinalCta p {
+src/app/recursos/Recursos.module.css:2339:.homeFinalCta a {
+src/app/recursos/Recursos.module.css:2366:  .homeFinalCta {
+src/app/recursos/Recursos.module.css:2376:  .homeFinalCtaInner {
+src/app/recursos/Recursos.module.css:2383:  .homeFinalCta h2 {
+src/app/recursos/Recursos.module.css:2389:  .homeFinalCta p {
+src/app/recursos/Recursos.module.css:2394:  .homeFinalCta a {
+src/app/recursos/Recursos.module.css:2461:.contactCta h2 {
+src/app/recursos/Recursos.module.css:2686:.contactCta {
+src/app/recursos/Recursos.module.css:2979:.resourceFinalCta {
+src/app/recursos/Recursos.module.css:3015:.resourceFinalCta::after {
+src/app/recursos/Recursos.module.css:3026:.resourceFinalCtaInner {
+src/app/recursos/Recursos.module.css:3037:.resourceFinalCtaCopy {
+src/app/recursos/Recursos.module.css:3061:.resourceFinalCtaCopy h2 {
+src/app/recursos/Recursos.module.css:3073:.resourceFinalCtaCopy h2::after {
+src/app/recursos/Recursos.module.css:3078:.resourceFinalCtaCopy p {
+src/app/recursos/Recursos.module.css:3116:.resourceFinalCtaCopy a {
+src/app/recursos/Recursos.module.css:3141:  .resourceFinalCta {
+src/app/recursos/Recursos.module.css:3152:  .resourceFinalCtaInner {
+src/app/recursos/Recursos.module.css:3158:  .resourceFinalCtaCopy {
+src/app/recursos/Recursos.module.css:3162:  .resourceFinalCtaCopy h2 {
+src/app/recursos/Recursos.module.css:3167:  .resourceFinalCtaCopy p {
+src/app/recursos/Recursos.module.css:3174:  .resourceFinalCta {
+src/app/recursos/Recursos.module.css:3198:  .resourceFinalCta::after {
+src/app/recursos/Recursos.module.css:3203:  .resourceFinalCtaInner {
+src/app/recursos/Recursos.module.css:3210:  .resourceFinalCtaCopy {
+src/app/recursos/Recursos.module.css:3224:  .resourceFinalCtaCopy h2 {
+src/app/recursos/Recursos.module.css:3231:  .resourceFinalCtaCopy p {
+src/app/recursos/Recursos.module.css:3250:  .resourceFinalCtaCopy a {
+src/app/recursos/Recursos.module.css:3258:  .resourceFinalCta {
+src/app/recursos/Recursos.module.css:3264:  .resourceFinalCtaInner {
+src/app/recursos/Recursos.module.css:3269:  .resourceFinalCtaCopy h2 {
+src/app/recursos/Recursos.module.css:3274:  .resourceFinalCtaCopy p {
+src/app/recursos/Recursos.module.css:3286:.resourceFinalCta {
+src/app/recursos/Recursos.module.css:3294:.resourceFinalCta::before {
+src/app/recursos/Recursos.module.css:3298:.resourceFinalCta::after {
+src/app/recursos/Recursos.module.css:3314:.resourceFinalCtaBg {
+src/app/recursos/Recursos.module.css:3324:.resourceFinalCtaBg img {
+src/app/recursos/Recursos.module.css:3335:.resourceFinalCtaInner,
+src/app/recursos/Recursos.module.css:3336:.resourceFinalCtaCopy {
+src/app/recursos/Recursos.module.css:3343:  .resourceFinalCtaInner {
+src/app/recursos/Recursos.module.css:3351:  .resourceFinalCta {
+src/app/recursos/Recursos.module.css:3355:  .resourceFinalCta::after {
+src/app/recursos/Recursos.module.css:3372:  .resourceFinalCtaBg img {
+src/app/recursos/Recursos.module.css:3379:  .resourceFinalCtaInner {
+src/app/recursos/Recursos.module.css:3387:  .resourceFinalCta,
+src/app/recursos/Recursos.module.css:3388:  .resourceFinalCtaInner {
+src/app/recursos/Recursos.module.css:3392:  .resourceFinalCtaBg img {
+src/app/recursos/Recursos.module.css:3402:   El problema era .page .resourceFinalCta::after demasiado oscuro.
+src/app/recursos/Recursos.module.css:3407:.page .resourceFinalCta::after,
+src/app/recursos/Recursos.module.css:3408:.resourceFinalCta::after {
+src/app/recursos/Recursos.module.css:3424:.resourceFinalCtaBg img {
+src/app/recursos/Recursos.module.css:3431:  .page .resourceFinalCta::after,
+src/app/recursos/Recursos.module.css:3432:  .resourceFinalCta::after {
+src/app/recursos/Recursos.module.css:3449:  .resourceFinalCtaBg img {
