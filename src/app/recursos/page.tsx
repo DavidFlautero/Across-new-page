@@ -6,6 +6,8 @@ import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import styles from "./Recursos.module.css";
+import homeStyles from "@/components/sections/HomeCorporateFinal.module.css";
+import aereoStyles from "../servicios/transporte-aereo/TransporteAereo.module.css";
 import heroStyles from "../empresa/quienes-somos/QuienesSomos.module.css";
 
 type Locale = "es" | "en" | "zh";
@@ -391,6 +393,24 @@ export default function RecursosPage() {
   }, []);
 
   const t = copy[locale];
+
+  const downloadBenefits = {
+    es: [
+      ["Documentación actualizada", "Revisamos y actualizamos los archivos periódicamente para brindar información siempre vigente."],
+      ["Acceso seguro", "Archivos verificados y listos para utilizar en cada operación."],
+      ["Disponibles siempre", "Descargá lo que necesitás, cuando lo necesitás."],
+    ],
+    en: [
+      ["Updated documentation", "We review and update files periodically to provide always-current information."],
+      ["Secure access", "Verified files ready to use in every operation."],
+      ["Always available", "Download what you need, whenever you need it."],
+    ],
+    zh: [
+      ["文件保持更新", "我们定期审核和更新文件，确保信息始终有效。"],
+      ["安全访问", "文件经过验证，可用于每项业务操作。"],
+      ["随时可用", "可在需要时下载所需资料。"],
+    ],
+  }[locale];
   const resourceIcons: ResourceIconName[] = ["faq", "download", "contact", "guide"];
 
   return (
@@ -529,55 +549,29 @@ export default function RecursosPage() {
                 </ul>
               </div>
             </div>
+
+            <div className={styles.downloadBenefits}>
+              {downloadBenefits.map(([title, text], index) => (
+                <article key={title}>
+                  <i>{String(index + 1).padStart(2, "0")}</i>
+                  <span>
+                    <strong>{title}</strong>
+                    <small>{text}</small>
+                  </span>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
-        <section className={styles.moreResources}>
-          <div className={styles.moreIntro}>
-            <span>{t.moreEyebrow}</span>
-            <h2>{t.moreTitle}</h2>
+<section className={homeStyles.homeFinalCta}>
+          <div className={homeStyles.homeFinalCtaInner}>
+            <div>
+              <h2>{t.ctaTitle}</h2>
+              <p>{t.ctaText}</p>
+              <Link href="/contacto">{t.ctaButton}</Link>
+            </div>
           </div>
-
-          <div className={styles.moreGrid}>
-            <article className={styles.linkCard}>
-              <h3>{t.resourcesCorporateTitle}</h3>
-              {t.corporateLinks.map((item) => (
-                <Link href="/contacto" key={item}>
-                  {item}
-                  <span>→</span>
-                </Link>
-              ))}
-            </article>
-
-            <article className={styles.linkCard}>
-              <h3>{t.resourcesTechnicalTitle}</h3>
-              {t.technicalLinks.map((item) => (
-                <Link href="/contacto" key={item}>
-                  {item}
-                  <span>→</span>
-                </Link>
-              ))}
-            </article>
-
-            <article className={styles.phoneCard}>
-              <h3>{t.contactTitle}</h3>
-              {t.phones.map(([country, phone]) => (
-                <div key={country}>
-                  <span>{country}</span>
-                  <strong>{phone}</strong>
-                </div>
-              ))}
-              <Link href="/empresa/oficinas">{t.allContacts} →</Link>
-            </article>
-          </div>
-        </section>
-
-        <section className={styles.contactCta}>
-          <div>
-            <h2>{t.ctaTitle}</h2>
-            <p>{t.ctaText}</p>
-          </div>
-          <Link href="/contacto">{t.ctaButton} →</Link>
         </section>
       </main>
 

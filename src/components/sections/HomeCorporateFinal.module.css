@@ -3501,3 +3501,311 @@
 }
 /* END ZZZ HOME SERVICES READABLE CORPORATE FINAL */
 
+/* FORCE OPERATOR CTA IMAGE TOP POSITION
+   La imagen se lee desde arriba hacia abajo.
+   Se protege la cabeza/cara y se permite perder cuerpo abajo.
+*/
+
+.homeFinalCta {
+  background-position: center top !important;
+}
+
+@media (max-width: 760px) {
+  .homeFinalCta {
+    background-position: center top !important;
+  }
+}
+
+@media (min-width: 761px) {
+  .homeFinalCta {
+    background-position: center top !important;
+  }
+}
+
+/* END FORCE OPERATOR CTA IMAGE TOP POSITION */
+
+/* OPERATOR CTA VISIBLE FINAL
+   Imagen visible, integrada, cabeza arriba.
+   Aplica a Home y Recursos porque Recursos usa HomeCorporateFinal.module.css.
+*/
+
+.homeFinalCta {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+
+  min-height: clamp(430px, 36vw, 560px) !important;
+  padding: clamp(4.6rem, 6.2vw, 6rem) 0 !important;
+
+  background: #07111d !important;
+}
+
+/* IMAGEN: capa visible */
+.homeFinalCta::before {
+  content: "" !important;
+  position: absolute !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: min(58vw, 900px) !important;
+
+  background-image: url("/images/operador/contacenter.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: right top !important;
+  background-size: auto 92% !important;
+
+  opacity: .78 !important;
+}
+
+/* DEGRADADO encima para que no parezca caja */
+.homeFinalCta::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      #07111d 0%,
+      rgba(7, 17, 29, .98) 36%,
+      rgba(7, 17, 29, .74) 58%,
+      rgba(7, 17, 29, .18) 100%
+    ),
+    radial-gradient(circle at 82% 12%, rgba(214,192,141,.10), transparent 22rem) !important;
+}
+
+.homeFinalCtaInner {
+  position: relative !important;
+  z-index: 3 !important;
+  width: min(1180px, calc(100% - 40px)) !important;
+  margin: 0 auto !important;
+}
+
+.homeFinalCtaInner > div {
+  max-width: 680px !important;
+}
+
+/* desktop grande */
+@media (min-width: 1500px) {
+  .homeFinalCta::before {
+    width: min(56vw, 980px) !important;
+    background-size: auto 96% !important;
+    background-position: right top !important;
+    opacity: .82 !important;
+  }
+}
+
+/* tablet / notebook */
+@media (min-width: 761px) and (max-width: 1200px) {
+  .homeFinalCta::before {
+    width: 60vw !important;
+    background-size: auto 86% !important;
+    background-position: right top !important;
+    opacity: .72 !important;
+  }
+}
+
+/* mobile */
+@media (max-width: 760px) {
+  .homeFinalCta {
+    min-height: 640px !important;
+    padding-top: 5.2rem !important;
+    padding-bottom: 5.4rem !important;
+  }
+
+  .homeFinalCta::before {
+    top: auto !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 72% !important;
+
+    background-image: url("/images/operador/contacenter-mobile.png") !important;
+    background-position: center top !important;
+    background-size: auto 86% !important;
+    opacity: .74 !important;
+  }
+
+  .homeFinalCta::after {
+    background:
+      linear-gradient(
+        180deg,
+        #07111d 0%,
+        rgba(7, 17, 29, .94) 36%,
+        rgba(7, 17, 29, .58) 72%,
+        rgba(7, 17, 29, .16) 100%
+      ) !important;
+  }
+}
+
+/* END OPERATOR CTA VISIBLE FINAL */
+
+/* HOME CTA ONLY PHOTO NO SIZE CHANGE
+   No toca altura, no toca padding, no toca tipografía.
+   Solo fuerza la foto de fondo.
+*/
+.homeFinalCta {
+  background-image:
+    linear-gradient(90deg, rgba(5, 11, 18, .94) 0%, rgba(7, 17, 29, .82) 48%, rgba(7, 17, 29, .42) 100%),
+    url("/images/operador/contactcenter.png") !important;
+  background-position: center right !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+@media (max-width: 760px) {
+  .homeFinalCta {
+    background-image:
+      linear-gradient(180deg, rgba(5, 11, 18, .90) 0%, rgba(7, 17, 29, .76) 48%, rgba(7, 17, 29, .58) 100%),
+      url("/images/operador/contactcenter-mobile.png") !important;
+    background-position: center top !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+}
+/* END HOME CTA ONLY PHOTO NO SIZE CHANGE */
+
+/* HOME CTA HALF SIZE FINAL
+   Reduce la sección y aleja la imagen.
+   Aplica en Home y Recursos.
+*/
+
+.homeFinalCta {
+  min-height: clamp(300px, 24vw, 390px) !important;
+  padding: clamp(2.4rem, 3.4vw, 3.4rem) 0 !important;
+
+  background-position:
+    center center,
+    right top !important;
+
+  background-size:
+    100% 100%,
+    auto 68% !important;
+
+  background-repeat:
+    no-repeat,
+    no-repeat !important;
+}
+
+.homeFinalCtaInner > div {
+  max-width: 560px !important;
+}
+
+.homeFinalCta h2 {
+  max-width: 560px !important;
+  font-size: clamp(2.65rem, 4.2vw, 4.25rem) !important;
+  line-height: .92 !important;
+}
+
+.homeFinalCta p {
+  max-width: 560px !important;
+}
+
+/* Pantallas grandes: imagen visible pero no gigante */
+@media (min-width: 1400px) {
+  .homeFinalCta {
+    min-height: 390px !important;
+    background-size:
+      100% 100%,
+      auto 72% !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 761px) and (max-width: 1200px) {
+  .homeFinalCta {
+    min-height: 340px !important;
+    background-size:
+      100% 100%,
+      auto 60% !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  .homeFinalCta {
+    min-height: 430px !important;
+    padding-top: 3.2rem !important;
+    padding-bottom: 3.4rem !important;
+
+    background-position:
+      center center,
+      center top !important;
+
+    background-size:
+      100% 100%,
+      auto 58% !important;
+  }
+
+  .homeFinalCta h2 {
+    font-size: clamp(2rem, 8vw, 2.65rem) !important;
+  }
+}
+
+/* END HOME CTA HALF SIZE FINAL */
+
+/* HOME CTA PHOTO RIGHT FIT
+   Mantiene el alto actual.
+   Solo hace que la foto llene el lado derecho sin verse como cajita.
+*/
+
+.homeFinalCta {
+  background-position:
+    center center,
+    right center !important;
+
+  background-size:
+    100% 100%,
+    auto 100% !important;
+
+  background-repeat:
+    no-repeat,
+    no-repeat !important;
+}
+
+/* Pantallas grandes */
+@media (min-width: 1400px) {
+  .homeFinalCta {
+    background-position:
+      center center,
+      right center !important;
+
+    background-size:
+      100% 100%,
+      auto 108% !important;
+  }
+}
+
+/* Tablet / notebook */
+@media (min-width: 761px) and (max-width: 1200px) {
+  .homeFinalCta {
+    background-position:
+      center center,
+      right center !important;
+
+    background-size:
+      100% 100%,
+      auto 100% !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  .homeFinalCta {
+    background-position:
+      center center,
+      center top !important;
+
+    background-size:
+      100% 100%,
+      auto 82% !important;
+  }
+}
+
+/* END HOME CTA PHOTO RIGHT FIT */

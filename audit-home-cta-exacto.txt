@@ -1,0 +1,359 @@
+1) JSX exacto HomeCorporateFinal CTA
+----------------------------------------
+              <strong>{t.allOfficesTitle}</strong>
+              <small>{t.allOfficesText}</small>
+              <i>→</i>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.homeFinalCta}>
+        <div className={styles.homeFinalCtaInner}>
+          <div>
+            <h2>{t.ctaTitle}</h2>
+            <p>{t.ctaText}</p>
+            <Link href="/contacto">{t.ctaButton}</Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+2) CSS exacto homeFinalCta
+----------------------------------------
+18-  pointer-events: none;
+19-  opacity: .16;
+20-  background-image:
+21-    linear-gradient(rgba(0,0,0,.032) 1px, transparent 1px),
+22-    linear-gradient(90deg, rgba(0,0,0,.024) 1px, transparent 1px);
+23-  background-size: 86px 86px;
+24-}
+25-
+26-.integrated {
+27-  padding: clamp(4.8rem, 7vw, 6.6rem) 0 clamp(4rem, 6vw, 5.4rem);
+28-}
+29-
+30-.services {
+31-  padding: clamp(4.2rem, 6.5vw, 6rem) 0;
+32-  border-top: 1px solid rgba(0,0,0,.08);
+33-}
+34-
+35-.integratedInner,
+36-.servicesInner,
+37-.homeOfficesInner,
+38:.homeFinalCtaInner {
+39-  position: relative;
+40-  z-index: 1;
+41-  width: min(1180px, calc(100% - 40px));
+42-  margin: 0 auto;
+43-}
+44-
+45-.integratedInner {
+46-  display: grid;
+47-  grid-template-columns: minmax(0, .78fr) minmax(430px, 1.22fr);
+48-  gap: clamp(2.4rem, 5vw, 5rem);
+49-  align-items: center;
+50-}
+51-
+52-.copy span,
+53-.servicesHead span,
+54-.homeOfficesHead span,
+55-.globalContent > span,
+56-.solutionsPanel span {
+57-  display: inline-flex;
+58-  margin-bottom: .9rem;
+59-  color: #173247;
+60-  font-size: .72rem;
+61-  font-weight: 950;
+62-  letter-spacing: .24em;
+63-  text-transform: uppercase;
+64-}
+65-
+66-.copy h2,
+67-.servicesHead h2,
+68-.homeOfficesHead h2,
+69-.globalContent h2,
+70:.homeFinalCta h2 {
+71-  margin: 0;
+72-  font-weight: 950;
+73-  text-wrap: balance;
+74-  -webkit-font-smoothing: antialiased;
+75-}
+76-
+77-.copy h2,
+78-.servicesHead h2 {
+79-  max-width: 760px;
+80-  color: #111;
+81-  font-size: clamp(2.55rem, 5vw, 5.45rem);
+82-  line-height: .9;
+83-  letter-spacing: -.078em;
+84-}
+85-
+86-.copy h2::after,
+87-.servicesHead h2::after,
+88-.homeOfficesHead h2::after,
+89-.globalContent h2::after,
+90:.homeFinalCta h2::after {
+91-  content: ".";
+92-  color: #173247;
+93-}
+94-
+95-.copy p {
+96-  max-width: 560px;
+97-  margin: 1.25rem 0 0;
+98-  color: rgba(0,0,0,.66);
+99-  font-size: clamp(1rem, 1.15vw, 1.08rem);
+100-  line-height: 1.72;
+101-}
+102-
+103-.copy ul {
+104-  margin: 1.5rem 0 0;
+105-  padding: 0;
+106-  list-style: none;
+107-  display: grid;
+108-  gap: .72rem;
+109-}
+110-
+111-.copy li {
+112-  position: relative;
+113-  padding-left: 1.45rem;
+114-  color: rgba(0,0,0,.76);
+115-  font-size: .96rem;
+116-  font-weight: 850;
+117-}
+118-
+119-.copy li::before {
+120-  content: "";
+121-  position: absolute;
+122-  left: 0;
+123-  top: .43rem;
+124-  width: .55rem;
+125-  height: .55rem;
+126-  border-radius: 999px;
+127-  background: #173247;
+128-  box-shadow: 0 0 0 5px rgba(23,50,71,.08);
+129-}
+130-
+131-.copy a {
+132-  width: fit-content;
+133-  margin-top: 1.7rem;
+134-  display: inline-flex;
+135-  color: #173247;
+136-  text-decoration: none;
+137-  font-size: .8rem;
+138-  font-weight: 950;
+139-  letter-spacing: .08em;
+140-  text-transform: uppercase;
+141-}
+142-
+143-.heroImage {
+144-  position: relative;
+145-  min-height: 430px;
+146-  overflow: hidden;
+147-  border-radius: 28px;
+148-  background: #090a0d;
+149-  box-shadow: 0 34px 105px rgba(0,0,0,.16);
+150-  isolation: isolate;
+151-}
+152-
+153-.heroImage img {
+154-  object-fit: cover;
+155-  filter: brightness(.9) contrast(1.05) saturate(1.04);
+156-  transform: scale(1.02);
+157-}
+158-
+159-.heroImage::after {
+160-  content: "";
+161-  position: absolute;
+162-  inset: 0;
+163-  pointer-events: none;
+164-  background:
+165-    linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.18)),
+166-    radial-gradient(circle at 84% 12%, rgba(23,50,71,.16), transparent 18rem);
+167-}
+168-
+169-/* SERVICES */
+170-
+171-.servicesHead {
+172-  max-width: 850px;
+173-  margin-bottom: clamp(2rem, 4vw, 3rem);
+174-}
+175-
+176-.servicesLayout {
+177-  display: grid;
+178-  grid-template-columns: minmax(0, 1fr) 420px;
+179-  gap: clamp(3rem, 5vw, 5.2rem);
+180-  align-items: start;
+--
+599-  font-size: .9rem;
+600-  font-weight: 950;
+601-}
+602-
+603-.allOfficesCard small {
+604-  display: block;
+605-  margin-top: .2rem;
+606-  color: rgba(0,0,0,.62);
+607-  font-size: .72rem;
+608-}
+609-
+610-.allOfficesCard i {
+611-  margin-top: .55rem;
+612-  color: #173247;
+613-  font-style: normal;
+614-  font-weight: 950;
+
+3) CSS exacto alrededor de línea 2505
+----------------------------------------
+  }
+
+  .globalTrust::after {
+    background:
+      radial-gradient(circle at 70% 18%, rgba(142, 202, 230, .14), transparent 14rem),
+      linear-gradient(180deg, rgba(255,255,255,.035), transparent 30%) !important;
+  }
+
+  /* Para que el texto siga leyendo aunque el mapa se vea */
+  .globalContent h2 {
+    text-shadow: 0 10px 28px rgba(0,0,0,.42) !important;
+  }
+
+  .globalCards > div,
+  .globalCards article {
+    background:
+      linear-gradient(180deg, rgba(7,17,29,.72), rgba(7,17,29,.54)) !important;
+    border: 1px solid rgba(255,255,255,.17) !important;
+    backdrop-filter: blur(14px) saturate(1.12) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(1.12) !important;
+  }
+}
+
+/* =====================================================
+   FINAL CTA OPERATOR IMAGE
+   Usa imagen desktop/mobile para "Coordinemos su próxima operación".
+   ===================================================== */
+
+.homeFinalCta {
+  position: relative !important;
+  overflow: hidden !important;
+
+  background:
+    linear-gradient(90deg, rgba(5, 11, 18, .94) 0%, rgba(7, 17, 29, .82) 48%, rgba(7, 17, 29, .42) 100%),
+    url("/images/operador/contactcenter.jpg") center right / cover no-repeat !important;
+}
+
+.homeFinalCta::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+
+  background:
+    radial-gradient(circle at 18% 30%, rgba(23, 50, 71, .30), transparent 22rem),
+    radial-gradient(circle at 78% 20%, rgba(205, 187, 141, .10), transparent 18rem),
+    linear-gradient(180deg, rgba(255,255,255,.03), transparent 40%) !important;
+}
+
+.homeFinalCtaInner {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.homeFinalCta span {
+  color: #cdbb8d !important;
+  letter-spacing: .24em !important;
+  font-weight: 950 !important;
+}
+
+.homeFinalCta h2 {
+  color: #fff !important;
+  text-shadow: 0 10px 28px rgba(0,0,0,.36) !important;
+}
+
+.homeFinalCta p {
+  color: rgba(255,255,255,.78) !important;
+}
+
+.homeFinalCta a {
+  color: #fff !important;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255,255,255,.18), transparent 30%),
+    linear-gradient(135deg, #07111d 0%, #0d1c2b 48%, #173247 100%) !important;
+  border: 1px solid rgba(205,187,141,.32) !important;
+  box-shadow:
+    0 18px 42px rgba(0,0,0,.34),
+    0 8px 22px rgba(7,17,29,.42),
+    inset 0 1px 0 rgba(255,255,255,.18) !important;
+}
+
+/* Mobile usa imagen vertical */
+@media (max-width: 760px) {
+  .homeFinalCta {
+    background:
+      linear-gradient(180deg, rgba(5, 11, 18, .92) 0%, rgba(7, 17, 29, .80) 48%, rgba(7, 17, 29, .62) 100%),
+      url("/images/operador/contactcenter-mobile.jpg") center center / cover no-repeat !important;
+
+    padding-top: 5.2rem !important;
+    padding-bottom: 5.4rem !important;
+  }
+
+  .homeFinalCta::before {
+    background:
+      radial-gradient(circle at 22% 24%, rgba(23, 50, 71, .34), transparent 17rem),
+      linear-gradient(180deg, rgba(255,255,255,.035), transparent 38%) !important;
+  }
+
+  .homeFinalCtaInner {
+    max-width: 320px !important;
+  }
+
+  .homeFinalCta h2 {
+    font-size: clamp(2.2rem, 9.8vw, 3rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -0.06em !important;
+  }
+}
+
+/* =====================================================
+   FINAL CTA OPERATOR IMAGE PATH FIX
+   Nombres reales:
+   /images/operador/contacenter.png
+   /images/operador/contacenter-mobile.png
+   ===================================================== */
+
+.homeFinalCta {
+  background:
+    linear-gradient(90deg, rgba(5, 11, 18, .94) 0%, rgba(7, 17, 29, .82) 48%, rgba(7, 17, 29, .42) 100%),
+    url("/images/operador/contacenter.png") center right / cover no-repeat !important;
+}
+
+@media (max-width: 760px) {
+  .homeFinalCta {
+    background:
+      linear-gradient(180deg, rgba(5, 11, 18, .90) 0%, rgba(7, 17, 29, .76) 48%, rgba(7, 17, 29, .58) 100%),
+      url("/images/operador/contacenter-mobile.png") center center / cover no-repeat !important;
+  }
+}
+
+/* =====================================================
+   INTEGRATED SECTION FEDEX / MAERSK CLEAN STYLE
+   Menos pesado, más aire, tipografía corporativa.
+   ===================================================== */
+
+.integrated {
+  background:
+    linear-gradient(180deg, #fbfaf7 0%, #f6f3ed 100%) !important;
+}
+
+.integratedInner {
+  gap: 2.6rem !important;
+}
+
+/* Label */
+.integrated .copy > span {
+  color: #173247 !important;
+  font-size: .72rem !important;
+  letter-spacing: .26em !important;
+  font-weight: 800 !important;

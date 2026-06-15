@@ -1,0 +1,318 @@
+1) HOME page.tsx
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+
+import Hero from "@/components/sections/Hero";
+import HomeCorporateFinal from "@/components/sections/HomeCorporateFinal";
+
+export default function HomePage() {
+  return (
+    <div className="page-shell">
+      <Header />
+
+      <main style={{ background: "#F3EFE8" }}>
+        <Hero />
+        <HomeCorporateFinal />
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
+
+2) Buscar textos del CTA
+src/app/empresa/page.tsx:33:    finalTitle: "Hablemos de su próxima operación logística.",
+src/app/empresa/sostenibilidad/page.tsx:19:    primaryCta: "Hablar con un especialista",
+src/app/empresa/sostenibilidad/page.tsx:35:    finalPrimary: "Hablar con un especialista",
+src/app/sectores/alimentacion-bebidas/page.tsx:172:    "finalTitle": "Coordinemos su próxima operación de alimentación y bebidas.",
+src/app/sectores/alimentacion-bebidas/page.tsx:175:    "finalSecondary": "Hablar con un especialista"
+src/app/sectores/automocion/page.tsx:172:    "finalTitle": "Coordinemos su próxima operación automotriz.",
+src/app/sectores/automocion/page.tsx:175:    "finalSecondary": "Hablar con un especialista"
+src/app/sectores/consumo-distribucion/page.tsx:172:    "finalTitle": "Coordinemos su operación de consumo y distribución.",
+src/app/sectores/consumo-distribucion/page.tsx:175:    "finalSecondary": "Hablar con un especialista"
+src/app/sectores/consumo-distribucion/page.tsx:334:    "finalTitle": "Coordinemos su operación de consumo y distribución.",
+src/app/sectores/consumo-distribucion/page.tsx:337:    "finalSecondary": "Hablar con un especialista"
+src/app/sectores/consumo-distribucion/page.tsx:496:    "finalTitle": "Coordinemos su operación de consumo y distribución.",
+src/app/sectores/consumo-distribucion/page.tsx:499:    "finalSecondary": "Hablar con un especialista"
+src/app/sectores/energias-renovables/page.tsx:172:    "finalTitle": "Planifiquemos su próxima operación renovable.",
+src/app/sectores/energias-renovables/page.tsx:175:    "finalSecondary": "Hablar con un especialista"
+src/app/sectores/farmaceutico-sanitario/page.tsx:172:    "finalTitle": "Coordinemos su próxima operación sanitaria.",
+src/app/sectores/farmaceutico-sanitario/page.tsx:175:    "finalSecondary": "Hablar con un especialista"
+src/app/sectores/farmaceutico-sanitario/page.tsx:334:    "finalTitle": "Coordinemos su próxima operación sanitaria.",
+src/app/sectores/farmaceutico-sanitario/page.tsx:337:    "finalSecondary": "Hablar con un especialista"
+src/app/sectores/farmaceutico-sanitario/page.tsx:496:    "finalTitle": "Coordinemos su próxima operación sanitaria.",
+src/app/sectores/farmaceutico-sanitario/page.tsx:499:    "finalSecondary": "Hablar con un especialista"
+src/app/sectores/quimico/page.tsx:172:    "finalTitle": "Coordinemos su próxima operación química.",
+src/app/sectores/quimico/page.tsx:175:    "finalSecondary": "Hablar con un especialista"
+src/app/sectores/tecnologico/page.tsx:172:    "finalTitle": "Coordinemos su próxima operación tecnológica.",
+src/app/sectores/tecnologico/page.tsx:175:    "finalSecondary": "Hablar con un especialista"
+src/app/servicios/aduanas/page.tsx:173:    "finalTitle": "Coordinemos su próxima operación aduanera.",
+src/app/servicios/aduanas/page.tsx:176:    "finalSecondary": "Hablar con un especialista"
+src/app/servicios/almacen-distribucion/page.tsx:173:    "finalTitle": "Coordinemos su operación de almacén y distribución.",
+src/app/servicios/almacen-distribucion/page.tsx:176:    "finalSecondary": "Hablar con un especialista"
+src/app/servicios/cargas-especiales/page.tsx:95:    finalTitle: "Coordinemos su próxima carga especial.",
+src/app/servicios/cargas-especiales/page.tsx:99:    finalSecondary: "Hablar con un especialista",
+src/app/servicios/e-commerce/page.tsx:173:    "finalTitle": "Coordinemos su operación e-commerce.",
+src/app/servicios/e-commerce/page.tsx:176:    "finalSecondary": "Hablar con un especialista"
+src/app/servicios/temperatura-controlada/page.tsx:173:    "finalTitle": "Coordinemos su próxima carga con temperatura controlada.",
+src/app/servicios/temperatura-controlada/page.tsx:176:    "finalSecondary": "Hablar con un especialista"
+src/app/servicios/transporte-aereo/page.tsx:95:    finalTitle: "Coordinemos su próximo envío aéreo internacional.",
+src/app/servicios/transporte-aereo/page.tsx:99:    finalSecondary: "Hablar con un especialista",
+src/app/servicios/transporte-maritimo/page.tsx:95:    finalTitle: "Coordinemos su próximo embarque marítimo internacional.",
+src/app/servicios/transporte-maritimo/page.tsx:99:    finalSecondary: "Hablar con un especialista",
+src/app/servicios/transporte-terrestre/page.tsx:95:    finalTitle: "Coordinemos su próxima operación terrestre.",
+src/app/servicios/transporte-terrestre/page.tsx:99:    finalSecondary: "Hablar con un especialista",
+src/components/sections/Hero.tsx:93:        text: "Hable con un especialista y convierta su operación logística en una ventaja competitiva.",
+src/components/sections/Hero.tsx:97:    secondary: "Hablar con un especialista",
+src/components/sections/HomeCorporateFinal.module.css:2505:   Usa imagen desktop/mobile para "Coordinemos su próxima operación".
+src/components/sections/HomeCorporateFinal.tsx:54:    ctaTitle: "Coordinemos su próxima operación internacional",
+src/components/sections/HomeCorporateFinal.tsx:56:      "Hable con un especialista y reciba una solución logística adaptada a su carga, destino y urgencia.",
+src/components/sections/HomeCorporateFinal.tsx:57:    ctaButton: "Hablar con un especialista",
+
+3) Buscar imagen contactcenter / operador
+src/app/recursos/page.tsx:95:        "Debe contar con documentación fiscal y comercial adecuada, validar datos del operador y cumplir los requisitos propios de la operación dentro de la Unión Europea.",
+src/app/recursos/Recursos.module.css:1598:   - CTA final con imagen operador desktop/mobile pegado al footer
+src/app/recursos/Recursos.module.css:1696:    url("/images/operador/contactcenter.png") center center / cover no-repeat !important;
+src/app/recursos/Recursos.module.css:1784:      url("/images/operador/contactcenter-mobile.png") center bottom / cover no-repeat !important;
+src/app/recursos/Recursos.module.css:2249:    #07111d url("/images/operador/contactcenter.png") right center / contain no-repeat !important;
+src/app/recursos/Recursos.module.css:2257:      #07111d url("/images/operador/contactcenter-mobile.png") center bottom / contain no-repeat !important;
+src/app/recursos/Recursos.module.css:2265:      #07111d url("/images/operador/contactcenter.png") right center / contain no-repeat !important;
+src/app/sectores/energias-renovables/page.tsx:141:        "Definimos equipos, operadores y modalidad logística."
+src/app/servicios/aduanas/page.tsx:62:        "Coordinación del proceso de importación o exportación con operadores y autoridades."
+src/app/servicios/aduanas/page.tsx:142:        "Gestionamos el avance con operadores y autoridades."
+src/app/servicios/cargas-especiales/page.tsx:48:      ["Manipulación especializada", "Integramos equipos, operadores y procedimientos adecuados para cada carga."],
+src/app/servicios/cargas-especiales/page.tsx:80:      ["Equipo y manipulación", "Definimos medios, operadores y procedimientos de carga."],
+src/app/servicios/e-commerce/page.tsx:142:        "Coordinamos rutas, operadores y prioridades de entrega."
+src/app/servicios/transporte-aereo/page.tsx:46:      ["Coordinación aeroportuaria", "Gestión con aerolíneas, agentes y operadores logísticos."],
+src/app/servicios/transporte-maritimo/page.tsx:46:      ["Coordinación portuaria", "Gestión con navieras, agentes y operadores logísticos."],
+src/components/sections/HomeCorporateFinal.module.css:631:    url("/images/operador/contacenter.png") right center / auto 106% no-repeat,
+src/components/sections/HomeCorporateFinal.module.css:810:      url("/images/operador/contacenter.png") 82% center / auto 108% no-repeat,
+src/components/sections/HomeCorporateFinal.module.css:1525:      url("/images/operador/contacenter.png") center / cover no-repeat !important;
+src/components/sections/HomeCorporateFinal.module.css:2514:    url("/images/operador/contactcenter.jpg") center right / cover no-repeat !important;
+src/components/sections/HomeCorporateFinal.module.css:2567:      url("/images/operador/contactcenter-mobile.jpg") center center / cover no-repeat !important;
+src/components/sections/HomeCorporateFinal.module.css:2593:   /images/operador/contacenter.png
+src/components/sections/HomeCorporateFinal.module.css:2594:   /images/operador/contacenter-mobile.png
+src/components/sections/HomeCorporateFinal.module.css:2600:    url("/images/operador/contacenter.png") center right / cover no-repeat !important;
+src/components/sections/HomeCorporateFinal.module.css:2607:      url("/images/operador/contacenter-mobile.png") center center / cover no-repeat !important;
+
+4) Buscar clases de final CTA
+src/app/aviso-legal/page.tsx:29:                <p>Los diseños, logotipos, texto y/o gráficos ajenos al RESPONSABLE y que pudieran aparecer en el sitio web, pertenecen a sus respectivos propietarios, siendo ellos mismos responsables de cualquier posible controversia que pudiera suscitarse respecto a los mismos. El RESPONSABLE autoriza expresamente a que terceros puedan redirigir directamente a los contenidos concretos del sitio web, y en todo caso redirigir al sitio web principal de acrosslogistics.com.</p>
+src/app/aviso-legal/page.tsx:37:                <p>2. El usuario deberá, antes de publicar un mensaje, elegir el blog apropiado. Aquellos mensajes que no se ajusten a la temática del blog podrán ser eliminados. Está totalmente prohibido publicar promociones y enlaces de ofertas comerciales, publicidad, material promocional, cartas cadena ni cualquier actividad promocional directa o indirecta o cualquier otro tipo de comentario que no se ajuste al normal desarrollo de los temas de los blogs.</p>
+src/app/aviso-legal/page.tsx:43:                <p>7. En el caso de que un usuario pueda verse afectado por actuaciones ilegales, o detecte un mal uso de los blogs de la web por parte de otros usuarios, podrá ponerlo en conocimiento de ACROSS LOGISTICS, S.L.U., a través del correo electrónico <a href="">nieves@acrosslogistics.com</a>, indicando en la referencia del asunto “moderación de blogs”, para que ACROSS LOGISTICS, S.L.U. pueda moderar o eliminar los mismos.</p>
+src/app/aviso-legal/page.tsx:44:                <p>8. El usuario mantendrá indemne a ACROSS LOGISTICS, S.L.U. frente a cualquier reclamación que pudiera presentársele por los mensajes que el usuario haya difundido en los blogs o por cualquier otra conducta vinculada o derivada de la utilización por el usuario de los blogs de la web.</p>
+src/app/aviso-legal/page.tsx:57:                    terceros publicar contenidos de forma independiente en la página web del RESPONSABLE. Sin embargo, y en cumplimiento de lo dispuesto en los artículos 11 y 16 de la LSSICE, se pone a disposición de todos los usuarios, autoridades y fuerzas de seguridad, colaborando de forma activa en la retirada o, en su caso, bloqueo de todos aquellos contenidos que puedan afectar o contravenir la legislación nacional o internacional, los derechos de terceros o la moral y el orden público. En caso de que el usuario considere que existe en el sitio web algún contenido que pudiera ser
+src/app/aviso-legal/page.tsx:59:                <p>Este sitio web ha sido revisado y probado para que funcione correctamente. En principio, puede garantizarse el correcto funcionamiento los 365 días del año, 24 horas al día. Sin embargo, el RESPONSABLE no descarta la posibilidad de que existan ciertos errores de programación, o que acontezcan causas de fuerza mayor, catástrofes naturales, huelgas o circunstancias semejantes que hagan imposible el acceso a la página web.</p>
+src/app/aviso-legal/page.tsx:60:                <p>Los servidores del sitio web podrán detectar de manera automática la dirección IP y el nombre de dominio utilizados por el usuario. Una dirección IP es un número asignado automáticamente a un ordenador cuando éste se conecta a Internet. Toda esta información es registrada en un fichero de actividad del servidor debidamente inscrito que permite el posterior procesamiento de los datos con el fin de obtener mediciones únicamente estadísticas que permitan conocer el número de impresiones de páginas, el número de visitas realizadas a los servidores web, el orden de visitas, el punto de acceso, etc.</p>
+src/app/contacto/page.tsx:24:    text: "Complete el formulario o contacte directamente con nuestro equipo regional. Across Logistics atenderá su solicitud con una respuesta personalizada.",
+src/app/contacto/page.tsx:37:    success: "Solicitud enviada correctamente.",
+src/app/cotizacion/Cotizacion.module.css:17:    url("/images/cta-quote.jpg") center / cover no-repeat;
+src/app/cotizacion/page.tsx:318:    success: "Solicitud enviada correctamente. Nuestro equipo se pondrá en contacto.",
+src/app/cotizacion/page.tsx:411:    finalTitle: "Final requirements",
+src/app/empresa/Empresa.module.css:270:.finalCta h2 {
+src/app/empresa/Empresa.module.css:510:.finalCta {
+src/app/empresa/Empresa.module.css:518:.finalCta > div:first-child {
+src/app/empresa/Empresa.module.css:523:.finalCta p {
+src/app/empresa/Empresa.module.css:642:  .finalCta {
+src/app/empresa/Empresa.module.css:707:  .finalCta h2 {
+src/app/empresa/Empresa.module.css:1384:.finalCta {
+src/app/empresa/Empresa.module.css:1388:.finalCta > div:first-child {
+src/app/empresa/Empresa.module.css:1540:.finalCta {
+src/app/empresa/Empresa.module.css:1544:.finalCta > div:first-child {
+src/app/empresa/Empresa.module.css:1587:/* Servicios conecta directo con proceso */
+src/app/empresa/Empresa.module.css:1939:.finalCta {
+src/app/empresa/Empresa.module.css:1952:.finalCta > div:first-child {
+src/app/empresa/Empresa.module.css:1963:.finalCta h2 {
+src/app/empresa/Empresa.module.css:1971:.finalCta p {
+src/app/empresa/Empresa.module.css:2024:  .finalCta > div:first-child {
+src/app/empresa/Empresa.module.css:2060:  .finalCta > div:first-child {
+src/app/empresa/Empresa.module.css:2131:/* Métricas horizontales compactas */
+src/app/empresa/Empresa.module.css:2218:.finalCta {
+src/app/empresa/Empresa.module.css:2337:/* Métricas horizontales compactas */
+src/app/empresa/Empresa.module.css:2424:.finalCta {
+src/app/empresa/Empresa.module.css:2576:.finalCta {
+src/app/empresa/Empresa.module.css:4048:   - services y finalCta usan --mobile-bg
+src/app/empresa/Empresa.module.css:4049:   - si no hay imagen mobile, usa imagen desktop detectada
+src/app/empresa/Empresa.module.css:4076:  .finalCta {
+src/app/empresa/Empresa.module.css:4096:  .finalCta {
+src/app/empresa/Empresa.module.css:4101:  .finalCta::before {
+src/app/empresa/Empresa.module.css:4116:  .finalCta::after {
+src/app/empresa/Empresa.module.css:4133:  .finalCta > *:not(.finalImage),
+src/app/empresa/Empresa.module.css:4147:  .finalCta h2 {
+src/app/empresa/Empresa.module.css:4175:  .finalCta > div:first-child {
+src/app/empresa/Empresa.module.css:4183:  .finalCta p {
+src/app/empresa/Empresa.module.css:4217:  .finalCta {
+src/app/empresa/Empresa.module.css:4222:  .finalCta h2 {
+src/app/empresa/Empresa.module.css:5516:.finalCta a,
+src/app/empresa/Empresa.module.css:5517:.cta a,
+src/app/empresa/Empresa.module.css:5551:.finalCta h2,
+src/app/empresa/Empresa.module.css:5552:.cta h2 {
+src/app/empresa/Empresa.module.css:5557:.finalCta p,
+src/app/empresa/Empresa.module.css:5558:.cta p {
+src/app/empresa/Empresa.module.css:6541:  .finalCta [class*="image"],
+src/app/empresa/Empresa.module.css:6542:  .finalCta [class*="Image"],
+src/app/empresa/Empresa.module.css:6543:  .finalCta [class*="media"],
+src/app/empresa/Empresa.module.css:6544:  .finalCta [class*="Media"] {
+src/app/empresa/Empresa.module.css:6550:  .finalCta {
+src/app/empresa/Empresa.module.css:7019:   finalCta / data-across-final-cta.
+src/app/empresa/Empresa.module.css:7062:  .page section[data-across-final-cta="true"] {
+src/app/empresa/Empresa.module.css:7078:  .page section[data-across-final-cta="true"] a:nth-of-type(2),
+src/app/empresa/Empresa.module.css:7079:  .page section[data-sector-final-cta="true"] a:nth-of-type(2),
+src/app/empresa/Empresa.module.css:7080:  .page .finalCta a:nth-of-type(2) {
+src/app/empresa/Empresa.module.css:7084:  .page section[data-across-final-cta="true"] a:first-of-type,
+src/app/empresa/Empresa.module.css:7085:  .page section[data-sector-final-cta="true"] a:first-of-type,
+src/app/empresa/Empresa.module.css:7086:  .page .finalCta a:first-of-type {
+src/app/empresa/Empresa.module.css:7386:   Solo afecta hero, no overview ni process.
+src/app/empresa/Empresa.module.css:7559:.page .finalCta h1,
+src/app/empresa/Empresa.module.css:7560:.page .finalCta h2,
+src/app/empresa/Empresa.module.css:7561:.page .finalCta h3,
+src/app/empresa/Empresa.module.css:7562:.page .finalCta p,
+src/app/empresa/Empresa.module.css:7563:.page .finalCta a,
+src/app/empresa/Empresa.module.css:7564:.page .finalCta button,
+src/app/empresa/Empresa.module.css:7565:.page .finalCta strong,
+src/app/empresa/Empresa.module.css:7566:.page .finalCta span,
+src/app/empresa/Empresa.module.css:7567:.page .finalCta small,
+src/app/empresa/Empresa.module.css:7568:.page section[data-across-final-cta="true"] h1,
+src/app/empresa/Empresa.module.css:7569:.page section[data-across-final-cta="true"] h2,
+src/app/empresa/Empresa.module.css:7570:.page section[data-across-final-cta="true"] h3,
+src/app/empresa/Empresa.module.css:7571:.page section[data-across-final-cta="true"] p,
+src/app/empresa/Empresa.module.css:7572:.page section[data-across-final-cta="true"] a,
+src/app/empresa/Empresa.module.css:7573:.page section[data-across-final-cta="true"] button,
+src/app/empresa/Empresa.module.css:7574:.page section[data-across-final-cta="true"] strong,
+src/app/empresa/Empresa.module.css:7575:.page section[data-across-final-cta="true"] span,
+src/app/empresa/Empresa.module.css:7576:.page section[data-across-final-cta="true"] small {
+src/app/empresa/Empresa.module.css:7582:.page .finalCta p,
+src/app/empresa/Empresa.module.css:7583:.page section[data-across-final-cta="true"] p {
+src/app/empresa/Empresa.module.css:7591:.page .finalCta *,
+src/app/empresa/Empresa.module.css:7592:.page section[data-across-final-cta="true"] * {
+src/app/empresa/Empresa.module.css:8392:   - Aplica a overview, process, finalCta, related, cards.
+src/app/empresa/Empresa.module.css:8428:  .page .finalCta h2,
+src/app/empresa/Empresa.module.css:8429:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/Empresa.module.css:8430:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/Empresa.module.css:8472:  .page .finalCta h2,
+src/app/empresa/Empresa.module.css:8473:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/Empresa.module.css:8474:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/Empresa.module.css:8518:  .page .finalCta h2,
+src/app/empresa/Empresa.module.css:8519:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/Empresa.module.css:8520:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/Empresa.module.css:8548:  .page .finalCta p,
+src/app/empresa/Empresa.module.css:8549:  .page section[data-across-final-cta="true"] p,
+src/app/empresa/Empresa.module.css:8550:  .page section[data-sector-final-cta="true"] p {
+src/app/empresa/Empresa.module.css:8566:  .page .finalCta h2,
+src/app/empresa/Empresa.module.css:8567:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/Empresa.module.css:8568:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/Empresa.module.css:8588:   - Overview/process/finalCta nunca compiten con hero.
+src/app/empresa/Empresa.module.css:8662:  .page .finalCta h2,
+src/app/empresa/Empresa.module.css:8663:  .page section[data-across-final-cta="true"] h2,
+src/app/empresa/Empresa.module.css:8664:  .page section[data-sector-final-cta="true"] h2 {
+src/app/empresa/Empresa.module.css:8712:  .page .finalCta h2,
+src/app/empresa/Empresa.module.css:8713:  .page section[data-across-final-cta="true"] h2 {
+src/app/empresa/Empresa.module.css:9087:  .page .finalCta,
+src/app/empresa/Empresa.module.css:9088:  .page section[data-across-final-cta="true"] {
+src/app/empresa/Empresa.module.css:9127:  .page .finalCta::before,
+src/app/empresa/Empresa.module.css:9128:  .page .finalCta::after,
+src/app/empresa/Empresa.module.css:9129:  .page section[data-across-final-cta="true"]::before,
+src/app/empresa/Empresa.module.css:9130:  .page section[data-across-final-cta="true"]::after {
+src/app/empresa/Empresa.module.css:9135:  .page .finalCta .finalImage,
+src/app/empresa/Empresa.module.css:9136:  .page .finalCta [class*="finalImage"],
+src/app/empresa/Empresa.module.css:9137:  .page section[data-across-final-cta="true"] .finalImage,
+src/app/empresa/Empresa.module.css:9138:  .page section[data-across-final-cta="true"] [class*="finalImage"] {
+src/app/empresa/Empresa.module.css:9145:  .page .finalCta > div:first-child,
+src/app/empresa/Empresa.module.css:9146:  .page section[data-across-final-cta="true"] > div:first-child {
+src/app/empresa/Empresa.module.css:9153:  .page .finalCta h2,
+src/app/empresa/Empresa.module.css:9154:  .page section[data-across-final-cta="true"] h2 {
+src/app/empresa/Empresa.module.css:9167:  .page .finalCta p,
+src/app/empresa/Empresa.module.css:9168:  .page section[data-across-final-cta="true"] p {
+src/app/empresa/Empresa.module.css:9180:  .page .finalCta .finalActions,
+src/app/empresa/Empresa.module.css:9181:  .page .finalCta [class*="finalActions"],
+src/app/empresa/Empresa.module.css:9182:  .page section[data-across-final-cta="true"] [class*="finalActions"] {
+src/app/empresa/Empresa.module.css:9189:  .page .finalCta .finalActions a,
+src/app/empresa/Empresa.module.css:9190:  .page .finalCta [class*="finalActions"] a,
+src/app/empresa/Empresa.module.css:9191:  .page section[data-across-final-cta="true"] [class*="finalActions"] a {
+src/app/empresa/Empresa.module.css:9210:   No mezcla con finalCta.
+src/app/empresa/Empresa.module.css:9242:   DarkBand restaurado correctamente:
+src/app/empresa/Empresa.module.css:9347:   finalCta usa SU PROPIA imagen definida en --mobile-bg del page.tsx.
+src/app/empresa/Empresa.module.css:9351:  .page .finalCta,
+src/app/empresa/Empresa.module.css:9352:  .page section[data-across-final-cta="true"] {
+src/app/empresa/Empresa.module.css:9380:  .page .finalCta::before,
+src/app/empresa/Empresa.module.css:9381:  .page .finalCta::after,
+src/app/empresa/Empresa.module.css:9382:  .page section[data-across-final-cta="true"]::before,
+src/app/empresa/Empresa.module.css:9383:  .page section[data-across-final-cta="true"]::after {
+src/app/empresa/Empresa.module.css:9388:  .page .finalCta .finalImage,
+src/app/empresa/Empresa.module.css:9389:  .page .finalCta [class*="finalImage"],
+src/app/empresa/Empresa.module.css:9390:  .page section[data-across-final-cta="true"] .finalImage,
+src/app/empresa/Empresa.module.css:9391:  .page section[data-across-final-cta="true"] [class*="finalImage"] {
+src/app/empresa/Empresa.module.css:9398:  .page .finalCta > div:first-child,
+src/app/empresa/Empresa.module.css:9399:  .page section[data-across-final-cta="true"] > div:first-child {
+src/app/empresa/oficinas/Oficinas.module.css:270:.finalCta h2 {
+src/app/empresa/oficinas/Oficinas.module.css:510:.finalCta {
+src/app/empresa/oficinas/Oficinas.module.css:518:.finalCta > div:first-child {
+src/app/empresa/oficinas/Oficinas.module.css:523:.finalCta p {
+src/app/empresa/oficinas/Oficinas.module.css:642:  .finalCta {
+src/app/empresa/oficinas/Oficinas.module.css:707:  .finalCta h2 {
+src/app/empresa/oficinas/Oficinas.module.css:1384:.finalCta {
+src/app/empresa/oficinas/Oficinas.module.css:1388:.finalCta > div:first-child {
+src/app/empresa/oficinas/Oficinas.module.css:1540:.finalCta {
+src/app/empresa/oficinas/Oficinas.module.css:1544:.finalCta > div:first-child {
+src/app/empresa/oficinas/Oficinas.module.css:1587:/* Servicios conecta directo con proceso */
+src/app/empresa/oficinas/Oficinas.module.css:1939:.finalCta {
+src/app/empresa/oficinas/Oficinas.module.css:1952:.finalCta > div:first-child {
+src/app/empresa/oficinas/Oficinas.module.css:1963:.finalCta h2 {
+src/app/empresa/oficinas/Oficinas.module.css:1971:.finalCta p {
+src/app/empresa/oficinas/Oficinas.module.css:2024:  .finalCta > div:first-child {
+src/app/empresa/oficinas/Oficinas.module.css:2060:  .finalCta > div:first-child {
+src/app/empresa/oficinas/Oficinas.module.css:2131:/* Métricas horizontales compactas */
+src/app/empresa/oficinas/Oficinas.module.css:2218:.finalCta {
+src/app/empresa/oficinas/Oficinas.module.css:2337:/* Métricas horizontales compactas */
+src/app/empresa/oficinas/Oficinas.module.css:2424:.finalCta {
+src/app/empresa/oficinas/Oficinas.module.css:2576:.finalCta {
+src/app/empresa/oficinas/Oficinas.module.css:4048:   - services y finalCta usan --mobile-bg
+src/app/empresa/oficinas/Oficinas.module.css:4049:   - si no hay imagen mobile, usa imagen desktop detectada
+src/app/empresa/oficinas/Oficinas.module.css:4076:  .finalCta {
+src/app/empresa/oficinas/Oficinas.module.css:4096:  .finalCta {
+src/app/empresa/oficinas/Oficinas.module.css:4101:  .finalCta::before {
+src/app/empresa/oficinas/Oficinas.module.css:4116:  .finalCta::after {
+src/app/empresa/oficinas/Oficinas.module.css:4133:  .finalCta > *:not(.finalImage),
+src/app/empresa/oficinas/Oficinas.module.css:4147:  .finalCta h2 {
+src/app/empresa/oficinas/Oficinas.module.css:4175:  .finalCta > div:first-child {
+src/app/empresa/oficinas/Oficinas.module.css:4183:  .finalCta p {
+src/app/empresa/oficinas/Oficinas.module.css:4217:  .finalCta {
+src/app/empresa/oficinas/Oficinas.module.css:4222:  .finalCta h2 {
+src/app/empresa/oficinas/Oficinas.module.css:5516:.finalCta a,
+src/app/empresa/oficinas/Oficinas.module.css:5517:.cta a,
+src/app/empresa/oficinas/Oficinas.module.css:5551:.finalCta h2,
+src/app/empresa/oficinas/Oficinas.module.css:5552:.cta h2 {
+src/app/empresa/oficinas/Oficinas.module.css:5557:.finalCta p,
+src/app/empresa/oficinas/Oficinas.module.css:5558:.cta p {
+src/app/empresa/oficinas/Oficinas.module.css:6541:  .finalCta [class*="image"],
+src/app/empresa/oficinas/Oficinas.module.css:6542:  .finalCta [class*="Image"],
+src/app/empresa/oficinas/Oficinas.module.css:6543:  .finalCta [class*="media"],
+src/app/empresa/oficinas/Oficinas.module.css:6544:  .finalCta [class*="Media"] {
+src/app/empresa/oficinas/Oficinas.module.css:6550:  .finalCta {
+src/app/empresa/oficinas/Oficinas.module.css:7019:   finalCta / data-across-final-cta.
+src/app/empresa/oficinas/Oficinas.module.css:7062:  .page section[data-across-final-cta="true"] {
+src/app/empresa/oficinas/Oficinas.module.css:7078:  .page section[data-across-final-cta="true"] a:nth-of-type(2),
+src/app/empresa/oficinas/Oficinas.module.css:7079:  .page section[data-sector-final-cta="true"] a:nth-of-type(2),
+src/app/empresa/oficinas/Oficinas.module.css:7080:  .page .finalCta a:nth-of-type(2) {
+src/app/empresa/oficinas/Oficinas.module.css:7084:  .page section[data-across-final-cta="true"] a:first-of-type,
+src/app/empresa/oficinas/Oficinas.module.css:7085:  .page section[data-sector-final-cta="true"] a:first-of-type,
+src/app/empresa/oficinas/Oficinas.module.css:7086:  .page .finalCta a:first-of-type {
+src/app/empresa/oficinas/Oficinas.module.css:7386:   Solo afecta hero, no overview ni process.
+src/app/empresa/oficinas/Oficinas.module.css:7559:.page .finalCta h1,
+src/app/empresa/oficinas/Oficinas.module.css:7560:.page .finalCta h2,
+src/app/empresa/oficinas/Oficinas.module.css:7561:.page .finalCta h3,
+src/app/empresa/oficinas/Oficinas.module.css:7562:.page .finalCta p,
+src/app/empresa/oficinas/Oficinas.module.css:7563:.page .finalCta a,
+src/app/empresa/oficinas/Oficinas.module.css:7564:.page .finalCta button,
+src/app/empresa/oficinas/Oficinas.module.css:7565:.page .finalCta strong,
+src/app/empresa/oficinas/Oficinas.module.css:7566:.page .finalCta span,
+src/app/empresa/oficinas/Oficinas.module.css:7567:.page .finalCta small,
+src/app/empresa/oficinas/Oficinas.module.css:7568:.page section[data-across-final-cta="true"] h1,
+src/app/empresa/oficinas/Oficinas.module.css:7569:.page section[data-across-final-cta="true"] h2,
+src/app/empresa/oficinas/Oficinas.module.css:7570:.page section[data-across-final-cta="true"] h3,
+src/app/empresa/oficinas/Oficinas.module.css:7571:.page section[data-across-final-cta="true"] p,
+src/app/empresa/oficinas/Oficinas.module.css:7572:.page section[data-across-final-cta="true"] a,
+src/app/empresa/oficinas/Oficinas.module.css:7573:.page section[data-across-final-cta="true"] button,
+src/app/empresa/oficinas/Oficinas.module.css:7574:.page section[data-across-final-cta="true"] strong,
+src/app/empresa/oficinas/Oficinas.module.css:7575:.page section[data-across-final-cta="true"] span,
+src/app/empresa/oficinas/Oficinas.module.css:7576:.page section[data-across-final-cta="true"] small {
+src/app/empresa/oficinas/Oficinas.module.css:7582:.page .finalCta p,
