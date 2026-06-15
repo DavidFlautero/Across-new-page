@@ -6,7 +6,6 @@ import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import styles from "./Recursos.module.css";
-import homeStyles from "@/components/sections/HomeCorporateFinal.module.css";
 import aereoStyles from "../servicios/transporte-aereo/TransporteAereo.module.css";
 import heroStyles from "../empresa/quienes-somos/QuienesSomos.module.css";
 
@@ -167,10 +166,10 @@ const copy = {
     ],
     allContacts: "Ver todos los contactos",
 
-    ctaTitle: "¿Necesitas ayuda con tu operación?",
+    ctaTitle: "Acompañamos tu operación con soporte experto",
     ctaText:
       "Nuestro equipo está listo para asesorarte en cada paso del proceso logístico.",
-    ctaButton: "Contactar con un asesor",
+    ctaButton: "Contactar con un especialista",
   },
 
   en: {
@@ -282,10 +281,10 @@ const copy = {
     ],
     allContacts: "View all contacts",
 
-    ctaTitle: "Need help with your operation?",
+    ctaTitle: "Need help planning your operation?",
     ctaText:
       "Our team is ready to advise you at every step of the logistics process.",
-    ctaButton: "Contact an advisor",
+    ctaButton: "Contact a specialist",
   },
 
   zh: {
@@ -564,11 +563,48 @@ export default function RecursosPage() {
           </div>
         </section>
 
-<section className={homeStyles.homeFinalCta}>
-          <div className={homeStyles.homeFinalCtaInner}>
-            <div>
+<section className={styles.resourceFinalCta}>
+          <picture className={styles.resourceFinalCtaBg} aria-hidden="true">
+            <source media="(max-width: 760px)" srcSet="/images/operador/contactcenter-mobile.png" />
+            <img src="/images/operador/contactcenter.png" alt="" />
+          </picture>
+          <div className={styles.resourceFinalCtaInner}>
+            <div className={styles.resourceFinalCtaCopy}>
+              <span className={styles.ctaKicker}>
+                {locale === "es"
+                  ? "Soporte operativo"
+                  : locale === "en"
+                    ? "Operational support"
+                    : "运营支持"}
+              </span>
+
               <h2>{t.ctaTitle}</h2>
               <p>{t.ctaText}</p>
+
+              <ul className={styles.ctaProof}>
+                <li>
+                  {locale === "es"
+                    ? "Revisión documental"
+                    : locale === "en"
+                      ? "Document review"
+                      : "文件审核"}
+                </li>
+                <li>
+                  {locale === "es"
+                    ? "Recursos técnicos"
+                    : locale === "en"
+                      ? "Technical resources"
+                      : "技术资源"}
+                </li>
+                <li>
+                  {locale === "es"
+                    ? "Asesoría logística"
+                    : locale === "en"
+                      ? "Logistics guidance"
+                      : "物流咨询"}
+                </li>
+              </ul>
+
               <Link href="/contacto">{t.ctaButton}</Link>
             </div>
           </div>

@@ -3809,3 +3809,436 @@
 }
 
 /* END HOME CTA PHOTO RIGHT FIT */
+
+/* HOME CTA PREMIUM FINAL DETAILS
+   Detalles finos para el CTA compartido Home + Recursos.
+   No cambia altura principal, solo acabado visual.
+*/
+
+.homeFinalCta {
+  border-top: 1px solid rgba(214,192,141,.20) !important;
+  border-bottom: 1px solid rgba(214,192,141,.16) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.05),
+    inset 0 -1px 0 rgba(214,192,141,.12) !important;
+}
+
+.homeFinalCta h2 {
+  text-shadow:
+    0 10px 28px rgba(0,0,0,.36),
+    0 1px 0 rgba(255,255,255,.04) !important;
+}
+
+.homeFinalCta p {
+  color: rgba(255,255,255,.80) !important;
+}
+
+.homeFinalCta a {
+  border-color: rgba(214,192,141,.38) !important;
+  box-shadow:
+    0 18px 42px rgba(0,0,0,.28),
+    inset 0 1px 0 rgba(255,255,255,.16) !important;
+}
+
+.homeFinalCta a:hover {
+  transform: translateY(-1px) !important;
+  border-color: rgba(214,192,141,.62) !important;
+}
+
+/* END HOME CTA PREMIUM FINAL DETAILS */
+
+/* SHARED HOME CTA COMPACT HEIGHT
+   Compacta el CTA compartido sin romper la imagen.
+   Aplica en Home y Recursos.
+*/
+
+.homeFinalCta {
+  min-height: clamp(320px, 24vw, 430px) !important;
+  padding: clamp(3rem, 4vw, 4.2rem) 0 !important;
+}
+
+.homeFinalCtaInner > div {
+  max-width: 680px !important;
+}
+
+.homeFinalCta h2 {
+  max-width: 680px !important;
+  font-size: clamp(2.75rem, 4.5vw, 4.85rem) !important;
+  line-height: .92 !important;
+  letter-spacing: -.07em !important;
+}
+
+.homeFinalCta p {
+  max-width: 660px !important;
+  margin-top: .9rem !important;
+}
+
+.homeFinalCta a {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 760px) {
+  .homeFinalCta {
+    min-height: 520px !important;
+    padding-top: 3.6rem !important;
+    padding-bottom: 3.8rem !important;
+  }
+
+  .homeFinalCta h2 {
+    font-size: clamp(2rem, 8vw, 2.8rem) !important;
+  }
+}
+
+/* END SHARED HOME CTA COMPACT HEIGHT */
+
+/* HOME RECURSOS CTA COMPACT BAND FINAL
+   Convierte el CTA final en una banda compacta.
+   No debe parecer hero.
+   Fuerza imagen visible en mobile.
+*/
+
+.homeFinalCta {
+  min-height: 300px !important;
+  padding: 2.35rem 0 2.45rem !important;
+  display: flex !important;
+  align-items: center !important;
+  overflow: hidden !important;
+
+  background-color: #07111d !important;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(5, 11, 18, .96) 0%,
+      rgba(7, 17, 29, .91) 42%,
+      rgba(7, 17, 29, .62) 66%,
+      rgba(7, 17, 29, .20) 100%
+    ),
+    url("/images/operador/contacenter.png") !important;
+  background-position:
+    center center,
+    right center !important;
+  background-size:
+    100% 100%,
+    auto 100% !important;
+  background-repeat:
+    no-repeat,
+    no-repeat !important;
+
+  border-top: 1px solid rgba(214,192,141,.22) !important;
+  border-bottom: 1px solid rgba(214,192,141,.16) !important;
+}
+
+.homeFinalCta::before,
+.homeFinalCta::after {
+  display: none !important;
+}
+
+.homeFinalCtaInner {
+  width: min(1180px, calc(100% - 40px)) !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.homeFinalCtaInner > div {
+  max-width: 610px !important;
+}
+
+.homeFinalCta h2 {
+  max-width: 610px !important;
+  margin: 0 !important;
+  font-size: clamp(2.15rem, 3.55vw, 3.65rem) !important;
+  line-height: .92 !important;
+  letter-spacing: -.065em !important;
+  color: #fff !important;
+}
+
+.homeFinalCta p {
+  max-width: 610px !important;
+  margin: .75rem 0 0 !important;
+  font-size: .96rem !important;
+  line-height: 1.5 !important;
+  color: rgba(255,255,255,.78) !important;
+}
+
+.homeFinalCta ul,
+.homeFinalCta [class*="ctaProof"] {
+  margin-top: .85rem !important;
+  margin-bottom: 1rem !important;
+  gap: .42rem !important;
+}
+
+.homeFinalCta [class*="ctaProof"] li {
+  min-height: 28px !important;
+  padding: 0 .72rem !important;
+  font-size: .68rem !important;
+}
+
+.homeFinalCta a {
+  min-height: 40px !important;
+  margin-top: 0 !important;
+  padding: 0 1rem !important;
+  font-size: .72rem !important;
+}
+
+/* notebooks y pantallas medianas */
+@media (min-width: 761px) and (max-width: 1200px) {
+  .homeFinalCta {
+    min-height: 280px !important;
+    padding: 2.1rem 0 !important;
+    background-size:
+      100% 100%,
+      auto 94% !important;
+  }
+
+  .homeFinalCta h2 {
+    font-size: clamp(2rem, 3.2vw, 3rem) !important;
+  }
+}
+
+/* mobile: mostrar imagen sí o sí, pero como fondo inferior/derecho */
+@media (max-width: 760px) {
+  .homeFinalCta {
+    min-height: 430px !important;
+    padding: 3rem 0 2.7rem !important;
+    align-items: flex-start !important;
+
+    background-color: #07111d !important;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(5, 11, 18, .96) 0%,
+        rgba(7, 17, 29, .88) 42%,
+        rgba(7, 17, 29, .58) 72%,
+        rgba(7, 17, 29, .24) 100%
+      ),
+      url("/images/operador/contacenter-mobile.png") !important;
+    background-position:
+      center center,
+      center bottom !important;
+    background-size:
+      100% 100%,
+      auto 58% !important;
+    background-repeat:
+      no-repeat,
+      no-repeat !important;
+  }
+
+  .homeFinalCtaInner {
+    width: calc(100% - 56px) !important;
+    margin: 0 auto !important;
+  }
+
+  .homeFinalCtaInner > div {
+    max-width: 100% !important;
+  }
+
+  .homeFinalCta h2 {
+    max-width: 320px !important;
+    font-size: clamp(1.85rem, 7vw, 2.45rem) !important;
+    line-height: .95 !important;
+    letter-spacing: -.055em !important;
+  }
+
+  .homeFinalCta p {
+    max-width: 310px !important;
+    font-size: .9rem !important;
+    line-height: 1.48 !important;
+  }
+
+  .homeFinalCta [class*="ctaProof"] {
+    display: grid !important;
+    gap: .42rem !important;
+    margin: .85rem 0 1rem !important;
+  }
+
+  .homeFinalCta [class*="ctaProof"] li {
+    width: fit-content !important;
+    min-height: 29px !important;
+    font-size: .68rem !important;
+  }
+
+  .homeFinalCta a {
+    min-height: 42px !important;
+    width: fit-content !important;
+    padding: 0 1.05rem !important;
+  }
+}
+
+/* mobile chico */
+@media (max-width: 430px) {
+  .homeFinalCta {
+    min-height: 410px !important;
+    padding-top: 2.8rem !important;
+    background-size:
+      100% 100%,
+      auto 52% !important;
+    background-position:
+      center center,
+      center bottom !important;
+  }
+
+  .homeFinalCta h2 {
+    max-width: 290px !important;
+    font-size: clamp(1.75rem, 8vw, 2.15rem) !important;
+  }
+
+  .homeFinalCta p {
+    max-width: 285px !important;
+  }
+}
+
+/* END HOME RECURSOS CTA COMPACT BAND FINAL */
+
+/* FIX REAL OPERATOR IMAGE PATHS FINAL
+   Usa las rutas reales detectadas en public/images/operador.
+   Aplica a Home y Recursos porque ambos usan homeFinalCta.
+*/
+.homeFinalCta {
+  background-color: #07111d !important;
+  background-image:
+    linear-gradient(90deg, rgba(5, 11, 18, .96) 0%, rgba(7, 17, 29, .90) 42%, rgba(7, 17, 29, .58) 68%, rgba(7, 17, 29, .18) 100%),
+    url("/images/operador/contactcenter.png") !important;
+  background-position:
+    center center,
+    right center !important;
+  background-size:
+    100% 100%,
+    auto 100% !important;
+  background-repeat:
+    no-repeat,
+    no-repeat !important;
+}
+
+@media (max-width: 760px) {
+  .homeFinalCta {
+    background-image:
+      linear-gradient(180deg, rgba(5, 11, 18, .96) 0%, rgba(7, 17, 29, .86) 42%, rgba(7, 17, 29, .52) 72%, rgba(7, 17, 29, .18) 100%),
+      url("/images/operador/contactcenter-mobile.png") !important;
+    background-position:
+      center center,
+      center bottom !important;
+    background-size:
+      100% 100%,
+      auto 62% !important;
+    background-repeat:
+      no-repeat,
+      no-repeat !important;
+  }
+}
+/* END FIX REAL OPERATOR IMAGE PATHS FINAL */
+
+/* HOME RECURSOS CTA MOBILE CLEAN FINAL
+   Ordena el CTA en mobile:
+   - más compacto
+   - texto arriba limpio
+   - pills en columna controlada
+   - imagen abajo suave
+*/
+
+@media (max-width: 760px) {
+  .homeFinalCta {
+    min-height: 390px !important;
+    padding: 2.35rem 0 2.15rem !important;
+    display: flex !important;
+    align-items: flex-start !important;
+
+    background-color: #07111d !important;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(5, 11, 18, .98) 0%,
+        rgba(7, 17, 29, .94) 42%,
+        rgba(7, 17, 29, .70) 68%,
+        rgba(7, 17, 29, .36) 100%
+      ),
+      url("/images/operador/contactcenter-mobile.png") !important;
+    background-position:
+      center center,
+      center bottom !important;
+    background-size:
+      100% 100%,
+      auto 46% !important;
+    background-repeat:
+      no-repeat,
+      no-repeat !important;
+  }
+
+  .homeFinalCtaInner {
+    width: calc(100% - 44px) !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+  }
+
+  .homeFinalCtaInner > div {
+    max-width: 100% !important;
+  }
+
+  .homeFinalCta h2 {
+    max-width: 310px !important;
+    margin: 0 !important;
+    font-size: clamp(1.7rem, 7vw, 2.12rem) !important;
+    line-height: .94 !important;
+    letter-spacing: -.055em !important;
+  }
+
+  .homeFinalCta p {
+    max-width: 310px !important;
+    margin-top: .72rem !important;
+    font-size: .86rem !important;
+    line-height: 1.48 !important;
+  }
+
+  .homeFinalCta ul,
+  .homeFinalCta [class*="ctaProof"] {
+    max-width: 310px !important;
+    margin: .85rem 0 1rem !important;
+    padding: 0 !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: .42rem !important;
+  }
+
+  .homeFinalCta [class*="ctaProof"] li {
+    width: fit-content !important;
+    min-height: 28px !important;
+    padding: 0 .72rem !important;
+    font-size: .67rem !important;
+    line-height: 1 !important;
+  }
+
+  .homeFinalCta a {
+    min-height: 40px !important;
+    width: fit-content !important;
+    max-width: 100% !important;
+    padding: 0 1rem !important;
+    font-size: .68rem !important;
+    white-space: nowrap !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .homeFinalCta {
+    min-height: 400px !important;
+    padding-top: 2.15rem !important;
+    background-size:
+      100% 100%,
+      auto 42% !important;
+  }
+
+  .homeFinalCtaInner {
+    width: calc(100% - 38px) !important;
+  }
+
+  .homeFinalCta h2 {
+    max-width: 285px !important;
+    font-size: clamp(1.55rem, 7.6vw, 1.95rem) !important;
+  }
+
+  .homeFinalCta p {
+    max-width: 285px !important;
+    font-size: .83rem !important;
+  }
+}
+
+/* END HOME RECURSOS CTA MOBILE CLEAN FINAL */

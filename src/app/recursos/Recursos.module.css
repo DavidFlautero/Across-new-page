@@ -2397,3 +2397,1247 @@
 }
 
 /* END RECURSOS HOME FINAL CTA EXACT */
+
+/* RECURSOS PREMIUM FINAL STYLE
+   Acabado corporativo premium para toda la página Recursos:
+   líneas doradas finas, acentos azules, profundidad y sombras.
+*/
+
+/* fondo general más fino */
+.page {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(214, 192, 141, .18), transparent 28rem),
+    radial-gradient(circle at 88% 22%, rgba(23, 50, 71, .12), transparent 34rem),
+    linear-gradient(180deg, #f7f3ea 0%, #f3efe8 42%, #efe8dc 100%) !important;
+  color: #07111d !important;
+}
+
+/* líneas divisorias elegantes entre bloques */
+.page section {
+  position: relative !important;
+}
+
+.page section:not(:first-child)::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 50% !important;
+  width: min(1180px, calc(100% - 40px)) !important;
+  height: 1px !important;
+  transform: translateX(-50%) !important;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(214, 192, 141, .18) 12%,
+      rgba(184, 137, 52, .42) 50%,
+      rgba(23, 50, 71, .20) 78%,
+      transparent 100%
+    ) !important;
+  pointer-events: none !important;
+}
+
+/* hero con profundidad */
+.hero {
+  box-shadow:
+    inset 0 -1px 0 rgba(214, 192, 141, .22),
+    0 28px 80px rgba(7, 17, 29, .10) !important;
+}
+
+.hero::after {
+  background:
+    radial-gradient(circle at 18% 28%, rgba(214, 192, 141, .16), transparent 24rem),
+    radial-gradient(circle at 88% 36%, rgba(23, 50, 71, .22), transparent 30rem),
+    linear-gradient(180deg, rgba(255,255,255,.04), transparent 45%) !important;
+}
+
+/* títulos con detalle elegante */
+.title,
+.sectionIntro h2,
+.downloadPanel h2,
+.downloadColumn h3,
+.faqItem h3,
+.faqItem summary,
+.contactCta h2 {
+  text-rendering: geometricPrecision !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/* eyebrow / etiquetas */
+.eyebrow,
+.sectionIntro span,
+.downloadPanel > span {
+  color: #173247 !important;
+  letter-spacing: .24em !important;
+  text-transform: uppercase !important;
+  font-weight: 950 !important;
+}
+
+.eyebrow::after,
+.sectionIntro span::after,
+.downloadPanel > span::after {
+  content: "" !important;
+  display: inline-block !important;
+  width: 42px !important;
+  height: 1px !important;
+  margin-left: .85rem !important;
+  vertical-align: middle !important;
+  background: linear-gradient(90deg, #b88934, transparent) !important;
+}
+
+/* barra de confianza / comandos */
+.commandBar {
+  border: 1px solid rgba(214, 192, 141, .22) !important;
+  box-shadow:
+    0 24px 70px rgba(7,17,29,.20),
+    inset 0 1px 0 rgba(255,255,255,.08) !important;
+}
+
+.commandItem {
+  position: relative !important;
+}
+
+.commandItem:not(:last-child)::after {
+  content: "" !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 22% !important;
+  width: 1px !important;
+  height: 56% !important;
+  background: linear-gradient(180deg, transparent, rgba(214,192,141,.30), transparent) !important;
+}
+
+.commandItem i {
+  border-color: rgba(214,192,141,.45) !important;
+  box-shadow:
+    0 0 0 6px rgba(214,192,141,.055),
+    inset 0 1px 0 rgba(255,255,255,.08) !important;
+}
+
+/* FAQ premium */
+.faqSection {
+  background:
+    radial-gradient(circle at 12% 16%, rgba(214,192,141,.12), transparent 24rem),
+    linear-gradient(180deg, rgba(255,255,255,.34), rgba(247,243,234,.08)) !important;
+}
+
+.faqList {
+  border: 1px solid rgba(7,17,29,.08) !important;
+  box-shadow:
+    0 28px 80px rgba(7,17,29,.08),
+    inset 0 1px 0 rgba(255,255,255,.72) !important;
+}
+
+.faqItem {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.64), rgba(247,243,234,.44)) !important;
+  border-bottom: 1px solid rgba(7,17,29,.08) !important;
+  transition: background .22s ease, transform .22s ease, box-shadow .22s ease !important;
+}
+
+.faqItem:hover {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.86), rgba(247,243,234,.62)) !important;
+  box-shadow: 0 16px 38px rgba(7,17,29,.06) !important;
+}
+
+.faqItem summary {
+  color: #07111d !important;
+}
+
+.faqItem summary::marker {
+  color: #b88934 !important;
+}
+
+/* descargas: más joya corporativa */
+.downloads {
+  border-color: rgba(184, 137, 52, .20) !important;
+  box-shadow:
+    0 38px 100px rgba(7,17,29,.13),
+    0 10px 32px rgba(184,137,52,.08),
+    inset 0 1px 0 rgba(255,255,255,.84) !important;
+}
+
+.downloads::before {
+  opacity: .54 !important;
+}
+
+.downloadPanel h2::after,
+.sectionIntro h2::after {
+  color: #173247 !important;
+}
+
+.downloadColumns {
+  gap: clamp(1.6rem, 2.2vw, 2.4rem) !important;
+}
+
+.downloadColumn {
+  position: relative !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(184,137,52,.20) !important;
+  box-shadow:
+    0 24px 62px rgba(7,17,29,.09),
+    0 8px 22px rgba(184,137,52,.05),
+    inset 0 1px 0 rgba(255,255,255,.82) !important;
+}
+
+.downloadColumn::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 0 auto 0 !important;
+  height: 3px !important;
+  background: linear-gradient(90deg, #b88934, rgba(214,192,141,.42), #173247) !important;
+  opacity: .78 !important;
+}
+
+.downloadColumn::after {
+  content: "" !important;
+  position: absolute !important;
+  right: -6rem !important;
+  top: -6rem !important;
+  width: 14rem !important;
+  height: 14rem !important;
+  border-radius: 999px !important;
+  background: radial-gradient(circle, rgba(214,192,141,.16), transparent 68%) !important;
+  pointer-events: none !important;
+}
+
+.downloadColumn h3 {
+  color: #07111d !important;
+}
+
+.downloadRow {
+  position: relative !important;
+}
+
+.downloadRow::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 50% !important;
+  width: 0 !important;
+  height: 1px !important;
+  background: linear-gradient(90deg, #b88934, transparent) !important;
+  transition: width .22s ease !important;
+}
+
+.downloadRow:hover::before {
+  width: 52px !important;
+}
+
+.downloadRow:hover strong {
+  color: #173247 !important;
+}
+
+/* botones de descarga más finos */
+.downloadRow em {
+  color: #07111d !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.92), rgba(244,239,228,.82)) !important;
+  border: 1px solid rgba(184,137,52,.42) !important;
+  box-shadow:
+    0 10px 22px rgba(7,17,29,.06),
+    inset 0 1px 0 rgba(255,255,255,.95) !important;
+}
+
+.downloadRow em::after {
+  content: "↓" !important;
+  margin-left: .25rem !important;
+  color: #b88934 !important;
+  font-weight: 950 !important;
+}
+
+.downloadRow em:hover {
+  color: #07111d !important;
+  transform: translateY(-1px) !important;
+  border-color: rgba(184,137,52,.72) !important;
+  box-shadow:
+    0 14px 28px rgba(7,17,29,.10),
+    inset 0 1px 0 rgba(255,255,255,.95) !important;
+}
+
+/* barra inferior de beneficios */
+.downloadBenefits {
+  background:
+    radial-gradient(circle at 0% 0%, rgba(214,192,141,.18), transparent 22rem),
+    linear-gradient(135deg, #07111d 0%, #0d1c2b 54%, #173247 100%) !important;
+  border: 1px solid rgba(214,192,141,.24) !important;
+}
+
+.downloadBenefits article:not(:last-child) {
+  border-right-color: rgba(214,192,141,.22) !important;
+}
+
+.downloadBenefits i {
+  box-shadow:
+    0 0 0 6px rgba(214,192,141,.06),
+    inset 0 1px 0 rgba(255,255,255,.08) !important;
+}
+
+.downloadBenefits strong {
+  color: #fff !important;
+}
+
+.downloadBenefits p {
+  color: rgba(255,255,255,.78) !important;
+}
+
+/* CTA local viejo por si queda algún selector */
+.contactCta {
+  border-top: 1px solid rgba(214,192,141,.20) !important;
+  border-bottom: 1px solid rgba(214,192,141,.14) !important;
+}
+
+/* mobile */
+@media (max-width: 760px) {
+  .page section:not(:first-child)::before {
+    width: calc(100% - 32px) !important;
+  }
+
+  .commandItem:not(:last-child)::after,
+  .downloadBenefits article:not(:last-child) {
+    border-right: 0 !important;
+  }
+
+  .downloadRow:hover {
+    transform: none !important;
+  }
+}
+
+/* END RECURSOS PREMIUM FINAL STYLE */
+
+/* RECURSOS DOWNLOADS PREMIUM ULTRA
+   Acabado fino para la sección Descargas:
+   tarjetas, líneas doradas, botones premium y profundidad.
+*/
+
+.downloads {
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 34px !important;
+  border: 1px solid rgba(184, 137, 52, .22) !important;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(214,192,141,.18), transparent 28rem),
+    radial-gradient(circle at 92% 26%, rgba(23,50,71,.10), transparent 32rem),
+    linear-gradient(180deg, #f8f4eb 0%, #f1eadf 100%) !important;
+  box-shadow:
+    0 44px 110px rgba(7,17,29,.14),
+    0 12px 34px rgba(184,137,52,.08),
+    inset 0 1px 0 rgba(255,255,255,.88) !important;
+}
+
+.downloads::before {
+  opacity: .45 !important;
+  filter: saturate(.9) contrast(1.05) !important;
+}
+
+.downloadPanel {
+  position: relative !important;
+}
+
+.downloadPanel::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 10.5rem !important;
+  width: 82px !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, #b88934, rgba(184,137,52,.08)) !important;
+}
+
+/* título más editorial */
+.downloadPanel h2 {
+  max-width: 850px !important;
+  color: #07111d !important;
+  text-shadow: 0 1px 0 rgba(255,255,255,.55) !important;
+}
+
+.downloadPanel > p {
+  max-width: 680px !important;
+  color: rgba(7,17,29,.68) !important;
+}
+
+/* columnas como tarjetas premium */
+.downloadColumns {
+  align-items: stretch !important;
+  gap: clamp(1.6rem, 2.4vw, 2.6rem) !important;
+}
+
+.downloadColumn {
+  position: relative !important;
+  overflow: hidden !important;
+  padding: clamp(1.35rem, 2vw, 1.8rem) !important;
+  border-radius: 24px !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.74), rgba(247,243,234,.52)) !important;
+  border: 1px solid rgba(184,137,52,.20) !important;
+  box-shadow:
+    0 26px 70px rgba(7,17,29,.10),
+    0 8px 24px rgba(184,137,52,.06),
+    inset 0 1px 0 rgba(255,255,255,.92) !important;
+  backdrop-filter: blur(12px) saturate(1.08) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(1.08) !important;
+}
+
+.downloadColumn::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 0 auto 0 !important;
+  height: 3px !important;
+  background: linear-gradient(90deg, #b88934 0%, #d6c08d 44%, #173247 100%) !important;
+}
+
+.downloadColumn::after {
+  content: "" !important;
+  position: absolute !important;
+  right: -5rem !important;
+  top: -5rem !important;
+  width: 13rem !important;
+  height: 13rem !important;
+  border-radius: 999px !important;
+  background: radial-gradient(circle, rgba(214,192,141,.18), transparent 68%) !important;
+  pointer-events: none !important;
+}
+
+.downloadColumn h3 {
+  position: relative !important;
+  margin-bottom: 1.15rem !important;
+  padding-bottom: 1.1rem !important;
+  color: #07111d !important;
+  border-bottom: 1px solid rgba(7,17,29,.10) !important;
+}
+
+.downloadColumn h3::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: -1px !important;
+  width: 74px !important;
+  height: 1px !important;
+  background: linear-gradient(90deg, #b88934, transparent) !important;
+}
+
+/* filas */
+.downloadRow {
+  min-height: 58px !important;
+  padding: .35rem .25rem !important;
+  border-bottom: 1px solid rgba(7,17,29,.085) !important;
+  border-radius: 12px !important;
+  transition:
+    transform .22s ease,
+    background .22s ease,
+    box-shadow .22s ease !important;
+}
+
+.downloadRow:hover {
+  transform: translateX(5px) !important;
+  background: rgba(255,255,255,.58) !important;
+  box-shadow: 0 12px 28px rgba(7,17,29,.07) !important;
+}
+
+.downloadRow small {
+  min-width: 28px !important;
+  color: #b88934 !important;
+  font-weight: 950 !important;
+  letter-spacing: .08em !important;
+}
+
+.downloadRow small::after {
+  background: rgba(184,137,52,.45) !important;
+}
+
+.downloadRow strong {
+  color: #07111d !important;
+  font-weight: 900 !important;
+  letter-spacing: -.015em !important;
+}
+
+/* botón descargar/ver recurso */
+.downloadRow em {
+  min-width: 122px !important;
+  height: 34px !important;
+  padding: 0 .9rem !important;
+  border-radius: 999px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: .35rem !important;
+  color: #07111d !important;
+  font-size: .72rem !important;
+  font-style: normal !important;
+  font-weight: 950 !important;
+  letter-spacing: .01em !important;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255,255,255,.90), transparent 38%),
+    linear-gradient(180deg, rgba(255,255,255,.92), rgba(244,239,228,.82)) !important;
+  border: 1px solid rgba(184,137,52,.42) !important;
+  box-shadow:
+    0 10px 22px rgba(7,17,29,.07),
+    inset 0 1px 0 rgba(255,255,255,.96) !important;
+  transition:
+    transform .2s ease,
+    border-color .2s ease,
+    box-shadow .2s ease,
+    background .2s ease !important;
+}
+
+.downloadRow em::after {
+  content: "↓" !important;
+  color: #b88934 !important;
+  font-weight: 950 !important;
+}
+
+.downloadRow em:hover {
+  transform: translateY(-1px) !important;
+  border-color: rgba(184,137,52,.78) !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.98), rgba(241,221,176,.28)) !important;
+  box-shadow:
+    0 16px 30px rgba(7,17,29,.11),
+    inset 0 1px 0 rgba(255,255,255,.98) !important;
+}
+
+/* barra inferior premium */
+.downloadBenefits {
+  margin-top: clamp(2rem, 3vw, 2.6rem) !important;
+  border-radius: 24px !important;
+  overflow: hidden !important;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(214,192,141,.20), transparent 20rem),
+    linear-gradient(135deg, #07111d 0%, #0d1c2b 52%, #173247 100%) !important;
+  border: 1px solid rgba(214,192,141,.26) !important;
+  box-shadow:
+    0 28px 74px rgba(7,17,29,.22),
+    inset 0 1px 0 rgba(255,255,255,.10) !important;
+}
+
+.downloadBenefits article {
+  position: relative !important;
+}
+
+.downloadBenefits article:not(:last-child)::after {
+  content: "" !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 18% !important;
+  width: 1px !important;
+  height: 64% !important;
+  background: linear-gradient(180deg, transparent, rgba(214,192,141,.28), transparent) !important;
+}
+
+.downloadBenefits i {
+  color: #d6c08d !important;
+  border-color: rgba(214,192,141,.74) !important;
+  background:
+    radial-gradient(circle, rgba(214,192,141,.14), transparent 62%),
+    rgba(7,17,29,.30) !important;
+  box-shadow:
+    0 0 0 7px rgba(214,192,141,.065),
+    inset 0 1px 0 rgba(255,255,255,.08) !important;
+}
+
+.downloadBenefits strong {
+  color: #fff !important;
+  font-weight: 950 !important;
+  letter-spacing: -.025em !important;
+}
+
+.downloadBenefits p {
+  color: rgba(255,255,255,.78) !important;
+}
+
+/* mobile */
+@media (max-width: 760px) {
+  .downloads {
+    border-radius: 24px !important;
+  }
+
+  .downloadColumn {
+    border-radius: 20px !important;
+  }
+
+  .downloadRow:hover {
+    transform: none !important;
+  }
+
+  .downloadRow em {
+    min-width: auto !important;
+  }
+
+  .downloadBenefits article:not(:last-child)::after {
+    display: none !important;
+  }
+}
+
+/* END RECURSOS DOWNLOADS PREMIUM ULTRA */
+
+/* RECURSOS CTA PREMIUM ATMOSPHERE FINAL
+   Imagen como atmósfera completa, no como panel.
+   CTA compacto, profesional y conectado con Recursos.
+*/
+
+.resourceFinalCta {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background-color: #07111d !important;
+  border-top: 1px solid rgba(214,192,141,.22) !important;
+  border-bottom: 1px solid rgba(214,192,141,.16) !important;
+
+  background-image:
+    radial-gradient(circle at 12% 24%, rgba(23,50,71,.28), transparent 24rem),
+    linear-gradient(
+      90deg,
+      #07111d 0%,
+      rgba(7,17,29,.98) 34%,
+      rgba(7,17,29,.90) 55%,
+      rgba(7,17,29,.62) 74%,
+      rgba(7,17,29,.34) 100%
+    ),
+    url("/images/operador/contactcenter.png") !important;
+
+  background-position:
+    center center,
+    center center,
+    right center !important;
+
+  background-size:
+    100% 100%,
+    100% 100%,
+    auto 118% !important;
+
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    no-repeat !important;
+}
+
+.resourceFinalCta::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+  background:
+    linear-gradient(90deg, rgba(7,17,29,.96) 0%, rgba(7,17,29,.78) 42%, rgba(7,17,29,.22) 100%),
+    radial-gradient(circle at 80% 16%, rgba(214,192,141,.08), transparent 18rem) !important;
+}
+
+.resourceFinalCtaInner {
+  position: relative !important;
+  z-index: 2 !important;
+  width: min(1180px, calc(100% - 64px)) !important;
+  min-height: 265px !important;
+  margin: 0 auto !important;
+  padding: 2.35rem 0 2.45rem !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.resourceFinalCtaCopy {
+  max-width: 650px !important;
+}
+
+.ctaKicker {
+  width: fit-content !important;
+  margin-bottom: .78rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: .75rem !important;
+  color: #d6c08d !important;
+  font-size: .66rem !important;
+  font-weight: 950 !important;
+  letter-spacing: .24em !important;
+  text-transform: uppercase !important;
+}
+
+.ctaKicker::before {
+  content: "" !important;
+  width: 42px !important;
+  height: 1px !important;
+  background: linear-gradient(90deg, #d6c08d, transparent) !important;
+}
+
+.resourceFinalCtaCopy h2 {
+  max-width: 650px !important;
+  margin: 0 !important;
+  color: #fff !important;
+  font-size: clamp(2.1rem, 3.15vw, 3.25rem) !important;
+  line-height: .93 !important;
+  letter-spacing: -.058em !important;
+  font-weight: 950 !important;
+  text-wrap: balance !important;
+  text-shadow: 0 12px 30px rgba(0,0,0,.34) !important;
+}
+
+.resourceFinalCtaCopy h2::after {
+  content: "." !important;
+  color: #173247 !important;
+}
+
+.resourceFinalCtaCopy p {
+  max-width: 620px !important;
+  margin: .72rem 0 0 !important;
+  color: rgba(255,255,255,.82) !important;
+  font-size: .92rem !important;
+  line-height: 1.5 !important;
+}
+
+.ctaProof {
+  max-width: 650px !important;
+  margin: .9rem 0 1rem !important;
+  padding: 0 !important;
+  list-style: none !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: .45rem !important;
+}
+
+.ctaProof li {
+  min-height: 28px !important;
+  padding: 0 .78rem !important;
+  border-radius: 999px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  color: rgba(255,255,255,.90) !important;
+  font-size: .67rem !important;
+  font-weight: 850 !important;
+  background: rgba(255,255,255,.055) !important;
+  border: 1px solid rgba(214,192,141,.25) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08) !important;
+}
+
+.ctaProof li::before {
+  content: "•" !important;
+  margin-right: .45rem !important;
+  color: #d6c08d !important;
+}
+
+.resourceFinalCtaCopy a {
+  width: fit-content !important;
+  min-height: 40px !important;
+  padding: 0 1.08rem !important;
+  border-radius: 999px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  font-size: .69rem !important;
+  font-weight: 950 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255,255,255,.16), transparent 30%),
+    linear-gradient(135deg, #07111d 0%, #0d1c2b 52%, #173247 100%) !important;
+  border: 1px solid rgba(214,192,141,.42) !important;
+  box-shadow:
+    0 18px 42px rgba(0,0,0,.24),
+    inset 0 1px 0 rgba(255,255,255,.16) !important;
+}
+
+/* notebook */
+@media (min-width: 761px) and (max-width: 1180px) {
+  .resourceFinalCta {
+    background-position:
+      center center,
+      center center,
+      110% center !important;
+    background-size:
+      100% 100%,
+      100% 100%,
+      auto 108% !important;
+  }
+
+  .resourceFinalCtaInner {
+    width: calc(100% - 48px) !important;
+    min-height: 250px !important;
+    padding: 2.1rem 0 !important;
+  }
+
+  .resourceFinalCtaCopy {
+    max-width: 560px !important;
+  }
+
+  .resourceFinalCtaCopy h2 {
+    max-width: 540px !important;
+    font-size: clamp(1.95rem, 3vw, 2.72rem) !important;
+  }
+
+  .resourceFinalCtaCopy p {
+    max-width: 530px !important;
+  }
+}
+
+/* mobile */
+@media (max-width: 760px) {
+  .resourceFinalCta {
+    background-image:
+      linear-gradient(
+        180deg,
+        #07111d 0%,
+        rgba(7,17,29,.98) 34%,
+        rgba(7,17,29,.86) 58%,
+        rgba(7,17,29,.52) 100%
+      ),
+      url("/images/operador/contactcenter-mobile.png") !important;
+
+    background-position:
+      center center,
+      center bottom !important;
+
+    background-size:
+      100% 100%,
+      auto 54% !important;
+
+    background-repeat:
+      no-repeat,
+      no-repeat !important;
+  }
+
+  .resourceFinalCta::after {
+    background:
+      linear-gradient(180deg, rgba(7,17,29,.96) 0%, rgba(7,17,29,.88) 48%, rgba(7,17,29,.38) 100%) !important;
+  }
+
+  .resourceFinalCtaInner {
+    width: calc(100% - 42px) !important;
+    min-height: 385px !important;
+    padding: 2.05rem 0 2rem !important;
+    align-items: flex-start !important;
+  }
+
+  .resourceFinalCtaCopy {
+    max-width: 100% !important;
+  }
+
+  .ctaKicker {
+    margin-bottom: .68rem !important;
+    font-size: .61rem !important;
+    letter-spacing: .22em !important;
+  }
+
+  .ctaKicker::before {
+    width: 32px !important;
+  }
+
+  .resourceFinalCtaCopy h2 {
+    max-width: 310px !important;
+    font-size: clamp(1.62rem, 6.8vw, 2.05rem) !important;
+    line-height: .95 !important;
+    letter-spacing: -.052em !important;
+  }
+
+  .resourceFinalCtaCopy p {
+    max-width: 310px !important;
+    font-size: .83rem !important;
+    line-height: 1.48 !important;
+  }
+
+  .ctaProof {
+    max-width: 310px !important;
+    margin: .8rem 0 .95rem !important;
+    display: grid !important;
+    gap: .4rem !important;
+  }
+
+  .ctaProof li {
+    width: fit-content !important;
+    min-height: 27px !important;
+    font-size: .65rem !important;
+  }
+
+  .resourceFinalCtaCopy a {
+    min-height: 39px !important;
+    padding: 0 1rem !important;
+    font-size: .66rem !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .resourceFinalCta {
+    background-size:
+      100% 100%,
+      auto 49% !important;
+  }
+
+  .resourceFinalCtaInner {
+    width: calc(100% - 36px) !important;
+    min-height: 365px !important;
+  }
+
+  .resourceFinalCtaCopy h2 {
+    max-width: 285px !important;
+    font-size: clamp(1.5rem, 7.2vw, 1.9rem) !important;
+  }
+
+  .resourceFinalCtaCopy p {
+    max-width: 285px !important;
+  }
+}
+
+/* END RECURSOS CTA PREMIUM ATMOSPHERE FINAL */
+
+/* RECURSOS CTA MOBILE FULL BACKGROUND
+   En mobile la foto cubre todo el bloque azul.
+   No queda chiquita abajo.
+*/
+
+@media (max-width: 760px) {
+  .resourceFinalCta {
+    min-height: 430px !important;
+
+    background-color: #07111d !important;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(7, 17, 29, .96) 0%,
+        rgba(7, 17, 29, .90) 38%,
+        rgba(7, 17, 29, .74) 68%,
+        rgba(7, 17, 29, .58) 100%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(7, 17, 29, .94) 0%,
+        rgba(7, 17, 29, .78) 48%,
+        rgba(7, 17, 29, .42) 100%
+      ),
+      url("/images/operador/contactcenter-mobile.png") !important;
+
+    background-position:
+      center center,
+      center center,
+      center center !important;
+
+    background-size:
+      100% 100%,
+      100% 100%,
+      cover !important;
+
+    background-repeat:
+      no-repeat,
+      no-repeat,
+      no-repeat !important;
+  }
+
+  .resourceFinalCtaInner {
+    min-height: 430px !important;
+    padding: 2.25rem 0 2.15rem !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .resourceFinalCta {
+    min-height: 420px !important;
+    background-position:
+      center center,
+      center center,
+      center center !important;
+    background-size:
+      100% 100%,
+      100% 100%,
+      cover !important;
+  }
+
+  .resourceFinalCtaInner {
+    min-height: 420px !important;
+  }
+}
+
+/* END RECURSOS CTA MOBILE FULL BACKGROUND */
+
+/* RECURSOS MOBILE CTA FORCE IMAGE ABOVE FINAL
+   Solución final mobile:
+   - la foto va en ::before
+   - overlay mucho más liviano
+   - texto encima
+   - bloque completo con imagen visible
+*/
+
+@media (max-width: 760px) {
+  .resourceFinalCta {
+    position: relative !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    min-height: 420px !important;
+    background: #07111d !important;
+  }
+
+  .resourceFinalCta::before {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    width: 100% !important;
+    height: 100% !important;
+    pointer-events: none !important;
+
+    background-image: url("/images/operador/contactcenter-mobile.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: cover !important;
+
+    opacity: 1 !important;
+    filter: brightness(.92) contrast(1.05) saturate(1.05) !important;
+  }
+
+  .resourceFinalCta::after {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(7, 17, 29, .92) 0%,
+        rgba(7, 17, 29, .78) 48%,
+        rgba(7, 17, 29, .42) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(7, 17, 29, .88) 0%,
+        rgba(7, 17, 29, .62) 52%,
+        rgba(7, 17, 29, .34) 100%
+      ) !important;
+  }
+
+  .resourceFinalCtaInner,
+  .resourceFinalCtaCopy {
+    position: relative !important;
+    z-index: 3 !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .resourceFinalCta {
+    min-height: 410px !important;
+  }
+
+  .resourceFinalCta::before {
+    background-position: center center !important;
+    background-size: cover !important;
+  }
+}
+
+/* END RECURSOS MOBILE CTA FORCE IMAGE ABOVE FINAL */
+
+/* FIX CTA MOBILE IMAGE BEFORE SPECIFICITY
+   Causa real:
+   .page section:not(:first-child)::before pisa el ::before del CTA.
+   Este bloque gana por especificidad y vuelve a poner la imagen.
+*/
+
+/* el CTA no debe usar el divisor global */
+.page .resourceFinalCta::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  transform: none !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+
+  background-image: url("/images/operador/contactcenter-mobile.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: right center !important;
+  background-size: auto 118% !important;
+
+  opacity: .88 !important;
+  filter: brightness(.82) contrast(1.05) saturate(1.05) !important;
+}
+
+.page .resourceFinalCta::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      90deg,
+      #07111d 0%,
+      rgba(7,17,29,.96) 36%,
+      rgba(7,17,29,.78) 58%,
+      rgba(7,17,29,.34) 100%
+    ) !important;
+}
+
+.page .resourceFinalCtaInner,
+.page .resourceFinalCtaCopy {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+@media (max-width: 760px) {
+  .page .resourceFinalCta {
+    position: relative !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    min-height: 420px !important;
+    background: #07111d !important;
+  }
+
+  .page .resourceFinalCta::before {
+    background-image: url("/images/operador/contactcenter-mobile.png") !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    opacity: .78 !important;
+  }
+
+  .page .resourceFinalCta::after {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(7,17,29,.94) 0%,
+        rgba(7,17,29,.84) 42%,
+        rgba(7,17,29,.56) 72%,
+        rgba(7,17,29,.34) 100%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(7,17,29,.90) 0%,
+        rgba(7,17,29,.70) 56%,
+        rgba(7,17,29,.34) 100%
+      ) !important;
+  }
+
+  .page .resourceFinalCtaInner {
+    min-height: 420px !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .page .resourceFinalCta::before {
+    background-position: center center !important;
+    background-size: cover !important;
+    opacity: .84 !important;
+  }
+}
+
+/* END FIX CTA MOBILE IMAGE BEFORE SPECIFICITY */
+
+/* RECURSOS CTA REAL PICTURE FINAL
+   Imagen real en DOM.
+   No usa background ni ::before para la foto.
+*/
+
+.resourceFinalCta {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background: #07111d !important;
+}
+
+/* anulamos pseudo conflictos anteriores */
+.resourceFinalCta::before {
+  display: none !important;
+}
+
+.resourceFinalCta::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      90deg,
+      #07111d 0%,
+      rgba(7,17,29,.98) 34%,
+      rgba(7,17,29,.84) 58%,
+      rgba(7,17,29,.42) 100%
+    ) !important;
+}
+
+.resourceFinalCtaBg {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  pointer-events: none !important;
+}
+
+.resourceFinalCtaBg img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: right center !important;
+  opacity: .82 !important;
+  filter: brightness(.86) contrast(1.05) saturate(1.04) !important;
+}
+
+.resourceFinalCtaInner,
+.resourceFinalCtaCopy {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* desktop compacto */
+@media (min-width: 761px) {
+  .resourceFinalCtaInner {
+    min-height: 265px !important;
+    padding: 2.35rem 0 2.45rem !important;
+  }
+}
+
+/* mobile: imagen real visible detrás de TODO el azul */
+@media (max-width: 760px) {
+  .resourceFinalCta {
+    min-height: 420px !important;
+  }
+
+  .resourceFinalCta::after {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(7,17,29,.94) 0%,
+        rgba(7,17,29,.84) 42%,
+        rgba(7,17,29,.58) 72%,
+        rgba(7,17,29,.34) 100%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(7,17,29,.88) 0%,
+        rgba(7,17,29,.66) 56%,
+        rgba(7,17,29,.28) 100%
+      ) !important;
+  }
+
+  .resourceFinalCtaBg img {
+    object-fit: cover !important;
+    object-position: center center !important;
+    opacity: .9 !important;
+    filter: brightness(.92) contrast(1.05) saturate(1.05) !important;
+  }
+
+  .resourceFinalCtaInner {
+    min-height: 420px !important;
+    padding: 2.1rem 0 2rem !important;
+    align-items: flex-start !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .resourceFinalCta,
+  .resourceFinalCtaInner {
+    min-height: 410px !important;
+  }
+
+  .resourceFinalCtaBg img {
+    object-position: center center !important;
+    opacity: .95 !important;
+  }
+}
+
+/* END RECURSOS CTA REAL PICTURE FINAL */
