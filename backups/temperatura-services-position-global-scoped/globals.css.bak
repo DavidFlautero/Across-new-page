@@ -5987,36 +5987,3 @@ section[class*="darkBand"] [class*="stats"] article,
 }
 /* === ACROSS GLOBAL DARKBAND LAYOUT END === */
 
-
-/* === TEMPERATURA CONTROLADA SERVICES POSITION SCOPED START === */
-/* Mismo ajuste que funcionó en DevTools.
-   Scoped solo a la página que tiene:
-   data-service-name="temperatura-controlada"
-*/
-
-main:has(section[data-service-name="temperatura-controlada"]) section[class*="services"] {
-  background-size: cover !important;
-  background-position: center 68% !important;
-  background-repeat: no-repeat !important;
-}
-
-main:has(section[data-service-name="temperatura-controlada"]) section[class*="services"]::before {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5,12,20,.46) 0%,
-      rgba(5,12,20,.18) 48%,
-      rgba(5,12,20,.04) 100%
-    ) !important;
-  opacity: 1 !important;
-}
-
-@media (max-width: 900px) {
-  main:has(section[data-service-name="temperatura-controlada"]) section[class*="services"] {
-    background-position: center 62% !important;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-  }
-}
-/* === TEMPERATURA CONTROLADA SERVICES POSITION SCOPED END === */
-

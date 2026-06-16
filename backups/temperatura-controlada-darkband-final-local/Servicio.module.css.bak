@@ -9788,273 +9788,116 @@
 }
 /* === ACROSS LOCAL DARKBAND LAYOUT END === */
 
-/* === TEMPERATURA CONTROLADA DARKBAND FINAL LOCAL START === */
-/* Segunda sección / darkBand de Temperatura Controlada.
-   El TSX ya puede tener Image, pero visualmente esta sección venía siendo dominada por CSS.
-   Por eso se fuerza el fondo en .darkBand y se apaga el img interno sin romper el layout.
 
-   Desktop: /images/transporte-cima/controltemp.png
+/* === TEMPERATURA CONTROLADA SERVICES LOCAL FINAL START === */
+/* Primera sección / cards de Temperatura Controlada.
+   La imagen viene por CSS en .services, no por el hero.
+
+   Desktop: /images/transporte-cima/climatizado.png
    Mobile : /images/transporte-climamobile/clima.png
 */
 
-@media (min-width: 901px) {
-  .page > .darkBand[data-mobile-hide-after-cert="true"],
-  .page section.darkBand[data-mobile-hide-after-cert="true"],
-  .darkBand[data-mobile-hide-after-cert="true"] {
-    position: relative !important;
-    overflow: hidden !important;
-    isolation: isolate !important;
-
-    display: grid !important;
-    grid-template-columns: .48fr .52fr !important;
-    min-height: 420px !important;
-
-    background:
-      linear-gradient(
-        90deg,
-        rgba(5,12,20,.70) 0%,
-        rgba(5,12,20,.48) 44%,
-        rgba(5,12,20,.18) 100%
-      ),
-      url("/images/transporte-cima/controltemp.png") center center / cover no-repeat !important;
-
-    background-image:
-      linear-gradient(
-        90deg,
-        rgba(5,12,20,.70) 0%,
-        rgba(5,12,20,.48) 44%,
-        rgba(5,12,20,.18) 100%
-      ),
-      url("/images/transporte-cima/controltemp.png") !important;
-
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    background-color: transparent !important;
-  }
-
-  .page > .darkBand[data-mobile-hide-after-cert="true"]::before,
-  .page section.darkBand[data-mobile-hide-after-cert="true"]::before,
-  .darkBand[data-mobile-hide-after-cert="true"]::before {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 1 !important;
-    pointer-events: none !important;
-    opacity: 1 !important;
-    background:
-      linear-gradient(
-        90deg,
-        rgba(5,12,20,.50) 0%,
-        rgba(5,12,20,.22) 48%,
-        rgba(5,12,20,.08) 100%
-      ) !important;
-  }
-
-  .page > .darkBand[data-mobile-hide-after-cert="true"]::after,
-  .page section.darkBand[data-mobile-hide-after-cert="true"]::after,
-  .darkBand[data-mobile-hide-after-cert="true"]::after {
-    opacity: 0 !important;
-    background: transparent !important;
-  }
-
-  .page > .darkBand[data-mobile-hide-after-cert="true"] > *,
-  .page section.darkBand[data-mobile-hide-after-cert="true"] > *,
-  .darkBand[data-mobile-hide-after-cert="true"] > * {
-    position: relative !important;
-    z-index: 2 !important;
-  }
-
-  .page > .darkBand[data-mobile-hide-after-cert="true"] .darkBandImage,
-  .page section.darkBand[data-mobile-hide-after-cert="true"] .darkBandImage,
-  .darkBand[data-mobile-hide-after-cert="true"] .darkBandImage,
-  .page > .darkBand[data-mobile-hide-after-cert="true"] [class*="darkBandImage"],
-  .darkBand[data-mobile-hide-after-cert="true"] [class*="darkBandImage"] {
-    display: block !important;
-    position: relative !important;
-    min-height: 420px !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    pointer-events: none !important;
-    background: transparent !important;
-  }
-
-  /* El img interno no manda visualmente: el fondo real queda en .darkBand */
-  .page > .darkBand[data-mobile-hide-after-cert="true"] .darkBandImage img,
-  .page section.darkBand[data-mobile-hide-after-cert="true"] .darkBandImage img,
-  .darkBand[data-mobile-hide-after-cert="true"] .darkBandImage img,
-  .page > .darkBand[data-mobile-hide-after-cert="true"] [class*="darkBandImage"] img,
-  .darkBand[data-mobile-hide-after-cert="true"] [class*="darkBandImage"] img {
-    opacity: 0 !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-  }
-
-  .page > .darkBand[data-mobile-hide-after-cert="true"] .darkBandContent,
-  .page section.darkBand[data-mobile-hide-after-cert="true"] .darkBandContent,
-  .darkBand[data-mobile-hide-after-cert="true"] .darkBandContent,
-  .page > .darkBand[data-mobile-hide-after-cert="true"] [class*="darkBandContent"],
-  .darkBand[data-mobile-hide-after-cert="true"] [class*="darkBandContent"] {
-    background: transparent !important;
-  }
-}
-
-@media (max-width: 900px) {
-  .page > .darkBand[data-mobile-hide-after-cert="true"],
-  .page section.darkBand[data-mobile-hide-after-cert="true"],
-  .darkBand[data-mobile-hide-after-cert="true"] {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(5,12,20,.56) 0%,
-        rgba(5,12,20,.28) 45%,
-        rgba(5,12,20,.62) 100%
-      ),
-      url("/images/transporte-climamobile/clima.png") center center / cover no-repeat !important;
-
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(5,12,20,.56) 0%,
-        rgba(5,12,20,.28) 45%,
-        rgba(5,12,20,.62) 100%
-      ),
-      url("/images/transporte-climamobile/clima.png") !important;
-
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-  }
-}
-/* === TEMPERATURA CONTROLADA DARKBAND FINAL LOCAL END === */
-
-
-/* === TEMPERATURA FINAL CTA IMAGE FIX START === */
-/* El bloque "Coordinemos su próxima carga..." es .finalCta.
-   No es .services ni .darkBand.
-*/
-
-.finalCta {
+.services {
   position: relative !important;
   overflow: hidden !important;
   background-image:
-    linear-gradient(90deg, rgba(5,12,20,.70) 0%, rgba(5,12,20,.48) 44%, rgba(5,12,20,.18) 100%),
-    var(--desktop-bg) !important;
+    linear-gradient(90deg, rgba(5,12,20,.58) 0%, rgba(5,12,20,.34) 42%, rgba(5,12,20,.12) 100%),
+    url("/images/transporte-cima/climatizado.png") !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
   background-color: transparent !important;
 }
 
-.finalCta::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  pointer-events: none !important;
+.services::before {
   background:
-    linear-gradient(90deg, rgba(5,12,20,.50) 0%, rgba(5,12,20,.22) 48%, rgba(5,12,20,.08) 100%) !important;
+    linear-gradient(90deg, rgba(5,12,20,.44) 0%, rgba(5,12,20,.18) 48%, rgba(5,12,20,.06) 100%) !important;
   opacity: 1 !important;
-  z-index: 1 !important;
 }
 
-.finalCta::after {
+.services::after {
   opacity: 0 !important;
   background: transparent !important;
 }
 
-.finalCta > * {
+.services > * {
   position: relative !important;
   z-index: 2 !important;
 }
 
-.finalImage img {
+@media (max-width: 900px) {
+  .services {
+    background-image:
+      linear-gradient(180deg, rgba(5,12,20,.48) 0%, rgba(5,12,20,.20) 45%, rgba(5,12,20,.54) 100%),
+      url("/images/transporte-climamobile/clima.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+}
+/* === TEMPERATURA CONTROLADA SERVICES LOCAL FINAL END === */
+
+
+/* === TEMPERATURA CONTROLADA DARKBAND CONTROLTEMP START === */
+/* Bloque operativo / darkBand.
+   Antes estaba leyendo cargaaerea.png desde el Image interno.
+   Ahora el fondo correcto viene por CSS local.
+
+   Desktop: /images/transporte-cima/controltemp.png
+   Mobile : /images/transporte-climamobile/clima.png
+*/
+
+.darkBand {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background-image:
+    linear-gradient(90deg, rgba(5,12,20,.70) 0%, rgba(5,12,20,.48) 44%, rgba(5,12,20,.18) 100%),
+    url("/images/transporte-cima/controltemp.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+}
+
+.darkBand::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(90deg, rgba(5,12,20,.50) 0%, rgba(5,12,20,.22) 48%, rgba(5,12,20,.08) 100%) !important;
+  opacity: 1 !important;
+}
+
+.darkBand::after {
+  opacity: 0 !important;
+  background: transparent !important;
+}
+
+.darkBand > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* La imagen interna vieja no debe mandar visualmente */
+.darkBandImage,
+.darkBandImage img {
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;
 }
 
 @media (max-width: 900px) {
-  .finalCta {
+  .darkBand {
     background-image:
       linear-gradient(180deg, rgba(5,12,20,.56) 0%, rgba(5,12,20,.28) 45%, rgba(5,12,20,.62) 100%),
-      var(--mobile-bg) !important;
+      url("/images/transporte-climamobile/clima.png") !important;
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
   }
 }
-/* === TEMPERATURA FINAL CTA IMAGE FIX END === */
-
-
-/* === TEMPERATURA SERVICES DEFINITIVO START === */
-/* Services temperatura controlada:
-   imagen propia por CSS, no hero.
-   El encuadre correcto es center 68%.
-*/
-
-.page .services[data-temp-services-bg="true"],
-.services[data-temp-services-bg="true"],
-section.services[data-temp-services-bg="true"] {
-  position: relative !important;
-  overflow: hidden !important;
-
-  background:
-    linear-gradient(90deg, rgba(5,12,20,.58) 0%, rgba(5,12,20,.34) 42%, rgba(5,12,20,.12) 100%),
-    var(--desktop-bg) center 68% / cover no-repeat !important;
-
-  background-image:
-    linear-gradient(90deg, rgba(5,12,20,.58) 0%, rgba(5,12,20,.34) 42%, rgba(5,12,20,.12) 100%),
-    var(--desktop-bg) !important;
-
-  background-size: cover !important;
-  background-position: center 68% !important;
-  background-repeat: no-repeat !important;
-  background-color: transparent !important;
-}
-
-.page .services[data-temp-services-bg="true"]::before,
-.services[data-temp-services-bg="true"]::before,
-section.services[data-temp-services-bg="true"]::before {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5,12,20,.46) 0%,
-      rgba(5,12,20,.18) 48%,
-      rgba(5,12,20,.04) 100%
-    ) !important;
-  opacity: 1 !important;
-}
-
-.page .services[data-temp-services-bg="true"]::after,
-.services[data-temp-services-bg="true"]::after,
-section.services[data-temp-services-bg="true"]::after {
-  opacity: 0 !important;
-  background: transparent !important;
-}
-
-.page .services[data-temp-services-bg="true"] > *,
-.services[data-temp-services-bg="true"] > *,
-section.services[data-temp-services-bg="true"] > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-@media (max-width: 900px) {
-  .page .services[data-temp-services-bg="true"],
-  .services[data-temp-services-bg="true"],
-  section.services[data-temp-services-bg="true"] {
-    background:
-      linear-gradient(180deg, rgba(5,12,20,.48) 0%, rgba(5,12,20,.20) 45%, rgba(5,12,20,.54) 100%),
-      var(--mobile-bg) center 62% / cover no-repeat !important;
-
-    background-image:
-      linear-gradient(180deg, rgba(5,12,20,.48) 0%, rgba(5,12,20,.20) 45%, rgba(5,12,20,.54) 100%),
-      var(--mobile-bg) !important;
-
-    background-size: cover !important;
-    background-position: center 62% !important;
-    background-repeat: no-repeat !important;
-  }
-}
-/* === TEMPERATURA SERVICES DEFINITIVO END === */
+/* === TEMPERATURA CONTROLADA DARKBAND CONTROLTEMP END === */
 

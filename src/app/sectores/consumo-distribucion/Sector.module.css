@@ -9788,3 +9788,143 @@
 }
 /* === ACROSS LOCAL DARKBAND LAYOUT END === */
 
+
+/* === ALMACEN DISTRIBUCION IMAGES FINAL START === */
+/* Imágenes locales por bloque.
+   Hero queda intacto.
+   Services : /images/almacen/almacen.png
+   DarkBand : /images/almacen/almacensegunda.png
+   FinalCta : /images/almacen/almacentercer.png
+*/
+
+/* BLOQUE 1 / SERVICES */
+.services[data-almacen-services-bg="true"] {
+  position: relative !important;
+  overflow: hidden !important;
+  background:
+    linear-gradient(90deg, rgba(5,12,20,.58) 0%, rgba(5,12,20,.34) 42%, rgba(5,12,20,.12) 100%),
+    url("/images/almacen/almacen.png") center center / cover no-repeat !important;
+  background-image:
+    linear-gradient(90deg, rgba(5,12,20,.58) 0%, rgba(5,12,20,.34) 42%, rgba(5,12,20,.12) 100%),
+    url("/images/almacen/almacen.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+}
+
+.services[data-almacen-services-bg="true"]::before {
+  background:
+    linear-gradient(90deg, rgba(5,12,20,.46) 0%, rgba(5,12,20,.18) 48%, rgba(5,12,20,.04) 100%) !important;
+  opacity: 1 !important;
+}
+
+.services[data-almacen-services-bg="true"]::after {
+  opacity: 0 !important;
+  background: transparent !important;
+}
+
+.services[data-almacen-services-bg="true"] > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* BLOQUE 2 / DARKBAND */
+.darkBand[data-almacen-darkband-bg="true"] {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background:
+    linear-gradient(90deg, rgba(5,12,20,.70) 0%, rgba(5,12,20,.48) 44%, rgba(5,12,20,.18) 100%),
+    url("/images/almacen/almacensegunda.png") center center / cover no-repeat !important;
+  background-image:
+    linear-gradient(90deg, rgba(5,12,20,.70) 0%, rgba(5,12,20,.48) 44%, rgba(5,12,20,.18) 100%),
+    url("/images/almacen/almacensegunda.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+}
+
+.darkBand[data-almacen-darkband-bg="true"]::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(90deg, rgba(5,12,20,.50) 0%, rgba(5,12,20,.22) 48%, rgba(5,12,20,.08) 100%) !important;
+  opacity: 1 !important;
+}
+
+.darkBand[data-almacen-darkband-bg="true"]::after {
+  opacity: 0 !important;
+  background: transparent !important;
+}
+
+.darkBand[data-almacen-darkband-bg="true"] > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.darkBand[data-almacen-darkband-bg="true"] img {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* BLOQUE 3 / FINAL CTA */
+.finalCta[data-almacen-final-bg="true"] {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background:
+    linear-gradient(90deg, rgba(5,12,20,.70) 0%, rgba(5,12,20,.48) 44%, rgba(5,12,20,.18) 100%),
+    url("/images/almacen/almacentercer.png") center center / cover no-repeat !important;
+  background-image:
+    linear-gradient(90deg, rgba(5,12,20,.70) 0%, rgba(5,12,20,.48) 44%, rgba(5,12,20,.18) 100%),
+    url("/images/almacen/almacentercer.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+}
+
+.finalCta[data-almacen-final-bg="true"]::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(90deg, rgba(5,12,20,.50) 0%, rgba(5,12,20,.22) 48%, rgba(5,12,20,.08) 100%) !important;
+  opacity: 1 !important;
+}
+
+.finalCta[data-almacen-final-bg="true"]::after {
+  opacity: 0 !important;
+  background: transparent !important;
+}
+
+.finalCta[data-almacen-final-bg="true"] > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.finalCta[data-almacen-final-bg="true"] img {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+@media (max-width: 900px) {
+  .services[data-almacen-services-bg="true"],
+  .darkBand[data-almacen-darkband-bg="true"],
+  .finalCta[data-almacen-final-bg="true"] {
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+}
+/* === ALMACEN DISTRIBUCION IMAGES FINAL END === */
+

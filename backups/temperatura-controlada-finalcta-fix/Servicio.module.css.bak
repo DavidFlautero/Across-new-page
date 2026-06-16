@@ -9788,6 +9788,56 @@
 }
 /* === ACROSS LOCAL DARKBAND LAYOUT END === */
 
+
+/* === TEMPERATURA CONTROLADA SERVICES LOCAL FINAL START === */
+/* Primera sección / cards de Temperatura Controlada.
+   La imagen viene por CSS en .services, no por el hero.
+
+   Desktop: /images/transporte-cima/climatizado.png
+   Mobile : /images/transporte-climamobile/clima.png
+*/
+
+.services {
+  position: relative !important;
+  overflow: hidden !important;
+  background-image:
+    linear-gradient(90deg, rgba(5,12,20,.58) 0%, rgba(5,12,20,.34) 42%, rgba(5,12,20,.12) 100%),
+    url("/images/transporte-cima/climatizado.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+}
+
+.services::before {
+  background:
+    linear-gradient(90deg, rgba(5,12,20,.44) 0%, rgba(5,12,20,.18) 48%, rgba(5,12,20,.06) 100%) !important;
+  opacity: 1 !important;
+}
+
+.services::after {
+  opacity: 0 !important;
+  background: transparent !important;
+}
+
+.services > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+@media (max-width: 900px) {
+  .services {
+    background-image:
+      linear-gradient(180deg, rgba(5,12,20,.48) 0%, rgba(5,12,20,.20) 45%, rgba(5,12,20,.54) 100%),
+      url("/images/transporte-climamobile/clima.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+}
+/* === TEMPERATURA CONTROLADA SERVICES LOCAL FINAL END === */
+
+
 /* === TEMPERATURA CONTROLADA DARKBAND FINAL LOCAL START === */
 /* Segunda sección / darkBand de Temperatura Controlada.
    El TSX ya puede tener Image, pero visualmente esta sección venía siendo dominada por CSS.
@@ -9927,134 +9977,4 @@
   }
 }
 /* === TEMPERATURA CONTROLADA DARKBAND FINAL LOCAL END === */
-
-
-/* === TEMPERATURA FINAL CTA IMAGE FIX START === */
-/* El bloque "Coordinemos su próxima carga..." es .finalCta.
-   No es .services ni .darkBand.
-*/
-
-.finalCta {
-  position: relative !important;
-  overflow: hidden !important;
-  background-image:
-    linear-gradient(90deg, rgba(5,12,20,.70) 0%, rgba(5,12,20,.48) 44%, rgba(5,12,20,.18) 100%),
-    var(--desktop-bg) !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-color: transparent !important;
-}
-
-.finalCta::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  pointer-events: none !important;
-  background:
-    linear-gradient(90deg, rgba(5,12,20,.50) 0%, rgba(5,12,20,.22) 48%, rgba(5,12,20,.08) 100%) !important;
-  opacity: 1 !important;
-  z-index: 1 !important;
-}
-
-.finalCta::after {
-  opacity: 0 !important;
-  background: transparent !important;
-}
-
-.finalCta > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-.finalImage img {
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-}
-
-@media (max-width: 900px) {
-  .finalCta {
-    background-image:
-      linear-gradient(180deg, rgba(5,12,20,.56) 0%, rgba(5,12,20,.28) 45%, rgba(5,12,20,.62) 100%),
-      var(--mobile-bg) !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-  }
-}
-/* === TEMPERATURA FINAL CTA IMAGE FIX END === */
-
-
-/* === TEMPERATURA SERVICES DEFINITIVO START === */
-/* Services temperatura controlada:
-   imagen propia por CSS, no hero.
-   El encuadre correcto es center 68%.
-*/
-
-.page .services[data-temp-services-bg="true"],
-.services[data-temp-services-bg="true"],
-section.services[data-temp-services-bg="true"] {
-  position: relative !important;
-  overflow: hidden !important;
-
-  background:
-    linear-gradient(90deg, rgba(5,12,20,.58) 0%, rgba(5,12,20,.34) 42%, rgba(5,12,20,.12) 100%),
-    var(--desktop-bg) center 68% / cover no-repeat !important;
-
-  background-image:
-    linear-gradient(90deg, rgba(5,12,20,.58) 0%, rgba(5,12,20,.34) 42%, rgba(5,12,20,.12) 100%),
-    var(--desktop-bg) !important;
-
-  background-size: cover !important;
-  background-position: center 68% !important;
-  background-repeat: no-repeat !important;
-  background-color: transparent !important;
-}
-
-.page .services[data-temp-services-bg="true"]::before,
-.services[data-temp-services-bg="true"]::before,
-section.services[data-temp-services-bg="true"]::before {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5,12,20,.46) 0%,
-      rgba(5,12,20,.18) 48%,
-      rgba(5,12,20,.04) 100%
-    ) !important;
-  opacity: 1 !important;
-}
-
-.page .services[data-temp-services-bg="true"]::after,
-.services[data-temp-services-bg="true"]::after,
-section.services[data-temp-services-bg="true"]::after {
-  opacity: 0 !important;
-  background: transparent !important;
-}
-
-.page .services[data-temp-services-bg="true"] > *,
-.services[data-temp-services-bg="true"] > *,
-section.services[data-temp-services-bg="true"] > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-@media (max-width: 900px) {
-  .page .services[data-temp-services-bg="true"],
-  .services[data-temp-services-bg="true"],
-  section.services[data-temp-services-bg="true"] {
-    background:
-      linear-gradient(180deg, rgba(5,12,20,.48) 0%, rgba(5,12,20,.20) 45%, rgba(5,12,20,.54) 100%),
-      var(--mobile-bg) center 62% / cover no-repeat !important;
-
-    background-image:
-      linear-gradient(180deg, rgba(5,12,20,.48) 0%, rgba(5,12,20,.20) 45%, rgba(5,12,20,.54) 100%),
-      var(--mobile-bg) !important;
-
-    background-size: cover !important;
-    background-position: center 62% !important;
-    background-repeat: no-repeat !important;
-  }
-}
-/* === TEMPERATURA SERVICES DEFINITIVO END === */
 

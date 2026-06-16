@@ -2963,7 +2963,7 @@
       rgba(5, 6, 9, .55) 100%
     ),
     radial-gradient(circle at 18% 18%, rgba(23, 50, 71, .16), transparent 24rem),
-    url("/images/transporte-cima/controltemp.png") !important;
+    url("/images/cargaaerea.png") !important;
   background-size: cover !important;
   background-position: center 48% !important;
   background-repeat: no-repeat !important;
@@ -3065,7 +3065,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/transporte-cima/controltemp.png") !important;
+    url("/images/cargaaerea.png") !important;
   background-size: cover !important;
   background-position: center 55% !important;
   background-repeat: no-repeat !important;
@@ -3104,7 +3104,7 @@
   .services {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.90)),
-      url("/images/transporte-cima/controltemp.png") !important;
+      url("/images/cargaaerea.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3116,7 +3116,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/transporte-cima/controltemp.png") !important;
+      url("/images/cargaaerea.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -5582,35 +5582,35 @@
 }
 
 /* =====================================================
-   TEMPERATURA-CONTROLADA VIEWPORT LOCK FINAL
+   ALMACEN-DISTRIBUCION VIEWPORT LOCK FINAL
    El hero NO puede comerse el bloque azul.
    Hero + trustBar = 100svh
    ===================================================== */
 
 /* Base */
 .page {
-  --temperatura-controlada-trust-h: 88px;
+  --almacen-distribucion-trust-h: 88px;
 }
 
 .page .hero {
-  height: calc(100svh - var(--temperatura-controlada-trust-h)) !important;
-  min-height: calc(100svh - var(--temperatura-controlada-trust-h)) !important;
-  max-height: calc(100svh - var(--temperatura-controlada-trust-h)) !important;
+  height: calc(100svh - var(--almacen-distribucion-trust-h)) !important;
+  min-height: calc(100svh - var(--almacen-distribucion-trust-h)) !important;
+  max-height: calc(100svh - var(--almacen-distribucion-trust-h)) !important;
   padding: 0 !important;
   overflow: hidden !important;
 }
 
 .page .trustBar {
-  height: var(--temperatura-controlada-trust-h) !important;
-  min-height: var(--temperatura-controlada-trust-h) !important;
-  max-height: var(--temperatura-controlada-trust-h) !important;
+  height: var(--almacen-distribucion-trust-h) !important;
+  min-height: var(--almacen-distribucion-trust-h) !important;
+  max-height: var(--almacen-distribucion-trust-h) !important;
   overflow: hidden !important;
 }
 
 /* Desktop normal */
 @media (min-width: 901px) {
   .page {
-    --temperatura-controlada-trust-h: 88px;
+    --almacen-distribucion-trust-h: 88px;
   }
 
   .page .content {
@@ -5659,7 +5659,7 @@
 /* Desktop bajo tipo Nest Hub */
 @media (min-width: 901px) and (max-height: 700px) {
   .page {
-    --temperatura-controlada-trust-h: 78px;
+    --almacen-distribucion-trust-h: 78px;
   }
 
   .page .content {
@@ -5691,7 +5691,7 @@
 /* iPad / tablets */
 @media (min-width: 701px) and (max-width: 900px) {
   .page {
-    --temperatura-controlada-trust-h: 108px;
+    --almacen-distribucion-trust-h: 108px;
   }
 
   .page .content {
@@ -5741,11 +5741,11 @@
 /* Mobile */
 @media (max-width: 700px) {
   .page {
-    --temperatura-controlada-trust-h: 108px;
+    --almacen-distribucion-trust-h: 108px;
   }
 
   .page .hero {
-    min-height: calc(100svh - var(--temperatura-controlada-trust-h)) !important;
+    min-height: calc(100svh - var(--almacen-distribucion-trust-h)) !important;
   }
 
   .page .content {
@@ -5797,7 +5797,7 @@
 }
 
 /* =====================================================
-   TEMPERATURA-CONTROLADA HERO REAL JSX FINAL
+   ALMACEN-DISTRIBUCION HERO REAL JSX FINAL
    Usa las clases reales:
    hero / heroImage / heroOverlay / heroInner / heroContent /
    eyebrow / title / subtitle / actions / trustBar
@@ -6201,7 +6201,7 @@
 
 
 /* =====================================================
-   TEMPERATURA-CONTROLADA HERO TEXT SPACING ONLY
+   ALMACEN-DISTRIBUCION HERO TEXT SPACING ONLY
    Solo mejora aire entre eyebrow, título, texto y botones.
    No toca altura, fondo ni trustBar.
    ===================================================== */
@@ -6283,7 +6283,7 @@
 
 
 /* =====================================================
-   TEMPERATURA-CONTROLADA HERO EXTRA BLOCK SPACING
+   ALMACEN-DISTRIBUCION HERO EXTRA BLOCK SPACING
    Separa mejor título, texto y botón. Solo aire interno.
    ===================================================== */
 
@@ -6324,7 +6324,7 @@
 
 
 /* =====================================================
-   TEMPERATURA-CONTROLADA MOBILE FINAL TWEAK
+   ALMACEN-DISTRIBUCION MOBILE FINAL TWEAK
    Más aire entre menú y primer texto.
    Oculta imágenes decorativas internas en mobile.
    No toca el fondo del hero.
@@ -6366,7 +6366,7 @@
 
 
 /* =====================================================
-   TEMPERATURA-CONTROLADA HERO IMAGE COLOR / LIGHT FINAL
+   ALMACEN-DISTRIBUCION HERO IMAGE COLOR / LIGHT FINAL
    Solo mejora luz, contraste y overlay del fondo.
    No toca estructura, textos, botones ni trustBar.
    ===================================================== */
@@ -6433,7 +6433,7 @@
 
 
 /* =====================================================
-   TEMPERATURA-CONTROLADA HERO LIGHT RIGHT + MOBILE IMAGE HIDE
+   ALMACEN-DISTRIBUCION HERO LIGHT RIGHT + MOBILE IMAGE HIDE
    Más iluminación a la derecha y ocultar imágenes decorativas en mobile
    ===================================================== */
 
@@ -6560,7 +6560,7 @@
 
 
 /* =====================================================
-   TEMPERATURA-CONTROLADA MOBILE HIDE PILLARS SECTION
+   ALMACEN-DISTRIBUCION MOBILE HIDE PILLARS SECTION
    Oculta las cards/pilares en dispositivos menores a tablet.
    No toca hero, trustBar ni certificaciones.
    ===================================================== */
@@ -6577,7 +6577,7 @@
 
 
 /* =====================================================
-   TEMPERATURA-CONTROLADA DESKTOP BUTTON SAFE FIX
+   ALMACEN-DISTRIBUCION DESKTOP BUTTON SAFE FIX
    Solo desktop grande: evita que los botones toquen el trustBar.
    ===================================================== */
 
@@ -6660,7 +6660,7 @@
 
 
 /* =====================================================
-   TEMPERATURA-CONTROLADA HERO IMAGE NO ZOOM FINAL
+   ALMACEN-DISTRIBUCION HERO IMAGE NO ZOOM FINAL
    Quita el recorte/zoom del hero principal.
    ===================================================== */
 
@@ -6694,7 +6694,7 @@
 
 
 /* =====================================================
-   TEMPERATURA-CONTROLADA HERO MOBILE IMAGE SOURCE FIX
+   ALMACEN-DISTRIBUCION HERO MOBILE IMAGE SOURCE FIX
    Desktop usa horizontal. Mobile usa vertical.
    ===================================================== */
 
@@ -6724,7 +6724,7 @@
 
 
 /* =====================================================
-   TEMPERATURA-CONTROLADA DESKTOP TITLE REFINEMENT
+   ALMACEN-DISTRIBUCION DESKTOP TITLE REFINEMENT
    Solo pantallas grandes: título más elegante y menos monstruoso.
    No toca mobile ni tablet.
    ===================================================== */
@@ -6791,7 +6791,7 @@
 
 
 /* =====================================================
-   TEMPERATURA-CONTROLADA HERO BRIGHT CORPORATE FINAL
+   ALMACEN-DISTRIBUCION HERO BRIGHT CORPORATE FINAL
    Más luz al hero sin tocar estructura, texto ni botones.
    ===================================================== */
 
@@ -6873,7 +6873,7 @@
 
 
 /* =====================================================
-   TEMPERATURA-CONTROLADA HERO REAL IMAGE SWITCH HARD LOCK
+   ALMACEN-DISTRIBUCION HERO REAL IMAGE SWITCH HARD LOCK
    Fuerza desktop/mobile con las clases reales del JSX.
    ===================================================== */
 
@@ -6925,7 +6925,7 @@
 
 
 /* =====================================================
-   TEMPERATURA-CONTROLADA HERO REAL IMAGE SWITCH HARD LOCK
+   ALMACEN-DISTRIBUCION HERO REAL IMAGE SWITCH HARD LOCK
    Fuerza desktop/mobile con las clases reales del JSX.
    ===================================================== */
 
@@ -6977,7 +6977,7 @@
 
 
 /* =====================================================
-   TEMPERATURA-CONTROLADA MOBILE CERTIFICATIONS GAP FIX
+   ALMACEN-DISTRIBUCION MOBILE CERTIFICATIONS GAP FIX
    Reduce espacio vacío entre certificaciones y overview.
    ===================================================== */
 
@@ -7526,10 +7526,10 @@
 .page .trustBar span,
 .page .trustBar small,
 .page .trustBar p,
-.page [data-temperatura-controlada-trust="true"] strong,
-.page [data-temperatura-controlada-trust="true"] span,
-.page [data-temperatura-controlada-trust="true"] small,
-.page [data-temperatura-controlada-trust="true"] p {
+.page [data-almacen-distribucion-trust="true"] strong,
+.page [data-almacen-distribucion-trust="true"] span,
+.page [data-almacen-distribucion-trust="true"] small,
+.page [data-almacen-distribucion-trust="true"] p {
   color: var(--across-ivory-soft) !important;
   -webkit-text-fill-color: var(--across-ivory-soft) !important;
 }
@@ -8871,7 +8871,7 @@
 
 /* END ACROSS COMMAND BAR EXPORTS */
 
-/* ZZZ TEMPERATURA-CONTROLADA SERVICES LITERAL DARKBAND AUTOMOCION FINAL
+/* ZZZ ALMACEN-DISTRIBUCION SERVICES LITERAL DARKBAND AUTOMOCION FINAL
    Copia LITERAL del darkBand de Automoción.
 */
 .page .services {
@@ -8912,11 +8912,11 @@
   position: relative !important;
   z-index: 2 !important;
 }
-/* END ZZZ TEMPERATURA-CONTROLADA SERVICES LITERAL DARKBAND AUTOMOCION FINAL */
+/* END ZZZ ALMACEN-DISTRIBUCION SERVICES LITERAL DARKBAND AUTOMOCION FINAL */
 
-/* ZZZ TEMPERATURA-CONTROLADA SERVICES SAME AS AUTOMOCION DARKBAND FINAL
+/* ZZZ ALMACEN-DISTRIBUCION SERVICES SAME AS AUTOMOCION DARKBAND FINAL
    Copia el sombreado/degradado de darkBand Automoción.
-   No copia la imagen de Automoción; conserva la imagen de fondo de TemperaturaControlada.
+   No copia la imagen de Automoción; conserva la imagen de fondo de AlmacenDistribucion.
 */
 .page .services {
   position: relative !important;
@@ -8961,7 +8961,7 @@
   border: 1px solid rgba(244, 239, 229, .16) !important;
   box-shadow: 0 14px 34px rgba(0,0,0,.18) !important;
 }
-/* END ZZZ TEMPERATURA-CONTROLADA SERVICES SAME AS AUTOMOCION DARKBAND FINAL */
+/* END ZZZ ALMACEN-DISTRIBUCION SERVICES SAME AS AUTOMOCION DARKBAND FINAL */
 
 /* ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED
    Tablet / iPad chico:
@@ -9240,7 +9240,7 @@
 
 /* ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL
    DarkBand restaurado correctamente:
-   - usa SU imagen original del page.tsx: /images/transporte-cima/controltemp.png
+   - usa SU imagen original del page.tsx: /images/cargaaerea.png
    - no usa imagen del CTA
    - elimina capas oscuras viejas
    - mantiene el estilo azul/premium
@@ -9264,7 +9264,7 @@
       rgba(244,239,229,.025) 0%,
       rgba(3,10,18,.16) 100%
     ),
-    url("/images/transporte-cima/controltemp.png") center center / cover no-repeat !important;
+    url("/images/cargaaerea.png") center center / cover no-repeat !important;
 }
 
 .page .darkBand::before {
@@ -9404,7 +9404,7 @@
 }
 /* END ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL */
 
-/* ZZZ TEMPERATURA-CONTROLADA SERVICES SEAM ONLY FINAL
+/* ZZZ ALMACEN-DISTRIBUCION SERVICES SEAM ONLY FINAL
    Tapa la línea/seam superior del bloque services sin cambiar imagen.
 */
 .page .services {
@@ -9424,9 +9424,9 @@
   top: -6px !important;
   height: calc(100% + 6px) !important;
 }
-/* END ZZZ TEMPERATURA-CONTROLADA SERVICES SEAM ONLY FINAL */
+/* END ZZZ ALMACEN-DISTRIBUCION SERVICES SEAM ONLY FINAL */
 
-/* ZZZ TEMPERATURA-CONTROLADA MOBILE HERO TITLE DOWN FINAL
+/* ZZZ ALMACEN-DISTRIBUCION MOBILE HERO TITLE DOWN FINAL
    Baja un poco el título del hero en mobile.
    No toca desktop/tablet.
 */
@@ -9443,7 +9443,7 @@
     margin-top: .9rem !important;
   }
 }
-/* END ZZZ TEMPERATURA-CONTROLADA MOBILE HERO TITLE DOWN FINAL */
+/* END ZZZ ALMACEN-DISTRIBUCION MOBILE HERO TITLE DOWN FINAL */
 
 /* ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED
    Tablet / iPad chico:
@@ -9615,7 +9615,7 @@
 /* END ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED */
 
 /* =====================================================
-   TEMPERATURA-CONTROLADA MOBILE HEIGHT LIKE MARITIMO
+   ALMACEN-DISTRIBUCION MOBILE HEIGHT LIKE MARITIMO
    Solo iguala el alto del hero mobile.
    No toca barra, titulo, texto, boton ni imagen.
    ===================================================== */
@@ -9634,7 +9634,7 @@
 }
 
 /* =====================================================
-   TEMPERATURA-CONTROLADA MOBILE HEIGHT LIKE MARITIMO
+   ALMACEN-DISTRIBUCION MOBILE HEIGHT LIKE MARITIMO
    Solo iguala el alto del hero mobile.
    No toca barra, titulo, texto, boton ni imagen.
    ===================================================== */
@@ -9787,274 +9787,4 @@
   }
 }
 /* === ACROSS LOCAL DARKBAND LAYOUT END === */
-
-/* === TEMPERATURA CONTROLADA DARKBAND FINAL LOCAL START === */
-/* Segunda sección / darkBand de Temperatura Controlada.
-   El TSX ya puede tener Image, pero visualmente esta sección venía siendo dominada por CSS.
-   Por eso se fuerza el fondo en .darkBand y se apaga el img interno sin romper el layout.
-
-   Desktop: /images/transporte-cima/controltemp.png
-   Mobile : /images/transporte-climamobile/clima.png
-*/
-
-@media (min-width: 901px) {
-  .page > .darkBand[data-mobile-hide-after-cert="true"],
-  .page section.darkBand[data-mobile-hide-after-cert="true"],
-  .darkBand[data-mobile-hide-after-cert="true"] {
-    position: relative !important;
-    overflow: hidden !important;
-    isolation: isolate !important;
-
-    display: grid !important;
-    grid-template-columns: .48fr .52fr !important;
-    min-height: 420px !important;
-
-    background:
-      linear-gradient(
-        90deg,
-        rgba(5,12,20,.70) 0%,
-        rgba(5,12,20,.48) 44%,
-        rgba(5,12,20,.18) 100%
-      ),
-      url("/images/transporte-cima/controltemp.png") center center / cover no-repeat !important;
-
-    background-image:
-      linear-gradient(
-        90deg,
-        rgba(5,12,20,.70) 0%,
-        rgba(5,12,20,.48) 44%,
-        rgba(5,12,20,.18) 100%
-      ),
-      url("/images/transporte-cima/controltemp.png") !important;
-
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    background-color: transparent !important;
-  }
-
-  .page > .darkBand[data-mobile-hide-after-cert="true"]::before,
-  .page section.darkBand[data-mobile-hide-after-cert="true"]::before,
-  .darkBand[data-mobile-hide-after-cert="true"]::before {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 1 !important;
-    pointer-events: none !important;
-    opacity: 1 !important;
-    background:
-      linear-gradient(
-        90deg,
-        rgba(5,12,20,.50) 0%,
-        rgba(5,12,20,.22) 48%,
-        rgba(5,12,20,.08) 100%
-      ) !important;
-  }
-
-  .page > .darkBand[data-mobile-hide-after-cert="true"]::after,
-  .page section.darkBand[data-mobile-hide-after-cert="true"]::after,
-  .darkBand[data-mobile-hide-after-cert="true"]::after {
-    opacity: 0 !important;
-    background: transparent !important;
-  }
-
-  .page > .darkBand[data-mobile-hide-after-cert="true"] > *,
-  .page section.darkBand[data-mobile-hide-after-cert="true"] > *,
-  .darkBand[data-mobile-hide-after-cert="true"] > * {
-    position: relative !important;
-    z-index: 2 !important;
-  }
-
-  .page > .darkBand[data-mobile-hide-after-cert="true"] .darkBandImage,
-  .page section.darkBand[data-mobile-hide-after-cert="true"] .darkBandImage,
-  .darkBand[data-mobile-hide-after-cert="true"] .darkBandImage,
-  .page > .darkBand[data-mobile-hide-after-cert="true"] [class*="darkBandImage"],
-  .darkBand[data-mobile-hide-after-cert="true"] [class*="darkBandImage"] {
-    display: block !important;
-    position: relative !important;
-    min-height: 420px !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    pointer-events: none !important;
-    background: transparent !important;
-  }
-
-  /* El img interno no manda visualmente: el fondo real queda en .darkBand */
-  .page > .darkBand[data-mobile-hide-after-cert="true"] .darkBandImage img,
-  .page section.darkBand[data-mobile-hide-after-cert="true"] .darkBandImage img,
-  .darkBand[data-mobile-hide-after-cert="true"] .darkBandImage img,
-  .page > .darkBand[data-mobile-hide-after-cert="true"] [class*="darkBandImage"] img,
-  .darkBand[data-mobile-hide-after-cert="true"] [class*="darkBandImage"] img {
-    opacity: 0 !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-  }
-
-  .page > .darkBand[data-mobile-hide-after-cert="true"] .darkBandContent,
-  .page section.darkBand[data-mobile-hide-after-cert="true"] .darkBandContent,
-  .darkBand[data-mobile-hide-after-cert="true"] .darkBandContent,
-  .page > .darkBand[data-mobile-hide-after-cert="true"] [class*="darkBandContent"],
-  .darkBand[data-mobile-hide-after-cert="true"] [class*="darkBandContent"] {
-    background: transparent !important;
-  }
-}
-
-@media (max-width: 900px) {
-  .page > .darkBand[data-mobile-hide-after-cert="true"],
-  .page section.darkBand[data-mobile-hide-after-cert="true"],
-  .darkBand[data-mobile-hide-after-cert="true"] {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(5,12,20,.56) 0%,
-        rgba(5,12,20,.28) 45%,
-        rgba(5,12,20,.62) 100%
-      ),
-      url("/images/transporte-climamobile/clima.png") center center / cover no-repeat !important;
-
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(5,12,20,.56) 0%,
-        rgba(5,12,20,.28) 45%,
-        rgba(5,12,20,.62) 100%
-      ),
-      url("/images/transporte-climamobile/clima.png") !important;
-
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-  }
-}
-/* === TEMPERATURA CONTROLADA DARKBAND FINAL LOCAL END === */
-
-
-/* === TEMPERATURA FINAL CTA IMAGE FIX START === */
-/* El bloque "Coordinemos su próxima carga..." es .finalCta.
-   No es .services ni .darkBand.
-*/
-
-.finalCta {
-  position: relative !important;
-  overflow: hidden !important;
-  background-image:
-    linear-gradient(90deg, rgba(5,12,20,.70) 0%, rgba(5,12,20,.48) 44%, rgba(5,12,20,.18) 100%),
-    var(--desktop-bg) !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-color: transparent !important;
-}
-
-.finalCta::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  pointer-events: none !important;
-  background:
-    linear-gradient(90deg, rgba(5,12,20,.50) 0%, rgba(5,12,20,.22) 48%, rgba(5,12,20,.08) 100%) !important;
-  opacity: 1 !important;
-  z-index: 1 !important;
-}
-
-.finalCta::after {
-  opacity: 0 !important;
-  background: transparent !important;
-}
-
-.finalCta > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-.finalImage img {
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-}
-
-@media (max-width: 900px) {
-  .finalCta {
-    background-image:
-      linear-gradient(180deg, rgba(5,12,20,.56) 0%, rgba(5,12,20,.28) 45%, rgba(5,12,20,.62) 100%),
-      var(--mobile-bg) !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-  }
-}
-/* === TEMPERATURA FINAL CTA IMAGE FIX END === */
-
-
-/* === TEMPERATURA SERVICES DEFINITIVO START === */
-/* Services temperatura controlada:
-   imagen propia por CSS, no hero.
-   El encuadre correcto es center 68%.
-*/
-
-.page .services[data-temp-services-bg="true"],
-.services[data-temp-services-bg="true"],
-section.services[data-temp-services-bg="true"] {
-  position: relative !important;
-  overflow: hidden !important;
-
-  background:
-    linear-gradient(90deg, rgba(5,12,20,.58) 0%, rgba(5,12,20,.34) 42%, rgba(5,12,20,.12) 100%),
-    var(--desktop-bg) center 68% / cover no-repeat !important;
-
-  background-image:
-    linear-gradient(90deg, rgba(5,12,20,.58) 0%, rgba(5,12,20,.34) 42%, rgba(5,12,20,.12) 100%),
-    var(--desktop-bg) !important;
-
-  background-size: cover !important;
-  background-position: center 68% !important;
-  background-repeat: no-repeat !important;
-  background-color: transparent !important;
-}
-
-.page .services[data-temp-services-bg="true"]::before,
-.services[data-temp-services-bg="true"]::before,
-section.services[data-temp-services-bg="true"]::before {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5,12,20,.46) 0%,
-      rgba(5,12,20,.18) 48%,
-      rgba(5,12,20,.04) 100%
-    ) !important;
-  opacity: 1 !important;
-}
-
-.page .services[data-temp-services-bg="true"]::after,
-.services[data-temp-services-bg="true"]::after,
-section.services[data-temp-services-bg="true"]::after {
-  opacity: 0 !important;
-  background: transparent !important;
-}
-
-.page .services[data-temp-services-bg="true"] > *,
-.services[data-temp-services-bg="true"] > *,
-section.services[data-temp-services-bg="true"] > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-@media (max-width: 900px) {
-  .page .services[data-temp-services-bg="true"],
-  .services[data-temp-services-bg="true"],
-  section.services[data-temp-services-bg="true"] {
-    background:
-      linear-gradient(180deg, rgba(5,12,20,.48) 0%, rgba(5,12,20,.20) 45%, rgba(5,12,20,.54) 100%),
-      var(--mobile-bg) center 62% / cover no-repeat !important;
-
-    background-image:
-      linear-gradient(180deg, rgba(5,12,20,.48) 0%, rgba(5,12,20,.20) 45%, rgba(5,12,20,.54) 100%),
-      var(--mobile-bg) !important;
-
-    background-size: cover !important;
-    background-position: center 62% !important;
-    background-repeat: no-repeat !important;
-  }
-}
-/* === TEMPERATURA SERVICES DEFINITIVO END === */
 

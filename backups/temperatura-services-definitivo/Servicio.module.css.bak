@@ -9788,6 +9788,56 @@
 }
 /* === ACROSS LOCAL DARKBAND LAYOUT END === */
 
+
+/* === TEMPERATURA CONTROLADA SERVICES LOCAL FINAL START === */
+/* Primera sección / cards de Temperatura Controlada.
+   La imagen viene por CSS en .services, no por el hero.
+
+   Desktop: /images/transporte-cima/climatizado.png
+   Mobile : /images/transporte-climamobile/clima.png
+*/
+
+.services {
+  position: relative !important;
+  overflow: hidden !important;
+  background-image:
+    linear-gradient(90deg, rgba(5,12,20,.58) 0%, rgba(5,12,20,.34) 42%, rgba(5,12,20,.12) 100%),
+    url("/images/transporte-cima/climatizado.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+}
+
+.services::before {
+  background:
+    linear-gradient(90deg, rgba(5,12,20,.44) 0%, rgba(5,12,20,.18) 48%, rgba(5,12,20,.06) 100%) !important;
+  opacity: 1 !important;
+}
+
+.services::after {
+  opacity: 0 !important;
+  background: transparent !important;
+}
+
+.services > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+@media (max-width: 900px) {
+  .services {
+    background-image:
+      linear-gradient(180deg, rgba(5,12,20,.48) 0%, rgba(5,12,20,.20) 45%, rgba(5,12,20,.54) 100%),
+      url("/images/transporte-climamobile/clima.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+}
+/* === TEMPERATURA CONTROLADA SERVICES LOCAL FINAL END === */
+
+
 /* === TEMPERATURA CONTROLADA DARKBAND FINAL LOCAL START === */
 /* Segunda sección / darkBand de Temperatura Controlada.
    El TSX ya puede tener Image, pero visualmente esta sección venía siendo dominada por CSS.
@@ -9986,35 +10036,63 @@
 /* === TEMPERATURA FINAL CTA IMAGE FIX END === */
 
 
-/* === TEMPERATURA SERVICES DEFINITIVO START === */
-/* Services temperatura controlada:
-   imagen propia por CSS, no hero.
-   El encuadre correcto es center 68%.
+/* === TEMPERATURA SERVICES REAL TSX BG START === */
+/* Esta sección estaba leyendo la imagen vieja por variable inline.
+   Ahora page.tsx entrega:
+   --desktop-bg: climatizado
+   --mobile-bg : clima
 */
 
-.page .services[data-temp-services-bg="true"],
-.services[data-temp-services-bg="true"],
-section.services[data-temp-services-bg="true"] {
+.services {
   position: relative !important;
   overflow: hidden !important;
-
   background:
     linear-gradient(90deg, rgba(5,12,20,.58) 0%, rgba(5,12,20,.34) 42%, rgba(5,12,20,.12) 100%),
-    var(--desktop-bg) center 68% / cover no-repeat !important;
-
-  background-image:
-    linear-gradient(90deg, rgba(5,12,20,.58) 0%, rgba(5,12,20,.34) 42%, rgba(5,12,20,.12) 100%),
-    var(--desktop-bg) !important;
-
+    var(--desktop-bg) center center / cover no-repeat !important;
   background-size: cover !important;
-  background-position: center 68% !important;
+  background-position: center center !important;
   background-repeat: no-repeat !important;
   background-color: transparent !important;
 }
 
-.page .services[data-temp-services-bg="true"]::before,
-.services[data-temp-services-bg="true"]::before,
-section.services[data-temp-services-bg="true"]::before {
+.services::before {
+  background:
+    linear-gradient(90deg, rgba(5,12,20,.44) 0%, rgba(5,12,20,.18) 48%, rgba(5,12,20,.06) 100%) !important;
+  opacity: 1 !important;
+}
+
+.services::after {
+  opacity: 0 !important;
+  background: transparent !important;
+}
+
+.services > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+@media (max-width: 900px) {
+  .services {
+    background:
+      linear-gradient(180deg, rgba(5,12,20,.48) 0%, rgba(5,12,20,.20) 45%, rgba(5,12,20,.54) 100%),
+      var(--mobile-bg) center center / cover no-repeat !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+}
+/* === TEMPERATURA SERVICES REAL TSX BG END === */
+
+
+/* === TEMPERATURA SERVICES POSITION FINAL START === */
+/* Ajuste final de encuadre para que se vea el camión y no solo cielo */
+
+.services {
+  background-position: center 68% !important;
+  background-size: cover !important;
+}
+
+.services::before {
   background:
     linear-gradient(
       90deg,
@@ -10025,36 +10103,11 @@ section.services[data-temp-services-bg="true"]::before {
   opacity: 1 !important;
 }
 
-.page .services[data-temp-services-bg="true"]::after,
-.services[data-temp-services-bg="true"]::after,
-section.services[data-temp-services-bg="true"]::after {
-  opacity: 0 !important;
-  background: transparent !important;
-}
-
-.page .services[data-temp-services-bg="true"] > *,
-.services[data-temp-services-bg="true"] > *,
-section.services[data-temp-services-bg="true"] > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
 @media (max-width: 900px) {
-  .page .services[data-temp-services-bg="true"],
-  .services[data-temp-services-bg="true"],
-  section.services[data-temp-services-bg="true"] {
-    background:
-      linear-gradient(180deg, rgba(5,12,20,.48) 0%, rgba(5,12,20,.20) 45%, rgba(5,12,20,.54) 100%),
-      var(--mobile-bg) center 62% / cover no-repeat !important;
-
-    background-image:
-      linear-gradient(180deg, rgba(5,12,20,.48) 0%, rgba(5,12,20,.20) 45%, rgba(5,12,20,.54) 100%),
-      var(--mobile-bg) !important;
-
-    background-size: cover !important;
+  .services {
     background-position: center 62% !important;
-    background-repeat: no-repeat !important;
+    background-size: cover !important;
   }
 }
-/* === TEMPERATURA SERVICES DEFINITIVO END === */
+/* === TEMPERATURA SERVICES POSITION FINAL END === */
 

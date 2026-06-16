@@ -8,495 +8,495 @@ import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import RelatedServices from "../_shared/RelatedServices";
-import styles from "./AlmacenDistribucion.module.css";
+import styles from "./Servicio.module.css";
 
 type Locale = "es" | "en" | "zh";
 
 const copy = {
   "es": {
-    "heroEyebrow": "Almacén y distribución",
-    "heroTitle": "Operaciones de almacén que convierten stock en movimiento.",
-    "heroText": "Coordinamos soluciones de almacenaje, preparación de pedidos, distribución y control operativo para empresas que necesitan visibilidad, orden y continuidad logística.",
+    "heroEyebrow": "Carga temperatura controlada",
+    "heroTitle": "Cadena de frío para cargas que no pueden perder control.",
+    "heroText": "Coordinamos transporte y soluciones logísticas para mercancías sensibles a temperatura, integrando monitoreo, control operativo y trazabilidad de origen a destino.",
     "primaryCta": "Planificar mi operación",
     "secondaryCta": "Hablar con nuestro equipo",
-    "activeLabel": "Operación logística activa",
-    "activeRoute": "Almacén → Cliente",
-    "activeCargo": "Preparación y distribución",
+    "activeLabel": "Operación refrigerada activa",
+    "activeRoute": "Origen → Destino",
+    "activeCargo": "Carga sensible",
     "activeStatusLabel": "Estado:",
-    "activeStatus": "En gestión",
-    "activeEtaLabel": "Salida:",
-    "activeEta": "Programada",
+    "activeStatus": "Temperatura controlada",
+    "activeEtaLabel": "Control:",
+    "activeEta": "Monitoreo activo",
     "trust": [
       [
-        "Almacenaje",
-        "Stock controlado"
+        "Cadena de frío",
+        "Control térmico"
       ],
       [
-        "Picking",
-        "Preparación eficiente"
+        "Carga sensible",
+        "Pharma / alimentos"
       ],
       [
-        "Distribución",
-        "Entrega coordinada"
+        "Monitoreo",
+        "Trazabilidad operativa"
       ],
       [
-        "Trazabilidad",
-        "Visibilidad operativa"
+        "Cumplimiento",
+        "Protocolos especializados"
       ]
     ],
-    "overviewEyebrow": "Gestión logística",
-    "overviewTitle": "Almacén y distribución sin interrupciones.",
-    "overviewText": "Una operación de almacén eficiente requiere control de stock, preparación precisa, coordinación de salidas y seguimiento. Diseñamos soluciones para mejorar continuidad, visibilidad y respuesta logística.",
-    "overviewButton": "Conocer más sobre almacén",
+    "overviewEyebrow": "Logística sensible",
+    "overviewTitle": "Control térmico, seguridad y trazabilidad para mercancías críticas.",
+    "overviewText": "La carga con temperatura controlada exige planificación, equipos adecuados, seguimiento y protocolos claros. Diseñamos operaciones para proteger la integridad del producto en cada etapa logística.",
+    "overviewButton": "Conocer más sobre temperatura controlada",
     "pillars": [
       [
-        "Control de stock",
-        "Gestión organizada de inventario, entradas, salidas y disponibilidad."
+        "Control de temperatura",
+        "Coordinación de rangos térmicos según producto, ruta y requerimientos."
       ],
       [
-        "Preparación de pedidos",
-        "Procesos de picking, packing y acondicionamiento según operación."
+        "Monitoreo operativo",
+        "Seguimiento de condiciones y avance durante la operación."
       ],
       [
-        "Distribución coordinada",
-        "Planificación de rutas y entregas para clientes o puntos de venta."
+        "Protocolos especializados",
+        "Procedimientos para mercancía sensible, pharma, alimentos o productos críticos."
       ],
       [
-        "Trazabilidad operativa",
-        "Visibilidad sobre movimientos, estados y tiempos de gestión."
+        "Entrega segura",
+        "Coordinación final para reducir riesgos y conservar la integridad de la carga."
       ]
     ],
-    "servicesEyebrow": "Nuestros servicios de almacén",
-    "servicesTitle": "Soluciones para ordenar, preparar y distribuir mercancía.",
+    "servicesEyebrow": "Nuestros servicios de temperatura",
+    "servicesTitle": "Soluciones para cargas sensibles que requieren control continuo.",
     "services": [
       [
-        "Almacenaje",
-        "Espacios y procesos para conservar mercancía bajo control."
+        "Transporte refrigerado",
+        "Movimientos con control térmico para productos sensibles."
       ],
       [
-        "Picking y packing",
-        "Preparación de pedidos con orden, velocidad y precisión."
+        "Carga pharma",
+        "Coordinación para productos sanitarios, médicos o farmacéuticos."
       ],
       [
-        "Distribución",
-        "Coordinación de entregas regionales, nacionales o dedicadas."
+        "Alimentos y perecederos",
+        "Operaciones para mercancías que requieren conservación y tiempos precisos."
       ],
       [
-        "Cross docking",
-        "Flujos rápidos para mercancía que necesita salida inmediata."
+        "Monitoreo de condiciones",
+        "Seguimiento operativo para mantener visibilidad sobre la carga."
       ],
       [
-        "Gestión de stock",
-        "Control operativo de inventario, entradas y salidas."
+        "Cadena de frío internacional",
+        "Soluciones multimodales para operaciones globales sensibles."
       ],
       [
-        "Operaciones B2B",
-        "Soluciones para empresas, retail, e-commerce y distribución comercial."
+        "Door to door",
+        "Coordinación completa desde retiro hasta entrega final."
       ]
     ],
-    "useCasesEyebrow": "Cuándo usar almacén y distribución",
-    "useCasesTitle": "Cuando el stock necesita convertirse en entrega.",
+    "useCasesEyebrow": "Cuándo usar temperatura controlada",
+    "useCasesTitle": "Cuando el producto depende del control térmico.",
     "useCases": [
       [
-        "E-commerce",
-        "Preparación y salida de pedidos online."
+        "Productos farmacéuticos",
+        "Operaciones para mercancía médica o sanitaria."
       ],
       [
-        "Retail",
-        "Distribución hacia tiendas, puntos de venta o clientes."
+        "Alimentos perecederos",
+        "Transporte para productos que requieren conservación."
       ],
       [
-        "Stock estacional",
-        "Gestión de picos de demanda y campañas."
+        "Cosmética sensible",
+        "Cargas que no deben exponerse a variaciones térmicas."
       ],
       [
-        "Mercancía importada",
-        "Recepción, control y distribución posterior."
+        "Muestras críticas",
+        "Envíos donde la estabilidad del producto es prioridad."
       ],
       [
-        "Operaciones B2B",
-        "Flujos para clientes corporativos y comerciales."
+        "Carga sanitaria",
+        "Operaciones con protocolos y trazabilidad."
       ],
       [
-        "Cross docking",
-        "Reducción de tiempos de permanencia en almacén."
+        "Distribución refrigerada",
+        "Movimientos programados con control operativo."
       ]
     ],
     "processEyebrow": "Nuestro proceso operativo",
-    "processTitle": "Una operación de almacén clara desde la recepción hasta la entrega.",
+    "processTitle": "Una operación térmica clara desde el primer contacto.",
     "process": [
       [
-        "Recepción",
-        "Coordinamos entrada, descarga e identificación de mercancía."
+        "Análisis del producto",
+        "Revisamos tipo de carga, rango térmico y sensibilidad."
       ],
       [
-        "Control de stock",
-        "Registramos disponibilidad, ubicación y estado operativo."
+        "Selección de solución",
+        "Definimos equipo, ruta y modalidad adecuada."
       ],
       [
-        "Preparación",
-        "Gestionamos picking, packing y acondicionamiento."
+        "Documentación",
+        "Coordinamos requisitos comerciales, sanitarios y operativos."
       ],
       [
-        "Plan de salida",
-        "Definimos distribución, rutas y prioridades."
+        "Preparación de operación",
+        "Gestionamos retiro, acondicionamiento y control inicial."
       ],
       [
         "Seguimiento",
-        "Monitoreamos estados, tiempos y entregas."
+        "Monitoreamos avance y condiciones operativas."
       ],
       [
         "Entrega final",
-        "Cerramos la operación con control y trazabilidad."
+        "Coordinamos recepción y cierre seguro."
       ]
     ],
-    "bandTitle": "Operaciones de almacén diseñadas para mantener la cadena en movimiento.",
-    "bandText": "Nuestro equipo coordina soluciones para empresas que necesitan control de stock, preparación eficiente y distribución confiable.",
+    "bandTitle": "Operaciones con temperatura controlada para cargas que no admiten variaciones.",
+    "bandText": "Nuestro equipo coordina soluciones para empresas que necesitan preservar producto, cumplir protocolos y mantener trazabilidad en operaciones sensibles.",
     "stats": [
       [
-        "Stock controlado",
-        "Visibilidad operativa"
+        "Control térmico",
+        "Rangos según producto"
       ],
       [
-        "Picking",
-        "Preparación precisa"
+        "Carga sensible",
+        "Pharma, alimentos y más"
       ],
       [
-        "Distribución",
-        "Entregas coordinadas"
+        "Trazabilidad",
+        "Seguimiento operativo"
       ],
       [
         "Soporte experto",
         "Especialistas dedicados"
       ]
     ],
-    "finalTitle": "Coordinemos su operación de almacén y distribución.",
-    "finalText": "Cuéntenos tipo de mercancía, volumen, frecuencia de salidas y destinos. Nuestro equipo analizará la mejor solución logística.",
-    "finalPrimary": "Solicitar propuesta logística",
+    "finalTitle": "Coordinemos su próxima carga con temperatura controlada.",
+    "finalText": "Cuéntenos tipo de producto, rango térmico, origen, destino y urgencia. Nuestro equipo analizará la mejor solución operativa.",
+    "finalPrimary": "Solicitar cotización refrigerada",
     "finalSecondary": "Hablar con un especialista"
   },
   "en": {
-    "heroEyebrow": "Warehousing and distribution",
-    "heroTitle": "Warehouse operations that turn stock into movement.",
-    "heroText": "We coordinate warehousing, order preparation, distribution and operational control solutions for companies needing visibility, order and logistics continuity.",
+    "heroEyebrow": "Temperature-controlled cargo",
+    "heroTitle": "Cold chain for cargo that cannot lose control.",
+    "heroText": "We coordinate transport and logistics solutions for temperature-sensitive goods, integrating monitoring, operational control and traceability from origin to destination.",
     "primaryCta": "Plan my operation",
     "secondaryCta": "Talk to our team",
-    "activeLabel": "Active logistics operation",
-    "activeRoute": "Warehouse → Client",
-    "activeCargo": "Preparation and distribution",
+    "activeLabel": "Active refrigerated operation",
+    "activeRoute": "Origin → Destination",
+    "activeCargo": "Sensitive cargo",
     "activeStatusLabel": "Status:",
-    "activeStatus": "In management",
-    "activeEtaLabel": "Dispatch:",
-    "activeEta": "Scheduled",
+    "activeStatus": "Temperature controlled",
+    "activeEtaLabel": "Control:",
+    "activeEta": "Active monitoring",
     "trust": [
       [
-        "Warehousing",
-        "Controlled stock"
+        "Cold chain",
+        "Thermal control"
       ],
       [
-        "Picking",
-        "Efficient preparation"
+        "Sensitive cargo",
+        "Pharma / food"
       ],
       [
-        "Distribution",
-        "Coordinated delivery"
+        "Monitoring",
+        "Operational traceability"
       ],
       [
-        "Traceability",
-        "Operational visibility"
+        "Compliance",
+        "Specialized protocols"
       ]
     ],
-    "overviewEyebrow": "Logistics management",
-    "overviewTitle": "Order, control and distribution for operations that cannot stop.",
-    "overviewText": "An efficient warehouse operation requires stock control, accurate preparation, dispatch coordination and tracking. We design solutions to improve continuity, visibility and logistics response.",
-    "overviewButton": "Learn more about warehousing",
+    "overviewEyebrow": "Sensitive logistics",
+    "overviewTitle": "Thermal control, security and traceability for critical goods.",
+    "overviewText": "Temperature-controlled cargo requires planning, proper equipment, tracking and clear protocols. We design operations to protect product integrity at every logistics stage.",
+    "overviewButton": "Learn more about temperature control",
     "pillars": [
       [
-        "Stock control",
-        "Organized management of inventory, inbound, outbound and availability."
+        "Temperature control",
+        "Coordination of thermal ranges according to product, route and requirements."
       ],
       [
-        "Order preparation",
-        "Picking, packing and conditioning processes according to the operation."
+        "Operational monitoring",
+        "Tracking of conditions and progress during the operation."
       ],
       [
-        "Coordinated distribution",
-        "Route and delivery planning for clients or points of sale."
+        "Specialized protocols",
+        "Procedures for sensitive goods, pharma, food or critical products."
       ],
       [
-        "Operational traceability",
-        "Visibility over movements, statuses and management times."
+        "Safe delivery",
+        "Final coordination to reduce risks and preserve cargo integrity."
       ]
     ],
-    "servicesEyebrow": "Our warehousing services",
-    "servicesTitle": "Solutions to store, prepare and distribute goods.",
+    "servicesEyebrow": "Our temperature services",
+    "servicesTitle": "Solutions for sensitive cargo requiring continuous control.",
     "services": [
       [
-        "Warehousing",
-        "Spaces and processes to keep goods under control."
+        "Refrigerated transport",
+        "Movements with thermal control for sensitive products."
       ],
       [
-        "Picking and packing",
-        "Order preparation with order, speed and precision."
+        "Pharma cargo",
+        "Coordination for healthcare, medical or pharmaceutical products."
       ],
       [
-        "Distribution",
-        "Regional, national or dedicated delivery coordination."
+        "Food and perishables",
+        "Operations for goods requiring preservation and precise timing."
       ],
       [
-        "Cross docking",
-        "Fast flows for goods requiring immediate dispatch."
+        "Condition monitoring",
+        "Operational tracking to maintain visibility over cargo."
       ],
       [
-        "Stock management",
-        "Operational control of inventory, inbound and outbound."
+        "International cold chain",
+        "Multimodal solutions for sensitive global operations."
       ],
       [
-        "B2B operations",
-        "Solutions for companies, retail, e-commerce and commercial distribution."
+        "Door to door",
+        "Complete coordination from pickup to final delivery."
       ]
     ],
-    "useCasesEyebrow": "When to use warehousing and distribution",
-    "useCasesTitle": "When stock needs to become delivery.",
+    "useCasesEyebrow": "When to use temperature control",
+    "useCasesTitle": "When the product depends on thermal control.",
     "useCases": [
       [
-        "E-commerce",
-        "Preparation and dispatch of online orders."
+        "Pharmaceutical products",
+        "Operations for medical or healthcare goods."
       ],
       [
-        "Retail",
-        "Distribution to stores, points of sale or clients."
+        "Perishable food",
+        "Transport for products requiring preservation."
       ],
       [
-        "Seasonal stock",
-        "Management of demand peaks and campaigns."
+        "Sensitive cosmetics",
+        "Cargo that should not be exposed to thermal variations."
       ],
       [
-        "Imported goods",
-        "Reception, control and later distribution."
+        "Critical samples",
+        "Shipments where product stability is a priority."
       ],
       [
-        "B2B operations",
-        "Flows for corporate and commercial clients."
+        "Healthcare cargo",
+        "Operations with protocols and traceability."
       ],
       [
-        "Cross docking",
-        "Reduction of warehouse dwell times."
+        "Refrigerated distribution",
+        "Scheduled movements with operational control."
       ]
     ],
     "processEyebrow": "Our operational process",
-    "processTitle": "A clear warehouse operation from reception to delivery.",
+    "processTitle": "A clear thermal operation from the first contact.",
     "process": [
       [
-        "Reception",
-        "We coordinate inbound, unloading and goods identification."
+        "Product analysis",
+        "We review cargo type, thermal range and sensitivity."
       ],
       [
-        "Stock control",
-        "We register availability, location and operational status."
+        "Solution selection",
+        "We define the proper equipment, route and modality."
       ],
       [
-        "Preparation",
-        "We manage picking, packing and conditioning."
+        "Documentation",
+        "We coordinate commercial, sanitary and operational requirements."
       ],
       [
-        "Dispatch plan",
-        "We define distribution, routes and priorities."
+        "Operation setup",
+        "We manage pickup, preparation and initial control."
       ],
       [
         "Tracking",
-        "We monitor statuses, times and deliveries."
+        "We monitor progress and operational conditions."
       ],
       [
         "Final delivery",
-        "We close the operation with control and traceability."
+        "We coordinate reception and secure closure."
       ]
     ],
-    "bandTitle": "Warehouse operations designed to keep the chain moving.",
-    "bandText": "Our team coordinates solutions for companies that need stock control, efficient preparation and reliable distribution.",
+    "bandTitle": "Temperature-controlled operations for cargo that cannot tolerate variations.",
+    "bandText": "Our team coordinates solutions for companies that need to preserve products, comply with protocols and maintain traceability in sensitive operations.",
     "stats": [
       [
-        "Controlled stock",
-        "Operational visibility"
+        "Thermal control",
+        "Ranges according to product"
       ],
       [
-        "Picking",
-        "Accurate preparation"
+        "Sensitive cargo",
+        "Pharma, food and more"
       ],
       [
-        "Distribution",
-        "Coordinated deliveries"
+        "Traceability",
+        "Operational tracking"
       ],
       [
         "Expert support",
         "Dedicated specialists"
       ]
     ],
-    "finalTitle": "Let’s coordinate your warehouse and distribution operation.",
-    "finalText": "Tell us goods type, volume, dispatch frequency and destinations. Our team will analyze the best logistics solution.",
-    "finalPrimary": "Request logistics proposal",
+    "finalTitle": "Let’s coordinate your next temperature-controlled cargo.",
+    "finalText": "Tell us product type, thermal range, origin, destination and urgency. Our team will analyze the best operational solution.",
+    "finalPrimary": "Request refrigerated quotation",
     "finalSecondary": "Talk to a specialist"
   },
   "zh": {
-    "heroEyebrow": "仓储与配送",
-    "heroTitle": "将库存转化为流动的仓储运营。",
-    "heroText": "我们为需要可视化、秩序和物流连续性的企业协调仓储、订单准备、配送和运营控制解决方案。",
+    "heroEyebrow": "温控货运",
+    "heroTitle": "为不能失控的货物提供冷链方案。",
+    "heroText": "我们为温度敏感货物协调运输和物流解决方案，整合监控、运营控制以及从始发地到目的地的可追溯性。",
     "primaryCta": "规划物流操作",
     "secondaryCta": "联系我们的团队",
-    "activeLabel": "进行中的物流操作",
-    "activeRoute": "仓库 → 客户",
-    "activeCargo": "准备与配送",
+    "activeLabel": "进行中的冷链操作",
+    "activeRoute": "始发地 → 目的地",
+    "activeCargo": "敏感货物",
     "activeStatusLabel": "状态：",
-    "activeStatus": "管理中",
-    "activeEtaLabel": "出库：",
-    "activeEta": "已安排",
+    "activeStatus": "温度受控",
+    "activeEtaLabel": "控制：",
+    "activeEta": "主动监控",
     "trust": [
       [
-        "仓储",
-        "库存受控"
+        "冷链",
+        "温度控制"
       ],
       [
-        "拣货",
-        "高效准备"
+        "敏感货物",
+        "医药 / 食品"
       ],
       [
-        "配送",
-        "协调交付"
+        "监控",
+        "运营可追溯"
       ],
       [
-        "可追溯",
-        "运营可视化"
+        "合规",
+        "专业流程"
       ]
     ],
-    "overviewEyebrow": "物流管理",
-    "overviewTitle": "为不能停止的业务提供秩序、控制和配送。",
-    "overviewText": "高效仓储需要库存控制、准确准备、出库协调和跟踪。我们设计解决方案以提升连续性、可视化和物流响应。",
-    "overviewButton": "了解仓储服务",
+    "overviewEyebrow": "敏感物流",
+    "overviewTitle": "为关键货物提供温控、安全与可追溯性。",
+    "overviewText": "温控货物需要规划、合适设备、跟踪和明确协议。我们设计每个阶段都能保护产品完整性的物流操作。",
+    "overviewButton": "了解温控服务",
     "pillars": [
       [
-        "库存控制",
-        "有序管理库存、入库、出库和可用性。"
+        "温度控制",
+        "根据产品、路线和要求协调温度范围。"
       ],
       [
-        "订单准备",
-        "根据操作进行拣货、包装和处理。"
+        "运营监控",
+        "跟踪操作过程中的条件和进度。"
       ],
       [
-        "配送协调",
-        "为客户或销售点规划路线和交付。"
+        "专业协议",
+        "适用于敏感、医药、食品或关键产品的流程。"
       ],
       [
-        "运营可追溯",
-        "对移动、状态和管理时间保持可视化。"
+        "安全交付",
+        "协调最终交付以降低风险并保持货物完整。"
       ]
     ],
-    "servicesEyebrow": "我们的仓储服务",
-    "servicesTitle": "用于存储、准备和配送货物的解决方案。",
+    "servicesEyebrow": "我们的温控服务",
+    "servicesTitle": "为需要持续控制的敏感货物提供解决方案。",
     "services": [
       [
-        "仓储",
-        "保持货物受控的空间和流程。"
+        "冷藏运输",
+        "为敏感产品提供温控运输。"
       ],
       [
-        "拣货与包装",
-        "有序、快速、准确地准备订单。"
+        "医药货物",
+        "为医疗、卫生或制药产品提供协调。"
       ],
       [
-        "配送",
-        "区域、全国或专属交付协调。"
+        "食品与易腐品",
+        "为需要保存和准时运输的货物提供操作。"
       ],
       [
-        "越库",
-        "为需要快速出库的货物提供快速流转。"
+        "条件监控",
+        "通过运营跟踪保持货物可视化。"
       ],
       [
-        "库存管理",
-        "库存、入库和出库的运营控制。"
+        "国际冷链",
+        "为全球敏感业务提供多式联运方案。"
       ],
       [
-        "B2B 运营",
-        "面向企业、零售、电商和商业配送的解决方案。"
+        "门到门",
+        "从提货到最终交付的完整协调。"
       ]
     ],
-    "useCasesEyebrow": "何时使用仓储与配送",
-    "useCasesTitle": "当库存需要转化为交付时。",
+    "useCasesEyebrow": "何时使用温控",
+    "useCasesTitle": "当产品依赖温度控制时。",
     "useCases": [
       [
-        "电商",
-        "在线订单准备和出库。"
+        "药品",
+        "医疗或卫生货物操作。"
       ],
       [
-        "零售",
-        "配送到门店、销售点或客户。"
+        "易腐食品",
+        "需要保存的产品运输。"
       ],
       [
-        "季节性库存",
-        "管理需求高峰和活动。"
+        "敏感化妆品",
+        "不应暴露于温度变化的货物。"
       ],
       [
-        "进口货物",
-        "接收、控制和后续配送。"
+        "关键样品",
+        "产品稳定性优先的运输。"
       ],
       [
-        "B2B 运营",
-        "企业和商业客户流程。"
+        "卫生货物",
+        "带有协议和可追溯性的操作。"
       ],
       [
-        "越库",
-        "减少货物在仓库停留时间。"
+        "冷藏配送",
+        "带有运营控制的计划运输。"
       ]
     ],
     "processEyebrow": "我们的运营流程",
-    "processTitle": "从接收到交付，仓储操作清晰可控。",
+    "processTitle": "从首次联系开始，温控操作清晰可控。",
     "process": [
       [
-        "接收",
-        "协调入库、卸货和货物识别。"
+        "产品分析",
+        "审核货物类型、温度范围和敏感性。"
       ],
       [
-        "库存控制",
-        "记录可用性、位置和运营状态。"
+        "方案选择",
+        "确定合适设备、路线和运输方式。"
       ],
       [
-        "准备",
-        "管理拣货、包装和处理。"
+        "文件管理",
+        "协调商业、卫生和运营要求。"
       ],
       [
-        "出库计划",
-        "定义配送、路线和优先级。"
+        "操作准备",
+        "管理提货、准备和初始控制。"
       ],
       [
         "跟踪",
-        "监控状态、时间和交付。"
+        "监控进度和运营条件。"
       ],
       [
         "最终交付",
-        "通过控制和可追溯关闭操作。"
+        "协调收货和安全关闭。"
       ]
     ],
-    "bandTitle": "为保持供应链流动而设计的仓储运营。",
-    "bandText": "我们的团队为需要库存控制、高效准备和可靠配送的企业协调解决方案。",
+    "bandTitle": "为不能承受温度波动的货物提供温控操作。",
+    "bandText": "我们的团队为需要保护产品、遵守协议并保持可追溯性的企业协调敏感操作。",
     "stats": [
       [
-        "库存受控",
-        "运营可视化"
+        "温度控制",
+        "根据产品设定范围"
       ],
       [
-        "拣货",
-        "准确准备"
+        "敏感货物",
+        "医药、食品等"
       ],
       [
-        "配送",
-        "协调交付"
+        "可追溯性",
+        "运营跟踪"
       ],
       [
         "专家支持",
         "专属专家"
       ]
     ],
-    "finalTitle": "让我们协调您的仓储与配送操作。",
-    "finalText": "告诉我们货物类型、数量、出库频率和目的地。我们的团队将分析最佳物流方案。",
-    "finalPrimary": "申请物流方案",
+    "finalTitle": "让我们协调您的下一批温控货物。",
+    "finalText": "告诉我们产品类型、温度范围、始发地、目的地和紧急程度。我们的团队将分析最佳操作方案。",
+    "finalPrimary": "申请冷链报价",
     "finalSecondary": "联系专家"
   }
 } satisfies Record<Locale, any>;
@@ -740,7 +740,7 @@ function Icon({ name }: { name: IconName }) {
   }
 }
 
-export default function AlmacenDistribucionPage() {
+export default function TemperaturaControladaPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
@@ -788,10 +788,10 @@ export default function AlmacenDistribucionPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={styles.hero} data-service-name="almacen-distribucion" data-service-hero-home="true"
+        <section className={styles.hero} data-service-name="temperatura-controlada" data-service-hero-home="true"
       >
           <Image
-            src="/images/almacenHero.png"
+            src="/images/temperaturacontrolada.png"
             alt={t.heroTitle}
             fill
             priority
@@ -800,7 +800,7 @@ export default function AlmacenDistribucionPage() {
           />
 
           <Image
-            src="/images/almacen.png"
+            src="/images/controltemp.png"
             alt={t.heroTitle}
             fill
             priority
@@ -840,7 +840,7 @@ export default function AlmacenDistribucionPage() {
             </div>
           </div>
 
-          <div className={styles.commandBar} data-service-trust="almacen-distribucion">
+          <div className={styles.commandBar} data-service-trust="temperatura-controlada">
             {t.trust.map(([title, text]: string[], index: number) => {
               const icons: IconName[] = ["timer", "shield", "document", "tracking"];
 
@@ -886,7 +886,7 @@ export default function AlmacenDistribucionPage() {
           </div>
         </section>
 
-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/almacenHero.png')" } as CSSProperties} data-almacen-services-bg="true">
+        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/temperaturacontrolada.png')" } as CSSProperties}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -956,10 +956,10 @@ export default function AlmacenDistribucionPage() {
           </div>
         </section>
 
-        <section className={styles.darkBand} data-mobile-hide-after-cert="true" data-almacen-darkband-bg="true">
+        <section className={styles.darkBand} data-mobile-hide-after-cert="true">
           <div className={styles.darkBandImage}>
             <Image
-              src="/images/cargaaerea.png"
+              src="/images/transporte-cima/controltemp.png"
               alt={t.bandTitle}
               fill
               sizes="(max-width: 900px) 100vw, 42vw"
@@ -986,7 +986,7 @@ export default function AlmacenDistribucionPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/almacenHero.png')" } as CSSProperties} data-across-final-cta="true" data-almacen-final-bg="true">
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/temperaturacontrolada.png')" } as CSSProperties} data-across-final-cta="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>
@@ -999,8 +999,8 @@ export default function AlmacenDistribucionPage() {
 
           <div className={styles.finalImage}>
             <Image
-              src="/images/almacenHero.png"
-              alt={t.finalTitle}
+              src="/images/o.png"
+              alt={t.finalitle}
               fill
               sizes="(max-width: 900px) 100vw, 44vw"
             />
