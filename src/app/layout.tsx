@@ -4,7 +4,6 @@ import HeaderScrollClass from "@/components/layout/HeaderScrollClass";
 import { Manrope, Inter_Tight } from "next/font/google";
 import GlobalCtaStyleFixer from "@/components/GlobalCtaStyleFixer";
 import MobileTrustSectionCutFixer from "@/components/MobileTrustSectionCutFixer";
-
 export const metadata = {
   title: "Across Logistics",
   description:
@@ -51,6 +50,8 @@ export default function RootLayout({
       <body
         className={`${manrope.variable} ${interTight.variable}`}
       >
+        
+        
         <MobileTrustSectionCutFixer />
         <GlobalCtaStyleFixer />
         <HeaderScrollClass />

@@ -741,6 +741,10 @@ export default function TransporteTerrestrePage() {
             <h2>{t.bandTitle}</h2>
             <p>{t.bandText}</p>
 
+            <div className={styles.darkBandActions}>
+              <Link href="/cotizacion">{t.finalPrimary}</Link>
+              <Link href="/contacto">{t.finalSecondary}</Link>
+            </div>
             <div className={styles.stats}>
               {t.stats.map(([value, label]: string[]) => (
                 <article key={value}>
@@ -748,11 +752,6 @@ export default function TransporteTerrestrePage() {
                   <span>{label}</span>
                 </article>
               ))}
-            </div>
-
-            <div className={styles.darkBandActions}>
-              <Link href="/cotizacion">{t.finalPrimary}</Link>
-              <Link href="/contacto">{t.finalSecondary}</Link>
             </div>
           </div>
         </section>

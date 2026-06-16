@@ -9745,3 +9745,609 @@
 }
 /* === TERRESTRE FINAL CTA CSS IMAGE TWO END === */
 
+
+/* === TERRESTRE FINAL IMAGE OVERRIDE START === */
+/* Único bloque final de imágenes:
+   - .services = card/sección de arriba
+   - .darkBand = bloque de abajo
+   Este bloque va al final para pisar los parches viejos de cargaaerea.
+*/
+
+.services,
+.page .services {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 6, 9, .98) 0%,
+      rgba(5, 6, 9, .94) 38%,
+      rgba(5, 6, 9, .78) 62%,
+      rgba(5, 6, 9, .55) 100%
+    ),
+    radial-gradient(circle at 18% 18%, rgba(23, 50, 71, .16), transparent 24rem),
+    url("C:/Program Files/Git/images/transporte_terrestre/terrestre_one.png") !important;
+  background-size: cover !important;
+  background-position: center 48% !important;
+  background-repeat: no-repeat !important;
+}
+
+.services > *,
+.page .services > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.darkBand,
+.page .darkBand {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 6, 9, .98) 0%,
+      rgba(5, 6, 9, .94) 42%,
+      rgba(5, 6, 9, .76) 68%,
+      rgba(5, 6, 9, .42) 100%
+    ),
+    radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
+    url("C:/Program Files/Git/images/transporte_terrestre/transporte_two.png") !important;
+  background-size: cover !important;
+  background-position: center 52% !important;
+  background-repeat: no-repeat !important;
+}
+
+.darkBand > *,
+.page .darkBand > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+@media (max-width: 900px) {
+  .services,
+  .page .services {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5, 6, 9, .78) 0%,
+        rgba(5, 6, 9, .90) 58%,
+        rgba(5, 6, 9, .96) 100%
+      ),
+      radial-gradient(circle at 18% 18%, rgba(23, 50, 71, .16), transparent 24rem),
+      url("C:/Program Files/Git/images/transporte-terrestre-mobile/transporte-terrestre-mobile.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .darkBand,
+  .page .darkBand {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5, 6, 9, .78) 0%,
+        rgba(5, 6, 9, .90) 58%,
+        rgba(5, 6, 9, .96) 100%
+      ),
+      radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
+      url("C:/Program Files/Git/images/transporte-terrestre-mobile/transporte-terrestre-mobile-two.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+}
+/* === TERRESTRE FINAL IMAGE OVERRIDE END === */
+
+
+/* === TERRESTRE SHOW REAL IMAGES START === */
+/* Bloque final: pisa los fondos viejos de avión y destapa las imágenes reales. */
+
+/* ARRIBA: services */
+.services,
+.page .services {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 6, 9, .68) 0%,
+      rgba(5, 6, 9, .50) 38%,
+      rgba(5, 6, 9, .24) 66%,
+      rgba(5, 6, 9, .08) 100%
+    ),
+    url("/images/transporte_terrestre/terrestre_one.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+.services::before,
+.page .services::before {
+  opacity: .18 !important;
+}
+
+.services::after,
+.page .services::after {
+  display: none !important;
+}
+
+.services .sectionHead,
+.page .services .sectionHead,
+.serviceGrid,
+.page .serviceGrid {
+  position: relative !important;
+  z-index: 2 !important;
+  background: transparent !important;
+}
+
+/* ABAJO: darkBand */
+.darkBand,
+.page .darkBand {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 6, 9, .72) 0%,
+      rgba(5, 6, 9, .52) 42%,
+      rgba(5, 6, 9, .24) 72%,
+      rgba(5, 6, 9, .08) 100%
+    ),
+    url("/images/transporte_terrestre/transporte_two.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+.darkBand::before,
+.page .darkBand::before {
+  opacity: .12 !important;
+  background: linear-gradient(90deg, rgba(5,6,9,.24), rgba(5,6,9,.08)) !important;
+}
+
+.darkBand::after,
+.page .darkBand::after {
+  display: none !important;
+}
+
+.darkBandContent,
+.page .darkBandContent {
+  position: relative !important;
+  z-index: 2 !important;
+  background: transparent !important;
+}
+
+.darkBandImage,
+.page .darkBandImage,
+.darkBand [class*="darkBandImage"],
+.page .darkBand [class*="darkBandImage"] {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .services,
+  .page .services {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5, 6, 9, .38) 0%,
+        rgba(5, 6, 9, .66) 58%,
+        rgba(5, 6, 9, .86) 100%
+      ),
+      url("/images/transporte-terrestre-mobile/transporte-terrestre-mobile.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .darkBand,
+  .page .darkBand {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5, 6, 9, .34) 0%,
+        rgba(5, 6, 9, .66) 58%,
+        rgba(5, 6, 9, .86) 100%
+      ),
+      url("/images/transporte-terrestre-mobile/transporte-terrestre-mobile-two.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+}
+/* === TERRESTRE SHOW REAL IMAGES END === */
+
+
+/* === TERRESTRE GLASS CARDS SCOPED START === */
+/* Solo aplica al bloque con imagen de servicios terrestres y al darkBand.
+   No toca pillars, overview, processGrid ni useCaseGrid.
+*/
+
+.services .serviceGrid {
+  gap: 16px !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.services .serviceGrid article,
+.darkBand .stats article {
+  position: relative !important;
+  z-index: 4 !important;
+  overflow: hidden !important;
+  min-height: 188px !important;
+  padding: 1.45rem !important;
+  text-align: left !important;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.22) 0%,
+      rgba(255,255,255,.13) 48%,
+      rgba(5,8,13,.26) 100%
+    ) !important;
+  border: 1px solid rgba(255,255,255,.30) !important;
+  box-shadow:
+    0 18px 44px rgba(0,0,0,.18),
+    inset 0 1px 0 rgba(255,255,255,.20) !important;
+  backdrop-filter: blur(7px) saturate(1.12) !important;
+  -webkit-backdrop-filter: blur(7px) saturate(1.12) !important;
+}
+
+.services .serviceGrid article::before,
+.darkBand .stats article::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.12), transparent 44%),
+    radial-gradient(circle at 18% 16%, rgba(214,192,141,.10), transparent 34%) !important;
+  opacity: .65 !important;
+  z-index: 0 !important;
+}
+
+.services .serviceGrid article::after {
+  content: "→" !important;
+  position: absolute !important;
+  right: 1.25rem !important;
+  bottom: 1rem !important;
+  color: rgba(214,192,141,.72) !important;
+  font-size: 1.05rem !important;
+  z-index: 5 !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,.45) !important;
+}
+
+.services .serviceGrid article > *,
+.darkBand .stats article > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.services .serviceGrid article i {
+  width: 42px !important;
+  height: 42px !important;
+  margin-bottom: .85rem !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  color: #d6c08d !important;
+  background: rgba(5,8,13,.38) !important;
+  border: 1px solid rgba(214,192,141,.55) !important;
+  border-radius: 999px !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,.16) !important;
+}
+
+.services .serviceGrid article h3,
+.darkBand .stats article strong {
+  color: #fff7e8 !important;
+  -webkit-text-fill-color: #fff7e8 !important;
+  font-size: 1.08rem !important;
+  line-height: 1.12 !important;
+  font-weight: 950 !important;
+  text-shadow: 0 2px 10px rgba(0,0,0,.48) !important;
+}
+
+.services .serviceGrid article p,
+.darkBand .stats article span {
+  max-width: 260px !important;
+  margin-top: .75rem !important;
+  color: rgba(255,247,232,.90) !important;
+  -webkit-text-fill-color: rgba(255,247,232,.90) !important;
+  font-size: .9rem !important;
+  line-height: 1.5 !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,.42) !important;
+}
+
+.darkBand .stats {
+  gap: 16px !important;
+}
+
+@media (max-width: 900px) {
+  .services .serviceGrid,
+  .darkBand .stats {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .services .serviceGrid article,
+  .darkBand .stats article {
+    min-height: auto !important;
+    padding: 1.25rem !important;
+  }
+}
+/* === TERRESTRE GLASS CARDS SCOPED END === */
+
+
+/* === TERRESTRE DARKBAND LAYOUT FINAL START === */
+/* Layout final:
+   izquierda: título + texto + botones
+   derecha: 4 cuadros en una sola fila
+*/
+
+.darkBandContent {
+  display: grid !important;
+  grid-template-columns: minmax(390px, .86fr) minmax(520px, 1.14fr) !important;
+  grid-template-rows: auto auto auto !important;
+  column-gap: clamp(2.2rem, 5vw, 5.5rem) !important;
+  row-gap: 0 !important;
+  align-items: center !important;
+  position: relative !important;
+  z-index: 5 !important;
+}
+
+.darkBandContent h2 {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  max-width: 620px !important;
+  margin: 0 !important;
+  color: #fff7e8 !important;
+  -webkit-text-fill-color: #fff7e8 !important;
+  text-shadow: 0 5px 24px rgba(0,0,0,.55) !important;
+}
+
+.darkBandContent > p {
+  grid-column: 1 !important;
+  grid-row: 2 !important;
+  max-width: 560px !important;
+  margin: 1.15rem 0 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: rgba(255,247,232,.88) !important;
+  -webkit-text-fill-color: rgba(255,247,232,.88) !important;
+  font-size: 1rem !important;
+  line-height: 1.65 !important;
+  font-weight: 500 !important;
+  text-shadow: 0 3px 16px rgba(0,0,0,.48) !important;
+}
+
+.darkBandActions {
+  grid-column: 1 !important;
+  grid-row: 3 !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: .85rem !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  margin-top: 1.45rem !important;
+  transform: none !important;
+  position: relative !important;
+  z-index: 20 !important;
+}
+
+.darkBandActions a {
+  min-height: 44px !important;
+  padding: 0 1.35rem !important;
+  border-radius: 999px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  font-size: .72rem !important;
+  letter-spacing: .055em !important;
+  font-weight: 950 !important;
+  white-space: nowrap !important;
+}
+
+.darkBandActions a:first-child {
+  background: #173247 !important;
+  color: #fff7e8 !important;
+  -webkit-text-fill-color: #fff7e8 !important;
+  border: 1px solid rgba(214,192,141,.46) !important;
+  box-shadow: 0 16px 34px rgba(0,0,0,.24) !important;
+}
+
+.darkBandActions a:last-child {
+  background: rgba(5,8,13,.42) !important;
+  color: #fff7e8 !important;
+  -webkit-text-fill-color: #fff7e8 !important;
+  border: 1px solid rgba(255,255,255,.30) !important;
+  box-shadow: 0 14px 30px rgba(0,0,0,.20) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+.stats {
+  grid-column: 2 !important;
+  grid-row: 1 / span 3 !important;
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  align-self: center !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.stats article {
+  min-height: 155px !important;
+  height: 155px !important;
+  padding: 1.15rem 1rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+/* Mobile: vuelve a flujo vertical */
+@media (max-width: 900px) {
+  .darkBandContent {
+    display: block !important;
+  }
+
+  .darkBandActions {
+    margin-top: 1.25rem !important;
+  }
+
+  .stats {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    margin-top: 1.6rem !important;
+  }
+
+  .stats article {
+    height: auto !important;
+    min-height: 120px !important;
+  }
+}
+/* === TERRESTRE DARKBAND LAYOUT FINAL END === */
+
+
+/* === ACROSS LOCAL DARKBAND LAYOUT START === */
+/* Layout profesional:
+   izquierda: título + texto + botones
+   derecha: 4 cuadros/stats en una sola fila.
+   Se aplica localmente porque los CSS Modules pisan globals.css.
+*/
+
+.darkBandContent {
+  display: grid !important;
+  grid-template-columns: minmax(390px, .86fr) minmax(520px, 1.14fr) !important;
+  grid-template-rows: auto auto auto !important;
+  column-gap: clamp(2.2rem, 5vw, 5.5rem) !important;
+  row-gap: 0 !important;
+  align-items: center !important;
+  position: relative !important;
+  z-index: 5 !important;
+}
+
+.darkBandContent h2 {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  max-width: 620px !important;
+  margin: 0 !important;
+  color: #fff7e8 !important;
+  -webkit-text-fill-color: #fff7e8 !important;
+  text-shadow: 0 5px 24px rgba(0,0,0,.55) !important;
+}
+
+.darkBandContent > p {
+  grid-column: 1 !important;
+  grid-row: 2 !important;
+  max-width: 560px !important;
+  margin: 1.15rem 0 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: rgba(255,247,232,.88) !important;
+  -webkit-text-fill-color: rgba(255,247,232,.88) !important;
+  font-size: 1rem !important;
+  line-height: 1.65 !important;
+  font-weight: 500 !important;
+  text-shadow: 0 3px 16px rgba(0,0,0,.48) !important;
+}
+
+.darkBandActions {
+  grid-column: 1 !important;
+  grid-row: 3 !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: .85rem !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  margin-top: 1.45rem !important;
+  transform: none !important;
+  position: relative !important;
+  z-index: 20 !important;
+}
+
+.darkBandActions a {
+  min-height: 44px !important;
+  padding: 0 1.35rem !important;
+  border-radius: 999px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  font-size: .72rem !important;
+  letter-spacing: .055em !important;
+  font-weight: 950 !important;
+  white-space: nowrap !important;
+}
+
+.darkBandActions a:first-child {
+  background: #173247 !important;
+  color: #fff7e8 !important;
+  -webkit-text-fill-color: #fff7e8 !important;
+  border: 1px solid rgba(214,192,141,.46) !important;
+  box-shadow: 0 16px 34px rgba(0,0,0,.24) !important;
+}
+
+.darkBandActions a:last-child {
+  background: rgba(5,8,13,.42) !important;
+  color: #fff7e8 !important;
+  -webkit-text-fill-color: #fff7e8 !important;
+  border: 1px solid rgba(255,255,255,.30) !important;
+  box-shadow: 0 14px 30px rgba(0,0,0,.20) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+.stats {
+  grid-column: 2 !important;
+  grid-row: 1 / span 3 !important;
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  align-self: center !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.stats article {
+  min-height: 155px !important;
+  height: 155px !important;
+  padding: 1.15rem 1rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+/* Mobile: flujo vertical */
+@media (max-width: 900px) {
+  .darkBandContent {
+    display: block !important;
+  }
+
+  .darkBandActions {
+    margin-top: 1.25rem !important;
+  }
+
+  .stats {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    margin-top: 1.6rem !important;
+  }
+
+  .stats article {
+    height: auto !important;
+    min-height: 120px !important;
+  }
+}
+/* === ACROSS LOCAL DARKBAND LAYOUT END === */
+

@@ -1,0 +1,185 @@
+"use client";
+
+import { useEffect } from "react";
+
+export default function TemperaturaControladaBackgroundFix() {
+  useEffect(() => {
+    const normalize = (value: string) =>
+      value
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/\s+/g, " ")
+        .toLowerCase()
+        .trim();
+
+    const testImage = (url: string): Promise<string | null> =>
+      new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => resolve(url);
+        img.onerror = () => resolve(null);
+        img.src = `${url}?v=${Date.now()}`;
+      });
+
+    const findImage = async (base: string): Promise<string | null> => {
+      const exts = [".png", ".jpg", ".jpeg", ".webp"];
+
+      for (const ext of exts) {
+        const ok = await testImage(base + ext);
+        if (ok) return base + ext;
+      }
+
+      return null;
+    };
+
+    const applyBackground = async () => {
+      const desktopImg = await findImage("/images/transporte-cima/climatizado");
+      const mobileImg = await findImage("/images/transporte-climamobile/clima");
+
+      if (!desktopImg || !mobileImg) return;
+
+      const sections = [...document.querySelectorAll("section")] as HTMLElement[];
+
+      /*
+        Limpiamos marcas anteriores para no dejar fondos pegados en otro lado.
+      */
+      sections.forEach((sec) => {
+        sec.removeAttribute("data-temp-services-bg");
+
+        const inline = sec.getAttribute("style") || "";
+
+        if (
+          inline.includes("transporte-cima/climatizado") ||
+          inline.includes("transporte-climamobile/clima")
+        ) {
+          sec.style.removeProperty("background");
+          sec.style.removeProperty("background-image");
+          sec.style.removeProperty("background-size");
+          sec.style.removeProperty("background-position");
+          sec.style.removeProperty("background-repeat");
+          sec.style.removeProperty("background-color");
+        }
+      });
+
+      /*
+        Target correcto:
+        NO hero.
+        Sección services real de temperatura controlada.
+      */
+      const target =
+        sections.find((sec) => {
+          const cls = String(sec.className || "").toLowerCase();
+          const txt = normalize(sec.innerText || sec.textContent || "");
+
+          return (
+            cls.includes("services") &&
+            !cls.includes("hero") &&
+            (
+              txt.includes("nuestros servicios") ||
+              txt.includes("temperatura controlada") ||
+              txt.includes("cadena de frio") ||
+              txt.includes("refrigerada") ||
+              txt.includes("climatizada") ||
+              txt.includes("controlada")
+            )
+          );
+        }) ||
+        sections.find((sec) => {
+          const cls = String(sec.className || "").toLowerCase();
+          return cls.includes("services") && !cls.includes("hero");
+        });
+
+      if (!target) return;
+
+      target.setAttribute("data-temp-services-bg", "true");
+
+      target.style.setProperty("position", "relative", "important");
+      target.style.setProperty("overflow", "hidden", "important");
+      target.style.setProperty(
+        "background-image",
+        `
+          linear-gradient(90deg, rgba(5,12,20,.58) 0%, rgba(5,12,20,.34) 42%, rgba(5,12,20,.12) 100%),
+          url("${desktopImg}")
+        `,
+        "important"
+      );
+      target.style.setProperty("background-size", "cover", "important");
+      target.style.setProperty("background-position", "center center", "important");
+      target.style.setProperty("background-repeat", "no-repeat", "important");
+      target.style.setProperty("background-color", "transparent", "important");
+
+      let style = document.querySelector("#temp-services-bg-runtime") as HTMLStyleElement | null;
+
+      if (!style) {
+        style = document.createElement("style");
+        style.id = "temp-services-bg-runtime";
+        document.head.appendChild(style);
+      }
+
+      style.textContent = `
+        [data-temp-services-bg="true"] {
+          background-image:
+            linear-gradient(90deg, rgba(5,12,20,.58) 0%, rgba(5,12,20,.34) 42%, rgba(5,12,20,.12) 100%),
+            url("${desktopImg}") !important;
+          background-size: cover !important;
+          background-position: center center !important;
+          background-repeat: no-repeat !important;
+          background-color: transparent !important;
+        }
+
+        [data-temp-services-bg="true"]::before {
+          background:
+            linear-gradient(90deg, rgba(5,12,20,.44) 0%, rgba(5,12,20,.18) 48%, rgba(5,12,20,.06) 100%) !important;
+          opacity: 1 !important;
+        }
+
+        [data-temp-services-bg="true"]::after {
+          opacity: 0 !important;
+          background: transparent !important;
+        }
+
+        [data-temp-services-bg="true"] > * {
+          position: relative !important;
+          z-index: 2 !important;
+        }
+
+        @media (max-width: 900px) {
+          [data-temp-services-bg="true"] {
+            background-image:
+              linear-gradient(180deg, rgba(5,12,20,.48) 0%, rgba(5,12,20,.20) 45%, rgba(5,12,20,.54) 100%),
+              url("${mobileImg}") !important;
+            background-size: cover !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+          }
+        }
+      `;
+    };
+
+    applyBackground();
+
+    const timers = [
+      window.setTimeout(applyBackground, 250),
+      window.setTimeout(applyBackground, 800),
+      window.setTimeout(applyBackground, 1600),
+    ];
+
+    const observer = new MutationObserver(() => {
+      applyBackground();
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+
+    window.addEventListener("across-locale-change", applyBackground);
+
+    return () => {
+      timers.forEach((timer) => window.clearTimeout(timer));
+      observer.disconnect();
+      window.removeEventListener("across-locale-change", applyBackground);
+    };
+  }, []);
+
+  return null;
+}
