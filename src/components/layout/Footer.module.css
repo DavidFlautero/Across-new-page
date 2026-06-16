@@ -701,3 +701,135 @@
     color: rgba(255,255,255,.43) !important;
   }
 }
+
+/* ACROSS BRAND BLUE SYSTEM
+   Footer alineado al mismo azul del header.
+*/
+.footer,
+.siteFooter,
+.wrapper {
+  background:
+    linear-gradient(
+      180deg,
+      var(--across-blue-850) 0%,
+      var(--across-blue-950) 100%
+    ) !important;
+  color: rgba(255,255,255,.88) !important;
+}
+
+.footer a,
+.siteFooter a,
+.wrapper a {
+  color: rgba(255,255,255,.82) !important;
+}
+
+.footer a:hover,
+.siteFooter a:hover,
+.wrapper a:hover {
+  color: var(--across-gold) !important;
+}
+
+.footer button,
+.siteFooter button,
+.wrapper button {
+  background:
+    linear-gradient(
+      135deg,
+      var(--across-blue-800),
+      var(--across-blue-900)
+    ) !important;
+  border-color: rgba(214,192,141,.28) !important;
+  color: #fff !important;
+}
+/* END ACROSS BRAND BLUE SYSTEM */
+
+/* FOOTER REAL COLOR BOTON
+   Solo Footer.module.css. Color exacto del botón hero.
+*/
+
+.footer {
+  background:
+    radial-gradient(circle at 18% 0, rgba(255,255,255,.12), transparent 34%),
+    linear-gradient(
+      135deg,
+      #07111d 0%,
+      #0d1c2b 48%,
+      #173247 100%
+    ) !important;
+  color: rgba(244,239,228,.88) !important;
+  border-top: 1px solid rgba(214,192,141,.28) !important;
+  box-shadow:
+    0 -24px 70px rgba(7,17,29,.22),
+    inset 0 1px 0 rgba(255,255,255,.12) !important;
+}
+
+.footer::before,
+.footer::after {
+  opacity: .16 !important;
+  pointer-events: none !important;
+}
+
+.footer h1,
+.footer h2,
+.footer h3,
+.footer h4,
+.footer strong {
+  color: #f4efe4 !important;
+}
+
+.footer p,
+.footer li,
+.footer span,
+.footer small {
+  color: rgba(244,239,228,.72) !important;
+}
+
+.footer a {
+  color: rgba(244,239,228,.84) !important;
+  text-decoration: none !important;
+}
+
+.footer a:hover {
+  color: #d6c08d !important;
+}
+
+.footer button,
+.footer a[class*="button"],
+.footer a[class*="Button"],
+.footer a[class*="btn"],
+.footer a[class*="Btn"] {
+  color: #f4efe4 !important;
+  background:
+    radial-gradient(circle at 18% 0, rgba(255,255,255,.16), transparent 34%),
+    linear-gradient(
+      135deg,
+      #07111d 0%,
+      #0d1c2b 48%,
+      #173247 100%
+    ) !important;
+  border: 1px solid rgba(214,192,141,.42) !important;
+  box-shadow:
+    0 14px 30px rgba(7,17,29,.30),
+    inset 0 1px 0 rgba(255,255,255,.16) !important;
+}
+
+.footer input,
+.footer textarea {
+  background: rgba(244,239,228,.08) !important;
+  border: 1px solid rgba(244,239,228,.16) !important;
+  color: #f4efe4 !important;
+}
+
+.footer input::placeholder,
+.footer textarea::placeholder {
+  color: rgba(244,239,228,.52) !important;
+}
+
+.footer hr,
+.footer [class*="divider"],
+.footer [class*="Divider"] {
+  border-color: rgba(214,192,141,.18) !important;
+  background: rgba(214,192,141,.18) !important;
+}
+
+/* END FOOTER REAL COLOR BOTON */

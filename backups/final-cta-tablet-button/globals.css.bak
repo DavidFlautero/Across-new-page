@@ -5289,14 +5289,3 @@ section:has([class*="solutionsPanel"]) p {
 }
 /* === FINAL CTA MOBILE RESPONSIVE PERFECT END === */
 
-
-/* === FINAL CTA TABLET DESKTOP BUTTON START === */
-/* Baja un poco el botón desde tablet en adelante */
-
-@media (min-width: 769px) {
-  [class*="homeFinalCtaInner"] a[href="/contacto"] {
-    margin-top: 22px !important;
-  }
-}
-/* === FINAL CTA TABLET DESKTOP BUTTON END === */
-

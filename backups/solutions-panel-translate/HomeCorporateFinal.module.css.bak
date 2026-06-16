@@ -5134,18 +5134,3 @@
   -webkit-text-fill-color: #fff8ec !important;
 }
 
-
-/* =====================================================
-   SOLUTIONSPANEL - SUBIR PANEL
-   Equivalente a:
-   transform: translateY(-78px)
-   position: relative
-   z-index: 2
-   ===================================================== */
-
-.solutionsPanel {
-  transform: translateY(-78px) !important;
-  position: relative !important;
-  z-index: 2 !important;
-}
-
