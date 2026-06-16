@@ -3117,18 +3117,22 @@
 /* END HEADER COLOR FINAL BOTON */
 
 
-/* === MOBILE MENU NO RED START === */
-/* Menú mobile:
-   elimina el rojo de mobileLinks,
-   no toca el logo,
-   deja los ítems oscuros premium.
+/* === MOBILE MENU PREMIUM START === */
+/* Menú mobile premium:
+   fondo oscuro, sin blanco arriba, cards sobrias, contacto como CTA.
 */
 
-@media (max-width: 1100px) {
-  .mobilePanel {
+@media (max-width: 768px) {
+  .mobileMenu,
+  .mobilePanel,
+  .mobileOverlay,
+  .mobileNav,
+  .menuPanel,
+  .drawer,
+  .drawerPanel {
     background:
-      radial-gradient(circle at 18% 0%, rgba(214, 192, 141, .16), transparent 30%),
-      radial-gradient(circle at 100% 20%, rgba(255, 255, 255, .06), transparent 34%),
+      radial-gradient(circle at 18% 0%, rgba(214,192,141,.18), transparent 30%),
+      radial-gradient(circle at 100% 20%, rgba(190,18,60,.16), transparent 32%),
       linear-gradient(180deg, #07111d 0%, #0b1724 48%, #09131f 100%) !important;
     background-color: #07111d !important;
 
@@ -3142,33 +3146,38 @@
     overflow-y: auto !important;
 
     box-shadow:
-      0 30px 90px rgba(0, 0, 0, .35),
-      inset 0 1px 0 rgba(255, 255, 255, .08) !important;
+      0 30px 90px rgba(0,0,0,.35),
+      inset 0 1px 0 rgba(255,255,255,.08) !important;
   }
 
-  .mobileLinks {
-    background: transparent !important;
-    background-image: none !important;
+  .mobileMenu > *,
+  .mobilePanel > *,
+  .mobileOverlay > *,
+  .mobileNav > *,
+  .menuPanel > *,
+  .drawer > *,
+  .drawerPanel > * {
     background-color: transparent !important;
-
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 12px !important;
-
-    margin-top: 2.2rem !important;
-    padding: 0 !important;
-
-    border: none !important;
-    box-shadow: none !important;
   }
 
-  .mobileLinks a,
-  .mobileLinks button {
+  .mobileMenu a,
+  .mobileMenu button,
+  .mobilePanel a,
+  .mobilePanel button,
+  .mobileOverlay a,
+  .mobileOverlay button,
+  .mobileNav a,
+  .mobileNav button,
+  .menuPanel a,
+  .menuPanel button,
+  .drawer a,
+  .drawer button,
+  .drawerPanel a,
+  .drawerPanel button {
     width: 100% !important;
     min-height: 54px !important;
-    margin: 0 !important;
-    padding: 0 18px !important;
+    margin: 0 0 11px 0 !important;
+    padding: 0 17px !important;
 
     display: flex !important;
     align-items: center !important;
@@ -3176,7 +3185,6 @@
 
     background:
       linear-gradient(180deg, rgba(255,255,255,.105), rgba(255,255,255,.045)) !important;
-    background-color: transparent !important;
 
     color: #f4efe4 !important;
     -webkit-text-fill-color: #f4efe4 !important;
@@ -3192,20 +3200,43 @@
 
     font-size: .95rem !important;
     font-weight: 850 !important;
-    letter-spacing: -0.015em !important;
     line-height: 1 !important;
+    letter-spacing: -0.015em !important;
     text-decoration: none !important;
     text-transform: none !important;
   }
 
-  .mobileLinks a::before,
-  .mobileLinks button::before {
+  .mobileMenu a::before,
+  .mobileMenu button::before,
+  .mobilePanel a::before,
+  .mobilePanel button::before,
+  .mobileOverlay a::before,
+  .mobileOverlay button::before,
+  .mobileNav a::before,
+  .mobileNav button::before,
+  .menuPanel a::before,
+  .menuPanel button::before,
+  .drawer a::before,
+  .drawer button::before,
+  .drawerPanel a::before,
+  .drawerPanel button::before {
     display: none !important;
-    content: none !important;
   }
 
-  .mobileLinks a::after,
-  .mobileLinks button::after {
+  .mobileMenu a::after,
+  .mobileMenu button::after,
+  .mobilePanel a::after,
+  .mobilePanel button::after,
+  .mobileOverlay a::after,
+  .mobileOverlay button::after,
+  .mobileNav a::after,
+  .mobileNav button::after,
+  .menuPanel a::after,
+  .menuPanel button::after,
+  .drawer a::after,
+  .drawer button::after,
+  .drawerPanel a::after,
+  .drawerPanel button::after {
     content: "›" !important;
 
     width: 25px !important;
@@ -3225,9 +3256,14 @@
     line-height: 1 !important;
   }
 
-  .mobileLinks a[href="/contacto"] {
+  .mobileMenu a[href="/contacto"],
+  .mobilePanel a[href="/contacto"],
+  .mobileOverlay a[href="/contacto"],
+  .mobileNav a[href="/contacto"],
+  .menuPanel a[href="/contacto"],
+  .drawer a[href="/contacto"],
+  .drawerPanel a[href="/contacto"] {
     margin-top: 8px !important;
-    min-height: 56px !important;
     justify-content: center !important;
 
     background:
@@ -3246,16 +3282,20 @@
     font-weight: 950 !important;
   }
 
-  .mobileLinks a[href="/contacto"]::before,
-  .mobileLinks a[href="/contacto"]::after {
+  .mobileMenu a[href="/contacto"]::after,
+  .mobilePanel a[href="/contacto"]::after,
+  .mobileOverlay a[href="/contacto"]::after,
+  .mobileNav a[href="/contacto"]::after,
+  .menuPanel a[href="/contacto"]::after,
+  .drawer a[href="/contacto"]::after,
+  .drawerPanel a[href="/contacto"]::after {
     display: none !important;
-    content: none !important;
   }
 
   .closeButton {
     position: absolute !important;
-    top: 24px !important;
-    right: 20px !important;
+    top: 28px !important;
+    right: 22px !important;
     z-index: 9 !important;
 
     width: 42px !important;
@@ -3286,50 +3326,7 @@
   .closeButton::before,
   .closeButton::after {
     display: none !important;
-    content: none !important;
   }
 }
-/* === MOBILE MENU NO RED END === */
-
-
-/* === MOBILE MENU GOLD ARROWS ONLY START === */
-/* Oculta flechas internas blancas y deja solo la flecha dorada del ::after */
-
-@media (max-width: 1100px) {
-  .mobileLinks a span,
-  .mobileLinks button span,
-  .mobileLinks a svg,
-  .mobileLinks button svg {
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-  }
-
-  .mobileLinks a::after,
-  .mobileLinks button::after {
-    content: "›" !important;
-
-    width: 25px !important;
-    height: 25px !important;
-    border-radius: 999px !important;
-
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    background: rgba(214, 192, 141, .14) !important;
-    color: #d6c08d !important;
-    -webkit-text-fill-color: #d6c08d !important;
-
-    font-size: 1.15rem !important;
-    font-weight: 900 !important;
-    line-height: 1 !important;
-  }
-
-  .mobileLinks a[href="/contacto"]::after {
-    display: none !important;
-    content: none !important;
-  }
-}
-/* === MOBILE MENU GOLD ARROWS ONLY END === */
+/* === MOBILE MENU PREMIUM END === */
 
