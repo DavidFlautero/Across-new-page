@@ -7,269 +7,229 @@ import Footer from "@/components/layout/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
-import RelatedServices from "../_shared/RelatedServices";
-import styles from "./TransporteAereo.module.css";
+import styles from "./Sostenibilidad.module.css";
 
 type Locale = "es" | "en" | "zh";
 
 const copy = {
   es: {
-    heroEyebrow: "Transporte aéreo internacional",
-    heroTitle: "Velocidad que mueve negocios críticos.",
-    heroText:
-      "Coordinamos envíos aéreos internacionales con control documental, seguimiento operativo y soluciones adaptadas a cargas sensibles, urgentes o de alto valor.",
-    primaryCta: "Planificar mi operación",
-    secondaryCta: "Hablar con nuestro equipo",
-
-    activeLabel: "Operación aérea activa",
-    activeRoute: "Madrid → Bogotá",
-    activeCargo: "Carga crítica",
-    activeStatusLabel: "Estado:",
-    activeStatus: "En coordinación",
-    activeEtaLabel: "ETA:",
-    activeEta: "Prioritario",
-
+    heroEyebrow: "Sostenibilidad",
+    heroTitle: "Logística y sostenibilidad ambiental para cadenas de suministro responsables.",
+    heroText: "Trabajamos para reducir impacto, optimizar recursos y avanzar hacia operaciones logísticas más eficientes, trazables y responsables.",
+    primaryCta: "Hablar con un especialista",
+    secondaryCta: "Conocer soluciones",
+    overviewEyebrow: "Compromiso ambiental",
+    overviewTitle: "Tecnología, multimodalidad y reducción de impacto en cada proyecto.",
+    overviewText: "Buscamos alternativas operativas que ayuden a reducir emisiones, optimizar rutas y mejorar la eficiencia logística.",
+    overviewButton: "Conocer soluciones",
+    servicesEyebrow: "Ejes sostenibles",
+    servicesTitle: "Nuestra sostenibilidad se construye desde la operación.",
+    useCasesEyebrow: "Impacto responsable",
+    useCasesTitle: "Soluciones logísticas con menor impacto ambiental.",
+    processEyebrow: "Mejora continua",
+    processTitle: "Medimos, optimizamos y acompañamos cada decisión logística.",
+    bandTitle: "Operaciones logísticas con visión sostenible.",
+    bandText: "Combinamos eficiencia, multimodalidad y compromiso ambiental para ayudar a nuestros clientes a avanzar hacia cadenas más responsables.",
+    finalTitle: "Avancemos hacia operaciones logísticas con menor impacto ambiental.",
+    finalText: "Nuestro equipo puede ayudarle a diseñar soluciones logísticas más eficientes y responsables.",
+    finalPrimary: "Hablar con un especialista",
+    finalSecondary: "Conocer soluciones",
+    activeLabel: "Operación activa",
+    activeRoute: "Across Logistics",
+    activeCargo: "Coordinación internacional",
+    activeStatusLabel: "Enfoque:",
+    activeStatus: "Control operativo",
+    activeEtaLabel: "Red:",
+    activeEta: "Global",
     trust: [
-      ["Carga urgente", "Operaciones críticas"],
-      ["Alto valor", "Máxima seguridad"],
-      ["Documentación", "Control internacional"],
-      ["Seguimiento operativo", "Visibilidad en tiempo real"],
+      ["Control", "Seguimiento operativo"],
+      ["Red global", "Cobertura internacional"],
+      ["Cumplimiento", "Gestión documental"],
+      ["Equipo experto", "Atención especializada"]
     ],
-
-    overviewEyebrow: "Operaciones confiables",
-    overviewTitle: "Velocidad, precisión y control en cada etapa del envío aéreo.",
-    overviewText:
-      "El transporte aéreo exige coordinación exacta entre origen, aerolínea, aduana y destino final. En Across Logistics gestionamos cada etapa para reducir tiempos, evitar errores documentales y mantener visibilidad sobre la operación.",
-    overviewButton: "Conocer más sobre aéreo",
-
     pillars: [
-      ["Coordinación aeroportuaria", "Gestión con aerolíneas, agentes y operadores logísticos."],
-      ["Control documental", "Revisión de documentos comerciales, aduaneros y operativos."],
-      ["Seguimiento de operación", "Monitoreo del avance desde origen hasta destino."],
-      ["Soluciones puerta a puerta", "Integración con transporte terrestre y entrega final."],
+      ["Red internacional", "Oficinas, agentes y partners conectados para responder en mercados clave."],
+      ["Control documental", "Procesos claros para operaciones internacionales exigentes."],
+      ["Tecnología y visibilidad", "Seguimiento operativo para tomar mejores decisiones."],
+      ["Atención especializada", "Equipos preparados para acompañar cada operación."]
     ],
-
-    servicesEyebrow: "Nuestros servicios aéreos",
-    servicesTitle: "Soluciones aéreas para cada tipo de operación.",
     services: [
-      ["Carga aérea urgente", "Para envíos donde el tiempo define la operación."],
-      ["Carga consolidada", "Optimización de costos mediante espacios compartidos."],
-      ["Carga de alto valor", "Coordinación segura para productos sensibles o estratégicos."],
-      ["Chárter aéreo", "Soluciones dedicadas para operaciones especiales o cargas críticas."],
-      ["Cross trade", "Operaciones internacionales entre terceros países."],
-      ["Door to door", "Desde retiro en origen hasta entrega final en destino."],
+      ["Planificación", "Diseñamos operaciones de acuerdo con origen, destino, carga y urgencia."],
+      ["Coordinación", "Integramos equipos, agentes y proveedores en una operación clara."],
+      ["Documentación", "Gestionamos requisitos comerciales, aduaneros y operativos."],
+      ["Seguimiento", "Mantenemos visibilidad sobre cada etapa de la operación."],
+      ["Respuesta", "Acompañamos incidencias y decisiones críticas con criterio profesional."],
+      ["Mejora", "Optimizamos procesos para futuras operaciones."]
     ],
-
-    useCasesEyebrow: "Cuándo conviene usar transporte aéreo",
-    useCasesTitle: "El transporte aéreo marca la diferencia.",
     useCases: [
-      ["Repuestos industriales urgentes", "Evite detener una línea de producción por falta de componentes."],
-      ["Productos tecnológicos", "Ideal para cargas de alto valor, sensibles o con rápida rotación."],
-      ["Muestras comerciales", "Envíos rápidos para ferias, clientes o validaciones internacionales."],
-      ["Carga médica o sensible", "Coordinación especial para productos que requieren mayor control."],
-      ["E-commerce internacional", "Movimientos rápidos para operaciones comerciales globales."],
-      ["Documentación crítica", "Soluciones para envíos donde el plazo no admite demoras."],
+      ["Importación y exportación", "Operaciones internacionales con control documental."],
+      ["Cargas sensibles", "Mercancías que requieren seguimiento y atención especializada."],
+      ["Red de oficinas", "Coordinación entre origen, tránsito y destino."],
+      ["Aduanas", "Gestión regulatoria para continuidad operativa."],
+      ["Distribución", "Conexión entre almacenaje, transporte y entrega final."],
+      ["Proyectos especiales", "Operaciones que requieren planificación técnica."]
     ],
-
-    processEyebrow: "Nuestro proceso operativo",
-    processTitle: "Una operación aérea clara desde el primer contacto.",
     process: [
-      ["Análisis de carga", "Revisamos peso, volumen, origen, destino y urgencia."],
-      ["Selección de ruta", "Buscamos la alternativa aérea más eficiente."],
-      ["Coordinación documental", "Validamos requisitos comerciales y aduaneros."],
-      ["Reserva y despacho", "Coordinamos aerolínea, aeropuerto y operación de salida."],
-      ["Seguimiento", "Monitoreamos el avance de la carga."],
-      ["Entrega final", "Gestionamos conexión terrestre y entrega en destino."],
+      ["Análisis", "Entendemos la necesidad operativa."],
+      ["Diseño", "Definimos ruta, modalidad y estructura."],
+      ["Coordinación", "Conectamos equipos y proveedores."],
+      ["Documentación", "Validamos requisitos clave."],
+      ["Seguimiento", "Monitoreamos el avance."],
+      ["Optimización", "Mejoramos futuras operaciones."]
     ],
-
-    bandTitle: "Operaciones aéreas diseñadas para cargas que no pueden esperar.",
-    bandText:
-      "Nuestro equipo coordina soluciones aéreas internacionales para empresas que necesitan rapidez, trazabilidad y respuesta profesional ante operaciones sensibles.",
     stats: [
-      ["Cobertura global", "Más de 120 países"],
-      ["Envíos urgentes", "Respuesta prioritaria"],
-      ["Seguridad y control", "Estándares internacionales"],
-      ["Soporte especializado", "Especialistas dedicados"],
+      ["Red internacional", "Cobertura global"],
+      ["Control", "Trazabilidad operativa"],
+      ["Cumplimiento", "Gestión documental"],
+      ["Equipo experto", "Atención especializada"]
     ],
-
-    finalTitle: "Coordinemos su próximo envío aéreo internacional.",
-    finalText:
-      "Cuéntenos origen, destino, tipo de carga y urgencia. Nuestro equipo analizará la mejor alternativa aérea para su operación.",
-    finalPrimary: "Solicitar cotización aérea",
-    finalSecondary: "Hablar con un especialista",
   },
 
   en: {
-    heroEyebrow: "International air freight",
-    heroTitle: "Speed that moves critical business.",
-    heroText:
-      "We coordinate international air shipments with document control, operational tracking and solutions adapted to sensitive, urgent or high-value cargo.",
-    primaryCta: "Plan my operation",
-    secondaryCta: "Talk to our team",
-
-    activeLabel: "Active air operation",
-    activeRoute: "Madrid → Bogotá",
-    activeCargo: "Critical cargo",
-    activeStatusLabel: "Status:",
-    activeStatus: "In coordination",
-    activeEtaLabel: "ETA:",
-    activeEta: "Priority",
-
+    heroEyebrow: "Sustainability",
+    heroTitle: "Logistics and environmental sustainability for responsible supply chains.",
+    heroText: "We work to reduce impact, optimize resources and move toward more efficient, traceable and responsible logistics operations.",
+    primaryCta: "Talk to a specialist",
+    secondaryCta: "Explore solutions",
+    overviewEyebrow: "Environmental commitment",
+    overviewTitle: "Technology, multimodality and impact reduction in every project.",
+    overviewText: "We seek operational alternatives that help reduce emissions, optimize routes and improve logistics efficiency.",
+    overviewButton: "Explore solutions",
+    servicesEyebrow: "Sustainable pillars",
+    servicesTitle: "Our sustainability is built from operations.",
+    useCasesEyebrow: "Responsible impact",
+    useCasesTitle: "Logistics solutions with lower environmental impact.",
+    processEyebrow: "Continuous improvement",
+    processTitle: "We measure, optimize and support every logistics decision.",
+    bandTitle: "Logistics operations with sustainable vision.",
+    bandText: "We combine efficiency, multimodality and environmental commitment to help clients move toward more responsible chains.",
+    finalTitle: "Let’s move toward logistics operations with lower environmental impact.",
+    finalText: "Our team can help you design more efficient and responsible logistics solutions.",
+    finalPrimary: "Talk to a specialist",
+    finalSecondary: "Explore solutions",
+    activeLabel: "Active operation",
+    activeRoute: "Across Logistics",
+    activeCargo: "International coordination",
+    activeStatusLabel: "Focus:",
+    activeStatus: "Operational control",
+    activeEtaLabel: "Network:",
+    activeEta: "Global",
     trust: [
-      ["Urgent cargo", "Critical operations"],
-      ["High value", "Maximum security"],
-      ["Documentation", "International control"],
-      ["Operational tracking", "Real-time visibility"],
+      ["Control", "Operational tracking"],
+      ["Global network", "International coverage"],
+      ["Compliance", "Document management"],
+      ["Expert team", "Specialized attention"]
     ],
-
-    overviewEyebrow: "Reliable operations",
-    overviewTitle: "Speed, precision and control at every stage of air shipping.",
-    overviewText:
-      "Air freight requires exact coordination between origin, airline, customs and final destination. At Across Logistics, we manage each stage to reduce times, avoid documentation errors and maintain visibility over the operation.",
-    overviewButton: "Learn more about air freight",
-
     pillars: [
-      ["Airport coordination", "Management with airlines, agents and logistics operators."],
-      ["Document control", "Review of commercial, customs and operational documents."],
-      ["Operational tracking", "Monitoring from origin to destination."],
-      ["Door-to-door solutions", "Integration with road transport and final delivery."],
+      ["International network", "Offices, agents and partners connected in key markets."],
+      ["Document control", "Clear processes for demanding international operations."],
+      ["Technology and visibility", "Operational tracking to support better decisions."],
+      ["Specialized attention", "Teams prepared to support each operation."]
     ],
-
-    servicesEyebrow: "Our air services",
-    servicesTitle: "Air solutions for every type of operation.",
     services: [
-      ["Urgent air cargo", "For shipments where time defines the operation."],
-      ["Consolidated cargo", "Cost optimization through shared spaces."],
-      ["High-value cargo", "Secure coordination for sensitive or strategic products."],
-      ["Air charter", "Dedicated solutions for special operations or critical cargo."],
-      ["Cross trade", "International operations between third countries."],
-      ["Door to door", "From pickup at origin to final delivery at destination."],
+      ["Planning", "We design operations according to origin, destination, cargo and urgency."],
+      ["Coordination", "We integrate teams, agents and providers into a clear operation."],
+      ["Documentation", "We manage commercial, customs and operational requirements."],
+      ["Tracking", "We maintain visibility over every stage of the operation."],
+      ["Response", "We support incidents and critical decisions with professional judgment."],
+      ["Improvement", "We optimize processes for future operations."]
     ],
-
-    useCasesEyebrow: "When to use air freight",
-    useCasesTitle: "Air freight makes the difference.",
     useCases: [
-      ["Urgent industrial spare parts", "Avoid stopping a production line due to missing components."],
-      ["Technology products", "Ideal for high-value, sensitive or fast-moving cargo."],
-      ["Commercial samples", "Fast shipments for fairs, clients or international validations."],
-      ["Medical or sensitive cargo", "Special coordination for products requiring greater control."],
-      ["International e-commerce", "Fast movements for global commercial operations."],
-      ["Critical documentation", "Solutions for shipments where deadlines cannot be delayed."],
+      ["Import and export", "International operations with document control."],
+      ["Sensitive cargo", "Goods requiring tracking and specialized attention."],
+      ["Office network", "Coordination between origin, transit and destination."],
+      ["Customs", "Regulatory management for operational continuity."],
+      ["Distribution", "Connection between warehousing, transport and final delivery."],
+      ["Special projects", "Operations requiring technical planning."]
     ],
-
-    processEyebrow: "Our operational process",
-    processTitle: "A clear air operation from the first contact.",
     process: [
-      ["Cargo analysis", "We review weight, volume, origin, destination and urgency."],
-      ["Route selection", "We look for the most efficient air alternative."],
-      ["Document coordination", "We validate commercial and customs requirements."],
-      ["Booking and dispatch", "We coordinate airline, airport and departure operation."],
-      ["Tracking", "We monitor cargo progress."],
-      ["Final delivery", "We manage road connection and delivery at destination."],
+      ["Analysis", "We understand the operational need."],
+      ["Design", "We define route, modality and structure."],
+      ["Coordination", "We connect teams and providers."],
+      ["Documentation", "We validate key requirements."],
+      ["Tracking", "We monitor progress."],
+      ["Optimization", "We improve future operations."]
     ],
-
-    bandTitle: "Air operations designed for cargo that cannot wait.",
-    bandText:
-      "Our team coordinates international air solutions for companies that need speed, traceability and professional response for sensitive operations.",
     stats: [
-      ["Global coverage", "More than 120 countries"],
-      ["Urgent shipments", "Priority response"],
-      ["Security and control", "International standards"],
-      ["Specialized support", "Dedicated specialists"],
+      ["International network", "Global coverage"],
+      ["Control", "Operational traceability"],
+      ["Compliance", "Document management"],
+      ["Expert team", "Specialized attention"]
     ],
-
-    finalTitle: "Let’s coordinate your next international air shipment.",
-    finalText:
-      "Tell us origin, destination, cargo type and urgency. Our team will analyze the best air alternative for your operation.",
-    finalPrimary: "Request air quotation",
-    finalSecondary: "Talk to a specialist",
   },
 
   zh: {
-    heroEyebrow: "国际空运",
-    heroTitle: "面向紧急货物和关键业务的国际空运服务。",
-    heroText:
-      "我们协调国际空运业务，提供文件控制、运营跟踪以及适用于敏感、紧急或高价值货物的定制方案。",
-    primaryCta: "规划物流操作",
-    secondaryCta: "联系我们的团队",
-
-    activeLabel: "进行中的空运操作",
-    activeRoute: "马德里 → 波哥大",
-    activeCargo: "关键货物",
-    activeStatusLabel: "状态：",
-    activeStatus: "协调中",
-    activeEtaLabel: "ETA：",
-    activeEta: "优先",
-
+    heroEyebrow: "可持续发展",
+    heroTitle: "面向负责任供应链的物流与环境可持续发展。",
+    heroText: "我们致力于降低影响、优化资源，并推动更高效、可追溯和负责任的物流运营。",
+    primaryCta: "联系专家",
+    secondaryCta: "了解解决方案",
+    overviewEyebrow: "环境承诺",
+    overviewTitle: "在每个项目中结合技术、多式联运与影响降低。",
+    overviewText: "我们寻求有助于减少排放、优化路线和提升物流效率的运营方案。",
+    overviewButton: "了解解决方案",
+    servicesEyebrow: "可持续重点",
+    servicesTitle: "我们的可持续发展建立在运营之上。",
+    useCasesEyebrow: "负责任影响",
+    useCasesTitle: "环境影响更低的物流解决方案。",
+    processEyebrow: "持续改进",
+    processTitle: "我们衡量、优化并支持每项物流决策。",
+    bandTitle: "具备可持续视野的物流运营。",
+    bandText: "我们结合效率、多式联运和环境承诺，帮助客户迈向更负责任的供应链。",
+    finalTitle: "让我们推动更低环境影响的物流运营。",
+    finalText: "我们的团队可以帮助您设计更高效、更负责任的物流方案。",
+    finalPrimary: "联系专家",
+    finalSecondary: "了解解决方案",
+    activeLabel: "进行中的业务",
+    activeRoute: "Across Logistics",
+    activeCargo: "国际协调",
+    activeStatusLabel: "重点：",
+    activeStatus: "运营控制",
+    activeEtaLabel: "网络：",
+    activeEta: "全球",
     trust: [
-      ["紧急货物", "关键业务"],
-      ["高价值", "最高安全标准"],
-      ["文件管理", "国际控制"],
-      ["运营跟踪", "实时可视化"],
+      ["控制", "运营跟踪"],
+      ["全球网络", "国际覆盖"],
+      ["合规", "文件管理"],
+      ["专家团队", "专项服务"]
     ],
-
-    overviewEyebrow: "可靠运营",
-    overviewTitle: "在空运每个阶段实现速度、精准与控制。",
-    overviewText:
-      "空运需要始发地、航空公司、海关和最终目的地之间的精准协调。Across Logistics 管理每个阶段，以缩短时间、避免文件错误并保持运营可视化。",
-    overviewButton: "了解空运服务",
-
     pillars: [
-      ["机场协调", "与航空公司、代理和物流运营商协调。"],
-      ["文件控制", "审核商业、海关和运营文件。"],
-      ["运营跟踪", "从始发地到目的地进行监控。"],
-      ["门到门方案", "整合陆运和最终交付。"],
+      ["国际网络", "办公室、代理和合作伙伴连接关键市场。"],
+      ["文件控制", "适用于高要求国际业务的清晰流程。"],
+      ["技术与可视化", "运营跟踪支持更好的决策。"],
+      ["专业服务", "准备充分的团队支持每项业务。"]
     ],
-
-    servicesEyebrow: "我们的空运服务",
-    servicesTitle: "适用于不同业务类型的空运解决方案。",
     services: [
-      ["紧急空运", "适用于时间决定成败的运输。"],
-      ["拼箱空运", "通过共享舱位优化成本。"],
-      ["高价值货物", "为敏感或战略产品提供安全协调。"],
-      ["包机服务", "为特殊业务或关键货物提供专属方案。"],
-      ["第三国贸易", "第三国之间的国际业务。"],
-      ["门到门", "从始发地提货到目的地最终交付。"],
+      ["规划", "根据始发地、目的地、货物和紧急程度设计业务。"],
+      ["协调", "将团队、代理和供应商整合为清晰运营。"],
+      ["文件", "管理商业、海关和运营要求。"],
+      ["跟踪", "保持每个阶段的可视性。"],
+      ["响应", "以专业判断支持突发情况和关键决策。"],
+      ["改进", "优化未来业务流程。"]
     ],
-
-    useCasesEyebrow: "何时选择空运",
-    useCasesTitle: "空运能够创造关键差异。",
     useCases: [
-      ["紧急工业备件", "避免因零部件缺失导致生产线停工。"],
-      ["科技产品", "适合高价值、敏感或快速流转货物。"],
-      ["商业样品", "用于展会、客户或国际验证的快速运输。"],
-      ["医疗或敏感货物", "为需要更高控制的产品提供特殊协调。"],
-      ["国际电商", "支持全球商业业务的快速流转。"],
-      ["关键文件", "适用于交期不允许延误的文件运输。"],
+      ["进出口", "具备文件控制的国际业务。"],
+      ["敏感货物", "需要跟踪和专项服务的货物。"],
+      ["办公室网络", "始发地、运输过程和目的地之间的协调。"],
+      ["海关", "确保运营连续性的监管管理。"],
+      ["配送", "连接仓储、运输和最终交付。"],
+      ["特殊项目", "需要技术规划的业务。"]
     ],
-
-    processEyebrow: "我们的运营流程",
-    processTitle: "从第一次联系开始，空运操作清晰可控。",
     process: [
-      ["货物分析", "审核重量、体积、始发地、目的地和紧急程度。"],
-      ["路线选择", "寻找最高效的空运方案。"],
-      ["文件协调", "验证商业和海关要求。"],
-      ["订舱与派送", "协调航空公司、机场和出运操作。"],
-      ["跟踪", "监控货物运输进度。"],
-      ["最终交付", "管理陆运衔接和目的地交付。"],
+      ["分析", "了解运营需求。"],
+      ["设计", "确定路线、模式和结构。"],
+      ["协调", "连接团队和供应商。"],
+      ["文件", "验证关键要求。"],
+      ["跟踪", "监控进度。"],
+      ["优化", "改进未来业务。"]
     ],
-
-    bandTitle: "为空运不能等待的货物设计的运营方案。",
-    bandText:
-      "我们的团队为需要速度、可追溯性和专业响应的企业协调国际空运解决方案。",
     stats: [
-      ["全球覆盖", "超过120个国家"],
-      ["紧急运输", "优先响应"],
-      ["安全与控制", "国际标准"],
-      ["专业支持", "专属专家"],
+      ["国际网络", "全球覆盖"],
+      ["控制", "运营可追溯性"],
+      ["合规", "文件管理"],
+      ["专家团队", "专项服务"]
     ],
-
-    finalTitle: "让我们协调您的下一次国际空运。",
-    finalText:
-      "告诉我们始发地、目的地、货物类型和紧急程度。我们的团队将为您的业务分析最佳空运方案。",
-    finalPrimary: "申请空运报价",
-    finalSecondary: "联系专家",
-  },
+  }
 } satisfies Record<Locale, any>;
 
 function getInitialLocale(): Locale {
@@ -511,7 +471,7 @@ function Icon({ name }: { name: IconName }) {
   }
 }
 
-export default function TransporteAereoPage() {
+export default function SostenibilidadPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
@@ -562,7 +522,7 @@ export default function TransporteAereoPage() {
         <section className={styles.hero} data-aereo-hero="true" data-service-hero-home="true"
       >
           <Image
-            src="/images/hero/cargaAereahero.png"
+            src="/images/sosten1.png"
             alt={t.heroTitle}
             fill
             priority
@@ -571,7 +531,7 @@ export default function TransporteAereoPage() {
           />
 
           <Image
-            src="/images/hero/cargaAereahero-mobile.png"
+            src="/images/sosten1.png"
             alt={t.heroTitle}
             fill
             priority
@@ -657,7 +617,7 @@ export default function TransporteAereoPage() {
           </div>
         </section>
 
-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/contactoimagen.png')" } as CSSProperties}>
+        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/sosten1.png')" } as CSSProperties}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -757,7 +717,7 @@ export default function TransporteAereoPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/contactoimagen.png')" } as CSSProperties} data-across-final-cta="true">
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/sosten1.png')" } as CSSProperties} data-across-final-cta="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>
@@ -770,16 +730,14 @@ export default function TransporteAereoPage() {
 
           <div className={styles.finalImage}>
             <Image
-              src="/images/contactoimagen.png"
+              src="/images/sosten1.png"
               alt={t.finalTitle}
               fill
               sizes="(max-width: 900px) 100vw, 44vw"
             />
           </div>
         </section>
-
-        <RelatedServices current="transporte-aereo" locale={locale} />
-      </main>
+</main>
 
       <Footer />
     </div>

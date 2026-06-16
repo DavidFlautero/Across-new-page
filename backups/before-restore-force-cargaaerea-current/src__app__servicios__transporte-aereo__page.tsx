@@ -730,7 +730,7 @@ export default function TransporteAereoPage() {
         <section className={styles.darkBand} data-mobile-hide-after-cert="true">
           <div className={styles.darkBandImage}>
             <Image
-              src="/images/cargaaerea.png"
+              src="/images/transporte-maritimo-desktop/1.png"
               alt={t.bandTitle}
               fill
               sizes="(max-width: 900px) 100vw, 42vw"

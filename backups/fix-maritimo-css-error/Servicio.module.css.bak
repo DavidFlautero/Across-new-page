@@ -9652,62 +9652,112 @@
   }
 }
 
-
-/* === MARITIMO FINAL CTA IMAGE FIX START === */
-/* Reemplaza SOLO la imagen del bloque:
-   "Coordinemos su próximo embarque marítimo internacional"
-   Desktop y mobile usan las imágenes marítimas nuevas.
-*/
-
-.finalCta {
-  position: relative !important;
-  overflow: hidden !important;
-  background-image:
-    linear-gradient(
+/* === MARITIMO CSS IMAGE FIX START === */
+@media (max-width: 768px) {
+  .services {
+    background: linear-gradient(
       90deg,
-      rgba(3, 7, 13, .92) 0%,
-      rgba(3, 7, 13, .74) 42%,
-      rgba(3, 7, 13, .38) 72%,
-      rgba(3, 7, 13, .22) 100%
+      rgba(5, 6, 9, .98) 0%,
+      rgba(5, 6, 9, .94) 38%,
+      rgba(5, 6, 9, .78) 62%,
+      rgba(5, 6, 9, .55) 100%
     ),
-    url("/images/transporte-maritimo-desktop/1.png") !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-}
-
-.finalCta > div:first-child {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-/* Si esa sección además tiene una imagen interna tipo <Image>, también la reemplaza */
-.finalImage img {
-  content: url("/images/transporte-maritimo-desktop/1.png") !important;
-  object-fit: cover !important;
-  object-position: center center !important;
-}
-
-@media (max-width: 900px) {
-  .finalCta {
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(3, 7, 13, .60) 0%,
-        rgba(3, 7, 13, .82) 58%,
-        rgba(3, 7, 13, .94) 100%
-      ),
-      url("/images/transporte-maritimo-mobile/1.png") !important;
+    radial-gradient(circle at 18% 18%, rgba(23, 50, 71, .16), transparent 24rem),
+    url("/images/transporte-maritimo-mobile/1.png") !important !important;
     background-size: cover !important;
     background-position: center center !important;
-    background-repeat: no-repeat !important;
   }
-
-  .finalImage img {
-    content: url("/images/transporte-maritimo-mobile/1.png") !important;
-    object-fit: cover !important;
-    object-position: center center !important;
+  .darkBand {
+    background: linear-gradient(
+      90deg,
+      rgba(5, 6, 9, .98) 0%,
+      rgba(5, 6, 9, .94) 42%,
+      rgba(5, 6, 9, .76) 68%,
+      rgba(5, 6, 9, .42) 100%
+    ),
+    radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
+    url("/images/transporte-maritimo-mobile/1.png") !important !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+  .services {
+    background: linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.90)),
+      url("/images/transporte-maritimo-mobile/1.png") !important !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+  .darkBand {
+    background: linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
+      url("/images/transporte-maritimo-mobile/1.png") !important !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+  .darkBand {
+    background: linear-gradient(
+      90deg,
+      rgba(5, 6, 9, .98) 0%,
+      rgba(5, 6, 9, .94) 42%,
+      rgba(5, 6, 9, .76) 68%,
+      rgba(5, 6, 9, .42) 100%
+    ),
+    radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
+    url("/images/hero/cargaAereahero.png") !important !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+  .darkBand {
+    background: linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
+      url("/images/hero/cargaAereahero.png") !important !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+  .darkBand {
+    background: linear-gradient(
+      90deg,
+      rgba(5, 6, 9, .98) 0%,
+      rgba(5, 6, 9, .94) 42%,
+      rgba(5, 6, 9, .76) 68%,
+      rgba(5, 6, 9, .44) 100%
+    ),
+    radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
+    url("/images/cargaaerea1.png") !important !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+  .darkBand {
+    background: linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
+      url("/images/cargaaerea1.png") !important !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+  .page section[data-across-final-cta="true"] {
+    background: linear-gradient(
+        90deg,
+        rgba(3,10,18,.72) 0%,
+        rgba(3,10,18,.50) 42%,
+        rgba(3,10,18,.16) 100%
+      ),
+      radial-gradient(circle at 70% 32%, rgba(15,111,150,.13), transparent 42%),
+      var(--mobile-bg, url("/images/hero/cargaAereahero.png")) center center / 100% 100% no-repeat !important !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+  .page .darkBand {
+    background: linear-gradient(
+      90deg,
+      rgba(3, 10, 18, .54) 0%,
+      rgba(3, 10, 18, .34) 42%,
+      rgba(3, 10, 18, .14) 100%
+    ),
+    radial-gradient(circle at 76% 20%, rgba(15,111,150,.16), transparent 40%),
+    linear-gradient(
+      180deg,
+      rgba(244,239,229,.025) 0%,
+      rgba(3,10,18,.16) 100%
+    ),
+    url("/images/transporte-maritimo-mobile/1.png") center center / cover no-repeat !important !important;
+    background-size: cover !important;
+    background-position: center center !important;
   }
 }
-/* === MARITIMO FINAL CTA IMAGE FIX END === */
-
+/* === MARITIMO CSS IMAGE FIX END === */

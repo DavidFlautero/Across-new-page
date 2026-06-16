@@ -2963,7 +2963,7 @@
       rgba(5, 6, 9, .55) 100%
     ),
     radial-gradient(circle at 18% 18%, rgba(23, 50, 71, .16), transparent 24rem),
-    url("/images/transporte-maritimo-desktop/1.png") !important;
+    url("/images/cargaaerea.png") !important;
   background-size: cover !important;
   background-position: center 48% !important;
   background-repeat: no-repeat !important;
@@ -3065,7 +3065,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/transporte-maritimo-desktop/1.png") !important;
+    url("/images/cargaaerea.png") !important;
   background-size: cover !important;
   background-position: center 55% !important;
   background-repeat: no-repeat !important;
@@ -3104,7 +3104,7 @@
   .services {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.90)),
-      url("/images/transporte-maritimo-desktop/1.png") !important;
+      url("/images/cargaaerea.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3116,7 +3116,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/transporte-maritimo-desktop/1.png") !important;
+      url("/images/cargaaerea.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -5582,35 +5582,35 @@
 }
 
 /* =====================================================
-   MARITIMO VIEWPORT LOCK FINAL
+   TRANSPORTE-TERRESTRE VIEWPORT LOCK FINAL
    El hero NO puede comerse el bloque azul.
    Hero + trustBar = 100svh
    ===================================================== */
 
 /* Base */
 .page {
-  --maritimo-trust-h: 88px;
+  --transporte-terrestre-trust-h: 88px;
 }
 
 .page .hero {
-  height: calc(100svh - var(--maritimo-trust-h)) !important;
-  min-height: calc(100svh - var(--maritimo-trust-h)) !important;
-  max-height: calc(100svh - var(--maritimo-trust-h)) !important;
+  height: calc(100svh - var(--transporte-terrestre-trust-h)) !important;
+  min-height: calc(100svh - var(--transporte-terrestre-trust-h)) !important;
+  max-height: calc(100svh - var(--transporte-terrestre-trust-h)) !important;
   padding: 0 !important;
   overflow: hidden !important;
 }
 
 .page .trustBar {
-  height: var(--maritimo-trust-h) !important;
-  min-height: var(--maritimo-trust-h) !important;
-  max-height: var(--maritimo-trust-h) !important;
+  height: var(--transporte-terrestre-trust-h) !important;
+  min-height: var(--transporte-terrestre-trust-h) !important;
+  max-height: var(--transporte-terrestre-trust-h) !important;
   overflow: hidden !important;
 }
 
 /* Desktop normal */
 @media (min-width: 901px) {
   .page {
-    --maritimo-trust-h: 88px;
+    --transporte-terrestre-trust-h: 88px;
   }
 
   .page .content {
@@ -5659,7 +5659,7 @@
 /* Desktop bajo tipo Nest Hub */
 @media (min-width: 901px) and (max-height: 700px) {
   .page {
-    --maritimo-trust-h: 78px;
+    --transporte-terrestre-trust-h: 78px;
   }
 
   .page .content {
@@ -5691,7 +5691,7 @@
 /* iPad / tablets */
 @media (min-width: 701px) and (max-width: 900px) {
   .page {
-    --maritimo-trust-h: 108px;
+    --transporte-terrestre-trust-h: 108px;
   }
 
   .page .content {
@@ -5741,11 +5741,11 @@
 /* Mobile */
 @media (max-width: 700px) {
   .page {
-    --maritimo-trust-h: 108px;
+    --transporte-terrestre-trust-h: 108px;
   }
 
   .page .hero {
-    min-height: calc(100svh - var(--maritimo-trust-h)) !important;
+    min-height: calc(100svh - var(--transporte-terrestre-trust-h)) !important;
   }
 
   .page .content {
@@ -5797,7 +5797,7 @@
 }
 
 /* =====================================================
-   MARITIMO HERO REAL JSX FINAL
+   TRANSPORTE-TERRESTRE HERO REAL JSX FINAL
    Usa las clases reales:
    hero / heroImage / heroOverlay / heroInner / heroContent /
    eyebrow / title / subtitle / actions / trustBar
@@ -6201,7 +6201,7 @@
 
 
 /* =====================================================
-   MARITIMO HERO TEXT SPACING ONLY
+   TRANSPORTE-TERRESTRE HERO TEXT SPACING ONLY
    Solo mejora aire entre eyebrow, título, texto y botones.
    No toca altura, fondo ni trustBar.
    ===================================================== */
@@ -6283,7 +6283,7 @@
 
 
 /* =====================================================
-   MARITIMO HERO EXTRA BLOCK SPACING
+   TRANSPORTE-TERRESTRE HERO EXTRA BLOCK SPACING
    Separa mejor título, texto y botón. Solo aire interno.
    ===================================================== */
 
@@ -6324,7 +6324,7 @@
 
 
 /* =====================================================
-   MARITIMO MOBILE FINAL TWEAK
+   TRANSPORTE-TERRESTRE MOBILE FINAL TWEAK
    Más aire entre menú y primer texto.
    Oculta imágenes decorativas internas en mobile.
    No toca el fondo del hero.
@@ -6366,7 +6366,7 @@
 
 
 /* =====================================================
-   MARITIMO HERO IMAGE COLOR / LIGHT FINAL
+   TRANSPORTE-TERRESTRE HERO IMAGE COLOR / LIGHT FINAL
    Solo mejora luz, contraste y overlay del fondo.
    No toca estructura, textos, botones ni trustBar.
    ===================================================== */
@@ -6433,7 +6433,7 @@
 
 
 /* =====================================================
-   MARITIMO HERO LIGHT RIGHT + MOBILE IMAGE HIDE
+   TRANSPORTE-TERRESTRE HERO LIGHT RIGHT + MOBILE IMAGE HIDE
    Más iluminación a la derecha y ocultar imágenes decorativas en mobile
    ===================================================== */
 
@@ -6560,7 +6560,7 @@
 
 
 /* =====================================================
-   MARITIMO MOBILE HIDE PILLARS SECTION
+   TRANSPORTE-TERRESTRE MOBILE HIDE PILLARS SECTION
    Oculta las cards/pilares en dispositivos menores a tablet.
    No toca hero, trustBar ni certificaciones.
    ===================================================== */
@@ -6577,7 +6577,7 @@
 
 
 /* =====================================================
-   MARITIMO DESKTOP BUTTON SAFE FIX
+   TRANSPORTE-TERRESTRE DESKTOP BUTTON SAFE FIX
    Solo desktop grande: evita que los botones toquen el trustBar.
    ===================================================== */
 
@@ -6660,7 +6660,7 @@
 
 
 /* =====================================================
-   MARITIMO HERO IMAGE NO ZOOM FINAL
+   TRANSPORTE-TERRESTRE HERO IMAGE NO ZOOM FINAL
    Quita el recorte/zoom del hero principal.
    ===================================================== */
 
@@ -6694,7 +6694,7 @@
 
 
 /* =====================================================
-   MARITIMO HERO MOBILE IMAGE SOURCE FIX
+   TRANSPORTE-TERRESTRE HERO MOBILE IMAGE SOURCE FIX
    Desktop usa horizontal. Mobile usa vertical.
    ===================================================== */
 
@@ -6724,7 +6724,7 @@
 
 
 /* =====================================================
-   MARITIMO DESKTOP TITLE REFINEMENT
+   TRANSPORTE-TERRESTRE DESKTOP TITLE REFINEMENT
    Solo pantallas grandes: título más elegante y menos monstruoso.
    No toca mobile ni tablet.
    ===================================================== */
@@ -6791,7 +6791,7 @@
 
 
 /* =====================================================
-   MARITIMO HERO BRIGHT CORPORATE FINAL
+   TRANSPORTE-TERRESTRE HERO BRIGHT CORPORATE FINAL
    Más luz al hero sin tocar estructura, texto ni botones.
    ===================================================== */
 
@@ -6873,7 +6873,7 @@
 
 
 /* =====================================================
-   MARITIMO HERO REAL IMAGE SWITCH HARD LOCK
+   TRANSPORTE-TERRESTRE HERO REAL IMAGE SWITCH HARD LOCK
    Fuerza desktop/mobile con las clases reales del JSX.
    ===================================================== */
 
@@ -6925,7 +6925,7 @@
 
 
 /* =====================================================
-   MARITIMO HERO REAL IMAGE SWITCH HARD LOCK
+   TRANSPORTE-TERRESTRE HERO REAL IMAGE SWITCH HARD LOCK
    Fuerza desktop/mobile con las clases reales del JSX.
    ===================================================== */
 
@@ -6977,7 +6977,7 @@
 
 
 /* =====================================================
-   MARITIMO MOBILE CERTIFICATIONS GAP FIX
+   TRANSPORTE-TERRESTRE MOBILE CERTIFICATIONS GAP FIX
    Reduce espacio vacío entre certificaciones y overview.
    ===================================================== */
 
@@ -7526,10 +7526,10 @@
 .page .trustBar span,
 .page .trustBar small,
 .page .trustBar p,
-.page [data-maritimo-trust="true"] strong,
-.page [data-maritimo-trust="true"] span,
-.page [data-maritimo-trust="true"] small,
-.page [data-maritimo-trust="true"] p {
+.page [data-transporte-terrestre-trust="true"] strong,
+.page [data-transporte-terrestre-trust="true"] span,
+.page [data-transporte-terrestre-trust="true"] small,
+.page [data-transporte-terrestre-trust="true"] p {
   color: var(--across-ivory-soft) !important;
   -webkit-text-fill-color: var(--across-ivory-soft) !important;
 }
@@ -8871,7 +8871,7 @@
 
 /* END ACROSS COMMAND BAR EXPORTS */
 
-/* ZZZ MARITIMO SERVICES LITERAL DARKBAND AUTOMOCION FINAL
+/* ZZZ TRANSPORTE-TERRESTRE SERVICES LITERAL DARKBAND AUTOMOCION FINAL
    Copia LITERAL del darkBand de Automoción.
 */
 .page .services {
@@ -8912,11 +8912,11 @@
   position: relative !important;
   z-index: 2 !important;
 }
-/* END ZZZ MARITIMO SERVICES LITERAL DARKBAND AUTOMOCION FINAL */
+/* END ZZZ TRANSPORTE-TERRESTRE SERVICES LITERAL DARKBAND AUTOMOCION FINAL */
 
-/* ZZZ MARITIMO SERVICES SAME AS AUTOMOCION DARKBAND FINAL
+/* ZZZ TRANSPORTE-TERRESTRE SERVICES SAME AS AUTOMOCION DARKBAND FINAL
    Copia el sombreado/degradado de darkBand Automoción.
-   No copia la imagen de Automoción; conserva la imagen de fondo de Marítimo.
+   No copia la imagen de Automoción; conserva la imagen de fondo de TransporteTerrestre.
 */
 .page .services {
   position: relative !important;
@@ -8961,7 +8961,7 @@
   border: 1px solid rgba(244, 239, 229, .16) !important;
   box-shadow: 0 14px 34px rgba(0,0,0,.18) !important;
 }
-/* END ZZZ MARITIMO SERVICES SAME AS AUTOMOCION DARKBAND FINAL */
+/* END ZZZ TRANSPORTE-TERRESTRE SERVICES SAME AS AUTOMOCION DARKBAND FINAL */
 
 /* ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED
    Tablet / iPad chico:
@@ -9240,7 +9240,7 @@
 
 /* ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL
    DarkBand restaurado correctamente:
-   - usa SU imagen original del page.tsx: /images/transporte-maritimo-desktop/1.png
+   - usa SU imagen original del page.tsx: /images/cargaaerea.png
    - no usa imagen del CTA
    - elimina capas oscuras viejas
    - mantiene el estilo azul/premium
@@ -9264,7 +9264,7 @@
       rgba(244,239,229,.025) 0%,
       rgba(3,10,18,.16) 100%
     ),
-    url("/images/transporte-maritimo-desktop/1.png") center center / cover no-repeat !important;
+    url("/images/cargaaerea.png") center center / cover no-repeat !important;
 }
 
 .page .darkBand::before {
@@ -9404,7 +9404,7 @@
 }
 /* END ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL */
 
-/* ZZZ MARITIMO SERVICES SEAM ONLY FINAL
+/* ZZZ TRANSPORTE-TERRESTRE SERVICES SEAM ONLY FINAL
    Tapa la línea/seam superior del bloque services sin cambiar imagen.
 */
 .page .services {
@@ -9424,9 +9424,9 @@
   top: -6px !important;
   height: calc(100% + 6px) !important;
 }
-/* END ZZZ MARITIMO SERVICES SEAM ONLY FINAL */
+/* END ZZZ TRANSPORTE-TERRESTRE SERVICES SEAM ONLY FINAL */
 
-/* ZZZ MARITIMO MOBILE HERO TITLE DOWN FINAL
+/* ZZZ TRANSPORTE-TERRESTRE MOBILE HERO TITLE DOWN FINAL
    Baja un poco el título del hero en mobile.
    No toca desktop/tablet.
 */
@@ -9443,7 +9443,7 @@
     margin-top: .9rem !important;
   }
 }
-/* END ZZZ MARITIMO MOBILE HERO TITLE DOWN FINAL */
+/* END ZZZ TRANSPORTE-TERRESTRE MOBILE HERO TITLE DOWN FINAL */
 
 /* ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED
    Tablet / iPad chico:
@@ -9615,7 +9615,7 @@
 /* END ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED */
 
 /* =====================================================
-   MARITIMO MOBILE HEIGHT LIKE MARITIMO
+   TRANSPORTE-TERRESTRE MOBILE HEIGHT LIKE MARITIMO
    Solo iguala el alto del hero mobile.
    No toca barra, titulo, texto, boton ni imagen.
    ===================================================== */
@@ -9634,7 +9634,7 @@
 }
 
 /* =====================================================
-   MARITIMO MOBILE HEIGHT LIKE MARITIMO
+   TRANSPORTE-TERRESTRE MOBILE HEIGHT LIKE MARITIMO
    Solo iguala el alto del hero mobile.
    No toca barra, titulo, texto, boton ni imagen.
    ===================================================== */
@@ -9651,63 +9651,3 @@
     max-height: 100svh !important;
   }
 }
-
-
-/* === MARITIMO FINAL CTA IMAGE FIX START === */
-/* Reemplaza SOLO la imagen del bloque:
-   "Coordinemos su próximo embarque marítimo internacional"
-   Desktop y mobile usan las imágenes marítimas nuevas.
-*/
-
-.finalCta {
-  position: relative !important;
-  overflow: hidden !important;
-  background-image:
-    linear-gradient(
-      90deg,
-      rgba(3, 7, 13, .92) 0%,
-      rgba(3, 7, 13, .74) 42%,
-      rgba(3, 7, 13, .38) 72%,
-      rgba(3, 7, 13, .22) 100%
-    ),
-    url("/images/transporte-maritimo-desktop/1.png") !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-}
-
-.finalCta > div:first-child {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-/* Si esa sección además tiene una imagen interna tipo <Image>, también la reemplaza */
-.finalImage img {
-  content: url("/images/transporte-maritimo-desktop/1.png") !important;
-  object-fit: cover !important;
-  object-position: center center !important;
-}
-
-@media (max-width: 900px) {
-  .finalCta {
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(3, 7, 13, .60) 0%,
-        rgba(3, 7, 13, .82) 58%,
-        rgba(3, 7, 13, .94) 100%
-      ),
-      url("/images/transporte-maritimo-mobile/1.png") !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-  }
-
-  .finalImage img {
-    content: url("/images/transporte-maritimo-mobile/1.png") !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-  }
-}
-/* === MARITIMO FINAL CTA IMAGE FIX END === */
-

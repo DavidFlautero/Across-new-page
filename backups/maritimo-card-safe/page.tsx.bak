@@ -8,20 +8,20 @@ import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import RelatedServices from "../_shared/RelatedServices";
-import styles from "./TransporteAereo.module.css";
+import styles from "./Servicio.module.css";
 
 type Locale = "es" | "en" | "zh";
 
 const copy = {
   es: {
-    heroEyebrow: "Transporte aéreo internacional",
-    heroTitle: "Velocidad que mueve negocios críticos.",
+    heroEyebrow: "Transporte marítimo internacional",
+    heroTitle: "Capacidad global para cargas que cruzan océanos.",
     heroText:
-      "Coordinamos envíos aéreos internacionales con control documental, seguimiento operativo y soluciones adaptadas a cargas sensibles, urgentes o de alto valor.",
+      "Coordinamos embarques marítimos internacionales con control documental, seguimiento operativo y soluciones adaptadas a cargas FCL, LCL, proyectos especiales o de alto valor.",
     primaryCta: "Planificar mi operación",
     secondaryCta: "Hablar con nuestro equipo",
 
-    activeLabel: "Operación aérea activa",
+    activeLabel: "Operación marítima activa",
     activeRoute: "Madrid → Bogotá",
     activeCargo: "Carga crítica",
     activeStatusLabel: "Estado:",
@@ -30,38 +30,38 @@ const copy = {
     activeEta: "Prioritario",
 
     trust: [
-      ["Carga urgente", "Operaciones críticas"],
-      ["Alto valor", "Máxima seguridad"],
-      ["Documentación", "Control internacional"],
-      ["Seguimiento operativo", "Visibilidad en tiempo real"],
+      ["Carga FCL", "Operaciones críticas"],
+      ["Carga especial", "Control y trazabilidad"],
+      ["Documentación", "Gestión aduanera"],
+      ["Seguimiento operativo", "Trazabilidad operativa"],
     ],
 
     overviewEyebrow: "Operaciones confiables",
-    overviewTitle: "Velocidad, precisión y control en cada etapa del envío aéreo.",
+    overviewTitle: "Velocidad, precisión y control en cada etapa del embarque marítimo.",
     overviewText:
-      "El transporte aéreo exige coordinación exacta entre origen, aerolínea, aduana y destino final. En Across Logistics gestionamos cada etapa para reducir tiempos, evitar errores documentales y mantener visibilidad sobre la operación.",
-    overviewButton: "Conocer más sobre aéreo",
+      "El transporte marítimo exige coordinación exacta entre origen, naviera, aduana y destino final. En Across Logistics gestionamos cada etapa para reducir tiempos, evitar errores documentales y mantener visibilidad sobre la operación.",
+    overviewButton: "Conocer más sobre marítimo",
 
     pillars: [
-      ["Coordinación aeroportuaria", "Gestión con aerolíneas, agentes y operadores logísticos."],
+      ["Coordinación portuaria", "Gestión con navieras, agentes y operadores logísticos."],
       ["Control documental", "Revisión de documentos comerciales, aduaneros y operativos."],
       ["Seguimiento de operación", "Monitoreo del avance desde origen hasta destino."],
       ["Soluciones puerta a puerta", "Integración con transporte terrestre y entrega final."],
     ],
 
-    servicesEyebrow: "Nuestros servicios aéreos",
-    servicesTitle: "Soluciones aéreas para cada tipo de operación.",
+    servicesEyebrow: "Nuestros servicios marítimos",
+    servicesTitle: "Soluciones marítimas para cada tipo de embarque.",
     services: [
-      ["Carga aérea urgente", "Para envíos donde el tiempo define la operación."],
-      ["Carga consolidada", "Optimización de costos mediante espacios compartidos."],
+      ["Carga marítima FCL", "Para envíos donde el tiempo define la operación."],
+      ["Carga LCL consolidada", "Optimización de costos mediante espacios compartidos."],
       ["Carga de alto valor", "Coordinación segura para productos sensibles o estratégicos."],
-      ["Chárter aéreo", "Soluciones dedicadas para operaciones especiales o cargas críticas."],
-      ["Cross trade", "Operaciones internacionales entre terceros países."],
+      ["Proyectos marítimos", "Soluciones dedicadas para operaciones especiales o cargas críticas."],
+      ["Cross trade marítimo", "Operaciones internacionales entre terceros países."],
       ["Door to door", "Desde retiro en origen hasta entrega final en destino."],
     ],
 
-    useCasesEyebrow: "Cuándo conviene usar transporte aéreo",
-    useCasesTitle: "El transporte aéreo marca la diferencia.",
+    useCasesEyebrow: "Cuándo conviene usar transporte marítimo",
+    useCasesTitle: "El transporte marítimo marca la diferencia.",
     useCases: [
       ["Repuestos industriales urgentes", "Evite detener una línea de producción por falta de componentes."],
       ["Productos tecnológicos", "Ideal para cargas de alto valor, sensibles o con rápida rotación."],
@@ -72,38 +72,38 @@ const copy = {
     ],
 
     processEyebrow: "Nuestro proceso operativo",
-    processTitle: "Una operación aérea clara desde el primer contacto.",
+    processTitle: "Una operación marítima clara desde el primer contacto.",
     process: [
       ["Análisis de carga", "Revisamos peso, volumen, origen, destino y urgencia."],
-      ["Selección de ruta", "Buscamos la alternativa aérea más eficiente."],
+      ["Selección de ruta", "Buscamos la alternativa marítima más eficiente."],
       ["Coordinación documental", "Validamos requisitos comerciales y aduaneros."],
-      ["Reserva y despacho", "Coordinamos aerolínea, aeropuerto y operación de salida."],
+      ["Booking y despacho", "Coordinamos naviera, puerto y operación de salida."],
       ["Seguimiento", "Monitoreamos el avance de la carga."],
       ["Entrega final", "Gestionamos conexión terrestre y entrega en destino."],
     ],
 
-    bandTitle: "Operaciones aéreas diseñadas para cargas que no pueden esperar.",
+    bandTitle: "Operaciones marítimas diseñadas para cargas que no pueden detenerse.",
     bandText:
-      "Nuestro equipo coordina soluciones aéreas internacionales para empresas que necesitan rapidez, trazabilidad y respuesta profesional ante operaciones sensibles.",
+      "Nuestro equipo coordina soluciones marítimas internacionales para empresas que necesitan rapidez, trazabilidad y respuesta profesional ante operaciones sensibles.",
     stats: [
-      ["Cobertura global", "Más de 120 países"],
-      ["Envíos urgentes", "Respuesta prioritaria"],
-      ["Seguridad y control", "Estándares internacionales"],
-      ["Soporte especializado", "Especialistas dedicados"],
+      ["Cobertura global", "Principales rutas globales"],
+      ["Envíos urgentes", "Coordinación portuaria"],
+      ["Seguridad y control", "Documentación y compliance"],
+      ["Soporte especializado", "Especialistas marítimos"],
     ],
 
-    finalTitle: "Coordinemos su próximo envío aéreo internacional.",
+    finalTitle: "Coordinemos su próximo embarque marítimo internacional.",
     finalText:
-      "Cuéntenos origen, destino, tipo de carga y urgencia. Nuestro equipo analizará la mejor alternativa aérea para su operación.",
-    finalPrimary: "Solicitar cotización aérea",
+      "Cuéntenos origen, destino, tipo de carga y urgencia. Nuestro equipo analizará la mejor alternativa marítima para su operación.",
+    finalPrimary: "Solicitar cotización marítima",
     finalSecondary: "Hablar con un especialista",
   },
 
   en: {
-    heroEyebrow: "International air freight",
-    heroTitle: "Speed that moves critical business.",
+    heroEyebrow: "International ocean freight",
+    heroTitle: "Global capacity for cargo crossing oceans.",
     heroText:
-      "We coordinate international air shipments with document control, operational tracking and solutions adapted to sensitive, urgent or high-value cargo.",
+      "We coordinate international ocean shipments with document control, operational tracking and solutions adapted to sensitive, urgent or high-value cargo.",
     primaryCta: "Plan my operation",
     secondaryCta: "Talk to our team",
 
@@ -125,8 +125,8 @@ const copy = {
     overviewEyebrow: "Reliable operations",
     overviewTitle: "Speed, precision and control at every stage of air shipping.",
     overviewText:
-      "Air freight requires exact coordination between origin, airline, customs and final destination. At Across Logistics, we manage each stage to reduce times, avoid documentation errors and maintain visibility over the operation.",
-    overviewButton: "Learn more about air freight",
+      "Ocean freight requires exact coordination between origin, airline, customs and final destination. At Across Logistics, we manage each stage to reduce times, avoid documentation errors and maintain visibility over the operation.",
+    overviewButton: "Learn more about ocean freight",
 
     pillars: [
       ["Airport coordination", "Management with airlines, agents and logistics operators."],
@@ -142,12 +142,12 @@ const copy = {
       ["Consolidated cargo", "Cost optimization through shared spaces."],
       ["High-value cargo", "Secure coordination for sensitive or strategic products."],
       ["Air charter", "Dedicated solutions for special operations or critical cargo."],
-      ["Cross trade", "International operations between third countries."],
+      ["Cross trade marítimo", "International operations between third countries."],
       ["Door to door", "From pickup at origin to final delivery at destination."],
     ],
 
-    useCasesEyebrow: "When to use air freight",
-    useCasesTitle: "Air freight makes the difference.",
+    useCasesEyebrow: "When to use ocean freight",
+    useCasesTitle: "Ocean freight makes the difference.",
     useCases: [
       ["Urgent industrial spare parts", "Avoid stopping a production line due to missing components."],
       ["Technology products", "Ideal for high-value, sensitive or fast-moving cargo."],
@@ -511,7 +511,7 @@ function Icon({ name }: { name: IconName }) {
   }
 }
 
-export default function TransporteAereoPage() {
+export default function TransporteMaritimoPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
@@ -562,7 +562,7 @@ export default function TransporteAereoPage() {
         <section className={styles.hero} data-aereo-hero="true" data-service-hero-home="true"
       >
           <Image
-            src="/images/hero/cargaAereahero.png"
+            src="/images/maritimo.png"
             alt={t.heroTitle}
             fill
             priority
@@ -571,7 +571,7 @@ export default function TransporteAereoPage() {
           />
 
           <Image
-            src="/images/hero/cargaAereahero-mobile.png"
+            src="/images/maritimo-mobile.png"
             alt={t.heroTitle}
             fill
             priority
@@ -611,7 +611,7 @@ export default function TransporteAereoPage() {
             </div>
           </div>
 
-          <div className={styles.commandBar} data-aereo-trust="true">
+          <div className={styles.commandBar} data-service-trust="maritimo">
             {t.trust.map(([title, text]: string[], index: number) => {
               const icons: IconName[] = ["timer", "shield", "document", "tracking"];
 
@@ -657,7 +657,7 @@ export default function TransporteAereoPage() {
           </div>
         </section>
 
-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/contactoimagen.png')" } as CSSProperties}>
+        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/maritimo.png')" } as CSSProperties}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -757,7 +757,7 @@ export default function TransporteAereoPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/contactoimagen.png')" } as CSSProperties} data-across-final-cta="true">
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/maritimo.png')" } as CSSProperties} data-across-final-cta="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>
@@ -770,7 +770,7 @@ export default function TransporteAereoPage() {
 
           <div className={styles.finalImage}>
             <Image
-              src="/images/contactoimagen.png"
+              src="/images/maritimo.png"
               alt={t.finalTitle}
               fill
               sizes="(max-width: 900px) 100vw, 44vw"

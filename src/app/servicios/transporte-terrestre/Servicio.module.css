@@ -9651,3 +9651,97 @@
     max-height: 100svh !important;
   }
 }
+
+
+/* === TERRESTRE SERVICES BG START === */
+/* Solo sección de arriba: "Soluciones terrestres para cada necesidad logística." */
+.services {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(3, 7, 13, .88) 0%,
+      rgba(3, 7, 13, .68) 42%,
+      rgba(3, 7, 13, .30) 72%,
+      rgba(3, 7, 13, .16) 100%
+    ),
+    var(--desktop-bg) !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+@media (max-width: 900px) {
+  .services {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(3, 7, 13, .60) 0%,
+        rgba(3, 7, 13, .82) 58%,
+        rgba(3, 7, 13, .94) 100%
+      ),
+      var(--mobile-bg) !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+}
+/* === TERRESTRE SERVICES BG END === */
+
+
+/* === TERRESTRE FINAL CTA CSS IMAGE TWO START === */
+/* Imagen de abajo: "Coordinemos su próximo embarque terrestre..."
+   Esta imagen viene por CSS, no por page.tsx.
+*/
+
+.finalCta {
+  position: relative !important;
+  overflow: hidden !important;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(3, 7, 13, .92) 0%,
+      rgba(3, 7, 13, .74) 42%,
+      rgba(3, 7, 13, .38) 72%,
+      rgba(3, 7, 13, .22) 100%
+    ),
+    url("C:/Program Files/Git/images/transporte_terrestre/transporte_two.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+.finalCta > div:first-child {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Si el bloque tiene imagen interna tipo Next/Image, también la fuerza */
+.finalImage img {
+  content: url("C:/Program Files/Git/images/transporte_terrestre/transporte_two.png") !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+@media (max-width: 900px) {
+  .finalCta {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(3, 7, 13, .58) 0%,
+        rgba(3, 7, 13, .80) 56%,
+        rgba(3, 7, 13, .94) 100%
+      ),
+      url("C:/Program Files/Git/images/transporte-terrestre-mobile/transporte-terrestre-mobile-two.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .finalImage img {
+    content: url("C:/Program Files/Git/images/transporte-terrestre-mobile/transporte-terrestre-mobile-two.png") !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+}
+/* === TERRESTRE FINAL CTA CSS IMAGE TWO END === */
+

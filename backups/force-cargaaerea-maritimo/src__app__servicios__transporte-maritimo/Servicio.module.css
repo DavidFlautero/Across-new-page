@@ -2963,7 +2963,7 @@
       rgba(5, 6, 9, .55) 100%
     ),
     radial-gradient(circle at 18% 18%, rgba(23, 50, 71, .16), transparent 24rem),
-    url("/images/transporte-maritimo-desktop/1.png") !important;
+    url("/images/cargaaerea.png") !important;
   background-size: cover !important;
   background-position: center 48% !important;
   background-repeat: no-repeat !important;
@@ -3065,7 +3065,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/transporte-maritimo-desktop/1.png") !important;
+    url("/images/cargaaerea.png") !important;
   background-size: cover !important;
   background-position: center 55% !important;
   background-repeat: no-repeat !important;
@@ -3104,7 +3104,7 @@
   .services {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.90)),
-      url("/images/transporte-maritimo-desktop/1.png") !important;
+      url("/images/cargaaerea.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3116,7 +3116,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/transporte-maritimo-desktop/1.png") !important;
+      url("/images/cargaaerea.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -9240,7 +9240,7 @@
 
 /* ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL
    DarkBand restaurado correctamente:
-   - usa SU imagen original del page.tsx: /images/transporte-maritimo-desktop/1.png
+   - usa SU imagen original del page.tsx: /images/cargaaerea.png
    - no usa imagen del CTA
    - elimina capas oscuras viejas
    - mantiene el estilo azul/premium
@@ -9264,7 +9264,7 @@
       rgba(244,239,229,.025) 0%,
       rgba(3,10,18,.16) 100%
     ),
-    url("/images/transporte-maritimo-desktop/1.png") center center / cover no-repeat !important;
+    url("/images/cargaaerea.png") center center / cover no-repeat !important;
 }
 
 .page .darkBand::before {
@@ -9651,63 +9651,3 @@
     max-height: 100svh !important;
   }
 }
-
-
-/* === MARITIMO FINAL CTA IMAGE FIX START === */
-/* Reemplaza SOLO la imagen del bloque:
-   "Coordinemos su próximo embarque marítimo internacional"
-   Desktop y mobile usan las imágenes marítimas nuevas.
-*/
-
-.finalCta {
-  position: relative !important;
-  overflow: hidden !important;
-  background-image:
-    linear-gradient(
-      90deg,
-      rgba(3, 7, 13, .92) 0%,
-      rgba(3, 7, 13, .74) 42%,
-      rgba(3, 7, 13, .38) 72%,
-      rgba(3, 7, 13, .22) 100%
-    ),
-    url("/images/transporte-maritimo-desktop/1.png") !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-}
-
-.finalCta > div:first-child {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-/* Si esa sección además tiene una imagen interna tipo <Image>, también la reemplaza */
-.finalImage img {
-  content: url("/images/transporte-maritimo-desktop/1.png") !important;
-  object-fit: cover !important;
-  object-position: center center !important;
-}
-
-@media (max-width: 900px) {
-  .finalCta {
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(3, 7, 13, .60) 0%,
-        rgba(3, 7, 13, .82) 58%,
-        rgba(3, 7, 13, .94) 100%
-      ),
-      url("/images/transporte-maritimo-mobile/1.png") !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-  }
-
-  .finalImage img {
-    content: url("/images/transporte-maritimo-mobile/1.png") !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-  }
-}
-/* === MARITIMO FINAL CTA IMAGE FIX END === */
-

@@ -657,7 +657,7 @@ export default function TransporteAereoPage() {
           </div>
         </section>
 
-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/contactoimagen.png')" } as CSSProperties}>
+        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/hero/cargaAereahero.png')" } as CSSProperties}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -757,7 +757,7 @@ export default function TransporteAereoPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/contactoimagen.png')" } as CSSProperties} data-across-final-cta="true">
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/hero/cargaAereahero.png')" } as CSSProperties} data-across-final-cta="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>
@@ -770,7 +770,7 @@ export default function TransporteAereoPage() {
 
           <div className={styles.finalImage}>
             <Image
-              src="/images/contactoimagen.png"
+              src="/images/hero/cargaAereahero.png"
               alt={t.finalTitle}
               fill
               sizes="(max-width: 900px) 100vw, 44vw"

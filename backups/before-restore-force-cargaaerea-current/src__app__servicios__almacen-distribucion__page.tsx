@@ -8,268 +8,497 @@ import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import RelatedServices from "../_shared/RelatedServices";
-import styles from "./Servicio.module.css";
+import styles from "./AlmacenDistribucion.module.css";
 
 type Locale = "es" | "en" | "zh";
 
 const copy = {
-  es: {
-    heroEyebrow: "Transporte marítimo internacional",
-    heroTitle: "Capacidad global para cargas que cruzan océanos.",
-    heroText:
-      "Coordinamos embarques marítimos internacionales con control documental, seguimiento operativo y soluciones adaptadas a cargas FCL, LCL, proyectos especiales o de alto valor.",
-    primaryCta: "Planificar mi operación",
-    secondaryCta: "Hablar con nuestro equipo",
-
-    activeLabel: "Operación marítima activa",
-    activeRoute: "Madrid → Bogotá",
-    activeCargo: "Carga crítica",
-    activeStatusLabel: "Estado:",
-    activeStatus: "En coordinación",
-    activeEtaLabel: "ETA:",
-    activeEta: "Prioritario",
-
-    trust: [
-      ["Carga FCL", "Operaciones críticas"],
-      ["Carga especial", "Control y trazabilidad"],
-      ["Documentación", "Gestión aduanera"],
-      ["Seguimiento operativo", "Trazabilidad operativa"],
+  "es": {
+    "heroEyebrow": "Almacén y distribución",
+    "heroTitle": "Operaciones de almacén que convierten stock en movimiento.",
+    "heroText": "Coordinamos soluciones de almacenaje, preparación de pedidos, distribución y control operativo para empresas que necesitan visibilidad, orden y continuidad logística.",
+    "primaryCta": "Planificar mi operación",
+    "secondaryCta": "Hablar con nuestro equipo",
+    "activeLabel": "Operación logística activa",
+    "activeRoute": "Almacén → Cliente",
+    "activeCargo": "Preparación y distribución",
+    "activeStatusLabel": "Estado:",
+    "activeStatus": "En gestión",
+    "activeEtaLabel": "Salida:",
+    "activeEta": "Programada",
+    "trust": [
+      [
+        "Almacenaje",
+        "Stock controlado"
+      ],
+      [
+        "Picking",
+        "Preparación eficiente"
+      ],
+      [
+        "Distribución",
+        "Entrega coordinada"
+      ],
+      [
+        "Trazabilidad",
+        "Visibilidad operativa"
+      ]
     ],
-
-    overviewEyebrow: "Operaciones confiables",
-    overviewTitle: "Velocidad, precisión y control en cada etapa del embarque marítimo.",
-    overviewText:
-      "El transporte marítimo exige coordinación exacta entre origen, naviera, aduana y destino final. En Across Logistics gestionamos cada etapa para reducir tiempos, evitar errores documentales y mantener visibilidad sobre la operación.",
-    overviewButton: "Conocer más sobre marítimo",
-
-    pillars: [
-      ["Coordinación portuaria", "Gestión con navieras, agentes y operadores logísticos."],
-      ["Control documental", "Revisión de documentos comerciales, aduaneros y operativos."],
-      ["Seguimiento de operación", "Monitoreo del avance desde origen hasta destino."],
-      ["Soluciones puerta a puerta", "Integración con transporte terrestre y entrega final."],
+    "overviewEyebrow": "Gestión logística",
+    "overviewTitle": "Almacén y distribución sin interrupciones.",
+    "overviewText": "Una operación de almacén eficiente requiere control de stock, preparación precisa, coordinación de salidas y seguimiento. Diseñamos soluciones para mejorar continuidad, visibilidad y respuesta logística.",
+    "overviewButton": "Conocer más sobre almacén",
+    "pillars": [
+      [
+        "Control de stock",
+        "Gestión organizada de inventario, entradas, salidas y disponibilidad."
+      ],
+      [
+        "Preparación de pedidos",
+        "Procesos de picking, packing y acondicionamiento según operación."
+      ],
+      [
+        "Distribución coordinada",
+        "Planificación de rutas y entregas para clientes o puntos de venta."
+      ],
+      [
+        "Trazabilidad operativa",
+        "Visibilidad sobre movimientos, estados y tiempos de gestión."
+      ]
     ],
-
-    servicesEyebrow: "Nuestros servicios marítimos",
-    servicesTitle: "Soluciones marítimas para cada tipo de embarque.",
-    services: [
-      ["Carga marítima FCL", "Para envíos donde el tiempo define la operación."],
-      ["Carga LCL consolidada", "Optimización de costos mediante espacios compartidos."],
-      ["Carga de alto valor", "Coordinación segura para productos sensibles o estratégicos."],
-      ["Proyectos marítimos", "Soluciones dedicadas para operaciones especiales o cargas críticas."],
-      ["Cross trade marítimo", "Operaciones internacionales entre terceros países."],
-      ["Door to door", "Desde retiro en origen hasta entrega final en destino."],
+    "servicesEyebrow": "Nuestros servicios de almacén",
+    "servicesTitle": "Soluciones para ordenar, preparar y distribuir mercancía.",
+    "services": [
+      [
+        "Almacenaje",
+        "Espacios y procesos para conservar mercancía bajo control."
+      ],
+      [
+        "Picking y packing",
+        "Preparación de pedidos con orden, velocidad y precisión."
+      ],
+      [
+        "Distribución",
+        "Coordinación de entregas regionales, nacionales o dedicadas."
+      ],
+      [
+        "Cross docking",
+        "Flujos rápidos para mercancía que necesita salida inmediata."
+      ],
+      [
+        "Gestión de stock",
+        "Control operativo de inventario, entradas y salidas."
+      ],
+      [
+        "Operaciones B2B",
+        "Soluciones para empresas, retail, e-commerce y distribución comercial."
+      ]
     ],
-
-    useCasesEyebrow: "Cuándo conviene usar transporte marítimo",
-    useCasesTitle: "El transporte marítimo marca la diferencia.",
-    useCases: [
-      ["Repuestos industriales urgentes", "Evite detener una línea de producción por falta de componentes."],
-      ["Productos tecnológicos", "Ideal para cargas de alto valor, sensibles o con rápida rotación."],
-      ["Muestras comerciales", "Envíos rápidos para ferias, clientes o validaciones internacionales."],
-      ["Carga médica o sensible", "Coordinación especial para productos que requieren mayor control."],
-      ["E-commerce internacional", "Movimientos rápidos para operaciones comerciales globales."],
-      ["Documentación crítica", "Soluciones para envíos donde el plazo no admite demoras."],
+    "useCasesEyebrow": "Cuándo usar almacén y distribución",
+    "useCasesTitle": "Cuando el stock necesita convertirse en entrega.",
+    "useCases": [
+      [
+        "E-commerce",
+        "Preparación y salida de pedidos online."
+      ],
+      [
+        "Retail",
+        "Distribución hacia tiendas, puntos de venta o clientes."
+      ],
+      [
+        "Stock estacional",
+        "Gestión de picos de demanda y campañas."
+      ],
+      [
+        "Mercancía importada",
+        "Recepción, control y distribución posterior."
+      ],
+      [
+        "Operaciones B2B",
+        "Flujos para clientes corporativos y comerciales."
+      ],
+      [
+        "Cross docking",
+        "Reducción de tiempos de permanencia en almacén."
+      ]
     ],
-
-    processEyebrow: "Nuestro proceso operativo",
-    processTitle: "Una operación marítima clara desde el primer contacto.",
-    process: [
-      ["Análisis de carga", "Revisamos peso, volumen, origen, destino y urgencia."],
-      ["Selección de ruta", "Buscamos la alternativa marítima más eficiente."],
-      ["Coordinación documental", "Validamos requisitos comerciales y aduaneros."],
-      ["Booking y despacho", "Coordinamos naviera, puerto y operación de salida."],
-      ["Seguimiento", "Monitoreamos el avance de la carga."],
-      ["Entrega final", "Gestionamos conexión terrestre y entrega en destino."],
+    "processEyebrow": "Nuestro proceso operativo",
+    "processTitle": "Una operación de almacén clara desde la recepción hasta la entrega.",
+    "process": [
+      [
+        "Recepción",
+        "Coordinamos entrada, descarga e identificación de mercancía."
+      ],
+      [
+        "Control de stock",
+        "Registramos disponibilidad, ubicación y estado operativo."
+      ],
+      [
+        "Preparación",
+        "Gestionamos picking, packing y acondicionamiento."
+      ],
+      [
+        "Plan de salida",
+        "Definimos distribución, rutas y prioridades."
+      ],
+      [
+        "Seguimiento",
+        "Monitoreamos estados, tiempos y entregas."
+      ],
+      [
+        "Entrega final",
+        "Cerramos la operación con control y trazabilidad."
+      ]
     ],
-
-    bandTitle: "Operaciones marítimas diseñadas para cargas que no pueden detenerse.",
-    bandText:
-      "Nuestro equipo coordina soluciones marítimas internacionales para empresas que necesitan rapidez, trazabilidad y respuesta profesional ante operaciones sensibles.",
-    stats: [
-      ["Cobertura global", "Principales rutas globales"],
-      ["Envíos urgentes", "Coordinación portuaria"],
-      ["Seguridad y control", "Documentación y compliance"],
-      ["Soporte especializado", "Especialistas marítimos"],
+    "bandTitle": "Operaciones de almacén diseñadas para mantener la cadena en movimiento.",
+    "bandText": "Nuestro equipo coordina soluciones para empresas que necesitan control de stock, preparación eficiente y distribución confiable.",
+    "stats": [
+      [
+        "Stock controlado",
+        "Visibilidad operativa"
+      ],
+      [
+        "Picking",
+        "Preparación precisa"
+      ],
+      [
+        "Distribución",
+        "Entregas coordinadas"
+      ],
+      [
+        "Soporte experto",
+        "Especialistas dedicados"
+      ]
     ],
-
-    finalTitle: "Coordinemos su próximo embarque marítimo internacional.",
-    finalText:
-      "Cuéntenos origen, destino, tipo de carga y urgencia. Nuestro equipo analizará la mejor alternativa marítima para su operación.",
-    finalPrimary: "Solicitar cotización marítima",
-    finalSecondary: "Hablar con un especialista",
+    "finalTitle": "Coordinemos su operación de almacén y distribución.",
+    "finalText": "Cuéntenos tipo de mercancía, volumen, frecuencia de salidas y destinos. Nuestro equipo analizará la mejor solución logística.",
+    "finalPrimary": "Solicitar propuesta logística",
+    "finalSecondary": "Hablar con un especialista"
   },
-
-  en: {
-    heroEyebrow: "International ocean freight",
-    heroTitle: "Global capacity for cargo crossing oceans.",
-    heroText:
-      "We coordinate international ocean shipments with document control, operational tracking and solutions adapted to sensitive, urgent or high-value cargo.",
-    primaryCta: "Plan my operation",
-    secondaryCta: "Talk to our team",
-
-    activeLabel: "Active air operation",
-    activeRoute: "Madrid → Bogotá",
-    activeCargo: "Critical cargo",
-    activeStatusLabel: "Status:",
-    activeStatus: "In coordination",
-    activeEtaLabel: "ETA:",
-    activeEta: "Priority",
-
-    trust: [
-      ["Urgent cargo", "Critical operations"],
-      ["High value", "Maximum security"],
-      ["Documentation", "International control"],
-      ["Operational tracking", "Real-time visibility"],
+  "en": {
+    "heroEyebrow": "Warehousing and distribution",
+    "heroTitle": "Warehouse operations that turn stock into movement.",
+    "heroText": "We coordinate warehousing, order preparation, distribution and operational control solutions for companies needing visibility, order and logistics continuity.",
+    "primaryCta": "Plan my operation",
+    "secondaryCta": "Talk to our team",
+    "activeLabel": "Active logistics operation",
+    "activeRoute": "Warehouse → Client",
+    "activeCargo": "Preparation and distribution",
+    "activeStatusLabel": "Status:",
+    "activeStatus": "In management",
+    "activeEtaLabel": "Dispatch:",
+    "activeEta": "Scheduled",
+    "trust": [
+      [
+        "Warehousing",
+        "Controlled stock"
+      ],
+      [
+        "Picking",
+        "Efficient preparation"
+      ],
+      [
+        "Distribution",
+        "Coordinated delivery"
+      ],
+      [
+        "Traceability",
+        "Operational visibility"
+      ]
     ],
-
-    overviewEyebrow: "Reliable operations",
-    overviewTitle: "Speed, precision and control at every stage of air shipping.",
-    overviewText:
-      "Ocean freight requires exact coordination between origin, airline, customs and final destination. At Across Logistics, we manage each stage to reduce times, avoid documentation errors and maintain visibility over the operation.",
-    overviewButton: "Learn more about ocean freight",
-
-    pillars: [
-      ["Airport coordination", "Management with airlines, agents and logistics operators."],
-      ["Document control", "Review of commercial, customs and operational documents."],
-      ["Operational tracking", "Monitoring from origin to destination."],
-      ["Door-to-door solutions", "Integration with road transport and final delivery."],
+    "overviewEyebrow": "Logistics management",
+    "overviewTitle": "Order, control and distribution for operations that cannot stop.",
+    "overviewText": "An efficient warehouse operation requires stock control, accurate preparation, dispatch coordination and tracking. We design solutions to improve continuity, visibility and logistics response.",
+    "overviewButton": "Learn more about warehousing",
+    "pillars": [
+      [
+        "Stock control",
+        "Organized management of inventory, inbound, outbound and availability."
+      ],
+      [
+        "Order preparation",
+        "Picking, packing and conditioning processes according to the operation."
+      ],
+      [
+        "Coordinated distribution",
+        "Route and delivery planning for clients or points of sale."
+      ],
+      [
+        "Operational traceability",
+        "Visibility over movements, statuses and management times."
+      ]
     ],
-
-    servicesEyebrow: "Our air services",
-    servicesTitle: "Air solutions for every type of operation.",
-    services: [
-      ["Urgent air cargo", "For shipments where time defines the operation."],
-      ["Consolidated cargo", "Cost optimization through shared spaces."],
-      ["High-value cargo", "Secure coordination for sensitive or strategic products."],
-      ["Air charter", "Dedicated solutions for special operations or critical cargo."],
-      ["Cross trade marítimo", "International operations between third countries."],
-      ["Door to door", "From pickup at origin to final delivery at destination."],
+    "servicesEyebrow": "Our warehousing services",
+    "servicesTitle": "Solutions to store, prepare and distribute goods.",
+    "services": [
+      [
+        "Warehousing",
+        "Spaces and processes to keep goods under control."
+      ],
+      [
+        "Picking and packing",
+        "Order preparation with order, speed and precision."
+      ],
+      [
+        "Distribution",
+        "Regional, national or dedicated delivery coordination."
+      ],
+      [
+        "Cross docking",
+        "Fast flows for goods requiring immediate dispatch."
+      ],
+      [
+        "Stock management",
+        "Operational control of inventory, inbound and outbound."
+      ],
+      [
+        "B2B operations",
+        "Solutions for companies, retail, e-commerce and commercial distribution."
+      ]
     ],
-
-    useCasesEyebrow: "When to use ocean freight",
-    useCasesTitle: "Ocean freight makes the difference.",
-    useCases: [
-      ["Urgent industrial spare parts", "Avoid stopping a production line due to missing components."],
-      ["Technology products", "Ideal for high-value, sensitive or fast-moving cargo."],
-      ["Commercial samples", "Fast shipments for fairs, clients or international validations."],
-      ["Medical or sensitive cargo", "Special coordination for products requiring greater control."],
-      ["International e-commerce", "Fast movements for global commercial operations."],
-      ["Critical documentation", "Solutions for shipments where deadlines cannot be delayed."],
+    "useCasesEyebrow": "When to use warehousing and distribution",
+    "useCasesTitle": "When stock needs to become delivery.",
+    "useCases": [
+      [
+        "E-commerce",
+        "Preparation and dispatch of online orders."
+      ],
+      [
+        "Retail",
+        "Distribution to stores, points of sale or clients."
+      ],
+      [
+        "Seasonal stock",
+        "Management of demand peaks and campaigns."
+      ],
+      [
+        "Imported goods",
+        "Reception, control and later distribution."
+      ],
+      [
+        "B2B operations",
+        "Flows for corporate and commercial clients."
+      ],
+      [
+        "Cross docking",
+        "Reduction of warehouse dwell times."
+      ]
     ],
-
-    processEyebrow: "Our operational process",
-    processTitle: "A clear air operation from the first contact.",
-    process: [
-      ["Cargo analysis", "We review weight, volume, origin, destination and urgency."],
-      ["Route selection", "We look for the most efficient air alternative."],
-      ["Document coordination", "We validate commercial and customs requirements."],
-      ["Booking and dispatch", "We coordinate airline, airport and departure operation."],
-      ["Tracking", "We monitor cargo progress."],
-      ["Final delivery", "We manage road connection and delivery at destination."],
+    "processEyebrow": "Our operational process",
+    "processTitle": "A clear warehouse operation from reception to delivery.",
+    "process": [
+      [
+        "Reception",
+        "We coordinate inbound, unloading and goods identification."
+      ],
+      [
+        "Stock control",
+        "We register availability, location and operational status."
+      ],
+      [
+        "Preparation",
+        "We manage picking, packing and conditioning."
+      ],
+      [
+        "Dispatch plan",
+        "We define distribution, routes and priorities."
+      ],
+      [
+        "Tracking",
+        "We monitor statuses, times and deliveries."
+      ],
+      [
+        "Final delivery",
+        "We close the operation with control and traceability."
+      ]
     ],
-
-    bandTitle: "Air operations designed for cargo that cannot wait.",
-    bandText:
-      "Our team coordinates international air solutions for companies that need speed, traceability and professional response for sensitive operations.",
-    stats: [
-      ["Global coverage", "More than 120 countries"],
-      ["Urgent shipments", "Priority response"],
-      ["Security and control", "International standards"],
-      ["Specialized support", "Dedicated specialists"],
+    "bandTitle": "Warehouse operations designed to keep the chain moving.",
+    "bandText": "Our team coordinates solutions for companies that need stock control, efficient preparation and reliable distribution.",
+    "stats": [
+      [
+        "Controlled stock",
+        "Operational visibility"
+      ],
+      [
+        "Picking",
+        "Accurate preparation"
+      ],
+      [
+        "Distribution",
+        "Coordinated deliveries"
+      ],
+      [
+        "Expert support",
+        "Dedicated specialists"
+      ]
     ],
-
-    finalTitle: "Let’s coordinate your next international air shipment.",
-    finalText:
-      "Tell us origin, destination, cargo type and urgency. Our team will analyze the best air alternative for your operation.",
-    finalPrimary: "Request air quotation",
-    finalSecondary: "Talk to a specialist",
+    "finalTitle": "Let’s coordinate your warehouse and distribution operation.",
+    "finalText": "Tell us goods type, volume, dispatch frequency and destinations. Our team will analyze the best logistics solution.",
+    "finalPrimary": "Request logistics proposal",
+    "finalSecondary": "Talk to a specialist"
   },
-
-  zh: {
-    heroEyebrow: "国际空运",
-    heroTitle: "面向紧急货物和关键业务的国际空运服务。",
-    heroText:
-      "我们协调国际空运业务，提供文件控制、运营跟踪以及适用于敏感、紧急或高价值货物的定制方案。",
-    primaryCta: "规划物流操作",
-    secondaryCta: "联系我们的团队",
-
-    activeLabel: "进行中的空运操作",
-    activeRoute: "马德里 → 波哥大",
-    activeCargo: "关键货物",
-    activeStatusLabel: "状态：",
-    activeStatus: "协调中",
-    activeEtaLabel: "ETA：",
-    activeEta: "优先",
-
-    trust: [
-      ["紧急货物", "关键业务"],
-      ["高价值", "最高安全标准"],
-      ["文件管理", "国际控制"],
-      ["运营跟踪", "实时可视化"],
+  "zh": {
+    "heroEyebrow": "仓储与配送",
+    "heroTitle": "将库存转化为流动的仓储运营。",
+    "heroText": "我们为需要可视化、秩序和物流连续性的企业协调仓储、订单准备、配送和运营控制解决方案。",
+    "primaryCta": "规划物流操作",
+    "secondaryCta": "联系我们的团队",
+    "activeLabel": "进行中的物流操作",
+    "activeRoute": "仓库 → 客户",
+    "activeCargo": "准备与配送",
+    "activeStatusLabel": "状态：",
+    "activeStatus": "管理中",
+    "activeEtaLabel": "出库：",
+    "activeEta": "已安排",
+    "trust": [
+      [
+        "仓储",
+        "库存受控"
+      ],
+      [
+        "拣货",
+        "高效准备"
+      ],
+      [
+        "配送",
+        "协调交付"
+      ],
+      [
+        "可追溯",
+        "运营可视化"
+      ]
     ],
-
-    overviewEyebrow: "可靠运营",
-    overviewTitle: "在空运每个阶段实现速度、精准与控制。",
-    overviewText:
-      "空运需要始发地、航空公司、海关和最终目的地之间的精准协调。Across Logistics 管理每个阶段，以缩短时间、避免文件错误并保持运营可视化。",
-    overviewButton: "了解空运服务",
-
-    pillars: [
-      ["机场协调", "与航空公司、代理和物流运营商协调。"],
-      ["文件控制", "审核商业、海关和运营文件。"],
-      ["运营跟踪", "从始发地到目的地进行监控。"],
-      ["门到门方案", "整合陆运和最终交付。"],
+    "overviewEyebrow": "物流管理",
+    "overviewTitle": "为不能停止的业务提供秩序、控制和配送。",
+    "overviewText": "高效仓储需要库存控制、准确准备、出库协调和跟踪。我们设计解决方案以提升连续性、可视化和物流响应。",
+    "overviewButton": "了解仓储服务",
+    "pillars": [
+      [
+        "库存控制",
+        "有序管理库存、入库、出库和可用性。"
+      ],
+      [
+        "订单准备",
+        "根据操作进行拣货、包装和处理。"
+      ],
+      [
+        "配送协调",
+        "为客户或销售点规划路线和交付。"
+      ],
+      [
+        "运营可追溯",
+        "对移动、状态和管理时间保持可视化。"
+      ]
     ],
-
-    servicesEyebrow: "我们的空运服务",
-    servicesTitle: "适用于不同业务类型的空运解决方案。",
-    services: [
-      ["紧急空运", "适用于时间决定成败的运输。"],
-      ["拼箱空运", "通过共享舱位优化成本。"],
-      ["高价值货物", "为敏感或战略产品提供安全协调。"],
-      ["包机服务", "为特殊业务或关键货物提供专属方案。"],
-      ["第三国贸易", "第三国之间的国际业务。"],
-      ["门到门", "从始发地提货到目的地最终交付。"],
+    "servicesEyebrow": "我们的仓储服务",
+    "servicesTitle": "用于存储、准备和配送货物的解决方案。",
+    "services": [
+      [
+        "仓储",
+        "保持货物受控的空间和流程。"
+      ],
+      [
+        "拣货与包装",
+        "有序、快速、准确地准备订单。"
+      ],
+      [
+        "配送",
+        "区域、全国或专属交付协调。"
+      ],
+      [
+        "越库",
+        "为需要快速出库的货物提供快速流转。"
+      ],
+      [
+        "库存管理",
+        "库存、入库和出库的运营控制。"
+      ],
+      [
+        "B2B 运营",
+        "面向企业、零售、电商和商业配送的解决方案。"
+      ]
     ],
-
-    useCasesEyebrow: "何时选择空运",
-    useCasesTitle: "空运能够创造关键差异。",
-    useCases: [
-      ["紧急工业备件", "避免因零部件缺失导致生产线停工。"],
-      ["科技产品", "适合高价值、敏感或快速流转货物。"],
-      ["商业样品", "用于展会、客户或国际验证的快速运输。"],
-      ["医疗或敏感货物", "为需要更高控制的产品提供特殊协调。"],
-      ["国际电商", "支持全球商业业务的快速流转。"],
-      ["关键文件", "适用于交期不允许延误的文件运输。"],
+    "useCasesEyebrow": "何时使用仓储与配送",
+    "useCasesTitle": "当库存需要转化为交付时。",
+    "useCases": [
+      [
+        "电商",
+        "在线订单准备和出库。"
+      ],
+      [
+        "零售",
+        "配送到门店、销售点或客户。"
+      ],
+      [
+        "季节性库存",
+        "管理需求高峰和活动。"
+      ],
+      [
+        "进口货物",
+        "接收、控制和后续配送。"
+      ],
+      [
+        "B2B 运营",
+        "企业和商业客户流程。"
+      ],
+      [
+        "越库",
+        "减少货物在仓库停留时间。"
+      ]
     ],
-
-    processEyebrow: "我们的运营流程",
-    processTitle: "从第一次联系开始，空运操作清晰可控。",
-    process: [
-      ["货物分析", "审核重量、体积、始发地、目的地和紧急程度。"],
-      ["路线选择", "寻找最高效的空运方案。"],
-      ["文件协调", "验证商业和海关要求。"],
-      ["订舱与派送", "协调航空公司、机场和出运操作。"],
-      ["跟踪", "监控货物运输进度。"],
-      ["最终交付", "管理陆运衔接和目的地交付。"],
+    "processEyebrow": "我们的运营流程",
+    "processTitle": "从接收到交付，仓储操作清晰可控。",
+    "process": [
+      [
+        "接收",
+        "协调入库、卸货和货物识别。"
+      ],
+      [
+        "库存控制",
+        "记录可用性、位置和运营状态。"
+      ],
+      [
+        "准备",
+        "管理拣货、包装和处理。"
+      ],
+      [
+        "出库计划",
+        "定义配送、路线和优先级。"
+      ],
+      [
+        "跟踪",
+        "监控状态、时间和交付。"
+      ],
+      [
+        "最终交付",
+        "通过控制和可追溯关闭操作。"
+      ]
     ],
-
-    bandTitle: "为空运不能等待的货物设计的运营方案。",
-    bandText:
-      "我们的团队为需要速度、可追溯性和专业响应的企业协调国际空运解决方案。",
-    stats: [
-      ["全球覆盖", "超过120个国家"],
-      ["紧急运输", "优先响应"],
-      ["安全与控制", "国际标准"],
-      ["专业支持", "专属专家"],
+    "bandTitle": "为保持供应链流动而设计的仓储运营。",
+    "bandText": "我们的团队为需要库存控制、高效准备和可靠配送的企业协调解决方案。",
+    "stats": [
+      [
+        "库存受控",
+        "运营可视化"
+      ],
+      [
+        "拣货",
+        "准确准备"
+      ],
+      [
+        "配送",
+        "协调交付"
+      ],
+      [
+        "专家支持",
+        "专属专家"
+      ]
     ],
-
-    finalTitle: "让我们协调您的下一次国际空运。",
-    finalText:
-      "告诉我们始发地、目的地、货物类型和紧急程度。我们的团队将为您的业务分析最佳空运方案。",
-    finalPrimary: "申请空运报价",
-    finalSecondary: "联系专家",
-  },
+    "finalTitle": "让我们协调您的仓储与配送操作。",
+    "finalText": "告诉我们货物类型、数量、出库频率和目的地。我们的团队将分析最佳物流方案。",
+    "finalPrimary": "申请物流方案",
+    "finalSecondary": "联系专家"
+  }
 } satisfies Record<Locale, any>;
 
 function getInitialLocale(): Locale {
@@ -511,7 +740,7 @@ function Icon({ name }: { name: IconName }) {
   }
 }
 
-export default function TransporteMaritimoPage() {
+export default function AlmacenDistribucionPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
@@ -559,10 +788,10 @@ export default function TransporteMaritimoPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={styles.hero} data-aereo-hero="true" data-service-hero-home="true"
+        <section className={styles.hero} data-service-name="almacen-distribucion" data-service-hero-home="true"
       >
           <Image
-            src="/images/maritimo.png"
+            src="/images/almacenHero.png"
             alt={t.heroTitle}
             fill
             priority
@@ -571,7 +800,7 @@ export default function TransporteMaritimoPage() {
           />
 
           <Image
-            src="/images/maritimo-mobile.png"
+            src="/images/almacen.png"
             alt={t.heroTitle}
             fill
             priority
@@ -611,7 +840,7 @@ export default function TransporteMaritimoPage() {
             </div>
           </div>
 
-          <div className={styles.commandBar} data-service-trust="maritimo">
+          <div className={styles.commandBar} data-service-trust="almacen-distribucion">
             {t.trust.map(([title, text]: string[], index: number) => {
               const icons: IconName[] = ["timer", "shield", "document", "tracking"];
 
@@ -657,7 +886,7 @@ export default function TransporteMaritimoPage() {
           </div>
         </section>
 
-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/maritimo.png')" } as CSSProperties}>
+        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/almacenHero.png')" } as CSSProperties}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -757,7 +986,7 @@ export default function TransporteMaritimoPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/maritimo.png')" } as CSSProperties} data-across-final-cta="true">
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/almacenHero.png')" } as CSSProperties} data-across-final-cta="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>
@@ -770,7 +999,7 @@ export default function TransporteMaritimoPage() {
 
           <div className={styles.finalImage}>
             <Image
-              src="/images/maritimo.png"
+              src="/images/almacenHero.png"
               alt={t.finalTitle}
               fill
               sizes="(max-width: 900px) 100vw, 44vw"
