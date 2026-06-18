@@ -8,7 +8,6 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Certifications from "@/components/sections/Certifications";
 import styles from "./QuienesSomos.module.css";
-import empresaHeroStyles from "../Empresa.module.css";
 
 type Locale = "es" | "en" | "zh";
 
@@ -162,15 +161,14 @@ const team = [
 const copy = {
   es: {
     eyebrow: "QUIÉNES SOMOS",
-    title: "Logística con control real.",
+    title: "Logística internacional para empresas que necesitan control, precisión y capacidad operativa global.",
     description:
       "Conectamos empresas, mercados y cadenas de suministro mediante soluciones logísticas integrales, combinando cobertura internacional, experiencia operativa, tecnología, cumplimiento documental y atención especializada.",
     primary: "Conocer nuestras soluciones",
     secondary: "Ver oficinas",
 
     blockEyebrow: "ACROSS LOGISTICS",
-    blockTitle:
-      "Logística internacional con visión operativa y compromiso de largo plazo.",
+    blockTitle: "Logística internacional con visión operativa y compromiso de largo plazo.",
     blockText:
       "Across Logistics acompaña a empresas que necesitan mover mercancías con seguridad, control y eficiencia. Coordinamos transporte, aduanas, almacenaje, distribución y operaciones especiales para cadenas de suministro nacionales e internacionales.",
 
@@ -220,15 +218,14 @@ const copy = {
 
   en: {
     eyebrow: "ABOUT US",
-    title: "Logistics with real control.",
+    title: "International logistics for companies that need control, precision and global operational capacity.",
     description:
       "We connect companies, markets and supply chains through integrated logistics solutions, combining international coverage, operational expertise, technology, documentation compliance and specialized support.",
     primary: "Explore our solutions",
     secondary: "View offices",
 
     blockEyebrow: "ACROSS LOGISTICS",
-    blockTitle:
-      "International logistics with operational vision and long-term commitment.",
+    blockTitle: "International logistics with operational vision and long-term commitment.",
     blockText:
       "Across Logistics supports companies that need to move cargo with security, control and efficiency. We coordinate transport, customs, warehousing, distribution and special operations for domestic and international supply chains.",
 
@@ -351,7 +348,6 @@ function getInitialLocale(): Locale {
 
 export default function QuienesSomosPage() {
   const [locale, setLocale] = useState<Locale>("es");
-  const [showFullTeam, setShowFullTeam] = useState(false);
 
   useEffect(() => {
     const updateLocale = (event?: Event) => {
@@ -393,97 +389,32 @@ export default function QuienesSomosPage() {
 
   const t = copy[locale];
 
-  const heroTrust: readonly (readonly [string, string])[] = {
-    es: [
-      ["Control", "Seguimiento operativo"],
-      ["Red global", "Cobertura internacional"],
-      ["Cumplimiento", "Gestión documental"],
-      ["Equipo experto", "Atención especializada"],
-    ],
-    en: [
-      ["Control", "Operational tracking"],
-      ["Global network", "International coverage"],
-      ["Compliance", "Documentation management"],
-      ["Expert team", "Specialized support"],
-    ],
-    zh: [
-      ["控制", "运营跟踪"],
-      ["全球网络", "国际覆盖"],
-      ["合规", "文件管理"],
-      ["专业团队", "专业支持"],
-    ],
-  }[locale];
-
   return (
-    <div className={empresaHeroStyles.page}>
+    <div className={styles.page}>
       <Header />
 
-      <section
-        className={empresaHeroStyles.hero}
-        data-quienes-hero="true"
-        data-aereo-hero="true"
-        data-service-hero-home="true"
-      >
+      <section className={styles.hero}>
         <Image
-          src="/images/quienes%20somos/quienes1.png"
-          alt="Across Logistics - Quiénes somos"
+          src="/images/quienes somos/quienes2.png"
+          alt={t.title}
           fill
           priority
-          sizes="(max-width: 900px) 0px, 100vw"
-          className={`${empresaHeroStyles.heroImage} ${empresaHeroStyles.heroImageDesktop}`}
+          className={styles.heroImage}
+          sizes="100vw"
         />
 
-        <Image
-          src="/images/quienes%20somos/quienes1.png"
-          alt="Across Logistics - Quiénes somos"
-          fill
-          priority
-          sizes="(max-width: 900px) 100vw, 0px"
-          className={`${empresaHeroStyles.heroImage} ${empresaHeroStyles.heroImageMobile}`}
-        />
+        <div className={styles.heroOverlay} />
 
-        <div className={empresaHeroStyles.heroOverlay} />
+        <div className={styles.heroContent}>
+          <span>{t.eyebrow}</span>
+          <h1>{t.title}</h1>
+          <p>{t.description}</p>
 
-        <div className={empresaHeroStyles.heroInner}>
-          <div className={empresaHeroStyles.heroContent}>
-            <span className={empresaHeroStyles.eyebrow}>{t.eyebrow}</span>
-
-            <h1>{t.title}</h1>
-
-            <p>{t.description}</p>
-
-            <div className={empresaHeroStyles.actions}>
-              <Link href="/servicios">{t.primary}</Link>
-              <Link href="/empresa/oficinas">{t.secondary}</Link>
-            </div>
+          <div className={styles.actions}>
+            <Link href="/servicios">{t.primary}</Link>
+            <Link href="/empresa/oficinas">{t.secondary}</Link>
           </div>
         </div>
-          <div className={empresaHeroStyles.commandBar} data-aereo-trust="true">
-            {heroTrust.map(([title, text]) => (
-              <div key={title} className={empresaHeroStyles.commandItem}>
-                <i aria-hidden="true">
-                  <svg
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.7"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M12 3 5 6v5c0 4.4 2.8 8.3 7 10 4.2-1.7 7-5.6 7-10V6l-7-3Z" />
-                    <path d="m9.5 12 1.8 1.8 3.7-4" />
-                  </svg>
-                </i>
-
-                <span>
-                  <strong>{title}</strong>
-                  <small>{text}</small>
-                </span>
-              </div>
-            ))}
-          </div>
       </section>
 
       <Certifications />
@@ -495,14 +426,14 @@ export default function QuienesSomosPage() {
           <p>{t.blockText}</p>
         </section>
 
-        <section className={styles.servicesPanel} data-quienes-services="true">
+        <section className={styles.servicesPanel}>
           <div className={styles.servicesCopy}>
             <p>{t.servicesIntro}</p>
             <h2>{t.servicesTitle}</h2>
 
             <div className={styles.accordion}>
               {t.services.map(([title, description]: readonly [string, string]) => (
-                <details key={title} className={styles.serviceItem} open>
+                <details key={title} className={styles.serviceItem}>
                   <summary>
                     <h3>{title}</h3>
                     <span>+</span>
@@ -515,7 +446,7 @@ export default function QuienesSomosPage() {
 
           <div className={styles.servicesImageWrap}>
             <Image
-              src="/images/quienes%20somos/quienes2.png"
+              src="/images/quienes2.png"
               alt={t.servicesTitle}
               fill
               className={styles.servicesImage}
@@ -524,10 +455,7 @@ export default function QuienesSomosPage() {
           </div>
         </section>
 
-        <section
-          className={styles.teamSection}
-          data-team-expanded={showFullTeam ? "true" : "false"}
-        >
+        <section className={styles.teamSection}>
           <div className={styles.teamHead}>
             <span>{t.teamEyebrow}</span>
             <h2>{t.teamTitle}</h2>
@@ -557,34 +485,9 @@ export default function QuienesSomosPage() {
               </article>
             ))}
           </div>
-
-          <button
-            type="button"
-            className={styles.teamMobileToggle}
-            onClick={() => setShowFullTeam((value) => !value)}
-          >
-            {showFullTeam
-              ? locale === "en"
-                ? "Show less"
-                : locale === "zh"
-                  ? "收起团队"
-                  : "Ver menos"
-              : locale === "en"
-                ? "Meet the full team"
-                : locale === "zh"
-                  ? "查看完整团队"
-                  : "Conocer nuestro equipo"}
-          </button>
         </section>
 
-        <section
-          className={styles.compactCta}
-          style={
-            {
-              "--contact-bg": "url('/images/operador/contactcenter.png')",
-            } as CSSProperties
-          }
-        >
+        <section className={styles.compactCta} style={{ "--contact-bg": "url(\'/images/operador/contactcenter.png\')" } as CSSProperties}>
           <div>
             <span>{t.ctaEyebrow}</span>
             <h2>{t.ctaTitle}</h2>

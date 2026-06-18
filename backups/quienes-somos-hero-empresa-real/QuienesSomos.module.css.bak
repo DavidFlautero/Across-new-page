@@ -1,0 +1,803 @@
+.page {
+  width: 100%;
+  overflow: hidden;
+  background: #f4f1eb;
+  color: #080b10;
+}
+
+/* HERO MISMO SISTEMA VISUAL */
+.hero {
+  position: relative;
+  min-height: clamp(620px, calc(100svh - 24px), 780px);
+  padding: clamp(7rem, 9vh, 8.2rem) 6vw clamp(3.4rem, 5vh, 4.8rem);
+  display: flex;
+  align-items: center;
+  isolation: isolate;
+  overflow: hidden;
+  background: #050609;
+  color: #fff;
+}
+
+.heroImage {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center 48% !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: brightness(.78) contrast(1.08) saturate(1.06);
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 76% 38%, rgba(237, 27, 47, .16), transparent 30rem),
+    linear-gradient(90deg, rgba(2,4,8,.98) 0%, rgba(2,4,8,.88) 34%, rgba(2,4,8,.52) 64%, rgba(2,4,8,.24) 100%),
+    linear-gradient(180deg, rgba(0,0,0,.08) 0%, rgba(0,0,0,.38) 58%, rgba(0,0,0,.64) 100%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  width: min(780px, 100%);
+}
+
+.heroContent > span {
+  display: block;
+  margin-bottom: 1rem;
+  color: #ed1b2f;
+  font-size: .78rem;
+  font-weight: 950;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.heroContent p {
+  max-width: 650px;
+  margin: 1.35rem 0 0;
+  color: rgba(255,255,255,.84);
+  font-size: clamp(1rem, 1.08vw, 1.13rem);
+  line-height: 1.68;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .9rem;
+  margin-top: 1.9rem;
+}
+
+.actions a,
+.compactCtaActions a {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.55rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .76rem;
+  font-weight: 950;
+  letter-spacing: .04em;
+}
+
+.actions a:first-child,
+.compactCtaActions a:first-child {
+  background: #ed1b2f;
+  color: #fff;
+  box-shadow: 0 18px 42px rgba(237, 27, 47, .24);
+}
+
+.actions a:first-child::after,
+.compactCtaActions a:first-child::after {
+  content: "→";
+  margin-left: .75rem;
+}
+
+.actions a:last-child,
+.compactCtaActions a:last-child {
+  color: #fff;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.28);
+}
+
+.content {
+  background: #f4f1eb;
+}
+
+.block {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: clamp(4rem, 6vw, 6rem) 0;
+}
+
+.block > span,
+.servicesCopy > span,
+.teamHead > span,
+.compactCta span {
+  display: block;
+  margin-bottom: .9rem;
+  color: #ed1b2f;
+  font-size: .72rem;
+  font-weight: 950;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.block h2,
+.servicesCopy h2,
+.teamHead h2 {
+  max-width: 840px;
+  margin: 0;
+  color: #080b10;
+  font-size: clamp(2.45rem, 4vw, 5rem);
+  line-height: .96;
+  letter-spacing: -.06em;
+}
+
+.block p,
+.servicesCopy p,
+.teamHead p {
+  max-width: 720px;
+  margin: 1.15rem 0 0;
+  color: rgba(8, 11, 16, .72);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+/* BLOQUE OSCURO CON IMAGEN */
+.servicesPanel {
+  width: 100vw;
+  max-width: none;
+  margin-left: 50%;
+  margin-right: 50%;
+  transform: translateX(-50%);
+  padding: clamp(4rem, 6vw, 6rem) max(24px, calc((100vw - 1180px) / 2));
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(360px, 1fr);
+  gap: clamp(2.4rem, 5vw, 5rem);
+  align-items: center;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(237,27,47,.15), transparent 24rem),
+    linear-gradient(180deg, #08090e 0%, #050609 100%);
+  color: #fff;
+  overflow: hidden;
+}
+
+.servicesPanel .servicesCopy h2 {
+  color: #fff;
+}
+
+.servicesPanel .servicesCopy p {
+  color: rgba(255,255,255,.76);
+}
+
+.servicesImageWrap {
+  position: relative;
+  min-height: 390px;
+  overflow: hidden;
+  background: #050609;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 28px 90px rgba(0,0,0,.34);
+}
+
+.servicesImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 1;
+  visibility: visible;
+  filter: brightness(.82) contrast(1.08) saturate(1.05);
+}
+
+.accordion {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .8rem;
+  margin-top: 2rem;
+}
+
+.serviceItem {
+  position: relative;
+  min-height: 116px;
+  padding: 1.15rem 1.25rem;
+  border: 1px solid rgba(255,255,255,.13);
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.075), rgba(255,255,255,.026));
+  color: #fff;
+}
+
+.serviceItem::after {
+  content: "→";
+  position: absolute;
+  right: 1.1rem;
+  bottom: 1rem;
+  color: #ed1b2f;
+}
+
+.serviceItem h3,
+.serviceItem strong {
+  margin: 0;
+  color: #fff;
+  font-size: .98rem;
+  line-height: 1.2;
+}
+
+.serviceItem p {
+  max-width: 360px;
+  margin: .55rem 1.4rem 0 0;
+  color: rgba(255,255,255,.72);
+  font-size: .84rem;
+  line-height: 1.5;
+}
+
+/* EQUIPO */
+.teamSection {
+  width: min(1280px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: clamp(4rem, 6vw, 6.5rem) 0;
+}
+
+.teamHead {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(360px, .75fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: end;
+  margin-bottom: 2.2rem;
+}
+
+.teamHead p {
+  margin-top: 0;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.teamCard {
+  position: relative;
+  min-height: 320px;
+  overflow: hidden;
+  background: #101216;
+  border: 1px solid rgba(8, 11, 16, .10);
+  box-shadow: 0 18px 50px rgba(8, 11, 16, .08);
+}
+
+.teamImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(.08) contrast(1.04);
+  transition: transform .35s ease, filter .35s ease;
+}
+
+.teamCard:hover .teamImage {
+  transform: scale(1.04);
+  filter: grayscale(0) contrast(1.06);
+}
+
+.teamOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 35%, rgba(0,0,0,.78) 100%);
+}
+
+.teamInfo {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 2;
+  color: #fff;
+}
+
+.teamInfo h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.15;
+  font-weight: 950;
+}
+
+.teamInfo p {
+  margin: .35rem 0 0;
+  color: rgba(255,255,255,.76);
+  font-size: .78rem;
+  line-height: 1.35;
+}
+
+/* CTA FINAL */
+.compactCta {
+  width: 100vw;
+  max-width: none;
+  margin-left: 50%;
+  margin-right: 50%;
+  transform: translateX(-50%);
+  padding: 3.4rem max(24px, calc((100vw - 1180px) / 2));
+  background:
+    linear-gradient(90deg, rgba(5,8,13,.96), rgba(5,8,13,.70)),
+    var(--contact-bg),
+    linear-gradient(180deg, #07080c 0%, #050609 100%);
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+  border-top: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.compactCta h2 {
+  max-width: 760px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.2rem, 3.2vw, 3.8rem);
+  line-height: .94;
+  letter-spacing: -.055em;
+}
+
+.compactCta p {
+  max-width: 680px;
+  margin: 1rem 0 0;
+  color: rgba(255,255,255,.74);
+  font-size: .96rem;
+  line-height: 1.62;
+}
+
+.compactCtaActions {
+  display: flex;
+  gap: .85rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 901px) and (max-height: 700px) {
+  .hero {
+    min-height: 520px;
+    padding: 5.4rem 6vw 2.4rem;
+  }
+
+  
+.actions a {
+    min-height: 42px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .teamGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .servicesPanel {
+    grid-template-columns: 1fr;
+  }
+
+  .servicesImageWrap {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 900px) {
+  .teamHead {
+    grid-template-columns: 1fr;
+  }
+
+  .teamGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .accordion {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: auto;
+    padding: 5.4rem 22px 2.6rem;
+    display: block;
+  }
+
+  
+.heroContent p {
+    max-width: 420px;
+    font-size: .92rem;
+    line-height: 1.52;
+  }
+
+  .actions,
+  .compactCtaActions {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+
+  .actions a,
+  .compactCtaActions a {
+    width: 100%;
+    min-height: 46px;
+    border-radius: 999px;
+  }
+
+  .block,
+  .teamSection {
+    width: calc(100% - 36px);
+    padding: 3rem 0;
+  }
+
+  .block h2,
+  .servicesCopy h2,
+  .teamHead h2 {
+    font-size: clamp(2rem, 9vw, 2.85rem);
+  }
+
+  .servicesPanel {
+    width: 100%;
+    margin: 0;
+    transform: none;
+    padding: 3rem 18px;
+  }
+
+  .servicesImageWrap {
+    min-height: 240px;
+  }
+
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .teamCard {
+    min-height: 360px;
+  }
+
+  .compactCta {
+    width: 100%;
+    margin: 0;
+    transform: none;
+    padding: 2.7rem 18px;
+  }
+
+  .compactCta h2 {
+    font-size: clamp(2rem, 9vw, 2.85rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .accordion {
+    display: none !important;
+  }
+
+  .servicesPanel {
+    padding: 2.7rem 18px 2.8rem !important;
+    display: block !important;
+    background:
+      radial-gradient(circle at 20% 0%, rgba(237, 27, 47, .16), transparent 18rem),
+      linear-gradient(180deg, #100711 0%, #050609 100%) !important;
+  }
+
+  .servicesCopy p {
+    margin-bottom: .85rem !important;
+    color: rgba(255,255,255,.68) !important;
+    font-size: .84rem !important;
+    line-height: 1.58 !important;
+  }
+
+  .servicesCopy h2 {
+    max-width: 100% !important;
+    font-size: clamp(1.75rem, 8vw, 2.35rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.045em !important;
+  }
+
+  .servicesImageWrap {
+    margin-top: 1.8rem !important;
+    min-height: 210px !important;
+    height: 210px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero {
+    padding: 5rem 18px 2.2rem;
+  }
+
+  
+.heroContent p {
+    font-size: .82rem;
+  }
+
+  .teamCard {
+    min-height: 320px;
+  }
+
+  .servicesImageWrap {
+    height: 190px !important;
+    min-height: 190px !important;
+  }
+}
+
+/* === QUIENES SOMOS TYPOGRAPHY CLEAN SYSTEM START === */
+/* Sistema tipográfico único.
+   Igual a Empresa / Oficinas / Sectores:
+   Arial, Helvetica, sans-serif + inherit.
+*/
+
+.page {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.page h1,
+.page h2,
+.page h3,
+.page h4,
+.page p,
+.page a,
+.page span,
+.page strong,
+.page small,
+.page button,
+.page li {
+  font-family: inherit !important;
+}
+
+/* HERO */
+.heroContent p {
+  color: rgba(244, 239, 229, .84) !important;
+  -webkit-text-fill-color: rgba(244, 239, 229, .84) !important;
+  font-size: clamp(1rem, 1.3vw, 1.14rem) !important;
+  font-weight: 400 !important;
+  line-height: 1.72 !important;
+  letter-spacing: 0 !important;
+}
+
+.eyebrow,
+.heroContent > span,
+.block > span,
+.servicesCopy > span,
+.teamHead > span,
+.compactCta span {
+  color: #d6c08d !important;
+  -webkit-text-fill-color: #d6c08d !important;
+  font-size: .72rem !important;
+  font-weight: 950 !important;
+  line-height: 1.1 !important;
+  letter-spacing: .20em !important;
+  text-transform: uppercase !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+/* BOTONES */
+.actions a,
+.compactCtaActions a {
+  min-height: 54px !important;
+  min-width: 245px !important;
+  padding: 0 1.55rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 999px !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  font-size: .78rem !important;
+  font-weight: 950 !important;
+  letter-spacing: .075em !important;
+  line-height: 1 !important;
+}
+
+.actions a:first-child,
+.compactCtaActions a:first-child {
+  color: #f4efe5 !important;
+  -webkit-text-fill-color: #f4efe5 !important;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255,255,255,.16), transparent 34%),
+    linear-gradient(135deg, #07111d 0%, #0d1c2b 48%, #173247 100%) !important;
+  border: 1px solid rgba(214,192,141,.42) !important;
+}
+
+.actions a:first-child::after,
+.compactCtaActions a:first-child::after {
+  content: "→" !important;
+  margin-left: .7rem !important;
+}
+
+.actions a:last-child,
+.compactCtaActions a:last-child {
+  color: #f4efe5 !important;
+  -webkit-text-fill-color: #f4efe5 !important;
+  background: rgba(255,255,255,.075) !important;
+  border: 1px solid rgba(255,255,255,.24) !important;
+}
+
+/* TITULOS INTERNOS */
+.block h2,
+.servicesCopy h2,
+.teamHead h2,
+.compactCta h2 {
+  font-size: clamp(2rem, 2.65vw, 3rem) !important;
+  font-weight: 950 !important;
+  line-height: 1 !important;
+  letter-spacing: -.05em !important;
+  text-wrap: balance !important;
+}
+
+.block h2,
+.teamHead h2 {
+  color: #07111d !important;
+  -webkit-text-fill-color: #07111d !important;
+}
+
+.servicesCopy h2,
+.compactCta h2 {
+  color: #f4efe5 !important;
+  -webkit-text-fill-color: #f4efe5 !important;
+}
+
+/* PARRAFOS */
+.block p,
+.servicesCopy p,
+.teamHead p,
+.compactCta p {
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  line-height: 1.72 !important;
+  letter-spacing: 0 !important;
+}
+
+.block p,
+.teamHead p {
+  color: rgba(7, 17, 29, .74) !important;
+  -webkit-text-fill-color: rgba(7, 17, 29, .74) !important;
+}
+
+.servicesCopy p,
+.compactCta p {
+  color: rgba(244, 239, 229, .78) !important;
+  -webkit-text-fill-color: rgba(244, 239, 229, .78) !important;
+}
+
+/* CARDS */
+.serviceItem h3,
+.serviceItem strong,
+.teamInfo h3 {
+  font-size: clamp(1rem, 1.28vw, 1.2rem) !important;
+  font-weight: 950 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.03em !important;
+}
+
+.serviceItem p,
+.teamInfo p {
+  font-size: .82rem !important;
+  font-weight: 400 !important;
+  line-height: 1.48 !important;
+  letter-spacing: 0 !important;
+}
+
+/* TABLET */
+@media (min-width: 701px) and (max-width: 900px) {
+  
+.heroContent p {
+    font-size: .86rem !important;
+    line-height: 1.46 !important;
+  }
+
+  .actions a,
+  .compactCtaActions a {
+    font-size: .5rem !important;
+  }
+
+  .block h2,
+  .servicesCopy h2,
+  .teamHead h2,
+  .compactCta h2 {
+    font-size: clamp(1.85rem, 4.4vw, 2.25rem) !important;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  
+.heroContent p {
+    font-size: .86rem !important;
+    line-height: 1.46 !important;
+  }
+
+  .eyebrow,
+  .heroContent > span,
+  .block > span,
+  .servicesCopy > span,
+  .teamHead > span,
+  .compactCta span {
+    font-size: .58rem !important;
+    letter-spacing: .20em !important;
+  }
+
+  .actions a,
+  .compactCtaActions a {
+    min-height: 50px !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    font-size: .71rem !important;
+  }
+
+  .block h2,
+  .servicesCopy h2,
+  .teamHead h2,
+  .compactCta h2 {
+    max-width: 310px !important;
+    font-size: clamp(1.52rem, 6.4vw, 1.82rem) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -.045em !important;
+  }
+
+  .block p,
+  .servicesCopy p,
+  .teamHead p,
+  .compactCta p {
+    max-width: 320px !important;
+    font-size: .82rem !important;
+    line-height: 1.48 !important;
+  }
+}
+
+@media (max-width: 390px) {
+  
+.heroContent p {
+    font-size: .82rem !important;
+    line-height: 1.42 !important;
+  }
+
+  .block h2,
+  .servicesCopy h2,
+  .teamHead h2,
+  .compactCta h2 {
+    font-size: 1.58rem !important;
+  }
+}
+/* === QUIENES SOMOS TYPOGRAPHY CLEAN SYSTEM END === */
+
+
+/* === QUIENES SOMOS HERO SERVICE CSS BUTTON FIX START === */
+/* El título consume ServicePage.module.css.
+   Este bloque solo corrige botones rojos heredados del CSS viejo local.
+*/
+
+.page > .hero .actions a:first-child {
+  color: #f4efe5 !important;
+  -webkit-text-fill-color: #f4efe5 !important;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255,255,255,.16), transparent 34%),
+    linear-gradient(135deg, #07111d 0%, #0d1c2b 48%, #173247 100%) !important;
+  border: 1px solid rgba(214,192,141,.42) !important;
+  box-shadow:
+    0 20px 46px rgba(7,17,29,.42),
+    inset 0 1px 0 rgba(255,255,255,.16) !important;
+}
+
+.page > .hero .actions a:last-child {
+  color: #09233a !important;
+  -webkit-text-fill-color: #09233a !important;
+  background:
+    linear-gradient(180deg, rgba(247,243,234,.94), rgba(221,231,236,.86)) !important;
+  border: 1px solid rgba(214,192,141,.34) !important;
+  box-shadow:
+    0 18px 42px rgba(5,11,18,.18),
+    inset 0 1px 0 rgba(255,255,255,.70) !important;
+}
+
+.page > .hero .actions a:first-child::after {
+  content: "→" !important;
+  margin-left: .7rem !important;
+}
+/* === QUIENES SOMOS HERO SERVICE CSS BUTTON FIX END === */
+
