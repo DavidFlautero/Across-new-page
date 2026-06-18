@@ -9788,3 +9788,107 @@
 }
 /* === ACROSS LOCAL DARKBAND LAYOUT END === */
 
+
+/* === SOSTENIBILIDAD OPERADORES BG START === */
+/* Bloque:
+   "Operaciones logísticas con visión sostenible."
+   Fondo con imagen de operadores.
+   Desktop, tablet y mobile usan la misma imagen.
+*/
+
+:global(section[data-sostenibilidad-operadores-bg="true"]),
+.darkBand[data-sostenibilidad-operadores-bg="true"] {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,12,20,.72) 0%,
+      rgba(5,12,20,.48) 42%,
+      rgba(5,12,20,.18) 100%
+    ),
+    url("/images/operador/contactcenter.png") center center / cover no-repeat !important;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(5,12,20,.72) 0%,
+      rgba(5,12,20,.48) 42%,
+      rgba(5,12,20,.18) 100%
+    ),
+    url("/images/operador/contactcenter.png") !important;
+
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+}
+
+:global(section[data-sostenibilidad-operadores-bg="true"]::before),
+.darkBand[data-sostenibilidad-operadores-bg="true"]::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,12,20,.50) 0%,
+      rgba(5,12,20,.22) 48%,
+      rgba(5,12,20,.08) 100%
+    ) !important;
+  opacity: 1 !important;
+}
+
+:global(section[data-sostenibilidad-operadores-bg="true"]::after),
+.darkBand[data-sostenibilidad-operadores-bg="true"]::after {
+  opacity: 0 !important;
+  background: transparent !important;
+}
+
+:global(section[data-sostenibilidad-operadores-bg="true"] > *),
+.darkBand[data-sostenibilidad-operadores-bg="true"] > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+:global(section[data-sostenibilidad-operadores-bg="true"] img),
+:global(section[data-sostenibilidad-operadores-bg="true"] picture),
+.darkBand[data-sostenibilidad-operadores-bg="true"] img,
+.darkBand[data-sostenibilidad-operadores-bg="true"] picture {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+@media (max-width: 900px) {
+  :global(section[data-sostenibilidad-operadores-bg="true"]),
+  .darkBand[data-sostenibilidad-operadores-bg="true"] {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5,12,20,.56) 0%,
+        rgba(5,12,20,.28) 45%,
+        rgba(5,12,20,.66) 100%
+      ),
+      url("/images/operador/contactcenter.png") center center / cover no-repeat !important;
+
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(5,12,20,.56) 0%,
+        rgba(5,12,20,.28) 45%,
+        rgba(5,12,20,.66) 100%
+      ),
+      url("/images/operador/contactcenter.png") !important;
+
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+}
+/* === SOSTENIBILIDAD OPERADORES BG END === */
+

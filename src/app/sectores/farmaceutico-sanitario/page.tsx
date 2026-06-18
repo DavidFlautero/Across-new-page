@@ -790,7 +790,7 @@ export default function FarmaceuticoSanitarioSectorPage() {
         <section className={styles.hero} data-aereo-hero="true" data-service-hero-home="true"
       >
           <Image
-            src="/images/sectores/herofarmaseutico.png"
+            src="/images/sectores/herofarmaceutico1.png"
             alt={t.heroTitle}
             fill
             priority
@@ -799,7 +799,7 @@ export default function FarmaceuticoSanitarioSectorPage() {
           />
 
           <Image
-            src="/images/sectores/herofarmaceutico2.png"
+            src="/images/sectores/herofarmaceutico1.png"
             alt={t.heroTitle}
             fill
             priority
@@ -955,10 +955,10 @@ export default function FarmaceuticoSanitarioSectorPage() {
           </div>
         </section>
 
-        <section className={styles.darkBand} data-mobile-hide-after-cert="true">
+        <section className={styles.darkBand} data-sector-darkband-operador="true" data-sector-darkband-bg-only="true">
           <div className={styles.darkBandImage}>
             <Image
-              src="/images/sectores/herofarmaseutico.png"
+              src="/images/operador/contactcenter.png"
               alt={t.bandTitle}
               fill
               sizes="(max-width: 900px) 100vw, 42vw"
@@ -985,26 +985,6 @@ export default function FarmaceuticoSanitarioSectorPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/sectores/herofarmaseutico.png')" } as CSSProperties} data-across-final-cta="true">
-          <div>
-            <h2>{t.finalTitle}</h2>
-            <p>{t.finalText}</p>
-
-            <div className={styles.finalActions}>
-              <Link href="/cotizacion">{t.finalPrimary}</Link>
-              <Link href="/contacto">{t.finalSecondary}</Link>
-            </div>
-          </div>
-
-          <div className={styles.finalImage}>
-            <Image
-              src="/images/sectores/herofarmaseutico.png"
-              alt={t.finalTitle}
-              fill
-              sizes="(max-width: 900px) 100vw, 44vw"
-            />
-          </div>
-        </section>
 </main>
 
       <Footer />

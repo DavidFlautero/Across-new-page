@@ -886,7 +886,7 @@ export default function ECommercePage() {
           </div>
         </section>
 
-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/heroecommerce.png')" } as CSSProperties}>
+        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/heroecommerce.png')" } as CSSProperties} data-ecommerce-services-bg="true">
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -956,7 +956,7 @@ export default function ECommercePage() {
           </div>
         </section>
 
-        <section className={styles.darkBand} data-mobile-hide-after-cert="true">
+        <section className={styles.darkBand} data-mobile-hide-after-cert="true" data-ecommerce-darkband-bg="true">
           <div className={styles.darkBandImage}>
             <Image
               src="/images/cargaaerea.png"
@@ -986,7 +986,7 @@ export default function ECommercePage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/heroecommerce.png')" } as CSSProperties} data-across-final-cta="true">
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/heroecommerce.png')" } as CSSProperties} data-across-final-cta="true" data-ecommerce-final-bg="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>

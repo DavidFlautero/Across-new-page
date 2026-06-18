@@ -687,7 +687,7 @@ export default function SostenibilidadPage() {
           </div>
         </section>
 
-        <section className={styles.darkBand} data-mobile-hide-after-cert="true">
+        <section className={styles.darkBand} data-mobile-hide-after-cert="true" data-sostenibilidad-operadores-bg="true">
           <div className={styles.darkBandImage}>
             <Image
               src="/images/cargaaerea.png"

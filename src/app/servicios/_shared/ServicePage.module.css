@@ -2564,3 +2564,84 @@
   filter: brightness(1.18) contrast(1.05) saturate(1.12) !important;
   transform: scale(1.035) !important;
 }
+
+
+/* === ACROSS HERO IMAGES VISIBLE FINAL START === */
+/* Corrige imágenes invisibles del hero.
+   Causa: z-index negativo mandaba la imagen detrás del fondo del hero.
+*/
+
+.hero {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background-color: #05070b !important;
+}
+
+.heroImage,
+.heroImageDesktop,
+.heroImageMobile,
+.page > .hero .heroImage,
+.page > .hero .heroImageDesktop,
+.page > .hero .heroImageMobile {
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+
+.heroOverlay,
+.page > .hero .heroOverlay {
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+
+.heroInner,
+.heroContent,
+.operationCard,
+.page > .hero .heroInner,
+.page > .hero .heroContent,
+.page > .hero .operationCard {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Desktop y tablet grande: mostrar desktop */
+@media (min-width: 901px) {
+  .heroImageDesktop,
+  .page > .hero .heroImageDesktop {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 0 !important;
+  }
+
+  .heroImageMobile,
+  .page > .hero .heroImageMobile {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+}
+
+/* Tablet/mobile: si querés usar mobile hasta 900px */
+@media (max-width: 900px) {
+  .heroImageDesktop,
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+
+  .heroImageMobile,
+  .page > .hero .heroImageMobile {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 0 !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+}
+/* === ACROSS HERO IMAGES VISIBLE FINAL END === */
+

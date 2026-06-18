@@ -789,7 +789,7 @@ export default function AduanasPage() {
 
       <main className={styles.page}>
         <section className={styles.hero} data-service-name="aduanas" data-service-hero-home="true"
-      >
+       data-aduana-hero-mobile-bg="true">
           <Image
             src="/images/aduanashero.png"
             alt={t.heroTitle}
@@ -886,7 +886,7 @@ export default function AduanasPage() {
           </div>
         </section>
 
-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/aduanashero.png')" } as CSSProperties}>
+        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/aduanashero.png')" } as CSSProperties} data-aduana-services-bg="true">
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -956,7 +956,7 @@ export default function AduanasPage() {
           </div>
         </section>
 
-        <section className={styles.darkBand} data-mobile-hide-after-cert="true">
+        <section className={styles.darkBand} data-mobile-hide-after-cert="true" data-aduana-darkband-bg="true">
           <div className={styles.darkBandImage}>
             <Image
               src="/images/cargaaerea.png"
@@ -986,7 +986,7 @@ export default function AduanasPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/aduanashero.png')" } as CSSProperties} data-across-final-cta="true">
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/aduanashero.png')" } as CSSProperties} data-across-final-cta="true" data-aduana-final-bg="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>

@@ -885,7 +885,7 @@ export default function AutomocionSectorPage() {
           </div>
         </section>
 
-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/sectores/transporte-logistica-automocion.png')" } as CSSProperties}>
+        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/sectores/autmocion11.png')" } as CSSProperties}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -955,10 +955,10 @@ export default function AutomocionSectorPage() {
           </div>
         </section>
 
-        <section className={styles.darkBand} data-mobile-hide-after-cert="true">
+        <section className={styles.darkBand} data-sector-darkband-operador="true" data-sector-darkband-bg-only="true">
           <div className={styles.darkBandImage}>
             <Image
-              src="/images/sectores/transporte-logistica-automocion.png"
+              src="/images/operador/contactcenter.png"
               alt={t.bandTitle}
               fill
               sizes="(max-width: 900px) 100vw, 42vw"
@@ -985,26 +985,6 @@ export default function AutomocionSectorPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/sectores/transporte-logistica-automocion.png')" } as CSSProperties} data-across-final-cta="true">
-          <div>
-            <h2>{t.finalTitle}</h2>
-            <p>{t.finalText}</p>
-
-            <div className={styles.finalActions}>
-              <Link href="/cotizacion">{t.finalPrimary}</Link>
-              <Link href="/contacto">{t.finalSecondary}</Link>
-            </div>
-          </div>
-
-          <div className={styles.finalImage}>
-            <Image
-              src="/images/sectores/transporte-logistica-automocion.png"
-              alt={t.finalTitle}
-              fill
-              sizes="(max-width: 900px) 100vw, 44vw"
-            />
-          </div>
-        </section>
 </main>
 
       <Footer />

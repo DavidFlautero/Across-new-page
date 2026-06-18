@@ -9928,3 +9928,506 @@
 }
 /* === ALMACEN DISTRIBUCION IMAGES FINAL END === */
 
+
+/* === SECTORES DARKBAND BACKGROUND ONLY START === */
+/* DarkBand sin bloque doble:
+   Oculta .darkBandImage y usa la imagen como fondo real de toda la sección.
+*/
+
+:global(section[data-sector-darkband-bg-only="true"]),
+.darkBand[data-sector-darkband-bg-only="true"] {
+  width: 100% !important;
+  min-height: 420px !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,12,20,.78) 0%,
+      rgba(5,12,20,.56) 42%,
+      rgba(5,12,20,.22) 100%
+    ),
+    url("/images/operador/contactcenter.png") center center / cover no-repeat !important;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(5,12,20,.78) 0%,
+      rgba(5,12,20,.56) 42%,
+      rgba(5,12,20,.22) 100%
+    ),
+    url("/images/operador/contactcenter.png") !important;
+
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-color: #050609 !important;
+}
+
+:global(section[data-sector-darkband-bg-only="true"] [class*="darkBandImage"]),
+:global(section[data-sector-darkband-bg-only="true"] [class*="darkBandImage"] img),
+.darkBand[data-sector-darkband-bg-only="true"] [class*="darkBandImage"],
+.darkBand[data-sector-darkband-bg-only="true"] [class*="darkBandImage"] img,
+.darkBand[data-sector-darkband-bg-only="true"] .darkBandImage,
+.darkBand[data-sector-darkband-bg-only="true"] .darkBandImage img {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+:global(section[data-sector-darkband-bg-only="true"] [class*="darkBandContent"]),
+.darkBand[data-sector-darkband-bg-only="true"] [class*="darkBandContent"],
+.darkBand[data-sector-darkband-bg-only="true"] .darkBandContent {
+  width: min(1180px, calc(100% - 40px)) !important;
+  margin: 0 auto !important;
+  padding: clamp(3.6rem, 6vw, 6rem) 0 !important;
+  background: transparent !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+@media (max-width: 900px) {
+  :global(section[data-sector-darkband-bg-only="true"]),
+  .darkBand[data-sector-darkband-bg-only="true"] {
+    min-height: 520px !important;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5,12,20,.56) 0%,
+        rgba(5,12,20,.34) 45%,
+        rgba(5,12,20,.74) 100%
+      ),
+      url("/images/operador/contactcenter-mobile.png") center center / cover no-repeat !important;
+
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(5,12,20,.56) 0%,
+        rgba(5,12,20,.34) 45%,
+        rgba(5,12,20,.74) 100%
+      ),
+      url("/images/operador/contactcenter-mobile.png") !important;
+
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  :global(section[data-sector-darkband-bg-only="true"] [class*="darkBandContent"]),
+  .darkBand[data-sector-darkband-bg-only="true"] [class*="darkBandContent"],
+  .darkBand[data-sector-darkband-bg-only="true"] .darkBandContent {
+    width: min(100% - 36px, 720px) !important;
+    padding: 3.4rem 0 !important;
+  }
+}
+/* === SECTORES DARKBAND BACKGROUND ONLY END === */
+
+
+/* === SECTORES DARKBAND MOBILE VISIBLE START === */
+/* Forzar darkBand visible en mobile.
+   La imagen queda como fondo de toda la sección, sin bloque duplicado.
+*/
+
+:global(section[data-sector-darkband-bg-only="true"]),
+.darkBand[data-sector-darkband-bg-only="true"] {
+  display: grid !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 900px) {
+  :global(section[data-sector-darkband-bg-only="true"]),
+  .darkBand[data-sector-darkband-bg-only="true"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    min-height: 520px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5,12,20,.56) 0%,
+        rgba(5,12,20,.34) 45%,
+        rgba(5,12,20,.74) 100%
+      ),
+      url("/images/operador/contactcenter-mobile.png") center center / cover no-repeat !important;
+
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(5,12,20,.56) 0%,
+        rgba(5,12,20,.34) 45%,
+        rgba(5,12,20,.74) 100%
+      ),
+      url("/images/operador/contactcenter-mobile.png") !important;
+
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-color: #050609 !important;
+  }
+
+  :global(section[data-sector-darkband-bg-only="true"] [class*="darkBandImage"]),
+  :global(section[data-sector-darkband-bg-only="true"] [class*="darkBandImage"] img),
+  .darkBand[data-sector-darkband-bg-only="true"] [class*="darkBandImage"],
+  .darkBand[data-sector-darkband-bg-only="true"] [class*="darkBandImage"] img {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  :global(section[data-sector-darkband-bg-only="true"] [class*="darkBandContent"]),
+  .darkBand[data-sector-darkband-bg-only="true"] [class*="darkBandContent"],
+  .darkBand[data-sector-darkband-bg-only="true"] .darkBandContent {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: min(100% - 36px, 720px) !important;
+    margin: 0 auto !important;
+    padding: 3.4rem 0 !important;
+    background: transparent !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+}
+/* === SECTORES DARKBAND MOBILE VISIBLE END === */
+
+
+/* === SECTORES HIDE DARKBAND STATS MOBILE START === */
+/* Oculta las tarjetas/stats del darkBand solo en mobile.
+   Desktop queda intacto.
+*/
+@media (max-width: 900px) {
+  .darkBand .stats,
+  :global(section[data-sector-darkband-bg-only="true"] [class*="stats"]),
+  .darkBand[data-sector-darkband-bg-only="true"] [class*="stats"] {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .darkBandContent {
+    padding-bottom: 3.2rem !important;
+  }
+}
+/* === SECTORES HIDE DARKBAND STATS MOBILE END === */
+
+/* === FINAL OVERRIDE PROCESS ONLY NUMBERS START === */
+/* Tablet + mobile:
+   Solo números en el proceso.
+   Sin círculo azul, sin íconos, sin flechas.
+*/
+@media (max-width: 1180px) {
+  .processGrid strong,
+  .processGrid article strong,
+  .page .processGrid strong,
+  .page .processGrid article strong {
+    all: unset !important;
+
+    display: inline !important;
+    position: static !important;
+
+    color: #07101a !important;
+    -webkit-text-fill-color: #07101a !important;
+
+    font-size: 1rem !important;
+    font-weight: 950 !important;
+    line-height: 1 !important;
+
+    background: none !important;
+    background-color: transparent !important;
+    background-image: none !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+
+    width: auto !important;
+    height: auto !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+
+    padding: 0 !important;
+    margin: 0 0 .55rem 0 !important;
+  }
+
+  .processGrid strong::before,
+  .processGrid strong::after,
+  .processGrid article strong::before,
+  .processGrid article strong::after,
+  .page .processGrid strong::before,
+  .page .processGrid strong::after,
+  .page .processGrid article strong::before,
+  .page .processGrid article strong::after {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .processGrid i,
+  .processGrid article i,
+  .page .processGrid i,
+  .page .processGrid article i {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    pointer-events: none !important;
+  }
+
+  .processGrid article::after,
+  .processGrid article:not(:last-child)::after,
+  .page .processGrid article::after,
+  .page .processGrid article:not(:last-child)::after {
+    content: none !important;
+    display: none !important;
+  }
+}
+/* === FINAL OVERRIDE PROCESS ONLY NUMBERS END === */
+
+
+/* === ACROSS HERO IMAGES VISIBLE FINAL START === */
+/* Corrige imágenes invisibles del hero.
+   Causa: z-index negativo mandaba la imagen detrás del fondo del hero.
+*/
+
+.hero {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background-color: #05070b !important;
+}
+
+.heroImage,
+.heroImageDesktop,
+.heroImageMobile,
+.page > .hero .heroImage,
+.page > .hero .heroImageDesktop,
+.page > .hero .heroImageMobile {
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+
+.heroOverlay,
+.page > .hero .heroOverlay {
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+
+.heroInner,
+.heroContent,
+.operationCard,
+.page > .hero .heroInner,
+.page > .hero .heroContent,
+.page > .hero .operationCard {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Desktop y tablet grande: mostrar desktop */
+@media (min-width: 901px) {
+  .heroImageDesktop,
+  .page > .hero .heroImageDesktop {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 0 !important;
+  }
+
+  .heroImageMobile,
+  .page > .hero .heroImageMobile {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+}
+
+/* Tablet/mobile: si querés usar mobile hasta 900px */
+@media (max-width: 900px) {
+  .heroImageDesktop,
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+
+  .heroImageMobile,
+  .page > .hero .heroImageMobile {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 0 !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+}
+/* === ACROSS HERO IMAGES VISIBLE FINAL END === */
+
+
+/* === ACROSS PROCESS SOLO NUMEROS GLOBAL FINAL START === */
+/* Proceso global limpio:
+   solo números en desktop, tablet y mobile.
+   Sin círculo azul, sin íconos y sin flechas.
+*/
+
+.processGrid::before,
+.page .processGrid::before {
+  display: none !important;
+  content: none !important;
+}
+
+.processGrid article::after,
+.processGrid article:not(:last-child)::after,
+.page .processGrid article::after,
+.page .processGrid article:not(:last-child)::after {
+  display: none !important;
+  content: none !important;
+}
+
+.processGrid i,
+.processGrid article i,
+.processGrid i svg,
+.processGrid article i svg,
+.page .processGrid i,
+.page .processGrid article i,
+.page .processGrid i svg,
+.page .processGrid article i svg {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  pointer-events: none !important;
+}
+
+.processGrid strong,
+.processGrid article strong,
+.page .processGrid strong,
+.page .processGrid article strong {
+  position: static !important;
+
+  display: inline !important;
+  place-items: unset !important;
+  align-items: unset !important;
+  justify-content: unset !important;
+
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+
+  margin: 0 0 .55rem 0 !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+  background-image: none !important;
+
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+
+  color: #07101a !important;
+  -webkit-text-fill-color: #07101a !important;
+
+  font-size: 1rem !important;
+  font-weight: 950 !important;
+  line-height: 1 !important;
+}
+
+.processGrid strong::before,
+.processGrid strong::after,
+.processGrid article strong::before,
+.processGrid article strong::after,
+.page .processGrid strong::before,
+.page .processGrid strong::after,
+.page .processGrid article strong::before,
+.page .processGrid article strong::after {
+  display: none !important;
+  content: none !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* También gana contra reglas específicas desktop/tablet viejas */
+@media (min-width: 901px) {
+  .processGrid strong,
+  .processGrid article strong,
+  .page .processGrid strong,
+  .page .processGrid article strong {
+    display: inline !important;
+    width: auto !important;
+    height: auto !important;
+    background: transparent !important;
+    background-image: none !important;
+    color: #07101a !important;
+    -webkit-text-fill-color: #07101a !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .processGrid i,
+  .processGrid article i,
+  .processGrid article::after,
+  .processGrid article:not(:last-child)::after {
+    display: none !important;
+    content: none !important;
+  }
+}
+
+@media (max-width: 1180px) {
+  .processGrid strong,
+  .processGrid article strong,
+  .page .processGrid strong,
+  .page .processGrid article strong {
+    display: inline !important;
+    width: auto !important;
+    height: auto !important;
+    background: transparent !important;
+    background-image: none !important;
+    color: #07101a !important;
+    -webkit-text-fill-color: #07101a !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .processGrid i,
+  .processGrid article i,
+  .processGrid article::after,
+  .processGrid article:not(:last-child)::after {
+    display: none !important;
+    content: none !important;
+  }
+}
+/* === ACROSS PROCESS SOLO NUMEROS GLOBAL FINAL END === */
+
