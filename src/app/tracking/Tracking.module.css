@@ -162,11 +162,6 @@
   background: #050609;
 }
 
-
-
-
-
-
 @media (max-width: 1020px) {
   .trackingShell {
     grid-template-columns: 1fr;
@@ -284,8 +279,6 @@
 }
 
 /* TRACKING HERO MEDIA REAL END */
-
-
 
 /* TRACKING - DELETE HELP CARD FINAL */
 .trackingShell {
