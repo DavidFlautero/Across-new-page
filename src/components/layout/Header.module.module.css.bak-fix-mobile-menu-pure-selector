@@ -3331,38 +3331,50 @@
 }
 /* === MOBILE MENU GOLD ARROWS ONLY END === */
 
-
-
 /* =====================================================
    MOBILE MENU - FIX ITEM ACTIVO / HOVER LEGIBLE
-   CSS MODULE SAFE
    ===================================================== */
 
 @media (max-width: 980px) {
-  .mobileMenu :global(a),
-  .mobileMenu :global(button),
-  .mobilePanel :global(a),
-  .mobilePanel :global(button),
-  .mobileSubmenu :global(a),
-  .mobileSubmenu :global(button) {
+  .mobileMenu a,
+  .mobileMenu button,
+  .mobilePanel a,
+  .mobilePanel button,
+  .mobileSubmenu a,
+  .mobileSubmenu button,
+  [class*="mobileMenu"] a,
+  [class*="mobileMenu"] button,
+  [class*="mobilePanel"] a,
+  [class*="mobilePanel"] button,
+  [class*="mobileSubmenu"] a,
+  [class*="mobileSubmenu"] button {
     color: #f4efe4 !important;
     -webkit-text-fill-color: #f4efe4 !important;
   }
 
-  .mobileMenu :global(a:hover),
-  .mobileMenu :global(button:hover),
-  .mobilePanel :global(a:hover),
-  .mobilePanel :global(button:hover),
-  .mobileSubmenu :global(a:hover),
-  .mobileSubmenu :global(button:hover) {
+  .mobileMenu a:hover,
+  .mobileMenu button:hover,
+  .mobilePanel a:hover,
+  .mobilePanel button:hover,
+  .mobileSubmenu a:hover,
+  .mobileSubmenu button:hover,
+  [class*="mobileMenu"] a:hover,
+  [class*="mobileMenu"] button:hover,
+  [class*="mobilePanel"] a:hover,
+  [class*="mobilePanel"] button:hover,
+  [class*="mobileSubmenu"] a:hover,
+  [class*="mobileSubmenu"] button:hover {
     background: rgba(255, 255, 255, .10) !important;
     color: #f4efe4 !important;
     -webkit-text-fill-color: #f4efe4 !important;
   }
 
-  .mobileMenu :global(a[aria-current="page"]),
-  .mobilePanel :global(a[aria-current="page"]),
-  .mobileSubmenu :global(a[aria-current="page"]) {
+  .mobileMenu a[aria-current="page"],
+  .mobilePanel a[aria-current="page"],
+  .mobileSubmenu a[aria-current="page"],
+  [class*="mobileMenu"] a[aria-current="page"],
+  [class*="mobilePanel"] a[aria-current="page"],
+  [class*="mobileSubmenu"] a[aria-current="page"] {
     background:
       linear-gradient(135deg, rgba(7, 17, 29, .96), rgba(18, 42, 60, .92)) !important;
     color: #f4efe4 !important;
@@ -3370,9 +3382,12 @@
     border-color: rgba(214, 192, 141, .35) !important;
   }
 
-  .mobileMenu :global(a[aria-current="page"] *),
-  .mobilePanel :global(a[aria-current="page"] *),
-  .mobileSubmenu :global(a[aria-current="page"] *) {
+  .mobileMenu a[aria-current="page"] *,
+  .mobilePanel a[aria-current="page"] *,
+  .mobileSubmenu a[aria-current="page"] *,
+  [class*="mobileMenu"] a[aria-current="page"] *,
+  [class*="mobilePanel"] a[aria-current="page"] *,
+  [class*="mobileSubmenu"] a[aria-current="page"] * {
     color: #f4efe4 !important;
     -webkit-text-fill-color: #f4efe4 !important;
   }

@@ -958,7 +958,7 @@ export default function EnergiasRenovablesSectorPage() {
         <section className={styles.darkBand} data-mobile-hide-after-cert="true">
           <div className={styles.darkBandImage}>
             <Image
-              src="/images/sectores/energiasrenovables.png"
+             src="/images/operador/contactcenter.png"
               alt={t.bandTitle}
               fill
               sizes="(max-width: 900px) 100vw, 42vw"
