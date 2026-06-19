@@ -1018,7 +1018,7 @@ export default function TemperaturaControladaPage() {
           <div className={styles.finalImage}>
             <Image
               src="/images/o.png"
-              alt={t.finalitle}
+              alt={t.finalTitle}
               fill
               sizes="(max-width: 900px) 100vw, 44vw"
             />
