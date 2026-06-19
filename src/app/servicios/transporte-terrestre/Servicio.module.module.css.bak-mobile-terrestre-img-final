@@ -10647,31 +10647,3 @@
   }
 }
 /* === ACROSS PROCESS SOLO NUMEROS GLOBAL FINAL END === */
-
-
-/* TRANSPORTE TERRESTRE - HERO IMAGE MOBILE FINAL */
-@media (max-width: 900px) {
-  .heroImageDesktop {
-    display: none !important;
-  }
-
-  .heroImageMobile {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-    z-index: 0 !important;
-  }
-}
-
-@media (min-width: 901px) {
-  .heroImageDesktop {
-    display: block !important;
-  }
-
-  .heroImageMobile {
-    display: none !important;
-  }
-}
-

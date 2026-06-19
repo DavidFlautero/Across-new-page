@@ -799,7 +799,7 @@ export default function EnergiasRenovablesSectorPage() {
           />
 
           <Image
-            src="/images/sectores/energiasrenovables.png"
+            src="/images/sectores/energiasrenovables2.mp4"
             alt={t.heroTitle}
             fill
             priority

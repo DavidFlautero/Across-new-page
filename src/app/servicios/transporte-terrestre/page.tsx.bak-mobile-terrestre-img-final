@@ -571,7 +571,7 @@ export default function TransporteTerrestrePage() {
           />
 
           <Image
-            src="/images/transporte-terrestre-mobile/transporte-terrestre-mobile.png"
+            src="/images/transporte-terrestre-mobile/trannsporte-terrestreone.png"
             alt={t.heroTitle}
             fill
             priority
