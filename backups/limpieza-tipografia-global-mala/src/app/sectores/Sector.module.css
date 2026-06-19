@@ -1,0 +1,71 @@
+@media (max-width: 900px) {
+  .darkBand[data-sector-darkband-bg-only="true"],
+  .darkBand[data-sector-darkband-operator="true"] {
+    min-height: auto !important;
+    height: auto !important;
+    padding: 4.5rem 24px 4rem !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .darkBand[data-sector-darkband-bg-only="true"] h2,
+  .darkBand[data-sector-darkband-operator="true"] h2 {
+    max-width: 680px !important;
+    font-size: clamp(2.3rem, 8vw, 4rem) !important;
+    line-height: .94 !important;
+    letter-spacing: -.065em !important;
+  }
+
+  .darkBand[data-sector-darkband-bg-only="true"] p,
+  .darkBand[data-sector-darkband-operator="true"] p {
+    max-width: 620px !important;
+    font-size: .98rem !important;
+    line-height: 1.58 !important;
+  }
+
+  .darkBand[data-sector-darkband-bg-only="true"] + footer,
+  .darkBand[data-sector-darkband-operator="true"] + footer {
+    margin-top: 0 !important;
+  }
+}
+
+
+/* ACROSS GLOBAL HOME DESKTOP HERO TYPO START */
+
+/*
+  Barrido global.
+  Se eliminó Tracking como referencia.
+  Se copia el hero desktop de la Home.
+  Solo títulos: h1/h2/title/heading/headline.
+*/
+
+@media (min-width: 901px) {
+.darkBand h1,
+.darkBand h2,
+.hero h1,
+.heroContent h1,
+.heroInner h1,
+.heroTitle,
+.sectionHead h2,
+.formHeader h2,
+.contactTitle,
+.downloadCopy h2,
+.helpCard h2,
+.page h1,
+.page h2,
+:global(.acrossPageHero h1),
+:global(section[class*='hero'] h1),
+:global(section[class*='Hero'] h1),
+:global([data-quienes-hero='true'] h1),
+:global([data-service-hero-home='true'] h1),
+:global([data-cotizacion-photo-hero='true'] h1) {
+  font-family: var(--font-tight), system-ui, sans-serif !important;
+  font-size: clamp(2.6rem, 5.5vw, 5.6rem) !important;
+  font-weight: 950 !important;
+  line-height: .92 !important;
+  letter-spacing: -.065em !important;
+}
+}
+
+/* ACROSS GLOBAL HOME DESKTOP HERO TYPO END */
+

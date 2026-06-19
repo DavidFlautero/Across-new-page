@@ -1,60 +1,74 @@
 .page {
   min-height: 100vh;
   background: #f4f1eb;
-  color: #111;
+  color: #080b10;
 }
 
 .hero {
   position: relative;
-  min-height: 62vh;
+  min-height: clamp(590px, calc(100svh - 28px), 760px);
+  padding: clamp(6.8rem, 9vh, 8rem) 6vw clamp(3.2rem, 5vh, 4.6rem);
   display: flex;
   align-items: center;
-  padding: 10rem 5vw 8rem;
   overflow: hidden;
+  color: #fff;
   background:
-    linear-gradient(90deg, rgba(3, 4, 8, 0.94), rgba(3, 4, 8, 0.62), rgba(44, 4, 18, 0.24)),
-    url("/images/hero/contactoimagen.png") center / cover no-repeat;
+    radial-gradient(circle at 72% 42%, rgba(237, 27, 47, .13), transparent 28rem),
+    linear-gradient(90deg, rgba(2,4,8,.97) 0%, rgba(2,4,8,.86) 34%, rgba(2,4,8,.50) 62%, rgba(2,4,8,.30) 100%),
+    linear-gradient(180deg, rgba(0,0,0,.08) 0%, rgba(0,0,0,.34) 58%, rgba(0,0,0,.72) 100%),
+    url("/images/traking/mapahero-deskto.png") center center / cover no-repeat;
 }
 
 .heroOverlay {
   position: absolute;
   inset: 0;
+  z-index: 1;
+  pointer-events: none;
   background:
-    radial-gradient(circle at 82% 20%, rgba(225, 19, 67, 0.26), transparent 32rem),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.72));
+    radial-gradient(circle at 72% 42%, rgba(237, 27, 47, .10), transparent 28rem),
+    linear-gradient(90deg, rgba(2,4,8,.80) 0%, rgba(2,4,8,.62) 42%, rgba(2,4,8,.22) 100%);
 }
 
 .heroContent {
   position: relative;
   z-index: 2;
-  width: min(920px, 100%);
+  width: min(820px, 100%);
   color: #fff;
 }
 
 .heroContent > span {
-  color: #ff405e;
-  font-size: 0.75rem;
-  font-weight: 900;
-  letter-spacing: 0.26em;
+  display: block;
+  margin-bottom: 1rem;
+  color: #ed1b2f;
+  font-size: .78rem;
+  font-weight: 950;
+  letter-spacing: .20em;
   text-transform: uppercase;
 }
 
 .heroContent h1 {
-  max-width: 860px;
-  margin: 1rem 0 0;
+  max-width: 820px;
+  margin: 0;
+  color: #fff;
   font-family: var(--font-tight), system-ui, sans-serif;
-  font-size: clamp(3rem, 6vw, 6.8rem);
-  font-weight: 380;
-  line-height: 0.96;
-  letter-spacing: -0.05em;
+  font-size: clamp(3.25rem, 5vw, 5.9rem);
+  font-weight: 950;
+  line-height: .9;
+  letter-spacing: -.045em;
+}
+
+.heroContent h1::after {
+  content: ".";
+  color: #ed1b2f;
 }
 
 .heroContent > p {
   max-width: 650px;
   margin: 1.35rem 0 0;
-  color: rgba(255, 255, 255, 0.76);
-  font-size: 1.05rem;
-  line-height: 1.7;
+  color: rgba(255,255,255,.84);
+  font-size: clamp(1rem, 1.08vw, 1.13rem);
+  font-weight: 400;
+  line-height: 1.68;
 }
 
 .searchBox {
@@ -62,25 +76,25 @@
   width: min(760px, 100%);
   padding: 1rem;
   border-radius: 26px;
-  background: rgba(255, 255, 255, 0.11);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255,255,255,.11);
+  border: 1px solid rgba(255,255,255,.16);
   backdrop-filter: blur(18px);
 }
 
 .searchBox label {
   display: grid;
-  gap: 0.65rem;
-  color: rgba(255, 255, 255, 0.86);
-  font-size: 0.78rem;
+  gap: .65rem;
+  color: rgba(255,255,255,.86);
+  font-size: .78rem;
   font-weight: 900;
-  letter-spacing: 0.08em;
+  letter-spacing: .08em;
   text-transform: uppercase;
 }
 
 .searchBox label > div {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 0.7rem;
+  gap: .7rem;
 }
 
 .searchBox input {
@@ -88,7 +102,7 @@
   border: 0;
   border-radius: 18px;
   padding: 0 1rem;
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255,255,255,.94);
   color: #111;
   font: inherit;
   outline: none;
@@ -96,7 +110,7 @@
 }
 
 .searchBox input:focus {
-  box-shadow: 0 0 0 4px rgba(225, 19, 67, 0.22);
+  box-shadow: 0 0 0 4px rgba(225, 19, 67, .22);
 }
 
 .searchBox button {
@@ -107,19 +121,19 @@
   cursor: pointer;
   color: #fff;
   font-weight: 900;
-  background: linear-gradient(135deg, #9d0b28, #e11343f2);
-  box-shadow: 0 20px 48px rgba(140, 8, 30, 0.32);
+  background: linear-gradient(135deg, #9d0b28, #e11343);
+  box-shadow: 0 20px 48px rgba(140, 8, 30, .32);
 }
 
 .searchBox p {
-  margin: 0.75rem 0 0;
+  margin: .75rem 0 0;
   color: #fff;
   font-weight: 800;
 }
 
 .trackingShell {
-  width: min(1420px, calc(100% - 7vw));
-  margin: -5rem auto 6rem;
+  width: min(1240px, calc(100% - 48px));
+  margin: clamp(4rem, 6vw, 6rem) auto clamp(5rem, 7vw, 7rem);
   position: relative;
   z-index: 4;
   display: grid;
@@ -129,85 +143,58 @@
 }
 
 .mapCard {
-  min-height: 560px;
-  border-radius: 34px;
+  position: relative;
+  min-height: 620px;
   overflow: hidden;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 38px 110px rgba(20, 16, 12, 0.22);
+  border-radius: 0;
+  background: #050609;
+  border: 1px solid rgba(8,11,16,.10);
+  box-shadow:
+    0 32px 100px rgba(8,11,16,.18),
+    inset 0 1px 0 rgba(255,255,255,.08);
 }
 
 .mapCard iframe {
   display: block;
   width: 100%;
-  height: 620px;
+  height: 660px;
   border: 0;
+  background: #050609;
 }
 
-.helpCard {
-  padding: 1.5rem;
-  border-radius: 30px;
-  background:
-    radial-gradient(circle at 100% 0%, rgba(225, 19, 67, 0.11), transparent 16rem),
-    #fff;
-  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.12);
-  border: 1px solid rgba(0, 0, 0, 0.07);
-}
 
-.helpCard span {
-  color: #e11343f2;
-  font-size: 0.72rem;
-  font-weight: 950;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
 
-.helpCard h2 {
-  margin: 0.8rem 0 0;
-  font-size: clamp(1.6rem, 2.4vw, 2.25rem);
-  line-height: 1;
-  letter-spacing: -0.045em;
-}
 
-.helpCard p {
-  margin: 1rem 0 0;
-  color: rgba(0, 0, 0, 0.62);
-  line-height: 1.6;
-}
 
-.helpCard a {
-  min-height: 48px;
-  margin-top: 1.2rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  padding: 0 1.1rem;
-  color: #fff;
-  font-weight: 900;
-  text-decoration: none;
-  background: #e11343f2;
-}
 
 @media (max-width: 1020px) {
   .trackingShell {
     grid-template-columns: 1fr;
   }
-
-  .helpCard {
-    order: -1;
-  }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 760px) {
   .hero {
-    min-height: 68vh;
-    padding: 8rem 1rem 7rem;
+    min-height: auto;
+    padding: 5.4rem 22px 2.7rem;
+    display: block;
+    background:
+      radial-gradient(circle at 72% 42%, rgba(237, 27, 47, .13), transparent 22rem),
+      linear-gradient(180deg, rgba(2,4,8,.92) 0%, rgba(2,4,8,.68) 50%, rgba(2,4,8,.88) 100%),
+      url("/images/traking/mpaa-mobile.png") center center / cover no-repeat;
   }
 
   .heroContent h1 {
-    font-size: clamp(2.55rem, 13vw, 4.2rem);
-    letter-spacing: -0.038em;
+    max-width: 420px;
+    font-size: clamp(2.18rem, 9.8vw, 3.1rem);
+    line-height: .95;
+    letter-spacing: -.04em;
+  }
+
+  .heroContent > p {
+    max-width: 420px;
+    font-size: .9rem;
+    line-height: 1.52;
   }
 
   .searchBox label > div {
@@ -215,389 +202,105 @@
   }
 
   .trackingShell {
-    width: calc(100% - 1.2rem);
-    margin-top: -3.8rem;
+    width: calc(100% - 36px);
+    margin: 3.2rem auto 5rem;
   }
 
   .mapCard {
-    min-height: 500px;
-    border-radius: 24px;
+    min-height: 560px;
+  }
+
+  .mapCard iframe {
+    height: 600px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero {
+    padding: 5rem 18px 2.4rem;
+  }
+
+  .heroContent h1 {
+    font-size: clamp(1.9rem, 10vw, 2.4rem);
+    letter-spacing: -.035em;
+  }
+
+  .heroContent > p {
+    font-size: .82rem;
+  }
+
+  .trackingShell {
+    width: calc(100% - 28px);
   }
 
   .mapCard iframe {
     height: 560px;
   }
-
-  .helpCard {
-    border-radius: 24px;
-  }
 }
 
-/* =====================================================
-   TRACKING - MAPA VISUAL ENTERPRISE SIN ROMPER TRACKING
-   Mantiene el iframe / tracking existente.
-   Solo cambia fondo, hero y presentación.
-   ===================================================== */
 
-.page {
-  background: #f4f1eb !important;
-  color: #080b10 !important;
-}
+/* TRACKING HERO MEDIA REAL START */
 
-/* Hero con mapa nuevo */
 .hero {
   position: relative !important;
-  min-height: clamp(590px, calc(100svh - 28px), 760px) !important;
-  padding: clamp(6.8rem, 9vh, 8rem) 6vw clamp(3.2rem, 5vh, 4.6rem) !important;
-  display: flex !important;
-  align-items: center !important;
-  background:
-    radial-gradient(circle at 72% 42%, rgba(237, 27, 47, .13), transparent 28rem),
-    linear-gradient(90deg, rgba(2,4,8,.97) 0%, rgba(2,4,8,.86) 34%, rgba(2,4,8,.50) 62%, rgba(2,4,8,.30) 100%),
-    linear-gradient(180deg, rgba(0,0,0,.08) 0%, rgba(0,0,0,.34) 58%, rgba(0,0,0,.72) 100%),
-    url("/images/traking/mapahero-deskto.png") center center / cover no-repeat !important;
-  color: #fff !important;
   overflow: hidden !important;
+  background: #050609 !important;
 }
 
-.hero::before {
-  display: none !important;
+.heroMedia {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  background: url("/images/traking/mapahero-deskto.png") center center / cover no-repeat !important;
+  transform: scale(1.01) !important;
 }
 
 .heroOverlay {
   position: absolute !important;
   inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
   background:
-    radial-gradient(circle at 72% 42%, rgba(237, 27, 47, .10), transparent 28rem),
-    linear-gradient(90deg, rgba(2,4,8,.80) 0%, rgba(2,4,8,.62) 42%, rgba(2,4,8,.22) 100%) !important;
+    linear-gradient(90deg, rgba(2,4,8,.88) 0%, rgba(2,4,8,.62) 42%, rgba(2,4,8,.22) 100%),
+    linear-gradient(180deg, rgba(0,0,0,.06) 0%, rgba(0,0,0,.42) 100%) !important;
 }
 
 .heroContent {
   position: relative !important;
   z-index: 2 !important;
-  width: min(820px, 100%) !important;
 }
-
-.heroContent span {
-  display: block !important;
-  margin-bottom: 1rem !important;
-  color: #ed1b2f !important;
-  font-size: .78rem !important;
-  font-weight: 950 !important;
-  letter-spacing: .20em !important;
-  text-transform: uppercase !important;
-}
-
-.heroContent h1 {
-  max-width: 820px !important;
-  margin: 0 !important;
-  color: #fff !important;
-  font-size: clamp(3.25rem, 5vw, 5.9rem) !important;
-  font-weight: 950 !important;
-  line-height: .9 !important;
-  letter-spacing: -.065em !important;
-}
-
-.heroContent h1::after {
-  content: "." !important;
-  color: #ed1b2f !important;
-}
-
-.heroContent p {
-  max-width: 650px !important;
-  margin: 1.35rem 0 0 !important;
-  color: rgba(255,255,255,.84) !important;
-  font-size: clamp(1rem, 1.08vw, 1.13rem) !important;
-  line-height: 1.68 !important;
-}
-
-/* Contenedor del tracking real */
-.trackingShell {
-  width: min(1240px, calc(100% - 48px)) !important;
-  margin: clamp(4rem, 6vw, 6rem) auto clamp(5rem, 7vw, 7rem) !important;
-}
-
-/* El iframe/panel existente queda vivo, solo lo vestimos */
-.mapCard {
-  position: relative !important;
-  min-height: 620px !important;
-  overflow: hidden !important;
-  border-radius: 0 !important;
-  background:
-    radial-gradient(circle at 72% 42%, rgba(237, 27, 47, .10), transparent 28rem),
-    #050609 !important;
-  border: 1px solid rgba(8,11,16,.10) !important;
-  box-shadow:
-    0 32px 100px rgba(8,11,16,.18),
-    inset 0 1px 0 rgba(255,255,255,.08) !important;
-}
-
-.mapCard iframe {
-  display: block !important;
-  width: 100% !important;
-  height: 660px !important;
-  border: 0 !important;
-  background: #050609 !important;
-}
-
-/* Card inferior */
-.noticeCard {
-  border-radius: 0 !important;
-  background:
-    radial-gradient(circle at 100% 0%, rgba(237,27,47,.08), transparent 18rem),
-    rgba(255,255,255,.86) !important;
-  border: 1px solid rgba(8,11,16,.08) !important;
-  box-shadow:
-    0 18px 60px rgba(8,11,16,.08),
-    inset 0 1px 0 rgba(255,255,255,.82) !important;
-}
-
-.noticeCard a {
-  border-radius: 0 !important;
-  background: #ed1b2f !important;
-}
-
-/* Mobile usa mapa mobile */
-@media (max-width: 760px) {
-  .hero {
-    min-height: auto !important;
-    padding: 5.4rem 22px 2.7rem !important;
-    display: block !important;
-    background:
-      radial-gradient(circle at 72% 42%, rgba(237, 27, 47, .13), transparent 22rem),
-      linear-gradient(180deg, rgba(2,4,8,.92) 0%, rgba(2,4,8,.68) 50%, rgba(2,4,8,.88) 100%),
-      url("/images/traking/mpaa-mobile.png") center center / cover no-repeat !important;
-  }
-
-  .heroContent h1 {
-    max-width: 420px !important;
-    font-size: clamp(2.18rem, 9.8vw, 3.1rem) !important;
-    line-height: .95 !important;
-  }
-
-  .heroContent p {
-    max-width: 420px !important;
-    font-size: .9rem !important;
-    line-height: 1.52 !important;
-  }
-
-  .trackingShell {
-    width: calc(100% - 36px) !important;
-    margin: 3.2rem auto 5rem !important;
-  }
-
-  .mapCard {
-    min-height: 560px !important;
-  }
-
-  .mapCard iframe {
-    height: 600px !important;
-  }
-
-  .noticeCard {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-  }
-
-  .noticeCard a {
-    width: 100% !important;
-    border-radius: 999px !important;
-  }
-}
-
-@media (max-width: 380px) {
-  .hero {
-    padding: 5rem 18px 2.4rem !important;
-  }
-
-  .heroContent h1 {
-    font-size: clamp(1.9rem, 10vw, 2.4rem) !important;
-  }
-
-  .heroContent p {
-    font-size: .82rem !important;
-  }
-
-  .trackingShell {
-    width: calc(100% - 28px) !important;
-  }
-
-  .mapCard iframe {
-    height: 560px !important;
-  }
-}
-
-
-/* =====================================================
-   TRACKING - TYPO GLOBAL MATCH
-   Igualar tamaños, pesos y ritmo visual al sistema global.
-   ===================================================== */
-
-.heroContent span {
-  display: block !important;
-  margin-bottom: 1rem !important;
-  color: #ed1b2f !important;
-  font-size: .78rem !important;
-  font-weight: 950 !important;
-  letter-spacing: .20em !important;
-  text-transform: uppercase !important;
-}
-
-.heroContent h1 {
-  max-width: 820px !important;
-  margin: 0 !important;
-  color: #fff !important;
-  font-family: var(--font-tight), system-ui, sans-serif !important;
-  font-size: clamp(3.25rem, 5vw, 5.9rem) !important;
-  font-weight: 950 !important;
-  line-height: .9 !important;
-  letter-spacing: -.065em !important;
-}
-
-.heroContent h1::after {
-  content: "." !important;
-  color: #ed1b2f !important;
-}
-
-.heroContent p {
-  max-width: 650px !important;
-  margin: 1.35rem 0 0 !important;
-  color: rgba(255,255,255,.84) !important;
-  font-size: clamp(1rem, 1.08vw, 1.13rem) !important;
-  font-weight: 400 !important;
-  line-height: 1.68 !important;
-  letter-spacing: 0 !important;
-}
-
-/* Botones igual al sistema */
-.noticeCard a,
-.heroContent a,
-.heroActions a {
-  font-family: inherit !important;
-  font-size: .76rem !important;
-  font-weight: 950 !important;
-  letter-spacing: .04em !important;
-  text-transform: uppercase !important;
-}
-
-/* Paneles internos */
-.noticeCard p {
-  font-size: .98rem !important;
-  line-height: 1.55 !important;
-  font-weight: 750 !important;
-}
-
-/* Desktop bajo */
-@media (min-width: 901px) and (max-height: 700px) {
-  .heroContent h1 {
-    font-size: clamp(2.8rem, 4.7vw, 4.5rem) !important;
-  }
-
-  .heroContent p {
-    font-size: .94rem !important;
-    line-height: 1.5 !important;
-  }
-}
-
-/* Mobile */
-@media (max-width: 760px) {
-  .heroContent h1 {
-    max-width: 420px !important;
-    font-size: clamp(2.18rem, 9.8vw, 3.1rem) !important;
-    line-height: .95 !important;
-    letter-spacing: -.055em !important;
-  }
-
-  .heroContent p {
-    max-width: 420px !important;
-    font-size: .9rem !important;
-    line-height: 1.52 !important;
-  }
-}
-
-/* iPhone SE */
-@media (max-width: 380px) {
-  .heroContent h1 {
-    font-size: clamp(1.9rem, 10vw, 2.4rem) !important;
-  }
-
-  .heroContent p {
-    font-size: .82rem !important;
-  }
-}
-
-
-/* === TRACKING HERO - aire sutil entre letras del título === */
-.heroContent h1 {
-  letter-spacing: -.045em !important;
-}
-
-/* En mobile menos aire para que no se rompan las líneas */
-@media (max-width: 760px) {
-  .heroContent h1 {
-    letter-spacing: -.04em !important;
-  }
-}
-
-@media (max-width: 380px) {
-  .heroContent h1 {
-    letter-spacing: -.035em !important;
-  }
-}
-
-/* =====================================================
-   HERO IMAGE STARTS AT TOP UNDER HEADER
-   La imagen del hero empieza desde top:0.
-   El header queda encima. El padding solo mueve el texto, no la imagen.
-   ===================================================== */
 
 @media (max-width: 760px) {
-  .hero {
-    position: relative !important;
-    overflow: hidden !important;
-    isolation: isolate !important;
-    background: #050609 !important;
-  }
-
-  .heroImage,
-  .heroImageDesktop,
-  .heroImageMobile {
-    position: absolute !important;
-    inset: 0 !important;
-
-    width: 100% !important;
-    height: 100% !important;
-
-    object-fit: cover !important;
-    object-position: center top !important;
-
-    z-index: 0 !important;
-    transform: none !important;
-    translate: none !important;
-  }
-
-  .heroImageDesktop {
-    display: none !important;
-  }
-
-  .heroImageMobile {
-    display: block !important;
+  .heroMedia {
+    background-image: url("/images/traking/mpaa-mobile.png") !important;
+    background-position: center top !important;
   }
 
   .heroOverlay {
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 1 !important;
-    pointer-events: none !important;
-  }
-
-  .heroInner,
-  .heroContent,
-  .actions {
-    position: relative !important;
-    z-index: 2 !important;
+    background:
+      linear-gradient(180deg, rgba(2,4,8,.58) 0%, rgba(2,4,8,.34) 46%, rgba(2,4,8,.82) 100%) !important;
   }
 }
 
-/* END HERO IMAGE STARTS AT TOP UNDER HEADER */
+/* TRACKING HERO MEDIA REAL END */
 
+
+
+/* TRACKING - DELETE HELP CARD FINAL */
+.trackingShell {
+  grid-template-columns: 1fr !important;
+  width: min(1240px, calc(100% - 48px)) !important;
+}
+
+@media (max-width: 760px) {
+  .trackingShell {
+    width: calc(100% - 36px) !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .trackingShell {
+    width: calc(100% - 28px) !important;
+  }
+}

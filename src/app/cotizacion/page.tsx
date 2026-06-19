@@ -102,7 +102,6 @@ function getCountryOptions(locale: Locale) {
 
 function getCountryCodeFromValue(value: string, countryOptions: Array<{ id: string; label: string }>) {
   const normalized = value.trim().toLowerCase();
-
   return (
     countryOptions.find(
       (country) =>
@@ -1058,7 +1057,11 @@ export default function CotizacionPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={styles.hero}>
+        <section className={styles.hero}
+        data-cotizacion-hero="true"
+      
+        data-cotizacion-photo-hero="true"
+      >
           <div className={styles.heroOverlay} />
           <div className={styles.heroContent}>
             <span>{t.heroBadge}</span>

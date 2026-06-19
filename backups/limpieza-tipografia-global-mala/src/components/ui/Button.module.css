@@ -1,0 +1,119 @@
+.button {
+  display: inline-flex;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding-inline: 1.35rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  transition:
+    transform var(--transition-base),
+    border-color var(--transition-base),
+    background var(--transition-base),
+    color var(--transition-base);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.primary {
+  background: var(--color-accent);
+  color: #080808;
+}
+
+.secondary {
+  border: 1px solid var(--color-border-strong);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--color-text);
+  backdrop-filter: blur(18px);
+}
+
+.ghost {
+  color: var(--color-text-soft);
+}
+
+@media (max-width: 720px) {
+  .button {
+    width: 100%;
+  }
+}
+
+/* Premium CTA refinement */
+.root,
+.button {
+  font-family: var(--font-ui), system-ui, sans-serif;
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease,
+    border-color .18s ease,
+    background .18s ease;
+}
+
+.root:hover,
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 22px 60px rgba(0,0,0,.28),
+    0 0 34px rgba(200,16,46,.18);
+}
+
+/* Premium CTA refinement */
+.root,
+.button {
+  font-family: var(--font-ui), system-ui, sans-serif;
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease,
+    border-color .18s ease,
+    background .18s ease;
+}
+
+.root:hover,
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 22px 60px rgba(0,0,0,.28),
+    0 0 34px rgba(200,16,46,.18);
+}
+
+
+/* ACROSS GLOBAL HOME DESKTOP HERO TYPO START */
+
+/*
+  Barrido global.
+  Se eliminó Tracking como referencia.
+  Se copia el hero desktop de la Home.
+  Solo títulos: h1/h2/title/heading/headline.
+*/
+
+@media (min-width: 901px) {
+.hero h1,
+.heroContent h1,
+.heroInner h1,
+.heroTitle,
+.sectionHead h2,
+.formHeader h2,
+.contactTitle,
+.downloadCopy h2,
+.helpCard h2,
+.page h1,
+.page h2,
+:global(.acrossPageHero h1),
+:global(section[class*='hero'] h1),
+:global(section[class*='Hero'] h1),
+:global([data-quienes-hero='true'] h1),
+:global([data-service-hero-home='true'] h1),
+:global([data-cotizacion-photo-hero='true'] h1) {
+  font-family: var(--font-tight), system-ui, sans-serif !important;
+  font-size: clamp(2.6rem, 5.5vw, 5.6rem) !important;
+  font-weight: 950 !important;
+  line-height: .92 !important;
+  letter-spacing: -.065em !important;
+}
+}
+
+/* ACROSS GLOBAL HOME DESKTOP HERO TYPO END */
+

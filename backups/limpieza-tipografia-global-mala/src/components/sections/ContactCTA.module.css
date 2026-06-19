@@ -1,0 +1,83 @@
+.section {
+  padding-block: clamp(5rem, 9vw, 9rem);
+  background:
+    linear-gradient(rgba(3,5,11,0.78), rgba(3,5,11,0.88)),
+    url("https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2200&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  text-align: center;
+}
+
+.container p {
+  color: var(--color-accent);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.container h2 {
+  max-width: 70rem;
+  margin: 1rem auto 0;
+  color: #fff;
+  font-size: clamp(2.7rem, 6vw, 6.8rem);
+  line-height: 0.95;
+  letter-spacing: -0.08em;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2.4rem;
+}
+
+@media (max-width: 720px) {
+  .actions {
+    flex-direction: column;
+  }
+}
+
+
+/* ACROSS GLOBAL HOME DESKTOP HERO TYPO START */
+
+/*
+  Barrido global.
+  Se eliminó Tracking como referencia.
+  Se copia el hero desktop de la Home.
+  Solo títulos: h1/h2/title/heading/headline.
+*/
+
+@media (min-width: 901px) {
+.section h1,
+.section h2,
+.hero h1,
+.heroContent h1,
+.heroInner h1,
+.heroTitle,
+.sectionHead h2,
+.formHeader h2,
+.contactTitle,
+.downloadCopy h2,
+.helpCard h2,
+.page h1,
+.page h2,
+:global(.acrossPageHero h1),
+:global(section[class*='hero'] h1),
+:global(section[class*='Hero'] h1),
+:global([data-quienes-hero='true'] h1),
+:global([data-service-hero-home='true'] h1),
+:global([data-cotizacion-photo-hero='true'] h1) {
+  font-family: var(--font-tight), system-ui, sans-serif !important;
+  font-size: clamp(2.6rem, 5.5vw, 5.6rem) !important;
+  font-weight: 950 !important;
+  line-height: .92 !important;
+  letter-spacing: -.065em !important;
+}
+}
+
+/* ACROSS GLOBAL HOME DESKTOP HERO TYPO END */
+

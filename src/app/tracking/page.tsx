@@ -113,6 +113,7 @@ export default function TrackingPage() {
 
       <main>
         <section className={`${styles.hero} acrossPageHero`}>
+          <div className={styles.heroMedia} />
           <div className={styles.heroOverlay} />
           <div className={styles.heroContent}>
             <span>{t.badge}</span>
@@ -149,13 +150,6 @@ export default function TrackingPage() {
               allow="geolocation"
             />
           </div>
-
-          <aside className={styles.helpCard}>
-            <span>Across Logistics</span>
-            <h2>{t.helpTitle}</h2>
-            <p>{t.helpText}</p>
-            <a href="/contacto">{t.contact}</a>
-          </aside>
         </section>
       </main>
 

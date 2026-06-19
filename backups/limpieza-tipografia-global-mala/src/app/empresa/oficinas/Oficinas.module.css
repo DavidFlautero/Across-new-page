@@ -1,0 +1,519 @@
+.content {
+  background: #f4f1eb;
+  color: #090b10;
+  overflow: hidden;
+}
+
+.officesSection {
+  width: min(1180px, calc(100% - 40px));
+  margin: clamp(4.6rem, 7vw, 7rem) auto;
+}
+
+.sectionHead {
+  margin-bottom: clamp(2rem, 3vw, 3rem);
+}
+
+.sectionHead span {
+  display: inline-flex;
+  margin-bottom: 1rem;
+  color: #b80d2f;
+  font-size: .78rem;
+  font-weight: 950;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.sectionHead h2 {
+  max-width: 980px;
+  margin: 0;
+  color: #080b10;
+  font-size: clamp(2.8rem, 5vw, 5.4rem);
+  line-height: .9;
+  letter-spacing: -.07em;
+  font-weight: 950;
+  text-wrap: balance;
+}
+
+.sectionHead p {
+  max-width: 760px;
+  margin: 1.25rem 0 0;
+  color: rgba(8, 11, 16, .68);
+  font-size: clamp(1rem, 1.12vw, 1.12rem);
+  line-height: 1.7;
+}
+
+.officesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.officeCard {
+  min-height: 320px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  border: 1px solid rgba(8, 11, 16, .28);
+  background: #101216;
+  box-shadow:
+    0 24px 60px rgba(8, 11, 16, .12),
+    inset 0 1px 0 rgba(255,255,255,.08);
+  isolation: isolate;
+}
+
+.officeImage {
+  object-fit: cover;
+  transform: scale(1.02);
+  filter: brightness(.8) contrast(1.08) saturate(1.08);
+  transition: transform .45s ease, filter .45s ease;
+}
+
+.officeCard:hover .officeImage {
+  transform: scale(1.07);
+  filter: brightness(.9) contrast(1.1) saturate(1.1);
+}
+
+.officeOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(5,6,9,.05) 0%, rgba(5,6,9,.54) 42%, rgba(5,6,9,.9) 100%),
+    radial-gradient(circle at 20% 0%, rgba(215, 180, 106, .2), transparent 16rem);
+}
+
+.officeInfo {
+  position: absolute;
+  left: 1.35rem;
+  right: 1.35rem;
+  bottom: 1.25rem;
+  z-index: 2;
+  color: #fff;
+}
+
+.officeInfo span {
+  display: inline-flex;
+  margin-bottom: .55rem;
+  color: #d7b46a;
+  font-size: .72rem;
+  font-weight: 950;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.officeInfo h3 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.3rem, 4vw, 4.2rem);
+  line-height: .86;
+  letter-spacing: -.075em;
+  font-weight: 950;
+  text-wrap: balance;
+  text-shadow: 0 14px 42px rgba(0,0,0,.42);
+}
+
+.officeInfo p {
+  max-width: 430px;
+  margin: .95rem 0 0;
+  color: rgba(255,255,255,.86);
+  font-size: .82rem;
+  line-height: 1.45;
+  font-weight: 650;
+  text-shadow: 0 8px 26px rgba(0,0,0,.38);
+}
+
+.officeActions {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem;
+  align-items: center;
+}
+
+.officeActions small {
+  width: fit-content;
+  padding: .48rem .75rem;
+  display: inline-flex;
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+  color: #fff;
+  font-size: .75rem;
+  font-weight: 900;
+  backdrop-filter: blur(8px);
+}
+
+.officeActions a {
+  display: inline-flex;
+  align-items: center;
+  color: #ff1648;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .76rem;
+  letter-spacing: .025em;
+  font-weight: 950;
+}
+
+.officeActions a::after {
+  content: "→";
+  margin-left: .5rem;
+}
+
+@media (max-width: 1100px) {
+  .officesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .officesSection {
+    width: calc(100% - 36px);
+    margin: 3.8rem auto;
+  }
+
+  .sectionHead h2 {
+    font-size: clamp(2.35rem, 12vw, 3.8rem);
+    line-height: .92;
+  }
+
+  .officesGrid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .officeCard {
+    min-height: 305px;
+    border-radius: 18px;
+  }
+
+  .officeInfo {
+    left: 1.05rem;
+    right: 1.05rem;
+    bottom: 1.05rem;
+  }
+
+  .officeInfo h3 {
+    font-size: clamp(2.2rem, 13vw, 3.6rem);
+  }
+
+  .officeInfo p {
+    font-size: .8rem;
+  }
+}
+
+/* OFICINAS CLEAN CORPORATE FIX */
+
+.content {
+  background: #f4f1eb !important;
+  color: #090b10 !important;
+  overflow: hidden !important;
+}
+
+.officesSection {
+  width: min(1220px, calc(100% - 48px)) !important;
+  margin: 0 auto !important;
+  padding: clamp(4rem, 6vw, 6.5rem) 0 clamp(4.8rem, 7vw, 7rem) !important;
+}
+
+.sectionHead {
+  max-width: 940px !important;
+  margin: 0 0 clamp(2rem, 3.4vw, 3rem) !important;
+}
+
+.sectionHead::after {
+  display: none !important;
+}
+
+.sectionHead span {
+  display: inline-flex !important;
+  margin-bottom: .9rem !important;
+  color: #b80d2f !important;
+  font-size: .76rem !important;
+  font-weight: 950 !important;
+  letter-spacing: .18em !important;
+  text-transform: uppercase !important;
+}
+
+.sectionHead h2 {
+  max-width: 920px !important;
+  margin: 0 !important;
+  color: #080b10 !important;
+  font-size: clamp(2.8rem, 5vw, 5.3rem) !important;
+  line-height: .92 !important;
+  letter-spacing: -.07em !important;
+  font-weight: 950 !important;
+  text-wrap: balance !important;
+}
+
+.sectionHead p {
+  max-width: 760px !important;
+  margin: 1.15rem 0 0 !important;
+  color: rgba(8, 11, 16, .66) !important;
+  font-size: clamp(1rem, 1.1vw, 1.1rem) !important;
+  line-height: 1.65 !important;
+}
+
+.officesGrid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+  align-items: stretch !important;
+}
+
+.officeCard {
+  min-height: 330px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 18px !important;
+  border: 1px solid rgba(8, 11, 16, .18) !important;
+  background: #080b10 !important;
+  box-shadow: 0 18px 45px rgba(8, 11, 16, .10) !important;
+  isolation: isolate !important;
+  transform: none !important;
+}
+
+.officeCard:hover {
+  transform: none !important;
+}
+
+.officeCard::before {
+  display: none !important;
+}
+
+.officeImage {
+  object-fit: cover !important;
+  transform: scale(1.01) !important;
+  filter: brightness(.82) contrast(1.06) saturate(1.04) !important;
+  transition: transform .35s ease, filter .35s ease !important;
+}
+
+.officeCard:hover .officeImage {
+  transform: scale(1.045) !important;
+  filter: brightness(.9) contrast(1.08) saturate(1.08) !important;
+}
+
+.officeOverlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  background:
+    linear-gradient(180deg, rgba(5,6,9,.08) 0%, rgba(5,6,9,.28) 42%, rgba(5,6,9,.88) 100%),
+    linear-gradient(90deg, rgba(5,6,9,.48) 0%, rgba(5,6,9,.12) 58%, rgba(5,6,9,.22) 100%) !important;
+}
+
+.officeInfo {
+  position: absolute !important;
+  left: 1.35rem !important;
+  right: 1.35rem !important;
+  bottom: 1.25rem !important;
+  z-index: 2 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  color: #fff !important;
+}
+
+.officeInfo span {
+  display: inline-flex !important;
+  margin-bottom: .55rem !important;
+  color: #d7b46a !important;
+  font-size: .72rem !important;
+  font-weight: 950 !important;
+  letter-spacing: .18em !important;
+  text-transform: uppercase !important;
+}
+
+.officeInfo h3 {
+  max-width: 100% !important;
+  margin: 0 !important;
+  color: #fff !important;
+  font-size: clamp(2rem, 3.3vw, 3.7rem) !important;
+  line-height: .88 !important;
+  letter-spacing: -.07em !important;
+  font-weight: 950 !important;
+  text-wrap: balance !important;
+  text-shadow: 0 12px 36px rgba(0,0,0,.48) !important;
+}
+
+.officeInfo p {
+  max-width: 430px !important;
+  margin: .85rem 0 0 !important;
+  color: rgba(255,255,255,.88) !important;
+  font-size: .82rem !important;
+  line-height: 1.45 !important;
+  font-weight: 650 !important;
+  text-shadow: 0 8px 24px rgba(0,0,0,.42) !important;
+}
+
+.officeActions {
+  margin-top: 1rem !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: .7rem !important;
+  align-items: center !important;
+}
+
+.officeActions small {
+  min-height: 36px !important;
+  padding: 0 .8rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  border-radius: 999px !important;
+  background: rgba(255,255,255,.14) !important;
+  border: 1px solid rgba(255,255,255,.12) !important;
+  color: #fff !important;
+  font-size: .74rem !important;
+  font-weight: 900 !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+.officeActions a {
+  min-height: 36px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  color: #ff1748 !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  font-size: .74rem !important;
+  letter-spacing: .035em !important;
+  font-weight: 950 !important;
+}
+
+.officeActions a::after {
+  content: "→" !important;
+  margin-left: .55rem !important;
+}
+
+@media (max-width: 1100px) {
+  .officesSection {
+    width: min(100% - 42px, 900px) !important;
+  }
+
+  .officesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+  }
+
+  .officeCard {
+    min-height: 320px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .officesSection {
+    width: calc(100% - 32px) !important;
+    padding: 3.8rem 0 4.6rem !important;
+  }
+
+  .sectionHead {
+    margin-bottom: 1.8rem !important;
+  }
+
+  .sectionHead h2 {
+    font-size: clamp(2.35rem, 12vw, 3.7rem) !important;
+    line-height: .92 !important;
+  }
+
+  .sectionHead p {
+    font-size: .95rem !important;
+    line-height: 1.58 !important;
+  }
+
+  .officesGrid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .officeCard {
+    min-height: 310px !important;
+    border-radius: 18px !important;
+  }
+
+  .officeInfo {
+    left: 1rem !important;
+    right: 1rem !important;
+    bottom: 1rem !important;
+  }
+
+  .officeInfo h3 {
+    font-size: clamp(2rem, 12vw, 3.3rem) !important;
+  }
+
+  .officeInfo p {
+    font-size: .8rem !important;
+  }
+
+  .officeActions {
+    gap: .55rem !important;
+  }
+
+  .officeActions small,
+  .officeActions a {
+    font-size: .7rem !important;
+  }
+}
+
+
+/* ACROSS GLOBAL HOME DESKTOP HERO TYPO START */
+
+/*
+  Barrido global.
+  Se eliminó Tracking como referencia.
+  Se copia el hero desktop de la Home.
+  Solo títulos: h1/h2/title/heading/headline.
+*/
+
+@media (min-width: 901px) {
+.content h1,
+.content h2,
+.officeActions h1,
+.officeActions h2,
+.officeCard h1,
+.officeCard h2,
+.officeImage h1,
+.officeImage h2,
+.officeInfo h1,
+.officeInfo h2,
+.officeOverlay h1,
+.officeOverlay h2,
+.officesGrid h1,
+.officesGrid h2,
+.officesSection h1,
+.officesSection h2,
+.sectionHead h1,
+.sectionHead h2,
+.hero h1,
+.heroContent h1,
+.heroInner h1,
+.heroTitle,
+.formHeader h2,
+.contactTitle,
+.downloadCopy h2,
+.helpCard h2,
+.page h1,
+.page h2,
+:global(.acrossPageHero h1),
+:global(section[class*='hero'] h1),
+:global(section[class*='Hero'] h1),
+:global([data-quienes-hero='true'] h1) {
+  font-family: var(--font-tight), system-ui, sans-serif !important;
+  font-size: clamp(2.6rem, 5.5vw, 5.6rem) !important;
+  font-weight: 950 !important;
+  line-height: .92 !important;
+  letter-spacing: -.065em !important;
+}
+:global([data-service-hero-home='true'] h1),
+:global([data-cotizacion-photo-hero='true'] h1) {
+  font-family: var(--font-tight), system-ui, sans-serif !important;
+  font-size: clamp(2.6rem, 5.5vw, 5.6rem) !important;
+  font-weight: 950 !important;
+  line-height: .92 !important;
+  letter-spacing: -.065em !important;
+}
+}
+
+/* ACROSS GLOBAL HOME DESKTOP HERO TYPO END */
+

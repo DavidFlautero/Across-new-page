@@ -6,6 +6,7 @@ import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import styles from "./Recursos.module.css";
+import empresaHeroStyles from "../empresa/Empresa.module.css";
 
 type Locale = "es" | "en" | "zh";
 
@@ -332,13 +333,6 @@ const copy = {
   },
 } as const;
 
-const phoneNumbers = [
-  ["europe", "+34 933 170 726"],
-  ["asia", "+86 755 2314 3571"],
-  ["middleEast", "+971 501 926 339"],
-  ["usa", "+1 713 597 6939"],
-] as const;
-
 function getInitialLocale(): Locale {
   if (typeof window === "undefined") return "es";
 
@@ -401,25 +395,42 @@ export default function RecursosPage() {
     <div className={styles.page}>
       <Header />
 
-      <section className={styles.hero}>
+      <section
+        className={empresaHeroStyles.hero}
+        data-quienes-hero="true"
+        data-aereo-hero="true"
+        data-service-hero-home="true"
+      >
         <Image
           src="/images/recursos1.png"
-          alt={t.title}
+          alt="Across Logistics - Recursos"
           fill
           priority
-          className={styles.heroImage}
-          sizes="100vw"
+          sizes="(max-width: 900px) 0px, 100vw"
+          className={`${empresaHeroStyles.heroImage} ${empresaHeroStyles.heroImageDesktop}`}
         />
-        <div className={styles.heroOverlay} />
 
-        <div className={styles.heroContent}>
-          <span>{t.badge}</span>
-          <h1>{t.title}</h1>
-          <p>{t.text}</p>
+        <Image
+          src="/images/recursos1.png"
+          alt="Across Logistics - Recursos"
+          fill
+          priority
+          sizes="(max-width: 900px) 100vw, 0px"
+          className={`${empresaHeroStyles.heroImage} ${empresaHeroStyles.heroImageMobile}`}
+        />
 
-          <div className={styles.heroActions}>
-            <Link href="#downloads">{t.primary}</Link>
-            <Link href="/contacto">{t.secondary}</Link>
+        <div className={empresaHeroStyles.heroOverlay} />
+
+        <div className={empresaHeroStyles.heroInner}>
+          <div className={empresaHeroStyles.heroContent}>
+            <span className={empresaHeroStyles.eyebrow}>{t.badge}</span>
+            <h1>{t.title}</h1>
+            <p>{t.text}</p>
+
+            <div className={empresaHeroStyles.actions}>
+              <Link href="#downloads">{t.primary}</Link>
+              <Link href="/contacto">{t.secondary}</Link>
+            </div>
           </div>
         </div>
       </section>
@@ -495,26 +506,7 @@ export default function RecursosPage() {
             </div>
           </div>
         </section>
-
-        <section className={styles.contactCta}>
-          <div>
-            <span>{t.contactTitle}</span>
-            <h2>{t.contactText}</h2>
-            <p>{t.contactDescription}</p>
-          </div>
-
-          <div className={styles.phoneGrid}>
-            {phoneNumbers.map(([key, phone]) => (
-              <article key={key}>
-                <small>{t.regions[key]}</small>
-                <strong>{phone}</strong>
-              </article>
-            ))}
-          </div>
-
-          <Link href="/contacto">{t.contactButton}</Link>
-        </section>
-      </main>
+</main>
 
       <Footer />
     </div>

@@ -1,0 +1,436 @@
+/* =====================================================
+   ACROSS MOBILE POLISH FINAL
+   Fase visual mobile:
+   - tipografías más controladas
+   - márgenes reales
+   - CTAs premium
+   - sombras sobrias
+   - cards más corporativas
+   - header mobile más limpio
+   ===================================================== */
+
+@media (max-width: 760px) {
+  html,
+  body {
+    overflow-x: hidden !important;
+    background: #213f43 !important;
+  }
+
+  main,
+  [class*="page"] {
+    overflow-x: hidden !important;
+  }
+
+  /* -----------------------------
+     Header mobile más premium
+     ----------------------------- */
+
+  header,
+  [class*="header"],
+  [class*="Header"] {
+    max-width: calc(100% - 24px) !important;
+  }
+
+  [class*="nav"],
+  [class*="Nav"],
+  [class*="navbar"],
+  [class*="Navbar"] {
+    backdrop-filter: blur(18px) saturate(1.15) !important;
+  }
+
+  /* -----------------------------
+     Hero: menos grito, más empresa
+     ----------------------------- */
+
+  [class*="hero"] {
+    overflow: hidden !important;
+  }
+
+  [class*="heroContent"],
+  [class*="heroInner"] {
+    max-width: 100% !important;
+  }
+
+  [class*="heroContent"] h1,
+  [class*="heroInner"] h1,
+  [class*="hero"] h1 {
+    max-width: 92vw !important;
+    font-size: clamp(2.45rem, 11vw, 4rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.055em !important;
+  }
+
+  [class*="heroContent"] p,
+  [class*="heroInner"] p,
+  [class*="hero"] p {
+    max-width: 88vw !important;
+    font-size: .94rem !important;
+    line-height: 1.62 !important;
+    color: rgba(255,255,255,.78) !important;
+  }
+
+  /* -----------------------------
+     Eyebrows / etiquetas rojas
+     ----------------------------- */
+
+  [class*="eyebrow"],
+  [class*="Eyebrow"],
+  [class*="sectionHead"] span,
+  [class*="overviewCopy"] > span {
+    font-size: .64rem !important;
+    line-height: 1.1 !important;
+    letter-spacing: .28em !important;
+    font-weight: 950 !important;
+    color: #ed1b2f !important;
+  }
+
+  /* -----------------------------
+     Secciones mobile con aire
+     ----------------------------- */
+
+  [class*="overview"],
+  [class*="services"],
+  [class*="finalCta"],
+  [class*="useCases"],
+  [class*="process"],
+  [class*="pillars"] {
+    box-sizing: border-box !important;
+  }
+
+  [class*="overviewCopy"],
+  [class*="sectionHead"],
+  [class*="finalCta"] > div:first-child {
+    max-width: 360px !important;
+  }
+
+  [class*="overviewCopy"] h2,
+  [class*="sectionHead"] h2,
+  [class*="finalCta"] h2,
+  [class*="services"] h2,
+  [class*="useCases"] h2,
+  [class*="process"] h2,
+  [class*="pillars"] h2 {
+    max-width: 360px !important;
+    font-size: clamp(2rem, 8.6vw, 2.65rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.045em !important;
+  }
+
+  [class*="overviewCopy"] p,
+  [class*="sectionHead"] p,
+  [class*="finalCta"] p,
+  [class*="services"] p,
+  [class*="useCases"] p,
+  [class*="process"] p,
+  [class*="pillars"] p {
+    max-width: 335px !important;
+    font-size: .9rem !important;
+    line-height: 1.68 !important;
+  }
+
+  /* -----------------------------
+     Overview sectores: evita texto pegado
+     ----------------------------- */
+
+  [class*="overviewMobileBg"] {
+    padding: 3.35rem 26px 3.7rem !important;
+  }
+
+  [class*="overviewMobileBg"] [class*="overviewCopy"] {
+    max-width: 340px !important;
+    margin: 0 auto 0 0 !important;
+  }
+
+  [class*="overviewMobileBg"] [class*="overviewCopy"] h2 {
+    max-width: 340px !important;
+  }
+
+  [class*="overviewMobileBg"] [class*="overviewCopy"] p {
+    max-width: 320px !important;
+  }
+
+  /* -----------------------------
+     Botones / CTAs mobile premium
+     ----------------------------- */
+
+  [class*="actions"],
+  [class*="finalActions"],
+  [class*="darkBandActions"],
+  [class*="compactCtaActions"] {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: .78rem !important;
+    margin-top: 1.5rem !important;
+  }
+
+  [class*="actions"] a,
+  [class*="finalActions"] a,
+  [class*="darkBandActions"] a,
+  [class*="compactCtaActions"] a,
+  [class*="overviewCopy"] a {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 50px !important;
+    padding: 0 1.15rem !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: .65rem !important;
+
+    border-radius: 999px !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+
+    font-size: .70rem !important;
+    font-weight: 950 !important;
+    letter-spacing: .07em !important;
+    line-height: 1.12 !important;
+
+    transition:
+      transform .2s ease,
+      box-shadow .2s ease,
+      border-color .2s ease,
+      background .2s ease !important;
+  }
+
+  [class*="actions"] a:first-child,
+  [class*="finalActions"] a:first-child,
+  [class*="darkBandActions"] a:first-child,
+  [class*="compactCtaActions"] a:first-child,
+  [class*="overviewCopy"] a {
+    color: #fff !important;
+    background: linear-gradient(135deg, #ed1b2f 0%, #c90027 100%) !important;
+    border: 1px solid rgba(237, 27, 47, .88) !important;
+    box-shadow:
+      0 16px 36px rgba(237, 27, 47, .22),
+      inset 0 1px 0 rgba(255,255,255,.18) !important;
+  }
+
+  [class*="actions"] a:last-child,
+  [class*="finalActions"] a:last-child,
+  [class*="darkBandActions"] a:last-child,
+  [class*="compactCtaActions"] a:last-child {
+    color: rgba(255,255,255,.94) !important;
+    background: rgba(255,255,255,.075) !important;
+    border: 1px solid rgba(255,255,255,.22) !important;
+    box-shadow:
+      0 14px 34px rgba(0,0,0,.20),
+      inset 0 1px 0 rgba(255,255,255,.10) !important;
+    backdrop-filter: blur(10px) !important;
+  }
+
+  /* Botón rojo que aparece en overview claro/sectores */
+  [class*="overview"] [class*="overviewCopy"] a {
+    margin-top: 1.55rem !important;
+    border-radius: 999px !important;
+  }
+
+  /* -----------------------------
+     Cards mobile más corporativas
+     ----------------------------- */
+
+  [class*="serviceGrid"],
+  [class*="useCaseGrid"],
+  [class*="processGrid"] {
+    gap: .85rem !important;
+  }
+
+  [class*="operationCard"],
+  [class*="serviceGrid"] article,
+  [class*="useCaseGrid"] article,
+  [class*="processGrid"] article,
+  [class*="pillars"] article {
+    border-radius: 0 !important;
+    background: rgba(7, 9, 14, .72) !important;
+    border: 1px solid rgba(255,255,255,.14) !important;
+    box-shadow:
+      0 18px 46px rgba(0,0,0,.20),
+      inset 0 1px 0 rgba(255,255,255,.055) !important;
+    backdrop-filter: blur(8px) !important;
+  }
+
+  [class*="operationCard"] h3,
+  [class*="serviceGrid"] article h3,
+  [class*="useCaseGrid"] article h3,
+  [class*="processGrid"] article h3 {
+    font-size: 1rem !important;
+    line-height: 1.18 !important;
+    letter-spacing: -.025em !important;
+  }
+
+  [class*="operationCard"] p,
+  [class*="serviceGrid"] article p,
+  [class*="useCaseGrid"] article p,
+  [class*="processGrid"] article p {
+    font-size: .82rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* -----------------------------
+     Sombras más finas
+     ----------------------------- */
+
+  [class*="card"],
+  [class*="Card"],
+  [class*="panel"],
+  [class*="Panel"],
+  [class*="mapCard"],
+  [class*="officeCard"] {
+    box-shadow:
+      0 18px 50px rgba(0,0,0,.16),
+      inset 0 1px 0 rgba(255,255,255,.04) !important;
+  }
+
+  /* Evita manchas rojas exageradas en mobile */
+  [class*="phone"],
+  [class*="Phone"],
+  [class*="call"],
+  [class*="Call"] {
+    box-shadow: 0 14px 34px rgba(237,27,47,.22) !important;
+  }
+}
+
+@media (max-width: 430px) {
+  [class*="overviewMobileBg"] {
+    padding: 3rem 22px 3.45rem !important;
+  }
+
+  [class*="overviewCopy"],
+  [class*="sectionHead"],
+  [class*="finalCta"] > div:first-child,
+  [class*="overviewMobileBg"] [class*="overviewCopy"] {
+    max-width: 330px !important;
+  }
+
+  [class*="overviewCopy"] h2,
+  [class*="sectionHead"] h2,
+  [class*="finalCta"] h2,
+  [class*="services"] h2,
+  [class*="useCases"] h2,
+  [class*="process"] h2,
+  [class*="pillars"] h2 {
+    max-width: 330px !important;
+    font-size: clamp(1.85rem, 8.2vw, 2.35rem) !important;
+    line-height: .99 !important;
+  }
+
+  [class*="overviewCopy"] p,
+  [class*="sectionHead"] p,
+  [class*="finalCta"] p,
+  [class*="services"] p {
+    max-width: 310px !important;
+    font-size: .86rem !important;
+    line-height: 1.66 !important;
+  }
+
+  [class*="actions"] a,
+  [class*="finalActions"] a,
+  [class*="darkBandActions"] a,
+  [class*="compactCtaActions"] a,
+  [class*="overviewCopy"] a {
+    min-height: 48px !important;
+    font-size: .66rem !important;
+  }
+}
+
+@media (max-width: 380px) {
+  [class*="overviewMobileBg"] {
+    padding: 2.85rem 20px 3.25rem !important;
+  }
+
+  [class*="overviewCopy"],
+  [class*="sectionHead"],
+  [class*="finalCta"] > div:first-child,
+  [class*="overviewMobileBg"] [class*="overviewCopy"] {
+    max-width: 300px !important;
+  }
+
+  [class*="overviewCopy"] h2,
+  [class*="sectionHead"] h2,
+  [class*="finalCta"] h2,
+  [class*="services"] h2,
+  [class*="useCases"] h2,
+  [class*="process"] h2,
+  [class*="pillars"] h2 {
+    max-width: 300px !important;
+    font-size: clamp(1.72rem, 8vw, 2.15rem) !important;
+    line-height: 1 !important;
+  }
+
+  [class*="overviewCopy"] p,
+  [class*="sectionHead"] p,
+  [class*="finalCta"] p,
+  [class*="services"] p {
+    max-width: 292px !important;
+    font-size: .82rem !important;
+    line-height: 1.64 !important;
+  }
+
+  [class*="actions"] a,
+  [class*="finalActions"] a,
+  [class*="darkBandActions"] a,
+  [class*="compactCtaActions"] a,
+  [class*="overviewCopy"] a {
+    min-height: 46px !important;
+    font-size: .62rem !important;
+    letter-spacing: .06em !important;
+  }
+}
+
+
+/* ACROSS GLOBAL TRACKING TITLE TYPO START */
+
+/*
+  Barrido global de títulos.
+  Fuente copiada de /tracking.
+  No toca font-size.
+*/
+
+html body h1,
+html body h2,
+html body h3,
+html body [class*="Title"],
+html body [class*="title"],
+html body [class*="Heading"],
+html body [class*="heading"],
+html body [class*="Headline"],
+html body [class*="headline"] {
+  font-family: var(--font-tight), system-ui, sans-serif !important;
+  font-weight: 950 !important;
+  font-variation-settings: "wght" 950 !important;
+  line-height: .95 !important;
+  letter-spacing: -.045em !important;
+}
+
+@media (max-width: 1100px) {
+  html body h1,
+html body h2,
+html body h3,
+html body [class*="Title"],
+html body [class*="title"],
+html body [class*="Heading"],
+html body [class*="heading"],
+html body [class*="Headline"],
+html body [class*="headline"] {
+    letter-spacing: -.04em !important;
+  }
+}
+
+@media (max-width: 380px) {
+  html body h1,
+html body h2,
+html body h3,
+html body [class*="Title"],
+html body [class*="title"],
+html body [class*="Heading"],
+html body [class*="heading"],
+html body [class*="Headline"],
+html body [class*="headline"] {
+    letter-spacing: -.035em !important;
+  }
+}
+
+/* ACROSS GLOBAL TRACKING TITLE TYPO END */

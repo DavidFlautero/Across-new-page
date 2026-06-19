@@ -1,0 +1,31 @@
+@media (max-width: 900px) {
+  .darkBand[data-sector-darkband-bg-only="true"],
+  .darkBand[data-sector-darkband-operator="true"] {
+    min-height: auto !important;
+    height: auto !important;
+    padding: 4.5rem 24px 4rem !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .darkBand[data-sector-darkband-bg-only="true"] h2,
+  .darkBand[data-sector-darkband-operator="true"] h2 {
+    max-width: 680px !important;
+    font-size: clamp(2.3rem, 8vw, 4rem) !important;
+    line-height: .94 !important;
+    letter-spacing: -.065em !important;
+  }
+
+  .darkBand[data-sector-darkband-bg-only="true"] p,
+  .darkBand[data-sector-darkband-operator="true"] p {
+    max-width: 620px !important;
+    font-size: .98rem !important;
+    line-height: 1.58 !important;
+  }
+
+  .darkBand[data-sector-darkband-bg-only="true"] + footer,
+  .darkBand[data-sector-darkband-operator="true"] + footer {
+    margin-top: 0 !important;
+  }
+}
+

@@ -931,60 +931,6 @@ export default function AutomocionSectorPage() {
           </div>
         </section>
 
-        <section className={styles.process}>
-          <div className={styles.sectionHead}>
-            <span className={styles.eyebrow}>{t.processEyebrow}</span>
-            <h2>{t.processTitle}</h2>
-          </div>
-
-          <div className={styles.processGrid}>
-            {t.process.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["search", "route", "document", "plane", "tracking", "truck"];
-
-              return (
-                <article key={title}>
-                  <strong>{index + 1}</strong>
-                  <i>
-                    <Icon name={icons[index]} />
-                  </i>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                </article>
-              );
-            })}
-          </div>
-        </section>
-
-        <section className={styles.darkBand} data-sector-darkband-operador="true" data-sector-darkband-bg-only="true">
-          <div className={styles.darkBandImage}>
-            <Image
-              src="/images/operador/contactcenter.png"
-              alt={t.bandTitle}
-              fill
-              sizes="(max-width: 900px) 100vw, 42vw"
-            />
-          </div>
-
-          <div className={styles.darkBandContent}>
-            <h2>{t.bandTitle}</h2>
-            <p>{t.bandText}</p>
-
-            <div className={styles.stats}>
-              {t.stats.map(([value, label]: string[]) => (
-                <article key={value}>
-                  <strong>{value}</strong>
-                  <span>{label}</span>
-                </article>
-              ))}
-            </div>
-
-            <div className={styles.darkBandActions}>
-              <Link href="/cotizacion">{t.finalPrimary}</Link>
-              <Link href="/contacto">{t.finalSecondary}</Link>
-            </div>
-          </div>
-        </section>
-
 </main>
 
       <Footer />
