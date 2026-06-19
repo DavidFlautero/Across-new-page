@@ -786,7 +786,7 @@ export default function EnergiasRenovablesSectorPage() {
     <div className="page-shell">
       <Header />
 
-      <main className={styles.page}>
+      <main className={styles.page} data-renewables-same-images="true">
         <section className={styles.hero} data-aereo-hero="true" data-service-hero-home="true"
       >
           <Image
@@ -799,7 +799,7 @@ export default function EnergiasRenovablesSectorPage() {
           />
 
           <Image
-            src="/images/sectores/energiasrenovables2.mp4"
+            src="/images/sectores/energiasrenovables.png"
             alt={t.heroTitle}
             fill
             priority
@@ -807,7 +807,7 @@ export default function EnergiasRenovablesSectorPage() {
             className={`${styles.heroImage} ${styles.heroImageMobile}`}
           />
 
-          <div className={styles.heroOverlay} />
+<div className={styles.heroOverlay} />
 
           <div className={styles.heroInner}
       >
@@ -885,8 +885,23 @@ export default function EnergiasRenovablesSectorPage() {
           </div>
         </section>
 
-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/sectores/energiasrenovables.png')" } as CSSProperties}>
-          <div className={styles.sectionHead}>
+        <section className={styles.services} data-renewables-services-video="true">
+          <video
+            className={styles.servicesVideo}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            aria-hidden="true"
+            onLoadedMetadata={(event) => {
+              event.currentTarget.playbackRate = 0.55;
+            }}
+          >
+            <source src="/images/sectores/energiasrenovables2.mp4" type="video/mp4" />
+          </video>
+
+<div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
           </div>
@@ -931,80 +946,6 @@ export default function EnergiasRenovablesSectorPage() {
           </div>
         </section>
 
-        <section className={styles.process}>
-          <div className={styles.sectionHead}>
-            <span className={styles.eyebrow}>{t.processEyebrow}</span>
-            <h2>{t.processTitle}</h2>
-          </div>
-
-          <div className={styles.processGrid}>
-            {t.process.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["search", "route", "document", "plane", "tracking", "truck"];
-
-              return (
-                <article key={title}>
-                  <strong>{index + 1}</strong>
-                  <i>
-                    <Icon name={icons[index]} />
-                  </i>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                </article>
-              );
-            })}
-          </div>
-        </section>
-
-        <section className={styles.darkBand} data-mobile-hide-after-cert="true">
-          <div className={styles.darkBandImage}>
-            <Image
-              src="/images/sectores/energiasrenovables.png"
-              alt={t.bandTitle}
-              fill
-              sizes="(max-width: 900px) 100vw, 42vw"
-            />
-          </div>
-
-          <div className={styles.darkBandContent}>
-            <h2>{t.bandTitle}</h2>
-            <p>{t.bandText}</p>
-
-            <div className={styles.stats}>
-              {t.stats.map(([value, label]: string[]) => (
-                <article key={value}>
-                  <strong>{value}</strong>
-                  <span>{label}</span>
-                </article>
-              ))}
-            </div>
-
-            <div className={styles.darkBandActions}>
-              <Link href="/cotizacion">{t.finalPrimary}</Link>
-              <Link href="/contacto">{t.finalSecondary}</Link>
-            </div>
-          </div>
-        </section>
-
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/sectores/energiasrenovables.png')" } as CSSProperties} data-across-final-cta="true">
-          <div>
-            <h2>{t.finalTitle}</h2>
-            <p>{t.finalText}</p>
-
-            <div className={styles.finalActions}>
-              <Link href="/cotizacion">{t.finalPrimary}</Link>
-              <Link href="/contacto">{t.finalSecondary}</Link>
-            </div>
-          </div>
-
-          <div className={styles.finalImage}>
-            <Image
-              src="/images/sectores/energiasrenovables.png"
-              alt={t.finalTitle}
-              fill
-              sizes="(max-width: 900px) 100vw, 44vw"
-            />
-          </div>
-        </section>
 </main>
 
       <Footer />
