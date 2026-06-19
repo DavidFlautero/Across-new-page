@@ -5,12 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./Footer.module.css";
 
-
-function phoneHref(value: string) {
-  const clean = value.replace(/[^+\d]/g, "");
-  return `tel:${clean}`;
-}
-
 type Locale = "es" | "en" | "zh";
 
 // Oficinas únicas y ordenadas (sin duplicados)

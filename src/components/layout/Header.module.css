@@ -3377,3 +3377,44 @@
     -webkit-text-fill-color: #f4efe4 !important;
   }
 }
+
+/* =====================================================
+   MOBILE MENU - BOTONES MISMO COLOR CORPORATIVO
+   ===================================================== */
+
+@media (max-width: 980px) {
+  .mobileMenu .contactLink,
+  .mobilePanel .contactLink,
+  .mobileSubmenu .contactLink,
+  .mobileMenu a[href="/contacto"],
+  .mobilePanel a[href="/contacto"],
+  .mobileSubmenu a[href="/contacto"],
+  .mobileMenu button,
+  .mobilePanel button,
+  .mobileSubmenu button {
+    background:
+      radial-gradient(circle at 18% 0, rgba(255,255,255,.16), transparent 34%),
+      linear-gradient(135deg, #07111d 0%, #0d1c2b 48%, #173247 100%) !important;
+    color: #f4efe4 !important;
+    -webkit-text-fill-color: #f4efe4 !important;
+    border: 1px solid rgba(214, 192, 141, .42) !important;
+    box-shadow:
+      0 20px 46px rgba(7, 17, 29, .42),
+      0 6px 16px rgba(214, 192, 141, .08),
+      inset 0 1px 0 rgba(255,255,255,.16) !important;
+  }
+
+  .mobileMenu a[href="/contacto"]:hover,
+  .mobilePanel a[href="/contacto"]:hover,
+  .mobileSubmenu a[href="/contacto"]:hover,
+  .mobileMenu button:hover,
+  .mobilePanel button:hover,
+  .mobileSubmenu button:hover {
+    background:
+      radial-gradient(circle at 18% 0, rgba(255,255,255,.18), transparent 34%),
+      linear-gradient(135deg, #0b1d2d 0%, #123149 48%, #1a465f 100%) !important;
+    color: #f4efe4 !important;
+    -webkit-text-fill-color: #f4efe4 !important;
+  }
+}
+

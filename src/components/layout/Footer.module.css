@@ -832,3 +832,65 @@
 }
 
 /* END FOOTER REAL COLOR BOTON */
+
+/* =====================================================
+   FOOTER - FORCE SOCIAL ICONS VISIBLE + PHONE LINKS
+   ===================================================== */
+
+.footer :is(a[href*="linkedin"], a[href*="facebook"], a[href*="instagram"], a[href*="twitter"], a[href*="x.com"]),
+.footer :is(a[aria-label*="LinkedIn"], a[aria-label*="Facebook"], a[aria-label*="Instagram"], a[aria-label*="Twitter"], a[aria-label*="X"]),
+.footer :is([class*="social"], [class*="Social"]) a {
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 999px !important;
+  background: #f4efe4 !important;
+  color: #07111d !important;
+  -webkit-text-fill-color: #07111d !important;
+  border: 1px solid rgba(214, 192, 141, .65) !important;
+  opacity: 1 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  box-shadow:
+    0 10px 24px rgba(0,0,0,.28),
+    inset 0 1px 0 rgba(255,255,255,.75) !important;
+}
+
+.footer :is(a[href*="linkedin"], a[href*="facebook"], a[href*="instagram"], a[href*="twitter"], a[href*="x.com"]) *,
+.footer :is(a[aria-label*="LinkedIn"], a[aria-label*="Facebook"], a[aria-label*="Instagram"], a[aria-label*="Twitter"], a[aria-label*="X"]) *,
+.footer :is([class*="social"], [class*="Social"]) a * {
+  color: #07111d !important;
+  -webkit-text-fill-color: #07111d !important;
+  fill: #07111d !important;
+  stroke: #07111d !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+.footer a[href^="tel:"] {
+  color: #f4efe4 !important;
+  -webkit-text-fill-color: #f4efe4 !important;
+  text-decoration: none !important;
+  font-weight: 850 !important;
+}
+
+.footer a[href^="tel:"]:hover {
+  color: #d6c08d !important;
+  -webkit-text-fill-color: #d6c08d !important;
+}
+
+@media (max-width: 900px) {
+  .footer :is(a[href*="linkedin"], a[href*="facebook"], a[href*="instagram"], a[href*="twitter"], a[href*="x.com"]),
+  .footer :is(a[aria-label*="LinkedIn"], a[aria-label*="Facebook"], a[aria-label*="Instagram"], a[aria-label*="Twitter"], a[aria-label*="X"]),
+  .footer :is([class*="social"], [class*="Social"]) a {
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    min-height: 42px !important;
+  }
+}
+
