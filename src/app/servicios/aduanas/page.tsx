@@ -7,7 +7,7 @@ import Footer from "@/components/layout/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
-import RelatedServices from "../_shared/RelatedServices";
+import RelatedServices from "@/app/servicios/_shared/RelatedServices";
 import styles from "./Aduanas.module.css";
 
 type Locale = "es" | "en" | "zh";
