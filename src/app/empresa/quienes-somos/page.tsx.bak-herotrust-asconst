@@ -393,7 +393,7 @@ export default function QuienesSomosPage() {
 
   const t = copy[locale];
 
-  const heroTrust: readonly (readonly [string, string])[] = ({
+  const heroTrust: readonly (readonly [string, string])[] = {
     es: [
       ["Control", "Seguimiento operativo"],
       ["Red global", "Cobertura internacional"],
@@ -412,7 +412,7 @@ export default function QuienesSomosPage() {
       ["合规", "文件管理"],
       ["专业团队", "专业支持"],
     ],
-  } as const)[locale];
+  }[locale];
 
   return (
     <div className={empresaHeroStyles.page}>
