@@ -1,0 +1,138 @@
+.operator {
+  position: relative;
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    linear-gradient(90deg, rgba(5, 9, 15, .96) 0%, rgba(7, 16, 26, .90) 42%, rgba(7, 16, 26, .55) 100%),
+    url("/images/home/operador.png"),
+    url("/images/hero/operador.png"),
+    url("/images/operador.png");
+  background-size: cover;
+  background-position: center right;
+  color: #fff;
+  border-top: 1px solid rgba(255,255,255,.12);
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 78% 42%, rgba(225, 19, 67, .20), transparent 28rem),
+    linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.42));
+}
+
+.inner {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: clamp(4rem, 6vw, 6rem) 0;
+}
+
+.content {
+  max-width: 720px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  margin-bottom: 1rem;
+  color: #e11343;
+  font-size: .78rem;
+  font-weight: 950;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.content h2 {
+  margin: 0;
+  max-width: 760px;
+  color: #fff;
+  font-size: clamp(2.8rem, 5vw, 5.8rem);
+  line-height: .9;
+  letter-spacing: -.065em;
+  font-weight: 950;
+  text-wrap: balance;
+}
+
+.content p {
+  max-width: 620px;
+  margin: 1.35rem 0 0;
+  color: rgba(255,255,255,.82);
+  font-size: clamp(1rem, 1.2vw, 1.16rem);
+  line-height: 1.68;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .9rem;
+  margin-top: 2rem;
+}
+
+.actions a {
+  min-height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.45rem;
+  border-radius: 999px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .76rem;
+  letter-spacing: .04em;
+  font-weight: 950;
+}
+
+.actions a:first-child {
+  background: #e11343;
+  color: #fff;
+  box-shadow: 0 18px 44px rgba(225,19,67,.28);
+}
+
+.actions a:first-child::after {
+  content: "→";
+  margin-left: .7rem;
+}
+
+.actions a:last-child {
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.32);
+  background: rgba(255,255,255,.07);
+  backdrop-filter: blur(12px);
+}
+
+@media (max-width: 900px) {
+  .operator {
+    min-height: 390px;
+    background-position: center;
+  }
+
+  .inner {
+    width: calc(100% - 36px);
+    padding: 3.2rem 0;
+  }
+
+  .content h2 {
+    font-size: clamp(2.2rem, 10vw, 3.8rem);
+  }
+
+  .content p {
+    font-size: .95rem;
+  }
+
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 360px;
+  }
+
+  .actions a {
+    width: 100%;
+  }
+}

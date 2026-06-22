@@ -1,0 +1,30 @@
+"use client";
+
+import Link from "next/link";
+import styles from "./HomeOperatorOnly.module.css";
+
+export default function HomeOperatorOnly() {
+  return (
+    <section className={styles.operator}>
+      <div className={styles.overlay} />
+
+      <div className={styles.inner}>
+        <div className={styles.content}>
+          <span className={styles.eyebrow}>OPERADOR LOGÍSTICO INTERNACIONAL</span>
+
+          <h2>Coordinemos su próxima operación internacional.</h2>
+
+          <p>
+            Hable con un especialista y reciba una solución logística adaptada a
+            su carga, destino y urgencia.
+          </p>
+
+          <div className={styles.actions}>
+            <Link href="/contacto">Hablar con un especialista</Link>
+            <Link href="/cotizacion">Solicitar cotización</Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

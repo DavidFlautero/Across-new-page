@@ -10404,3 +10404,99 @@
   }
 }
 /* === ACROSS PROCESS SOLO NUMEROS GLOBAL FINAL END === */
+
+/* === ACROSS DESKTOP HERO TYPO FIX === */
+/* Solo desktop. Arregla títulos hero demasiado angostos/altos en páginas internas. */
+@media (min-width: 1024px) {
+  :global(section[data-aereo-hero="true"]),
+  :global(section[data-service-hero-home="true"]),
+  :global(section[data-quienes-hero="true"]) {
+    overflow: hidden !important;
+  }
+
+  :global(section[data-aereo-hero="true"] [class*="heroContent"]),
+  :global(section[data-aereo-hero="true"] [class*="heroCopy"]),
+  :global(section[data-aereo-hero="true"] [class*="heroText"]),
+  :global(section[data-aereo-hero="true"] [class*="heroInner"]),
+  :global(section[data-aereo-hero="true"] [class*="content"]),
+  :global(section[data-aereo-hero="true"] div:has(> h1)),
+  :global(section[data-service-hero-home="true"] [class*="heroContent"]),
+  :global(section[data-service-hero-home="true"] [class*="heroCopy"]),
+  :global(section[data-service-hero-home="true"] [class*="heroText"]),
+  :global(section[data-service-hero-home="true"] [class*="heroInner"]),
+  :global(section[data-service-hero-home="true"] [class*="content"]),
+  :global(section[data-service-hero-home="true"] div:has(> h1)),
+  :global(section[data-quienes-hero="true"] [class*="heroContent"]),
+  :global(section[data-quienes-hero="true"] [class*="heroCopy"]),
+  :global(section[data-quienes-hero="true"] [class*="heroText"]),
+  :global(section[data-quienes-hero="true"] [class*="heroInner"]),
+  :global(section[data-quienes-hero="true"] [class*="content"]),
+  :global(section[data-quienes-hero="true"] div:has(> h1)) {
+    width: min(980px, 62vw) !important;
+    max-width: min(980px, 62vw) !important;
+  }
+
+  :global(section[data-aereo-hero="true"] h1),
+  :global(section[data-service-hero-home="true"] h1),
+  :global(section[data-quienes-hero="true"] h1) {
+    width: min(980px, 62vw) !important;
+    max-width: min(980px, 62vw) !important;
+
+    font-size: clamp(48px, 4.25vw, 76px) !important;
+    line-height: 0.98 !important;
+    letter-spacing: -0.04em !important;
+    font-weight: 850 !important;
+
+    text-wrap: balance !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: none !important;
+  }
+
+  :global(section[data-aereo-hero="true"] h1 br),
+  :global(section[data-service-hero-home="true"] h1 br),
+  :global(section[data-quienes-hero="true"] h1 br) {
+    display: none !important;
+  }
+
+  :global(section[data-aereo-hero="true"] p),
+  :global(section[data-service-hero-home="true"] p),
+  :global(section[data-quienes-hero="true"] p) {
+    max-width: 720px !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  :global(section[data-aereo-hero="true"] [class*="heroContent"]),
+  :global(section[data-aereo-hero="true"] [class*="heroCopy"]),
+  :global(section[data-aereo-hero="true"] [class*="heroText"]),
+  :global(section[data-aereo-hero="true"] [class*="heroInner"]),
+  :global(section[data-aereo-hero="true"] [class*="content"]),
+  :global(section[data-aereo-hero="true"] div:has(> h1)),
+  :global(section[data-service-hero-home="true"] [class*="heroContent"]),
+  :global(section[data-service-hero-home="true"] [class*="heroCopy"]),
+  :global(section[data-service-hero-home="true"] [class*="heroText"]),
+  :global(section[data-service-hero-home="true"] [class*="heroInner"]),
+  :global(section[data-service-hero-home="true"] [class*="content"]),
+  :global(section[data-service-hero-home="true"] div:has(> h1)),
+  :global(section[data-quienes-hero="true"] [class*="heroContent"]),
+  :global(section[data-quienes-hero="true"] [class*="heroCopy"]),
+  :global(section[data-quienes-hero="true"] [class*="heroText"]),
+  :global(section[data-quienes-hero="true"] [class*="heroInner"]),
+  :global(section[data-quienes-hero="true"] [class*="content"]),
+  :global(section[data-quienes-hero="true"] div:has(> h1)) {
+    width: min(1080px, 64vw) !important;
+    max-width: min(1080px, 64vw) !important;
+  }
+
+  :global(section[data-aereo-hero="true"] h1),
+  :global(section[data-service-hero-home="true"] h1),
+  :global(section[data-quienes-hero="true"] h1) {
+    width: min(1080px, 64vw) !important;
+    max-width: min(1080px, 64vw) !important;
+    font-size: clamp(54px, 4vw, 82px) !important;
+  }
+}
+
+/* === /ACROSS DESKTOP HERO TYPO FIX === */
+

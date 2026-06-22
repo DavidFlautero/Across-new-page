@@ -1,0 +1,280 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import styles from "./HomeCorporateFinal.module.css";
+
+type Locale = "es" | "en" | "zh";
+type IconName = "air" | "ocean" | "road" | "customs" | "warehouse" | "special";
+
+const copy = {
+  es: {
+    integratedBadge: "Soluciones a medida",
+    integratedTitle: "Logística integrada para cada necesidad.",
+    integratedText:
+      "Diseñamos soluciones logísticas personalizadas para optimizar su cadena de suministro, reducir fricción operativa y mantener control de punta a punta.",
+    integratedItems: ["Enfoque en resultados", "Visibilidad y trazabilidad", "Seguridad y cumplimiento"],
+    integratedLink: "Conocer más →",
+
+    servicesBadge: "Nuestras soluciones",
+    servicesTitle: "Servicios logísticos internacionales.",
+    services: [
+      ["Transporte Aéreo", "Carga urgente, crítica y prioritaria.", "/servicios/transporte-aereo", "air"],
+      ["Transporte Marítimo", "Operaciones FCL, LCL y proyectos internacionales.", "/servicios/transporte-maritimo", "ocean"],
+      ["Transporte Terrestre", "Distribución por carretera con trazabilidad operativa.", "/servicios/transporte-terrestre", "road"],
+      ["Aduanas", "Gestión documental y cumplimiento normativo.", "/servicios/aduanas", "customs"],
+      ["Almacén y Distribución", "Almacenamiento seguro y distribución eficiente.", "/servicios/almacen-distribucion", "warehouse"],
+      ["Cargas Especiales", "Mercancías sobredimensionadas, sensibles o críticas.", "/servicios/cargas-especiales", "special"],
+    ],
+
+    panelBadge: "Operación integrada",
+    panelTitle: "De origen a destino, bajo una sola coordinación.",
+    panelText:
+      "",
+    panelStats: [
+      ["Multimodal", "Aéreo · Marítimo · Terrestre"],
+      ["Cumplimiento", "Aduanas · Documentación · Normativa"],
+      ["Trazabilidad", "Seguimiento · Control · Respuesta"],
+    ],
+
+    globalBadge: "Confianza que nos respalda",
+    globalTitle: "Experiencia, certificaciones y una red global para cuidar su operación.",
+    globalCards: [
+      ["Red internacional", "Oficinas y aliados estratégicos para coordinar operaciones globales."],
+      ["Certificaciones", "AEO · OEA · ISO · IATA · GDP como respaldo operativo."],
+      ["Control operativo", "Seguimiento, documentación y respuesta desde origen hasta destino."],
+    ],
+
+    officesBadge: "Presencia internacional",
+    officesTitle: "Oficinas que nos acercan a vos.",
+    allOfficesTitle: "Ver todas",
+    allOfficesText: "nuestras oficinas",
+
+    ctaTitle: "Coordinemos su próxima operación internacional",
+    ctaText:
+      "Hable con un especialista y reciba una solución logística adaptada a su carga, destino y urgencia.",
+    ctaButton: "Hablar con un especialista",
+  },
+
+  en: {
+    integratedBadge: "Tailored solutions",
+    integratedTitle: "Integrated logistics for every need.",
+    integratedText:
+      "We design tailored logistics solutions to optimize your supply chain, reduce operational friction and maintain end-to-end control.",
+    integratedItems: ["Results-driven approach", "Visibility and traceability", "Security and compliance"],
+    integratedLink: "Learn more →",
+
+    servicesBadge: "Our solutions",
+    servicesTitle: "International logistics services.",
+    services: [
+      ["Air Freight", "Urgent, critical and priority cargo.", "/servicios/transporte-aereo", "air"],
+      ["Ocean Freight", "FCL, LCL and international project operations.", "/servicios/transporte-maritimo", "ocean"],
+      ["Road Freight", "Road distribution with operational traceability.", "/servicios/transporte-terrestre", "road"],
+      ["Customs", "Documentation management and regulatory compliance.", "/servicios/aduanas", "customs"],
+      ["Warehousing & Distribution", "Secure storage and efficient distribution.", "/servicios/almacen-distribucion", "warehouse"],
+      ["Special Cargo", "Oversized, sensitive or critical cargo operations.", "/servicios/cargas-especiales", "special"],
+    ],
+
+    panelBadge: "Integrated operation",
+    panelTitle: "From origin to destination, under one coordination.",
+    panelText:
+      "Transport, customs, warehousing and distribution working as one operation, not isolated services.",
+    panelStats: [
+      ["Multimodal", "Air · Ocean · Road"],
+      ["Compliance", "Customs · Documentation · Regulations"],
+      ["Traceability", "Tracking · Control · Response"],
+    ],
+
+    globalBadge: "Trust that supports us",
+    globalTitle: "Experience, certifications and a global network to protect your operation.",
+    globalCards: [
+      ["International network", "Offices and strategic partners to coordinate global operations."],
+      ["Certifications", "AEO · OEA · ISO · IATA · GDP as operational support."],
+      ["Operational control", "Tracking, documentation and response from origin to destination."],
+    ],
+
+    officesBadge: "International presence",
+    officesTitle: "Offices that bring us closer to you.",
+    allOfficesTitle: "View all",
+    allOfficesText: "our offices",
+
+    ctaTitle: "Let’s coordinate your next international operation",
+    ctaText:
+      "Speak with a specialist and receive a logistics solution tailored to your cargo, destination and urgency.",
+    ctaButton: "Speak with a specialist",
+  },
+
+  zh: {
+    integratedBadge: "定制化解决方案",
+    integratedTitle: "满足不同需求的一体化物流。",
+    integratedText:
+      "我们设计定制化物流方案，优化您的供应链，减少运营阻力，并实现端到端管控。",
+    integratedItems: ["以结果为导向", "可视化与可追踪", "安全与合规"],
+    integratedLink: "了解更多 →",
+
+    servicesBadge: "我们的解决方案",
+    servicesTitle: "国际物流服务。",
+    services: [
+      ["空运", "紧急、关键和优先货物运输。", "/servicios/transporte-aereo", "air"],
+      ["海运", "FCL、LCL 以及国际项目物流操作。", "/servicios/transporte-maritimo", "ocean"],
+      ["陆运", "具备运营可追踪性的公路配送。", "/servicios/transporte-terrestre", "road"],
+      ["海关", "单证管理与法规合规。", "/servicios/aduanas", "customs"],
+      ["仓储与配送", "安全仓储与高效配送。", "/servicios/almacen-distribucion", "warehouse"],
+      ["特殊货物", "超大、敏感或关键货物操作。", "/servicios/cargas-especiales", "special"],
+    ],
+
+    panelBadge: "一体化运营",
+    panelTitle: "从起点到目的地，由同一团队协调。",
+    panelText:
+      "运输、清关、仓储和配送作为一个整体运作，而不是彼此孤立的服务。",
+    panelStats: [
+      ["多式联运", "空运 · 海运 · 陆运"],
+      ["合规", "海关 · 单证 · 法规"],
+      ["可追踪性", "跟踪 · 控制 · 响应"],
+    ],
+
+    globalBadge: "值得信赖的支持",
+    globalTitle: "以经验、认证和全球网络守护您的物流运营。",
+    globalCards: [
+      ["国际网络", "通过办公室和战略合作伙伴协调全球业务。"],
+      ["认证", "AEO · OEA · ISO · IATA · GDP 作为运营保障。"],
+      ["运营控制", "从起点到目的地进行跟踪、单证管理和响应。"],
+    ],
+
+    officesBadge: "国际布局",
+    officesTitle: "让我们更贴近您的办公室网络。",
+    allOfficesTitle: "查看全部",
+    allOfficesText: "办公室",
+
+    ctaTitle: "让我们协调您的下一次国际物流操作",
+    ctaText:
+      "与专家沟通，获得适合您货物、目的地和时效需求的物流方案。",
+    ctaButton: "联系专家",
+  },
+} as const;
+
+const homeOffices = [
+  {
+    city: "Barcelona",
+    country: { es: "España", en: "Spain", zh: "西班牙" },
+    phone: "+34 933 170 726",
+    href: "/empresa/oficinas/barcelona",
+    image: "/images/oficinas/barcelona.png",
+  },
+  {
+    city: "Miami",
+    country: { es: "Estados Unidos", en: "United States", zh: "美国" },
+    phone: "+1 786 821 0671",
+    href: "/empresa/oficinas/miami",
+    image: "/images/oficinas/miami.png",
+  },
+  {
+    city: "Madrid",
+    country: { es: "España", en: "Spain", zh: "西班牙" },
+    phone: "+34 912 907 640",
+    href: "/empresa/oficinas/madrid",
+    image: "/images/oficinas/madrid.png",
+  },
+  {
+    city: "Shenzhen",
+    country: { es: "China", en: "China", zh: "中国" },
+    phone: "+86 755 2314 3571",
+    href: "/empresa/oficinas/shenzhen",
+    image: "/images/oficinas/Shenzhen.png",
+  },
+];
+
+function ServiceIcon({ name }: { name: IconName }) {
+  if (name === "air") {
+    return (
+      <svg viewBox="0 0 28 28" aria-hidden="true">
+        <path d="M3.5 15.2 24.3 5.6c.7-.3 1.4.4 1.1 1.1l-9.6 20.8-3.1-9.2-9.2-3.1Z" />
+        <path d="M12.8 18.2 17.7 13.3" />
+      </svg>
+    );
+  }
+
+  if (name === "ocean") {
+    return (
+      <svg viewBox="0 0 28 28" aria-hidden="true">
+        <path d="M5 14.5h18l-2.2 6.4H7.2L5 14.5Z" />
+        <path d="M8.2 14.5V9.4h7.2v5.1" />
+        <path d="M15.4 14.5V7h4.6v7.5" />
+        <path d="M4 23c1.5 0 1.5-1 3-1s1.5 1 3 1 1.5-1 3-1 1.5 1 3 1 1.5-1 3-1 1.5 1 3 1" />
+      </svg>
+    );
+  }
+
+  if (name === "road") {
+    return (
+      <svg viewBox="0 0 28 28" aria-hidden="true">
+        <path d="M4 9h13.2l3.2 4H24v7H4V9Z" />
+        <path d="M17.2 9v4h3.2" />
+        <path d="M8.2 22.4a2.1 2.1 0 1 0 0-4.2 2.1 2.1 0 0 0 0 4.2Z" />
+        <path d="M19.8 22.4a2.1 2.1 0 1 0 0-4.2 2.1 2.1 0 0 0 0 4.2Z" />
+      </svg>
+    );
+  }
+
+  if (name === "customs") {
+    return (
+      <svg viewBox="0 0 28 28" aria-hidden="true">
+        <path d="M8 4.5h9l3 3v16H8v-19Z" />
+        <path d="M17 4.5v4h4" />
+        <path d="M11 13h7M11 17h7M11 21h4" />
+        <path d="M5 8.5v16h12" />
+      </svg>
+    );
+  }
+
+  if (name === "warehouse") {
+    return (
+      <svg viewBox="0 0 28 28" aria-hidden="true">
+        <path d="M4 12.2 14 5l10 7.2v11.3H4V12.2Z" />
+        <path d="M8 23.5v-8h12v8" />
+        <path d="M8 15.5h12M8 19.5h12" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 28 28" aria-hidden="true">
+      <path d="M14 4.5 23 9.6v8.8l-9 5.1-9-5.1V9.6l9-5.1Z" />
+      <path d="M5.4 9.8 14 15l8.6-5.2M14 15v8.5" />
+      <path d="M9.7 7.2l8.6 5.1" />
+    </svg>
+  );
+}
+
+export default function HomeOperatorOnly() {
+
+  const [locale, setLocale] = useState<Locale>("es");
+
+  useEffect(() => {
+    const saved = window.localStorage.getItem("across-locale") as Locale | null;
+    if (saved && saved in copy) setLocale(saved);
+
+    const handler = (event: Event) => {
+      const next = (event as CustomEvent<Locale>).detail;
+      if (next && next in copy) setLocale(next);
+    };
+
+    window.addEventListener("across-locale-change", handler);
+    return () => window.removeEventListener("across-locale-change", handler);
+  }, []);
+
+  const t = copy[locale];
+
+  return (
+<section className={styles.homeFinalCta}>
+        <div className={styles.homeFinalCtaInner}>
+          <div>
+            <h2>{t.ctaTitle}</h2>
+            <p>{t.ctaText}</p>
+            <Link href="/contacto">{t.ctaButton}</Link>
+          </div>
+        </div>
+      </section>
+  );
+}

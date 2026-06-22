@@ -6019,3 +6019,49 @@ main:has(section[data-service-name="temperatura-controlada"]) section[class*="se
   }
 }
 /* === TEMPERATURA CONTROLADA SERVICES POSITION SCOPED END === */
+
+/* =========================================================
+   HERO DESKTOP WIDTH FIX
+   Hace los títulos internos más anchos y menos verticales.
+   No cambia fuente, no toca HOME por archivo.
+========================================================= */
+
+@media (min-width: 1024px) {
+  section[data-aereo-hero="true"] [class*="heroCopy"],
+  section[data-aereo-hero="true"] [class*="heroContent"],
+  section[data-aereo-hero="true"] div:has(> h1) {
+    width: min(820px, 52vw) !important;
+    max-width: min(820px, 52vw) !important;
+  }
+
+  section[data-aereo-hero="true"] h1 {
+    width: min(820px, 52vw) !important;
+    max-width: min(820px, 52vw) !important;
+    text-wrap: balance;
+  }
+
+  section[data-aereo-hero="true"] p {
+    max-width: 680px !important;
+  }
+
+  section[data-aereo-hero="true"] [class*="actions"],
+  section[data-aereo-hero="true"] [class*="cta"],
+  section[data-aereo-hero="true"] [class*="buttons"] {
+    max-width: 720px !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  section[data-aereo-hero="true"] [class*="heroCopy"],
+  section[data-aereo-hero="true"] [class*="heroContent"],
+  section[data-aereo-hero="true"] div:has(> h1) {
+    width: min(900px, 54vw) !important;
+    max-width: min(900px, 54vw) !important;
+  }
+
+  section[data-aereo-hero="true"] h1 {
+    width: min(900px, 54vw) !important;
+    max-width: min(900px, 54vw) !important;
+  }
+}
+
