@@ -14,12 +14,12 @@ type Locale = "es" | "en" | "zh";
 
 const copy = {
   es: {
-    heroEyebrow: "TRANSPORTE AÉREO INTERNACIONAL",
-    heroTitle: "Transporte aéreo internacional para cargas urgentes, sensibles o de alto valor.",
+    heroEyebrow: "Transporte aéreo internacional",
+    heroTitle: "Logística aérea para envíos donde cada hora cuenta.",
     heroText:
-      "Coordinamos envíos aéreos internacionales con control documental, seguimiento operativo y soluciones adaptadas a cargas críticas, sensibles o de alto valor.",
-    primaryCta: "Solicitar cotización aérea",
-    secondaryCta: "Hablar con un especialista",
+      "Coordinamos transporte aéreo internacional para mercancías urgentes, sensibles o de alto valor, con planificación de ruta, soporte documental y seguimiento operativo desde el origen hasta la entrega.",
+    primaryCta: "Planificar mi operación",
+    secondaryCta: "Hablar con nuestro equipo",
 
     activeLabel: "Operación aérea activa",
     activeRoute: "Madrid → Bogotá",

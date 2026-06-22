@@ -18,7 +18,7 @@ const copy = {
     country: "País / Región*",
     message: "Mensaje*",
     legal:
-      "ACROSS LOGISTICS, S.L.U., como responsable del tratamiento, tratará sus datos con la finalidad de responder a su consulta o solicitud. Puede acceder, rectificar y suprimir sus datos, así como ejercer otros derechos consultando la información adicional en nuestra Política de Privacidad Web y nuestros Términos y Condiciones.",
+      "ACROSS LOGISTICS, S.L.U. como responsable del tratamiento tratará tus datos con la finalidad de dar respuesta a tu consulta o petición. Puedes acceder, rectificar y suprimir tus datos, así como ejercer otros derechos consultando la información adicional y detallada sobre protección de datos en nuestra Política de Privacidad Web y nuestros Términos y Condiciones.",
     privacy: "He leído y acepto la política de privacidad y los términos y condiciones*",
     marketing: "Acepto recibir comunicaciones comerciales de Across Logistics",
     submit: "Enviar solicitud",
@@ -86,12 +86,12 @@ type SignalStep = {
   tone: "green" | "amber" | "red";
 };
 
-const signalSteps: Record<Locale, { title: string; text: string; description: string; tone: "green" | "amber" | "red" }[]> = {
+const signalSteps: Record<Locale, SignalStep[]> = {
   es: [
     {
       title: "Solicitud recibida",
-      text: "Recibimos sus datos y revisamos qué necesita mover, cotizar o coordinar.",
-      description: "Recibimos sus datos y revisamos qué necesita mover, cotizar o coordinar.",
+      text: "Tomamos tus datos y entendemos qué necesitás mover, cotizar o coordinar.",
+      description: "Tomamos tus datos y entendemos qué necesitás mover, cotizar o coordinar.",
       tone: "green",
     },
     {
@@ -101,49 +101,49 @@ const signalSteps: Record<Locale, { title: string; text: string; description: st
       tone: "amber",
     },
     {
-      title: "Respuesta especializada",
-      text: "Nuestro equipo le contactará para avanzar con una propuesta ajustada a su operación.",
-      description: "Nuestro equipo le contactará para avanzar con una propuesta ajustada a su operación.",
+      title: "Respuesta prioritaria",
+      text: "Si hay urgencia, activamos el contacto directo para avanzar sin vueltas.",
+      description: "Si hay urgencia, activamos el contacto directo para avanzar sin vueltas.",
       tone: "red",
     },
   ],
   en: [
     {
       title: "Request received",
-      text: "We receive your details and review what you need to move, quote or coordinate.",
-      description: "We receive your details and review what you need to move, quote or coordinate.",
+      text: "We collect your details and understand what you need to move, quote or coordinate.",
+      description: "We collect your details and understand what you need to move, quote or coordinate.",
       tone: "green",
     },
     {
-      title: "Operational analysis",
+      title: "Operational review",
       text: "We review route, timing, documentation and service conditions.",
       description: "We review route, timing, documentation and service conditions.",
       tone: "amber",
     },
     {
-      title: "Specialized response",
-      text: "Our team will contact you to move forward with a proposal adjusted to your operation.",
-      description: "Our team will contact you to move forward with a proposal adjusted to your operation.",
+      title: "Priority response",
+      text: "If there is urgency, we activate direct contact to move forward quickly.",
+      description: "If there is urgency, we activate direct contact to move forward quickly.",
       tone: "red",
     },
   ],
   zh: [
     {
       title: "请求已收到",
-      text: "我们会接收您的信息，并了解您需要运输、报价或协调的内容。",
-      description: "我们会接收您的信息，并了解您需要运输、报价或协调的内容。",
+      text: "我们会收集您的信息，并了解您需要运输、报价或协调的内容。",
+      description: "我们会收集您的信息，并了解您需要运输、报价或协调的内容。",
       tone: "green",
     },
     {
-      title: "运营分析",
+      title: "运营审核",
       text: "我们会审核路线、时间、文件和服务条件。",
       description: "我们会审核路线、时间、文件和服务条件。",
       tone: "amber",
     },
     {
-      title: "专业回复",
-      text: "我们的团队将联系您，推进符合您运营需求的方案。",
-      description: "我们的团队将联系您，推进符合您运营需求的方案。",
+      title: "优先响应",
+      text: "如有紧急情况，我们会启动直接联系，快速推进。",
+      description: "如有紧急情况，我们会启动直接联系，快速推进。",
       tone: "red",
     },
   ],

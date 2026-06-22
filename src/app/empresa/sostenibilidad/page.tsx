@@ -13,11 +13,11 @@ type Locale = "es" | "en" | "zh";
 
 const copy = {
   es: {
-    heroEyebrow: "Sostenibilidad",
-    heroTitle: "Logística y sostenibilidad ambiental para cadenas de suministro responsables.",
-    heroText: "Trabajamos para reducir impacto, optimizar recursos y avanzar hacia operaciones logísticas más eficientes, trazables y responsables.",
-    primaryCta: "Hablar con un especialista",
-    secondaryCta: "Conocer soluciones",
+    heroEyebrow: "SOSTENIBILIDAD",
+    heroTitle: "Operaciones logísticas más eficientes, trazables y responsables.",
+    heroText: "Trabajamos para reducir impacto, optimizar recursos y avanzar hacia operaciones logísticas con mayor eficiencia, trazabilidad y responsabilidad ambiental.",
+    primaryCta: "Conocer nuestro enfoque",
+    secondaryCta: "Hablar con un especialista",
     overviewEyebrow: "Compromiso ambiental",
     overviewTitle: "Tecnología, multimodalidad y reducción de impacto en cada proyecto.",
     overviewText: "Buscamos alternativas operativas que ayuden a reducir emisiones, optimizar rutas y mejorar la eficiencia logística.",

@@ -12,10 +12,10 @@ type Locale = "es" | "en" | "zh";
 
 const copy = {
   es: {
-    badge: "FAQ Y RECURSOS",
-    title: "Recursos logísticos para tomar mejores decisiones operativas.",
+    badge: "FAQ & RECURSOS",
+    title: "Recursos logísticos para operar con más información, control y criterio.",
     text:
-      "Acceda a contenidos, guías y materiales diseñados para ayudar a empresas a tomar mejores decisiones en transporte internacional, aduanas, distribución y operaciones especiales.",
+      "Acceda a contenidos, guías y materiales de Across Logistics diseñados para ayudar a empresas a tomar mejores decisiones en transporte internacional, aduanas, distribución y operaciones especiales.",
     primary: "Explorar recursos",
     secondary: "Hablar con un especialista",
 

@@ -21,9 +21,9 @@ type Post = {
 const copy = {
   es: {
     badge: "BLOG",
-    title: "Análisis y novedades sobre logística internacional.",
+    title: "Blog Across Logistics",
     description:
-      "Actualidad, novedades y conocimiento especializado en logística internacional, aduanas, transporte y cadena de suministro.",
+      "Actualidad, novedades y conocimiento especializado en logística internacional.",
     latest: "Nuestras Novedades",
     loading: "Cargando artículos...",
     categories: "CATEGORÍAS",

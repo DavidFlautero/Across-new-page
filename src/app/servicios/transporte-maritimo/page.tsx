@@ -14,12 +14,12 @@ type Locale = "es" | "en" | "zh";
 
 const copy = {
   es: {
-    heroEyebrow: "Transporte marítimo internacional",
-    heroTitle: "Capacidad global para cargas que cruzan océanos.",
+    heroEyebrow: "TRANSPORTE MARÍTIMO INTERNACIONAL",
+    heroTitle: "Transporte marítimo internacional para embarques FCL, LCL y proyectos especiales.",
     heroText:
-      "Coordinamos embarques marítimos internacionales con control documental, seguimiento operativo y soluciones adaptadas a cargas FCL, LCL, proyectos especiales o de alto valor.",
-    primaryCta: "Planificar mi operación",
-    secondaryCta: "Hablar con nuestro equipo",
+      "Gestionamos embarques marítimos internacionales con coordinación portuaria, control documental, aduanas y seguimiento operativo de origen a destino.",
+    primaryCta: "Solicitar cotización marítima",
+    secondaryCta: "Hablar con un especialista",
 
     activeLabel: "Operación marítima activa",
     activeRoute: "Madrid → Bogotá",

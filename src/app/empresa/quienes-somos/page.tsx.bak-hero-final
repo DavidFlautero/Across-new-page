@@ -162,7 +162,7 @@ const team = [
 const copy = {
   es: {
     eyebrow: "QUIÉNES SOMOS",
-    title: "Logística internacional con control, cumplimiento y coordinación experta.",
+    title: "Logística con control real.",
     description:
       "Conectamos empresas, mercados y cadenas de suministro mediante soluciones logísticas integrales, combinando cobertura internacional, experiencia operativa, tecnología, cumplimiento documental y atención especializada.",
     primary: "Conocer nuestras soluciones",

@@ -14,12 +14,12 @@ type Locale = "es" | "en" | "zh";
 
 const copy = {
   es: {
-    heroEyebrow: "Cargas especiales e industriales",
-    heroTitle: "Ingeniería logística para cargas que no encajan en lo estándar.",
+    heroEyebrow: "CARGAS ESPECIALES E INDUSTRIALES",
+    heroTitle: "Ingeniería logística para cargas sobredimensionadas, industriales o fuera de estándar.",
     heroText:
-      "Coordinamos operaciones especiales para cargas sobredimensionadas, industriales, sensibles o de alto valor, integrando análisis técnico, permisos, rutas, manipulación y seguimiento operativo.",
-    primaryCta: "Planificar mi operación",
-    secondaryCta: "Hablar con nuestro equipo",
+      "Coordinamos operaciones especiales para cargas que requieren análisis técnico, permisos, rutas, manipulación especializada y seguimiento operativo.",
+    primaryCta: "Solicitar cotización especial",
+    secondaryCta: "Hablar con un especialista",
 
     activeLabel: "Operación especial activa",
     activeRoute: "Puerto → Obra",

@@ -172,7 +172,7 @@ const cargoTypes = [
     id: "pallet_europeo",
     image: "/images/pallets/European_pallet.png",
     labels: {
-      es: { title: "Solicite una propuesta logística ajustada a su operación.", subtitle: "Complete los datos de su requerimiento y nuestro equipo preparará una propuesta ajustada a su carga, destino, urgencia y tipo de operación." },
+      es: { title: "Pallet Europeo", subtitle: "120 × 80 cm" },
       en: { title: "European Pallet", subtitle: "120 × 80 cm" },
       zh: { title: "欧洲托盘", subtitle: "120 × 80 cm" },
     },

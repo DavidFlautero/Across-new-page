@@ -15,9 +15,9 @@ type Locale = "es" | "en" | "zh";
 const copy = {
   es: {
     eyebrow: "NUESTRAS OFICINAS",
-    title: "Presencia internacional para coordinar operaciones en mercados estratégicos.",
+    title: "Siempre cerca de su operación.",
     description:
-      "Nuestra red de oficinas conecta operaciones, clientes y mercados estratégicos para responder con precisión en cada destino.",
+      "En cualquier destino, en cada mercado y en cada etapa logística, Across Logistics está más cerca de lo que piensa.",
     primary: "Hablar con un especialista",
     secondary: "Ver oficinas",
     sectionEyebrow: "OFICINAS",

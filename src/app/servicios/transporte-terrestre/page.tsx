@@ -14,12 +14,12 @@ type Locale = "es" | "en" | "zh";
 
 const copy = {
   es: {
-    heroEyebrow: "Transporte terrestre internacional",
-    heroTitle: "Rutas terrestres que conectan operaciones críticas.",
+    heroEyebrow: "TRANSPORTE TERRESTRE",
+    heroTitle: "Transporte terrestre nacional e internacional con trazabilidad operativa.",
     heroText:
-      "Coordinamos transporte terrestre nacional e internacional para cargas completas, grupaje, distribución y operaciones especiales, con seguimiento operativo y control documental de origen a destino.",
-    primaryCta: "Planificar mi operación",
-    secondaryCta: "Hablar con nuestro equipo",
+      "Coordinamos transporte terrestre para carga completa, grupaje, distribución y operaciones especiales, con seguimiento operativo y control documental durante el recorrido.",
+    primaryCta: "Solicitar cotización terrestre",
+    secondaryCta: "Hablar con un especialista",
 
     activeLabel: "Operación terrestre activa",
     activeRoute: "Madrid → Valencia",
