@@ -90,9 +90,7 @@ function getInitialLocale(): Locale {
 export default function OficinasPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
-  
-  const [isMobileHeroTitle, setIsMobileHeroTitle] = useState(false);
-useEffect(() => {
+  useEffect(() => {
     const updateLocale = (event?: Event) => {
       const rawDetail = event instanceof CustomEvent ? event.detail : null;
 
@@ -130,34 +128,7 @@ useEffect(() => {
     };
   }, []);
 
-  useEffect(() => {
-    const query = "(max-width: 430px) and (min-height: 600px), (min-width: 500px) and (max-width: 760px) and (min-height: 650px)";
-    const media = window.matchMedia(query);
-
-    const update = () => setIsMobileHeroTitle(media.matches);
-
-    update();
-
-    if (typeof media.addEventListener === "function") {
-      media.addEventListener("change", update);
-      return () => media.removeEventListener("change", update);
-    }
-
-    media.addListener(update);
-    return () => media.removeListener(update);
-  }, []);
-
   const t = copy[locale];
-
-  const mobileHeroTitle =
-    locale === "es"
-      ? "Presencia internacional en mercados estratégicos."
-      : locale === "en"
-        ? "International presence in strategic markets."
-        : "战略市场中的国际布局。";
-
-  const heroTitle = isMobileHeroTitle ? mobileHeroTitle : t.title;
-
 
   const visibleOffices = offices.filter((office) =>
     office.image.startsWith("/images/oficinas/")
@@ -197,7 +168,7 @@ useEffect(() => {
         <div className={empresaHeroStyles.heroInner}>
           <div className={empresaHeroStyles.heroContent}>
             <span className={empresaHeroStyles.eyebrow}>{t.eyebrow}</span>
-            <h1>{heroTitle}</h1>
+            <h1>{t.title}</h1>
             <p>{t.description}</p>
 
             <div className={empresaHeroStyles.actions}>

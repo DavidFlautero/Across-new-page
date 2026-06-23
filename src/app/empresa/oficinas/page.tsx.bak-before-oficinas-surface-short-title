@@ -131,7 +131,7 @@ useEffect(() => {
   }, []);
 
   useEffect(() => {
-    const query = "(max-width: 430px) and (min-height: 600px), (min-width: 500px) and (max-width: 760px) and (min-height: 650px)";
+    const query = "(max-width: 430px) and (min-height: 600px)";
     const media = window.matchMedia(query);
 
     const update = () => setIsMobileHeroTitle(media.matches);
