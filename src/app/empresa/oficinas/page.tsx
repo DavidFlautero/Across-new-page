@@ -146,7 +146,7 @@ export default function OficinasPage() {
         data-service-hero-home="true"
       >
         <Image
-          src="/images/quienes%20somos/quienes1.png"
+          src="/images/quienes%20somos/quienes2.png"
           alt="Across Logistics - Oficinas"
           fill
           priority
@@ -155,7 +155,7 @@ export default function OficinasPage() {
         />
 
         <Image
-          src="/images/quienes%20somos/quienes1.png"
+          src="/images/quienes%20somos/quienes2.png"
           alt="Across Logistics - Oficinas"
           fill
           priority
