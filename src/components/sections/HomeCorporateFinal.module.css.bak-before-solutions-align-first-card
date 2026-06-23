@@ -5517,244 +5517,29 @@
 
 /* === HOME SOLUTIONS PANEL POSITION FINAL === */
 
-/* Alinear cuadro derecho con la primera card izquierda: Transporte Aéreo */
+/* Alinear el cuadro derecho con el inicio de la lista izquierda */
 @media (min-width: 901px) {
   .solutionsPanel {
     align-self: start !important;
     transform: none !important;
-    margin-top: 3.75rem !important;
-  }
-}
-
-/* Tablet tipo iPad: necesita un poco menos para no bajarlo demasiado */
-@media (min-width: 901px) and (max-width: 1180px) {
-  .solutionsPanel {
-    align-self: start !important;
-    transform: none !important;
-    margin-top: 3.25rem !important;
-  }
-}
-
-/* Desktop grande: alineado con inicio de la lista */
-@media (min-width: 1281px) {
-  .solutionsPanel {
-    align-self: start !important;
-    transform: none !important;
-    margin-top: 3.85rem !important;
-  }
-}
-
-/* === HOME SOLUTIONS PANEL ALIGN WITH FIRST CARD REAL FINAL === */
-
-/* Alinear el cuadro derecho con el inicio de Transporte Aéreo */
-@media (min-width: 901px) {
-  .solutionsPanel {
-    align-self: start !important;
-    transform: translateY(0) !important;
-    margin-top: 5.85rem !important;
-  }
-}
-
-/* iPad / tablet horizontal */
-@media (min-width: 901px) and (max-width: 1180px) {
-  .solutionsPanel {
-    align-self: start !important;
-    transform: translateY(0) !important;
-    margin-top: 5.35rem !important;
-  }
-}
-
-/* Desktop grande */
-@media (min-width: 1281px) {
-  .solutionsPanel {
-    align-self: start !important;
-    transform: translateY(0) !important;
-    margin-top: 5.95rem !important;
-  }
-}
-
-/* === GLOBAL TRUST SECTION DESKTOP FIX START === */
-@media (min-width: 769px) {
-  .globalOverlay {
-    width: min(100%, 1180px) !important;
-    max-width: 1180px !important;
-    overflow: visible !important;
-  }
-
-  .globalContent {
-    width: min(100%, 1180px) !important;
-    max-width: 1180px !important;
-    overflow: visible !important;
-  }
-
-  .globalContent h2 {
-    width: min(100%, 1180px) !important;
-    max-width: 1180px !important;
-    font-size: clamp(4.2rem, 5.2vw, 6.1rem) !important;
-    line-height: .94 !important;
-    letter-spacing: -.065em !important;
-  }
-
-  .globalCards {
-    display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 16px !important;
-    width: min(100%, 1080px) !important;
-    max-width: 1080px !important;
-    margin-top: 28px !important;
-  }
-
-  .globalCards > div {
-    width: auto !important;
-    max-width: none !important;
-    min-width: 0 !important;
-    min-height: 118px !important;
-    padding: 22px 24px !important;
-    box-sizing: border-box !important;
-  }
-
-  .globalCards > div strong {
-    display: block !important;
-    margin: 0 0 8px !important;
-    line-height: 1.1 !important;
-  }
-
-  .globalCards > div p {
-    margin: 0 !important;
-    line-height: 1.42 !important;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1100px) {
-  .globalContent h2 {
-    font-size: clamp(3.4rem, 5.4vw, 4.8rem) !important;
-    max-width: 980px !important;
-  }
-
-  .globalCards {
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 12px !important;
-    max-width: 980px !important;
-  }
-
-  .globalCards > div {
-    padding: 18px 18px !important;
-    min-height: 122px !important;
-  }
-
-  .globalCards > div p {
-    font-size: .78rem !important;
-    line-height: 1.35 !important;
-  }
-}
-/* === GLOBAL TRUST SECTION DESKTOP FIX END === */
-
-/* === TRUST SECTION TITLE FINAL START === */
-@media (min-width: 769px) {
-  .globalOverlay {
-    width: min(100%, 1180px) !important;
-    max-width: 1180px !important;
-    overflow: visible !important;
-  }
-
-  .globalContent {
-    width: min(100%, 1180px) !important;
-    max-width: 1180px !important;
-    overflow: visible !important;
-  }
-
-  .globalContent h2 {
-    width: min(100%, 1080px) !important;
-    max-width: 1080px !important;
-    font-size: clamp(3.8rem, 4.35vw, 5.35rem) !important;
-    line-height: .92 !important;
-    letter-spacing: -.065em !important;
-    text-wrap: balance !important;
-    margin-bottom: 2.15rem !important;
-  }
-
-  .globalCards {
-    display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 16px !important;
-    width: min(100%, 1080px) !important;
-    max-width: 1080px !important;
     margin-top: 0 !important;
   }
+}
 
-  .globalCards > div {
-    padding: 22px 24px !important;
-    min-height: 112px !important;
-    box-sizing: border-box !important;
-  }
-
-  .globalCards > div strong {
-    display: block !important;
-    margin: 0 0 8px !important;
-    line-height: 1.1 !important;
-  }
-
-  .globalCards > div p {
-    margin: 0 !important;
-    line-height: 1.42 !important;
+/* Tablet tipo iPad: también inicia arriba, no centrado */
+@media (min-width: 901px) and (max-width: 1180px) {
+  .solutionsPanel {
+    align-self: start !important;
+    transform: none !important;
+    margin-top: 0 !important;
   }
 }
 
-@media (min-width: 769px) and (max-width: 1180px) {
-  .globalContent h2 {
-    width: min(100%, 940px) !important;
-    max-width: 940px !important;
-    font-size: clamp(3.25rem, 5vw, 4.55rem) !important;
-    line-height: .94 !important;
-  }
-
-  .globalCards {
-    width: min(100%, 960px) !important;
-    max-width: 960px !important;
-    gap: 12px !important;
-  }
-
-  .globalCards > div {
-    padding: 18px 18px !important;
-    min-height: 118px !important;
-  }
-
-  .globalCards > div p {
-    font-size: .78rem !important;
-    line-height: 1.35 !important;
+/* Desktop grande: mismo comportamiento */
+@media (min-width: 1281px) {
+  .solutionsPanel {
+    align-self: start !important;
+    transform: none !important;
+    margin-top: 0 !important;
   }
 }
-/* === TRUST SECTION TITLE FINAL END === */
-
-/* === GLOBAL TRUST CONTAINER MARGIN FINAL START === */
-@media (min-width: 769px) {
-  .globalOverlay {
-    width: min(100% - 48px, 1180px) !important;
-    max-width: 1180px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    overflow: visible !important;
-  }
-
-  .globalContent {
-    width: 100% !important;
-    max-width: 1180px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    overflow: visible !important;
-  }
-
-  .globalCards {
-    width: 100% !important;
-    max-width: 1080px !important;
-  }
-}
-
-@media (min-width: 1181px) {
-  .globalOverlay {
-    width: min(100% - 80px, 1180px) !important;
-  }
-}
-/* === GLOBAL TRUST CONTAINER MARGIN FINAL END === */

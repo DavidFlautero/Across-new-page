@@ -6108,14 +6108,3 @@ main:has(section[data-service-name="temperatura-controlada"]) section[class*="se
   color: #d2a45c !important;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35) !important;
 }
-
-/* === HOME SOLUTIONS PANEL FINAL POSITION START === */
-@media (min-width: 901px) {
-  html body main section:has(aside[class*="solutionsPanel"]) aside[class*="solutionsPanel"] {
-    margin-top: 0px !important;
-    transform: translateY(-78px) !important;
-    align-self: flex-start !important;
-    will-change: transform !important;
-  }
-}
-/* === HOME SOLUTIONS PANEL FINAL POSITION END === */

@@ -39,7 +39,7 @@ const copy = {
     ],
 
     globalBadge: "Confianza que nos respalda",
-    globalTitle: "Experiencia certificada y red global para cuidar cada operación.",
+    globalTitle: "Experiencia, certificaciones y una red global para cuidar su operación.",
     globalCards: [
       ["Red internacional", "Oficinas y aliados estratégicos para coordinar operaciones globales."],
       ["Certificaciones", "AEO · OEA · ISO · IATA · GDP como respaldo operativo."],

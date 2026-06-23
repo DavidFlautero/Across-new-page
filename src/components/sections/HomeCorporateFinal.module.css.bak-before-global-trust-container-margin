@@ -5725,36 +5725,3 @@
   }
 }
 /* === TRUST SECTION TITLE FINAL END === */
-
-/* === GLOBAL TRUST CONTAINER MARGIN FINAL START === */
-@media (min-width: 769px) {
-  .globalOverlay {
-    width: min(100% - 48px, 1180px) !important;
-    max-width: 1180px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    overflow: visible !important;
-  }
-
-  .globalContent {
-    width: 100% !important;
-    max-width: 1180px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    overflow: visible !important;
-  }
-
-  .globalCards {
-    width: 100% !important;
-    max-width: 1080px !important;
-  }
-}
-
-@media (min-width: 1181px) {
-  .globalOverlay {
-    width: min(100% - 80px, 1180px) !important;
-  }
-}
-/* === GLOBAL TRUST CONTAINER MARGIN FINAL END === */
