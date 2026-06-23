@@ -5514,27 +5514,3 @@
     margin-top: .2rem !important;
   }
 }
-
-/* === HOME SOLUTIONS PANEL POSITION FINAL === */
-
-/* Desktop/tablet horizontal: subir el cuadro azul para alinearlo con la lista izquierda */
-@media (min-width: 901px) {
-  .solutionsPanel {
-    align-self: center !important;
-    transform: translateY(-2.25rem) !important;
-  }
-}
-
-/* Pantallas grandes: un poco menos para no pasarlo arriba */
-@media (min-width: 1281px) {
-  .solutionsPanel {
-    transform: translateY(-1.65rem) !important;
-  }
-}
-
-/* Tablet tipo iPad: subirlo más porque queda demasiado bajo */
-@media (min-width: 901px) and (max-width: 1180px) {
-  .solutionsPanel {
-    transform: translateY(-3rem) !important;
-  }
-}
