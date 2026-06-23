@@ -114,7 +114,7 @@ function getCountryCodeFromValue(value: string, countryOptions: Array<{ id: stri
   };
 
   const getVisualStepLabel = (index: number) => {
-    const state = getQuoteStepVisualState(index);
+    const state = getVisualStepState(index);
 
     if (state === "complete") {
       if (locale === "en") return `Step ${index + 1} complete`;
@@ -350,7 +350,7 @@ const copy = {
       "ACROSS LOGISTICS, S.L.U. tratará sus datos con la finalidad de responder a su consulta o petición. Puede acceder, rectificar y suprimir sus datos consultando nuestra Política de Privacidad Web.",
     privacy: "Acepto política de privacidad",
     marketing: "Acepto recibir información comercial",
-    submit: "Enviar solicitud",
+    submit: "Solicitar presupuesto",
     sending: "Enviando...",
     success: "Solicitud enviada correctamente. Nuestro equipo se pondrá en contacto.",
     error: "No se pudo enviar la solicitud. Revise los datos e inténtelo nuevamente.",
@@ -453,7 +453,7 @@ const copy = {
       "ACROSS LOGISTICS, S.L.U. will process your data in order to respond to your query or request. You may access, rectify and delete your data according to our Website Privacy Policy.",
     privacy: "I accept the privacy policy",
     marketing: "I agree to receive commercial information",
-    submit: "Send request",
+    submit: "Request quote",
     sending: "Sending...",
     success: "Request sent successfully. Our team will contact you.",
     error: "The request could not be sent. Please review the data and try again.",
@@ -554,7 +554,7 @@ const copy = {
       "ACROSS LOGISTICS, S.L.U. 将处理您的数据以回复您的咨询或请求。您可以根据我们的网站隐私政策访问、更正和删除您的数据。",
     privacy: "我接受隐私政策",
     marketing: "我同意接收商业信息",
-    submit: "提交申请",
+    submit: "提交报价请求",
     sending: "发送中...",
     success: "请求已成功发送。我们的团队将与您联系。",
     error: "请求无法发送。请检查信息后重试。",
@@ -858,15 +858,7 @@ export default function CotizacionPage() {
   };
 
   const continueLabel =
-    locale === "en" ? "Next" : locale === "zh" ? "下一步" : "Siguiente";
-
-  const backLabel =
-    locale === "en" ? "Back" : locale === "zh" ? "返回" : "Atrás";
-
-  const previousStep = () => {
-    setActiveStep((current) => Math.max(0, current - 1));
-    setStepError("");
-  };
+    locale === "en" ? "Continue" : locale === "zh" ? "继续" : "Continuar";
 
   const editLabel =
     locale === "en" ? "Edit" : locale === "zh" ? "编辑" : "Editar";
@@ -1023,43 +1015,6 @@ export default function CotizacionPage() {
     setStepError("");
   };
 
-
-  const getQuoteStepVisualState = (index: number) => {
-    const validationError = getStepValidationError(index);
-
-    if (index < activeStep && !validationError) return "complete";
-    if (index === activeStep && validationError) return "missing";
-    if (index > activeStep && !canOpenStep(index)) return "locked";
-
-    return "pending";
-  };
-
-  const getQuoteStepVisualLabel = (index: number) => {
-    const state = getQuoteStepVisualState(index);
-
-    if (state === "complete") {
-      if (locale === "en") return `Step ${index + 1} complete`;
-      if (locale === "zh") return `步骤 ${index + 1} 已完成`;
-      return `Paso ${index + 1} completo`;
-    }
-
-    if (state === "missing") {
-      if (locale === "en") return "Missing data";
-      if (locale === "zh") return "缺少数据";
-      return "Faltan datos";
-    }
-
-    if (state === "locked") {
-      if (locale === "en") return "Locked";
-      if (locale === "zh") return "已锁定";
-      return "Bloqueado";
-    }
-
-    if (locale === "en") return "Pending";
-    if (locale === "zh") return "待完成";
-    return "Pendiente";
-  };
-
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
@@ -1162,8 +1117,8 @@ export default function CotizacionPage() {
                 className={index === activeStep ? styles.stepActive : ""}
                 onClick={() => openStep(index)}
                 disabled={index > activeStep && !canOpenStep(index)}
-                data-state={getQuoteStepVisualState(index)}
-                data-step-state={getQuoteStepVisualLabel(index)}
+                data-state={getVisualStepState(index)}
+                data-step-state={getVisualStepLabel(index)}
               >
                 <b>{String(index + 1).padStart(2, "0")}</b>
                 <span>{step}</span>
@@ -1454,9 +1409,6 @@ export default function CotizacionPage() {
             </div>
 
               <div className={styles.accordionActions}>
-                <button type="button" className={styles.backButton} onClick={previousStep}>
-                  {backLabel}
-                </button>
                 <button type="button" onClick={() => nextStep(1)}>
                   {continueLabel}
                 </button>
@@ -1600,9 +1552,6 @@ export default function CotizacionPage() {
             </div>
 
               <div className={styles.accordionActions}>
-                <button type="button" className={styles.backButton} onClick={previousStep}>
-                  {backLabel}
-                </button>
                 <button type="button" onClick={() => nextStep(2)}>
                   {continueLabel}
                 </button>
@@ -1627,7 +1576,7 @@ export default function CotizacionPage() {
                   <h2>{t.finalTitle}</h2>
                   <p>{t.finalText}</p>
                 </div>
-                <strong>{activeStep === 3 ? t.submit : editLabel}</strong>
+                <strong>{activeStep === 3 ? continueLabel : editLabel}</strong>
               </div>
               <div className={styles.accordionBody}>
 
@@ -1651,8 +1600,8 @@ export default function CotizacionPage() {
             </div>
 
               <div className={styles.accordionActions}>
-                <button type="submit" disabled={sending}>
-                  {sending ? t.sending : t.submit}
+                <button type="button" onClick={() => nextStep(3)}>
+                  {continueLabel}
                 </button>
               </div>
             </div>
@@ -1661,6 +1610,10 @@ export default function CotizacionPage() {
             {stepError && <p className={styles.error}>{stepError}</p>}
             {sent && <p className={styles.success}>{t.success}</p>}
             {error && <p className={styles.error}>{error}</p>}
+
+            <button type="submit" className={styles.submit} disabled={sending}>
+              {sending ? t.sending : t.submit}
+            </button>
           </form>
         </section>
       </main>

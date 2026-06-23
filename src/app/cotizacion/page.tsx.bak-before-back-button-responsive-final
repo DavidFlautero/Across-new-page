@@ -860,14 +860,6 @@ export default function CotizacionPage() {
   const continueLabel =
     locale === "en" ? "Next" : locale === "zh" ? "下一步" : "Siguiente";
 
-  const backLabel =
-    locale === "en" ? "Back" : locale === "zh" ? "返回" : "Atrás";
-
-  const previousStep = () => {
-    setActiveStep((current) => Math.max(0, current - 1));
-    setStepError("");
-  };
-
   const editLabel =
     locale === "en" ? "Edit" : locale === "zh" ? "编辑" : "Editar";
 
@@ -1454,9 +1446,6 @@ export default function CotizacionPage() {
             </div>
 
               <div className={styles.accordionActions}>
-                <button type="button" className={styles.backButton} onClick={previousStep}>
-                  {backLabel}
-                </button>
                 <button type="button" onClick={() => nextStep(1)}>
                   {continueLabel}
                 </button>
@@ -1600,9 +1589,6 @@ export default function CotizacionPage() {
             </div>
 
               <div className={styles.accordionActions}>
-                <button type="button" className={styles.backButton} onClick={previousStep}>
-                  {backLabel}
-                </button>
                 <button type="button" onClick={() => nextStep(2)}>
                   {continueLabel}
                 </button>
