@@ -103,6 +103,43 @@ function getCountryOptions(locale: Locale) {
 function getCountryCodeFromValue(value: string, countryOptions: Array<{ id: string; label: string }>) {
   const normalized = value.trim().toLowerCase();
 
+  const getVisualStepState = (index: number) => {
+    const stepValidationError = index === activeStep ? validationError : null;
+
+    if (index < activeStep && !stepValidationError) return "complete";
+    if (index === activeStep && stepValidationError) return "missing";
+    if (index > activeStep && !canOpenStep(index)) return "locked";
+
+    return "pending";
+  };
+
+  const getVisualStepLabel = (index: number) => {
+    const state = getQuoteStepVisualState(index);
+
+    if (state === "complete") {
+      if (locale === "en") return `Step ${index + 1} complete`;
+      if (locale === "zh") return `步骤 ${index + 1} 已完成`;
+      return `Paso ${index + 1} completo`;
+    }
+
+    if (state === "missing") {
+      if (locale === "en") return "Missing data";
+      if (locale === "zh") return "缺少数据";
+      return "Faltan datos";
+    }
+
+    if (state === "locked") {
+      if (locale === "en") return "Locked";
+      if (locale === "zh") return "已锁定";
+      return "Bloqueado";
+    }
+
+    if (locale === "en") return "Pending";
+    if (locale === "zh") return "待完成";
+    return "Pendiente";
+  };
+
+
   return (
     countryOptions.find(
       (country) =>
@@ -1020,27 +1057,6 @@ export default function CotizacionPage() {
 
     if (locale === "en") return "Pending";
     if (locale === "zh") return "待完成";
-    return "Pendiente";
-  };
-
-
-  const getVisualStepState = (index: number) => {
-    const stepValidationError = index === activeStep ? validationError : null;
-
-    if (index < activeStep && !stepValidationError) return "complete";
-    if (index === activeStep && stepValidationError) return "missing";
-    if (index === activeStep) return "active";
-
-    return "pending";
-  };
-
-  const getVisualStepLabel = (index: number) => {
-    const state = getVisualStepState(index);
-
-    if (state === "complete") return "Completo";
-    if (state === "missing") return "Falta información";
-    if (state === "active") return "En curso";
-
     return "Pendiente";
   };
 

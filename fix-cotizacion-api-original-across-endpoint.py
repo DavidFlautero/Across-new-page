@@ -1,4 +1,16 @@
-import { NextResponse } from "next/server";
+from pathlib import Path
+import shutil
+
+api_path = Path("src/app/api/cotizacion/route.ts")
+
+if not api_path.exists():
+    raise SystemExit("❌ No existe src/app/api/cotizacion/route.ts")
+
+backup = api_path.with_suffix(api_path.suffix + ".bak-before-original-across-endpoint")
+if not backup.exists():
+    shutil.copy2(api_path, backup)
+
+code = r'''import { NextResponse } from "next/server";
 
 const ACROSS_ORIGINAL_FORM_URL =
   process.env.ACROSS_ORIGINAL_FORM_URL ||
@@ -127,3 +139,10 @@ export async function POST(req: Request) {
     );
   }
 }
+'''
+
+api_path.write_text(code, encoding="utf-8")
+
+print("✅ API de cotización ahora apunta al endpoint original de Across")
+print("✅ URL:", "https://acrosslogistics.com/express-form-submit")
+print("✅ Backup:", backup)
