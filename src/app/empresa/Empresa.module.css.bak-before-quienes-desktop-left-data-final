@@ -10325,3 +10325,32 @@
   }
 }
 /* === QUIENES HERO MOBILE FLOW FINAL END === */
+
+/* === QUIENES HERO DESKTOP LEFT FINAL START === */
+/* Desktop: mueve todo el bloque del hero hacia la izquierda.
+   No toca mobile/tablet. */
+@media (min-width: 901px) {
+  .heroContent {
+    transform: translateX(-65px) !important;
+    position: relative !important;
+    z-index: 25 !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+
+  .heroContent h1,
+  .heroContent p {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  .actions {
+    justify-content: flex-start !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+}
+/* === QUIENES HERO DESKTOP LEFT FINAL END === */

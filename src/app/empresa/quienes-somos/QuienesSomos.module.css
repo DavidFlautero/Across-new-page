@@ -1102,3 +1102,32 @@
 
 /* === /ACROSS DESKTOP HERO TYPO FIX === */
 
+/* === QUIENES DESKTOP LEFT DATA FINAL START === */
+/* Desktop Quiénes Somos:
+   mueve el bloque real del hero a la izquierda usando data attr propio.
+   No toca mobile/tablet. */
+@media (min-width: 901px) {
+  :global(section[data-quienes-hero="true"] [data-quienes-hero-content="true"]) {
+    transform: translateX(-65px) !important;
+    position: relative !important;
+    z-index: 25 !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+
+  :global(section[data-quienes-hero="true"] [data-quienes-hero-content="true"] h1),
+  :global(section[data-quienes-hero="true"] [data-quienes-hero-content="true"] p) {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  :global(section[data-quienes-hero="true"] [data-quienes-hero-content="true"] [class*="actions"]) {
+    justify-content: flex-start !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+}
+/* === QUIENES DESKTOP LEFT DATA FINAL END === */

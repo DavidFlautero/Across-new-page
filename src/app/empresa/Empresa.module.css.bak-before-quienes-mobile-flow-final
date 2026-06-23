@@ -10286,42 +10286,66 @@
 }
 /* === HIDE QUIENES HERO COMMANDBAR END === */
 
-/* === QUIENES HERO MOBILE FLOW FINAL START === */
-/* Mobile chico: sube volanta, título, texto y botón juntos.
-   Mantiene el orden visual y evita que el botón toque certificaciones. */
-@media (max-width: 430px) and (min-height: 600px) {
-  :global(section[data-quienes-hero="true"]) {
-    padding-bottom: 6.9rem !important;
-  }
+/* === QUIENES HERO RESPONSIVE TITLE FINAL START === */
+/* Desktop mantiene el título grande original.
+   Tablet/mobile usan título corto desde page.tsx.
+   Bloque centrado, texto alineado a la izquierda. */
 
-  :global(section[data-quienes-hero="true"] [class*="eyebrow"]),
-  :global(section[data-quienes-hero="true"] h1),
-  :global(section[data-quienes-hero="true"] h1 + p),
-  :global(section[data-quienes-hero="true"] [class*="actions"]) {
-    transform: translateY(-38px) !important;
-    position: relative !important;
-  }
-
-  :global(section[data-quienes-hero="true"] [class*="eyebrow"]) {
-    display: inline-block !important;
-    z-index: 31 !important;
-    margin-bottom: .75rem !important;
+@media (max-width: 900px) {
+  :global(section[data-quienes-hero="true"] [class*="heroContent"]) {
+    width: min(100% - 44px, 520px) !important;
+    max-width: 520px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: left !important;
   }
 
   :global(section[data-quienes-hero="true"] h1) {
-    z-index: 30 !important;
-    margin-bottom: 1rem !important;
+    max-width: 520px !important;
+    font-size: clamp(2.85rem, 8.2vw, 4.15rem) !important;
+    line-height: .94 !important;
+    letter-spacing: -.058em !important;
+    text-align: left !important;
   }
 
-  :global(section[data-quienes-hero="true"] h1 + p) {
-    z-index: 30 !important;
-    margin-bottom: 1.45rem !important;
+  :global(section[data-quienes-hero="true"] p) {
+    max-width: 500px !important;
+    text-align: left !important;
   }
 
   :global(section[data-quienes-hero="true"] [class*="actions"]) {
-    z-index: 32 !important;
-    margin-top: 0 !important;
-    margin-bottom: 3.6rem !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
   }
 }
-/* === QUIENES HERO MOBILE FLOW FINAL END === */
+
+@media (max-width: 430px) {
+  :global(section[data-quienes-hero="true"] [class*="heroContent"]) {
+    width: min(100% - 44px, 340px) !important;
+    max-width: 340px !important;
+  }
+
+  :global(section[data-quienes-hero="true"] h1) {
+    max-width: 320px !important;
+    font-size: clamp(2.65rem, 11vw, 3.15rem) !important;
+    line-height: .94 !important;
+    letter-spacing: -.058em !important;
+  }
+
+  :global(section[data-quienes-hero="true"] p) {
+    max-width: 320px !important;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 760px) and (min-height: 650px) {
+  :global(section[data-quienes-hero="true"] [class*="heroContent"]) {
+    width: min(100% - 48px, 470px) !important;
+    max-width: 470px !important;
+  }
+
+  :global(section[data-quienes-hero="true"] h1) {
+    max-width: 440px !important;
+    font-size: clamp(3.2rem, 8vw, 3.85rem) !important;
+  }
+}
+/* === QUIENES HERO RESPONSIVE TITLE FINAL END === */

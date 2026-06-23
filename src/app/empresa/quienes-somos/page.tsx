@@ -352,6 +352,7 @@ function getInitialLocale(): Locale {
 export default function QuienesSomosPage() {
   const [locale, setLocale] = useState<Locale>("es");
   const [showFullTeam, setShowFullTeam] = useState(false);
+  const [isCompactHeroTitle, setIsCompactHeroTitle] = useState(false);
 
   useEffect(() => {
     const updateLocale = (event?: Event) => {
@@ -391,7 +392,33 @@ export default function QuienesSomosPage() {
     };
   }, []);
 
+  useEffect(() => {
+    const query = "(max-width: 900px)";
+    const media = window.matchMedia(query);
+
+    const update = () => setIsCompactHeroTitle(media.matches);
+
+    update();
+
+    if (typeof media.addEventListener === "function") {
+      media.addEventListener("change", update);
+      return () => media.removeEventListener("change", update);
+    }
+
+    media.addListener(update);
+    return () => media.removeListener(update);
+  }, []);
+
   const t = copy[locale];
+
+  const compactHeroTitle =
+    locale === "es"
+      ? "Logística internacional con control experto."
+      : locale === "en"
+        ? "International logistics with expert control."
+        : "专业管控的国际物流。";
+
+  const heroTitle = isCompactHeroTitle ? compactHeroTitle : t.title;
 
   const heroTrust: readonly (readonly [string, string])[] = ({
     es: [
@@ -445,10 +472,10 @@ export default function QuienesSomosPage() {
         <div className={empresaHeroStyles.heroOverlay} />
 
         <div className={empresaHeroStyles.heroInner}>
-          <div className={empresaHeroStyles.heroContent}>
+          <div className={empresaHeroStyles.heroContent} data-quienes-hero-content="true">
             <span className={empresaHeroStyles.eyebrow}>{t.eyebrow}</span>
 
-            <h1>{t.title}</h1>
+            <h1>{heroTitle}</h1>
 
             <p>{t.description}</p>
 
