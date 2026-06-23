@@ -5758,14 +5758,3 @@
   }
 }
 /* === GLOBAL TRUST CONTAINER MARGIN FINAL END === */
-
-/* === GLOBAL TRUST BEFORE BG TABLET FINAL START === */
-/* Solo tablet/iPad: el mapa/logos viven en .globalTrust::before */
-@media (min-width: 769px) and (max-width: 1180px) {
-  .globalTrust::before {
-    background-position: 0 0, center center !important;
-    background-size: auto, 108% auto !important;
-    background-repeat: repeat, no-repeat !important;
-  }
-}
-/* === GLOBAL TRUST BEFORE BG TABLET FINAL END === */
