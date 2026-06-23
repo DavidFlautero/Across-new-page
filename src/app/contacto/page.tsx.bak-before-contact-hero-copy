@@ -10,8 +10,6 @@ type Locale = "es" | "en" | "zh";
 const copy = {
   es: {
     badge: "CONTACTO",
-    heroTitle: "Coordinemos su próxima operación logística.",
-    heroText: "Nuestro equipo le ayudará a identificar la solución adecuada para su carga, ruta o necesidad operativa.",
     formTitle: "Formulario de contacto",
     name: "Nombre*",
     company: "Empresa*",
@@ -30,8 +28,6 @@ const copy = {
   },
   en: {
     badge: "CONTACT",
-    heroTitle: "Let’s coordinate your next logistics operation.",
-    heroText: "Our team will help identify the right solution for your cargo, route or operational need.",
     formTitle: "Contact form",
     name: "Name*",
     company: "Company*",
@@ -50,8 +46,6 @@ const copy = {
   },
   zh: {
     badge: "联系",
-    heroTitle: "让我们协调您的下一项物流操作。",
-    heroText: "我们的团队将帮助您为货物、路线或运营需求找到合适方案。",
     formTitle: "联系表单",
     name: "姓名*",
     company: "公司*",
@@ -280,13 +274,7 @@ export default function ContactoPage() {
     <>
       <Header />
 
-      <section className={styles.contactHero} aria-label="Across Logistics">
-        <div className={styles.contactHeroCopy}>
-          <span>{t.badge}</span>
-          <h1>{t.heroTitle}</h1>
-          <p>{t.heroText}</p>
-        </div>
-      </section>
+      <section className={styles.contactHero} aria-label="Across Logistics" />
 
       <main className={styles.contactPage}>
         <section className={styles.contactShell}>
