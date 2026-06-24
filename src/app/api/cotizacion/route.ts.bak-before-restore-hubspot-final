@@ -1,0 +1,129 @@
+import { NextResponse } from "next/server";
+
+const ACROSS_ORIGINAL_FORM_URL =
+  process.env.ACROSS_ORIGINAL_FORM_URL ||
+  "https://acrosslogistics.com/express-form-submit";
+
+function value(input: unknown) {
+  return String(input || "").trim();
+}
+
+export async function POST(req: Request) {
+  try {
+    const body = await req.json();
+
+    const name = value(body.name);
+    const company = value(body.company);
+    const email = value(body.email);
+    const phone = value(body.phone);
+
+    if (!name || !company || !email || !phone || !body.privacyAccepted) {
+      return NextResponse.json(
+        { ok: false, error: "Missing required fields" },
+        { status: 400 }
+      );
+    }
+
+    const formData = new URLSearchParams();
+
+    /*
+      Endpoint original Across:
+      <form id="cotizacion-express" action="/express-form-submit" method="post">
+      Enviamos nombres de campos compatibles con el formulario original.
+    */
+
+    formData.set("name", name);
+    formData.set("phone", phone);
+    formData.set("email", email);
+    formData.set("company", company);
+    formData.set("website", value(body.website || "https://acrosslogistics.com"));
+    formData.set("country", value(body.country));
+    formData.set("service-date", value(body.contractDate || body.timeline));
+
+    formData.set("operation", value(body.operation));
+    formData.set("service", value(body.service));
+
+    formData.set("country_origin", value(body.originCountry || body.origin));
+    formData.set("address_pickup", value(body.originAddress));
+    formData.set("airport_origin", value(body.originAirport || body.originAirportOther));
+    formData.set("port_origin", value(body.originPort));
+
+    formData.set("country_destination", value(body.destinationCountry || body.destination));
+    formData.set("address_delivery", value(body.destinationAddress));
+    formData.set("airport_destination", value(body.destinationAirport || body.destinationAirportOther));
+    formData.set("port_destination", value(body.destinationPort));
+
+    formData.set("icoterm", value(body.incoterm));
+    formData.set("description_goods", value(body.merchandise || body.message));
+    formData.set("is_stackable", value(body.stackable));
+    formData.set("handling_type", value(body.handling));
+    formData.set("special_requirements", value(body.condition));
+    formData.set("comment", value(body.comments || body.cargoInfo));
+    formData.set("needs", value(body.message || body.comments));
+
+    formData.set("name_cargo", value(body.cargo));
+    formData.set("qty_cargo", value(body.cargoQty));
+    formData.set("vol_cargo", value(body.weight));
+    formData.set("info_cargo", value(body.cargoInfo || body.dimensions));
+    formData.set("fav_type", value(body.units));
+
+    if (body.privacyAccepted) {
+      formData.set("conditions", "on");
+    }
+
+    if (body.marketingAccepted) {
+      formData.set("commercial_info", "on");
+    }
+
+    /*
+      El original también usaba:
+      - g-recaptcha-response
+      - token oculto
+
+      Si Across exige esos campos en producción, hay que generar recaptcha real
+      o pedirles endpoint/API limpia para formularios.
+    */
+    formData.set("g-recaptcha-response", value(body.recaptchaToken));
+    formData.set("token", value(process.env.ACROSS_ORIGINAL_FORM_TOKEN));
+
+    const response = await fetch(ACROSS_ORIGINAL_FORM_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Origin": "https://acrosslogistics.com",
+        "Referer": "https://acrosslogistics.com/cotizacion_express",
+        "User-Agent": "Across Logistics Website",
+      },
+      body: formData.toString(),
+      redirect: "manual",
+    });
+
+    const text = await response.text();
+
+    if (!response.ok && response.status < 300 || response.status >= 400) {
+      return NextResponse.json(
+        {
+          ok: false,
+          status: response.status,
+          target: ACROSS_ORIGINAL_FORM_URL,
+          error: text.slice(0, 1500),
+        },
+        { status: response.status }
+      );
+    }
+
+    return NextResponse.json({
+      ok: true,
+      status: response.status,
+      target: ACROSS_ORIGINAL_FORM_URL,
+    });
+  } catch (error) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: error instanceof Error ? error.message : "Error desconocido",
+      },
+      { status: 500 }
+    );
+  }
+}

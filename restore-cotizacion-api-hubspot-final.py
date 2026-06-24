@@ -1,4 +1,16 @@
-import { NextResponse } from "next/server";
+from pathlib import Path
+import shutil
+
+api_path = Path("src/app/api/cotizacion/route.ts")
+
+if not api_path.exists():
+    raise SystemExit("❌ No existe src/app/api/cotizacion/route.ts")
+
+backup = api_path.with_suffix(api_path.suffix + ".bak-before-restore-hubspot-final")
+if not backup.exists():
+    shutil.copy2(api_path, backup)
+
+code = r'''import { NextResponse } from "next/server";
 
 const HUBSPOT_URL =
   process.env.HUBSPOT_QUOTE_FORM_URL ||
@@ -69,7 +81,6 @@ export async function POST(req: Request) {
       body.destinationPort ? `Puerto de destino: ${body.destinationPort}` : "",
       "",
       "CARGA",
-      body.cargoRowsSummary ? `Detalle de cargas:\n${body.cargoRowsSummary}` : "",
       `Tipo de carga: ${cargoName}`,
       body.cargoQty ? `Cantidad: ${body.cargoQty}` : "",
       `Sistema unidades: ${unitType}`,
@@ -84,10 +95,6 @@ export async function POST(req: Request) {
       body.stackable ? `Apilable: ${body.stackable}` : "",
       body.handling ? `Manipulación: ${body.handling}` : "",
       body.condition ? `Condición especial: ${body.condition}` : "",
-      Array.isArray(body.specialHandling) && body.specialHandling.length
-        ? `Manipulación especial: ${body.specialHandling.join(", ")}`
-        : "",
-      body.specialRequirements ? `Detalle requerimientos especiales: ${body.specialRequirements}` : "",
       body.comments ? `Comentarios finales: ${body.comments}` : "",
     ]
       .filter(Boolean)
@@ -157,3 +164,11 @@ export async function POST(req: Request) {
     );
   }
 }
+'''
+
+api_path.write_text(code, encoding="utf-8")
+
+print("✅ API restaurada a HubSpot")
+print("✅ lastname corregido")
+print("✅ medidas de carga incluidas en message")
+print("✅ Backup:", backup)

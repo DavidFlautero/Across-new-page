@@ -323,7 +323,7 @@ const specialHandlingOptions = [
   {
     id: "mercancia_peligrosa",
     value: "Mercancía peligrosa",
-    image: "/images/quote/mercancia-peligrosa-across-pro.svg",
+    image: "/images/quote/flame.png",
     labels: {
       es: { title: "Mercancía peligrosa", subtitle: "DGP, CAO, cantidades exceptuadas." },
       en: { title: "Dangerous goods", subtitle: "DGP, CAO, excepted quantities." },
@@ -333,7 +333,7 @@ const specialHandlingOptions = [
   {
     id: "baterias_litio",
     value: "Baterías de litio",
-    image: "/images/quote/bateria-litio-across-pro.svg",
+    image: "/images/quote/litio.png",
     labels: {
       es: { title: "Baterías de Litio", subtitle: "ION/Metal + Estatus de equipaje" },
       en: { title: "Lithium batteries", subtitle: "ION/Metal + baggage status" },
@@ -343,7 +343,7 @@ const specialHandlingOptions = [
   {
     id: "temperatura_controlada",
     value: "Temperatura controlada",
-    image: "/images/quote/temperatura-controlada-across-pro.svg",
+    image: "/images/quote/temperature.png",
     labels: {
       es: { title: "Temperatura Controlada", subtitle: "Activo/Pasivo - Rango" },
       en: { title: "Temperature controlled", subtitle: "Active/Passive - Range" },
@@ -353,7 +353,7 @@ const specialHandlingOptions = [
   {
     id: "articulos_restringidos",
     value: "Artículos restringidos, otros.",
-    image: "/images/quote/articulos-restringidos-across-pro.svg",
+    image: "/images/quote/alert.png",
     labels: {
       es: { title: "Artículos restringidos, otros.", subtitle: "Médico, armas, arte, etc" },
       en: { title: "Restricted items, others.", subtitle: "Medical, weapons, art, etc" },
@@ -1480,22 +1480,8 @@ export default function CotizacionPage() {
         }),
       });
 
-      const responseText = await response.text();
-
       if (!response.ok) {
-        let realError = responseText;
-
-        try {
-          const parsed = JSON.parse(responseText);
-          realError =
-            parsed.error ||
-            parsed.message ||
-            parsed.status ||
-            responseText;
-        } catch {}
-
-        console.error("ERROR REAL /api/cotizacion:", response.status, realError);
-        setError(`Error ${response.status}: ${realError || t.error}`);
+        setError(t.error);
         return;
       }
 
@@ -2040,14 +2026,14 @@ export default function CotizacionPage() {
                 <div className={styles.optionGridTwo}>
                   <label className={styles.option}>
                     <input type="radio" name="stackable" value="yes" checked={form.stackable === "yes"} onChange={(e) => setValue("stackable", e.target.value)} />
-                    <Image src="/images/quote/apilable-across-pro.svg" alt={t.stackable} width={120} height={80} />
+                    <Image src="/images/quote/apilable.png" alt={t.stackable} width={120} height={80} />
                     <strong>{t.stackable}</strong>
                     <small>{t.stackableText}</small>
                   </label>
 
                   <label className={styles.option}>
                     <input type="radio" name="stackable" value="no" checked={form.stackable === "no"} onChange={(e) => setValue("stackable", e.target.value)} />
-                    <Image src="/images/quote/no-apilable-across-pro.svg" alt={t.notStackable} width={120} height={80} />
+                    <Image src="/images/quote/not-apilable.png" alt={t.notStackable} width={120} height={80} />
                     <strong>{t.notStackable}</strong>
                     <small>{t.notStackableText}</small>
                   </label>
@@ -2060,14 +2046,14 @@ export default function CotizacionPage() {
                 <div className={styles.optionGridTwo}>
                   <label className={styles.option}>
                     <input type="radio" name="handling" value="general_handling" checked={form.handling === "general_handling"} onChange={(e) => setValue("handling", e.target.value)} />
-                    <Image src="/images/quote/carga-general-across-pro.svg" alt={t.generalCargo} width={120} height={80} />
+                    <Image src="/images/quote/car-general.png" alt={t.generalCargo} width={120} height={80} />
                     <strong>{t.generalCargo}</strong>
                     <small>{t.generalCargoText}</small>
                   </label>
 
                   <label className={styles.option}>
                     <input type="radio" name="handling" value="special_handling" checked={form.handling === "special_handling"} onChange={(e) => setValue("handling", e.target.value)} />
-                    <Image src="/images/quote/manipulacion-especial-across-pro.svg" alt={t.specialHandling} width={120} height={80} />
+                    <Image src="/images/quote/car-especial.png" alt={t.specialHandling} width={120} height={80} />
                     <strong>{t.specialHandling}</strong>
                     <small>{t.specialHandlingText}</small>
                   </label>

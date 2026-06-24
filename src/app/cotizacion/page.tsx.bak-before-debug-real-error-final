@@ -1480,22 +1480,8 @@ export default function CotizacionPage() {
         }),
       });
 
-      const responseText = await response.text();
-
       if (!response.ok) {
-        let realError = responseText;
-
-        try {
-          const parsed = JSON.parse(responseText);
-          realError =
-            parsed.error ||
-            parsed.message ||
-            parsed.status ||
-            responseText;
-        } catch {}
-
-        console.error("ERROR REAL /api/cotizacion:", response.status, realError);
-        setError(`Error ${response.status}: ${realError || t.error}`);
+        setError(t.error);
         return;
       }
 

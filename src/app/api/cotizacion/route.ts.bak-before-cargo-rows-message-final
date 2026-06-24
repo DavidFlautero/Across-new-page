@@ -69,7 +69,6 @@ export async function POST(req: Request) {
       body.destinationPort ? `Puerto de destino: ${body.destinationPort}` : "",
       "",
       "CARGA",
-      body.cargoRowsSummary ? `Detalle de cargas:\n${body.cargoRowsSummary}` : "",
       `Tipo de carga: ${cargoName}`,
       body.cargoQty ? `Cantidad: ${body.cargoQty}` : "",
       `Sistema unidades: ${unitType}`,
@@ -84,10 +83,6 @@ export async function POST(req: Request) {
       body.stackable ? `Apilable: ${body.stackable}` : "",
       body.handling ? `Manipulación: ${body.handling}` : "",
       body.condition ? `Condición especial: ${body.condition}` : "",
-      Array.isArray(body.specialHandling) && body.specialHandling.length
-        ? `Manipulación especial: ${body.specialHandling.join(", ")}`
-        : "",
-      body.specialRequirements ? `Detalle requerimientos especiales: ${body.specialRequirements}` : "",
       body.comments ? `Comentarios finales: ${body.comments}` : "",
     ]
       .filter(Boolean)

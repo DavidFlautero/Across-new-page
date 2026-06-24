@@ -168,162 +168,203 @@ const airportsByCountry: Record<string, string[]> = {
   uae: ["Dubai (DXB)", "Dubai World Central (DWC)", "Abu Dhabi (AUH)"],
 };
 
-const cargoModeOptions = [
+const cargoTypes = [
   {
-    id: "full",
-    image: "/images/contenedores/contenedor-completo.png",
+    id: "pallet_europeo",
+    image: "/images/pallets/European_pallet.png",
     labels: {
-      es: { title: "CONTENEDOR COMPLETO", subtitle: "FCL" },
-      en: { title: "FULL CONTAINER", subtitle: "FCL" },
-      zh: { title: "整箱货", subtitle: "FCL" },
+      es: { title: "Solicite una propuesta logística ajustada a su operación.", subtitle: "Complete los datos de su requerimiento y nuestro equipo preparará una propuesta ajustada a su carga, destino, urgencia y tipo de operación." },
+      en: { title: "European Pallet", subtitle: "120 × 80 cm" },
+      zh: { title: "欧洲托盘", subtitle: "120 × 80 cm" },
     },
   },
   {
-    id: "loose",
+    id: "pallet_americano",
+    image: "/images/pallets/American_pallet.png",
+    labels: {
+      es: { title: "Pallet Americano", subtitle: "120 × 100 cm" },
+      en: { title: "American Pallet", subtitle: "120 × 100 cm" },
+      zh: { title: "美式托盘", subtitle: "120 × 100 cm" },
+    },
+  },
+  {
+    id: "pallets_otros",
+    image: "/images/pallets/otros_pallets.png",
+    labels: {
+      es: { title: "Pallets Otros", subtitle: "a determinar" },
+      en: { title: "Other Pallets", subtitle: "to be determined" },
+      zh: { title: "其他托盘", subtitle: "待确定" },
+    },
+  },
+  {
+    id: "cajas_bultos",
     image: "/images/pallets/cajas.png",
     labels: {
-      es: { title: "CARGA SUELTA", subtitle: "LCL / Pallets / Cajas" },
-      en: { title: "LOOSE CARGO", subtitle: "LCL / Pallets / Boxes" },
-      zh: { title: "散货", subtitle: "LCL / 托盘 / 箱件" },
+      es: { title: "Cajas o bultos", subtitle: "sueltos" },
+      en: { title: "Boxes or packages", subtitle: "loose cargo" },
+      zh: { title: "箱件或散件", subtitle: "散货" },
     },
   },
 ] as const;
 
-const fullContainerCargoTypes = [
+
+const maritimeCargoTypes = [
   {
     id: "contenedor_20",
-    mode: "full",
-    image: "/images/contenedores/contenedor-20.png",
-    nameCargo: "Contenedor Estandar de 20'",
-    rowKind: "container",
+    image: "/images/quote/cargo04.png",
     labels: {
-      es: { title: "Contenedor estándar de", subtitle: "20'" },
-      en: { title: "20' standard container", subtitle: "20'" },
-      zh: { title: "20英尺标准集装箱", subtitle: "20'" },
+      es: { title: "Contenedor estándar de 20'", subtitle: "Contenedor completo" },
+      en: { title: "20' standard container", subtitle: "Full container load" },
+      zh: { title: "20英尺标准集装箱", subtitle: "整箱货" },
     },
   },
   {
     id: "contenedor_40",
-    mode: "full",
-    image: "/images/contenedores/contenedor-20.png",
-    nameCargo: "Contenedor Estandar de 40'",
-    rowKind: "container",
+    image: "/images/quote/cargo04.png",
     labels: {
-      es: { title: "Contenedor estándar de", subtitle: "40'" },
-      en: { title: "40' standard container", subtitle: "40'" },
-      zh: { title: "40英尺标准集装箱", subtitle: "40'" },
+      es: { title: "Contenedor estándar de 40'", subtitle: "Contenedor completo" },
+      en: { title: "40' standard container", subtitle: "Full container load" },
+      zh: { title: "40英尺标准集装箱", subtitle: "整箱货" },
     },
   },
   {
     id: "contenedor_high_cube_40",
-    mode: "full",
-    image: "/images/contenedores/contenedor-20.png",
-    nameCargo: "Contenedor high cube de 40'",
-    rowKind: "container",
+    image: "/images/quote/cargo02.png",
     labels: {
-      es: { title: "Contenedor", subtitle: "high cube de 40'" },
-      en: { title: "40' high cube container", subtitle: "High cube 40'" },
-      zh: { title: "40英尺高箱", subtitle: "High cube 40'" },
+      es: { title: "Contenedor high cube de 40'", subtitle: "Mayor capacidad" },
+      en: { title: "40' high cube container", subtitle: "Higher capacity" },
+      zh: { title: "40英尺高箱", subtitle: "更大容量" },
     },
   },
   {
     id: "contenedor_reefer_20",
-    mode: "full",
-    image: "/images/contenedores/contenedor-20.png",
-    nameCargo: "Contenedor refeer de 20'",
-    rowKind: "container",
+    image: "/images/quote/cargo03.png",
     labels: {
-      es: { title: "Contenedor", subtitle: "reefer de 20'" },
-      en: { title: "20' reefer container", subtitle: "Reefer 20'" },
-      zh: { title: "20英尺冷藏箱", subtitle: "Reefer 20'" },
+      es: { title: "Contenedor reefer de 20'", subtitle: "Temperatura controlada" },
+      en: { title: "20' reefer container", subtitle: "Temperature controlled" },
+      zh: { title: "20英尺冷藏箱", subtitle: "温控运输" },
     },
   },
   {
     id: "contenedor_reefer_40",
-    mode: "full",
-    image: "/images/contenedores/contenedor-20.png",
-    nameCargo: "Contenedor refeer de 40'",
-    rowKind: "container",
+    image: "/images/quote/cargo03.png",
     labels: {
-      es: { title: "Contenedor", subtitle: "reefer de 40'" },
-      en: { title: "40' reefer container", subtitle: "Reefer 40'" },
-      zh: { title: "40英尺冷藏箱", subtitle: "Reefer 40'" },
+      es: { title: "Contenedor reefer de 40'", subtitle: "Temperatura controlada" },
+      en: { title: "40' reefer container", subtitle: "Temperature controlled" },
+      zh: { title: "40英尺冷藏箱", subtitle: "温控运输" },
     },
   },
   {
     id: "contenedor_otro",
-    mode: "full",
-    image: "/images/contenedores/contenedor-20.png",
-    nameCargo: "Otro contenedor",
-    rowKind: "other",
+    image: "/images/quote/cargo01.png",
     labels: {
-      es: { title: "Otro", subtitle: "" },
+      es: { title: "Otro contenedor", subtitle: "A determinar" },
+      en: { title: "Other container", subtitle: "To be determined" },
+      zh: { title: "其他集装箱", subtitle: "待确定" },
+    },
+  },
+  {
+    id: "pallet_europeo",
+    image: "/images/pallets/European_pallet.png",
+    labels: {
+      es: { title: "Pallet Europeo", subtitle: "Carga suelta · 120 × 80 cm" },
+      en: { title: "European Pallet", subtitle: "Loose cargo · 120 × 80 cm" },
+      zh: { title: "欧洲托盘", subtitle: "散货 · 120 × 80 cm" },
+    },
+  },
+  {
+    id: "pallet_americano",
+    image: "/images/pallets/American_pallet.png",
+    labels: {
+      es: { title: "Pallet Americano", subtitle: "Carga suelta · 120 × 100 cm" },
+      en: { title: "American Pallet", subtitle: "Loose cargo · 120 × 100 cm" },
+      zh: { title: "美式托盘", subtitle: "散货 · 120 × 100 cm" },
+    },
+  },
+  {
+    id: "pallets_otros",
+    image: "/images/pallets/otros_pallets.png",
+    labels: {
+      es: { title: "Pallets Otros", subtitle: "Carga suelta · a determinar" },
+      en: { title: "Other Pallets", subtitle: "Loose cargo · to be determined" },
+      zh: { title: "其他托盘", subtitle: "散货 · 待确定" },
+    },
+  },
+  {
+    id: "cajas_bultos",
+    image: "/images/pallets/cajas.png",
+    labels: {
+      es: { title: "Cajas o bultos", subtitle: "Carga suelta" },
+      en: { title: "Boxes or packages", subtitle: "Loose cargo" },
+      zh: { title: "箱件或散件", subtitle: "散货" },
+    },
+  },
+] as const;
+
+
+const fullContainerCargoTypes = [
+  {
+    id: "contenedor_20",
+    image: "/images/quote/cargo04.png",
+    labels: {
+      es: { title: "Contenedor estándar de 20'", subtitle: "Contenedor completo" },
+      en: { title: "20' standard container", subtitle: "Full container load" },
+      zh: { title: "20英尺标准集装箱", subtitle: "整箱货" },
+    },
+  },
+  {
+    id: "contenedor_40",
+    image: "/images/quote/cargo04.png",
+    labels: {
+      es: { title: "Contenedor estándar de 40'", subtitle: "Contenedor completo" },
+      en: { title: "40' standard container", subtitle: "Full container load" },
+      zh: { title: "40英尺标准集装箱", subtitle: "整箱货" },
+    },
+  },
+  {
+    id: "contenedor_high_cube_40",
+    image: "/images/quote/cargo02.png",
+    labels: {
+      es: { title: "Contenedor high cube de 40'", subtitle: "Mayor capacidad" },
+      en: { title: "40' high cube container", subtitle: "Higher capacity" },
+      zh: { title: "40英尺高箱", subtitle: "更大容量" },
+    },
+  },
+  {
+    id: "contenedor_reefer_20",
+    image: "/images/quote/cargo03.png",
+    labels: {
+      es: { title: "Contenedor reefer de 20'", subtitle: "Temperatura controlada" },
+      en: { title: "20' reefer container", subtitle: "Temperature controlled" },
+      zh: { title: "20英尺冷藏箱", subtitle: "温控运输" },
+    },
+  },
+  {
+    id: "contenedor_reefer_40",
+    image: "/images/quote/cargo03.png",
+    labels: {
+      es: { title: "Contenedor reefer de 40'", subtitle: "Temperatura controlada" },
+      en: { title: "40' reefer container", subtitle: "Temperature controlled" },
+      zh: { title: "40英尺冷藏箱", subtitle: "温控运输" },
+    },
+  },
+  {
+    id: "contenedor_otro",
+    image: "/images/quote/cargo01.png",
+    labels: {
+      es: { title: "Otro", subtitle: "A determinar" },
       en: { title: "Other", subtitle: "To be determined" },
       zh: { title: "其他", subtitle: "待确定" },
     },
   },
 ] as const;
 
-const looseCargoTypes = [
-  {
-    id: "pallet_europeo",
-    mode: "loose",
-    image: "/images/pallets/European_pallet.png",
-    nameCargo: "Palet Europeo",
-    rowKind: "pallet",
-    defaults: { longCargo: "120", anchCargo: "80" },
-    labels: {
-      es: { title: "Pallet", subtitle: "Europeo 120x80" },
-      en: { title: "European Pallet", subtitle: "120 × 80" },
-      zh: { title: "欧洲托盘", subtitle: "120 × 80" },
-    },
-  },
-  {
-    id: "pallet_americano",
-    mode: "loose",
-    image: "/images/pallets/American_pallet.png",
-    nameCargo: "Palet Americano",
-    rowKind: "pallet",
-    defaults: { longCargo: "120", anchCargo: "100" },
-    labels: {
-      es: { title: "Pallet", subtitle: "Americano 120x100" },
-      en: { title: "American Pallet", subtitle: "120 × 100" },
-      zh: { title: "美式托盘", subtitle: "120 × 100" },
-    },
-  },
-  {
-    id: "pallets_otros",
-    mode: "loose",
-    image: "/images/pallets/otros_pallets.png",
-    nameCargo: "Pallets otros a determinar",
-    rowKind: "pallet",
-    labels: {
-      es: { title: "Pallets", subtitle: "Otros a determinar" },
-      en: { title: "Other Pallets", subtitle: "To be determined" },
-      zh: { title: "其他托盘", subtitle: "待确定" },
-    },
-  },
-  {
-    id: "cajas_bultos",
-    mode: "loose",
-    image: "/images/pallets/cajas.png",
-    nameCargo: "Cajas o bultos sueltos",
-    rowKind: "box",
-    labels: {
-      es: { title: "Cajas o bultos", subtitle: "sueltos" },
-      en: { title: "Boxes or packages", subtitle: "Loose" },
-      zh: { title: "箱件或散件", subtitle: "散货" },
-    },
-  },
-] as const;
-
-const cargoTypes = looseCargoTypes;
+const looseCargoTypes = cargoTypes;
 
 const specialHandlingOptions = [
   {
     id: "mercancia_peligrosa",
-    value: "Mercancía peligrosa",
-    image: "/images/quote/mercancia-peligrosa-across-pro.svg",
+    image: "/images/quote/flame.png",
     labels: {
       es: { title: "Mercancía peligrosa", subtitle: "DGP, CAO, cantidades exceptuadas." },
       en: { title: "Dangerous goods", subtitle: "DGP, CAO, excepted quantities." },
@@ -332,8 +373,7 @@ const specialHandlingOptions = [
   },
   {
     id: "baterias_litio",
-    value: "Baterías de litio",
-    image: "/images/quote/bateria-litio-across-pro.svg",
+    image: "/images/quote/litio.png",
     labels: {
       es: { title: "Baterías de Litio", subtitle: "ION/Metal + Estatus de equipaje" },
       en: { title: "Lithium batteries", subtitle: "ION/Metal + baggage status" },
@@ -342,8 +382,7 @@ const specialHandlingOptions = [
   },
   {
     id: "temperatura_controlada",
-    value: "Temperatura controlada",
-    image: "/images/quote/temperatura-controlada-across-pro.svg",
+    image: "/images/quote/temperature.png",
     labels: {
       es: { title: "Temperatura Controlada", subtitle: "Activo/Pasivo - Rango" },
       en: { title: "Temperature controlled", subtitle: "Active/Passive - Range" },
@@ -352,8 +391,7 @@ const specialHandlingOptions = [
   },
   {
     id: "articulos_restringidos",
-    value: "Artículos restringidos, otros.",
-    image: "/images/quote/articulos-restringidos-across-pro.svg",
+    image: "/images/quote/alert.png",
     labels: {
       es: { title: "Artículos restringidos, otros.", subtitle: "Médico, armas, arte, etc" },
       en: { title: "Restricted items, others.", subtitle: "Medical, weapons, art, etc" },
@@ -362,47 +400,9 @@ const specialHandlingOptions = [
   },
 ] as const;
 
-type CargoMode = (typeof cargoModeOptions)[number]["id"];
-type FullCargoOption = (typeof fullContainerCargoTypes)[number];
-type LooseCargoOption = (typeof looseCargoTypes)[number];
-type CargoOption = FullCargoOption | LooseCargoOption;
-type CargoType = CargoOption["id"];
-
-type CargoRow = {
-  uid: string;
-  cargoType: CargoType;
-  cargoMode: CargoMode;
-  rowKind: string;
-  nameCargo: string;
-  image: string;
-  qtyCargo: string;
-  longCargo: string;
-  anchCargo: string;
-  altCargo: string;
-  volCargo: string;
-  infoCargo: string;
-  otherCargo: string;
-};
-
-function createCargoRow(option: CargoOption, mode: CargoMode): CargoRow {
-  const defaults: Partial<{ longCargo: string; anchCargo: string }> = "defaults" in option ? option.defaults || {} : {};
-
-  return {
-    uid: `${option.id}-${Date.now()}-${Math.random().toString(16).slice(2)}`,
-    cargoType: option.id,
-    cargoMode: mode,
-    rowKind: option.rowKind,
-    nameCargo: option.nameCargo,
-    image: option.image,
-    qtyCargo: "1",
-    longCargo: String(defaults.longCargo || ""),
-    anchCargo: String(defaults.anchCargo || ""),
-    altCargo: "",
-    volCargo: "",
-    infoCargo: "",
-    otherCargo: "",
-  };
-}
+type CargoType =
+  | (typeof cargoTypes)[number]["id"]
+  | (typeof maritimeCargoTypes)[number]["id"];
 
 
 const copy = {
@@ -741,7 +741,7 @@ const initialForm = {
   destinationAirportOther: "",
 
   incoterm: "",
-  cargoMode: "" as CargoMode | "",
+  cargoMode: "" as "full" | "loose" | "",
   cargoType: "" as CargoType | "",
   units: "metric" as "metric" | "imperial",
   cargoQty: "",
@@ -750,7 +750,6 @@ const initialForm = {
   cargoHeight: "",
   cargoWeight: "",
   cargoInfo: "",
-  cargoRows: [] as CargoRow[],
 
   merchandise: "",
   stackable: "",
@@ -969,7 +968,7 @@ export default function CotizacionPage() {
       : serviceMode === "ocean"
         ? t.otherPortPlaceholder
         : t.otherPointPlaceholder;
-    const maritimeMode = serviceMode === "ocean";
+const maritimeMode = serviceMode === "ocean";
   const visibleCargoTypes =
     maritimeMode && form.cargoMode === "full"
       ? fullContainerCargoTypes
@@ -980,11 +979,54 @@ export default function CotizacionPage() {
           : [];
 
   const selectedCargo = visibleCargoTypes.find((item) => item.id === form.cargoType);
-  const showMeasureBox = form.cargoRows.length > 0;
+  const showMeasureBox = Boolean(form.cargoType);
   const cargoMeasureTitle = selectedCargo?.labels[locale].title || t.cargoTitle;
 
   const lengthUnit = form.units === "metric" ? "cm" : "inch";
   const weightUnit = form.units === "metric" ? "kg" : "lb";
+
+  useEffect(() => {
+    const cargoTypeDefaults: Partial<Record<CargoType, Partial<typeof initialForm>>> = {
+      pallet_europeo: { cargoQty: "1", cargoLength: "120", cargoWidth: "80" },
+      pallet_americano: { cargoQty: "1", cargoLength: "120", cargoWidth: "100" },
+      contenedor_20: { cargoQty: "1" },
+      contenedor_40: { cargoQty: "1" },
+      contenedor_high_cube_40: { cargoQty: "1" },
+      contenedor_reefer_20: { cargoQty: "1" },
+      contenedor_reefer_40: { cargoQty: "1" },
+      contenedor_otro: { cargoQty: "1" },
+    };
+
+    const defaults = cargoTypeDefaults[form.cargoType as CargoType];
+
+    if (!defaults) return;
+
+    setForm((prev) => ({
+      ...prev,
+      cargoQty: prev.cargoQty || String(defaults.cargoQty || ""),
+      cargoLength: prev.cargoLength || String(defaults.cargoLength || ""),
+      cargoWidth: prev.cargoWidth || String(defaults.cargoWidth || ""),
+      cargoHeight: prev.cargoHeight || String(defaults.cargoHeight || ""),
+      cargoWeight: prev.cargoWeight || String(defaults.cargoWeight || ""),
+    }));
+  }, [form.cargoType]);
+
+  useEffect(() => {
+    if (form.cargoType === "pallet_europeo") {
+      setForm((prev) => ({ ...prev,
+        cargoLength: prev.cargoLength || "120",
+        cargoWidth: prev.cargoWidth || "80",
+      }));
+    }
+
+    if (form.cargoType === "pallet_americano") {
+      setForm((prev) => ({ ...prev,
+        cargoLength: prev.cargoLength || "120",
+        cargoWidth: prev.cargoWidth || "100",
+      }));
+    }
+  }, [form.cargoType]);
+
 
   useEffect(() => {
     if (serviceMode === "air") {
@@ -1028,21 +1070,8 @@ export default function CotizacionPage() {
     setStepError("");
   };
 
-  const syncFirstCargoRow = (rows: CargoRow[]) => {
-    const first = rows[0];
 
-    return {
-      cargoType: first?.cargoType || "",
-      cargoQty: first?.qtyCargo || "",
-      cargoLength: first?.longCargo || "",
-      cargoWidth: first?.anchCargo || "",
-      cargoHeight: first?.altCargo || "",
-      cargoWeight: first?.volCargo || "",
-      cargoInfo: first?.infoCargo || first?.otherCargo || "",
-    };
-  };
-
-  const selectCargoMode = (mode: CargoMode) => {
+  const selectCargoMode = (mode: "full" | "loose") => {
     setForm((prev) => ({
       ...prev,
       cargoMode: mode,
@@ -1053,80 +1082,8 @@ export default function CotizacionPage() {
       cargoHeight: "",
       cargoWeight: "",
       cargoInfo: "",
-      cargoRows: [],
     }));
     setStepError("");
-  };
-
-  const addCargoRow = (option: CargoOption) => {
-    setForm((prev) => {
-      const mode = (maritimeMode ? prev.cargoMode || option.mode : "loose") as CargoMode;
-      const nextRows = [...prev.cargoRows, createCargoRow(option, mode)];
-      const first = syncFirstCargoRow(nextRows);
-
-      return {
-        ...prev,
-        ...first,
-        cargoMode: maritimeMode ? mode : "loose",
-        cargoRows: nextRows,
-      };
-    });
-
-    setStepError("");
-  };
-
-  const updateCargoRow = <K extends keyof CargoRow>(
-    uid: string,
-    key: K,
-    value: CargoRow[K]
-  ) => {
-    setForm((prev) => {
-      const nextRows = prev.cargoRows.map((row) =>
-        row.uid === uid ? { ...row, [key]: value } : row
-      );
-      const first = syncFirstCargoRow(nextRows);
-
-      return {
-        ...prev,
-        ...first,
-        cargoRows: nextRows,
-      };
-    });
-
-    setStepError("");
-  };
-
-  const cloneCargoRow = (uid: string) => {
-    setForm((prev) => {
-      const row = prev.cargoRows.find((item) => item.uid === uid);
-      if (!row) return prev;
-
-      const nextRows = [
-        ...prev.cargoRows,
-        {
-          ...row,
-          uid: `${row.cargoType}-${Date.now()}-${Math.random().toString(16).slice(2)}`,
-        },
-      ];
-
-      return {
-        ...prev,
-        cargoRows: nextRows,
-      };
-    });
-  };
-
-  const removeCargoRow = (uid: string) => {
-    setForm((prev) => {
-      const nextRows = prev.cargoRows.filter((row) => row.uid !== uid);
-      const first = syncFirstCargoRow(nextRows);
-
-      return {
-        ...prev,
-        ...first,
-        cargoRows: nextRows,
-      };
-    });
   };
 
   const toggleSpecialHandling = (id: string) => {
@@ -1141,7 +1098,6 @@ export default function CotizacionPage() {
         specialHandling: next,
       };
     });
-
     setStepError("");
   };
 
@@ -1248,48 +1204,17 @@ export default function CotizacionPage() {
     }
 
     if (step === 2) {
-      if (maritimeMode && !form.cargoMode) return requiredCargoMessage;
-      if (form.cargoRows.length === 0) return requiredCargoMessage;
+      if (!isFilled(form.cargoType)) return requiredCargoMessage;
 
-      for (const row of form.cargoRows) {
-        if (!isFilled(row.qtyCargo)) return requiredMessage(t.qty);
-
-        if (row.rowKind === "pallet" || row.rowKind === "box") {
-          if (!isFilled(row.longCargo)) return requiredMessage(t.length);
-          if (!isFilled(row.anchCargo)) return requiredMessage(t.width);
-          if (!isFilled(row.altCargo)) return requiredMessage(t.height);
-          if (!isFilled(row.volCargo)) return requiredMessage(t.weight);
-        }
-
-        if (row.rowKind === "container" && !isFilled(row.volCargo)) {
-          return requiredMessage(t.weight);
-        }
-
-        if (row.rowKind === "other" && !isFilled(row.otherCargo)) {
-          return requiredMessage(t.cargoInfo);
-        }
+      if (showMeasureBox) {
+        if (!isFilled(form.cargoQty)) return requiredMessage(t.qty);
+        if (!isFilled(form.cargoLength)) return requiredMessage(t.length);
+        if (!isFilled(form.cargoWidth)) return requiredMessage(t.width);
+        if (!isFilled(form.cargoHeight)) return requiredMessage(t.height);
+        if (!isFilled(form.cargoWeight)) return requiredMessage(t.weight);
       }
 
       if (!isFilled(form.merchandise)) return requiredMessage(t.merchandise);
-      if (!isFilled(form.stackable)) return requiredMessage(t.stackable);
-      if (!isFilled(form.handling)) return requiredMessage(t.specialHandling);
-
-      if (form.handling === "special_handling" && form.specialHandling.length === 0) {
-        return locale === "en"
-          ? "Select at least one special handling requirement."
-          : locale === "zh"
-            ? "请选择至少一个特殊操作要求。"
-            : "Seleccione al menos un requerimiento especial.";
-      }
-
-      if (form.handling === "special_handling" && !isFilled(form.specialRequirements)) {
-        return locale === "en"
-          ? "Please detail the special handling requirements."
-          : locale === "zh"
-            ? "请详细说明特殊操作要求。"
-            : "Detalle al máximo los requerimientos especiales.";
-      }
-
       return "";
     }
 
@@ -1419,22 +1344,6 @@ export default function CotizacionPage() {
     setError("");
 
     const selectedCargoLabel = selectedCargo?.labels[locale];
-    const cargoRowsSummary = form.cargoRows
-      .map((row, index) => {
-        const base = [
-          `${index + 1}. ${row.nameCargo}`,
-          `Cantidad: ${row.qtyCargo || "-"}`,
-          row.rowKind !== "container" ? `Largo: ${row.longCargo || "-"} ${lengthUnit}` : "",
-          row.rowKind !== "container" ? `Ancho: ${row.anchCargo || "-"} ${lengthUnit}` : "",
-          row.rowKind !== "container" ? `Altura: ${row.altCargo || "-"} ${lengthUnit}` : "",
-          `Peso: ${row.volCargo || "-"} ${weightUnit}`,
-          row.infoCargo ? `Info: ${row.infoCargo}` : "",
-          row.otherCargo ? `Otro: ${row.otherCargo}` : "",
-        ];
-
-        return base.filter(Boolean).join(" | ");
-      })
-      .join("\n");
 
     try {
       const response = await fetch("/api/cotizacion", {
@@ -1462,13 +1371,11 @@ export default function CotizacionPage() {
               .filter(Boolean)
               .join(" | "),
           cargoMode: form.cargoMode,
-          cargoRows: form.cargoRows,
-          cargoRowsSummary,
           specialHandling: form.specialHandling,
           specialRequirements: form.specialRequirements,
-          cargo: cargoRowsSummary || (selectedCargoLabel
+          cargo: selectedCargoLabel
             ? `${selectedCargoLabel.title} - ${selectedCargoLabel.subtitle}`
-            : ""),
+            : "",
           weight: form.cargoWeight ? `${form.cargoWeight} ${weightUnit}` : "",
           dimensions:
             form.cargoLength || form.cargoWidth || form.cargoHeight
@@ -1480,22 +1387,8 @@ export default function CotizacionPage() {
         }),
       });
 
-      const responseText = await response.text();
-
       if (!response.ok) {
-        let realError = responseText;
-
-        try {
-          const parsed = JSON.parse(responseText);
-          realError =
-            parsed.error ||
-            parsed.message ||
-            parsed.status ||
-            responseText;
-        } catch {}
-
-        console.error("ERROR REAL /api/cotizacion:", response.status, realError);
-        setError(`Error ${response.status}: ${realError || t.error}`);
+        setError(t.error);
         return;
       }
 
@@ -1855,57 +1748,25 @@ export default function CotizacionPage() {
               </div>
               <div className={styles.accordionBody}>
 
-            {maritimeMode && (
-              <div className={styles.cargoModeGrid}>
-                {cargoModeOptions.map((item) => {
-                  const label = item.labels[locale];
+            <div className={styles.cargoGrid}>
+              {visibleCargoTypes.map((item) => {
+                const label = item.labels[locale];
 
-                  return (
-                    <button
-                      key={item.id}
-                      type="button"
-                      className={styles.cargoModeOption}
-                      data-active={form.cargoMode === item.id}
-                      onClick={() => selectCargoMode(item.id)}
-                    >
-                      <Image src={item.image} alt={label.title} width={180} height={120} />
-                      <span>
-                        <strong>{label.title}</strong>
-                        <small>{label.subtitle}</small>
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
-            )}
-
-            {(!maritimeMode || form.cargoMode) && (
-              <div className={styles.cargoGrid}>
-                {visibleCargoTypes.map((item) => {
-                  const label = item.labels[locale];
-
-                  return (
-                    <button
-                      key={item.id}
-                      type="button"
-                      className={`${styles.cargoOption} ${styles.cargoButton}`}
-                      data-cargo-id={item.id}
-                      data-active={form.cargoType === item.id}
-                      onClick={() => addCargoRow(item)}
-                    >
-                      <Image src={item.image} alt={label.title} width={160} height={110} className={styles.cargoImage} />
-                      <span className={styles.cargoText}>
-                        <strong>{label.title}</strong>
-                        <small>{label.subtitle}</small>
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
-            )}
+                return (
+                  <label key={item.id} className={styles.cargoOption}>
+                    <input type="radio" name="cargoType" value={item.id} checked={form.cargoType === item.id} onChange={() => setValue("cargoType", item.id)} />
+                    <Image src={item.image} alt={label.title} width={120} height={80} className={styles.cargoImage} />
+                    <span className={styles.cargoText}>
+                      <strong>{label.title}</strong>
+                      <small>{label.subtitle}</small>
+                    </span>
+                  </label>
+                );
+              })}
+            </div>
 
             {showMeasureBox && (
-              <div className={styles.cargoRowsBox}>
+              <div className={styles.measureBox}>
                 <div className={styles.measureHead}>
                   <h3>{cargoMeasureTitle}</h3>
 
@@ -1922,108 +1783,48 @@ export default function CotizacionPage() {
                   </div>
                 </div>
 
-                <div className={styles.cargoRowsList}>
-                  {form.cargoRows.map((row) => (
-                    <div key={row.uid} className={styles.cargoRow}>
-                      {row.rowKind === "other" ? (
-                        <>
-                          <label className={styles.fullWidth}>
-                            Otro tipo de carga
-                            <textarea
-                              value={row.otherCargo}
-                              onChange={(event) => updateCargoRow(row.uid, "otherCargo", event.target.value)}
-                              placeholder={t.cargoInfoPlaceholder}
-                              rows={5}
-                            />
-                          </label>
-                        </>
-                      ) : (
-                        <>
-                          <div className={styles.cargoRowTitle}>
-                            <Image src={row.image} alt={row.nameCargo} width={120} height={78} />
-                            <strong>{row.nameCargo}</strong>
-                          </div>
+                <div className={styles.measureGrid}>
+                  <label>
+                    {t.qty}
+                    <input type="number" min="1" placeholder="1" value={form.cargoQty} onChange={(e) => setValue("cargoQty", e.target.value)} />
+                  </label>
 
-                          <div className={styles.cargoRowFields}>
-                            <label className={styles.cargoRowField}>
-                              <span>{t.qty}</span>
-                              <input
-                                type="number"
-                                min="1"
-                                value={row.qtyCargo}
-                                onChange={(event) => updateCargoRow(row.uid, "qtyCargo", event.target.value)}
-                              />
-                            </label>
-
-                            {row.rowKind !== "container" && (
-                              <>
-                                <label className={styles.cargoRowField}>
-                                  <span>{t.length}</span>
-                                  <input
-                                    type="number"
-                                    value={row.longCargo}
-                                    readOnly={row.cargoType === "pallet_europeo" || row.cargoType === "pallet_americano"}
-                                    onChange={(event) => updateCargoRow(row.uid, "longCargo", event.target.value)}
-                                  />
-                                  <b>{lengthUnit}</b>
-                                </label>
-
-                                <label className={styles.cargoRowField}>
-                                  <span>{t.width}</span>
-                                  <input
-                                    type="number"
-                                    value={row.anchCargo}
-                                    readOnly={row.cargoType === "pallet_europeo" || row.cargoType === "pallet_americano"}
-                                    onChange={(event) => updateCargoRow(row.uid, "anchCargo", event.target.value)}
-                                  />
-                                  <b>{lengthUnit}</b>
-                                </label>
-
-                                <label className={styles.cargoRowField}>
-                                  <span>{t.height}</span>
-                                  <input
-                                    type="number"
-                                    value={row.altCargo}
-                                    onChange={(event) => updateCargoRow(row.uid, "altCargo", event.target.value)}
-                                  />
-                                  <b>{lengthUnit}</b>
-                                </label>
-                              </>
-                            )}
-
-                            <label className={styles.cargoRowField}>
-                              <span>{t.weight}</span>
-                              <input
-                                type="number"
-                                value={row.volCargo}
-                                onChange={(event) => updateCargoRow(row.uid, "volCargo", event.target.value)}
-                              />
-                              <b>{weightUnit}</b>
-                            </label>
-
-                            <label className={styles.cargoRowField}>
-                              <span>{t.cargoInfo}</span>
-                              <input
-                                type="text"
-                                value={row.infoCargo}
-                                onChange={(event) => updateCargoRow(row.uid, "infoCargo", event.target.value)}
-                                placeholder={t.complete}
-                              />
-                            </label>
-                          </div>
-                        </>
-                      )}
-
-                      <div className={styles.cargoRowActions}>
-                        <button type="button" onClick={() => cloneCargoRow(row.uid)} aria-label="Clonar carga">
-                          ⧉
-                        </button>
-                        <button type="button" onClick={() => removeCargoRow(row.uid)} aria-label="Eliminar carga">
-                          ×
-                        </button>
-                      </div>
+                  <label>
+                    {t.length}
+                    <div className={styles.unitInput}>
+                      <input type="number" min="0" placeholder={t.complete} value={form.cargoLength} onChange={(e) => setValue("cargoLength", e.target.value)} />
+                      <span>{lengthUnit}</span>
                     </div>
-                  ))}
+                  </label>
+
+                  <label>
+                    {t.width}
+                    <div className={styles.unitInput}>
+                      <input type="number" min="0" placeholder={t.complete} value={form.cargoWidth} onChange={(e) => setValue("cargoWidth", e.target.value)} />
+                      <span>{lengthUnit}</span>
+                    </div>
+                  </label>
+
+                  <label>
+                    {t.height}
+                    <div className={styles.unitInput}>
+                      <input type="number" min="0" placeholder={t.complete} value={form.cargoHeight} onChange={(e) => setValue("cargoHeight", e.target.value)} />
+                      <span>{lengthUnit}</span>
+                    </div>
+                  </label>
+
+                  <label>
+                    {t.weight}
+                    <div className={styles.unitInput}>
+                      <input type="number" min="0" placeholder={t.complete} value={form.cargoWeight} onChange={(e) => setValue("cargoWeight", e.target.value)} />
+                      <span>{weightUnit}</span>
+                    </div>
+                  </label>
+
+                  <label className={styles.fullWidth}>
+                    {t.cargoInfo}
+                    <textarea placeholder={t.cargoInfoPlaceholder} value={form.cargoInfo} onChange={(e) => setValue("cargoInfo", e.target.value)} />
+                  </label>
                 </div>
               </div>
             )}
@@ -2034,81 +1835,31 @@ export default function CotizacionPage() {
                 <textarea placeholder={t.merchandisePlaceholder} value={form.merchandise} onChange={(e) => setValue("merchandise", e.target.value)} required />
               </label>
 
-              <div className={styles.requirementBlock}>
-                <h3>Es su carga apilable?</h3>
+              <div className={styles.optionGridFour}>
+                <label className={styles.option}>
+                  <input type="radio" name="stackable" value={t.stackable} checked={form.stackable === t.stackable} onChange={(e) => setValue("stackable", e.target.value)} />
+                  <strong>{t.stackable}</strong>
+                  <small>{t.stackableText}</small>
+                </label>
 
-                <div className={styles.optionGridTwo}>
-                  <label className={styles.option}>
-                    <input type="radio" name="stackable" value="yes" checked={form.stackable === "yes"} onChange={(e) => setValue("stackable", e.target.value)} />
-                    <Image src="/images/quote/apilable-across-pro.svg" alt={t.stackable} width={120} height={80} />
-                    <strong>{t.stackable}</strong>
-                    <small>{t.stackableText}</small>
-                  </label>
+                <label className={styles.option}>
+                  <input type="radio" name="stackable" value={t.notStackable} checked={form.stackable === t.notStackable} onChange={(e) => setValue("stackable", e.target.value)} />
+                  <strong>{t.notStackable}</strong>
+                  <small>{t.notStackableText}</small>
+                </label>
 
-                  <label className={styles.option}>
-                    <input type="radio" name="stackable" value="no" checked={form.stackable === "no"} onChange={(e) => setValue("stackable", e.target.value)} />
-                    <Image src="/images/quote/no-apilable-across-pro.svg" alt={t.notStackable} width={120} height={80} />
-                    <strong>{t.notStackable}</strong>
-                    <small>{t.notStackableText}</small>
-                  </label>
-                </div>
+                <label className={styles.option}>
+                  <input type="radio" name="handling" value={t.generalCargo} checked={form.handling === t.generalCargo} onChange={(e) => setValue("handling", e.target.value)} />
+                  <strong>{t.generalCargo}</strong>
+                  <small>{t.generalCargoText}</small>
+                </label>
+
+                <label className={styles.option}>
+                  <input type="radio" name="handling" value={t.specialHandling} checked={form.handling === t.specialHandling} onChange={(e) => setValue("handling", e.target.value)} />
+                  <strong>{t.specialHandling}</strong>
+                  <small>{t.specialHandlingText}</small>
+                </label>
               </div>
-
-              <div className={styles.requirementBlock}>
-                <h3>Tiene requerimientos especiales de manipulación?</h3>
-
-                <div className={styles.optionGridTwo}>
-                  <label className={styles.option}>
-                    <input type="radio" name="handling" value="general_handling" checked={form.handling === "general_handling"} onChange={(e) => setValue("handling", e.target.value)} />
-                    <Image src="/images/quote/carga-general-across-pro.svg" alt={t.generalCargo} width={120} height={80} />
-                    <strong>{t.generalCargo}</strong>
-                    <small>{t.generalCargoText}</small>
-                  </label>
-
-                  <label className={styles.option}>
-                    <input type="radio" name="handling" value="special_handling" checked={form.handling === "special_handling"} onChange={(e) => setValue("handling", e.target.value)} />
-                    <Image src="/images/quote/manipulacion-especial-across-pro.svg" alt={t.specialHandling} width={120} height={80} />
-                    <strong>{t.specialHandling}</strong>
-                    <small>{t.specialHandlingText}</small>
-                  </label>
-                </div>
-              </div>
-
-              {form.handling === "special_handling" && (
-                <div className={styles.specialHandlingPanel}>
-                  <div className={styles.optionGridFour}>
-                    {specialHandlingOptions.map((item) => {
-                      const label = item.labels[locale];
-
-                      return (
-                        <label key={item.id} className={styles.cargoOption}>
-                          <input
-                            type="checkbox"
-                            name="specialHandling"
-                            checked={form.specialHandling.includes(item.value)}
-                            onChange={() => toggleSpecialHandling(item.value)}
-                          />
-                          <Image src={item.image} alt={label.title} width={120} height={90} className={styles.cargoImage} />
-                          <span className={styles.cargoText}>
-                            <strong>{label.title}</strong>
-                            <small>{label.subtitle}</small>
-                          </span>
-                        </label>
-                      );
-                    })}
-                  </div>
-
-                  <label className={styles.fullWidth}>
-                    Detalle al máximo los requerimientos especiales*
-                    <textarea
-                      placeholder={t.complete}
-                      value={form.specialRequirements}
-                      onChange={(event) => setValue("specialRequirements", event.target.value)}
-                      rows={5}
-                    />
-                  </label>
-                </div>
-              )}
             </div>
 
               <div className={styles.accordionActions}>

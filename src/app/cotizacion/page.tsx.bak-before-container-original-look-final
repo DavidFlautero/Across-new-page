@@ -197,7 +197,7 @@ const fullContainerCargoTypes = [
     nameCargo: "Contenedor Estandar de 20'",
     rowKind: "container",
     labels: {
-      es: { title: "Contenedor estándar de", subtitle: "20'" },
+      es: { title: "Contenedor estándar de 20'", subtitle: "20'" },
       en: { title: "20' standard container", subtitle: "20'" },
       zh: { title: "20英尺标准集装箱", subtitle: "20'" },
     },
@@ -205,11 +205,11 @@ const fullContainerCargoTypes = [
   {
     id: "contenedor_40",
     mode: "full",
-    image: "/images/contenedores/contenedor-20.png",
+    image: "/images/contenedores/contenedor-40.png",
     nameCargo: "Contenedor Estandar de 40'",
     rowKind: "container",
     labels: {
-      es: { title: "Contenedor estándar de", subtitle: "40'" },
+      es: { title: "Contenedor estándar de 40'", subtitle: "40'" },
       en: { title: "40' standard container", subtitle: "40'" },
       zh: { title: "40英尺标准集装箱", subtitle: "40'" },
     },
@@ -217,11 +217,11 @@ const fullContainerCargoTypes = [
   {
     id: "contenedor_high_cube_40",
     mode: "full",
-    image: "/images/contenedores/contenedor-20.png",
+    image: "/images/contenedores/contenedor-higcubbe40.png",
     nameCargo: "Contenedor high cube de 40'",
     rowKind: "container",
     labels: {
-      es: { title: "Contenedor", subtitle: "high cube de 40'" },
+      es: { title: "Contenedor high cube de 40'", subtitle: "High cube 40'" },
       en: { title: "40' high cube container", subtitle: "High cube 40'" },
       zh: { title: "40英尺高箱", subtitle: "High cube 40'" },
     },
@@ -229,11 +229,11 @@ const fullContainerCargoTypes = [
   {
     id: "contenedor_reefer_20",
     mode: "full",
-    image: "/images/contenedores/contenedor-20.png",
+    image: "/images/contenedores/contenedor-reefer-20.png",
     nameCargo: "Contenedor refeer de 20'",
     rowKind: "container",
     labels: {
-      es: { title: "Contenedor", subtitle: "reefer de 20'" },
+      es: { title: "Contenedor reefer de 20'", subtitle: "Reefer 20'" },
       en: { title: "20' reefer container", subtitle: "Reefer 20'" },
       zh: { title: "20英尺冷藏箱", subtitle: "Reefer 20'" },
     },
@@ -241,11 +241,11 @@ const fullContainerCargoTypes = [
   {
     id: "contenedor_reefer_40",
     mode: "full",
-    image: "/images/contenedores/contenedor-20.png",
+    image: "/images/contenedores/contenedor-reefer-40.png",
     nameCargo: "Contenedor refeer de 40'",
     rowKind: "container",
     labels: {
-      es: { title: "Contenedor", subtitle: "reefer de 40'" },
+      es: { title: "Contenedor reefer de 40'", subtitle: "Reefer 40'" },
       en: { title: "40' reefer container", subtitle: "Reefer 40'" },
       zh: { title: "40英尺冷藏箱", subtitle: "Reefer 40'" },
     },
@@ -253,11 +253,11 @@ const fullContainerCargoTypes = [
   {
     id: "contenedor_otro",
     mode: "full",
-    image: "/images/contenedores/contenedor-20.png",
+    image: "/images/contenedores/otro.png",
     nameCargo: "Otro contenedor",
     rowKind: "other",
     labels: {
-      es: { title: "Otro", subtitle: "" },
+      es: { title: "Otro", subtitle: "A determinar" },
       en: { title: "Other", subtitle: "To be determined" },
       zh: { title: "其他", subtitle: "待确定" },
     },
@@ -273,7 +273,7 @@ const looseCargoTypes = [
     rowKind: "pallet",
     defaults: { longCargo: "120", anchCargo: "80" },
     labels: {
-      es: { title: "Pallet", subtitle: "Europeo 120x80" },
+      es: { title: "Pallet Europeo", subtitle: "120 × 80" },
       en: { title: "European Pallet", subtitle: "120 × 80" },
       zh: { title: "欧洲托盘", subtitle: "120 × 80" },
     },
@@ -286,7 +286,7 @@ const looseCargoTypes = [
     rowKind: "pallet",
     defaults: { longCargo: "120", anchCargo: "100" },
     labels: {
-      es: { title: "Pallet", subtitle: "Americano 120x100" },
+      es: { title: "Pallet Americano", subtitle: "120 × 100" },
       en: { title: "American Pallet", subtitle: "120 × 100" },
       zh: { title: "美式托盘", subtitle: "120 × 100" },
     },
@@ -298,7 +298,7 @@ const looseCargoTypes = [
     nameCargo: "Pallets otros a determinar",
     rowKind: "pallet",
     labels: {
-      es: { title: "Pallets", subtitle: "Otros a determinar" },
+      es: { title: "Pallets Otros", subtitle: "A determinar" },
       en: { title: "Other Pallets", subtitle: "To be determined" },
       zh: { title: "其他托盘", subtitle: "待确定" },
     },
@@ -310,7 +310,7 @@ const looseCargoTypes = [
     nameCargo: "Cajas o bultos sueltos",
     rowKind: "box",
     labels: {
-      es: { title: "Cajas o bultos", subtitle: "sueltos" },
+      es: { title: "Cajas o bultos", subtitle: "Sueltos" },
       en: { title: "Boxes or packages", subtitle: "Loose" },
       zh: { title: "箱件或散件", subtitle: "散货" },
     },
@@ -323,7 +323,7 @@ const specialHandlingOptions = [
   {
     id: "mercancia_peligrosa",
     value: "Mercancía peligrosa",
-    image: "/images/quote/mercancia-peligrosa-across-pro.svg",
+    image: "/images/quote/flame.png",
     labels: {
       es: { title: "Mercancía peligrosa", subtitle: "DGP, CAO, cantidades exceptuadas." },
       en: { title: "Dangerous goods", subtitle: "DGP, CAO, excepted quantities." },
@@ -333,7 +333,7 @@ const specialHandlingOptions = [
   {
     id: "baterias_litio",
     value: "Baterías de litio",
-    image: "/images/quote/bateria-litio-across-pro.svg",
+    image: "/images/quote/litio.png",
     labels: {
       es: { title: "Baterías de Litio", subtitle: "ION/Metal + Estatus de equipaje" },
       en: { title: "Lithium batteries", subtitle: "ION/Metal + baggage status" },
@@ -343,7 +343,7 @@ const specialHandlingOptions = [
   {
     id: "temperatura_controlada",
     value: "Temperatura controlada",
-    image: "/images/quote/temperatura-controlada-across-pro.svg",
+    image: "/images/quote/temperature.png",
     labels: {
       es: { title: "Temperatura Controlada", subtitle: "Activo/Pasivo - Rango" },
       en: { title: "Temperature controlled", subtitle: "Active/Passive - Range" },
@@ -353,7 +353,7 @@ const specialHandlingOptions = [
   {
     id: "articulos_restringidos",
     value: "Artículos restringidos, otros.",
-    image: "/images/quote/articulos-restringidos-across-pro.svg",
+    image: "/images/quote/alert.png",
     labels: {
       es: { title: "Artículos restringidos, otros.", subtitle: "Médico, armas, arte, etc" },
       en: { title: "Restricted items, others.", subtitle: "Medical, weapons, art, etc" },
@@ -1480,22 +1480,8 @@ export default function CotizacionPage() {
         }),
       });
 
-      const responseText = await response.text();
-
       if (!response.ok) {
-        let realError = responseText;
-
-        try {
-          const parsed = JSON.parse(responseText);
-          realError =
-            parsed.error ||
-            parsed.message ||
-            parsed.status ||
-            responseText;
-        } catch {}
-
-        console.error("ERROR REAL /api/cotizacion:", response.status, realError);
-        setError(`Error ${response.status}: ${realError || t.error}`);
+        setError(t.error);
         return;
       }
 
@@ -1889,7 +1875,6 @@ export default function CotizacionPage() {
                       key={item.id}
                       type="button"
                       className={`${styles.cargoOption} ${styles.cargoButton}`}
-                      data-cargo-id={item.id}
                       data-active={form.cargoType === item.id}
                       onClick={() => addCargoRow(item)}
                     >
@@ -2040,14 +2025,14 @@ export default function CotizacionPage() {
                 <div className={styles.optionGridTwo}>
                   <label className={styles.option}>
                     <input type="radio" name="stackable" value="yes" checked={form.stackable === "yes"} onChange={(e) => setValue("stackable", e.target.value)} />
-                    <Image src="/images/quote/apilable-across-pro.svg" alt={t.stackable} width={120} height={80} />
+                    <Image src="/images/quote/apilable.png" alt={t.stackable} width={120} height={80} />
                     <strong>{t.stackable}</strong>
                     <small>{t.stackableText}</small>
                   </label>
 
                   <label className={styles.option}>
                     <input type="radio" name="stackable" value="no" checked={form.stackable === "no"} onChange={(e) => setValue("stackable", e.target.value)} />
-                    <Image src="/images/quote/no-apilable-across-pro.svg" alt={t.notStackable} width={120} height={80} />
+                    <Image src="/images/quote/not-apilable.png" alt={t.notStackable} width={120} height={80} />
                     <strong>{t.notStackable}</strong>
                     <small>{t.notStackableText}</small>
                   </label>
@@ -2060,14 +2045,14 @@ export default function CotizacionPage() {
                 <div className={styles.optionGridTwo}>
                   <label className={styles.option}>
                     <input type="radio" name="handling" value="general_handling" checked={form.handling === "general_handling"} onChange={(e) => setValue("handling", e.target.value)} />
-                    <Image src="/images/quote/carga-general-across-pro.svg" alt={t.generalCargo} width={120} height={80} />
+                    <Image src="/images/quote/car-general.png" alt={t.generalCargo} width={120} height={80} />
                     <strong>{t.generalCargo}</strong>
                     <small>{t.generalCargoText}</small>
                   </label>
 
                   <label className={styles.option}>
                     <input type="radio" name="handling" value="special_handling" checked={form.handling === "special_handling"} onChange={(e) => setValue("handling", e.target.value)} />
-                    <Image src="/images/quote/manipulacion-especial-across-pro.svg" alt={t.specialHandling} width={120} height={80} />
+                    <Image src="/images/quote/car-especial.png" alt={t.specialHandling} width={120} height={80} />
                     <strong>{t.specialHandling}</strong>
                     <small>{t.specialHandlingText}</small>
                   </label>

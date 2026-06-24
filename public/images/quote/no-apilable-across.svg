@@ -1,0 +1,19 @@
+<svg width="180" height="120" viewBox="0 0 180 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="180" height="120" fill="transparent"/>
+  <g stroke="#202020" stroke-width="2" stroke-linejoin="round">
+    <rect x="38" y="44" width="34" height="27" fill="#F7F7F7"/>
+    <rect x="84" y="44" width="34" height="27" fill="#F7F7F7"/>
+    <rect x="130" y="44" width="34" height="27" fill="#F7F7F7"/>
+
+    <path d="M43 48L67 67"/>
+    <path d="M89 48L113 67"/>
+    <path d="M135 48L159 67"/>
+
+    <path d="M38 71H72"/>
+    <path d="M84 71H118"/>
+    <path d="M130 71H164"/>
+  </g>
+
+  <path d="M32 86H168" stroke="#BDBDBD" stroke-width="3"/>
+  <path d="M48 22L132 96" stroke="#D00236" stroke-width="4" stroke-linecap="round"/>
+</svg>
