@@ -1495,7 +1495,21 @@ export default function CotizacionPage() {
         } catch {}
 
         console.error("ERROR REAL /api/cotizacion:", response.status, realError);
-        setError(`Error ${response.status}: ${realError || t.error}`);
+
+        const normalizedError = String(realError || "").toUpperCase();
+
+        if (normalizedError.includes("BLOCKED_EMAIL") || normalizedError.includes("FIELDS.EMAIL")) {
+          setError(
+            locale === "en"
+              ? "The email entered cannot be used. Please use a valid personal or business email."
+              : locale === "zh"
+                ? "输入的电子邮件无法使用。请使用有效的个人或公司邮箱。"
+                : "El correo ingresado no puede ser utilizado. Por favor, use un email personal o corporativo válido."
+          );
+          return;
+        }
+
+        setError(t.error);
         return;
       }
 
@@ -2037,19 +2051,23 @@ export default function CotizacionPage() {
               <div className={styles.requirementBlock}>
                 <h3>Es su carga apilable?</h3>
 
-                <div className={styles.optionGridTwo}>
-                  <label className={styles.option}>
+                <div className={styles.reqCardsGrid}>
+                  <label className={styles.reqCard}>
                     <input type="radio" name="stackable" value="yes" checked={form.stackable === "yes"} onChange={(e) => setValue("stackable", e.target.value)} />
                     <Image src="/images/quote/apilable-across-pro.svg" alt={t.stackable} width={120} height={80} />
-                    <strong>{t.stackable}</strong>
-                    <small>{t.stackableText}</small>
+                    <span className={styles.reqCardCopy}>
+                      <strong>{t.stackable}</strong>
+                      <small>{t.stackableText}</small>
+                    </span>
                   </label>
 
-                  <label className={styles.option}>
+                  <label className={styles.reqCard}>
                     <input type="radio" name="stackable" value="no" checked={form.stackable === "no"} onChange={(e) => setValue("stackable", e.target.value)} />
                     <Image src="/images/quote/no-apilable-across-pro.svg" alt={t.notStackable} width={120} height={80} />
-                    <strong>{t.notStackable}</strong>
-                    <small>{t.notStackableText}</small>
+                    <span className={styles.reqCardCopy}>
+                      <strong>{t.notStackable}</strong>
+                      <small>{t.notStackableText}</small>
+                    </span>
                   </label>
                 </div>
               </div>
@@ -2057,19 +2075,23 @@ export default function CotizacionPage() {
               <div className={styles.requirementBlock}>
                 <h3>Tiene requerimientos especiales de manipulación?</h3>
 
-                <div className={styles.optionGridTwo}>
-                  <label className={styles.option}>
+                <div className={styles.reqCardsGrid}>
+                  <label className={styles.reqCard}>
                     <input type="radio" name="handling" value="general_handling" checked={form.handling === "general_handling"} onChange={(e) => setValue("handling", e.target.value)} />
                     <Image src="/images/quote/carga-general-across-pro.svg" alt={t.generalCargo} width={120} height={80} />
-                    <strong>{t.generalCargo}</strong>
-                    <small>{t.generalCargoText}</small>
+                    <span className={styles.reqCardCopy}>
+                      <strong>{t.generalCargo}</strong>
+                      <small>{t.generalCargoText}</small>
+                    </span>
                   </label>
 
-                  <label className={styles.option}>
+                  <label className={styles.reqCard}>
                     <input type="radio" name="handling" value="special_handling" checked={form.handling === "special_handling"} onChange={(e) => setValue("handling", e.target.value)} />
                     <Image src="/images/quote/manipulacion-especial-across-pro.svg" alt={t.specialHandling} width={120} height={80} />
-                    <strong>{t.specialHandling}</strong>
-                    <small>{t.specialHandlingText}</small>
+                    <span className={styles.reqCardCopy}>
+                      <strong>{t.specialHandling}</strong>
+                      <small>{t.specialHandlingText}</small>
+                    </span>
                   </label>
                 </div>
               </div>
