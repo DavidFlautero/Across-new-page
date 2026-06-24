@@ -1247,39 +1247,54 @@ export default function CotizacionPage() {
 
   const isValidEmailValue = (value: string) => {
     const email = value.trim().toLowerCase();
-    return /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i.test(email);
+    return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
   };
 
   const isBlockedEmailValue = (value: string) => {
     const email = value.trim().toLowerCase();
     const [local = "", domain = ""] = email.split("@");
 
-    if (!email || !local || !domain) return true;
-
-    // Solo bloqueamos correos claramente falsos o temporales.
-    const blockedExactEmails = new Set([
-      "test@test.com",
-      "test@example.com",
-      "prueba@prueba.com",
-      "demo@demo.com",
-      "fake@fake.com",
-      "correo@correo.com",
-      "email@email.com",
-      "a@a.com",
+    const blockedLocals = new Set([
+      "test",
+      "prueba",
+      "demo",
+      "fake",
+      "asdf",
+      "qwerty",
+      "correo",
+      "email",
+      "mail",
+      "hola",
+      "nombre",
+      "empresa",
+      "admin",
+      "info",
     ]);
 
-    const blockedTempDomains = [
-      "mailinator.",
-      "yopmail.",
-      "10minutemail.",
-      "guerrillamail.",
-      "tempmail.",
-      "temp-mail.",
-      "trashmail.",
+    const blockedDomains = [
+      "test.com",
+      "example.com",
+      "example.es",
+      "dominio.com",
+      "dominio.es",
+      "correo.com",
+      "email.com",
+      "mail.com",
+      "fake.com",
+      "prueba.com",
+      "asdf.com",
+      "qwerty.com",
+      "tempmail",
+      "temp-mail",
+      "mailinator",
+      "yopmail",
+      "10minutemail",
+      "guerrillamail",
     ];
 
-    if (blockedExactEmails.has(email)) return true;
-    if (blockedTempDomains.some((blocked) => domain.includes(blocked))) return true;
+    if (!email || !domain) return true;
+    if (blockedLocals.has(local)) return true;
+    if (blockedDomains.some((blocked) => domain.includes(blocked))) return true;
 
     return false;
   };

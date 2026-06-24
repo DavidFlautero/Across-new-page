@@ -10,7 +10,7 @@ type Locale = "es" | "en" | "zh";
 const copy = {
   es: {
     badge: "CONTACTO",
-    heroTitle: "Solicite su presupuesto logístico ahora.",
+    heroTitle: "Coordinemos su próxima operación logística.",
     heroText: "Nuestro equipo le ayudará a identificar la solución adecuada para su carga, ruta o necesidad operativa.",
     formTitle: "Formulario de contacto",
     name: "Nombre*",
