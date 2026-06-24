@@ -10185,3 +10185,113 @@
 }
 
 /* === PROCESS ICONS VISIBLE REAL FINAL END === */
+
+/* === PROCESS ICONS ACTUALLY VISIBLE FINAL START === */
+
+/* Proceso con número + icono + texto, igual a Sectores */
+.page .processGrid,
+.processGrid {
+  display: grid !important;
+}
+
+.page .processGrid article,
+.processGrid article {
+  display: grid !important;
+  grid-template-columns: 44px 28px minmax(0, 1fr) !important;
+  grid-template-areas:
+    "num icon title"
+    "num . text" !important;
+  column-gap: .68rem !important;
+  align-items: start !important;
+  overflow: visible !important;
+}
+
+.page .processGrid article strong,
+.processGrid article strong {
+  grid-area: num !important;
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: #07111d !important;
+  -webkit-text-fill-color: #07111d !important;
+  font-size: 1rem !important;
+  line-height: 1 !important;
+  font-weight: 950 !important;
+}
+
+.page .processGrid article i,
+.processGrid article i {
+  grid-area: icon !important;
+  display: inline-flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  width: 22px !important;
+  height: 22px !important;
+  min-width: 22px !important;
+  min-height: 22px !important;
+  margin: -.08rem 0 0 !important;
+  padding: 0 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #123f59 !important;
+  -webkit-text-fill-color: #123f59 !important;
+  background: rgba(18, 63, 89, .045) !important;
+  border: 1px solid rgba(18, 63, 89, .22) !important;
+  border-radius: 999px !important;
+  pointer-events: none !important;
+}
+
+.page .processGrid article i svg,
+.processGrid article i svg,
+.page .processGrid article svg,
+.processGrid article svg {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  width: 13px !important;
+  height: 13px !important;
+  min-width: 13px !important;
+  min-height: 13px !important;
+  stroke: #123f59 !important;
+  color: #123f59 !important;
+  stroke-width: 2 !important;
+}
+
+.page .processGrid article h3,
+.processGrid article h3 {
+  grid-area: title !important;
+  margin: 0 !important;
+  align-self: start !important;
+}
+
+.page .processGrid article p,
+.processGrid article p {
+  grid-area: text !important;
+  margin-top: .45rem !important;
+}
+
+@media (max-width: 900px) {
+  .page .processGrid,
+  .processGrid {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+
+  .page .processGrid article,
+  .processGrid article {
+    display: grid !important;
+    grid-template-columns: 42px 28px minmax(0, 1fr) !important;
+    grid-template-areas:
+      "num icon title"
+      "num . text" !important;
+    padding: 1.05rem 0 !important;
+    border-bottom: 1px solid rgba(8, 11, 16, .10) !important;
+  }
+}
+
+/* === PROCESS ICONS ACTUALLY VISIBLE FINAL END === */

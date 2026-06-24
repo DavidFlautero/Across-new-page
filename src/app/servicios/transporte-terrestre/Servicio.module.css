@@ -10855,3 +10855,121 @@
 }
 
 /* === SERVICE PROCESS ICONS LIKE SECTORES FINAL END === */
+
+/* === INLINE PROCESS ICONS REAL FINAL START === */
+
+/* Ya no usamos .processGrid i ni h3::before para los iconos */
+.processGrid i,
+.processGrid article i {
+  display: none !important;
+}
+
+.processGrid h3::before,
+.processGrid article h3::before,
+.process article h3::before {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Layout del proceso: número + título con icono real */
+.processGrid article {
+  display: grid !important;
+  grid-template-columns: 44px minmax(0, 1fr) !important;
+  column-gap: .85rem !important;
+  align-items: start !important;
+}
+
+.processGrid article strong {
+  grid-column: 1 !important;
+  grid-row: 1 / span 2 !important;
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: #07111d !important;
+  -webkit-text-fill-color: #07111d !important;
+  font-size: 1rem !important;
+  line-height: 1 !important;
+  font-weight: 950 !important;
+}
+
+.processGrid article h3 {
+  grid-column: 2 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: .55rem !important;
+  margin: 0 !important;
+  min-width: 0 !important;
+  color: #07111d !important;
+  -webkit-text-fill-color: #07111d !important;
+}
+
+.processIconInline {
+  width: 22px !important;
+  height: 22px !important;
+  min-width: 22px !important;
+  min-height: 22px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 999px !important;
+  color: #123f59 !important;
+  -webkit-text-fill-color: #123f59 !important;
+  background: rgba(18, 63, 89, .055) !important;
+  border: 1px solid rgba(18, 63, 89, .24) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.80) !important;
+  flex: 0 0 22px !important;
+}
+
+.processIconInline svg {
+  display: block !important;
+  width: 13px !important;
+  height: 13px !important;
+  min-width: 13px !important;
+  min-height: 13px !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  color: #123f59 !important;
+  stroke: #123f59 !important;
+  stroke-width: 2 !important;
+}
+
+.processTitleText {
+  display: inline !important;
+  min-width: 0 !important;
+}
+
+.processGrid article p {
+  grid-column: 2 !important;
+  margin-top: .55rem !important;
+}
+
+@media (max-width: 900px) {
+  .processGrid {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+
+  .processGrid article {
+    grid-template-columns: 42px minmax(0, 1fr) !important;
+    padding: 1.05rem 0 !important;
+    border-bottom: 1px solid rgba(8, 11, 16, .10) !important;
+  }
+
+  .processIconInline {
+    width: 22px !important;
+    height: 22px !important;
+    min-width: 22px !important;
+    min-height: 22px !important;
+  }
+}
+
+/* === INLINE PROCESS ICONS REAL FINAL END === */

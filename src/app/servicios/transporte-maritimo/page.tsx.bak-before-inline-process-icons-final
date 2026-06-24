@@ -14,260 +14,260 @@ type Locale = "es" | "en" | "zh";
 
 const copy = {
   es: {
-    heroEyebrow: "TRANSPORTE TERRESTRE",
-    heroTitle: "Transporte terrestre nacional e internacional con trazabilidad operativa.",
+    heroEyebrow: "TRANSPORTE MARÍTIMO INTERNACIONAL",
+    heroTitle: "Transporte marítimo internacional para embarques FCL, LCL y proyectos especiales.",
     heroText:
-      "Coordinamos transporte terrestre para carga completa, grupaje, distribución y operaciones especiales, con seguimiento operativo y control documental durante el recorrido.",
-    primaryCta: "Solicitar cotización terrestre",
+      "Gestionamos embarques marítimos internacionales con coordinación portuaria, control documental, aduanas y seguimiento operativo de origen a destino.",
+    primaryCta: "Solicitar cotización marítima",
     secondaryCta: "Hablar con un especialista",
 
-    activeLabel: "Operación terrestre activa",
-    activeRoute: "Madrid → Valencia",
-    activeCargo: "Carga FTL / LTL",
+    activeLabel: "Operación marítima activa",
+    activeRoute: "Madrid → Bogotá",
+    activeCargo: "Carga crítica",
     activeStatusLabel: "Estado:",
     activeStatus: "En coordinación",
-    activeEtaLabel: "Entrega:",
-    activeEta: "Programada",
+    activeEtaLabel: "ETA:",
+    activeEta: "Prioritario",
 
     trust: [
-      ["Carga completa", "FTL / LTL"],
-      ["Distribución", "Red terrestre"],
-      ["Documentación", "Control fronterizo"],
-      ["Seguimiento", "Trazabilidad operativa"],
+      ["Carga FCL", "Operaciones críticas"],
+      ["Carga especial", "Control y trazabilidad"],
+      ["Documentación", "Gestión aduanera"],
+      ["Seguimiento operativo", "Trazabilidad operativa"],
     ],
 
-    overviewEyebrow: "Operaciones por carretera",
-    overviewTitle: "Control, continuidad y precisión en cada tramo terrestre.",
+    overviewEyebrow: "Operaciones confiables",
+    overviewTitle: "Velocidad, precisión y control en cada etapa del embarque marítimo.",
     overviewText:
-      "El transporte terrestre exige planificación de rutas, coordinación documental, visibilidad operativa y capacidad de respuesta. Diseñamos operaciones nacionales e internacionales para cargas que requieren puntualidad, seguridad y control.",
-    overviewButton: "Conocer más sobre terrestre",
+      "El transporte marítimo exige coordinación exacta entre origen, naviera, aduana y destino final. En Across Logistics gestionamos cada etapa para reducir tiempos, evitar errores documentales y mantener visibilidad sobre la operación.",
+    overviewButton: "Conocer más sobre marítimo",
 
     pillars: [
-      ["Planificación de rutas", "Diseño de trayectos eficientes según origen, destino, urgencia y tipo de carga."],
-      ["Control documental", "Gestión de documentación comercial, aduanera y operativa para tránsitos nacionales e internacionales."],
-      ["Seguimiento operativo", "Monitoreo de la operación para mantener visibilidad sobre cada movimiento."],
-      ["Entrega puerta a puerta", "Integración de retiro, transporte, conexión logística y entrega final."],
+      ["Coordinación portuaria", "Gestión con navieras, agentes y operadores logísticos."],
+      ["Control documental", "Revisión de documentos comerciales, aduaneros y operativos."],
+      ["Seguimiento de operación", "Monitoreo del avance desde origen hasta destino."],
+      ["Soluciones puerta a puerta", "Integración con transporte terrestre y entrega final."],
     ],
 
-    servicesEyebrow: "Nuestros servicios terrestres",
-    servicesTitle: "Soluciones terrestres para cada necesidad logística.",
+    servicesEyebrow: "Nuestros servicios marítimos",
+    servicesTitle: "Soluciones marítimas para cada tipo de embarque.",
     services: [
-      ["Carga completa FTL", "Transporte dedicado para operaciones que requieren capacidad exclusiva y control directo."],
-      ["Carga parcial LTL", "Optimización de costos mediante consolidación y rutas compartidas."],
-      ["Distribución nacional", "Movimientos regionales y nacionales con coordinación operativa y trazabilidad."],
-      ["Cargas especiales", "Soluciones por carretera para mercancías sensibles, industriales o de manejo particular."],
-      ["Cross-border", "Coordinación terrestre internacional con soporte documental y control fronterizo."],
-      ["Door to door", "Desde retiro en origen hasta entrega final en destino con un solo flujo operativo."],
+      ["Carga marítima FCL", "Para envíos donde el tiempo define la operación."],
+      ["Carga LCL consolidada", "Optimización de costos mediante espacios compartidos."],
+      ["Carga de alto valor", "Coordinación segura para productos sensibles o estratégicos."],
+      ["Proyectos marítimos", "Soluciones dedicadas para operaciones especiales o cargas críticas."],
+      ["Cross trade marítimo", "Operaciones internacionales entre terceros países."],
+      ["Door to door", "Desde retiro en origen hasta entrega final en destino."],
     ],
 
-    useCasesEyebrow: "Cuándo conviene usar transporte terrestre",
-    useCasesTitle: "Cuando la operación necesita cercanía, control y continuidad.",
+    useCasesEyebrow: "Cuándo conviene usar transporte marítimo",
+    useCasesTitle: "El transporte marítimo marca la diferencia.",
     useCases: [
-      ["Distribución comercial", "Movimientos frecuentes para cadenas de suministro y entregas programadas."],
-      ["Carga industrial", "Transporte para componentes, maquinaria, repuestos y mercancías productivas."],
-      ["Conexión multimodal", "Integración con operaciones marítimas, aéreas o logísticas de almacén."],
-      ["Última milla B2B", "Entrega final coordinada para clientes corporativos y operaciones comerciales."],
-      ["Cross-border", "Operaciones terrestres entre países con documentación y seguimiento."],
-      ["Carga sensible", "Movimientos que requieren control, coordinación y visibilidad."],
+      ["Repuestos industriales urgentes", "Evite detener una línea de producción por falta de componentes."],
+      ["Productos tecnológicos", "Ideal para cargas de alto valor, sensibles o con rápida rotación."],
+      ["Muestras comerciales", "Envíos rápidos para ferias, clientes o validaciones internacionales."],
+      ["Carga médica o sensible", "Coordinación especial para productos que requieren mayor control."],
+      ["E-commerce internacional", "Movimientos rápidos para operaciones comerciales globales."],
+      ["Documentación crítica", "Soluciones para envíos donde el plazo no admite demoras."],
     ],
 
     processEyebrow: "Nuestro proceso operativo",
-    processTitle: "Una operación terrestre clara desde el primer contacto.",
+    processTitle: "Una operación marítima clara desde el primer contacto.",
     process: [
-      ["Análisis de carga", "Revisamos tipo de mercancía, volumen, peso, origen, destino y urgencia."],
-      ["Diseño de ruta", "Definimos la alternativa terrestre más eficiente y segura."],
-      ["Documentación", "Coordinamos requisitos comerciales, aduaneros y operativos."],
-      ["Asignación de transporte", "Gestionamos capacidad, unidad y coordinación de salida."],
-      ["Seguimiento", "Monitoreamos el avance y los hitos de la operación."],
-      ["Entrega final", "Coordinamos recepción, descarga y cierre operativo."],
+      ["Análisis de carga", "Revisamos peso, volumen, origen, destino y urgencia."],
+      ["Selección de ruta", "Buscamos la alternativa marítima más eficiente."],
+      ["Coordinación documental", "Validamos requisitos comerciales y aduaneros."],
+      ["Booking y despacho", "Coordinamos naviera, puerto y operación de salida."],
+      ["Seguimiento", "Monitoreamos el avance de la carga."],
+      ["Entrega final", "Gestionamos conexión terrestre y entrega en destino."],
     ],
 
-    bandTitle: "Operaciones terrestres diseñadas para cargas que no pueden detenerse.",
+    bandTitle: "Operaciones marítimas diseñadas para cargas que no pueden detenerse.",
     bandText:
-      "Nuestro equipo coordina transporte terrestre para empresas que necesitan continuidad, trazabilidad y respuesta profesional en cada tramo de la cadena logística.",
+      "Nuestro equipo coordina soluciones marítimas internacionales para empresas que necesitan rapidez, trazabilidad y respuesta profesional ante operaciones sensibles.",
     stats: [
-      ["Rutas terrestres", "Cobertura nacional e internacional"],
-      ["FTL / LTL", "Carga completa y consolidada"],
-      ["Control operativo", "Seguimiento de origen a destino"],
-      ["Soporte experto", "Especialistas dedicados"],
+      ["Cobertura global", "Principales rutas globales"],
+      ["Envíos urgentes", "Coordinación portuaria"],
+      ["Seguridad y control", "Documentación y compliance"],
+      ["Soporte especializado", "Especialistas marítimos"],
     ],
 
-    finalTitle: "Coordinemos su próxima operación terrestre.",
+    finalTitle: "Coordinemos su próximo embarque marítimo internacional.",
     finalText:
-      "Cuéntenos origen, destino, tipo de carga y urgencia. Nuestro equipo analizará la mejor solución terrestre para su operación.",
-    finalPrimary: "Solicitar cotización terrestre",
+      "Cuéntenos origen, destino, tipo de carga y urgencia. Nuestro equipo analizará la mejor alternativa marítima para su operación.",
+    finalPrimary: "Solicitar cotización marítima",
     finalSecondary: "Hablar con un especialista",
   },
 
   en: {
-    heroEyebrow: "International road freight",
-    heroTitle: "Road routes that connect critical operations.",
+    heroEyebrow: "International ocean freight",
+    heroTitle: "Global capacity for cargo crossing oceans.",
     heroText:
-      "We coordinate domestic and international road freight for full loads, partial loads, distribution and special operations, with operational tracking and document control from origin to destination.",
+      "We coordinate international ocean shipments with document control, operational tracking and solutions adapted to sensitive, urgent or high-value cargo.",
     primaryCta: "Plan my operation",
     secondaryCta: "Talk to our team",
 
-    activeLabel: "Active road operation",
-    activeRoute: "Madrid → Valencia",
-    activeCargo: "FTL / LTL cargo",
+    activeLabel: "Active air operation",
+    activeRoute: "Madrid → Bogotá",
+    activeCargo: "Critical cargo",
     activeStatusLabel: "Status:",
     activeStatus: "In coordination",
-    activeEtaLabel: "Delivery:",
-    activeEta: "Scheduled",
+    activeEtaLabel: "ETA:",
+    activeEta: "Priority",
 
     trust: [
-      ["Full load", "FTL / LTL"],
-      ["Distribution", "Road network"],
-      ["Documentation", "Border control"],
-      ["Tracking", "Operational visibility"],
+      ["Urgent cargo", "Critical operations"],
+      ["High value", "Maximum security"],
+      ["Documentation", "International control"],
+      ["Operational tracking", "Real-time visibility"],
     ],
 
-    overviewEyebrow: "Road operations",
-    overviewTitle: "Control, continuity and precision across every road segment.",
+    overviewEyebrow: "Reliable operations",
+    overviewTitle: "Speed, precision and control at every stage of air shipping.",
     overviewText:
-      "Road freight requires route planning, document coordination, operational visibility and response capacity. We design domestic and international operations for cargo that requires punctuality, security and control.",
-    overviewButton: "Learn more about road freight",
+      "Ocean freight requires exact coordination between origin, airline, customs and final destination. At Across Logistics, we manage each stage to reduce times, avoid documentation errors and maintain visibility over the operation.",
+    overviewButton: "Learn more about ocean freight",
 
     pillars: [
-      ["Route planning", "Efficient route design according to origin, destination, urgency and cargo type."],
-      ["Document control", "Commercial, customs and operational document management."],
-      ["Operational tracking", "Monitoring to maintain visibility over every movement."],
-      ["Door-to-door delivery", "Integrated pickup, transport, logistics connection and final delivery."],
+      ["Airport coordination", "Management with airlines, agents and logistics operators."],
+      ["Document control", "Review of commercial, customs and operational documents."],
+      ["Operational tracking", "Monitoring from origin to destination."],
+      ["Door-to-door solutions", "Integration with road transport and final delivery."],
     ],
 
-    servicesEyebrow: "Our road services",
-    servicesTitle: "Road solutions for every logistics requirement.",
+    servicesEyebrow: "Our air services",
+    servicesTitle: "Air solutions for every type of operation.",
     services: [
-      ["FTL full load", "Dedicated transport for operations requiring exclusive capacity and direct control."],
-      ["LTL partial load", "Cost optimization through consolidation and shared routes."],
-      ["Domestic distribution", "Regional and national movements with operational coordination."],
-      ["Special road cargo", "Road solutions for sensitive, industrial or special-handling goods."],
-      ["Cross-border", "International road coordination with document support and border control."],
-      ["Door to door", "From origin pickup to final delivery under one operational flow."],
+      ["Urgent air cargo", "For shipments where time defines the operation."],
+      ["Consolidated cargo", "Cost optimization through shared spaces."],
+      ["High-value cargo", "Secure coordination for sensitive or strategic products."],
+      ["Air charter", "Dedicated solutions for special operations or critical cargo."],
+      ["Cross trade marítimo", "International operations between third countries."],
+      ["Door to door", "From pickup at origin to final delivery at destination."],
     ],
 
-    useCasesEyebrow: "When to use road freight",
-    useCasesTitle: "When the operation needs proximity, control and continuity.",
+    useCasesEyebrow: "When to use ocean freight",
+    useCasesTitle: "Ocean freight makes the difference.",
     useCases: [
-      ["Commercial distribution", "Frequent movements for supply chains and scheduled deliveries."],
-      ["Industrial cargo", "Transport for components, machinery, spare parts and productive goods."],
-      ["Multimodal connection", "Integration with ocean, air or warehousing operations."],
-      ["B2B last mile", "Final delivery for corporate clients and commercial operations."],
-      ["Cross-border", "International road operations with documentation and tracking."],
-      ["Sensitive cargo", "Movements requiring control, coordination and visibility."],
+      ["Urgent industrial spare parts", "Avoid stopping a production line due to missing components."],
+      ["Technology products", "Ideal for high-value, sensitive or fast-moving cargo."],
+      ["Commercial samples", "Fast shipments for fairs, clients or international validations."],
+      ["Medical or sensitive cargo", "Special coordination for products requiring greater control."],
+      ["International e-commerce", "Fast movements for global commercial operations."],
+      ["Critical documentation", "Solutions for shipments where deadlines cannot be delayed."],
     ],
 
     processEyebrow: "Our operational process",
-    processTitle: "A clear road operation from the first contact.",
+    processTitle: "A clear air operation from the first contact.",
     process: [
-      ["Cargo analysis", "We review goods type, volume, weight, origin, destination and urgency."],
-      ["Route design", "We define the most efficient and secure road alternative."],
-      ["Documentation", "We coordinate commercial, customs and operational requirements."],
-      ["Transport allocation", "We manage capacity, vehicle and departure coordination."],
-      ["Tracking", "We monitor progress and operational milestones."],
-      ["Final delivery", "We coordinate reception, unloading and operation closure."],
+      ["Cargo analysis", "We review weight, volume, origin, destination and urgency."],
+      ["Route selection", "We look for the most efficient air alternative."],
+      ["Document coordination", "We validate commercial and customs requirements."],
+      ["Booking and dispatch", "We coordinate airline, airport and departure operation."],
+      ["Tracking", "We monitor cargo progress."],
+      ["Final delivery", "We manage road connection and delivery at destination."],
     ],
 
-    bandTitle: "Road operations designed for cargo that cannot stop.",
+    bandTitle: "Air operations designed for cargo that cannot wait.",
     bandText:
-      "Our team coordinates road transport for companies that need continuity, traceability and professional response across every segment of the logistics chain.",
+      "Our team coordinates international air solutions for companies that need speed, traceability and professional response for sensitive operations.",
     stats: [
-      ["Road routes", "Domestic and international coverage"],
-      ["FTL / LTL", "Full and consolidated cargo"],
-      ["Operational control", "Tracking from origin to destination"],
-      ["Expert support", "Dedicated specialists"],
+      ["Global coverage", "More than 120 countries"],
+      ["Urgent shipments", "Priority response"],
+      ["Security and control", "International standards"],
+      ["Specialized support", "Dedicated specialists"],
     ],
 
-    finalTitle: "Let’s coordinate your next road operation.",
+    finalTitle: "Let’s coordinate your next international air shipment.",
     finalText:
-      "Tell us origin, destination, cargo type and urgency. Our team will analyze the best road solution for your operation.",
-    finalPrimary: "Request road quotation",
+      "Tell us origin, destination, cargo type and urgency. Our team will analyze the best air alternative for your operation.",
+    finalPrimary: "Request air quotation",
     finalSecondary: "Talk to a specialist",
   },
 
   zh: {
-    heroEyebrow: "国际陆运",
-    heroTitle: "连接关键业务的陆运路线。",
+    heroEyebrow: "国际空运",
+    heroTitle: "面向紧急货物和关键业务的国际空运服务。",
     heroText:
-      "我们协调国内及国际陆运，包括整车、零担、配送和特殊运输，并提供从始发地到目的地的运营跟踪和文件控制。",
+      "我们协调国际空运业务，提供文件控制、运营跟踪以及适用于敏感、紧急或高价值货物的定制方案。",
     primaryCta: "规划物流操作",
     secondaryCta: "联系我们的团队",
 
-    activeLabel: "进行中的陆运操作",
-    activeRoute: "马德里 → 瓦伦西亚",
-    activeCargo: "FTL / LTL 货物",
+    activeLabel: "进行中的空运操作",
+    activeRoute: "马德里 → 波哥大",
+    activeCargo: "关键货物",
     activeStatusLabel: "状态：",
     activeStatus: "协调中",
-    activeEtaLabel: "交付：",
-    activeEta: "已安排",
+    activeEtaLabel: "ETA：",
+    activeEta: "优先",
 
     trust: [
-      ["整车运输", "FTL / LTL"],
-      ["配送服务", "陆运网络"],
-      ["文件管理", "边境控制"],
-      ["运输跟踪", "运营可视化"],
+      ["紧急货物", "关键业务"],
+      ["高价值", "最高安全标准"],
+      ["文件管理", "国际控制"],
+      ["运营跟踪", "实时可视化"],
     ],
 
-    overviewEyebrow: "陆运运营",
-    overviewTitle: "在每一个陆运环节实现控制、连续性与精准。",
+    overviewEyebrow: "可靠运营",
+    overviewTitle: "在空运每个阶段实现速度、精准与控制。",
     overviewText:
-      "陆运需要路线规划、文件协调、运营可视化和响应能力。我们为需要准时、安全和控制的货物设计国内及国际运输方案。",
-    overviewButton: "了解陆运服务",
+      "空运需要始发地、航空公司、海关和最终目的地之间的精准协调。Across Logistics 管理每个阶段，以缩短时间、避免文件错误并保持运营可视化。",
+    overviewButton: "了解空运服务",
 
     pillars: [
-      ["路线规划", "根据始发地、目的地、紧急程度和货物类型设计高效路线。"],
-      ["文件控制", "管理商业、海关和运营文件。"],
-      ["运营跟踪", "监控每次运输以保持可视化。"],
-      ["门到门交付", "整合提货、运输、物流衔接和最终交付。"],
+      ["机场协调", "与航空公司、代理和物流运营商协调。"],
+      ["文件控制", "审核商业、海关和运营文件。"],
+      ["运营跟踪", "从始发地到目的地进行监控。"],
+      ["门到门方案", "整合陆运和最终交付。"],
     ],
 
-    servicesEyebrow: "我们的陆运服务",
-    servicesTitle: "适用于不同物流需求的陆运解决方案。",
+    servicesEyebrow: "我们的空运服务",
+    servicesTitle: "适用于不同业务类型的空运解决方案。",
     services: [
-      ["FTL 整车", "为需要专属运力和直接控制的业务提供专车运输。"],
-      ["LTL 零担", "通过拼载和共享路线优化成本。"],
-      ["国内配送", "区域和全国运输，配合运营协调。"],
-      ["特殊陆运货物", "为敏感、工业或特殊处理货物提供道路运输方案。"],
-      ["跨境陆运", "提供文件支持和边境控制的国际陆运协调。"],
-      ["门到门", "从始发地提货到目的地最终交付的一体化流程。"],
+      ["紧急空运", "适用于时间决定成败的运输。"],
+      ["拼箱空运", "通过共享舱位优化成本。"],
+      ["高价值货物", "为敏感或战略产品提供安全协调。"],
+      ["包机服务", "为特殊业务或关键货物提供专属方案。"],
+      ["第三国贸易", "第三国之间的国际业务。"],
+      ["门到门", "从始发地提货到目的地最终交付。"],
     ],
 
-    useCasesEyebrow: "何时选择陆运",
-    useCasesTitle: "当运营需要接近性、控制和连续性时。",
+    useCasesEyebrow: "何时选择空运",
+    useCasesTitle: "空运能够创造关键差异。",
     useCases: [
-      ["商业配送", "供应链和计划交付的高频运输。"],
-      ["工业货物", "零部件、机械、备件和生产货物运输。"],
-      ["多式联运衔接", "与海运、空运或仓储业务衔接。"],
-      ["B2B 最后一公里", "为企业客户和商业业务协调最终交付。"],
-      ["跨境运输", "带有文件和跟踪支持的国际陆运。"],
-      ["敏感货物", "需要控制、协调和可视化的运输。"],
+      ["紧急工业备件", "避免因零部件缺失导致生产线停工。"],
+      ["科技产品", "适合高价值、敏感或快速流转货物。"],
+      ["商业样品", "用于展会、客户或国际验证的快速运输。"],
+      ["医疗或敏感货物", "为需要更高控制的产品提供特殊协调。"],
+      ["国际电商", "支持全球商业业务的快速流转。"],
+      ["关键文件", "适用于交期不允许延误的文件运输。"],
     ],
 
     processEyebrow: "我们的运营流程",
-    processTitle: "从首次联系开始，陆运操作清晰可控。",
+    processTitle: "从第一次联系开始，空运操作清晰可控。",
     process: [
-      ["货物分析", "审核货物类型、体积、重量、始发地、目的地和紧急程度。"],
-      ["路线设计", "确定最高效且安全的陆运方案。"],
-      ["文件管理", "协调商业、海关和运营要求。"],
-      ["车辆安排", "管理运力、车辆和发运协调。"],
-      ["跟踪", "监控运输进度和运营节点。"],
-      ["最终交付", "协调收货、卸货和运营关闭。"],
+      ["货物分析", "审核重量、体积、始发地、目的地和紧急程度。"],
+      ["路线选择", "寻找最高效的空运方案。"],
+      ["文件协调", "验证商业和海关要求。"],
+      ["订舱与派送", "协调航空公司、机场和出运操作。"],
+      ["跟踪", "监控货物运输进度。"],
+      ["最终交付", "管理陆运衔接和目的地交付。"],
     ],
 
-    bandTitle: "为不能停止的货物设计的陆运操作。",
+    bandTitle: "为空运不能等待的货物设计的运营方案。",
     bandText:
-      "我们的团队为需要连续性、可追溯性和专业响应的企业协调陆运服务。",
+      "我们的团队为需要速度、可追溯性和专业响应的企业协调国际空运解决方案。",
     stats: [
-      ["陆运路线", "国内及国际覆盖"],
-      ["FTL / LTL", "整车与拼载货物"],
-      ["运营控制", "从始发地到目的地跟踪"],
-      ["专家支持", "专属专家"],
+      ["全球覆盖", "超过120个国家"],
+      ["紧急运输", "优先响应"],
+      ["安全与控制", "国际标准"],
+      ["专业支持", "专属专家"],
     ],
 
-    finalTitle: "让我们协调您的下一次陆运操作。",
+    finalTitle: "让我们协调您的下一次国际空运。",
     finalText:
-      "告诉我们始发地、目的地、货物类型和紧急程度。我们的团队将分析最合适的陆运方案。",
-    finalPrimary: "申请陆运报价",
+      "告诉我们始发地、目的地、货物类型和紧急程度。我们的团队将为您的业务分析最佳空运方案。",
+    finalPrimary: "申请空运报价",
     finalSecondary: "联系专家",
   },
 } satisfies Record<Locale, any>;
@@ -511,7 +511,7 @@ function Icon({ name }: { name: IconName }) {
   }
 }
 
-export default function TransporteTerrestrePage() {
+export default function TransporteMaritimoPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
@@ -559,10 +559,10 @@ export default function TransporteTerrestrePage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={styles.hero} data-service-name="transporte-terrestre" data-service-hero-home="true"
+        <section className={styles.hero} data-aereo-hero="true" data-service-hero-home="true"
       >
           <Image
-            src="/images/sectores/transporteterrestre.png"
+            src="/images/maritimo.png"
             alt={t.heroTitle}
             fill
             priority
@@ -571,7 +571,7 @@ export default function TransporteTerrestrePage() {
           />
 
           <Image
-            src="/images/transporte-terrestre-mobile/transporte-terrestre-mobile.png"
+            src="/images/maritimo-mobile.png"
             alt={t.heroTitle}
             fill
             priority
@@ -611,7 +611,7 @@ export default function TransporteTerrestrePage() {
             </div>
           </div>
 
-          <div className={styles.commandBar} data-service-trust="transporte-terrestre">
+          <div className={styles.commandBar} data-service-trust="maritimo">
             {t.trust.map(([title, text]: string[], index: number) => {
               const icons: IconName[] = ["timer", "shield", "document", "tracking"];
 
@@ -657,7 +657,7 @@ export default function TransporteTerrestrePage() {
           </div>
         </section>
 
-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/sectores/transporteterrestre.png')" } as CSSProperties}>
+        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/maritimo.png')" } as CSSProperties}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -716,12 +716,10 @@ export default function TransporteTerrestrePage() {
               return (
                 <article key={title}>
                   <strong>{index + 1}</strong>
-                  <h3>
-                    <span className={styles.processIconInline} aria-hidden="true">
-                      <Icon name={icons[index]} />
-                    </span>
-                    <span className={styles.processTitleText}>{title}</span>
-                  </h3>
+                  <i>
+                    <Icon name={icons[index]} />
+                  </i>
+                  <h3>{title}</h3>
                   <p>{text}</p>
                 </article>
               );
@@ -732,7 +730,7 @@ export default function TransporteTerrestrePage() {
         <section className={styles.darkBand} data-mobile-hide-after-cert="true">
           <div className={styles.darkBandImage}>
             <Image
-              src="/images/cargaaerea.png"
+              src="/images/transporte-maritimo-desktop/1.png"
               alt={t.bandTitle}
               fill
               sizes="(max-width: 900px) 100vw, 42vw"
@@ -743,10 +741,6 @@ export default function TransporteTerrestrePage() {
             <h2>{t.bandTitle}</h2>
             <p>{t.bandText}</p>
 
-            <div className={styles.darkBandActions}>
-              <Link href="/cotizacion">{t.finalPrimary}</Link>
-              <Link href="/contacto">{t.finalSecondary}</Link>
-            </div>
             <div className={styles.stats}>
               {t.stats.map(([value, label]: string[]) => (
                 <article key={value}>
@@ -755,10 +749,15 @@ export default function TransporteTerrestrePage() {
                 </article>
               ))}
             </div>
+
+            <div className={styles.darkBandActions}>
+              <Link href="/cotizacion">{t.finalPrimary}</Link>
+              <Link href="/contacto">{t.finalSecondary}</Link>
+            </div>
           </div>
         </section>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/sectores/transporteterrestre.png')" } as CSSProperties} data-across-final-cta="true">
+        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/maritimo.png')" } as CSSProperties} data-across-final-cta="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>
@@ -771,7 +770,7 @@ export default function TransporteTerrestrePage() {
 
           <div className={styles.finalImage}>
             <Image
-              src="/images/sectores/transporteterrestre.png"
+              src="/images/maritimo.png"
               alt={t.finalTitle}
               fill
               sizes="(max-width: 900px) 100vw, 44vw"

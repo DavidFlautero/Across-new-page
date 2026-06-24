@@ -5576,35 +5576,35 @@
 }
 
 /* =====================================================
-   ADUANAS VIEWPORT LOCK FINAL
+   TRANSPORTE-TERRESTRE VIEWPORT LOCK FINAL
    El hero NO puede comerse el bloque azul.
    Hero + trustBar = 100svh
    ===================================================== */
 
 /* Base */
 .page {
-  --aduanas-trust-h: 88px;
+  --transporte-terrestre-trust-h: 88px;
 }
 
 .page .hero {
-  height: calc(100svh - var(--aduanas-trust-h)) !important;
-  min-height: calc(100svh - var(--aduanas-trust-h)) !important;
-  max-height: calc(100svh - var(--aduanas-trust-h)) !important;
+  height: calc(100svh - var(--transporte-terrestre-trust-h)) !important;
+  min-height: calc(100svh - var(--transporte-terrestre-trust-h)) !important;
+  max-height: calc(100svh - var(--transporte-terrestre-trust-h)) !important;
   padding: 0 !important;
   overflow: hidden !important;
 }
 
 .page .trustBar {
-  height: var(--aduanas-trust-h) !important;
-  min-height: var(--aduanas-trust-h) !important;
-  max-height: var(--aduanas-trust-h) !important;
+  height: var(--transporte-terrestre-trust-h) !important;
+  min-height: var(--transporte-terrestre-trust-h) !important;
+  max-height: var(--transporte-terrestre-trust-h) !important;
   overflow: hidden !important;
 }
 
 /* Desktop normal */
 @media (min-width: 901px) {
   .page {
-    --aduanas-trust-h: 88px;
+    --transporte-terrestre-trust-h: 88px;
   }
 
   .page .content {
@@ -5653,7 +5653,7 @@
 /* Desktop bajo tipo Nest Hub */
 @media (min-width: 901px) and (max-height: 700px) {
   .page {
-    --aduanas-trust-h: 78px;
+    --transporte-terrestre-trust-h: 78px;
   }
 
   .page .content {
@@ -5685,7 +5685,7 @@
 /* iPad / tablets */
 @media (min-width: 701px) and (max-width: 900px) {
   .page {
-    --aduanas-trust-h: 108px;
+    --transporte-terrestre-trust-h: 108px;
   }
 
   .page .content {
@@ -5735,11 +5735,11 @@
 /* Mobile */
 @media (max-width: 700px) {
   .page {
-    --aduanas-trust-h: 108px;
+    --transporte-terrestre-trust-h: 108px;
   }
 
   .page .hero {
-    min-height: calc(100svh - var(--aduanas-trust-h)) !important;
+    min-height: calc(100svh - var(--transporte-terrestre-trust-h)) !important;
   }
 
   .page .content {
@@ -5791,7 +5791,7 @@
 }
 
 /* =====================================================
-   ADUANAS HERO REAL JSX FINAL
+   TRANSPORTE-TERRESTRE HERO REAL JSX FINAL
    Usa las clases reales:
    hero / heroImage / heroOverlay / heroInner / heroContent /
    eyebrow / title / subtitle / actions / trustBar
@@ -6195,7 +6195,7 @@
 
 
 /* =====================================================
-   ADUANAS HERO TEXT SPACING ONLY
+   TRANSPORTE-TERRESTRE HERO TEXT SPACING ONLY
    Solo mejora aire entre eyebrow, título, texto y botones.
    No toca altura, fondo ni trustBar.
    ===================================================== */
@@ -6277,7 +6277,7 @@
 
 
 /* =====================================================
-   ADUANAS HERO EXTRA BLOCK SPACING
+   TRANSPORTE-TERRESTRE HERO EXTRA BLOCK SPACING
    Separa mejor título, texto y botón. Solo aire interno.
    ===================================================== */
 
@@ -6318,7 +6318,7 @@
 
 
 /* =====================================================
-   ADUANAS MOBILE FINAL TWEAK
+   TRANSPORTE-TERRESTRE MOBILE FINAL TWEAK
    Más aire entre menú y primer texto.
    Oculta imágenes decorativas internas en mobile.
    No toca el fondo del hero.
@@ -6360,7 +6360,7 @@
 
 
 /* =====================================================
-   ADUANAS HERO IMAGE COLOR / LIGHT FINAL
+   TRANSPORTE-TERRESTRE HERO IMAGE COLOR / LIGHT FINAL
    Solo mejora luz, contraste y overlay del fondo.
    No toca estructura, textos, botones ni trustBar.
    ===================================================== */
@@ -6427,7 +6427,7 @@
 
 
 /* =====================================================
-   ADUANAS HERO LIGHT RIGHT + MOBILE IMAGE HIDE
+   TRANSPORTE-TERRESTRE HERO LIGHT RIGHT + MOBILE IMAGE HIDE
    Más iluminación a la derecha y ocultar imágenes decorativas en mobile
    ===================================================== */
 
@@ -6554,7 +6554,7 @@
 
 
 /* =====================================================
-   ADUANAS MOBILE HIDE PILLARS SECTION
+   TRANSPORTE-TERRESTRE MOBILE HIDE PILLARS SECTION
    Oculta las cards/pilares en dispositivos menores a tablet.
    No toca hero, trustBar ni certificaciones.
    ===================================================== */
@@ -6571,7 +6571,7 @@
 
 
 /* =====================================================
-   ADUANAS DESKTOP BUTTON SAFE FIX
+   TRANSPORTE-TERRESTRE DESKTOP BUTTON SAFE FIX
    Solo desktop grande: evita que los botones toquen el trustBar.
    ===================================================== */
 
@@ -6654,7 +6654,7 @@
 
 
 /* =====================================================
-   ADUANAS HERO IMAGE NO ZOOM FINAL
+   TRANSPORTE-TERRESTRE HERO IMAGE NO ZOOM FINAL
    Quita el recorte/zoom del hero principal.
    ===================================================== */
 
@@ -6688,7 +6688,7 @@
 
 
 /* =====================================================
-   ADUANAS HERO MOBILE IMAGE SOURCE FIX
+   TRANSPORTE-TERRESTRE HERO MOBILE IMAGE SOURCE FIX
    Desktop usa horizontal. Mobile usa vertical.
    ===================================================== */
 
@@ -6718,7 +6718,7 @@
 
 
 /* =====================================================
-   ADUANAS DESKTOP TITLE REFINEMENT
+   TRANSPORTE-TERRESTRE DESKTOP TITLE REFINEMENT
    Solo pantallas grandes: título más elegante y menos monstruoso.
    No toca mobile ni tablet.
    ===================================================== */
@@ -6785,7 +6785,7 @@
 
 
 /* =====================================================
-   ADUANAS HERO BRIGHT CORPORATE FINAL
+   TRANSPORTE-TERRESTRE HERO BRIGHT CORPORATE FINAL
    Más luz al hero sin tocar estructura, texto ni botones.
    ===================================================== */
 
@@ -6867,7 +6867,7 @@
 
 
 /* =====================================================
-   ADUANAS HERO REAL IMAGE SWITCH HARD LOCK
+   TRANSPORTE-TERRESTRE HERO REAL IMAGE SWITCH HARD LOCK
    Fuerza desktop/mobile con las clases reales del JSX.
    ===================================================== */
 
@@ -6919,7 +6919,7 @@
 
 
 /* =====================================================
-   ADUANAS HERO REAL IMAGE SWITCH HARD LOCK
+   TRANSPORTE-TERRESTRE HERO REAL IMAGE SWITCH HARD LOCK
    Fuerza desktop/mobile con las clases reales del JSX.
    ===================================================== */
 
@@ -6971,7 +6971,7 @@
 
 
 /* =====================================================
-   ADUANAS MOBILE CERTIFICATIONS GAP FIX
+   TRANSPORTE-TERRESTRE MOBILE CERTIFICATIONS GAP FIX
    Reduce espacio vacío entre certificaciones y overview.
    ===================================================== */
 
@@ -7520,10 +7520,10 @@
 .page .trustBar span,
 .page .trustBar small,
 .page .trustBar p,
-.page [data-aduanas-trust="true"] strong,
-.page [data-aduanas-trust="true"] span,
-.page [data-aduanas-trust="true"] small,
-.page [data-aduanas-trust="true"] p {
+.page [data-transporte-terrestre-trust="true"] strong,
+.page [data-transporte-terrestre-trust="true"] span,
+.page [data-transporte-terrestre-trust="true"] small,
+.page [data-transporte-terrestre-trust="true"] p {
   color: var(--across-ivory-soft) !important;
   -webkit-text-fill-color: var(--across-ivory-soft) !important;
 }
@@ -8865,7 +8865,7 @@
 
 /* END ACROSS COMMAND BAR EXPORTS */
 
-/* ZZZ ADUANAS SERVICES LITERAL DARKBAND AUTOMOCION FINAL
+/* ZZZ TRANSPORTE-TERRESTRE SERVICES LITERAL DARKBAND AUTOMOCION FINAL
    Copia LITERAL del darkBand de Automoción.
 */
 .page .services {
@@ -8906,11 +8906,11 @@
   position: relative !important;
   z-index: 2 !important;
 }
-/* END ZZZ ADUANAS SERVICES LITERAL DARKBAND AUTOMOCION FINAL */
+/* END ZZZ TRANSPORTE-TERRESTRE SERVICES LITERAL DARKBAND AUTOMOCION FINAL */
 
-/* ZZZ ADUANAS SERVICES SAME AS AUTOMOCION DARKBAND FINAL
+/* ZZZ TRANSPORTE-TERRESTRE SERVICES SAME AS AUTOMOCION DARKBAND FINAL
    Copia el sombreado/degradado de darkBand Automoción.
-   No copia la imagen de Automoción; conserva la imagen de fondo de Aduanas.
+   No copia la imagen de Automoción; conserva la imagen de fondo de TransporteTerrestre.
 */
 .page .services {
   position: relative !important;
@@ -8955,7 +8955,7 @@
   border: 1px solid rgba(244, 239, 229, .16) !important;
   box-shadow: 0 14px 34px rgba(0,0,0,.18) !important;
 }
-/* END ZZZ ADUANAS SERVICES SAME AS AUTOMOCION DARKBAND FINAL */
+/* END ZZZ TRANSPORTE-TERRESTRE SERVICES SAME AS AUTOMOCION DARKBAND FINAL */
 
 /* ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED
    Tablet / iPad chico:
@@ -9398,7 +9398,7 @@
 }
 /* END ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL */
 
-/* ZZZ ADUANAS SERVICES SEAM ONLY FINAL
+/* ZZZ TRANSPORTE-TERRESTRE SERVICES SEAM ONLY FINAL
    Tapa la línea/seam superior del bloque services sin cambiar imagen.
 */
 .page .services {
@@ -9418,9 +9418,9 @@
   top: -6px !important;
   height: calc(100% + 6px) !important;
 }
-/* END ZZZ ADUANAS SERVICES SEAM ONLY FINAL */
+/* END ZZZ TRANSPORTE-TERRESTRE SERVICES SEAM ONLY FINAL */
 
-/* ZZZ ADUANAS MOBILE HERO TITLE DOWN FINAL
+/* ZZZ TRANSPORTE-TERRESTRE MOBILE HERO TITLE DOWN FINAL
    Baja un poco el título del hero en mobile.
    No toca desktop/tablet.
 */
@@ -9437,7 +9437,7 @@
     margin-top: .9rem !important;
   }
 }
-/* END ZZZ ADUANAS MOBILE HERO TITLE DOWN FINAL */
+/* END ZZZ TRANSPORTE-TERRESTRE MOBILE HERO TITLE DOWN FINAL */
 
 /* ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED
    Tablet / iPad chico:
@@ -9609,7 +9609,7 @@
 /* END ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED */
 
 /* =====================================================
-   ADUANAS MOBILE HEIGHT LIKE MARITIMO
+   TRANSPORTE-TERRESTRE MOBILE HEIGHT LIKE MARITIMO
    Solo iguala el alto del hero mobile.
    No toca barra, titulo, texto, boton ni imagen.
    ===================================================== */
@@ -9628,7 +9628,7 @@
 }
 
 /* =====================================================
-   ADUANAS MOBILE HEIGHT LIKE MARITIMO
+   TRANSPORTE-TERRESTRE MOBILE HEIGHT LIKE MARITIMO
    Solo iguala el alto del hero mobile.
    No toca barra, titulo, texto, boton ni imagen.
    ===================================================== */
@@ -9645,6 +9645,569 @@
     max-height: 100svh !important;
   }
 }
+
+
+/* === TERRESTRE SERVICES BG START === */
+/* Solo sección de arriba: "Soluciones terrestres para cada necesidad logística." */
+.services {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(3, 7, 13, .88) 0%,
+      rgba(3, 7, 13, .68) 42%,
+      rgba(3, 7, 13, .30) 72%,
+      rgba(3, 7, 13, .16) 100%
+    ),
+    var(--desktop-bg) !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+@media (max-width: 900px) {
+  .services {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(3, 7, 13, .60) 0%,
+        rgba(3, 7, 13, .82) 58%,
+        rgba(3, 7, 13, .94) 100%
+      ),
+      var(--mobile-bg) !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+}
+/* === TERRESTRE SERVICES BG END === */
+
+
+/* === TERRESTRE FINAL CTA CSS IMAGE TWO START === */
+/* Imagen de abajo: "Coordinemos su próximo embarque terrestre..."
+   Esta imagen viene por CSS, no por page.tsx.
+*/
+
+.finalCta {
+  position: relative !important;
+  overflow: hidden !important;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(3, 7, 13, .92) 0%,
+      rgba(3, 7, 13, .74) 42%,
+      rgba(3, 7, 13, .38) 72%,
+      rgba(3, 7, 13, .22) 100%
+    ),
+    url("C:/Program Files/Git/images/transporte_terrestre/transporte_two.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+.finalCta > div:first-child {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Si el bloque tiene imagen interna tipo Next/Image, también la fuerza */
+.finalImage img {
+  content: url("C:/Program Files/Git/images/transporte_terrestre/transporte_two.png") !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+@media (max-width: 900px) {
+  .finalCta {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(3, 7, 13, .58) 0%,
+        rgba(3, 7, 13, .80) 56%,
+        rgba(3, 7, 13, .94) 100%
+      ),
+      url("C:/Program Files/Git/images/transporte-terrestre-mobile/transporte-terrestre-mobile-two.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .finalImage img {
+    content: url("C:/Program Files/Git/images/transporte-terrestre-mobile/transporte-terrestre-mobile-two.png") !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+}
+/* === TERRESTRE FINAL CTA CSS IMAGE TWO END === */
+
+
+/* === TERRESTRE FINAL IMAGE OVERRIDE START === */
+/* Único bloque final de imágenes:
+   - .services = card/sección de arriba
+   - .darkBand = bloque de abajo
+   Este bloque va al final para pisar los parches viejos de cargaaerea.
+*/
+
+.services,
+.page .services {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 6, 9, .98) 0%,
+      rgba(5, 6, 9, .94) 38%,
+      rgba(5, 6, 9, .78) 62%,
+      rgba(5, 6, 9, .55) 100%
+    ),
+    radial-gradient(circle at 18% 18%, rgba(23, 50, 71, .16), transparent 24rem),
+    url("C:/Program Files/Git/images/transporte_terrestre/terrestre_one.png") !important;
+  background-size: cover !important;
+  background-position: center 48% !important;
+  background-repeat: no-repeat !important;
+}
+
+.services > *,
+.page .services > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.darkBand,
+.page .darkBand {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 6, 9, .98) 0%,
+      rgba(5, 6, 9, .94) 42%,
+      rgba(5, 6, 9, .76) 68%,
+      rgba(5, 6, 9, .42) 100%
+    ),
+    radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
+    url("C:/Program Files/Git/images/transporte_terrestre/transporte_two.png") !important;
+  background-size: cover !important;
+  background-position: center 52% !important;
+  background-repeat: no-repeat !important;
+}
+
+.darkBand > *,
+.page .darkBand > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+@media (max-width: 900px) {
+  .services,
+  .page .services {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5, 6, 9, .78) 0%,
+        rgba(5, 6, 9, .90) 58%,
+        rgba(5, 6, 9, .96) 100%
+      ),
+      radial-gradient(circle at 18% 18%, rgba(23, 50, 71, .16), transparent 24rem),
+      url("C:/Program Files/Git/images/transporte-terrestre-mobile/transporte-terrestre-mobile.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .darkBand,
+  .page .darkBand {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5, 6, 9, .78) 0%,
+        rgba(5, 6, 9, .90) 58%,
+        rgba(5, 6, 9, .96) 100%
+      ),
+      radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
+      url("C:/Program Files/Git/images/transporte-terrestre-mobile/transporte-terrestre-mobile-two.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+}
+/* === TERRESTRE FINAL IMAGE OVERRIDE END === */
+
+
+/* === TERRESTRE SHOW REAL IMAGES START === */
+/* Bloque final: pisa los fondos viejos de avión y destapa las imágenes reales. */
+
+/* ARRIBA: services */
+.services,
+.page .services {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 6, 9, .68) 0%,
+      rgba(5, 6, 9, .50) 38%,
+      rgba(5, 6, 9, .24) 66%,
+      rgba(5, 6, 9, .08) 100%
+    ),
+    url("/images/transporte_terrestre/terrestre_one.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+.services::before,
+.page .services::before {
+  opacity: .18 !important;
+}
+
+.services::after,
+.page .services::after {
+  display: none !important;
+}
+
+.services .sectionHead,
+.page .services .sectionHead,
+.serviceGrid,
+.page .serviceGrid {
+  position: relative !important;
+  z-index: 2 !important;
+  background: transparent !important;
+}
+
+/* ABAJO: darkBand */
+.darkBand,
+.page .darkBand {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 6, 9, .72) 0%,
+      rgba(5, 6, 9, .52) 42%,
+      rgba(5, 6, 9, .24) 72%,
+      rgba(5, 6, 9, .08) 100%
+    ),
+    url("/images/transporte_terrestre/transporte_two.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+.darkBand::before,
+.page .darkBand::before {
+  opacity: .12 !important;
+  background: linear-gradient(90deg, rgba(5,6,9,.24), rgba(5,6,9,.08)) !important;
+}
+
+.darkBand::after,
+.page .darkBand::after {
+  display: none !important;
+}
+
+.darkBandContent,
+.page .darkBandContent {
+  position: relative !important;
+  z-index: 2 !important;
+  background: transparent !important;
+}
+
+.darkBandImage,
+.page .darkBandImage,
+.darkBand [class*="darkBandImage"],
+.page .darkBand [class*="darkBandImage"] {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .services,
+  .page .services {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5, 6, 9, .38) 0%,
+        rgba(5, 6, 9, .66) 58%,
+        rgba(5, 6, 9, .86) 100%
+      ),
+      url("/images/transporte-terrestre-mobile/transporte-terrestre-mobile.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .darkBand,
+  .page .darkBand {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5, 6, 9, .34) 0%,
+        rgba(5, 6, 9, .66) 58%,
+        rgba(5, 6, 9, .86) 100%
+      ),
+      url("/images/transporte-terrestre-mobile/transporte-terrestre-mobile-two.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+}
+/* === TERRESTRE SHOW REAL IMAGES END === */
+
+
+/* === TERRESTRE GLASS CARDS SCOPED START === */
+/* Solo aplica al bloque con imagen de servicios terrestres y al darkBand.
+   No toca pillars, overview, processGrid ni useCaseGrid.
+*/
+
+.services .serviceGrid {
+  gap: 16px !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.services .serviceGrid article,
+.darkBand .stats article {
+  position: relative !important;
+  z-index: 4 !important;
+  overflow: hidden !important;
+  min-height: 188px !important;
+  padding: 1.45rem !important;
+  text-align: left !important;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.22) 0%,
+      rgba(255,255,255,.13) 48%,
+      rgba(5,8,13,.26) 100%
+    ) !important;
+  border: 1px solid rgba(255,255,255,.30) !important;
+  box-shadow:
+    0 18px 44px rgba(0,0,0,.18),
+    inset 0 1px 0 rgba(255,255,255,.20) !important;
+  backdrop-filter: blur(7px) saturate(1.12) !important;
+  -webkit-backdrop-filter: blur(7px) saturate(1.12) !important;
+}
+
+.services .serviceGrid article::before,
+.darkBand .stats article::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.12), transparent 44%),
+    radial-gradient(circle at 18% 16%, rgba(214,192,141,.10), transparent 34%) !important;
+  opacity: .65 !important;
+  z-index: 0 !important;
+}
+
+.services .serviceGrid article::after {
+  content: "→" !important;
+  position: absolute !important;
+  right: 1.25rem !important;
+  bottom: 1rem !important;
+  color: rgba(214,192,141,.72) !important;
+  font-size: 1.05rem !important;
+  z-index: 5 !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,.45) !important;
+}
+
+.services .serviceGrid article > *,
+.darkBand .stats article > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.services .serviceGrid article i {
+  width: 42px !important;
+  height: 42px !important;
+  margin-bottom: .85rem !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  color: #d6c08d !important;
+  background: rgba(5,8,13,.38) !important;
+  border: 1px solid rgba(214,192,141,.55) !important;
+  border-radius: 999px !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,.16) !important;
+}
+
+.services .serviceGrid article h3,
+.darkBand .stats article strong {
+  color: #fff7e8 !important;
+  -webkit-text-fill-color: #fff7e8 !important;
+  font-size: 1.08rem !important;
+  line-height: 1.12 !important;
+  font-weight: 950 !important;
+  text-shadow: 0 2px 10px rgba(0,0,0,.48) !important;
+}
+
+.services .serviceGrid article p,
+.darkBand .stats article span {
+  max-width: 260px !important;
+  margin-top: .75rem !important;
+  color: rgba(255,247,232,.90) !important;
+  -webkit-text-fill-color: rgba(255,247,232,.90) !important;
+  font-size: .9rem !important;
+  line-height: 1.5 !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,.42) !important;
+}
+
+.darkBand .stats {
+  gap: 16px !important;
+}
+
+@media (max-width: 900px) {
+  .services .serviceGrid,
+  .darkBand .stats {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .services .serviceGrid article,
+  .darkBand .stats article {
+    min-height: auto !important;
+    padding: 1.25rem !important;
+  }
+}
+/* === TERRESTRE GLASS CARDS SCOPED END === */
+
+
+/* === TERRESTRE DARKBAND LAYOUT FINAL START === */
+/* Layout final:
+   izquierda: título + texto + botones
+   derecha: 4 cuadros en una sola fila
+*/
+
+.darkBandContent {
+  display: grid !important;
+  grid-template-columns: minmax(390px, .86fr) minmax(520px, 1.14fr) !important;
+  grid-template-rows: auto auto auto !important;
+  column-gap: clamp(2.2rem, 5vw, 5.5rem) !important;
+  row-gap: 0 !important;
+  align-items: center !important;
+  position: relative !important;
+  z-index: 5 !important;
+}
+
+.darkBandContent h2 {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  max-width: 620px !important;
+  margin: 0 !important;
+  color: #fff7e8 !important;
+  -webkit-text-fill-color: #fff7e8 !important;
+  text-shadow: 0 5px 24px rgba(0,0,0,.55) !important;
+}
+
+.darkBandContent > p {
+  grid-column: 1 !important;
+  grid-row: 2 !important;
+  max-width: 560px !important;
+  margin: 1.15rem 0 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: rgba(255,247,232,.88) !important;
+  -webkit-text-fill-color: rgba(255,247,232,.88) !important;
+  font-size: 1rem !important;
+  line-height: 1.65 !important;
+  font-weight: 500 !important;
+  text-shadow: 0 3px 16px rgba(0,0,0,.48) !important;
+}
+
+.darkBandActions {
+  grid-column: 1 !important;
+  grid-row: 3 !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: .85rem !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  margin-top: 1.45rem !important;
+  transform: none !important;
+  position: relative !important;
+  z-index: 20 !important;
+}
+
+.darkBandActions a {
+  min-height: 44px !important;
+  padding: 0 1.35rem !important;
+  border-radius: 999px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  font-size: .72rem !important;
+  letter-spacing: .055em !important;
+  font-weight: 950 !important;
+  white-space: nowrap !important;
+}
+
+.darkBandActions a:first-child {
+  background: #173247 !important;
+  color: #fff7e8 !important;
+  -webkit-text-fill-color: #fff7e8 !important;
+  border: 1px solid rgba(214,192,141,.46) !important;
+  box-shadow: 0 16px 34px rgba(0,0,0,.24) !important;
+}
+
+.darkBandActions a:last-child {
+  background: rgba(5,8,13,.42) !important;
+  color: #fff7e8 !important;
+  -webkit-text-fill-color: #fff7e8 !important;
+  border: 1px solid rgba(255,255,255,.30) !important;
+  box-shadow: 0 14px 30px rgba(0,0,0,.20) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+.stats {
+  grid-column: 2 !important;
+  grid-row: 1 / span 3 !important;
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  align-self: center !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.stats article {
+  min-height: 155px !important;
+  height: 155px !important;
+  padding: 1.15rem 1rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+/* Mobile: vuelve a flujo vertical */
+@media (max-width: 900px) {
+  .darkBandContent {
+    display: block !important;
+  }
+
+  .darkBandActions {
+    margin-top: 1.25rem !important;
+  }
+
+  .stats {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    margin-top: 1.6rem !important;
+  }
+
+  .stats article {
+    height: auto !important;
+    min-height: 120px !important;
+  }
+}
+/* === TERRESTRE DARKBAND LAYOUT FINAL END === */
 
 
 /* === ACROSS LOCAL DARKBAND LAYOUT START === */
@@ -9782,327 +10345,84 @@
 }
 /* === ACROSS LOCAL DARKBAND LAYOUT END === */
 
-
-/* === ADUANA 3 DISTINCT IMAGES FINAL START === */
-/* Aduana:
-   Hero queda intacto.
-   Services  : /images/aduana/terceraaduana.png
-   DarkBand  : /images/segundaaduana.png
-   FinalCta  : /images/aduana/caduana.png
-
-   Desktop, tablet y mobile usan estas mismas 3 imágenes,
-   una distinta por sección.
+/* === FINAL OVERRIDE PROCESS ONLY NUMBERS START === */
+/* Tablet + mobile:
+   Solo números en el proceso.
+   Sin círculo azul, sin íconos, sin flechas.
 */
+@media (max-width: 1180px) {
+  .processGrid strong,
+  .processGrid article strong,
+  .page .processGrid strong,
+  .page .processGrid article strong {
+    all: unset !important;
 
-/* SERVICES / CARD */
-:global(section[data-aduana-services-bg="true"]),
-.services[data-aduana-services-bg="true"] {
-  position: relative !important;
-  overflow: hidden !important;
-  background:
-    linear-gradient(90deg, rgba(5,12,20,.58) 0%, rgba(5,12,20,.34) 42%, rgba(5,12,20,.12) 100%),
-    url("/images/aduana/terceraaduana.png") center center / cover no-repeat !important;
-  background-image:
-    linear-gradient(90deg, rgba(5,12,20,.58) 0%, rgba(5,12,20,.34) 42%, rgba(5,12,20,.12) 100%),
-    url("/images/aduana/terceraaduana.png") !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-color: transparent !important;
-}
+    display: inline !important;
+    position: static !important;
 
-:global(section[data-aduana-services-bg="true"]::before),
-.services[data-aduana-services-bg="true"]::before {
-  background:
-    linear-gradient(90deg, rgba(5,12,20,.46) 0%, rgba(5,12,20,.18) 48%, rgba(5,12,20,.04) 100%) !important;
-  opacity: 1 !important;
-}
+    color: #07101a !important;
+    -webkit-text-fill-color: #07101a !important;
 
-:global(section[data-aduana-services-bg="true"]::after),
-.services[data-aduana-services-bg="true"]::after {
-  opacity: 0 !important;
-  background: transparent !important;
-}
+    font-size: 1rem !important;
+    font-weight: 950 !important;
+    line-height: 1 !important;
 
-:global(section[data-aduana-services-bg="true"] > *),
-.services[data-aduana-services-bg="true"] > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-/* DARKBAND */
-:global(section[data-aduana-darkband-bg="true"]),
-.darkBand[data-aduana-darkband-bg="true"] {
-  position: relative !important;
-  overflow: hidden !important;
-  isolation: isolate !important;
-  background:
-    linear-gradient(90deg, rgba(5,12,20,.70) 0%, rgba(5,12,20,.48) 44%, rgba(5,12,20,.18) 100%),
-    url("/images/segundaaduana.png") center center / cover no-repeat !important;
-  background-image:
-    linear-gradient(90deg, rgba(5,12,20,.70) 0%, rgba(5,12,20,.48) 44%, rgba(5,12,20,.18) 100%),
-    url("/images/segundaaduana.png") !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-color: transparent !important;
-}
-
-:global(section[data-aduana-darkband-bg="true"]::before),
-.darkBand[data-aduana-darkband-bg="true"]::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: 1 !important;
-  pointer-events: none !important;
-  background:
-    linear-gradient(90deg, rgba(5,12,20,.50) 0%, rgba(5,12,20,.22) 48%, rgba(5,12,20,.08) 100%) !important;
-  opacity: 1 !important;
-}
-
-:global(section[data-aduana-darkband-bg="true"]::after),
-.darkBand[data-aduana-darkband-bg="true"]::after {
-  opacity: 0 !important;
-  background: transparent !important;
-}
-
-:global(section[data-aduana-darkband-bg="true"] > *),
-.darkBand[data-aduana-darkband-bg="true"] > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-:global(section[data-aduana-darkband-bg="true"] img),
-.darkBand[data-aduana-darkband-bg="true"] img {
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-}
-
-/* FINAL CTA */
-:global(section[data-aduana-final-bg="true"]),
-.finalCta[data-aduana-final-bg="true"] {
-  position: relative !important;
-  overflow: hidden !important;
-  isolation: isolate !important;
-  background:
-    linear-gradient(90deg, rgba(5,12,20,.70) 0%, rgba(5,12,20,.48) 44%, rgba(5,12,20,.18) 100%),
-    url("/images/aduana/caduana.png") center center / cover no-repeat !important;
-  background-image:
-    linear-gradient(90deg, rgba(5,12,20,.70) 0%, rgba(5,12,20,.48) 44%, rgba(5,12,20,.18) 100%),
-    url("/images/aduana/caduana.png") !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-color: transparent !important;
-}
-
-:global(section[data-aduana-final-bg="true"]::before),
-.finalCta[data-aduana-final-bg="true"]::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: 1 !important;
-  pointer-events: none !important;
-  background:
-    linear-gradient(90deg, rgba(5,12,20,.50) 0%, rgba(5,12,20,.22) 48%, rgba(5,12,20,.08) 100%) !important;
-  opacity: 1 !important;
-}
-
-:global(section[data-aduana-final-bg="true"]::after),
-.finalCta[data-aduana-final-bg="true"]::after {
-  opacity: 0 !important;
-  background: transparent !important;
-}
-
-:global(section[data-aduana-final-bg="true"] > *),
-.finalCta[data-aduana-final-bg="true"] > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-:global(section[data-aduana-final-bg="true"] img),
-.finalCta[data-aduana-final-bg="true"] img {
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-}
-
-/* MOBILE/TABLET: mismas 3 imágenes, sin repetir entre secciones */
-@media (max-width: 900px) {
-  :global(section[data-aduana-services-bg="true"]),
-  .services[data-aduana-services-bg="true"] {
-    background:
-      linear-gradient(180deg, rgba(5,12,20,.52) 0%, rgba(5,12,20,.26) 45%, rgba(5,12,20,.58) 100%),
-      url("/images/aduana/terceraaduana.png") center center / cover no-repeat !important;
-    background-image:
-      linear-gradient(180deg, rgba(5,12,20,.52) 0%, rgba(5,12,20,.26) 45%, rgba(5,12,20,.58) 100%),
-      url("/images/aduana/terceraaduana.png") !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-  }
-
-  :global(section[data-aduana-darkband-bg="true"]),
-  .darkBand[data-aduana-darkband-bg="true"] {
-    background:
-      linear-gradient(180deg, rgba(5,12,20,.56) 0%, rgba(5,12,20,.28) 45%, rgba(5,12,20,.62) 100%),
-      url("/images/segundaaduana.png") center center / cover no-repeat !important;
-    background-image:
-      linear-gradient(180deg, rgba(5,12,20,.56) 0%, rgba(5,12,20,.28) 45%, rgba(5,12,20,.62) 100%),
-      url("/images/segundaaduana.png") !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-  }
-
-  :global(section[data-aduana-final-bg="true"]),
-  .finalCta[data-aduana-final-bg="true"] {
-    background:
-      linear-gradient(180deg, rgba(5,12,20,.56) 0%, rgba(5,12,20,.28) 45%, rgba(5,12,20,.62) 100%),
-      url("/images/aduana/caduana.png") center center / cover no-repeat !important;
-    background-image:
-      linear-gradient(180deg, rgba(5,12,20,.56) 0%, rgba(5,12,20,.28) 45%, rgba(5,12,20,.62) 100%),
-      url("/images/aduana/caduana.png") !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-  }
-}
-/* === ADUANA 3 DISTINCT IMAGES FINAL END === */
-
-
-/* === ADUANA FINAL CTA MOBILE TERCERA START === */
-/* Mobile del bloque:
-   "Coordinemos su próxima operación aduanera."
-   Usa terceraaduana.png y oculta cualquier Image interno que lo tape.
-*/
-
-@media (max-width: 900px) {
-  :global(section[data-aduana-final-bg="true"]),
-  .finalCta[data-aduana-final-bg="true"] {
-    position: relative !important;
-    overflow: hidden !important;
-    isolation: isolate !important;
-
-    background:
-      linear-gradient(
-        180deg,
-        rgba(5,12,20,.50) 0%,
-        rgba(5,12,20,.24) 42%,
-        rgba(5,12,20,.68) 100%
-      ),
-      url("/images/terceraaduana.png") center center / cover no-repeat !important;
-
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(5,12,20,.50) 0%,
-        rgba(5,12,20,.24) 42%,
-        rgba(5,12,20,.68) 100%
-      ),
-      url("/images/terceraaduana.png") !important;
-
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
+    background: none !important;
     background-color: transparent !important;
+    background-image: none !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+
+    width: auto !important;
+    height: auto !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+
+    padding: 0 !important;
+    margin: 0 0 .55rem 0 !important;
   }
 
-  :global(section[data-aduana-final-bg="true"] img),
-  :global(section[data-aduana-final-bg="true"] picture),
-  :global(section[data-aduana-final-bg="true"] [class*="finalImage"]),
-  .finalCta[data-aduana-final-bg="true"] img,
-  .finalCta[data-aduana-final-bg="true"] picture,
-  .finalCta[data-aduana-final-bg="true"] [class*="finalImage"] {
+  .processGrid strong::before,
+  .processGrid strong::after,
+  .processGrid article strong::before,
+  .processGrid article strong::after,
+  .page .processGrid strong::before,
+  .page .processGrid strong::after,
+  .page .processGrid article strong::before,
+  .page .processGrid article strong::after {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .processGrid i,
+  .processGrid article i,
+  .page .processGrid i,
+  .page .processGrid article i {
     display: none !important;
     opacity: 0 !important;
     visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
     pointer-events: none !important;
   }
 
-  :global(section[data-aduana-final-bg="true"]::before),
-  .finalCta[data-aduana-final-bg="true"]::before {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(5,12,20,.38) 0%,
-        rgba(5,12,20,.16) 45%,
-        rgba(5,12,20,.52) 100%
-      ) !important;
-    opacity: 1 !important;
-  }
-
-  :global(section[data-aduana-final-bg="true"]::after),
-  .finalCta[data-aduana-final-bg="true"]::after {
-    opacity: 0 !important;
-    background: transparent !important;
-  }
-
-  :global(section[data-aduana-final-bg="true"] > *),
-  .finalCta[data-aduana-final-bg="true"] > * {
-    position: relative !important;
-    z-index: 2 !important;
-  }
-}
-/* === ADUANA FINAL CTA MOBILE TERCERA END === */
-
-
-/* === ADUANA HERO MOBILE CSS FORCE START === */
-/* Hero mobile de Aduanas.
-   Fuerza terceraaduana como fondo y oculta cualquier imagen interna del hero solo en mobile.
-*/
-
-@media (max-width: 900px) {
-  :global(section[data-aduana-hero-mobile-bg="true"]),
-  .hero[data-aduana-hero-mobile-bg="true"] {
-    position: relative !important;
-    overflow: hidden !important;
-    background:
-      linear-gradient(
-        180deg,
-        rgba(5,12,20,.52) 0%,
-        rgba(5,12,20,.24) 45%,
-        rgba(5,12,20,.64) 100%
-      ),
-      url("/images/terceraaduana.png") center center / cover no-repeat !important;
-
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(5,12,20,.52) 0%,
-        rgba(5,12,20,.24) 45%,
-        rgba(5,12,20,.64) 100%
-      ),
-      url("/images/terceraaduana.png") !important;
-
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    background-color: transparent !important;
-  }
-
-  :global(section[data-aduana-hero-mobile-bg="true"] img),
-  :global(section[data-aduana-hero-mobile-bg="true"] picture),
-  :global(section[data-aduana-hero-mobile-bg="true"] [class*="heroImage"]),
-  .hero[data-aduana-hero-mobile-bg="true"] img,
-  .hero[data-aduana-hero-mobile-bg="true"] picture,
-  .hero[data-aduana-hero-mobile-bg="true"] [class*="heroImage"] {
+  .processGrid article::after,
+  .processGrid article:not(:last-child)::after,
+  .page .processGrid article::after,
+  .page .processGrid article:not(:last-child)::after {
+    content: none !important;
     display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-  }
-
-  :global(section[data-aduana-hero-mobile-bg="true"] > *),
-  .hero[data-aduana-hero-mobile-bg="true"] > * {
-    position: relative !important;
-    z-index: 2 !important;
   }
 }
-/* === ADUANA HERO MOBILE CSS FORCE END === */
-
-
+/* === FINAL OVERRIDE PROCESS ONLY NUMBERS END === */
 
 
 /* === ACROSS HERO IMAGES VISIBLE FINAL START === */
@@ -10185,7 +10505,175 @@
 /* === ACROSS HERO IMAGES VISIBLE FINAL END === */
 
 
+/* === ACROSS PROCESS SOLO NUMEROS GLOBAL FINAL START === */
+/* Proceso global limpio:
+   solo números en desktop, tablet y mobile.
+   Sin círculo azul, sin íconos y sin flechas.
+*/
 
+.processGrid::before,
+.page .processGrid::before {
+  display: none !important;
+  content: none !important;
+}
+
+.processGrid article::after,
+.processGrid article:not(:last-child)::after,
+.page .processGrid article::after,
+.page .processGrid article:not(:last-child)::after {
+  display: none !important;
+  content: none !important;
+}
+
+.processGrid i,
+.processGrid article i,
+.processGrid i svg,
+.processGrid article i svg,
+.page .processGrid i,
+.page .processGrid article i,
+.page .processGrid i svg,
+.page .processGrid article i svg {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  pointer-events: none !important;
+}
+
+.processGrid strong,
+.processGrid article strong,
+.page .processGrid strong,
+.page .processGrid article strong {
+  position: static !important;
+
+  display: inline !important;
+  place-items: unset !important;
+  align-items: unset !important;
+  justify-content: unset !important;
+
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+
+  margin: 0 0 .55rem 0 !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+  background-image: none !important;
+
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+
+  color: #07101a !important;
+  -webkit-text-fill-color: #07101a !important;
+
+  font-size: 1rem !important;
+  font-weight: 950 !important;
+  line-height: 1 !important;
+}
+
+.processGrid strong::before,
+.processGrid strong::after,
+.processGrid article strong::before,
+.processGrid article strong::after,
+.page .processGrid strong::before,
+.page .processGrid strong::after,
+.page .processGrid article strong::before,
+.page .processGrid article strong::after {
+  display: none !important;
+  content: none !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* También gana contra reglas específicas desktop/tablet viejas */
+@media (min-width: 901px) {
+  .processGrid strong,
+  .processGrid article strong,
+  .page .processGrid strong,
+  .page .processGrid article strong {
+    display: inline !important;
+    width: auto !important;
+    height: auto !important;
+    background: transparent !important;
+    background-image: none !important;
+    color: #07101a !important;
+    -webkit-text-fill-color: #07101a !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .processGrid i,
+  .processGrid article i,
+  .processGrid article::after,
+  .processGrid article:not(:last-child)::after {
+    display: none !important;
+    content: none !important;
+  }
+}
+
+@media (max-width: 1180px) {
+  .processGrid strong,
+  .processGrid article strong,
+  .page .processGrid strong,
+  .page .processGrid article strong {
+    display: inline !important;
+    width: auto !important;
+    height: auto !important;
+    background: transparent !important;
+    background-image: none !important;
+    color: #07101a !important;
+    -webkit-text-fill-color: #07101a !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .processGrid i,
+  .processGrid article i,
+  .processGrid article::after,
+  .processGrid article:not(:last-child)::after {
+    display: none !important;
+    content: none !important;
+  }
+}
+/* === ACROSS PROCESS SOLO NUMEROS GLOBAL FINAL END === */
+
+
+/* TRANSPORTE TERRESTRE - HERO IMAGE MOBILE FINAL */
+@media (max-width: 900px) {
+  .heroImageDesktop {
+    display: none !important;
+  }
+
+  .heroImageMobile {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    z-index: 0 !important;
+  }
+}
+
+@media (min-width: 901px) {
+  .heroImageDesktop {
+    display: block !important;
+  }
+
+  .heroImageMobile {
+    display: none !important;
+  }
+}
 
 /* === ACROSS DESKTOP HERO TYPO FIX === */
 /* Solo desktop. Arregla títulos hero demasiado angostos/altos en páginas internas. */
@@ -10282,50 +10770,6 @@
 
 /* === /ACROSS DESKTOP HERO TYPO FIX === */
 
-/* === ADUANAS SERVICEGRID CARDS VISIBLE LOCAL FINAL === */
-.services .serviceGrid article {
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.22),
-      rgba(255, 255, 255, 0.12)
-    ) !important;
-  border: 1px solid rgba(255, 255, 255, 0.42) !important;
-  box-shadow:
-    0 22px 55px rgba(0, 0, 0, 0.38),
-    inset 0 1px 0 rgba(255, 255, 255, 0.28) !important;
-  backdrop-filter: blur(10px) saturate(135%) !important;
-  -webkit-backdrop-filter: blur(10px) saturate(135%) !important;
-}
-
-.services .serviceGrid article:hover {
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.30),
-      rgba(255, 255, 255, 0.18)
-    ) !important;
-  border-color: rgba(255, 255, 255, 0.58) !important;
-  transform: translateY(-3px) !important;
-}
-
-.services .serviceGrid article h3 {
-  color: #ffffff !important;
-  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.75) !important;
-}
-
-.services .serviceGrid article p {
-  color: rgba(255, 255, 255, 0.96) !important;
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.75) !important;
-}
-
-.services .serviceGrid article i {
-  background: rgba(5, 31, 55, 0.82) !important;
-  border: 1px solid rgba(210, 164, 92, 0.55) !important;
-  color: #d2a45c !important;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35) !important;
-}
-
 /* === SERVICE PROCESS ICONS LIKE SECTORES FINAL START === */
 
 /* Iconos para procesos de servicios, estilo Sectores */
@@ -10411,251 +10855,3 @@
 }
 
 /* === SERVICE PROCESS ICONS LIKE SECTORES FINAL END === */
-
-/* === PROCESS ICONS VISIBLE REAL FINAL START === */
-
-/* Reactiva los iconos reales del JSX: <i><Icon /></i> */
-.processGrid i,
-.processGrid article i,
-.page .processGrid i,
-.page .processGrid article i {
-  display: inline-grid !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  width: 22px !important;
-  height: 22px !important;
-  min-width: 22px !important;
-  min-height: 22px !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  pointer-events: none !important;
-  place-items: center !important;
-  color: #173247 !important;
-  background: rgba(23, 50, 71, .06) !important;
-  border: 1px solid rgba(23, 50, 71, .26) !important;
-  border-radius: 999px !important;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.80) !important;
-}
-
-.processGrid i svg,
-.processGrid article i svg,
-.page .processGrid i svg,
-.page .processGrid article i svg {
-  display: block !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  width: 12px !important;
-  height: 12px !important;
-  min-width: 12px !important;
-  min-height: 12px !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  stroke: currentColor !important;
-}
-
-/* Número simple + icono + contenido, como sectores */
-.processGrid article,
-.page .processGrid article {
-  display: grid !important;
-  grid-template-columns: 42px 24px minmax(0, 1fr) !important;
-  column-gap: .75rem !important;
-  align-items: start !important;
-}
-
-.processGrid strong,
-.processGrid article strong,
-.page .processGrid strong,
-.page .processGrid article strong {
-  grid-column: 1 !important;
-  grid-row: 1 / span 2 !important;
-  display: block !important;
-  width: auto !important;
-  height: auto !important;
-  min-width: 0 !important;
-  min-height: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  color: #07101a !important;
-  -webkit-text-fill-color: #07101a !important;
-  background: transparent !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  font-size: 1rem !important;
-  line-height: 1 !important;
-  font-weight: 950 !important;
-}
-
-.processGrid h3,
-.page .processGrid h3 {
-  grid-column: 3 !important;
-  margin: 0 !important;
-}
-
-.processGrid p,
-.page .processGrid p {
-  grid-column: 3 !important;
-  margin-top: .55rem !important;
-}
-
-@media (max-width: 900px) {
-  .processGrid,
-  .page .processGrid {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 0 !important;
-  }
-
-  .processGrid article,
-  .page .processGrid article {
-    display: grid !important;
-    grid-template-columns: 42px 24px minmax(0, 1fr) !important;
-    column-gap: .72rem !important;
-    padding: 1.05rem 0 !important;
-    border-bottom: 1px solid rgba(8, 11, 16, .10) !important;
-  }
-
-  .processGrid i,
-  .processGrid article i,
-  .page .processGrid i,
-  .page .processGrid article i {
-    grid-column: 2 !important;
-    grid-row: 1 !important;
-    width: 22px !important;
-    height: 22px !important;
-    min-width: 22px !important;
-    min-height: 22px !important;
-  }
-
-  .processGrid strong,
-  .processGrid article strong,
-  .page .processGrid strong,
-  .page .processGrid article strong {
-    grid-column: 1 !important;
-    grid-row: 1 / span 2 !important;
-  }
-
-  .processGrid h3,
-  .page .processGrid h3 {
-    grid-column: 3 !important;
-    grid-row: 1 !important;
-  }
-
-  .processGrid p,
-  .page .processGrid p {
-    grid-column: 3 !important;
-    grid-row: 2 !important;
-  }
-}
-
-/* === PROCESS ICONS VISIBLE REAL FINAL END === */
-
-/* === PROCESS ICONS ACTUALLY VISIBLE FINAL START === */
-
-/* Proceso con número + icono + texto, igual a Sectores */
-.page .processGrid,
-.processGrid {
-  display: grid !important;
-}
-
-.page .processGrid article,
-.processGrid article {
-  display: grid !important;
-  grid-template-columns: 44px 28px minmax(0, 1fr) !important;
-  grid-template-areas:
-    "num icon title"
-    "num . text" !important;
-  column-gap: .68rem !important;
-  align-items: start !important;
-  overflow: visible !important;
-}
-
-.page .processGrid article strong,
-.processGrid article strong {
-  grid-area: num !important;
-  display: block !important;
-  width: auto !important;
-  height: auto !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  color: #07111d !important;
-  -webkit-text-fill-color: #07111d !important;
-  font-size: 1rem !important;
-  line-height: 1 !important;
-  font-weight: 950 !important;
-}
-
-.page .processGrid article i,
-.processGrid article i {
-  grid-area: icon !important;
-  display: inline-flex !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  width: 22px !important;
-  height: 22px !important;
-  min-width: 22px !important;
-  min-height: 22px !important;
-  margin: -.08rem 0 0 !important;
-  padding: 0 !important;
-  align-items: center !important;
-  justify-content: center !important;
-  color: #123f59 !important;
-  -webkit-text-fill-color: #123f59 !important;
-  background: rgba(18, 63, 89, .045) !important;
-  border: 1px solid rgba(18, 63, 89, .22) !important;
-  border-radius: 999px !important;
-  pointer-events: none !important;
-}
-
-.page .processGrid article i svg,
-.processGrid article i svg,
-.page .processGrid article svg,
-.processGrid article svg {
-  display: block !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  width: 13px !important;
-  height: 13px !important;
-  min-width: 13px !important;
-  min-height: 13px !important;
-  stroke: #123f59 !important;
-  color: #123f59 !important;
-  stroke-width: 2 !important;
-}
-
-.page .processGrid article h3,
-.processGrid article h3 {
-  grid-area: title !important;
-  margin: 0 !important;
-  align-self: start !important;
-}
-
-.page .processGrid article p,
-.processGrid article p {
-  grid-area: text !important;
-  margin-top: .45rem !important;
-}
-
-@media (max-width: 900px) {
-  .page .processGrid,
-  .processGrid {
-    grid-template-columns: 1fr !important;
-    gap: 0 !important;
-  }
-
-  .page .processGrid article,
-  .processGrid article {
-    display: grid !important;
-    grid-template-columns: 42px 28px minmax(0, 1fr) !important;
-    grid-template-areas:
-      "num icon title"
-      "num . text" !important;
-    padding: 1.05rem 0 !important;
-    border-bottom: 1px solid rgba(8, 11, 16, .10) !important;
-  }
-}
-
-/* === PROCESS ICONS ACTUALLY VISIBLE FINAL END === */

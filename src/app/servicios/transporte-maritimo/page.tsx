@@ -716,10 +716,12 @@ export default function TransporteMaritimoPage() {
               return (
                 <article key={title}>
                   <strong>{index + 1}</strong>
-                  <i>
-                    <Icon name={icons[index]} />
-                  </i>
-                  <h3>{title}</h3>
+                  <h3>
+                    <span className={styles.processIconInline} aria-hidden="true">
+                      <Icon name={icons[index]} />
+                    </span>
+                    <span className={styles.processTitleText}>{title}</span>
+                  </h3>
                   <p>{text}</p>
                 </article>
               );
