@@ -1223,6 +1223,12 @@ export default function CotizacionPage() {
   };
 
 
+  const invalidEmailMessage =
+    locale === "en"
+      ? "Enter a valid email address."
+      : locale === "zh"
+        ? "请输入有效的电子邮件地址。"
+        : "Ingrese un correo electrónico válido.";
 
   const blockedEmailMessage =
     locale === "en"
@@ -1231,6 +1237,12 @@ export default function CotizacionPage() {
         ? "输入的电子邮件无法使用。请使用有效的个人或公司邮箱。"
         : "El correo ingresado no puede ser utilizado. Use un email personal o corporativo válido.";
 
+  const invalidPhoneMessage =
+    locale === "en"
+      ? "Enter a valid phone number. Use only numbers and optionally + at the beginning."
+      : locale === "zh"
+        ? "请输入有效电话号码。只能使用数字，并且可在开头使用 +。"
+        : "Ingrese un teléfono válido. Use solo números y, si corresponde, + al inicio.";
 
   const sanitizePhoneValue = (value: string) => {
     const clean = value.replace(/[^0-9+]/g, "");

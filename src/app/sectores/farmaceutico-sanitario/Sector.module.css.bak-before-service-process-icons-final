@@ -2963,7 +2963,7 @@
       rgba(5, 6, 9, .55) 100%
     ),
     radial-gradient(circle at 18% 18%, rgba(23, 50, 71, .16), transparent 24rem),
-    url("/images/sectores/alimentosybebidas.png") !important;
+    url("/images/sectores/herofarmaseutico.png") !important;
   background-size: cover !important;
   background-position: center 48% !important;
   background-repeat: no-repeat !important;
@@ -3065,7 +3065,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/sectores/alimentosybebidas.png") !important;
+    url("/images/sectores/herofarmaseutico.png") !important;
   background-size: cover !important;
   background-position: center 55% !important;
   background-repeat: no-repeat !important;
@@ -3104,7 +3104,7 @@
   .services {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.90)),
-      url("/images/sectores/alimentosybebidas.png") !important;
+      url("/images/sectores/herofarmaseutico.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3116,7 +3116,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/alimentosybebidas.png") !important;
+      url("/images/sectores/herofarmaseutico.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3134,7 +3134,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/sectores/alimentosybebidas.png") !important;
+    url("/images/sectores/herofarmaseutico.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3144,7 +3144,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/alimentosybebidas.png") !important;
+      url("/images/sectores/herofarmaseutico.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3162,7 +3162,7 @@
       rgba(5, 6, 9, .44) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/sectores/alimentosybebidas.png") !important;
+    url("/images/sectores/herofarmaseutico.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3172,7 +3172,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/alimentosybebidas.png") !important;
+      url("/images/sectores/herofarmaseutico.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -8878,7 +8878,7 @@
   position: relative !important;
   isolation: isolate !important;
   background-color: rgba(0, 0, 0, 0) !important;
-  background-image: url("/images/sectores/alimentosybebidas.png") !important;
+  background-image: url("/images/sectores/herofarmaseutico.png") !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
@@ -9121,7 +9121,7 @@
         rgba(3,10,18,.16) 100%
       ),
       radial-gradient(circle at 70% 32%, rgba(15,111,150,.13), transparent 42%),
-      var(--mobile-bg, url("/images/sectores/alimentosybebidas.png")) center center / 100% 100% no-repeat !important;
+      var(--mobile-bg, url("/images/sectores/herofarmaseutico.png")) center center / 100% 100% no-repeat !important;
   }
 
   .page .finalCta::before,
@@ -9240,7 +9240,7 @@
 
 /* ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL
    DarkBand restaurado correctamente:
-   - usa SU imagen original del page.tsx: /images/sectores/alimentosybebidas.png
+   - usa SU imagen original del page.tsx: /images/sectores/herofarmaseutico.png
    - no usa imagen del CTA
    - elimina capas oscuras viejas
    - mantiene el estilo azul/premium
@@ -9264,7 +9264,7 @@
       rgba(244,239,229,.025) 0%,
       rgba(3,10,18,.16) 100%
     ),
-    url("/images/sectores/alimentosybebidas.png") center center / cover no-repeat !important;
+    url("/images/sectores/herofarmaseutico.png") center center / cover no-repeat !important;
 }
 
 .page .darkBand::before {
@@ -9873,88 +9873,3 @@ a.primaryBtn:hover {
 }
 /* === /FIX PROCESS NUMBERS ONLY - NO BLUE CIRCLES === */
 
-/* === SERVICE PROCESS ICONS LIKE SECTORES FINAL START === */
-
-/* Iconos para procesos de servicios, estilo Sectores */
-.processGrid > article,
-.process article {
-  position: relative !important;
-}
-
-.processGrid > article h3,
-.process article h3 {
-  display: flex !important;
-  align-items: center !important;
-  gap: .55rem !important;
-  min-width: 0 !important;
-}
-
-.processGrid > article h3::before,
-.process article h3::before {
-  content: "" !important;
-  width: 22px !important;
-  height: 22px !important;
-  flex: 0 0 22px !important;
-  border-radius: 999px !important;
-  border: 1px solid rgba(18,63,89,.28) !important;
-  background:
-    rgba(18,63,89,.06)
-    center / 13px 13px
-    no-repeat !important;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.85) !important;
-}
-
-/* 1 búsqueda/análisis */
-.processGrid > article:nth-child(1) h3::before,
-.process article:nth-child(1) h3::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23123f59' stroke-width='2'%3E%3Ccircle cx='10' cy='10' r='6'/%3E%3Cpath d='M15 15l5 5'/%3E%3C/svg%3E") !important;
-}
-
-/* 2 ruta/diseño */
-.processGrid > article:nth-child(2) h3::before,
-.process article:nth-child(2) h3::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23123f59' stroke-width='2'%3E%3Cpath d='M7 7h6a4 4 0 010 8H6'/%3E%3Cpath d='M9 4L6 7l3 3'/%3E%3C/svg%3E") !important;
-}
-
-/* 3 documentación */
-.processGrid > article:nth-child(3) h3::before,
-.process article:nth-child(3) h3::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23123f59' stroke-width='2'%3E%3Cpath d='M7 3h7l4 4v14H7z'/%3E%3Cpath d='M14 3v5h5'/%3E%3Cpath d='M9 13h6M9 17h6'/%3E%3C/svg%3E") !important;
-}
-
-/* 4 ejecución */
-.processGrid > article:nth-child(4) h3::before,
-.process article:nth-child(4) h3::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23123f59' stroke-width='2'%3E%3Cpath d='M4 16l5-5 4 4 7-7'/%3E%3Cpath d='M14 8h6v6'/%3E%3C/svg%3E") !important;
-}
-
-/* 5 seguimiento */
-.processGrid > article:nth-child(5) h3::before,
-.process article:nth-child(5) h3::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23123f59' stroke-width='2'%3E%3Cpath d='M12 21s7-4 7-10a7 7 0 10-14 0c0 6 7 10 7 10z'/%3E%3Ccircle cx='12' cy='11' r='2'/%3E%3C/svg%3E") !important;
-}
-
-/* 6 entrega final */
-.processGrid > article:nth-child(6) h3::before,
-.process article:nth-child(6) h3::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23123f59' stroke-width='2'%3E%3Cpath d='M3 7h12v10H3z'/%3E%3Cpath d='M15 11h3l3 3v3h-6z'/%3E%3Ccircle cx='7' cy='18' r='1.5'/%3E%3Ccircle cx='18' cy='18' r='1.5'/%3E%3C/svg%3E") !important;
-}
-
-@media (max-width: 760px) {
-  .processGrid > article h3,
-  .process article h3 {
-    display: flex !important;
-    align-items: center !important;
-    gap: .52rem !important;
-  }
-
-  .processGrid > article h3::before,
-  .process article h3::before {
-    width: 21px !important;
-    height: 21px !important;
-    flex-basis: 21px !important;
-    background-size: 12px 12px !important;
-  }
-}
-
-/* === SERVICE PROCESS ICONS LIKE SECTORES FINAL END === */

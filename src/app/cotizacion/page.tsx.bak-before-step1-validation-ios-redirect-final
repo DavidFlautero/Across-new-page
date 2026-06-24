@@ -1222,96 +1222,14 @@ export default function CotizacionPage() {
     return digits.length >= 7 && digits.length <= 18;
   };
 
-
-
-  const blockedEmailMessage =
-    locale === "en"
-      ? "The email entered cannot be used. Please use a valid personal or business email."
-      : locale === "zh"
-        ? "输入的电子邮件无法使用。请使用有效的个人或公司邮箱。"
-        : "El correo ingresado no puede ser utilizado. Use un email personal o corporativo válido.";
-
-
-  const sanitizePhoneValue = (value: string) => {
-    const clean = value.replace(/[^0-9+]/g, "");
-
-    if (!clean) return "";
-
-    const hasPlus = clean.startsWith("+");
-    const digits = clean.replace(/\+/g, "");
-
-    return hasPlus ? `+${digits}` : digits;
-  };
-
-  const isValidPhoneValue = (value: string) => /^\+?\d{7,18}$/.test(value.trim());
-
-  const isValidEmailValue = (value: string) => {
-    const email = value.trim().toLowerCase();
-    return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
-  };
-
-  const isBlockedEmailValue = (value: string) => {
-    const email = value.trim().toLowerCase();
-    const [local = "", domain = ""] = email.split("@");
-
-    const blockedLocals = new Set([
-      "test",
-      "prueba",
-      "demo",
-      "fake",
-      "asdf",
-      "qwerty",
-      "correo",
-      "email",
-      "mail",
-      "hola",
-      "nombre",
-      "empresa",
-      "admin",
-      "info",
-    ]);
-
-    const blockedDomains = [
-      "test.com",
-      "example.com",
-      "example.es",
-      "dominio.com",
-      "dominio.es",
-      "correo.com",
-      "email.com",
-      "mail.com",
-      "fake.com",
-      "prueba.com",
-      "asdf.com",
-      "qwerty.com",
-      "tempmail",
-      "temp-mail",
-      "mailinator",
-      "yopmail",
-      "10minutemail",
-      "guerrillamail",
-    ];
-
-    if (!email || !domain) return true;
-    if (blockedLocals.has(local)) return true;
-    if (blockedDomains.some((blocked) => domain.includes(blocked))) return true;
-
-    return false;
-  };
-
-
   const getStepValidationError = (step: number) => {
     if (step === 0) {
-      const normalizedEmail = form.email.trim().toLowerCase();
-      const normalizedPhone = sanitizePhoneValue(form.phone);
-
       if (!isFilled(form.name)) return requiredMessage(t.name);
       if (!isFilled(form.company)) return requiredMessage(t.company);
       if (!isFilled(form.email)) return requiredMessage(t.email);
-      if (!isValidEmailValue(normalizedEmail)) return invalidEmailMessage;
-      if (isBlockedEmailValue(normalizedEmail)) return blockedEmailMessage;
+      if (!isValidEmail(form.email)) return invalidEmailMessage;
       if (!isFilled(form.phone)) return requiredMessage(t.phone);
-      if (!isValidPhoneValue(normalizedPhone)) return invalidPhoneMessage;
+      if (!isValidPhone(form.phone)) return invalidPhoneMessage;
       if (!isFilled(form.country)) return requiredMessage(t.country);
       if (!isFilled(form.contractDate)) return requiredMessage(t.contractDate);
       return "";
@@ -1595,8 +1513,8 @@ export default function CotizacionPage() {
         return;
       }
 
-      window.location.href = "/cotizacion/gracias";
-      return;
+      setSent(true);
+      setForm(initialForm);
     } catch {
       setError(t.connectionError);
     } finally {

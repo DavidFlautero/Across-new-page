@@ -6245,37 +6245,3 @@ main [class*="Heading"] {
 }
 
 /* === BLOG REMOVE GOLD ACCENTS FINAL END === */
-
-/* === REMOVE GOLD TITLE DOT REAL FINAL START === */
-
-/* Quita el punto/acento dorado pegado a títulos */
-main h1::after,
-main h2::after,
-main h3::after,
-main [class*="title"]::after,
-main [class*="Title"]::after,
-main [class*="heading"]::after,
-main [class*="Heading"]::after {
-  content: none !important;
-  display: none !important;
-  color: transparent !important;
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-}
-
-/* Si el punto viene como span/b/strong decorativo champagne */
-main h1 > span:last-child,
-main h2 > span:last-child,
-main h3 > span:last-child,
-main h1 > b:last-child,
-main h2 > b:last-child,
-main h3 > b:last-child,
-main h1 > strong:last-child,
-main h2 > strong:last-child,
-main h3 > strong:last-child {
-  color: inherit !important;
-  -webkit-text-fill-color: inherit !important;
-}
-
-/* === REMOVE GOLD TITLE DOT REAL FINAL END === */
