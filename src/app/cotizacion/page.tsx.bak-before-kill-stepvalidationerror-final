@@ -988,8 +988,10 @@ export default function CotizacionPage() {
 
 
   const getQuoteStepVisualState = (index: number) => {
-    if (index < activeStep && !getStepValidationError(index)) return "complete";
-    if (index === activeStep && getStepValidationError(index)) return "missing";
+    const stepValidationError = getStepValidationError(index);
+
+    if (index < activeStep && !stepValidationError) return "complete";
+    if (index === activeStep && stepValidationError) return "missing";
     if (index === activeStep) return "active";
     if (index > activeStep && !canOpenStep(index)) return "locked";
 
@@ -1026,8 +1028,8 @@ export default function CotizacionPage() {
   const getVisualStepState = (index: number) => {
     
 
-    if (index < activeStep && !getStepValidationError(index)) return "complete";
-    if (index === activeStep && getStepValidationError(index)) return "missing";
+    if (index < activeStep && !stepValidationError) return "complete";
+    if (index === activeStep && stepValidationError) return "missing";
     if (index === activeStep) return "active";
 
     return "pending";
