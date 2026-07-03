@@ -20,6 +20,13 @@ const copy = {
       "Coordinamos transporte terrestre para carga completa, grupaje, distribución y operaciones especiales, con seguimiento operativo y control documental durante el recorrido.",
     primaryCta: "Solicitar cotización terrestre",
     secondaryCta: "Hablar con un especialista",
+    contactEyebrow: "CONTACTO DIRECTO",
+    contactTitle: "Coordinemos su próxima operación internacional.",
+    contactText: "Hable con un especialista y reciba una solución logística adaptada a su carga, destino y urgencia.",
+    contactPrimary: "Hablar con un especialista",
+    contactSecondary: "Cotizar ahora",
+
+
 
     activeLabel: "Operación terrestre activa",
     activeRoute: "Madrid → Valencia",
@@ -106,6 +113,13 @@ const copy = {
       "We coordinate domestic and international road freight for full loads, partial loads, distribution and special operations, with operational tracking and document control from origin to destination.",
     primaryCta: "Plan my operation",
     secondaryCta: "Talk to our team",
+    contactEyebrow: "DIRECT CONTACT",
+    contactTitle: "Let’s coordinate your next international operation.",
+    contactText: "Talk to a specialist and receive a logistics solution adapted to your cargo, destination and urgency.",
+    contactPrimary: "Talk to a specialist",
+    contactSecondary: "Quote now",
+
+
 
     activeLabel: "Active road operation",
     activeRoute: "Madrid → Valencia",
@@ -192,6 +206,13 @@ const copy = {
       "我们协调国内及国际陆运，包括整车、零担、配送和特殊运输，并提供从始发地到目的地的运营跟踪和文件控制。",
     primaryCta: "规划物流操作",
     secondaryCta: "联系我们的团队",
+    contactEyebrow: "直接联系",
+    contactTitle: "协调您的下一次国际物流操作。",
+    contactText: "联系专家，根据您的货物、目的地和紧急程度获得合适的物流方案。",
+    contactPrimary: "联系专家",
+    contactSecondary: "立即报价",
+
+
 
     activeLabel: "进行中的陆运操作",
     activeRoute: "马德里 → 瓦伦西亚",
@@ -778,8 +799,30 @@ export default function TransporteTerrestrePage() {
             />
           </div>
         </section>
+        <section className={styles.contactHero} aria-labelledby="contact-hero-title">
+          <div className={styles.contactHeroContent}>
+            <span className={styles.eyebrow}>{t.contactEyebrow}</span>
+            <h2 id="contact-hero-title">{t.contactTitle}</h2>
+            <p>{t.contactText}</p>
 
-        <RelatedServices current="transporte-aereo" locale={locale} />
+            <div className={styles.contactHeroActions}>
+              <Link href="/contacto">{t.contactPrimary}</Link>
+              <Link href={`/cotizacion?servicio=transporte-terrestre`}>{t.contactSecondary}</Link>
+            </div>
+          </div>
+
+          <div className={styles.contactHeroImage} aria-hidden="true">
+            <Image
+              src="/images/contactoimagen.png"
+              alt=""
+              fill
+              sizes="(max-width: 900px) 100vw, 46vw"
+            />
+          </div>
+        </section>
+
+
+<RelatedServices current="transporte-aereo" locale={locale} />
       </main>
 
       <Footer />

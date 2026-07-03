@@ -15,32 +15,53 @@ type Locale = "es" | "en" | "zh";
 const copy = {
   es: {
     heroEyebrow: "TRANSPORTE MARÍTIMO INTERNACIONAL",
-    heroTitle: "Transporte marítimo internacional para embarques FCL, LCL y proyectos especiales.",
+    heroTitle: "Movemos su carga marítima con control, coordinación portuaria y trazabilidad.",
     heroText:
-      "Gestionamos embarques marítimos internacionales con coordinación portuaria, control documental, aduanas y seguimiento operativo de origen a destino.",
-    primaryCta: "Solicitar cotización marítima",
+      "Gestionamos embarques FCL, LCL y proyectos marítimos con control documental, coordinación portuaria, aduanas y seguimiento operativo de origen a destino.",
+    primaryCta: "Cotizar carga marítima",
     secondaryCta: "Hablar con un especialista",
+    contactEyebrow: "CONTACTO DIRECTO",
+    contactTitle: "Coordinemos su próxima operación internacional.",
+    contactText: "Hable con un especialista y reciba una solución logística adaptada a su carga, destino y urgencia.",
+    contactPrimary: "Hablar con un especialista",
+    contactSecondary: "Cotizar ahora",
+
 
     activeLabel: "Operación marítima activa",
-    activeRoute: "Madrid → Bogotá",
-    activeCargo: "Carga crítica",
+    activeRoute: "Puerto → Destino",
+    activeCargo: "Embarque internacional",
     activeStatusLabel: "Estado:",
     activeStatus: "En coordinación",
     activeEtaLabel: "ETA:",
-    activeEta: "Prioritario",
+    activeEta: "Programado",
 
     trust: [
-      ["Carga FCL", "Operaciones críticas"],
-      ["Carga especial", "Control y trazabilidad"],
+      ["Carga FCL", "Contenedor completo"],
+      ["Carga LCL", "Consolidado"],
       ["Documentación", "Gestión aduanera"],
-      ["Seguimiento operativo", "Trazabilidad operativa"],
+      ["Seguimiento", "Trazabilidad operativa"],
     ],
 
-    overviewEyebrow: "Operaciones confiables",
-    overviewTitle: "Velocidad, precisión y control en cada etapa del embarque marítimo.",
-    overviewText:
-      "El transporte marítimo exige coordinación exacta entre origen, naviera, aduana y destino final. En Across Logistics gestionamos cada etapa para reducir tiempos, evitar errores documentales y mantener visibilidad sobre la operación.",
-    overviewButton: "Conocer más sobre marítimo",
+    overviewEyebrow: "OPERACIÓN MARÍTIMA BAJO CONTROL",
+    overviewTitle: "Coordinación portuaria, documentación y seguimiento para su embarque.",
+    overviewText: "El transporte marítimo exige control entre origen, naviera, puerto, aduana y destino final. Gestionamos cada etapa para reducir errores documentales y mantener visibilidad operativa.",
+    overviewButton: "Hablar con un especialista marítimo",
+
+
+
+    stickyPrimary: "Cotizar marítimo",
+    stickySecondary: "Hablar ahora",
+    stickySecondaryHref: "",
+
+    preQuoteEyebrow: "ANTES DE COTIZAR",
+    preQuoteTitle: "El embarque marítimo se define por volumen, ruta y documentación.",
+    preQuoteText: "Revisamos origen, destino, tipo de carga, volumen, Incoterm y documentos para definir si conviene FCL, LCL, proyecto, cross trade o puerta a puerta.",
+    preQuoteCta: "Cotizar carga marítima",
+    preQuotePoints: [
+      ["Carga", "Tipo, volumen, peso y condiciones de la mercancía."],
+      ["Ruta", "Puerto de origen, destino, tiempos y disponibilidad."],
+      ["Control", "Documentos, aduanas y seguimiento operativo."],
+    ],
 
     pillars: [
       ["Coordinación portuaria", "Gestión con navieras, agentes y operadores logísticos."],
@@ -92,41 +113,62 @@ const copy = {
       ["Soporte especializado", "Especialistas marítimos"],
     ],
 
-    finalTitle: "Coordinemos su próximo embarque marítimo internacional.",
+    finalTitle: "Coordinemos su próxima operación internacional.",
     finalText:
-      "Cuéntenos origen, destino, tipo de carga y urgencia. Nuestro equipo analizará la mejor alternativa marítima para su operación.",
-    finalPrimary: "Solicitar cotización marítima",
-    finalSecondary: "Hablar con un especialista",
+      "Hable con un especialista y reciba una solución logística adaptada a su carga, destino y urgencia.",
+    finalPrimary: "Hablar con un especialista",
+    finalSecondary: "Cotizar carga marítima",
   },
 
   en: {
-    heroEyebrow: "International ocean freight",
-    heroTitle: "Global capacity for cargo crossing oceans.",
+    heroEyebrow: "INTERNATIONAL OCEAN FREIGHT",
+    heroTitle: "We move your ocean cargo with port coordination, control and traceability.",
     heroText:
-      "We coordinate international ocean shipments with document control, operational tracking and solutions adapted to sensitive, urgent or high-value cargo.",
-    primaryCta: "Plan my operation",
-    secondaryCta: "Talk to our team",
+      "We manage FCL, LCL and ocean project shipments with document control, port coordination, customs and operational tracking from origin to destination.",
+    primaryCta: "Quote ocean freight",
+    secondaryCta: "Talk to a specialist",
+    contactEyebrow: "DIRECT CONTACT",
+    contactTitle: "Let’s coordinate your next international operation.",
+    contactText: "Talk to a specialist and receive a logistics solution adapted to your cargo, destination and urgency.",
+    contactPrimary: "Talk to a specialist",
+    contactSecondary: "Quote now",
 
-    activeLabel: "Active air operation",
-    activeRoute: "Madrid → Bogotá",
-    activeCargo: "Critical cargo",
+
+    activeLabel: "Active ocean operation",
+    activeRoute: "Port → Destination",
+    activeCargo: "International shipment",
     activeStatusLabel: "Status:",
     activeStatus: "In coordination",
     activeEtaLabel: "ETA:",
-    activeEta: "Priority",
+    activeEta: "Scheduled",
 
     trust: [
-      ["Urgent cargo", "Critical operations"],
-      ["High value", "Maximum security"],
-      ["Documentation", "International control"],
-      ["Operational tracking", "Real-time visibility"],
+      ["FCL cargo", "Full container"],
+      ["LCL cargo", "Consolidated"],
+      ["Documentation", "Customs management"],
+      ["Tracking", "Operational traceability"],
     ],
 
-    overviewEyebrow: "Reliable operations",
-    overviewTitle: "Speed, precision and control at every stage of air shipping.",
-    overviewText:
-      "Ocean freight requires exact coordination between origin, airline, customs and final destination. At Across Logistics, we manage each stage to reduce times, avoid documentation errors and maintain visibility over the operation.",
-    overviewButton: "Learn more about ocean freight",
+    overviewEyebrow: "OCEAN OPERATION UNDER CONTROL",
+    overviewTitle: "Port coordination, documentation and tracking for your shipment.",
+    overviewText: "Ocean freight requires control between origin, carrier, port, customs and final destination. We manage each stage to reduce document errors and maintain operational visibility.",
+    overviewButton: "Talk to an ocean specialist",
+
+
+
+    stickyPrimary: "Quote ocean",
+    stickySecondary: "Talk now",
+    stickySecondaryHref: "",
+
+    preQuoteEyebrow: "BEFORE QUOTING",
+    preQuoteTitle: "Ocean freight is defined by volume, route and documentation.",
+    preQuoteText: "We review origin, destination, cargo type, volume, Incoterm and documents to define whether FCL, LCL, project, cross trade or door-to-door is more viable.",
+    preQuoteCta: "Quote ocean freight",
+    preQuotePoints: [
+      ["Cargo", "Type, volume, weight and cargo conditions."],
+      ["Route", "Port of origin, destination, timing and availability."],
+      ["Control", "Documents, customs and operational tracking."],
+    ],
 
     pillars: [
       ["Airport coordination", "Management with airlines, agents and logistics operators."],
@@ -178,41 +220,62 @@ const copy = {
       ["Specialized support", "Dedicated specialists"],
     ],
 
-    finalTitle: "Let’s coordinate your next international air shipment.",
+    finalTitle: "Let’s coordinate your next international operation.",
     finalText:
-      "Tell us origin, destination, cargo type and urgency. Our team will analyze the best air alternative for your operation.",
-    finalPrimary: "Request air quotation",
-    finalSecondary: "Talk to a specialist",
+      "Talk to a specialist and receive a logistics solution adapted to your cargo, destination and urgency.",
+    finalPrimary: "Talk to a specialist",
+    finalSecondary: "Quote ocean freight",
   },
 
   zh: {
-    heroEyebrow: "国际空运",
-    heroTitle: "面向紧急货物和关键业务的国际空运服务。",
+    heroEyebrow: "国际海运",
+    heroTitle: "通过港口协调、管控和可追踪性运输您的海运货物。",
     heroText:
-      "我们协调国际空运业务，提供文件控制、运营跟踪以及适用于敏感、紧急或高价值货物的定制方案。",
-    primaryCta: "规划物流操作",
-    secondaryCta: "联系我们的团队",
+      "我们管理 FCL、LCL 和项目海运，涵盖文件管控、港口协调、海关和从 始发地到目的地的运营跟踪。",
+    primaryCta: "获取海运报价",
+    secondaryCta: "联系专家",
+    contactEyebrow: "直接联系",
+    contactTitle: "协调您的下一次国际物流操作。",
+    contactText: "联系专家，根据您的货物、目的地和紧急程度获得合适的物流方案。",
+    contactPrimary: "联系专家",
+    contactSecondary: "立即报价",
 
-    activeLabel: "进行中的空运操作",
-    activeRoute: "马德里 → 波哥大",
-    activeCargo: "关键货物",
+
+    activeLabel: "海运操作中",
+    activeRoute: "港口 → 目的地",
+    activeCargo: "国际运输",
     activeStatusLabel: "状态：",
     activeStatus: "协调中",
     activeEtaLabel: "ETA：",
-    activeEta: "优先",
+    activeEta: "已安排",
 
     trust: [
-      ["紧急货物", "关键业务"],
-      ["高价值", "最高安全标准"],
-      ["文件管理", "国际控制"],
-      ["运营跟踪", "实时可视化"],
+      ["FCL整柜", "整箱运输"],
+      ["LCL拼箱", "拼箱运输"],
+      ["文件", "海关管理"],
+      ["跟踪", "运营可追踪"],
     ],
 
-    overviewEyebrow: "可靠运营",
-    overviewTitle: "在空运每个阶段实现速度、精准与控制。",
-    overviewText:
-      "空运需要始发地、航空公司、海关和最终目的地之间的精准协调。Across Logistics 管理每个阶段，以缩短时间、避免文件错误并保持运营可视化。",
-    overviewButton: "了解空运服务",
+    overviewEyebrow: "海运操作管控",
+    overviewTitle: "为您的货物提供港口协调、文件和跟踪。",
+    overviewText: "海运需要在始发地、船公司、港口、海关和最终目的地之间进行管控。我们管理每个环节，以减少文件错误并保持运营可视性。",
+    overviewButton: "联系海运专家",
+
+
+
+    stickyPrimary: "海运报价",
+    stickySecondary: "立即联系",
+    stickySecondaryHref: "",
+
+    preQuoteEyebrow: "报价前",
+    preQuoteTitle: "海运方案取决于体积、路线和文件。",
+    preQuoteText: "我们会审核始发地、目的地、货物类型、体积、贸易条款和文件，以判断 FCL、LCL、项目运输、第三国贸易或门到门是否更合适。",
+    preQuoteCta: "获取海运报价",
+    preQuotePoints: [
+      ["货物", "类型、体积、重量和货物条件。"],
+      ["路线", "始发港、目的地、时间和舱位。"],
+      ["管控", "文件、海关和运营跟踪。"],
+    ],
 
     pillars: [
       ["机场协调", "与航空公司、代理和物流运营商协调。"],
@@ -264,11 +327,11 @@ const copy = {
       ["专业支持", "专属专家"],
     ],
 
-    finalTitle: "让我们协调您的下一次国际空运。",
+    finalTitle: "协调您的下一次国际物流操作。",
     finalText:
-      "告诉我们始发地、目的地、货物类型和紧急程度。我们的团队将为您的业务分析最佳空运方案。",
-    finalPrimary: "申请空运报价",
-    finalSecondary: "联系专家",
+      "联系专家，根据您的货物、目的地和紧急程度获得合适的物流方案。",
+    finalPrimary: "联系专家",
+    finalSecondary: "获取海运报价",
   },
 } satisfies Record<Locale, any>;
 
@@ -758,15 +821,34 @@ export default function TransporteMaritimoPage() {
             </div>
           </div>
         </section>
+        <section className={styles.servicePreQuote} aria-labelledby="service-prequote-title">
+          <span className={styles.eyebrow}>{t.preQuoteEyebrow}</span>
+          <h2 id="service-prequote-title">{t.preQuoteTitle}</h2>
+          <p>{t.preQuoteText}</p>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/maritimo.png')" } as CSSProperties} data-across-final-cta="true">
+          <div className={styles.servicePreQuotePoints}>
+            {t.preQuotePoints.map(([title, text]: string[]) => (
+              <article key={title}>
+                <strong>{title}</strong>
+                <span>{text}</span>
+              </article>
+            ))}
+          </div>
+
+          <Link href="/cotizacion?servicio=transporte-maritimo">
+            {t.preQuoteCta}
+          </Link>
+        </section>
+
+
+<section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/maritimo.png')" } as CSSProperties} data-across-final-cta="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>
 
             <div className={styles.finalActions}>
-              <Link href="/cotizacion">{t.finalPrimary}</Link>
-              <Link href="/contacto">{t.finalSecondary}</Link>
+              <Link href="/contacto?servicio=transporte-maritimo">{t.finalPrimary}</Link>
+              <Link href="/cotizacion?servicio=transporte-maritimo">{t.finalSecondary}</Link>
             </div>
           </div>
 
@@ -779,9 +861,42 @@ export default function TransporteMaritimoPage() {
             />
           </div>
         </section>
+        <section className={styles.contactHero} aria-labelledby="contact-hero-title">
+          <div className={styles.contactHeroContent}>
+            <span className={styles.eyebrow}>{t.contactEyebrow}</span>
+            <h2 id="contact-hero-title">{t.contactTitle}</h2>
+            <p>{t.contactText}</p>
 
-        <RelatedServices current="transporte-aereo" locale={locale} />
+            <div className={styles.contactHeroActions}>
+              <Link href="/contacto">{t.contactPrimary}</Link>
+              <Link href={`/cotizacion?servicio=transporte-maritimo`}>{t.contactSecondary}</Link>
+            </div>
+          </div>
+
+          <div className={styles.contactHeroImage} aria-hidden="true">
+            <Image
+              src="/images/contactoimagen.png"
+              alt=""
+              fill
+              sizes="(max-width: 900px) 100vw, 46vw"
+            />
+          </div>
+        </section>
+
+
+<RelatedServices current="transporte-aereo" locale={locale} />
       </main>
+
+
+      <div className={styles.mobileStickyCta} aria-label="Acciones rápidas">
+        <Link href="/cotizacion?servicio=transporte-maritimo">
+          {t.stickyPrimary}
+        </Link>
+
+        <Link href={t.stickySecondaryHref || "/contacto?servicio=transporte-maritimo"}>
+          {t.stickySecondary}
+        </Link>
+      </div>
 
       <Footer />
     </div>

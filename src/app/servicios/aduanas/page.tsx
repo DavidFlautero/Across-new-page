@@ -19,6 +19,13 @@ const copy = {
     "heroText": "Gestionamos documentación, clasificación, cumplimiento y coordinación aduanera para importaciones y exportaciones, reduciendo riesgos operativos y tiempos de liberación.",
     "primaryCta": "Solicitar soporte aduanero",
     "secondaryCta": "Hablar con un especialista",
+    contactEyebrow: "CONTACTO DIRECTO",
+    contactTitle: "Coordinemos su próxima operación internacional.",
+    contactText: "Hable con un especialista y reciba una solución logística adaptada a su carga, destino y urgencia.",
+    contactPrimary: "Hablar con un especialista",
+    contactSecondary: "Cotizar ahora",
+
+
     "activeLabel": "Gestión aduanera activa",
     "activeRoute": "Origen → Aduana → Destino",
     "activeCargo": "Importación / Exportación",
@@ -181,6 +188,13 @@ const copy = {
     "heroText": "We manage documentation, classification, compliance and customs coordination for imports and exports, reducing operational risks and release times.",
     "primaryCta": "Plan my operation",
     "secondaryCta": "Talk to our team",
+    contactEyebrow: "DIRECT CONTACT",
+    contactTitle: "Let’s coordinate your next international operation.",
+    contactText: "Talk to a specialist and receive a logistics solution adapted to your cargo, destination and urgency.",
+    contactPrimary: "Talk to a specialist",
+    contactSecondary: "Quote now",
+
+
     "activeLabel": "Active customs management",
     "activeRoute": "Origin → Customs → Destination",
     "activeCargo": "Import / Export",
@@ -343,6 +357,13 @@ const copy = {
     "heroText": "我们为进出口业务管理文件、归类、合规和海关协调，降低运营风险并缩短放行时间。",
     "primaryCta": "规划物流操作",
     "secondaryCta": "联系我们的团队",
+    contactEyebrow: "直接联系",
+    contactTitle: "协调您的下一次国际物流操作。",
+    contactText: "联系专家，根据您的货物、目的地和紧急程度获得合适的物流方案。",
+    contactPrimary: "联系专家",
+    contactSecondary: "立即报价",
+
+
     "activeLabel": "进行中的海关管理",
     "activeRoute": "始发地 → 海关 → 目的地",
     "activeCargo": "进口 / 出口",
@@ -1006,8 +1027,30 @@ export default function AduanasPage() {
             />
           </div>
         </section>
+        <section className={styles.contactHero} aria-labelledby="contact-hero-title">
+          <div className={styles.contactHeroContent}>
+            <span className={styles.eyebrow}>{t.contactEyebrow}</span>
+            <h2 id="contact-hero-title">{t.contactTitle}</h2>
+            <p>{t.contactText}</p>
 
-        <RelatedServices current="transporte-aereo" locale={locale} />
+            <div className={styles.contactHeroActions}>
+              <Link href="/contacto">{t.contactPrimary}</Link>
+              <Link href={`/cotizacion?servicio=aduanas`}>{t.contactSecondary}</Link>
+            </div>
+          </div>
+
+          <div className={styles.contactHeroImage} aria-hidden="true">
+            <Image
+              src="/images/contactoimagen.png"
+              alt=""
+              fill
+              sizes="(max-width: 900px) 100vw, 46vw"
+            />
+          </div>
+        </section>
+
+
+<RelatedServices current="transporte-aereo" locale={locale} />
       </main>
 
       <Footer />

@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import RelatedServices from "@/app/servicios/_shared/RelatedServices";
+import HomeCorporateFinal from "@/components/sections/HomeCorporateFinal";
 import styles from "./TransporteAereo.module.css";
 
 type Locale = "es" | "en" | "zh";
@@ -95,7 +96,7 @@ const copy = {
     finalTitle: "Coordinemos su próximo envío aéreo internacional.",
     finalText:
       "Cuéntenos origen, destino, tipo de carga y urgencia. Nuestro equipo analizará la mejor alternativa aérea para su operación.",
-    finalPrimary: "Solicitar cotización aérea",
+    finalPrimary: "Hablar con un especialista",
     finalSecondary: "Hablar con un especialista",
   },
 
@@ -181,7 +182,7 @@ const copy = {
     finalTitle: "Let’s coordinate your next international air shipment.",
     finalText:
       "Tell us origin, destination, cargo type and urgency. Our team will analyze the best air alternative for your operation.",
-    finalPrimary: "Request air quotation",
+    finalPrimary: "Talk to a specialist",
     finalSecondary: "Talk to a specialist",
   },
 
@@ -267,7 +268,7 @@ const copy = {
     finalTitle: "让我们协调您的下一次国际空运。",
     finalText:
       "告诉我们始发地、目的地、货物类型和紧急程度。我们的团队将为您的业务分析最佳空运方案。",
-    finalPrimary: "申请空运报价",
+    finalPrimary: "联系专家",
     finalSecondary: "联系专家",
   },
 } satisfies Record<Locale, any>;
@@ -629,8 +630,7 @@ export default function TransporteAereoPage() {
             })}
           </div>
         </section>
-
-        <Certifications />
+<Certifications />
 
         <section className={styles.overview}>
           <div className={styles.overviewCopy}>
@@ -709,27 +709,46 @@ export default function TransporteAereoPage() {
             <h2>{t.processTitle}</h2>
           </div>
 
-          <div className={styles.processGrid}>
-            {t.process.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["search", "route", "document", "plane", "tracking", "truck"];
-
-              return (
-                <article key={title}>
+          <div className={styles.processGrid} data-process-accordion="true">
+            {t.process.map(([title, text]: string[], index: number) => (
+              <details className={styles.processAccordionItem} key={title}>
+                <summary>
                   <strong>{index + 1}</strong>
-                  <h3>
-                    <span className={styles.processIconInline} aria-hidden="true">
-                      <Icon name={icons[index]} />
-                    </span>
-                    <span className={styles.processTitleText}>{title}</span>
-                  </h3>
-                  <p>{text}</p>
-                </article>
-              );
-            })}
+
+                  <div className={styles.processAccordionText}>
+                    <h3>{title}</h3>
+                    <p>{text}</p>
+                  </div>
+
+                  <span className={styles.processAccordionPlus} aria-hidden="true" />
+                </summary>
+
+                <div className={styles.processAccordionBody}>
+                  <div>
+                    <b>{locale === "es" ? "Cuándo aplica" : locale === "en" ? "When it applies" : "适用场景"}</b>
+                    <p>{text}</p>
+                  </div>
+
+                  <div>
+                    <b>{locale === "es" ? "Cómo se opera" : locale === "en" ? "How it works" : "操作方式"}</b>
+                    <p>
+                      {locale === "es"
+                        ? "Coordinamos ruta, documentación, tiempos y seguimiento operativo según la urgencia de la carga."
+                        : locale === "en"
+                          ? "We coordinate route, documentation, timing and operational tracking according to cargo urgency."
+                          : "我们根据货物紧急程度协调路线、文件、时间和操作跟踪。"}
+                    </p>
+                  </div>
+
+                  <Link href="/cotizacion?servicio=transporte-aereo">
+                    {locale === "es" ? "Cotizar modalidad" : locale === "en" ? "Quote this option" : "获取报价"}
+                  </Link>
+                </div>
+              </details>
+            ))}
           </div>
         </section>
-
-        <section className={styles.darkBand} data-mobile-hide-after-cert="true">
+<section className={styles.darkBand} data-mobile-hide-after-cert="true">
           <div className={styles.darkBandImage}>
             <Image
               src="/images/cargaaerea.png"
@@ -753,35 +772,35 @@ export default function TransporteAereoPage() {
             </div>
 
             <div className={styles.darkBandActions}>
-              <Link href="/cotizacion">{t.finalPrimary}</Link>
-              <Link href="/contacto">{t.finalSecondary}</Link>
-            </div>
+                <Link href="/cotizacion?servicio=transporte-aereo">
+                  {locale === "es" ? "Cotizar carga aérea" : locale === "en" ? "Quote air cargo" : "获取空运报价"}
+                </Link>
+                <Link href="/contacto?servicio=transporte-aereo">
+                  {locale === "es" ? "Contacto" : locale === "en" ? "Contact" : "联系"}
+                </Link>
+              </div>
           </div>
         </section>
+<RelatedServices current="transporte-aereo" locale={locale} />
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/contactoimagen.png')" } as CSSProperties} data-across-final-cta="true">
-          <div>
-            <h2>{t.finalTitle}</h2>
-            <p>{t.finalText}</p>
+        
+        <div className={styles.homeFinalContact}>
+          <HomeCorporateFinal />
+        </div>
+<div className={styles.homeFinalContact}>
+</div>
+</main>
 
-            <div className={styles.finalActions}>
-              <Link href="/cotizacion">{t.finalPrimary}</Link>
-              <Link href="/contacto">{t.finalSecondary}</Link>
-            </div>
-          </div>
 
-          <div className={styles.finalImage}>
-            <Image
-              src="/images/contactoimagen.png"
-              alt={t.finalTitle}
-              fill
-              sizes="(max-width: 900px) 100vw, 44vw"
-            />
-          </div>
-        </section>
+      <div className={styles.mobileStickyCta} aria-label="Acciones rápidas de transporte aéreo">
+        <Link href="/cotizacion?servicio=transporte-aereo">
+          {locale === "es" ? "Solicitar cotización" : locale === "en" ? "Request a quote" : "申请报价"}
+        </Link>
 
-        <RelatedServices current="transporte-aereo" locale={locale} />
-      </main>
+        <Link href="/contacto?servicio=transporte-aereo">
+          {locale === "es" ? "Hablar con asesor" : locale === "en" ? "Talk to an advisor" : "联系顾问"}
+        </Link>
+      </div>
 
       <Footer />
     </div>

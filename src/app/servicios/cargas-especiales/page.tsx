@@ -15,11 +15,17 @@ type Locale = "es" | "en" | "zh";
 const copy = {
   es: {
     heroEyebrow: "CARGAS ESPECIALES E INDUSTRIALES",
-    heroTitle: "Ingeniería logística para cargas sobredimensionadas, industriales o fuera de estándar.",
+    heroTitle: "Movemos cargas especiales con planificación técnica, permisos y control operativo.",
     heroText:
-      "Coordinamos operaciones especiales para cargas que requieren análisis técnico, permisos, rutas, manipulación especializada y seguimiento operativo.",
-    primaryCta: "Solicitar cotización especial",
+      "Coordinamos operaciones para cargas sobredimensionadas, industriales o fuera de estándar con análisis técnico, rutas, permisos, manipulación especializada y seguimiento.",
+    primaryCta: "Cotizar carga especial",
     secondaryCta: "Hablar con un especialista",
+    contactEyebrow: "CONTACTO DIRECTO",
+    contactTitle: "Coordinemos su próxima operación internacional.",
+    contactText: "Hable con un especialista y reciba una solución logística adaptada a su carga, destino y urgencia.",
+    contactPrimary: "Hablar con un especialista",
+    contactSecondary: "Cotizar ahora",
+
 
     activeLabel: "Operación especial activa",
     activeRoute: "Puerto → Obra",
@@ -30,17 +36,32 @@ const copy = {
     activeEta: "Alta complejidad",
 
     trust: [
-      ["Sobredimensionadas", "Cargas fuera de estándar"],
+      ["Sobredimensionadas", "Fuera de estándar"],
       ["Ingeniería logística", "Análisis técnico"],
       ["Permisos y rutas", "Gestión operativa"],
       ["Seguimiento", "Control de principio a fin"],
     ],
 
-    overviewEyebrow: "Operaciones especiales",
+    overviewEyebrow: "OPERACIONES ESPECIALES",
     overviewTitle: "Planificación precisa para cargas que requieren más que transporte.",
-    overviewText:
-      "Las cargas especiales exigen análisis, coordinación y control. Diseñamos soluciones para mercancías que requieren permisos, manipulación especializada, rutas estudiadas y equipos adaptados.",
-    overviewButton: "Conocer más sobre cargas especiales",
+    overviewText: "Las cargas especiales exigen análisis, coordinación y control. Diseñamos soluciones para mercancías que requieren permisos, manipulación especializada, rutas estudiadas y equipos adaptados.",
+    overviewButton: "Hablar con un especialista",
+
+
+
+    stickyPrimary: "Cotizar especial",
+    stickySecondary: "Hablar ahora",
+    stickySecondaryHref: "",
+
+    preQuoteEyebrow: "ANTES DE COTIZAR",
+    preQuoteTitle: "La operación se define por dimensiones, ruta y permisos.",
+    preQuoteText: "Revisamos peso, medidas, punto de carga, destino, restricciones, permisos y manipulación para diseñar una operación segura y viable.",
+    preQuoteCta: "Cotizar carga especial",
+    preQuotePoints: [
+      ["Carga", "Peso, dimensiones, centro de gravedad y manipulación."],
+      ["Ruta", "Origen, destino, accesos, restricciones y equipos."],
+      ["Permisos", "Autorizaciones, escoltas y coordinación operativa."],
+    ],
 
     pillars: [
       ["Análisis técnico", "Evaluamos dimensiones, peso, centro de gravedad, ruta, manipulación y restricciones."],
@@ -92,20 +113,26 @@ const copy = {
       ["Soporte experto", "Especialistas dedicados"],
     ],
 
-    finalTitle: "Coordinemos su próxima carga especial.",
+    finalTitle: "Coordinemos su próxima operación internacional.",
     finalText:
-      "Cuéntenos dimensiones, peso, origen, destino y restricciones. Nuestro equipo analizará la viabilidad y la mejor solución operativa.",
-    finalPrimary: "Solicitar cotización especial",
-    finalSecondary: "Hablar con un especialista",
+      "Hable con un especialista y reciba una solución logística adaptada a su carga, destino y urgencia.",
+    finalPrimary: "Hablar con un especialista",
+    finalSecondary: "Cotizar carga especial",
   },
 
   en: {
-    heroEyebrow: "Special and industrial cargo",
-    heroTitle: "Logistics engineering for cargo that does not fit the standard.",
+    heroEyebrow: "SPECIAL AND INDUSTRIAL CARGO",
+    heroTitle: "We move special cargo with technical planning, permits and operational control.",
     heroText:
-      "We coordinate special operations for oversized, industrial, sensitive or high-value cargo, integrating technical analysis, permits, routes, handling and operational tracking.",
-    primaryCta: "Plan my operation",
-    secondaryCta: "Talk to our team",
+      "We coordinate operations for oversized, industrial or non-standard cargo with technical analysis, routes, permits, specialized handling and tracking.",
+    primaryCta: "Quote special cargo",
+    secondaryCta: "Talk to a specialist",
+    contactEyebrow: "DIRECT CONTACT",
+    contactTitle: "Let’s coordinate your next international operation.",
+    contactText: "Talk to a specialist and receive a logistics solution adapted to your cargo, destination and urgency.",
+    contactPrimary: "Talk to a specialist",
+    contactSecondary: "Quote now",
+
 
     activeLabel: "Active special operation",
     activeRoute: "Port → Site",
@@ -122,11 +149,26 @@ const copy = {
       ["Tracking", "End-to-end control"],
     ],
 
-    overviewEyebrow: "Special operations",
+    overviewEyebrow: "SPECIAL OPERATIONS",
     overviewTitle: "Precise planning for cargo that requires more than transport.",
-    overviewText:
-      "Special cargo requires analysis, coordination and control. We design solutions for goods that require permits, specialized handling, studied routes and adapted equipment.",
-    overviewButton: "Learn more about special cargo",
+    overviewText: "Special cargo requires analysis, coordination and control. We design solutions for goods that need permits, specialized handling, studied routes and adapted equipment.",
+    overviewButton: "Talk to a specialist",
+
+
+
+    stickyPrimary: "Quote special",
+    stickySecondary: "Talk now",
+    stickySecondaryHref: "",
+
+    preQuoteEyebrow: "BEFORE QUOTING",
+    preQuoteTitle: "The operation is defined by dimensions, route and permits.",
+    preQuoteText: "We review weight, dimensions, loading point, destination, restrictions, permits and handling to design a safe and viable operation.",
+    preQuoteCta: "Quote special cargo",
+    preQuotePoints: [
+      ["Cargo", "Weight, dimensions, center of gravity and handling."],
+      ["Route", "Origin, destination, access, restrictions and equipment."],
+      ["Permits", "Authorizations, escorts and operational coordination."],
+    ],
 
     pillars: [
       ["Technical analysis", "We assess dimensions, weight, center of gravity, route, handling and restrictions."],
@@ -178,22 +220,28 @@ const copy = {
       ["Expert support", "Dedicated specialists"],
     ],
 
-    finalTitle: "Let’s coordinate your next special cargo.",
+    finalTitle: "Let’s coordinate your next international operation.",
     finalText:
-      "Tell us dimensions, weight, origin, destination and restrictions. Our team will analyze feasibility and the best operational solution.",
-    finalPrimary: "Request special quotation",
-    finalSecondary: "Talk to a specialist",
+      "Talk to a specialist and receive a logistics solution adapted to your cargo, destination and urgency.",
+    finalPrimary: "Talk to a specialist",
+    finalSecondary: "Quote special cargo",
   },
 
   zh: {
     heroEyebrow: "特殊与工业货物",
-    heroTitle: "为非标准货物提供物流工程方案。",
+    heroTitle: "通过技术规划、许可和运营管控运输特殊货物。",
     heroText:
-      "我们协调超限、工业、敏感或高价值货物的特殊运输，整合技术分析、许可、路线、装卸和运营跟踪。",
-    primaryCta: "规划物流操作",
-    secondaryCta: "联系我们的团队",
+      "我们协调超限、工业或非标准货物操作，涵盖技术分析、路线、许可、 专业装卸和跟踪。",
+    primaryCta: "获取特殊货物报价",
+    secondaryCta: "联系专家",
+    contactEyebrow: "直接联系",
+    contactTitle: "协调您的下一次国际物流操作。",
+    contactText: "联系专家，根据您的货物、目的地和紧急程度获得合适的物流方案。",
+    contactPrimary: "联系专家",
+    contactSecondary: "立即报价",
 
-    activeLabel: "进行中的特殊操作",
+
+    activeLabel: "特殊操作中",
     activeRoute: "港口 → 工地",
     activeCargo: "超限货物",
     activeStatusLabel: "状态：",
@@ -205,14 +253,29 @@ const copy = {
       ["超限货物", "非标准货物"],
       ["物流工程", "技术分析"],
       ["许可与路线", "运营管理"],
-      ["跟踪", "全流程控制"],
+      ["跟踪", "全程管控"],
     ],
 
     overviewEyebrow: "特殊操作",
-    overviewTitle: "为需要超越普通运输的货物提供精准规划。",
-    overviewText:
-      "特殊货物需要分析、协调和控制。我们为需要许可、专业装卸、路线研究和适配设备的货物设计解决方案。",
-    overviewButton: "了解特殊货物服务",
+    overviewTitle: "为需要超越普通运输的货物进行精准规划。",
+    overviewText: "特殊货物需要分析、协调和管控。我们为需要许可、专业装卸、路线研究和适配设备的货物设计解决方案。",
+    overviewButton: "联系专家",
+
+
+
+    stickyPrimary: "特殊报价",
+    stickySecondary: "立即联系",
+    stickySecondaryHref: "",
+
+    preQuoteEyebrow: "报价前",
+    preQuoteTitle: "操作取决于尺寸、路线和许可。",
+    preQuoteText: "我们会审核重量、尺寸、装货点、目的地、限制、许可和装卸要求，以设计安全可行的操作。",
+    preQuoteCta: "获取特殊货物报价",
+    preQuotePoints: [
+      ["货物", "重量、尺寸、重心和装卸要求。"],
+      ["路线", "始发地、目的地、通道、限制和设备。"],
+      ["许可", "授权、护送和运营协调。"],
+    ],
 
     pillars: [
       ["技术分析", "评估尺寸、重量、重心、路线、装卸和限制。"],
@@ -264,11 +327,11 @@ const copy = {
       ["专家支持", "专属专家"],
     ],
 
-    finalTitle: "让我们协调您的下一批特殊货物。",
+    finalTitle: "协调您的下一次国际物流操作。",
     finalText:
-      "告诉我们尺寸、重量、始发地、目的地和限制。我们的团队将分析可行性和最佳操作方案。",
-    finalPrimary: "申请特殊报价",
-    finalSecondary: "联系专家",
+      "联系专家，根据您的货物、目的地和紧急程度获得合适的物流方案。",
+    finalPrimary: "联系专家",
+    finalSecondary: "获取特殊货物报价",
   },
 } satisfies Record<Locale, any>;
 
@@ -756,15 +819,34 @@ export default function CargasEspecialesPage() {
             </div>
           </div>
         </section>
+        <section className={styles.servicePreQuote} aria-labelledby="service-prequote-title">
+          <span className={styles.eyebrow}>{t.preQuoteEyebrow}</span>
+          <h2 id="service-prequote-title">{t.preQuoteTitle}</h2>
+          <p>{t.preQuoteText}</p>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/cargas-especiales-desktop/transporte-especial-hero.png')" } as CSSProperties} data-across-final-cta="true">
+          <div className={styles.servicePreQuotePoints}>
+            {t.preQuotePoints.map(([title, text]: string[]) => (
+              <article key={title}>
+                <strong>{title}</strong>
+                <span>{text}</span>
+              </article>
+            ))}
+          </div>
+
+          <Link href="/cotizacion?servicio=cargas-especiales">
+            {t.preQuoteCta}
+          </Link>
+        </section>
+
+
+<section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/cargas-especiales-desktop/transporte-especial-hero.png')" } as CSSProperties} data-across-final-cta="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>
 
             <div className={styles.finalActions}>
-              <Link href="/cotizacion">{t.finalPrimary}</Link>
-              <Link href="/contacto">{t.finalSecondary}</Link>
+              <Link href="/contacto?servicio=cargas-especiales">{t.finalPrimary}</Link>
+              <Link href="/cotizacion?servicio=cargas-especiales">{t.finalSecondary}</Link>
             </div>
           </div>
 
@@ -777,9 +859,42 @@ export default function CargasEspecialesPage() {
             />
           </div>
         </section>
+        <section className={styles.contactHero} aria-labelledby="contact-hero-title">
+          <div className={styles.contactHeroContent}>
+            <span className={styles.eyebrow}>{t.contactEyebrow}</span>
+            <h2 id="contact-hero-title">{t.contactTitle}</h2>
+            <p>{t.contactText}</p>
 
-        <RelatedServices current="transporte-aereo" locale={locale} />
+            <div className={styles.contactHeroActions}>
+              <Link href="/contacto">{t.contactPrimary}</Link>
+              <Link href={`/cotizacion?servicio=cargas-especiales`}>{t.contactSecondary}</Link>
+            </div>
+          </div>
+
+          <div className={styles.contactHeroImage} aria-hidden="true">
+            <Image
+              src="/images/contactoimagen.png"
+              alt=""
+              fill
+              sizes="(max-width: 900px) 100vw, 46vw"
+            />
+          </div>
+        </section>
+
+
+<RelatedServices current="transporte-aereo" locale={locale} />
       </main>
+
+
+      <div className={styles.mobileStickyCta} aria-label="Acciones rápidas">
+        <Link href="/cotizacion?servicio=cargas-especiales">
+          {t.stickyPrimary}
+        </Link>
+
+        <Link href={t.stickySecondaryHref || "/contacto?servicio=cargas-especiales"}>
+          {t.stickySecondary}
+        </Link>
+      </div>
 
       <Footer />
     </div>

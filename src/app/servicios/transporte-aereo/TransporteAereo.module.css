@@ -10383,3 +10383,108 @@
 }
 
 /* === INLINE PROCESS ICONS REAL FINAL END === */
+
+
+
+
+
+/* === AEREO STEP 1 STICKY FINAL === */
+
+.mobileStickyCta {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .page {
+    padding-bottom: calc(86px + env(safe-area-inset-bottom)) !important;
+  }
+
+  .mobileStickyCta {
+    position: fixed !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    z-index: 2147483647 !important;
+
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: .55rem !important;
+
+    padding: .58rem .68rem calc(.58rem + env(safe-area-inset-bottom)) !important;
+    background: rgba(5, 8, 13, .94) !important;
+    border-top: 1px solid rgba(255,255,255,.12) !important;
+    box-shadow: 0 -16px 42px rgba(5,8,13,.32) !important;
+
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+  }
+
+  .mobileStickyCta a {
+    min-width: 0 !important;
+    min-height: 46px !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 999px !important;
+    padding: 0 .72rem !important;
+
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    font-size: .63rem !important;
+    font-weight: 950 !important;
+    letter-spacing: .045em !important;
+    line-height: 1 !important;
+
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .mobileStickyCta a:first-child {
+    background: #173247 !important;
+    color: #fff !important;
+    border: 1px solid rgba(214,179,107,.42) !important;
+    box-shadow: 0 14px 30px rgba(23,50,71,.28) !important;
+  }
+
+  .mobileStickyCta a:first-child::after {
+    content: "→" !important;
+    margin-left: .45rem !important;
+  }
+
+  .mobileStickyCta a:last-child {
+    color: #fff !important;
+    background: rgba(255,255,255,.04) !important;
+    border: 1px solid rgba(255,255,255,.34) !important;
+  }
+}
+
+/* END AEREO STEP 1 STICKY FINAL */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

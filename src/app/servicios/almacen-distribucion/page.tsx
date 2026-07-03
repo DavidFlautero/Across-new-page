@@ -14,40 +14,52 @@ type Locale = "es" | "en" | "zh";
 
 const copy = {
   "es": {
-    "heroEyebrow": "Almacén y distribución",
-    "heroTitle": "Operaciones de almacén que convierten stock en movimiento.",
-    "heroText": "Coordinamos soluciones de almacenaje, preparación de pedidos, distribución y control operativo para empresas que necesitan visibilidad, orden y continuidad logística.",
-    "primaryCta": "Solicitar propuesta logística",
+    "heroEyebrow": "ALMACÉN Y DISTRIBUCIÓN",
+    "heroTitle": "Gestionamos su inventario con orden, velocidad y trazabilidad.",
+    "heroText": "Coordinamos almacenaje, preparación de pedidos, distribución y control operativo para empresas que necesitan stock visible, procesos ordenados y entregas coordinadas.",
+    "primaryCta": "Cotizar almacenaje",
     "secondaryCta": "Hablar con un especialista",
-    "activeLabel": "Operación logística activa",
-    "activeRoute": "Almacén → Cliente",
-    "activeCargo": "Preparación y distribución",
-    "activeStatusLabel": "Estado:",
-    "activeStatus": "En gestión",
-    "activeEtaLabel": "Salida:",
-    "activeEta": "Programada",
-    "trust": [
-      [
-        "Almacenaje",
-        "Stock controlado"
-      ],
-      [
-        "Picking",
-        "Preparación eficiente"
-      ],
-      [
-        "Distribución",
-        "Entrega coordinada"
-      ],
-      [
-        "Trazabilidad",
-        "Visibilidad operativa"
-      ]
+    contactEyebrow: "CONTACTO DIRECTO",
+    contactTitle: "Coordinemos su próxima operación internacional.",
+    contactText: "Hable con un especialista y reciba una solución logística adaptada a su carga, destino y urgencia.",
+    contactPrimary: "Hablar con un especialista",
+    contactSecondary: "Cotizar ahora",
+
+
+    activeLabel: "Operación logística activa",
+    activeRoute: "Almacén → Cliente",
+    activeCargo: "Preparación y distribución",
+    activeStatusLabel: "Estado:",
+    activeStatus: "En gestión",
+    activeEtaLabel: "Salida:",
+    activeEta: "Programada",
+
+    trust: [
+      ["Almacenaje", "Stock controlado"],
+      ["Picking", "Preparación eficiente"],
+      ["Distribución", "Entrega coordinada"],
+      ["Trazabilidad", "Visibilidad operativa"],
     ],
-    "overviewEyebrow": "Gestión logística",
-    "overviewTitle": "Almacén y distribución sin interrupciones.",
-    "overviewText": "Una operación de almacén eficiente requiere control de stock, preparación precisa, coordinación de salidas y seguimiento. Diseñamos soluciones para mejorar continuidad, visibilidad y respuesta logística.",
-    "overviewButton": "Conocer más sobre almacén",
+
+    overviewEyebrow: "GESTIÓN LOGÍSTICA",
+    overviewTitle: "Almacén y distribución sin interrupciones.",
+    overviewText: "Una operación eficiente requiere control de stock, preparación precisa, coordinación de salidas y seguimiento. Diseñamos soluciones para mejorar continuidad, visibilidad y respuesta logística.",
+    overviewButton: "Hablar con un especialista",
+
+    stickyPrimary: "Cotizar almacén",
+    stickySecondary: "Hablar ahora",
+    stickySecondaryHref: "",
+
+    preQuoteEyebrow: "ANTES DE COTIZAR",
+    preQuoteTitle: "La operación se define por stock, pedidos y frecuencia de salida.",
+    preQuoteText: "Revisamos volumen, rotación, tipo de mercancía, preparación requerida y canales de distribución para proponer una solución operativa viable.",
+    preQuoteCta: "Cotizar almacenaje",
+    preQuotePoints: [
+      ["Stock", "Volumen, referencias, rotación y condiciones de almacenamiento."],
+      ["Pedidos", "Picking, packing, etiquetado y preparación."],
+      ["Distribución", "Frecuencia de salida, destinos y nivel de servicio."],
+    ],
+
     "pillars": [
       [
         "Control de stock",
@@ -170,46 +182,58 @@ const copy = {
         "Especialistas dedicados"
       ]
     ],
-    "finalTitle": "Coordinemos su operación de almacén y distribución.",
-    "finalText": "Cuéntenos tipo de mercancía, volumen, frecuencia de salidas y destinos. Nuestro equipo analizará la mejor solución logística.",
-    "finalPrimary": "Solicitar propuesta logística",
-    "finalSecondary": "Hablar con un especialista"
+    "finalTitle": "Coordinemos su próxima operación internacional.",
+    "finalText": "Hable con un especialista y reciba una solución logística adaptada a su carga, destino y urgencia.",
+    "finalPrimary": "Hablar con un especialista",
+    "finalSecondary": "Cotizar almacenaje"
   },
   "en": {
-    "heroEyebrow": "Warehousing and distribution",
-    "heroTitle": "Warehouse operations that turn stock into movement.",
-    "heroText": "We coordinate warehousing, order preparation, distribution and operational control solutions for companies needing visibility, order and logistics continuity.",
-    "primaryCta": "Plan my operation",
-    "secondaryCta": "Talk to our team",
-    "activeLabel": "Active logistics operation",
-    "activeRoute": "Warehouse → Client",
-    "activeCargo": "Preparation and distribution",
-    "activeStatusLabel": "Status:",
-    "activeStatus": "In management",
-    "activeEtaLabel": "Dispatch:",
-    "activeEta": "Scheduled",
-    "trust": [
-      [
-        "Warehousing",
-        "Controlled stock"
-      ],
-      [
-        "Picking",
-        "Efficient preparation"
-      ],
-      [
-        "Distribution",
-        "Coordinated delivery"
-      ],
-      [
-        "Traceability",
-        "Operational visibility"
-      ]
+    "heroEyebrow": "WAREHOUSING AND DISTRIBUTION",
+    "heroTitle": "We manage your inventory with order, speed and traceability.",
+    "heroText": "We coordinate warehousing, order preparation, distribution and operational control for companies that need visible stock, organized processes and coordinated deliveries.",
+    "primaryCta": "Quote warehousing",
+    "secondaryCta": "Talk to a specialist",
+    contactEyebrow: "DIRECT CONTACT",
+    contactTitle: "Let’s coordinate your next international operation.",
+    contactText: "Talk to a specialist and receive a logistics solution adapted to your cargo, destination and urgency.",
+    contactPrimary: "Talk to a specialist",
+    contactSecondary: "Quote now",
+
+
+    activeLabel: "Active logistics operation",
+    activeRoute: "Warehouse → Client",
+    activeCargo: "Preparation and distribution",
+    activeStatusLabel: "Status:",
+    activeStatus: "In progress",
+    activeEtaLabel: "Outbound:",
+    activeEta: "Scheduled",
+
+    trust: [
+      ["Warehousing", "Controlled stock"],
+      ["Picking", "Efficient preparation"],
+      ["Distribution", "Coordinated delivery"],
+      ["Traceability", "Operational visibility"],
     ],
-    "overviewEyebrow": "Logistics management",
-    "overviewTitle": "Order, control and distribution for operations that cannot stop.",
-    "overviewText": "An efficient warehouse operation requires stock control, accurate preparation, dispatch coordination and tracking. We design solutions to improve continuity, visibility and logistics response.",
-    "overviewButton": "Learn more about warehousing",
+
+    overviewEyebrow: "LOGISTICS MANAGEMENT",
+    overviewTitle: "Warehousing and distribution without interruptions.",
+    overviewText: "An efficient operation requires stock control, precise preparation, outbound coordination and tracking. We design solutions to improve continuity, visibility and logistics response.",
+    overviewButton: "Talk to a specialist",
+
+    stickyPrimary: "Quote storage",
+    stickySecondary: "Talk now",
+    stickySecondaryHref: "",
+
+    preQuoteEyebrow: "BEFORE QUOTING",
+    preQuoteTitle: "The operation is defined by stock, orders and outbound frequency.",
+    preQuoteText: "We review volume, rotation, cargo type, preparation needs and distribution channels to propose a viable operational solution.",
+    preQuoteCta: "Quote warehousing",
+    preQuotePoints: [
+      ["Stock", "Volume, SKUs, rotation and storage conditions."],
+      ["Orders", "Picking, packing, labeling and preparation."],
+      ["Distribution", "Outbound frequency, destinations and service level."],
+    ],
+
     "pillars": [
       [
         "Stock control",
@@ -332,46 +356,58 @@ const copy = {
         "Dedicated specialists"
       ]
     ],
-    "finalTitle": "Let’s coordinate your warehouse and distribution operation.",
-    "finalText": "Tell us goods type, volume, dispatch frequency and destinations. Our team will analyze the best logistics solution.",
-    "finalPrimary": "Request logistics proposal",
-    "finalSecondary": "Talk to a specialist"
+    "finalTitle": "Let’s coordinate your next international operation.",
+    "finalText": "Talk to a specialist and receive a logistics solution adapted to your cargo, destination and urgency.",
+    "finalPrimary": "Talk to a specialist",
+    "finalSecondary": "Quote warehousing"
   },
   "zh": {
     "heroEyebrow": "仓储与配送",
-    "heroTitle": "将库存转化为流动的仓储运营。",
-    "heroText": "我们为需要可视化、秩序和物流连续性的企业协调仓储、订单准备、配送和运营控制解决方案。",
-    "primaryCta": "规划物流操作",
-    "secondaryCta": "联系我们的团队",
-    "activeLabel": "进行中的物流操作",
-    "activeRoute": "仓库 → 客户",
-    "activeCargo": "准备与配送",
-    "activeStatusLabel": "状态：",
-    "activeStatus": "管理中",
-    "activeEtaLabel": "出库：",
-    "activeEta": "已安排",
-    "trust": [
-      [
-        "仓储",
-        "库存受控"
-      ],
-      [
-        "拣货",
-        "高效准备"
-      ],
-      [
-        "配送",
-        "协调交付"
-      ],
-      [
-        "可追溯",
-        "运营可视化"
-      ]
+    "heroTitle": "以秩序、速度和可追踪性管理您的库存。",
+    "heroText": "我们协调仓储、订单准备、配送和运营管控，帮助企业实现库存可视、 流程有序和交付协调。",
+    "primaryCta": "获取仓储报价",
+    "secondaryCta": "联系专家",
+    contactEyebrow: "直接联系",
+    contactTitle: "协调您的下一次国际物流操作。",
+    contactText: "联系专家，根据您的货物、目的地和紧急程度获得合适的物流方案。",
+    contactPrimary: "联系专家",
+    contactSecondary: "立即报价",
+
+
+    activeLabel: "物流操作中",
+    activeRoute: "仓库 → 客户",
+    activeCargo: "备货与配送",
+    activeStatusLabel: "状态：",
+    activeStatus: "处理中",
+    activeEtaLabel: "出库：",
+    activeEta: "已安排",
+
+    trust: [
+      ["仓储", "库存管控"],
+      ["拣货", "高效准备"],
+      ["配送", "协调交付"],
+      ["可追踪性", "运营可视化"],
     ],
-    "overviewEyebrow": "物流管理",
-    "overviewTitle": "为不能停止的业务提供秩序、控制和配送。",
-    "overviewText": "高效仓储需要库存控制、准确准备、出库协调和跟踪。我们设计解决方案以提升连续性、可视化和物流响应。",
-    "overviewButton": "了解仓储服务",
+
+    overviewEyebrow: "物流管理",
+    overviewTitle: "不中断的仓储与配送。",
+    overviewText: "高效操作需要库存管控、精准准备、出库协调和跟踪。我们设计解决方案，以提升连续性、可视性和物流响应能力。",
+    overviewButton: "联系专家",
+
+    stickyPrimary: "仓储报价",
+    stickySecondary: "立即联系",
+    stickySecondaryHref: "",
+
+    preQuoteEyebrow: "报价前",
+    preQuoteTitle: "仓储操作取决于库存、订单和出库频率。",
+    preQuoteText: "我们会审核体量、周转、货物类型、准备需求和配送渠道，以提出可行的运营方案。",
+    preQuoteCta: "获取仓储报价",
+    preQuotePoints: [
+      ["库存", "体量、SKU、周转和存储条件。"],
+      ["订单", "拣货、包装 、贴标和准备。"],
+      ["配送", "出库频率、目的地和服务水平。"],
+    ],
+
     "pillars": [
       [
         "库存控制",
@@ -494,10 +530,10 @@ const copy = {
         "专属专家"
       ]
     ],
-    "finalTitle": "让我们协调您的仓储与配送操作。",
-    "finalText": "告诉我们货物类型、数量、出库频率和目的地。我们的团队将分析最佳物流方案。",
-    "finalPrimary": "申请物流方案",
-    "finalSecondary": "联系专家"
+    "finalTitle": "协调您的下一次国际物流操作。",
+    "finalText": "联系专家，根据您的货物、目的地和紧急程度获得合适的物流方案。",
+    "finalPrimary": "联系专家",
+    "finalSecondary": "获取仓储报价"
   }
 } satisfies Record<Locale, any>;
 
@@ -985,15 +1021,34 @@ export default function AlmacenDistribucionPage() {
             </div>
           </div>
         </section>
+        <section className={styles.servicePreQuote} aria-labelledby="service-prequote-title">
+          <span className={styles.eyebrow}>{t.preQuoteEyebrow}</span>
+          <h2 id="service-prequote-title">{t.preQuoteTitle}</h2>
+          <p>{t.preQuoteText}</p>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/almacenHero.png')" } as CSSProperties} data-across-final-cta="true" data-almacen-final-bg="true">
+          <div className={styles.servicePreQuotePoints}>
+            {t.preQuotePoints.map(([title, text]: string[]) => (
+              <article key={title}>
+                <strong>{title}</strong>
+                <span>{text}</span>
+              </article>
+            ))}
+          </div>
+
+          <Link href="/cotizacion?servicio=almacen-distribucion">
+            {t.preQuoteCta}
+          </Link>
+        </section>
+
+
+<section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/almacenHero.png')" } as CSSProperties} data-across-final-cta="true" data-almacen-final-bg="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>
 
             <div className={styles.finalActions}>
-              <Link href="/cotizacion">{t.finalPrimary}</Link>
-              <Link href="/contacto">{t.finalSecondary}</Link>
+              <Link href="/contacto?servicio=almacen-distribucion">{t.finalPrimary}</Link>
+              <Link href="/cotizacion?servicio=almacen-distribucion">{t.finalSecondary}</Link>
             </div>
           </div>
 
@@ -1006,9 +1061,42 @@ export default function AlmacenDistribucionPage() {
             />
           </div>
         </section>
+        <section className={styles.contactHero} aria-labelledby="contact-hero-title">
+          <div className={styles.contactHeroContent}>
+            <span className={styles.eyebrow}>{t.contactEyebrow}</span>
+            <h2 id="contact-hero-title">{t.contactTitle}</h2>
+            <p>{t.contactText}</p>
 
-        <RelatedServices current="transporte-aereo" locale={locale} />
+            <div className={styles.contactHeroActions}>
+              <Link href="/contacto">{t.contactPrimary}</Link>
+              <Link href={`/cotizacion?servicio=almacen-distribucion`}>{t.contactSecondary}</Link>
+            </div>
+          </div>
+
+          <div className={styles.contactHeroImage} aria-hidden="true">
+            <Image
+              src="/images/contactoimagen.png"
+              alt=""
+              fill
+              sizes="(max-width: 900px) 100vw, 46vw"
+            />
+          </div>
+        </section>
+
+
+<RelatedServices current="transporte-aereo" locale={locale} />
       </main>
+
+
+      <div className={styles.mobileStickyCta} aria-label="Acciones rápidas">
+        <Link href="/cotizacion?servicio=almacen-distribucion">
+          {t.stickyPrimary}
+        </Link>
+
+        <Link href={t.stickySecondaryHref || "/contacto?servicio=almacen-distribucion"}>
+          {t.stickySecondary}
+        </Link>
+      </div>
 
       <Footer />
     </div>

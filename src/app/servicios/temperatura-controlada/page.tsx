@@ -14,40 +14,52 @@ type Locale = "es" | "en" | "zh";
 
 const copy = {
   "es": {
-    "heroEyebrow": "Carga temperatura controlada",
-    "heroTitle": "Cadena de frío para cargas que no pueden perder control.",
-    "heroText": "Coordinamos transporte y soluciones logísticas para mercancías sensibles a temperatura, integrando monitoreo, control operativo y trazabilidad de origen a destino.",
-    "primaryCta": "Solicitar cotización refrigerada",
+    "heroEyebrow": "TEMPERATURA CONTROLADA",
+    "heroTitle": "Protegemos su carga sensible con control térmico y trazabilidad.",
+    "heroText": "Coordinamos operaciones para mercancías que requieren temperatura controlada, monitoreo, protocolos claros y seguimiento operativo de origen a destino.",
+    "primaryCta": "Cotizar cadena de frío",
     "secondaryCta": "Hablar con un especialista",
-    "activeLabel": "Operación refrigerada activa",
-    "activeRoute": "Origen → Destino",
-    "activeCargo": "Carga sensible",
-    "activeStatusLabel": "Estado:",
-    "activeStatus": "Temperatura controlada",
-    "activeEtaLabel": "Control:",
-    "activeEta": "Monitoreo activo",
-    "trust": [
-      [
-        "Cadena de frío",
-        "Control térmico"
-      ],
-      [
-        "Carga sensible",
-        "Pharma / alimentos"
-      ],
-      [
-        "Monitoreo",
-        "Trazabilidad operativa"
-      ],
-      [
-        "Cumplimiento",
-        "Protocolos especializados"
-      ]
+    contactEyebrow: "CONTACTO DIRECTO",
+    contactTitle: "Coordinemos su próxima operación internacional.",
+    contactText: "Hable con un especialista y reciba una solución logística adaptada a su carga, destino y urgencia.",
+    contactPrimary: "Hablar con un especialista",
+    contactSecondary: "Cotizar ahora",
+
+
+    activeLabel: "Operación refrigerada activa",
+    activeRoute: "Origen → Destino",
+    activeCargo: "Carga sensible",
+    activeStatusLabel: "Estado:",
+    activeStatus: "Temperatura controlada",
+    activeEtaLabel: "Control:",
+    activeEta: "Monitoreo activo",
+
+    trust: [
+      ["Cadena de frío", "Control térmico"],
+      ["Carga sensible", "Pharma / alimentos"],
+      ["Monitoreo", "Trazabilidad operativa"],
+      ["Cumplimiento", "Protocolos especializados"],
     ],
-    "overviewEyebrow": "Logística sensible",
-    "overviewTitle": "Control térmico, seguridad y trazabilidad para mercancías críticas.",
-    "overviewText": "La carga con temperatura controlada exige planificación, equipos adecuados, seguimiento y protocolos claros. Diseñamos operaciones para proteger la integridad del producto en cada etapa logística.",
-    "overviewButton": "Conocer más sobre temperatura controlada",
+
+    overviewEyebrow: "LOGÍSTICA SENSIBLE",
+    overviewTitle: "Control térmico, seguridad y trazabilidad para mercancías críticas.",
+    overviewText: "La carga con temperatura controlada exige planificación, equipos adecuados, seguimiento y protocolos claros. Diseñamos operaciones para proteger la integridad del producto.",
+    overviewButton: "Hablar con un especialista",
+
+    stickyPrimary: "Cotizar frío",
+    stickySecondary: "Hablar ahora",
+    stickySecondaryHref: "",
+
+    preQuoteEyebrow: "ANTES DE COTIZAR",
+    preQuoteTitle: "La operación depende del producto, rango térmico y ruta.",
+    preQuoteText: "Revisamos tipo de mercancía, temperatura requerida, tiempo de tránsito, origen, destino y protocolo para proteger la integridad del producto.",
+    preQuoteCta: "Cotizar cadena de frío",
+    preQuotePoints: [
+      ["Producto", "Pharma, alimentos, muestras o mercancía crítica."],
+      ["Temperatura", "Rango térmico, sensibilidad y tiempo de exposición."],
+      ["Control", "Monitoreo, protocolo y trazabilidad operativa."],
+    ],
+
     "pillars": [
       [
         "Control de temperatura",
@@ -170,46 +182,58 @@ const copy = {
         "Especialistas dedicados"
       ]
     ],
-    "finalTitle": "Coordinemos su próxima carga con temperatura controlada.",
-    "finalText": "Cuéntenos tipo de producto, rango térmico, origen, destino y urgencia. Nuestro equipo analizará la mejor solución operativa.",
-    "finalPrimary": "Solicitar cotización refrigerada",
-    "finalSecondary": "Hablar con un especialista"
+    "finalTitle": "Coordinemos su próxima operación internacional.",
+    "finalText": "Hable con un especialista y reciba una solución logística adaptada a su carga, destino y urgencia.",
+    "finalPrimary": "Hablar con un especialista",
+    "finalSecondary": "Cotizar cadena de frío"
   },
   "en": {
-    "heroEyebrow": "Temperature-controlled cargo",
-    "heroTitle": "Cold chain for cargo that cannot lose control.",
-    "heroText": "We coordinate transport and logistics solutions for temperature-sensitive goods, integrating monitoring, operational control and traceability from origin to destination.",
-    "primaryCta": "Plan my operation",
-    "secondaryCta": "Talk to our team",
-    "activeLabel": "Active refrigerated operation",
-    "activeRoute": "Origin → Destination",
-    "activeCargo": "Sensitive cargo",
-    "activeStatusLabel": "Status:",
-    "activeStatus": "Temperature controlled",
-    "activeEtaLabel": "Control:",
-    "activeEta": "Active monitoring",
-    "trust": [
-      [
-        "Cold chain",
-        "Thermal control"
-      ],
-      [
-        "Sensitive cargo",
-        "Pharma / food"
-      ],
-      [
-        "Monitoring",
-        "Operational traceability"
-      ],
-      [
-        "Compliance",
-        "Specialized protocols"
-      ]
+    "heroEyebrow": "TEMPERATURE CONTROLLED CARGO",
+    "heroTitle": "We protect sensitive cargo with thermal control and traceability.",
+    "heroText": "We coordinate operations for goods that require controlled temperature, monitoring, clear protocols and operational tracking from origin to destination.",
+    "primaryCta": "Quote cold chain",
+    "secondaryCta": "Talk to a specialist",
+    contactEyebrow: "DIRECT CONTACT",
+    contactTitle: "Let’s coordinate your next international operation.",
+    contactText: "Talk to a specialist and receive a logistics solution adapted to your cargo, destination and urgency.",
+    contactPrimary: "Talk to a specialist",
+    contactSecondary: "Quote now",
+
+
+    activeLabel: "Active cold chain operation",
+    activeRoute: "Origin → Destination",
+    activeCargo: "Sensitive cargo",
+    activeStatusLabel: "Status:",
+    activeStatus: "Temperature controlled",
+    activeEtaLabel: "Control:",
+    activeEta: "Active monitoring",
+
+    trust: [
+      ["Cold chain", "Thermal control"],
+      ["Sensitive cargo", "Pharma / food"],
+      ["Monitoring", "Operational traceability"],
+      ["Compliance", "Specialized protocols"],
     ],
-    "overviewEyebrow": "Sensitive logistics",
-    "overviewTitle": "Thermal control, security and traceability for critical goods.",
-    "overviewText": "Temperature-controlled cargo requires planning, proper equipment, tracking and clear protocols. We design operations to protect product integrity at every logistics stage.",
-    "overviewButton": "Learn more about temperature control",
+
+    overviewEyebrow: "SENSITIVE LOGISTICS",
+    overviewTitle: "Thermal control, safety and traceability for critical goods.",
+    overviewText: "Temperature-controlled cargo requires planning, proper equipment, tracking and clear protocols. We design operations to protect product integrity.",
+    overviewButton: "Talk to a specialist",
+
+    stickyPrimary: "Quote cold",
+    stickySecondary: "Talk now",
+    stickySecondaryHref: "",
+
+    preQuoteEyebrow: "BEFORE QUOTING",
+    preQuoteTitle: "The operation depends on product, temperature range and route.",
+    preQuoteText: "We review cargo type, required temperature, transit time, origin, destination and protocol to protect product integrity.",
+    preQuoteCta: "Quote cold chain",
+    preQuotePoints: [
+      ["Product", "Pharma, food, samples or critical goods."],
+      ["Temperature", "Thermal range, sensitivity and exposure time."],
+      ["Control", "Monitoring, protocol and operational traceability."],
+    ],
+
     "pillars": [
       [
         "Temperature control",
@@ -332,46 +356,58 @@ const copy = {
         "Dedicated specialists"
       ]
     ],
-    "finalTitle": "Let’s coordinate your next temperature-controlled cargo.",
-    "finalText": "Tell us product type, thermal range, origin, destination and urgency. Our team will analyze the best operational solution.",
-    "finalPrimary": "Request refrigerated quotation",
-    "finalSecondary": "Talk to a specialist"
+    "finalTitle": "Let’s coordinate your next international operation.",
+    "finalText": "Talk to a specialist and receive a logistics solution adapted to your cargo, destination and urgency.",
+    "finalPrimary": "Talk to a specialist",
+    "finalSecondary": "Quote cold chain"
   },
   "zh": {
-    "heroEyebrow": "温控货运",
-    "heroTitle": "为不能失控的货物提供冷链方案。",
-    "heroText": "我们为温度敏感货物协调运输和物流解决方案，整合监控、运营控制以及从始发地到目的地的可追溯性。",
-    "primaryCta": "规划物流操作",
-    "secondaryCta": "联系我们的团队",
-    "activeLabel": "进行中的冷链操作",
-    "activeRoute": "始发地 → 目的地",
-    "activeCargo": "敏感货物",
-    "activeStatusLabel": "状态：",
-    "activeStatus": "温度受控",
-    "activeEtaLabel": "控制：",
-    "activeEta": "主动监控",
-    "trust": [
-      [
-        "冷链",
-        "温度控制"
-      ],
-      [
-        "敏感货物",
-        "医药 / 食品"
-      ],
-      [
-        "监控",
-        "运营可追溯"
-      ],
-      [
-        "合规",
-        "专业流程"
-      ]
+    "heroEyebrow": "温控货物",
+    "heroTitle": "通过温控和可追踪性保护您的敏感货物。",
+    "heroText": "我们协调需要温控、监控、明确协议和从始发地到目的地运营跟踪的货 物操作。",
+    "primaryCta": "获取冷链报价",
+    "secondaryCta": "联系专家",
+    contactEyebrow: "直接联系",
+    contactTitle: "协调您的下一次国际物流操作。",
+    contactText: "联系专家，根据您的货物、目的地和紧急程度获得合适的物流方案。",
+    contactPrimary: "联系专家",
+    contactSecondary: "立即报价",
+
+
+    activeLabel: "冷链操作中",
+    activeRoute: "始发地 → 目的地",
+    activeCargo: "敏感货物",
+    activeStatusLabel: "状态：",
+    activeStatus: "温控中",
+    activeEtaLabel: "管控：",
+    activeEta: "主动监控",
+
+    trust: [
+      ["冷链", "温度管控"],
+      ["敏感货物", "医药 / 食品"],
+      ["监控", "运营可追踪"],
+      ["合规", "专业协议"],
     ],
-    "overviewEyebrow": "敏感物流",
-    "overviewTitle": "为关键货物提供温控、安全与可追溯性。",
-    "overviewText": "温控货物需要规划、合适设备、跟踪和明确协议。我们设计每个阶段都能保护产品完整性的物流操作。",
-    "overviewButton": "了解温控服务",
+
+    overviewEyebrow: "敏感物流",
+    overviewTitle: "为关键货物提供温控、安全和可追踪性。",
+    overviewText: "温控货物需要规划、合适设备、跟踪和明确协议。我们设计操作以保护产品完整性。",
+    overviewButton: "联系专家",
+
+    stickyPrimary: "冷链报价",
+    stickySecondary: "立即联系",
+    stickySecondaryHref: "",
+
+    preQuoteEyebrow: "报价前",
+    preQuoteTitle: "操作取决于产品、温度范围和路线。",
+    preQuoteText: "我们会审核货物类型、所需温度、运输时间、始发地、目的地和操作协议，以保护产品完整性。",
+    preQuoteCta: "获取冷链报价",
+    preQuotePoints: [
+      ["产品", "医药、食品、样品或关键货物。"],
+      ["温度", "温度范围、敏感性和暴露时间。"],
+      ["管控", "监控、协议和运营可追踪性。"],
+    ],
+
     "pillars": [
       [
         "温度控制",
@@ -494,10 +530,10 @@ const copy = {
         "专属专家"
       ]
     ],
-    "finalTitle": "让我们协调您的下一批温控货物。",
-    "finalText": "告诉我们产品类型、温度范围、始发地、目的地和紧急程度。我们的团队将分析最佳操作方案。",
-    "finalPrimary": "申请冷链报价",
-    "finalSecondary": "联系专家"
+    "finalTitle": "协调您的下一次国际物流操作。",
+    "finalText": "联系专家，根据您的货物、目的地和紧急程度获得合适的物流方案。",
+    "finalPrimary": "联系专家",
+    "finalSecondary": "获取冷链报价"
   }
 } satisfies Record<Locale, any>;
 
@@ -1010,8 +1046,8 @@ export default function TemperaturaControladaPage() {
             <p>{t.finalText}</p>
 
             <div className={styles.finalActions}>
-              <Link href="/cotizacion">{t.finalPrimary}</Link>
-              <Link href="/contacto">{t.finalSecondary}</Link>
+              <Link href="/contacto?servicio=temperatura-controlada">{t.finalPrimary}</Link>
+              <Link href="/cotizacion?servicio=temperatura-controlada">{t.finalSecondary}</Link>
             </div>
           </div>
 
@@ -1024,9 +1060,42 @@ export default function TemperaturaControladaPage() {
             />
           </div>
         </section>
+        <section className={styles.contactHero} aria-labelledby="contact-hero-title">
+          <div className={styles.contactHeroContent}>
+            <span className={styles.eyebrow}>{t.contactEyebrow}</span>
+            <h2 id="contact-hero-title">{t.contactTitle}</h2>
+            <p>{t.contactText}</p>
 
-        <RelatedServices current="transporte-aereo" locale={locale} />
+            <div className={styles.contactHeroActions}>
+              <Link href="/contacto">{t.contactPrimary}</Link>
+              <Link href={`/cotizacion?servicio=temperatura-controlada`}>{t.contactSecondary}</Link>
+            </div>
+          </div>
+
+          <div className={styles.contactHeroImage} aria-hidden="true">
+            <Image
+              src="/images/contactoimagen.png"
+              alt=""
+              fill
+              sizes="(max-width: 900px) 100vw, 46vw"
+            />
+          </div>
+        </section>
+
+
+<RelatedServices current="transporte-aereo" locale={locale} />
       </main>
+
+
+      <div className={styles.mobileStickyCta} aria-label="Acciones rápidas">
+        <Link href="/cotizacion?servicio=temperatura-controlada">
+          {t.stickyPrimary}
+        </Link>
+
+        <Link href={t.stickySecondaryHref || "/contacto?servicio=temperatura-controlada"}>
+          {t.stickySecondary}
+        </Link>
+      </div>
 
       <Footer />
     </div>

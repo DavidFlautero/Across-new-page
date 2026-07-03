@@ -6279,3 +6279,125 @@ main h3 > strong:last-child {
 }
 
 /* === REMOVE GOLD TITLE DOT REAL FINAL END === */
+
+
+
+
+
+/* === HOME CTA MOBILE CONTENT DOWN FIX === */
+
+@media (max-width: 1180px) {
+  /*
+    Solo HOME.
+    Arregla el CTA final de HomeCorporateFinal:
+    el título no debe quedar cortado contra el borde superior.
+  */
+
+  .homePageShell [class*="homeFinalCta"] {
+    min-height: 500px !important;
+
+    display: block !important;
+    position: relative !important;
+    overflow: hidden !important;
+
+    padding-top: clamp(5.2rem, 10vw, 7rem) !important;
+    padding-bottom: clamp(3.4rem, 7vw, 5rem) !important;
+
+    background-color: #07101a !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .homePageShell [class*="homeFinalCta"]::before,
+  .homePageShell [class*="homeFinalCta"]::after {
+    background-position: center center !important;
+    background-size: cover !important;
+  }
+
+  .homePageShell [class*="homeFinalCtaInner"] {
+    width: min(100% - 42px, 430px) !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    position: relative !important;
+    z-index: 3 !important;
+
+    transform: none !important;
+  }
+
+  .homePageShell [class*="homeFinalCta"] h2 {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow: visible !important;
+    transform: none !important;
+  }
+
+  .homePageShell [class*="homeFinalCta"] p {
+    margin-top: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .homePageShell [class*="homeFinalCta"] {
+    min-height: 500px !important;
+    padding-top: 5.8rem !important;
+    padding-bottom: 3.8rem !important;
+  }
+
+  .homePageShell [class*="homeFinalCtaInner"] {
+    width: min(100% - 38px, 390px) !important;
+  }
+}
+
+/* END HOME CTA MOBILE CONTENT DOWN FIX */
+
+/* === HOME CTA REMOVE TEXT BOX === */
+
+@media (max-width: 1180px) {
+  /*
+    Quita el cuadro azul detrás del texto.
+    La imagen y el overlay quedan en la sección completa.
+  */
+
+  .homePageShell [class*="homeFinalCtaInner"],
+  .homePageShell [class*="homeFinalCta"] [class*="Inner"],
+  .homePageShell [class*="homeFinalCta"] [class*="content"],
+  .homePageShell [class*="homeFinalCta"] [class*="Content"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+
+    box-shadow: none !important;
+    border: 0 !important;
+    outline: 0 !important;
+
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .homePageShell [class*="homeFinalCtaInner"]::before,
+  .homePageShell [class*="homeFinalCtaInner"]::after,
+  .homePageShell [class*="homeFinalCta"] [class*="Inner"]::before,
+  .homePageShell [class*="homeFinalCta"] [class*="Inner"]::after,
+  .homePageShell [class*="homeFinalCta"] [class*="content"]::before,
+  .homePageShell [class*="homeFinalCta"] [class*="content"]::after,
+  .homePageShell [class*="homeFinalCta"] [class*="Content"]::before,
+  .homePageShell [class*="homeFinalCta"] [class*="Content"]::after {
+    display: none !important;
+    content: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /*
+    Mantiene el texto arriba de la imagen, pero sin caja.
+  */
+  .homePageShell [class*="homeFinalCtaInner"] {
+    position: relative !important;
+    z-index: 3 !important;
+  }
+}
+
+/* END HOME CTA REMOVE TEXT BOX */

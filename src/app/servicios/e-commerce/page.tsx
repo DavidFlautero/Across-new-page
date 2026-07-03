@@ -14,40 +14,52 @@ type Locale = "es" | "en" | "zh";
 
 const copy = {
   "es": {
-    "heroEyebrow": "Logística e-commerce",
-    "heroTitle": "Operaciones e-commerce preparadas para vender, preparar y entregar.",
-    "heroText": "Coordinamos soluciones logísticas para tiendas online, marketplaces y marcas digitales: almacenaje, preparación de pedidos, distribución, devoluciones y trazabilidad operativa.",
-    "primaryCta": "Solicitar propuesta e-commerce",
+    "heroEyebrow": "LOGÍSTICA E-COMMERCE",
+    "heroTitle": "Preparamos y entregamos sus pedidos con velocidad, control y trazabilidad.",
+    "heroText": "Coordinamos fulfillment, almacenaje, preparación de pedidos, distribución y devoluciones para marcas que venden online y necesitan operación visible.",
+    "primaryCta": "Cotizar fulfillment",
     "secondaryCta": "Hablar con un especialista",
-    "activeLabel": "Operación e-commerce activa",
-    "activeRoute": "Stock → Pedido → Cliente",
-    "activeCargo": "Fulfillment y distribución",
-    "activeStatusLabel": "Estado:",
-    "activeStatus": "En preparación",
-    "activeEtaLabel": "Salida:",
-    "activeEta": "Programada",
-    "trust": [
-      [
-        "Fulfillment",
-        "Pedidos preparados"
-      ],
-      [
-        "Distribución",
-        "Entregas coordinadas"
-      ],
-      [
-        "Devoluciones",
-        "Logística inversa"
-      ],
-      [
-        "Trazabilidad",
-        "Control operativo"
-      ]
+    contactEyebrow: "CONTACTO DIRECTO",
+    contactTitle: "Coordinemos su próxima operación internacional.",
+    contactText: "Hable con un especialista y reciba una solución logística adaptada a su carga, destino y urgencia.",
+    contactPrimary: "Hablar con un especialista",
+    contactSecondary: "Cotizar ahora",
+
+
+    activeLabel: "Operación e-commerce activa",
+    activeRoute: "Stock → Pedido → Cliente",
+    activeCargo: "Fulfillment y distribución",
+    activeStatusLabel: "Estado:",
+    activeStatus: "En preparación",
+    activeEtaLabel: "Salida:",
+    activeEta: "Programada",
+
+    trust: [
+      ["Fulfillment", "Pedidos preparados"],
+      ["Distribución", "Entregas coordinadas"],
+      ["Devoluciones", "Logística inversa"],
+      ["Trazabilidad", "Control operativo"],
     ],
-    "overviewEyebrow": "Operación digital",
-    "overviewTitle": "Logística diseñada para convertir pedidos online en entregas reales.",
-    "overviewText": "El e-commerce exige velocidad, orden, visibilidad y capacidad de respuesta. Diseñamos operaciones para gestionar stock, preparar pedidos, coordinar salidas y mantener trazabilidad desde el almacén hasta el cliente final.",
-    "overviewButton": "Conocer más sobre e-commerce",
+
+    overviewEyebrow: "OPERACIÓN DIGITAL",
+    overviewTitle: "Logística diseñada para convertir pedidos online en entregas reales.",
+    overviewText: "El e-commerce exige velocidad, orden, visibilidad y capacidad de respuesta. Diseñamos operaciones para gestionar stock, preparar pedidos, coordinar salidas y mantener trazabilidad.",
+    overviewButton: "Hablar con un especialista",
+
+    stickyPrimary: "Cotizar fulfillment",
+    stickySecondary: "Hablar ahora",
+    stickySecondaryHref: "",
+
+    preQuoteEyebrow: "ANTES DE COTIZAR",
+    preQuoteTitle: "La operación se define por stock, pedidos y promesa de entrega.",
+    preQuoteText: "Revisamos volumen de pedidos, canales de venta, preparación, entregas y devoluciones para estructurar una operación e-commerce viable.",
+    preQuoteCta: "Cotizar fulfillment",
+    preQuotePoints: [
+      ["Stock", "Inventario, referencias y disponibilidad."],
+      ["Pedidos", "Picking, packing, etiquetado y tiempos de preparación."],
+      ["Entrega", "Distribución, devoluciones y trazabilidad."],
+    ],
+
     "pillars": [
       [
         "Gestión de stock",
@@ -170,46 +182,58 @@ const copy = {
         "Especialistas dedicados"
       ]
     ],
-    "finalTitle": "Coordinemos su operación e-commerce.",
-    "finalText": "Cuéntenos volumen de pedidos, tipo de producto, frecuencia de salidas y destinos. Nuestro equipo analizará la mejor solución logística para su canal online.",
-    "finalPrimary": "Solicitar propuesta e-commerce",
-    "finalSecondary": "Hablar con un especialista"
+    "finalTitle": "Coordinemos su próxima operación internacional.",
+    "finalText": "Hable con un especialista y reciba una solución logística adaptada a su carga, destino y urgencia.",
+    "finalPrimary": "Hablar con un especialista",
+    "finalSecondary": "Cotizar fulfillment"
   },
   "en": {
-    "heroEyebrow": "E-commerce logistics",
-    "heroTitle": "E-commerce operations built to sell, prepare and deliver.",
-    "heroText": "We coordinate logistics solutions for online stores, marketplaces and digital brands: warehousing, order preparation, distribution, returns and operational traceability.",
-    "primaryCta": "Plan my operation",
-    "secondaryCta": "Talk to our team",
-    "activeLabel": "Active e-commerce operation",
-    "activeRoute": "Stock → Order → Customer",
-    "activeCargo": "Fulfillment and distribution",
-    "activeStatusLabel": "Status:",
-    "activeStatus": "In preparation",
-    "activeEtaLabel": "Dispatch:",
-    "activeEta": "Scheduled",
-    "trust": [
-      [
-        "Fulfillment",
-        "Orders prepared"
-      ],
-      [
-        "Distribution",
-        "Coordinated deliveries"
-      ],
-      [
-        "Returns",
-        "Reverse logistics"
-      ],
-      [
-        "Traceability",
-        "Operational control"
-      ]
+    "heroEyebrow": "E-COMMERCE LOGISTICS",
+    "heroTitle": "We prepare and deliver your orders with speed, control and traceability.",
+    "heroText": "We coordinate fulfillment, warehousing, order preparation, distribution and returns for online brands that need visible operations.",
+    "primaryCta": "Quote fulfillment",
+    "secondaryCta": "Talk to a specialist",
+    contactEyebrow: "DIRECT CONTACT",
+    contactTitle: "Let’s coordinate your next international operation.",
+    contactText: "Talk to a specialist and receive a logistics solution adapted to your cargo, destination and urgency.",
+    contactPrimary: "Talk to a specialist",
+    contactSecondary: "Quote now",
+
+
+    activeLabel: "Active e-commerce operation",
+    activeRoute: "Stock → Order → Client",
+    activeCargo: "Fulfillment and distribution",
+    activeStatusLabel: "Status:",
+    activeStatus: "In preparation",
+    activeEtaLabel: "Outbound:",
+    activeEta: "Scheduled",
+
+    trust: [
+      ["Fulfillment", "Orders prepared"],
+      ["Distribution", "Coordinated deliveries"],
+      ["Returns", "Reverse logistics"],
+      ["Traceability", "Operational control"],
     ],
-    "overviewEyebrow": "Digital operation",
-    "overviewTitle": "Logistics designed to turn online orders into real deliveries.",
-    "overviewText": "E-commerce requires speed, order, visibility and response capacity. We design operations to manage stock, prepare orders, coordinate dispatches and maintain traceability from warehouse to final customer.",
-    "overviewButton": "Learn more about e-commerce",
+
+    overviewEyebrow: "DIGITAL OPERATION",
+    overviewTitle: "Logistics designed to turn online orders into real deliveries.",
+    overviewText: "E-commerce requires speed, order, visibility and responsiveness. We design operations to manage stock, prepare orders, coordinate outbound flows and maintain traceability.",
+    overviewButton: "Talk to a specialist",
+
+    stickyPrimary: "Quote fulfill",
+    stickySecondary: "Talk now",
+    stickySecondaryHref: "",
+
+    preQuoteEyebrow: "BEFORE QUOTING",
+    preQuoteTitle: "The operation is defined by stock, orders and delivery promise.",
+    preQuoteText: "We review order volume, sales channels, preparation, deliveries and returns to structure a viable e-commerce operation.",
+    preQuoteCta: "Quote fulfillment",
+    preQuotePoints: [
+      ["Stock", "Inventory, SKUs and availability."],
+      ["Orders", "Picking, packing, labeling and preparation times."],
+      ["Delivery", "Distribution, returns and traceability."],
+    ],
+
     "pillars": [
       [
         "Stock management",
@@ -332,46 +356,58 @@ const copy = {
         "Dedicated specialists"
       ]
     ],
-    "finalTitle": "Let’s coordinate your e-commerce operation.",
-    "finalText": "Tell us order volume, product type, dispatch frequency and destinations. Our team will analyze the best logistics solution for your online channel.",
-    "finalPrimary": "Request e-commerce proposal",
-    "finalSecondary": "Talk to a specialist"
+    "finalTitle": "Let’s coordinate your next international operation.",
+    "finalText": "Talk to a specialist and receive a logistics solution adapted to your cargo, destination and urgency.",
+    "finalPrimary": "Talk to a specialist",
+    "finalSecondary": "Quote fulfillment"
   },
   "zh": {
     "heroEyebrow": "电商物流",
-    "heroTitle": "为销售、准备和交付而设计的电商运营。",
-    "heroText": "我们为在线商店、平台和数字品牌协调物流解决方案：仓储、订单准备、配送、退货和运营可追溯性。",
-    "primaryCta": "规划物流操作",
-    "secondaryCta": "联系我们的团队",
-    "activeLabel": "进行中的电商操作",
-    "activeRoute": "库存 → 订单 → 客户",
-    "activeCargo": "履约与配送",
-    "activeStatusLabel": "状态：",
-    "activeStatus": "准备中",
-    "activeEtaLabel": "出库：",
-    "activeEta": "已安排",
-    "trust": [
-      [
-        "订单履约",
-        "订单准备"
-      ],
-      [
-        "配送",
-        "协调交付"
-      ],
-      [
-        "退货",
-        "逆向物流"
-      ],
-      [
-        "可追溯",
-        "运营控制"
-      ]
+    "heroTitle": "以速度、管控和可追踪性准备并交付您的订单。",
+    "heroText": "我们为在线品牌协调履约、仓储、订单准备、配送和退货，帮助其实现 可视化运营。",
+    "primaryCta": "获取履约报价",
+    "secondaryCta": "联系专家",
+    contactEyebrow: "直接联系",
+    contactTitle: "协调您的下一次国际物流操作。",
+    contactText: "联系专家，根据您的货物、目的地和紧急程度获得合适的物流方案。",
+    contactPrimary: "联系专家",
+    contactSecondary: "立即报价",
+
+
+    activeLabel: "电商操作中",
+    activeRoute: "库存 → 订单 → 客户",
+    activeCargo: "履约与配送",
+    activeStatusLabel: "状态：",
+    activeStatus: "准备中",
+    activeEtaLabel: "出库：",
+    activeEta: "已安排",
+
+    trust: [
+      ["履约", "订单准备"],
+      ["配送", "协调交付"],
+      ["退货", "逆向物流"],
+      ["可追踪性", "运营管控"],
     ],
-    "overviewEyebrow": "数字运营",
-    "overviewTitle": "将在线订单转化为真实交付的物流方案。",
-    "overviewText": "电商需要速度、秩序、可视化和响应能力。我们设计运营流程，用于管理库存、准备订单、协调出库，并从仓库到最终客户保持可追溯性。",
-    "overviewButton": "了解电商物流",
+
+    overviewEyebrow: "数字化操作",
+    overviewTitle: "将在线订单转化为真实交付的物流方案。",
+    overviewText: "电商需要速度、秩序、可视性和响应能力。我们设计操作来管理库存、准备订单、协调出库并保持可追踪性。",
+    overviewButton: "联系专家",
+
+    stickyPrimary: "履约报价",
+    stickySecondary: "立即联系",
+    stickySecondaryHref: "",
+
+    preQuoteEyebrow: "报价前",
+    preQuoteTitle: "电商操作取决于库存、订单和交付承诺。",
+    preQuoteText: "我们会审核订单量、销售渠道、准备流程、配送和退货，以设计可行的电商运营方案。",
+    preQuoteCta: "获取履约报价",
+    preQuotePoints: [
+      ["库存", "库存、SKU 和可用性。"],
+      ["订单", "拣货、包装、贴标和准备时间。"],
+      ["交付", "配送、退货和可追踪性。"],
+    ],
+
     "pillars": [
       [
         "库存管理",
@@ -494,10 +530,10 @@ const copy = {
         "专属专家"
       ]
     ],
-    "finalTitle": "让我们协调您的电商运营。",
-    "finalText": "告诉我们订单量、产品类型、出库频率和目的地。我们的团队将分析适合您在线渠道的最佳物流方案。",
-    "finalPrimary": "申请电商方案",
-    "finalSecondary": "联系专家"
+    "finalTitle": "协调您的下一次国际物流操作。",
+    "finalText": "联系专家，根据您的货物、目的地和紧急程度获得合适的物流方案。",
+    "finalPrimary": "联系专家",
+    "finalSecondary": "获取履约报价"
   }
 } satisfies Record<Locale, any>;
 
@@ -985,15 +1021,34 @@ export default function ECommercePage() {
             </div>
           </div>
         </section>
+        <section className={styles.servicePreQuote} aria-labelledby="service-prequote-title">
+          <span className={styles.eyebrow}>{t.preQuoteEyebrow}</span>
+          <h2 id="service-prequote-title">{t.preQuoteTitle}</h2>
+          <p>{t.preQuoteText}</p>
 
-        <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/heroecommerce.png')" } as CSSProperties} data-across-final-cta="true" data-ecommerce-final-bg="true">
+          <div className={styles.servicePreQuotePoints}>
+            {t.preQuotePoints.map(([title, text]: string[]) => (
+              <article key={title}>
+                <strong>{title}</strong>
+                <span>{text}</span>
+              </article>
+            ))}
+          </div>
+
+          <Link href="/cotizacion?servicio=ecommerce">
+            {t.preQuoteCta}
+          </Link>
+        </section>
+
+
+<section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/heroecommerce.png')" } as CSSProperties} data-across-final-cta="true" data-ecommerce-final-bg="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>
 
             <div className={styles.finalActions}>
-              <Link href="/cotizacion">{t.finalPrimary}</Link>
-              <Link href="/contacto">{t.finalSecondary}</Link>
+              <Link href="/contacto?servicio=ecommerce">{t.finalPrimary}</Link>
+              <Link href="/cotizacion?servicio=ecommerce">{t.finalSecondary}</Link>
             </div>
           </div>
 
@@ -1006,9 +1061,42 @@ export default function ECommercePage() {
             />
           </div>
         </section>
+        <section className={styles.contactHero} aria-labelledby="contact-hero-title">
+          <div className={styles.contactHeroContent}>
+            <span className={styles.eyebrow}>{t.contactEyebrow}</span>
+            <h2 id="contact-hero-title">{t.contactTitle}</h2>
+            <p>{t.contactText}</p>
 
-        <RelatedServices current="transporte-aereo" locale={locale} />
+            <div className={styles.contactHeroActions}>
+              <Link href="/contacto">{t.contactPrimary}</Link>
+              <Link href={`/cotizacion?servicio=e-commerce`}>{t.contactSecondary}</Link>
+            </div>
+          </div>
+
+          <div className={styles.contactHeroImage} aria-hidden="true">
+            <Image
+              src="/images/contactoimagen.png"
+              alt=""
+              fill
+              sizes="(max-width: 900px) 100vw, 46vw"
+            />
+          </div>
+        </section>
+
+
+<RelatedServices current="transporte-aereo" locale={locale} />
       </main>
+
+
+      <div className={styles.mobileStickyCta} aria-label="Acciones rápidas">
+        <Link href="/cotizacion?servicio=ecommerce">
+          {t.stickyPrimary}
+        </Link>
+
+        <Link href={t.stickySecondaryHref || "/contacto?servicio=ecommerce"}>
+          {t.stickySecondary}
+        </Link>
+      </div>
 
       <Footer />
     </div>
