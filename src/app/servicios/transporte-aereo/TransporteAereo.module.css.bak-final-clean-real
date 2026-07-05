@@ -11585,137 +11585,444 @@
 
 /* END AEREO MOBILE TITLES FULL WIDTH CLEAN */
 
-
-
-
-
-
-/* === AEREO CTA FINAL LAYER FIX === */
+/* === AEREO FINAL MOBILE DENSITY AND FOOTER === */
 
 @media (max-width: 1180px) {
-  .homeFinalContact :global([class*="homeFinalCta"]) {
-    position: relative !important;
-    isolation: isolate !important;
-    overflow: hidden !important;
-    background-color: #07101a !important;
+  /*
+    Pase final mobile/tablet:
+    - compacta espacios entre secciones
+    - baja padding del HomeCorporateFinal
+    - pega contacto con footer
+    - no toca hero
+  */
+
+  .overview,
+  .certifications,
+  .processAccordionSection,
+  .faqSection,
+  .related,
+  .services,
+  .useCases {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
   }
 
-  .homeFinalContact :global([class*="homeFinalCta"]::before),
-  .homeFinalContact :global([class*="homeFinalCta"]::after) {
-    z-index: 0 !important;
-    pointer-events: none !important;
+  .overview {
+    padding-top: 1.9rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .certifications {
+    padding-top: .9rem !important;
+    padding-bottom: .9rem !important;
+  }
+
+  .processAccordionSection {
+    padding-top: 2rem !important;
+    padding-bottom: 2.1rem !important;
+  }
+
+  .faqSection {
+    padding-top: 2rem !important;
+    padding-bottom: 2.2rem !important;
+  }
+
+  .related,
+  .services,
+  .useCases {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .sectionHead,
+  .processAccordionHead,
+  .faqHead {
+    margin-top: 0 !important;
+    margin-bottom: 1.15rem !important;
+  }
+
+  .sectionHead h2,
+  .processAccordionHead h2,
+  .faqHead h2 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .sectionHead p,
+  .faqHead p {
+    margin-top: .8rem !important;
+  }
+
+  /*
+    Servicios relacionados viene de componente externo.
+  */
+  .page :global([class*="RelatedServices"]),
+  .page :global([class*="relatedServices"]),
+  .page :global([class*="Related_services"]),
+  .page :global([class*="related"]) {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .page :global([class*="RelatedServices"]) :global([class*="head"]),
+  .page :global([class*="relatedServices"]) :global([class*="head"]),
+  .page :global([class*="Related"]) :global([class*="Head"]) {
+    margin-bottom: 1.1rem !important;
+  }
+
+  /*
+    HomeCorporateFinal compacto.
+  */
+  .homeFinalContact {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #07101a !important;
+    overflow: hidden !important;
+  }
+
+  .homeFinalContact :global([class*="integrated"]),
+  .homeFinalContact :global([class*="global"]),
+  .homeFinalContact :global([class*="homeOffices"]) {
+    min-height: 0 !important;
+    height: auto !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 1.65rem !important;
+    padding-bottom: 1.65rem !important;
+  }
+
+  .homeFinalContact :global([class*="integratedInner"]),
+  .homeFinalContact :global([class*="globalContent"]),
+  .homeFinalContact :global([class*="homeOfficesInner"]) {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    gap: 1rem !important;
+  }
+
+  .homeFinalContact :global([class*="globalCards"]),
+  .homeFinalContact :global([class*="homeOfficesGrid"]),
+  .homeFinalContact :global([class*="officeGrid"]) {
+    margin-top: 1rem !important;
+    gap: .75rem !important;
+  }
+
+  .homeFinalContact :global([class*="globalCards"]) > *,
+  .homeFinalContact :global([class*="homeOfficesGrid"]) > *,
+  .homeFinalContact :global([class*="officeGrid"]) > * {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /*
+    Oculta la sección repetida de servicios de HomeCorporateFinal.
+  */
+  .homeFinalContact :global([class*="services"]) {
+    display: none !important;
+  }
+
+  /*
+    Certificaciones / logos internos compactos.
+  */
+  .homeFinalContact :global([class*="certification"]),
+  .homeFinalContact :global([class*="certifications"]),
+  .homeFinalContact :global([class*="logos"]),
+  .homeFinalContact :global([class*="Logos"]) {
+    min-height: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: .6rem !important;
+    padding-bottom: .6rem !important;
+  }
+
+  /*
+    CTA final compacto.
+  */
+  .homeFinalContact :global([class*="homeFinalCta"]) {
+    min-height: 280px !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding-top: 2rem !important;
+    padding-bottom: 1.7rem !important;
+    display: flex !important;
+    align-items: center !important;
+    background: #07101a !important;
   }
 
   .homeFinalContact :global([class*="homeFinalCtaInner"]) {
+    width: min(100% - 44px, 390px) !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+
+  .homeFinalContact :global([class*="homeFinalCta"]) h2 {
+    margin: 0 !important;
+    font-size: clamp(1.7rem, 7.2vw, 2.25rem) !important;
+    line-height: .94 !important;
+  }
+
+  .homeFinalContact :global([class*="homeFinalCta"]) p {
+    margin-top: .75rem !important;
+    font-size: .8rem !important;
+    line-height: 1.42 !important;
+  }
+
+  .homeFinalContact :global([class*="homeFinalCta"]) a {
+    margin-top: 1.25rem !important;
+    min-height: 42px !important;
+  }
+
+  /*
+    Footer pegado.
+    El margen negativo tapa la franja crema que aparece entre main y footer.
+  */
+  .page :global(footer),
+  .page :global([class*="Footer_footer"]) {
+    margin-top: -54px !important;
+    padding-top: 0 !important;
+    border-top: 0 !important;
+    background: #07101a !important;
     position: relative !important;
-    z-index: 5 !important;
-    opacity: 1 !important;
-    filter: none !important;
-    mix-blend-mode: normal !important;
-    background: transparent !important;
-    box-shadow: none !important;
-    border: 0 !important;
-  }
-
-  .homeFinalContact :global([class*="homeFinalCtaInner"] *),
-  .homeFinalContact :global([class*="homeFinalCta"] h2),
-  .homeFinalContact :global([class*="homeFinalCta"] p),
-  .homeFinalContact :global([class*="homeFinalCta"] a) {
-    position: relative !important;
-    z-index: 6 !important;
-    opacity: 1 !important;
-    filter: none !important;
-    mix-blend-mode: normal !important;
-  }
-
-  .homeFinalContact :global([class*="homeFinalCta"] h2) {
-    color: #fff !important;
-    -webkit-text-fill-color: #fff !important;
-    text-shadow: 0 2px 12px rgba(0,0,0,.28) !important;
-  }
-
-  .homeFinalContact :global([class*="homeFinalCta"] p) {
-    color: rgba(255,255,255,.88) !important;
-    -webkit-text-fill-color: rgba(255,255,255,.88) !important;
-  }
-
-  .homeFinalContact :global([class*="homeFinalCta"] a) {
-    color: #fff !important;
-    -webkit-text-fill-color: #fff !important;
+    z-index: 8 !important;
   }
 }
 
-/* END AEREO CTA FINAL LAYER FIX */
+@media (max-width: 430px) {
+  .overview {
+    padding-top: 1.65rem !important;
+    padding-bottom: 1.75rem !important;
+  }
 
+  .processAccordionSection {
+    padding-top: 1.75rem !important;
+    padding-bottom: 1.9rem !important;
+  }
 
-/* === AEREO CTA FINAL BRIGHT PHOTO FINAL === */
+  .faqSection {
+    padding-top: 1.8rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .related,
+  .services,
+  .useCases {
+    padding-top: 1.8rem !important;
+    padding-bottom: 1.85rem !important;
+  }
+
+  .homeFinalContact :global([class*="integrated"]),
+  .homeFinalContact :global([class*="global"]),
+  .homeFinalContact :global([class*="homeOffices"]) {
+    padding-top: 1.35rem !important;
+    padding-bottom: 1.35rem !important;
+  }
+
+  .homeFinalContact :global([class*="homeFinalCta"]) {
+    min-height: 260px !important;
+    padding-top: 1.75rem !important;
+    padding-bottom: 1.4rem !important;
+  }
+
+  .page :global(footer),
+  .page :global([class*="Footer_footer"]) {
+    margin-top: -48px !important;
+  }
+}
+
+/* END AEREO FINAL MOBILE DENSITY AND FOOTER */
+
+/* === AEREO FINAL STACK CONTACT FOOTER TRUE FIX === */
+
+@media (max-width: 1180px) {
+  .aereoFinalStack {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #07101a !important;
+    overflow: hidden !important;
+  }
+
+  .aereoFinalStack .homeFinalContact {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #07101a !important;
+  }
+
+  .aereoFinalStack :global([class*="homeFinalCta"]) {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    background: #07101a !important;
+  }
+
+  .aereoFinalStack :global([class*="homeFinalCtaInner"]) {
+    margin-bottom: 0 !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .aereoFinalStack :global(footer),
+  .aereoFinalStack :global([class*="Footer_footer"]),
+  .aereoFinalStack :global([class*="footer"]) {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    border-top: 0 !important;
+    background: #07101a !important;
+  }
+
+  .aereoFinalStack :global(footer > *),
+  .aereoFinalStack :global([class*="Footer_footer"] > *) {
+    margin-top: 0 !important;
+  }
+}
+
+/* END AEREO FINAL STACK CONTACT FOOTER TRUE FIX */
+
+/* === AEREO FINAL STACK CONTACT FOOTER TRUE FIX === */
+
+@media (max-width: 1180px) {
+  .aereoFinalStack {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #07101a !important;
+    overflow: hidden !important;
+  }
+
+  .aereoFinalStack .homeFinalContact {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #07101a !important;
+  }
+
+  .aereoFinalStack :global([class*="homeFinalCta"]) {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    background: #07101a !important;
+  }
+
+  .aereoFinalStack :global([class*="homeFinalCtaInner"]) {
+    margin-bottom: 0 !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .aereoFinalStack :global(footer),
+  .aereoFinalStack :global([class*="Footer_footer"]),
+  .aereoFinalStack :global([class*="footer"]) {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    border-top: 0 !important;
+    background: #07101a !important;
+  }
+
+  .aereoFinalStack :global(footer > *),
+  .aereoFinalStack :global([class*="Footer_footer"] > *) {
+    margin-top: 0 !important;
+  }
+}
+
+/* END AEREO FINAL STACK CONTACT FOOTER TRUE FIX */
+
+/* === AEREO FINAL STACK CONTACT FOOTER TRUE FIX === */
+
+@media (max-width: 1180px) {
+  .aereoFinalStack {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #07101a !important;
+    overflow: hidden !important;
+  }
+
+  .aereoFinalStack .homeFinalContact {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #07101a !important;
+  }
+
+  .aereoFinalStack :global([class*="homeFinalCta"]) {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    background: #07101a !important;
+  }
+
+  .aereoFinalStack :global([class*="homeFinalCtaInner"]) {
+    margin-bottom: 0 !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .aereoFinalStack :global(footer),
+  .aereoFinalStack :global([class*="Footer_footer"]),
+  .aereoFinalStack :global([class*="footer"]) {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    border-top: 0 !important;
+    background: #07101a !important;
+  }
+
+  .aereoFinalStack :global(footer > *),
+  .aereoFinalStack :global([class*="Footer_footer"] > *) {
+    margin-top: 0 !important;
+  }
+}
+
+/* END AEREO FINAL STACK CONTACT FOOTER TRUE FIX */
+
+/* === AEREO FINAL CONTACT TRUE ATTACH === */
 
 @media (max-width: 1180px) {
   /*
-    Deja ver la foto del CTA final.
-    Quita la capa oscura fuerte.
+    No movemos el footer.
+    Quitamos el colchón blanco/crema haciendo que el final del contacto
+    termine oscuro y sin padding/margen inferior.
   */
+
+  .homeFinalContact {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #07101a !important;
+    overflow: hidden !important;
+  }
 
   .homeFinalContact :global([class*="homeFinalCta"]) {
-    background-color: #07101a !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
+    min-height: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding-top: 2rem !important;
+    padding-bottom: 0 !important;
+    background: #07101a !important;
+    display: block !important;
   }
 
-  /*
-    Capa de imagen: más clara.
-  */
-  .homeFinalContact :global([class*="homeFinalCta"]::before) {
-    opacity: 1 !important;
-    filter: brightness(1.75) contrast(1.05) saturate(1.08) !important;
+  .homeFinalContact :global([class*="homeFinalCtaInner"]) {
+    margin: 0 auto !important;
+    padding: 0 0 2rem !important;
+    transform: none !important;
   }
 
-  /*
-    Capa oscura: casi apagada.
-  */
-  .homeFinalContact :global([class*="homeFinalCta"]::after) {
-    opacity: 0 !important;
-    background: transparent !important;
+  .homeFinalContact + :global(footer),
+  .homeFinalContact ~ :global(footer),
+  .page :global(footer),
+  .page :global([class*="Footer_footer"]) {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    border-top: 0 !important;
+    background: #07101a !important;
   }
 
-  /*
-    Nada de caja detrás del texto.
-  */
-  .homeFinalContact :global([class*="homeFinalCtaInner"]),
-  .homeFinalContact :global([class*="homeFinalCtaInner"] > div) {
-    background: transparent !important;
-    background-color: transparent !important;
-    background-image: none !important;
-    box-shadow: none !important;
-    border: 0 !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
+  .aereoFooterPull {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    background: #07101a !important;
   }
 
-  /*
-    Texto legible encima de la foto.
-  */
-  .homeFinalContact :global([class*="homeFinalCta"] h2) {
-    color: #fff !important;
-    -webkit-text-fill-color: #fff !important;
-    text-shadow: 0 3px 18px rgba(0,0,0,.55) !important;
-  }
-
-  .homeFinalContact :global([class*="homeFinalCta"] p) {
-    color: rgba(255,255,255,.94) !important;
-    -webkit-text-fill-color: rgba(255,255,255,.94) !important;
-    text-shadow: 0 2px 12px rgba(0,0,0,.55) !important;
-  }
-
-  .homeFinalContact :global([class*="homeFinalCta"] a) {
-    color: #fff !important;
-    -webkit-text-fill-color: #fff !important;
+  .aereoFooterPull :global(footer),
+  .aereoFooterPull :global([class*="Footer_footer"]),
+  .aereoFooterPull :global([class*="footer"]) {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    border-top: 0 !important;
+    background: #07101a !important;
   }
 }
 
-/* END AEREO CTA FINAL BRIGHT PHOTO FINAL */
-
-
-
-
+/* END AEREO FINAL CONTACT TRUE ATTACH */

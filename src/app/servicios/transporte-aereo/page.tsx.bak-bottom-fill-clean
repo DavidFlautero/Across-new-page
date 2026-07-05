@@ -979,14 +979,6 @@ export default function TransporteAereoPage() {
                 -webkit-backdrop-filter: none !important;
               }
 
-              .aereoBottomDarkFill {
-                display: block !important;
-                height: calc(5.8rem + env(safe-area-inset-bottom)) !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                background: #07101a !important;
-              }
-
               .aereoFinalStackHard footer,
               .aereoFinalStackHard [class*="Footer_footer"],
               .aereoFinalStackHard [class*="footer"] {
@@ -994,14 +986,6 @@ export default function TransporteAereoPage() {
                 padding-top: 0 !important;
                 border-top: 0 !important;
                 background: #07101a !important;
-              }
-
-              /* AEREO_STICKY_OPAQUE_BOTTOM_FIX */
-              .mobileStickyCta {
-                bottom: 0 !important;
-                margin: 0 !important;
-                background: #07101a !important;
-                border-top: 1px solid rgba(255,255,255,.08) !important;
               }
 
               .aereoFinalStackHard footer::before,
@@ -1019,7 +1003,7 @@ export default function TransporteAereoPage() {
           </div>
 
           <Footer />
-          <div className="aereoBottomDarkFill" aria-hidden="true" />
+          <div className={styles.aereoFooterBottomFill} aria-hidden="true" />
         </div>
       </main>
 
