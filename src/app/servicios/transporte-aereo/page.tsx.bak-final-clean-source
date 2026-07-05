@@ -919,7 +919,92 @@ export default function TransporteAereoPage() {
         </section>
         <RelatedServices current="transporte-aereo" locale={locale} />
 
-        <div className={styles.aereoFinalStack}>
+        <div className="aereoFinalStackHard">
+          <style>{`
+            @media (max-width: 1180px) {
+              .aereoFinalStackHard {
+                margin: 0 !important;
+                padding: 0 !important;
+                background: #07101a !important;
+                overflow: hidden !important;
+              }
+
+              .aereoFinalStackHard [class*="homeFinalContact"] {
+                margin: 0 !important;
+                padding: 0 !important;
+                background: #07101a !important;
+                overflow: hidden !important;
+              }
+
+              .aereoFinalStackHard [class*="services"] {
+                display: none !important;
+              }
+
+              .aereoFinalStackHard [class*="homeFinalCta"] {
+                margin: 0 !important;
+                padding-bottom: 0 !important;
+                background-color: #07101a !important;
+              }
+
+              .aereoFinalStackHard [class*="homeFinalCtaInner"] {
+                margin: 0 auto !important;
+                padding-bottom: 1.4rem !important;
+              }
+
+              /* AEREO_CTA_IMAGE_SOFT_FIX */
+
+              .aereoFinalStackHard [class*="homeFinalCta"]::before,
+              .aereoFinalStackHard [class*="homeFinalCta"]::after {
+                display: block !important;
+                content: "" !important;
+                opacity: 1 !important;
+                background-size: cover !important;
+                background-position: center center !important;
+              }
+
+              .aereoFinalStackHard [class*="homeFinalCta"] {
+                background-color: #07101a !important;
+                background-size: cover !important;
+                background-position: center center !important;
+                background-repeat: no-repeat !important;
+              }
+
+              .aereoFinalStackHard [class*="homeFinalCtaInner"],
+              .aereoFinalStackHard [class*="homeFinalCtaInner"] > div {
+                background: transparent !important;
+                background-color: transparent !important;
+                box-shadow: none !important;
+                border: 0 !important;
+                backdrop-filter: none !important;
+                -webkit-backdrop-filter: none !important;
+              }
+              .aereoFinalStackHard footer,
+              .aereoFinalStackHard [class*="Footer_footer"],
+              .aereoFinalStackHard [class*="footer"] {
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+                border-top: 0 !important;
+                background: #07101a !important;
+              }
+
+              /* AEREO_STICKY_OPAQUE_BOTTOM_FIX */
+              .mobileStickyCta {
+                bottom: 0 !important;
+                margin: 0 !important;
+                background: #07101a !important;
+                border-top: 1px solid rgba(255,255,255,.08) !important;
+              }
+
+              .aereoFinalStackHard footer::before,
+              .aereoFinalStackHard footer::after,
+              .aereoFinalStackHard [class*="Footer_footer"]::before,
+              .aereoFinalStackHard [class*="Footer_footer"]::after {
+                display: none !important;
+                content: none !important;
+              }
+            }
+          `}</style>
+
           <div className={styles.homeFinalContact}>
             <HomeCorporateFinal />
           </div>

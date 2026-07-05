@@ -11590,82 +11590,132 @@
 
 
 
+/* === AEREO CTA FINAL LAYER FIX === */
 
+@media (max-width: 1180px) {
+  .homeFinalContact :global([class*="homeFinalCta"]) {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+    background-color: #07101a !important;
+  }
 
+  .homeFinalContact :global([class*="homeFinalCta"]::before),
+  .homeFinalContact :global([class*="homeFinalCta"]::after) {
+    z-index: 0 !important;
+    pointer-events: none !important;
+  }
 
+  .homeFinalContact :global([class*="homeFinalCtaInner"]) {
+    position: relative !important;
+    z-index: 5 !important;
+    opacity: 1 !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: 0 !important;
+  }
 
+  .homeFinalContact :global([class*="homeFinalCtaInner"] *),
+  .homeFinalContact :global([class*="homeFinalCta"] h2),
+  .homeFinalContact :global([class*="homeFinalCta"] p),
+  .homeFinalContact :global([class*="homeFinalCta"] a) {
+    position: relative !important;
+    z-index: 6 !important;
+    opacity: 1 !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+  }
 
+  .homeFinalContact :global([class*="homeFinalCta"] h2) {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+    text-shadow: 0 2px 12px rgba(0,0,0,.28) !important;
+  }
 
+  .homeFinalContact :global([class*="homeFinalCta"] p) {
+    color: rgba(255,255,255,.88) !important;
+    -webkit-text-fill-color: rgba(255,255,255,.88) !important;
+  }
 
-/* === AEREO FINAL CLEAN SINGLE SOURCE 2 === */
-
-.aereoFinalStack {
-  background: #07101a;
+  .homeFinalContact :global([class*="homeFinalCta"] a) {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+  }
 }
+
+/* END AEREO CTA FINAL LAYER FIX */
+
+
+/* === AEREO CTA FINAL BRIGHT PHOTO FINAL === */
 
 @media (max-width: 1180px) {
   /*
-    Única fuente de verdad para el final:
-    HomeCorporateFinal + Footer dentro del mismo wrapper oscuro.
+    Deja ver la foto del CTA final.
+    Quita la capa oscura fuerte.
   */
 
-  .aereoFinalStack {
-    margin: 0 !important;
-    padding: 0 !important;
-    background: #07101a !important;
-    overflow: hidden !important;
-  }
-
-  .aereoFinalStack .homeFinalContact {
-    margin: 0 !important;
-    padding: 0 !important;
-    background: #07101a !important;
-    overflow: hidden !important;
+  .homeFinalContact :global([class*="homeFinalCta"]) {
+    background-color: #07101a !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
   }
 
   /*
-    Oculta solo la sección repetida de servicios del HomeCorporateFinal,
-    no toca el footer.
+    Capa de imagen: más clara.
   */
-  .aereoFinalStack .homeFinalContact :global([class*="services"]) {
-    display: none !important;
+  .homeFinalContact :global([class*="homeFinalCta"]::before) {
+    opacity: 1 !important;
+    filter: brightness(1.75) contrast(1.05) saturate(1.08) !important;
   }
 
-  .aereoFinalStack .homeFinalContact :global([class*="homeFinalCta"]) {
-    margin-bottom: 0 !important;
+  /*
+    Capa oscura: casi apagada.
+  */
+  .homeFinalContact :global([class*="homeFinalCta"]::after) {
+    opacity: 0 !important;
+    background: transparent !important;
   }
 
-  .aereoFinalStack :global(footer),
-  .aereoFinalStack :global([class*="Footer_footer"]),
-  .aereoFinalStack :global([class*="footer"]) {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    border-top: 0 !important;
-    background: #07101a !important;
+  /*
+    Nada de caja detrás del texto.
+  */
+  .homeFinalContact :global([class*="homeFinalCtaInner"]),
+  .homeFinalContact :global([class*="homeFinalCtaInner"] > div) {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /*
+    Texto legible encima de la foto.
+  */
+  .homeFinalContact :global([class*="homeFinalCta"] h2) {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+    text-shadow: 0 3px 18px rgba(0,0,0,.55) !important;
+  }
+
+  .homeFinalContact :global([class*="homeFinalCta"] p) {
+    color: rgba(255,255,255,.94) !important;
+    -webkit-text-fill-color: rgba(255,255,255,.94) !important;
+    text-shadow: 0 2px 12px rgba(0,0,0,.55) !important;
+  }
+
+  .homeFinalContact :global([class*="homeFinalCta"] a) {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
   }
 }
 
-@media (max-width: 900px) {
-  /*
-    Antes .page tenía padding-bottom crema para el sticky.
-    Eso era la franja clara debajo del footer.
-  */
-  .page {
-    padding-bottom: 0 !important;
-  }
+/* END AEREO CTA FINAL BRIGHT PHOTO FINAL */
 
-  /*
-    El espacio para que el sticky no tape contenido ahora lo pone
-    el wrapper oscuro del footer.
-  */
-  .aereoFinalStack {
-    padding-bottom: calc(86px + env(safe-area-inset-bottom)) !important;
-  }
 
-  .mobileStickyCta {
-    background: #07101a !important;
-    border-top: 1px solid rgba(255,255,255,.08) !important;
-  }
-}
 
-/* END AEREO FINAL CLEAN SINGLE SOURCE 2 */
+
