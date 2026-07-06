@@ -5772,144 +5772,96 @@
 
 
 
-
-/* === HOME CORPORATE INTEGRATED CLEAN FINAL === */
+/* === HOME CORPORATE INTEGRATED REAL WIDTH COMPACT FIX === */
 
 /*
-  Clase real según JSX:
-  <section className={styles.integrated}>
-    <div className={styles.integratedInner}>
-      <div className={styles.copy}>
-      <div className={styles.heroImage}>
-
-  Solo arregla "Logística integrada..."
+  Clase real: .integrated
+  Corrige SOLO la sección "Logística integrada para cada necesidad".
+  No toca footer.
+  No toca mapa/certificaciones.
+  No toca TransporteAereo.module.css salvo borrar el parche malo.
 */
 
 @media (min-width: 901px) {
   .integrated {
-    width: 100% !important;
-    max-width: none !important;
-    margin: 0 !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+
+    box-sizing: border-box !important;
+
+    padding-top: clamp(3.2rem, 4vw, 4.6rem) !important;
+    padding-bottom: clamp(3.2rem, 4vw, 4.6rem) !important;
+    padding-left: max(40px, calc((100vw - 1180px) / 2)) !important;
+    padding-right: max(40px, calc((100vw - 1180px) / 2)) !important;
 
     background:
-      radial-gradient(circle at 12% 0%, rgba(23, 50, 71, .045), transparent 28rem),
+      radial-gradient(circle at 12% 0%, rgba(23, 50, 71, .055), transparent 28rem),
       linear-gradient(180deg, #f7f4ee 0%, #fbfaf7 58%, #f5f1ea 100%) !important;
 
-    padding: 3.2rem 0 !important;
     overflow: hidden !important;
   }
 
-  .integratedInner {
-    width: min(1180px, calc(100% - 64px)) !important;
-    max-width: 1180px !important;
-    margin: 0 auto !important;
-
-    display: grid !important;
-    grid-template-columns: minmax(0, .9fr) minmax(360px, 1.1fr) !important;
-    gap: clamp(2rem, 4vw, 4.2rem) !important;
-    align-items: center !important;
+  .integrated .copy {
+    align-self: center !important;
   }
 
-  .integrated .copy h2 {
-    margin: 0 0 1rem !important;
-    font-size: clamp(2.65rem, 3.4vw, 4.1rem) !important;
+  .integrated .copy > span,
+  .integrated .copy small,
+  .integrated .copy [class*="badge"],
+  .integrated .copy [class*="Badge"],
+  .integrated .copy [class*="eyebrow"],
+  .integrated .copy [class*="Eyebrow"] {
+    margin-bottom: .9rem !important;
+  }
+
+  .integrated .copy h2,
+  .integrated .copy h3 {
+    margin-top: 0 !important;
+    margin-bottom: 1.15rem !important;
+    font-size: clamp(2.75rem, 3.6vw, 4.35rem) !important;
     line-height: .92 !important;
   }
 
   .integrated .copy p {
-    margin: 0 0 1.35rem !important;
+    margin-top: 0 !important;
+    margin-bottom: 1.55rem !important;
     max-width: 560px !important;
-    line-height: 1.58 !important;
+    line-height: 1.62 !important;
   }
 
-  .integrated .copy ul {
-    margin: 0 0 1.7rem !important;
-    gap: .58rem !important;
+  .integrated .copy ul,
+  .integrated .copy ol {
+    margin-top: 0 !important;
+    margin-bottom: 2rem !important;
+    gap: .65rem !important;
+  }
+
+  .integrated .copy li {
+    line-height: 1.25 !important;
   }
 
   .integrated .heroImage {
-    min-height: 360px !important;
-    max-height: 410px !important;
-    height: 38vw !important;
+    align-self: center !important;
+    max-height: 430px !important;
+  }
+
+  .integrated .heroImage img {
+    object-fit: cover !important;
   }
 }
 
 @media (min-width: 1181px) and (max-width: 1700px) {
   .integrated {
-    padding-top: 2.7rem !important;
-    padding-bottom: 2.7rem !important;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
   }
 
   .integrated .heroImage {
-    min-height: 330px !important;
-    max-height: 380px !important;
+    max-height: 390px !important;
   }
 }
 
-/* END HOME CORPORATE INTEGRATED CLEAN FINAL */
-
-/* === HOME CORPORATE GLOBALTRUST DESKTOP CLEAN FINAL === */
-
-/*
-  Arreglo real del bloque:
-  - Mantiene el mapa globalTrust.
-  - Oculta mobileCertifications en desktop, porque esa fila de logos se corta.
-  - Compacta el alto del mapa en desktop mediano.
-  - No toca footer.
-  - No toca Logística integrada.
-*/
-
-@media (min-width: 901px) {
-  .mobileCertifications {
-    display: none !important;
-  }
-
-  .globalTrust {
-    min-height: 620px !important;
-    height: 620px !important;
-    max-height: 620px !important;
-    overflow: hidden !important;
-  }
-
-  .globalOverlay {
-    min-height: 620px !important;
-    height: 620px !important;
-    max-height: 620px !important;
-    display: flex !important;
-    align-items: center !important;
-  }
-
-  .globalContent {
-    transform: translateY(-18px) !important;
-  }
-}
-
-@media (min-width: 1181px) and (max-width: 1700px) {
-  .globalTrust {
-    min-height: 560px !important;
-    height: 560px !important;
-    max-height: 560px !important;
-  }
-
-  .globalOverlay {
-    min-height: 560px !important;
-    height: 560px !important;
-    max-height: 560px !important;
-  }
-
-  .globalContent {
-    transform: translateY(-8px) !important;
-  }
-
-  .globalContent h2 {
-    font-size: clamp(2.6rem, 3.35vw, 4rem) !important;
-    line-height: .94 !important;
-    margin-bottom: 1.35rem !important;
-  }
-
-  .globalCards {
-    margin-top: 1.4rem !important;
-  }
-}
-
-/* END HOME CORPORATE GLOBALTRUST DESKTOP CLEAN FINAL */
+/* END HOME CORPORATE INTEGRATED REAL WIDTH COMPACT FIX */

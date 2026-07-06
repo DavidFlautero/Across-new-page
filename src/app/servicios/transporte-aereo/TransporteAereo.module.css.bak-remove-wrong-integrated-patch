@@ -12310,18 +12310,38 @@
 
 /* END AEREO CERTIFICATIONS MAP ZOOM OUT FINAL */
 
-
-/* === AEREO HOMEFINAL CONTACT BG ONLY FINAL === */
+/* === AEREO HOME INTEGRATED SECTION ONLY FIX === */
 
 /*
-  Quita el azul lateral detrás de HomeCorporateFinal.
-  NO toca footer.
-  NO toca .aereoFinalStack.
-  NO toca mapa ni cards.
+  Corrige SOLO la sección crema "Logística integrada..."
+  dentro de HomeCorporateFinal.
+  No toca footer.
+  No toca el mapa.
+  No toca toda la página.
 */
 
-.homeFinalContact {
-  background: #f4f1eb !important;
+@media (min-width: 901px) {
+  .homeFinalContact :global(section:nth-of-type(2)) {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+
+    background: #f4f1eb !important;
+
+    padding-top: clamp(3.2rem, 4.4vw, 4.7rem) !important;
+    padding-bottom: clamp(3.2rem, 4.4vw, 4.7rem) !important;
+
+    min-height: auto !important;
+    overflow: hidden !important;
+  }
+
+  .homeFinalContact :global(section:nth-of-type(2) > div) {
+    width: min(1180px, calc(100% - 64px)) !important;
+    max-width: 1180px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 }
 
-/* END AEREO HOMEFINAL CONTACT BG ONLY FINAL */
+/* END AEREO HOME INTEGRATED SECTION ONLY FIX */

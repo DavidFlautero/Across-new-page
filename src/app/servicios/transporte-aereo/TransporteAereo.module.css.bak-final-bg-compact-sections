@@ -12309,19 +12309,3 @@
 }
 
 /* END AEREO CERTIFICATIONS MAP ZOOM OUT FINAL */
-
-
-/* === AEREO HOMEFINAL CONTACT BG ONLY FINAL === */
-
-/*
-  Quita el azul lateral detrás de HomeCorporateFinal.
-  NO toca footer.
-  NO toca .aereoFinalStack.
-  NO toca mapa ni cards.
-*/
-
-.homeFinalContact {
-  background: #f4f1eb !important;
-}
-
-/* END AEREO HOMEFINAL CONTACT BG ONLY FINAL */
