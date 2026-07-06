@@ -1129,7 +1129,7 @@
 /* Mobile real: no hero gigante, no botones flotando raro */
 @media (max-width: 900px) {
   .hero {
-    min-height: 520px !important;
+    min-height: 560px !important;
     height: auto !important;
     padding: 5.8rem 24px 3.2rem !important;
     align-items: flex-end !important;
@@ -12233,79 +12233,87 @@
 
 
 
-
-
-
-
-/* === AEREO CERTIFICATIONS MEDIUM DESKTOP ONLY FINAL === */
-
-/*
-  SOLO desktop mediano.
-  Este es el caso de tu computadora:
-  - no toca tablet/mobile
-  - no toca desktop grande
-  - no quita mapa/foto
-  - solo compacta y sube el contenido para que no quede perdido abajo
-*/
-
-@media (min-width: 1181px) and (max-width: 1700px) {
-  .homeFinalContact :global(section:first-of-type) {
-    padding-top: 1.6rem !important;
-    padding-bottom: 1rem !important;
-    min-height: 520px !important;
-    height: 520px !important;
-    max-height: 520px !important;
-    overflow: hidden !important;
-  }
-
-  .homeFinalContact :global(section:first-of-type > div:first-child) {
-    transform: translateY(-135px) !important;
-  }
-
-  .homeFinalContact :global(section:first-of-type h2) {
-    margin-top: 0 !important;
-    margin-bottom: 1.15rem !important;
-    font-size: clamp(2.25rem, 3vw, 3.45rem) !important;
-    line-height: .94 !important;
-  }
-
-  .homeFinalContact :global(section:first-of-type article) {
-    min-height: auto !important;
-    padding-top: 1.05rem !important;
-    padding-bottom: 1.05rem !important;
-  }
-}
-
-/* Desktop grande queda sin este ajuste */
-@media (min-width: 1701px) {
-  .homeFinalContact :global(section:first-of-type > div:first-child) {
-    transform: none !important;
-  }
-}
-
-/* END AEREO CERTIFICATIONS MEDIUM DESKTOP ONLY FINAL */
-
-/* === AEREO CERTIFICATIONS MAP ZOOM OUT FINAL === */
-
-/*
-  Aleja un poco la imagen/mapa del bloque de certificaciones.
-  No toca textos, cards ni logos.
-*/
+/* === AEREO CERTIFICACIONES DESKTOP LIFT ONLY === */
 
 @media (min-width: 1181px) {
-  .homeFinalContact :global(section:first-of-type) {
-    background-size: 88% auto !important;
-    background-position: center 48% !important;
-    background-repeat: no-repeat !important;
+  /*
+    Solo desktop.
+    No cambia el mapa/foto.
+    Solo sube y compacta el contenido de certificaciones del HomeCorporateFinal.
+  */
+
+  .homeFinalContact :global([class*="Trust"]),
+  .homeFinalContact :global([class*="trust"]),
+  .homeFinalContact :global([class*="Cert"]),
+  .homeFinalContact :global([class*="cert"]),
+  .homeFinalContact :global([class*="Network"]),
+  .homeFinalContact :global([class*="network"]) {
+    background-color: transparent !important;
   }
 
-  .homeFinalContact :global(section:first-of-type [class*="map"]),
-  .homeFinalContact :global(section:first-of-type [class*="Map"]),
-  .homeFinalContact :global(section:first-of-type [class*="world"]),
-  .homeFinalContact :global(section:first-of-type [class*="World"]) {
-    transform: scale(.88) !important;
-    transform-origin: center center !important;
+  .homeFinalContact :global([class*="Trust"] > div),
+  .homeFinalContact :global([class*="trust"] > div),
+  .homeFinalContact :global([class*="Cert"] > div),
+  .homeFinalContact :global([class*="cert"] > div),
+  .homeFinalContact :global([class*="Network"] > div),
+  .homeFinalContact :global([class*="network"] > div) {
+    transform: translateY(-72px) !important;
+  }
+
+  .homeFinalContact :global([class*="Trust"] h2),
+  .homeFinalContact :global([class*="trust"] h2),
+  .homeFinalContact :global([class*="Cert"] h2),
+  .homeFinalContact :global([class*="cert"] h2),
+  .homeFinalContact :global([class*="Network"] h2),
+  .homeFinalContact :global([class*="network"] h2) {
+    margin-bottom: 1.55rem !important;
+  }
+
+  .homeFinalContact :global([class*="Trust"] article),
+  .homeFinalContact :global([class*="trust"] article),
+  .homeFinalContact :global([class*="Cert"] article),
+  .homeFinalContact :global([class*="cert"] article),
+  .homeFinalContact :global([class*="Network"] article),
+  .homeFinalContact :global([class*="network"] article) {
+    background: rgba(7, 16, 26, .72) !important;
+    border: 1px solid rgba(255,255,255,.22) !important;
+    backdrop-filter: blur(4px) !important;
+    -webkit-backdrop-filter: blur(4px) !important;
+  }
+
+  .homeFinalContact :global([class*="Trust"] h3),
+  .homeFinalContact :global([class*="trust"] h3),
+  .homeFinalContact :global([class*="Cert"] h3),
+  .homeFinalContact :global([class*="cert"] h3),
+  .homeFinalContact :global([class*="Network"] h3),
+  .homeFinalContact :global([class*="network"] h3),
+  .homeFinalContact :global([class*="Trust"] strong),
+  .homeFinalContact :global([class*="trust"] strong),
+  .homeFinalContact :global([class*="Cert"] strong),
+  .homeFinalContact :global([class*="cert"] strong),
+  .homeFinalContact :global([class*="Network"] strong),
+  .homeFinalContact :global([class*="network"] strong) {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+    text-shadow: none !important;
+  }
+
+  .homeFinalContact :global([class*="Trust"] p),
+  .homeFinalContact :global([class*="trust"] p),
+  .homeFinalContact :global([class*="Cert"] p),
+  .homeFinalContact :global([class*="cert"] p),
+  .homeFinalContact :global([class*="Network"] p),
+  .homeFinalContact :global([class*="network"] p),
+  .homeFinalContact :global([class*="Trust"] span),
+  .homeFinalContact :global([class*="trust"] span),
+  .homeFinalContact :global([class*="Cert"] span),
+  .homeFinalContact :global([class*="cert"] span),
+  .homeFinalContact :global([class*="Network"] span),
+  .homeFinalContact :global([class*="network"] span) {
+    color: rgba(255,255,255,.82) !important;
+    -webkit-text-fill-color: rgba(255,255,255,.82) !important;
+    text-shadow: none !important;
   }
 }
 
-/* END AEREO CERTIFICATIONS MAP ZOOM OUT FINAL */
+/* END AEREO CERTIFICACIONES DESKTOP LIFT ONLY */

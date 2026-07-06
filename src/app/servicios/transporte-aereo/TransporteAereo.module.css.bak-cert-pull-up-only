@@ -1129,7 +1129,7 @@
 /* Mobile real: no hero gigante, no botones flotando raro */
 @media (max-width: 900px) {
   .hero {
-    min-height: 520px !important;
+    min-height: 560px !important;
     height: auto !important;
     padding: 5.8rem 24px 3.2rem !important;
     align-items: flex-end !important;
@@ -12234,78 +12234,3 @@
 
 
 
-
-
-
-/* === AEREO CERTIFICATIONS MEDIUM DESKTOP ONLY FINAL === */
-
-/*
-  SOLO desktop mediano.
-  Este es el caso de tu computadora:
-  - no toca tablet/mobile
-  - no toca desktop grande
-  - no quita mapa/foto
-  - solo compacta y sube el contenido para que no quede perdido abajo
-*/
-
-@media (min-width: 1181px) and (max-width: 1700px) {
-  .homeFinalContact :global(section:first-of-type) {
-    padding-top: 1.6rem !important;
-    padding-bottom: 1rem !important;
-    min-height: 520px !important;
-    height: 520px !important;
-    max-height: 520px !important;
-    overflow: hidden !important;
-  }
-
-  .homeFinalContact :global(section:first-of-type > div:first-child) {
-    transform: translateY(-135px) !important;
-  }
-
-  .homeFinalContact :global(section:first-of-type h2) {
-    margin-top: 0 !important;
-    margin-bottom: 1.15rem !important;
-    font-size: clamp(2.25rem, 3vw, 3.45rem) !important;
-    line-height: .94 !important;
-  }
-
-  .homeFinalContact :global(section:first-of-type article) {
-    min-height: auto !important;
-    padding-top: 1.05rem !important;
-    padding-bottom: 1.05rem !important;
-  }
-}
-
-/* Desktop grande queda sin este ajuste */
-@media (min-width: 1701px) {
-  .homeFinalContact :global(section:first-of-type > div:first-child) {
-    transform: none !important;
-  }
-}
-
-/* END AEREO CERTIFICATIONS MEDIUM DESKTOP ONLY FINAL */
-
-/* === AEREO CERTIFICATIONS MAP ZOOM OUT FINAL === */
-
-/*
-  Aleja un poco la imagen/mapa del bloque de certificaciones.
-  No toca textos, cards ni logos.
-*/
-
-@media (min-width: 1181px) {
-  .homeFinalContact :global(section:first-of-type) {
-    background-size: 88% auto !important;
-    background-position: center 48% !important;
-    background-repeat: no-repeat !important;
-  }
-
-  .homeFinalContact :global(section:first-of-type [class*="map"]),
-  .homeFinalContact :global(section:first-of-type [class*="Map"]),
-  .homeFinalContact :global(section:first-of-type [class*="world"]),
-  .homeFinalContact :global(section:first-of-type [class*="World"]) {
-    transform: scale(.88) !important;
-    transform-origin: center center !important;
-  }
-}
-
-/* END AEREO CERTIFICATIONS MAP ZOOM OUT FINAL */

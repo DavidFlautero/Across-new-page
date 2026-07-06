@@ -12284,28 +12284,3 @@
 }
 
 /* END AEREO CERTIFICATIONS MEDIUM DESKTOP ONLY FINAL */
-
-/* === AEREO CERTIFICATIONS MAP ZOOM OUT FINAL === */
-
-/*
-  Aleja un poco la imagen/mapa del bloque de certificaciones.
-  No toca textos, cards ni logos.
-*/
-
-@media (min-width: 1181px) {
-  .homeFinalContact :global(section:first-of-type) {
-    background-size: 88% auto !important;
-    background-position: center 48% !important;
-    background-repeat: no-repeat !important;
-  }
-
-  .homeFinalContact :global(section:first-of-type [class*="map"]),
-  .homeFinalContact :global(section:first-of-type [class*="Map"]),
-  .homeFinalContact :global(section:first-of-type [class*="world"]),
-  .homeFinalContact :global(section:first-of-type [class*="World"]) {
-    transform: scale(.88) !important;
-    transform-origin: center center !important;
-  }
-}
-
-/* END AEREO CERTIFICATIONS MAP ZOOM OUT FINAL */
