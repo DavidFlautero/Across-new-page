@@ -656,8 +656,7 @@ export default function TransporteAereoPage() {
             })}
           </div>
         </section>
-
-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/contactoimagen.png')" } as CSSProperties}>
+<section className={styles.services} data-mobile-hide-after-cert="true">
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -700,6 +699,30 @@ export default function TransporteAereoPage() {
                 </article>
               );
             })}
+          </div>
+        </section>
+
+        <section className={styles.processDesktopSection} data-mobile-hide-after-cert="true">
+          <div className={styles.processDesktopHead}>
+            <span className={styles.eyebrow}>{t.processEyebrow}</span>
+            <h2>{t.processTitle}</h2>
+            <p>
+              {locale === "es"
+                ? "Ordenamos cada etapa de la operación aérea para reducir fricción, anticipar requisitos y mantener visibilidad desde origen hasta entrega."
+                : locale === "en"
+                  ? "We structure every stage of the air operation to reduce friction, anticipate requirements and maintain visibility from origin to delivery."
+                  : "我们梳理空运操作的每个阶段，以减少摩擦、提前准备要求，并保持从起点到交付的可视化。"}
+            </p>
+          </div>
+
+          <div className={styles.processDesktopGrid}>
+            {t.process.map(([title, text]: string[], index: number) => (
+              <article className={styles.processDesktopCard} key={title}>
+                <span className={styles.processDesktopNumber}>{String(index + 1).padStart(2, "0")}</span>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))}
           </div>
         </section>
 
@@ -782,15 +805,6 @@ export default function TransporteAereoPage() {
           </div>
         </section>
 <section className={styles.darkBand} data-mobile-hide-after-cert="true">
-          <div className={styles.darkBandImage}>
-            <Image
-              src="/images/cargaaerea.png"
-              alt={t.bandTitle}
-              fill
-              sizes="(max-width: 900px) 100vw, 42vw"
-            />
-          </div>
-
           <div className={styles.darkBandContent}>
             <h2>{t.bandTitle}</h2>
             <p>{t.bandText}</p>
@@ -917,17 +931,16 @@ export default function TransporteAereoPage() {
             ))}
           </div>
         </section>
+        <RelatedServices current="transporte-aereo" locale={locale} />
 
-<RelatedServices current="transporte-aereo" locale={locale} />
+        <div className={styles.aereoFinalStack}>
+          <div className={styles.homeFinalContact}>
+            <HomeCorporateFinal />
+          </div>
 
-        
-        <div className={styles.homeFinalContact}>
-          <HomeCorporateFinal />
+          <Footer />
         </div>
-<div className={styles.homeFinalContact}>
-</div>
-</main>
-
+      </main>
 
       <div className={styles.mobileStickyCta} aria-label="Acciones rápidas de transporte aéreo">
         <Link href="/cotizacion?servicio=transporte-aereo">
@@ -939,7 +952,6 @@ export default function TransporteAereoPage() {
         </Link>
       </div>
 
-      <Footer />
     </div>
   );
 }

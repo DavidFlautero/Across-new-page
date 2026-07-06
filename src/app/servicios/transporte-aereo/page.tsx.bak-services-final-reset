@@ -656,8 +656,7 @@ export default function TransporteAereoPage() {
             })}
           </div>
         </section>
-
-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/contactoimagen.png')" } as CSSProperties}>
+<section className={styles.services} data-mobile-hide-after-cert="true">
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -782,15 +781,6 @@ export default function TransporteAereoPage() {
           </div>
         </section>
 <section className={styles.darkBand} data-mobile-hide-after-cert="true">
-          <div className={styles.darkBandImage}>
-            <Image
-              src="/images/cargaaerea.png"
-              alt={t.bandTitle}
-              fill
-              sizes="(max-width: 900px) 100vw, 42vw"
-            />
-          </div>
-
           <div className={styles.darkBandContent}>
             <h2>{t.bandTitle}</h2>
             <p>{t.bandText}</p>
@@ -917,17 +907,16 @@ export default function TransporteAereoPage() {
             ))}
           </div>
         </section>
+        <RelatedServices current="transporte-aereo" locale={locale} />
 
-<RelatedServices current="transporte-aereo" locale={locale} />
+        <div className={styles.aereoFinalStack}>
+          <div className={styles.homeFinalContact}>
+            <HomeCorporateFinal />
+          </div>
 
-        
-        <div className={styles.homeFinalContact}>
-          <HomeCorporateFinal />
+          <Footer />
         </div>
-<div className={styles.homeFinalContact}>
-</div>
-</main>
-
+      </main>
 
       <div className={styles.mobileStickyCta} aria-label="Acciones rápidas de transporte aéreo">
         <Link href="/cotizacion?servicio=transporte-aereo">
@@ -939,7 +928,6 @@ export default function TransporteAereoPage() {
         </Link>
       </div>
 
-      <Footer />
     </div>
   );
 }

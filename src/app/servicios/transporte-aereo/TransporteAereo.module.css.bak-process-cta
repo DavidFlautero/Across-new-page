@@ -1279,80 +1279,6 @@
   background: #f4f1eb !important;
 }
 
-/* SERVICIOS: pasar de grilla blanca genérica a bloque oscuro premium */
-.services {
-  width: 100vw !important;
-  max-width: none !important;
-  margin: 4.8rem 50% 0 !important;
-  transform: translateX(-50%) !important;
-  padding: clamp(4rem, 6vw, 6rem) max(24px, calc((100vw - 1180px) / 2)) !important;
-  background:
-    radial-gradient(circle at 78% 18%, rgba(23, 50, 71, .14), transparent 28rem),
-    linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
-  color: #fff !important;
-}
-
-.services .sectionHead {
-  text-align: left !important;
-  margin: 0 0 2.4rem !important;
-  max-width: 740px !important;
-}
-
-.services .sectionHead h2 {
-  color: #fff !important;
-  max-width: 720px !important;
-}
-
-.services .eyebrow {
-  color: #173247 !important;
-}
-
-/* Cards de servicios oscuras, no cajitas blancas */
-.serviceGrid {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 14px !important;
-  border: 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-.serviceGrid article {
-  min-height: 190px !important;
-  padding: 1.6rem !important;
-  text-align: left !important;
-  border: 1px solid rgba(255,255,255,.10) !important;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.025)) !important;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.08) !important;
-}
-
-.serviceGrid i {
-  width: 46px !important;
-  height: 46px !important;
-  margin-bottom: 1rem !important;
-  color: #173247 !important;
-  background: rgba(23, 50, 71, .07) !important;
-  border: 1px solid rgba(23, 50, 71, .32) !important;
-}
-
-.serviceGrid i svg {
-  width: 25px !important;
-  height: 25px !important;
-}
-
-.serviceGrid h3 {
-  color: #fff !important;
-  max-width: none !important;
-  margin: 0 !important;
-  font-size: 1.05rem !important;
-}
-
-.serviceGrid p {
-  color: rgba(255,255,255,.72) !important;
-  max-width: 260px !important;
-  margin: .75rem 0 0 !important;
-}
 
 /* Casos de uso: o se deja blanco, o se vuelve más discreto */
 .useCases {
@@ -1435,80 +1361,6 @@
   background: #f4f1eb !important;
 }
 
-/* SERVICIOS: pasar de grilla blanca genérica a bloque oscuro premium */
-.services {
-  width: 100vw !important;
-  max-width: none !important;
-  margin: 4.8rem 50% 0 !important;
-  transform: translateX(-50%) !important;
-  padding: clamp(4rem, 6vw, 6rem) max(24px, calc((100vw - 1180px) / 2)) !important;
-  background:
-    radial-gradient(circle at 78% 18%, rgba(23, 50, 71, .14), transparent 28rem),
-    linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
-  color: #fff !important;
-}
-
-.services .sectionHead {
-  text-align: left !important;
-  margin: 0 0 2.4rem !important;
-  max-width: 740px !important;
-}
-
-.services .sectionHead h2 {
-  color: #fff !important;
-  max-width: 720px !important;
-}
-
-.services .eyebrow {
-  color: #173247 !important;
-}
-
-/* Cards de servicios oscuras, no cajitas blancas */
-.serviceGrid {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 14px !important;
-  border: 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-.serviceGrid article {
-  min-height: 190px !important;
-  padding: 1.6rem !important;
-  text-align: left !important;
-  border: 1px solid rgba(255,255,255,.10) !important;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.025)) !important;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.08) !important;
-}
-
-.serviceGrid i {
-  width: 46px !important;
-  height: 46px !important;
-  margin-bottom: 1rem !important;
-  color: #173247 !important;
-  background: rgba(23, 50, 71, .07) !important;
-  border: 1px solid rgba(23, 50, 71, .32) !important;
-}
-
-.serviceGrid i svg {
-  width: 25px !important;
-  height: 25px !important;
-}
-
-.serviceGrid h3 {
-  color: #fff !important;
-  max-width: none !important;
-  margin: 0 !important;
-  font-size: 1.05rem !important;
-}
-
-.serviceGrid p {
-  color: rgba(255,255,255,.72) !important;
-  max-width: 260px !important;
-  margin: .75rem 0 0 !important;
-}
 
 /* Casos de uso: o se deja blanco, o se vuelve más discreto */
 .useCases {
@@ -2746,94 +2598,6 @@
 
 /* === PREMIUM BLACK SECTIONS POLISH === */
 
-/* Servicios oscuros con más profundidad */
-.services {
-  position: relative !important;
-  background:
-    radial-gradient(circle at 18% 20%, rgba(23, 50, 71, .14), transparent 24rem),
-    radial-gradient(circle at 92% 72%, rgba(255, 255, 255, .055), transparent 26rem),
-    linear-gradient(180deg, #08090e 0%, #050609 100%) !important;
-  overflow: hidden !important;
-}
-
-.services::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  pointer-events: none !important;
-  background:
-    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(255,255,255,.025) 1px, transparent 1px) !important;
-  background-size: 72px 72px !important;
-  opacity: .18 !important;
-}
-
-.services > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-.services .sectionHead {
-  margin-bottom: 2rem !important;
-}
-
-.services .sectionHead h2 {
-  max-width: 760px !important;
-  font-size: clamp(2.3rem, 3.4vw, 4.4rem) !important;
-  line-height: .95 !important;
-}
-
-.serviceGrid {
-  gap: 16px !important;
-}
-
-.serviceGrid article {
-  position: relative !important;
-  min-height: 178px !important;
-  padding: 1.45rem 1.45rem 1.35rem !important;
-  border: 1px solid rgba(255,255,255,.12) !important;
-  background:
-    linear-gradient(145deg, rgba(255,255,255,.075), rgba(255,255,255,.026)) !important;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.09),
-    0 18px 50px rgba(0,0,0,.16) !important;
-  transition: transform .22s ease, border-color .22s ease, background .22s ease !important;
-}
-
-.serviceGrid article::after {
-  content: "→" !important;
-  position: absolute !important;
-  right: 1.25rem !important;
-  bottom: 1.05rem !important;
-  color: #173247 !important;
-  font-size: 1.1rem !important;
-  opacity: .85 !important;
-}
-
-.serviceGrid article:hover {
-  transform: translateY(-4px) !important;
-  border-color: rgba(23,50,71,.45) !important;
-  background:
-    linear-gradient(145deg, rgba(23,50,71,.12), rgba(255,255,255,.035)) !important;
-}
-
-.serviceGrid i {
-  width: 42px !important;
-  height: 42px !important;
-  margin-bottom: .9rem !important;
-}
-
-.serviceGrid h3 {
-  font-size: .98rem !important;
-  line-height: 1.15 !important;
-}
-
-.serviceGrid p {
-  max-width: 240px !important;
-  font-size: .82rem !important;
-  line-height: 1.48 !important;
-  padding-right: 1.4rem !important;
-}
 
 /* CTA oscuro final: más armado, menos vacío */
 .darkBand {
@@ -2949,109 +2713,6 @@
 }
 
 
-/* === PREMIUM IMAGE INTEGRATION: SERVICES + FINAL CTA === */
-
-/* Servicios aéreos con imagen integrada, estilo empresa internacional */
-.services {
-  position: relative !important;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5, 6, 9, .98) 0%,
-      rgba(5, 6, 9, .94) 38%,
-      rgba(5, 6, 9, .78) 62%,
-      rgba(5, 6, 9, .55) 100%
-    ),
-    radial-gradient(circle at 18% 18%, rgba(23, 50, 71, .16), transparent 24rem),
-    url("/images/cargaaerea.png") !important;
-  background-size: cover !important;
-  background-position: center 48% !important;
-  background-repeat: no-repeat !important;
-  overflow: hidden !important;
-}
-
-.services::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  pointer-events: none !important;
-  background:
-    linear-gradient(180deg, rgba(0,0,0,.16), rgba(0,0,0,.58)),
-    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(255,255,255,.022) 1px, transparent 1px) !important;
-  background-size: auto, 80px 80px, 80px 80px !important;
-  opacity: .72 !important;
-}
-
-.services::after {
-  content: "" !important;
-  position: absolute !important;
-  inset: auto 0 0 0 !important;
-  height: 120px !important;
-  pointer-events: none !important;
-  background: linear-gradient(180deg, transparent, #050609) !important;
-  opacity: .72 !important;
-}
-
-.services > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-.services .sectionHead {
-  max-width: 780px !important;
-  margin-bottom: 2.2rem !important;
-}
-
-.services .sectionHead h2 {
-  color: #fff !important;
-  text-shadow: 0 18px 48px rgba(0,0,0,.42) !important;
-}
-
-/* Cards más premium sobre imagen */
-.serviceGrid {
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 16px !important;
-  max-width: 980px !important;
-}
-
-.serviceGrid article {
-  min-height: 165px !important;
-  padding: 1.35rem 1.4rem !important;
-  border: 1px solid rgba(255,255,255,.13) !important;
-  background:
-    linear-gradient(145deg, rgba(10, 12, 18, .78), rgba(10, 12, 18, .48)) !important;
-  backdrop-filter: blur(10px) saturate(1.08) !important;
-  -webkit-backdrop-filter: blur(10px) saturate(1.08) !important;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.08),
-    0 24px 70px rgba(0,0,0,.26) !important;
-}
-
-.serviceGrid article:hover {
-  transform: translateY(-4px) !important;
-  border-color: rgba(23,50,71,.55) !important;
-  background:
-    linear-gradient(145deg, rgba(23,50,71,.16), rgba(10, 12, 18, .58)) !important;
-}
-
-.serviceGrid i {
-  width: 40px !important;
-  height: 40px !important;
-  background: rgba(23, 50, 71, .10) !important;
-  border-color: rgba(23, 50, 71, .42) !important;
-}
-
-.serviceGrid h3 {
-  color: #fff !important;
-  font-size: .98rem !important;
-}
-
-.serviceGrid p {
-  color: rgba(255,255,255,.74) !important;
-  font-size: .8rem !important;
-  line-height: 1.45 !important;
-}
 
 /* CTA final con imagen lateral integrada, no segundo hero */
 .darkBand {
@@ -8865,97 +8526,7 @@
 
 /* END ACROSS COMMAND BAR EXPORTS */
 
-/* ZZZ AEREO SERVICES LITERAL DARKBAND AUTOMOCION FINAL
-   Copia LITERAL del darkBand de Automoción.
-*/
-.page .services {
-  position: relative !important;
-  isolation: isolate !important;
-  background-color: rgba(0, 0, 0, 0) !important;
-  background-image: url("/images/sectores/automocion2.png") !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-blend-mode: normal !important;
-}
 
-.page .services::before {
-  content: "" !important;
-  opacity: 0 !important;
-  background: none !important;
-  background-image: none !important;
-}
-
-.page .services::after {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: 0 !important;
-  pointer-events: none !important;
-  opacity: 1 !important;
-  background:
-    radial-gradient(
-      circle at 82% 18%,
-      rgba(18, 63, 89, .42) 0%,
-      rgba(3, 10, 18, .20) 60%,
-      rgba(3, 10, 18, .45) 100%
-    ) !important;
-}
-
-.page .services > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-/* END ZZZ AEREO SERVICES LITERAL DARKBAND AUTOMOCION FINAL */
-
-/* ZZZ AEREO SERVICES SAME AS AUTOMOCION DARKBAND FINAL
-   Copia el sombreado/degradado de darkBand Automoción.
-   No copia la imagen de Automoción; conserva la imagen de fondo de Aéreo.
-*/
-.page .services {
-  position: relative !important;
-  isolation: isolate !important;
-  background-color: rgba(0, 0, 0, 0) !important;
-  background-blend-mode: normal !important;
-}
-
-.page .services::before {
-  content: "" !important;
-  opacity: 0 !important;
-  background: none !important;
-  background-image: none !important;
-}
-
-.page .services::after {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  pointer-events: none !important;
-  z-index: 0 !important;
-  opacity: 1 !important;
-  background:
-    radial-gradient(
-      circle at 82% 18%,
-      rgba(18, 63, 89, .42) 0%,
-      rgba(3, 10, 18, .20) 60%,
-      rgba(3, 10, 18, .45) 100%
-    ) !important;
-}
-
-.page .services > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-.page .services article,
-.page .services [class*="card"],
-.page .services [class*="Card"] {
-  background:
-    linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.018)) !important;
-  border: 1px solid rgba(244, 239, 229, .16) !important;
-  box-shadow: 0 14px 34px rgba(0,0,0,.18) !important;
-}
-/* END ZZZ AEREO SERVICES SAME AS AUTOMOCION DARKBAND FINAL */
 
 /* ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED
    Tablet / iPad chico:
@@ -9198,39 +8769,6 @@
 }
 /* END ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL */
 
-/* ZZZ SERVICIOS SERVICES USE OWN MOBILE BG FINAL
-   Cada .services usa su propia imagen del page.tsx:
-   style={ "--mobile-bg": "url(...)" }
-   No mezcla con finalCta.
-*/
-.page .services {
-  position: relative !important;
-  isolation: isolate !important;
-  overflow: hidden !important;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(3, 18, 30, .46) 0%,
-      rgba(5, 18, 31, .30) 48%,
-      rgba(8, 32, 48, .18) 100%
-    ),
-    radial-gradient(circle at 78% 18%, rgba(15,111,150,.14), transparent 38%),
-    linear-gradient(
-      180deg,
-      rgba(244,239,229,.025) 0%,
-      rgba(3,10,18,.20) 100%
-    ),
-    var(--mobile-bg) center center / cover no-repeat !important;
-
-  background-color: #0d2838 !important;
-}
-
-.page .services > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-/* END ZZZ SERVICIOS SERVICES USE OWN MOBILE BG FINAL */
 
 /* ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL
    DarkBand restaurado correctamente:
@@ -9398,27 +8936,6 @@
 }
 /* END ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL */
 
-/* ZZZ AEREO SERVICES SEAM ONLY FINAL
-   Tapa la línea/seam superior del bloque services sin cambiar imagen.
-*/
-.page .services {
-  margin-top: -6px !important;
-  padding-top: calc(76.8px + 6px) !important;
-  border-top: 0 !important;
-  outline: 0 !important;
-  background-position:
-    center center,
-    center center,
-    center center,
-    center -6px !important;
-}
-
-.page .services::before,
-.page .services::after {
-  top: -6px !important;
-  height: calc(100% + 6px) !important;
-}
-/* END ZZZ AEREO SERVICES SEAM ONLY FINAL */
 
 /* ZZZ AEREO MOBILE HERO TITLE DOWN FINAL
    Baja un poco el título del hero en mobile.
@@ -11585,384 +11102,710 @@
 
 /* END AEREO MOBILE TITLES FULL WIDTH CLEAN */
 
-/* === AEREO FINAL MOBILE DENSITY AND FOOTER === */
+
+
+
+
+
+
+
+
+
+
+
+
+/* === AEREO FINAL CLEAN SINGLE SOURCE 2 === */
+
+.aereoFinalStack {
+  background: #07101a;
+}
 
 @media (max-width: 1180px) {
   /*
-    Pase final mobile/tablet:
-    - compacta espacios entre secciones
-    - baja padding del HomeCorporateFinal
-    - pega contacto con footer
-    - no toca hero
+    Única fuente de verdad para el final:
+    HomeCorporateFinal + Footer dentro del mismo wrapper oscuro.
   */
 
-  .overview,
-  .certifications,
-  .processAccordionSection,
-  .faqSection,
-  .related,
-  .services,
-  .useCases {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-  }
-
-  .overview {
-    padding-top: 1.9rem !important;
-    padding-bottom: 2rem !important;
-  }
-
-  .certifications {
-    padding-top: .9rem !important;
-    padding-bottom: .9rem !important;
-  }
-
-  .processAccordionSection {
-    padding-top: 2rem !important;
-    padding-bottom: 2.1rem !important;
-  }
-
-  .faqSection {
-    padding-top: 2rem !important;
-    padding-bottom: 2.2rem !important;
-  }
-
-  .related,
-  .services,
-  .useCases {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
-  }
-
-  .sectionHead,
-  .processAccordionHead,
-  .faqHead {
-    margin-top: 0 !important;
-    margin-bottom: 1.15rem !important;
-  }
-
-  .sectionHead h2,
-  .processAccordionHead h2,
-  .faqHead h2 {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-  }
-
-  .sectionHead p,
-  .faqHead p {
-    margin-top: .8rem !important;
-  }
-
-  /*
-    Servicios relacionados viene de componente externo.
-  */
-  .page :global([class*="RelatedServices"]),
-  .page :global([class*="relatedServices"]),
-  .page :global([class*="Related_services"]),
-  .page :global([class*="related"]) {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
-  }
-
-  .page :global([class*="RelatedServices"]) :global([class*="head"]),
-  .page :global([class*="relatedServices"]) :global([class*="head"]),
-  .page :global([class*="Related"]) :global([class*="Head"]) {
-    margin-bottom: 1.1rem !important;
-  }
-
-  /*
-    HomeCorporateFinal compacto.
-  */
-  .homeFinalContact {
+  .aereoFinalStack {
     margin: 0 !important;
     padding: 0 !important;
     background: #07101a !important;
     overflow: hidden !important;
   }
 
-  .homeFinalContact :global([class*="integrated"]),
-  .homeFinalContact :global([class*="global"]),
-  .homeFinalContact :global([class*="homeOffices"]) {
-    min-height: 0 !important;
-    height: auto !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    padding-top: 1.65rem !important;
-    padding-bottom: 1.65rem !important;
-  }
-
-  .homeFinalContact :global([class*="integratedInner"]),
-  .homeFinalContact :global([class*="globalContent"]),
-  .homeFinalContact :global([class*="homeOfficesInner"]) {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    gap: 1rem !important;
-  }
-
-  .homeFinalContact :global([class*="globalCards"]),
-  .homeFinalContact :global([class*="homeOfficesGrid"]),
-  .homeFinalContact :global([class*="officeGrid"]) {
-    margin-top: 1rem !important;
-    gap: .75rem !important;
-  }
-
-  .homeFinalContact :global([class*="globalCards"]) > *,
-  .homeFinalContact :global([class*="homeOfficesGrid"]) > *,
-  .homeFinalContact :global([class*="officeGrid"]) > * {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
+  .aereoFinalStack .homeFinalContact {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #07101a !important;
+    overflow: hidden !important;
   }
 
   /*
-    Oculta la sección repetida de servicios de HomeCorporateFinal.
+    Oculta solo la sección repetida de servicios del HomeCorporateFinal,
+    no toca el footer.
   */
-  .homeFinalContact :global([class*="services"]) {
+  .aereoFinalStack .homeFinalContact :global([class*="services"]) {
     display: none !important;
   }
 
-  /*
-    Certificaciones / logos internos compactos.
-  */
-  .homeFinalContact :global([class*="certification"]),
-  .homeFinalContact :global([class*="certifications"]),
-  .homeFinalContact :global([class*="logos"]),
-  .homeFinalContact :global([class*="Logos"]) {
-    min-height: 0 !important;
-    margin-top: 0 !important;
+  .aereoFinalStack .homeFinalContact :global([class*="homeFinalCta"]) {
     margin-bottom: 0 !important;
-    padding-top: .6rem !important;
-    padding-bottom: .6rem !important;
   }
 
-  /*
-    CTA final compacto.
-  */
-  .homeFinalContact :global([class*="homeFinalCta"]) {
-    min-height: 280px !important;
-    height: auto !important;
-    margin: 0 !important;
-    padding-top: 2rem !important;
-    padding-bottom: 1.7rem !important;
-    display: flex !important;
-    align-items: center !important;
+  .aereoFinalStack :global(footer),
+  .aereoFinalStack :global([class*="Footer_footer"]),
+  .aereoFinalStack :global([class*="footer"]) {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    border-top: 0 !important;
     background: #07101a !important;
   }
+}
 
-  .homeFinalContact :global([class*="homeFinalCtaInner"]) {
-    width: min(100% - 44px, 390px) !important;
-    margin: 0 auto !important;
+@media (max-width: 900px) {
+  /*
+    Antes .page tenía padding-bottom crema para el sticky.
+    Eso era la franja clara debajo del footer.
+  */
+  .page {
+    padding-bottom: 0 !important;
+  }
+
+  /*
+    El espacio para que el sticky no tape contenido ahora lo pone
+    el wrapper oscuro del footer.
+  */
+  .aereoFinalStack {
+    padding-bottom: calc(86px + env(safe-area-inset-bottom)) !important;
+  }
+
+  .mobileStickyCta {
+    background: #07101a !important;
+    border-top: 1px solid rgba(255,255,255,.08) !important;
+  }
+}
+
+/* END AEREO FINAL CLEAN SINGLE SOURCE 2 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === AEREO SERVICES WIDTH ICONS PAGE MATCH FINAL === */
+
+@media (min-width: 1181px) {
+  /*
+    Services debe respetar el mismo ancho visual de la página:
+    1180px, no 1360px.
+  */
+
+  .page .services {
+    position: relative !important;
+    isolation: isolate !important;
+
+    width: min(1180px, calc(100% - 40px)) !important;
+    max-width: 1180px !important;
+    margin: 4.8rem auto 5.2rem !important;
     padding: 0 !important;
+    transform: none !important;
+
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    color: #07101a !important;
+
+    overflow: visible !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .page .services::before {
+    content: none !important;
+    display: none !important;
+  }
+
+  .page .services::after {
+    content: "" !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: -1.1rem !important;
+    width: 150px !important;
+    height: 100px !important;
+    opacity: .18 !important;
+    background-image: radial-gradient(rgba(23, 50, 71, .34) 1px, transparent 1px) !important;
+    background-size: 12px 12px !important;
+    pointer-events: none !important;
+  }
+
+  .page .services,
+  .page .services * {
+    font-family: inherit !important;
+    text-shadow: none !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+  }
+
+  .page .services > * {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  .page .services .sectionHead {
+    position: relative !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 0 2rem !important;
+    padding: 0 !important;
+
+    display: grid !important;
+    grid-template-columns: minmax(0, 620px) minmax(330px, 420px) !important;
+    justify-content: space-between !important;
+    column-gap: 4rem !important;
+    align-items: end !important;
+    text-align: left !important;
+  }
+
+  .page .services .sectionHead::before {
+    content: "" !important;
+    position: absolute !important;
+    left: -18px !important;
+    top: -14px !important;
+    width: 30px !important;
+    height: 68px !important;
+    border-left: 1px solid rgba(214, 179, 107, .72) !important;
+    border-top: 1px solid rgba(214, 179, 107, .72) !important;
+    border-bottom: 1px solid rgba(214, 179, 107, .28) !important;
+    border-radius: 10px 0 0 10px !important;
+    pointer-events: none !important;
+  }
+
+  .page .services .sectionHead::after {
+    content: "Diseñamos soluciones a medida para que tu carga llegue más rápido, segura y donde la necesites." !important;
+
+    display: block !important;
+    max-width: 420px !important;
+    padding-bottom: .52rem !important;
+
+    color: rgba(7, 17, 29, .78) !important;
+    -webkit-text-fill-color: rgba(7, 17, 29, .78) !important;
+    font-size: .95rem !important;
+    line-height: 1.55 !important;
+    font-weight: 650 !important;
+    letter-spacing: 0 !important;
+
+    border-bottom: 2px solid rgba(214, 179, 107, .78) !important;
+  }
+
+  .page .services .eyebrow {
+    display: inline-flex !important;
+    margin: 0 0 .7rem !important;
+
+    color: #b99545 !important;
+    -webkit-text-fill-color: #b99545 !important;
+    font-size: .72rem !important;
+    font-weight: 950 !important;
+    line-height: 1 !important;
+    letter-spacing: .17em !important;
+    text-transform: uppercase !important;
+  }
+
+  .page .services .sectionHead h2 {
+    max-width: 620px !important;
+    margin: 0 !important;
+
+    color: #07101a !important;
+    -webkit-text-fill-color: #07101a !important;
+    font-size: clamp(2.55rem, 3.15vw, 3.7rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.055em !important;
+    font-weight: 950 !important;
+    text-align: left !important;
+  }
+
+  .page .services .serviceGrid {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 1rem !important;
+
+    border: 0 !important;
+    background: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+
+  .page .services .serviceGrid article {
+    position: relative !important;
+    min-height: 188px !important;
+    padding: 1.35rem 1.1rem 1.35rem !important;
+    text-align: left !important;
+
+    border-radius: 18px !important;
+    border: 1px solid rgba(23, 50, 71, .12) !important;
+
+    background:
+      radial-gradient(circle at 88% 12%, rgba(214,179,107,.10), transparent 7rem),
+      linear-gradient(180deg, rgba(255,255,255,.96) 0%, rgba(248,245,239,.94) 100%) !important;
+
+    box-shadow:
+      0 20px 52px rgba(7, 17, 29, .07),
+      inset 0 1px 0 rgba(255,255,255,.9) !important;
+
+    overflow: hidden !important;
+  }
+
+  .page .services .serviceGrid article::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 4px !important;
+    background: linear-gradient(180deg, #173247 0%, #d6b36b 100%) !important;
+  }
+
+  .page .services .serviceGrid article::after {
+    content: "→" !important;
+    position: absolute !important;
+    right: 1rem !important;
+    bottom: .9rem !important;
+
+    color: #b99545 !important;
+    -webkit-text-fill-color: #b99545 !important;
+    font-size: 1rem !important;
+    font-weight: 950 !important;
+    text-shadow: none !important;
+  }
+
+  /*
+    Íconos iguales al sistema de arriba:
+    48x48, azul corporativo, borde circular.
+  */
+  .page .services .serviceGrid i {
+    display: inline-grid !important;
+    place-items: center !important;
+
+    width: 48px !important;
+    height: 48px !important;
+    margin: 0 0 1.1rem !important;
+
+    color: #173247 !important;
+    background: rgba(23, 50, 71, .035) !important;
+    border: 1px solid rgba(23, 50, 71, .5) !important;
+    border-radius: 999px !important;
+
+    font-style: normal !important;
+    font-size: 1.3rem !important;
+    font-weight: 900 !important;
+
+    box-shadow: none !important;
+  }
+
+  .page .services .serviceGrid i svg {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    stroke: currentColor !important;
+  }
+
+  .page .services .serviceGrid h3 {
+    max-width: 170px !important;
+    margin: 0 !important;
+
+    color: #07101a !important;
+    -webkit-text-fill-color: #07101a !important;
+    font-size: .95rem !important;
+    line-height: 1.14 !important;
+    letter-spacing: -.025em !important;
+    font-weight: 950 !important;
+    text-align: left !important;
+  }
+
+  .page .services .serviceGrid p {
+    max-width: 170px !important;
+    margin: .68rem 0 0 !important;
+
+    color: rgba(7, 17, 29, .68) !important;
+    -webkit-text-fill-color: rgba(7, 17, 29, .68) !important;
+    font-size: .8rem !important;
+    line-height: 1.5 !important;
+    font-weight: 520 !important;
+    text-align: left !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1180px) {
+  .page .services {
+    width: min(980px, calc(100% - 56px)) !important;
+    max-width: 980px !important;
+    margin: 4.4rem auto 4.8rem !important;
+    padding: 0 !important;
+    transform: none !important;
+    background: transparent !important;
+    background-image: none !important;
+  }
+
+  .page .services::before,
+  .page .services::after,
+  .page .services .sectionHead::before,
+  .page .services .sectionHead::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .page .services .sectionHead {
+    display: block !important;
+    max-width: 760px !important;
+    margin: 0 0 2rem !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+
+  .page .services .sectionHead h2 {
+    max-width: 680px !important;
+    color: #07101a !important;
+    -webkit-text-fill-color: #07101a !important;
+    font-size: clamp(2.45rem, 4.4vw, 3.7rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.055em !important;
+    text-shadow: none !important;
+  }
+
+  .page .services .serviceGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1rem !important;
+  }
+}
+
+/* END AEREO SERVICES WIDTH ICONS PAGE MATCH FINAL */
+
+/* === AEREO SERVICES TITLE LEFT STATIC CARDS FINAL === */
+
+@media (min-width: 1181px) {
+  /* Header: título izquierda, texto derecha */
+  .page .services .sectionHead {
+    display: grid !important;
+    grid-template-columns: minmax(0, 620px) minmax(320px, 420px) !important;
+    grid-template-rows: auto auto !important;
+    justify-content: space-between !important;
+    align-items: end !important;
+    column-gap: 4rem !important;
+    text-align: left !important;
+  }
+
+  .page .services .sectionHead .eyebrow {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+  }
+
+  .page .services .sectionHead h2 {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    max-width: 620px !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+
+  .page .services .sectionHead::after {
+    grid-column: 2 !important;
+    grid-row: 1 / 3 !important;
+    align-self: end !important;
+    justify-self: end !important;
+    max-width: 420px !important;
+  }
+
+  /* Cards: no parecen botones ni enlaces */
+  .page .services .serviceGrid article {
+    cursor: default !important;
+  }
+
+  .page .services .serviceGrid article::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .page .services .serviceGrid article:hover {
     transform: none !important;
   }
 
-  .homeFinalContact :global([class*="homeFinalCta"]) h2 {
-    margin: 0 !important;
-    font-size: clamp(1.7rem, 7.2vw, 2.25rem) !important;
-    line-height: .94 !important;
+  /* Íconos iguales al sistema de arriba, sin exagerar */
+  .page .services .serviceGrid i {
+    width: 48px !important;
+    height: 48px !important;
+    color: #173247 !important;
+    background: rgba(23, 50, 71, .035) !important;
+    border: 1px solid rgba(23, 50, 71, .5) !important;
+    box-shadow: none !important;
   }
 
-  .homeFinalContact :global([class*="homeFinalCta"]) p {
-    margin-top: .75rem !important;
-    font-size: .8rem !important;
-    line-height: 1.42 !important;
+  .page .services .serviceGrid i svg {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+/* END AEREO SERVICES TITLE LEFT STATIC CARDS FINAL */
+
+
+
+
+
+/* === AEREO PROCESS CLEAN RESET ONLY === */
+
+.processDesktopSection {
+  display: none !important;
+}
+
+@media (min-width: 901px) {
+  .page .processAccordionSection {
+    display: block !important;
+    width: min(1180px, calc(100% - 40px)) !important;
+    max-width: 1180px !important;
+    margin: 5.2rem auto !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    overflow: visible !important;
   }
 
-  .homeFinalContact :global([class*="homeFinalCta"]) a {
-    margin-top: 1.25rem !important;
-    min-height: 42px !important;
+  .page .processAccordionSection::before,
+  .page .processAccordionSection::after {
+    content: none !important;
+    display: none !important;
   }
 
-  /*
-    Footer pegado.
-    El margen negativo tapa la franja crema que aparece entre main y footer.
-  */
-  .page :global(footer),
-  .page :global([class*="Footer_footer"]) {
-    margin-top: -54px !important;
-    padding-top: 0 !important;
-    border-top: 0 !important;
-    background: #07101a !important;
+  .page .processAccordionHead {
+    max-width: 780px !important;
+    margin: 0 0 2.2rem !important;
+    text-align: left !important;
+  }
+
+  .page .processAccordionHead h2 {
+    color: #07101a !important;
+    -webkit-text-fill-color: #07101a !important;
+    text-shadow: none !important;
+  }
+
+  .page .processAccordionList {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1rem !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+
+  .page .processAccordionCard {
+    border: 1px solid rgba(23,50,71,.12) !important;
+    border-radius: 22px !important;
+    background: rgba(255,255,255,.88) !important;
+    box-shadow: 0 18px 52px rgba(7,17,29,.06) !important;
+    overflow: hidden !important;
+  }
+
+  .page .processAccordionSummary {
+    border: 0 !important;
+    background: transparent !important;
+  }
+
+  .page .processAccordionCard[open] {
+    background: rgba(255,255,255,.94) !important;
+    border-color: rgba(214,179,107,.42) !important;
+  }
+
+  .page .processAccordionCard[open] .processAccordionTitle strong,
+  .page .processAccordionTitle strong {
+    color: #07101a !important;
+    -webkit-text-fill-color: #07101a !important;
+    text-shadow: none !important;
+  }
+
+  .page .processAccordionCard[open] .processAccordionTitle small,
+  .page .processAccordionTitle small,
+  .page .processAccordionBody p {
+    color: rgba(7,17,29,.68) !important;
+    -webkit-text-fill-color: rgba(7,17,29,.68) !important;
+    text-shadow: none !important;
+  }
+
+  .page .processAccordionBody a {
+    color: #173247 !important;
+    -webkit-text-fill-color: #173247 !important;
+  }
+}
+
+/* END AEREO PROCESS CLEAN RESET ONLY */
+
+/* === AEREO PROCESS ACCORDION CLEAN PREMIUM FINAL === */
+
+@media (min-width: 901px) {
+  .page .processAccordionSection {
+    width: min(1180px, calc(100% - 40px)) !important;
+    max-width: 1180px !important;
+    margin: 5.8rem auto 5.8rem !important;
+    padding: 0 !important;
+    background: transparent !important;
+    background-image: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  .page .processAccordionHead {
+    max-width: 760px !important;
+    margin: 0 0 2rem !important;
+    text-align: left !important;
+  }
+
+  .page .processAccordionHead h2 {
+    max-width: 760px !important;
+    color: #07101a !important;
+    -webkit-text-fill-color: #07101a !important;
+    text-shadow: none !important;
+    font-size: clamp(2.35rem, 3.15vw, 3.65rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.055em !important;
+  }
+
+  .page .processAccordionList {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1rem !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+
+  .page .processAccordionCard {
     position: relative !important;
-    z-index: 8 !important;
-  }
-}
-
-@media (max-width: 430px) {
-  .overview {
-    padding-top: 1.65rem !important;
-    padding-bottom: 1.75rem !important;
-  }
-
-  .processAccordionSection {
-    padding-top: 1.75rem !important;
-    padding-bottom: 1.9rem !important;
-  }
-
-  .faqSection {
-    padding-top: 1.8rem !important;
-    padding-bottom: 2rem !important;
-  }
-
-  .related,
-  .services,
-  .useCases {
-    padding-top: 1.8rem !important;
-    padding-bottom: 1.85rem !important;
-  }
-
-  .homeFinalContact :global([class*="integrated"]),
-  .homeFinalContact :global([class*="global"]),
-  .homeFinalContact :global([class*="homeOffices"]) {
-    padding-top: 1.35rem !important;
-    padding-bottom: 1.35rem !important;
-  }
-
-  .homeFinalContact :global([class*="homeFinalCta"]) {
-    min-height: 260px !important;
-    padding-top: 1.75rem !important;
-    padding-bottom: 1.4rem !important;
-  }
-
-  .page :global(footer),
-  .page :global([class*="Footer_footer"]) {
-    margin-top: -48px !important;
-  }
-}
-
-/* END AEREO FINAL MOBILE DENSITY AND FOOTER */
-
-/* === AEREO FINAL STACK CONTACT FOOTER TRUE FIX === */
-
-@media (max-width: 1180px) {
-  .aereoFinalStack {
-    margin: 0 !important;
-    padding: 0 !important;
-    background: #07101a !important;
+    min-height: 150px !important;
+    border-radius: 20px !important;
+    border: 1px solid rgba(23, 50, 71, .12) !important;
+    background:
+      radial-gradient(circle at 90% 10%, rgba(214,179,107,.10), transparent 7rem),
+      linear-gradient(180deg, rgba(255,255,255,.96), rgba(248,245,239,.95)) !important;
+    box-shadow: 0 18px 52px rgba(7,17,29,.06) !important;
     overflow: hidden !important;
   }
 
-  .aereoFinalStack .homeFinalContact {
+  .page .processAccordionCard::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 4px !important;
+    background: linear-gradient(180deg, #173247, #d6b36b) !important;
+  }
+
+  .page .processAccordionSummary {
+    min-height: 150px !important;
+    padding: 1.25rem 1.15rem 1.2rem 1.35rem !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 2rem !important;
+    gap: 1rem !important;
+    align-items: center !important;
+    background: transparent !important;
+    border: 0 !important;
+    outline: none !important;
+    cursor: pointer !important;
+  }
+
+  .page .processAccordionSummary:focus,
+  .page .processAccordionSummary:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  .page .processAccordionNumber {
+    display: none !important;
+  }
+
+  .page .processAccordionTitle strong {
+    max-width: 250px !important;
+    color: #07101a !important;
+    -webkit-text-fill-color: #07101a !important;
+    font-size: 1rem !important;
+    line-height: 1.12 !important;
+    letter-spacing: -.025em !important;
+    font-weight: 950 !important;
+    text-align: left !important;
+    text-shadow: none !important;
+  }
+
+  .page .processAccordionTitle small {
+    max-width: 255px !important;
+    margin-top: .48rem !important;
+    color: rgba(7,17,29,.66) !important;
+    -webkit-text-fill-color: rgba(7,17,29,.66) !important;
+    font-size: .84rem !important;
+    line-height: 1.5 !important;
+    font-weight: 520 !important;
+    text-align: left !important;
+    text-shadow: none !important;
+  }
+
+  .page .processAccordionIcon {
+    width: 1.85rem !important;
+    height: 1.85rem !important;
+    border-radius: 999px !important;
+    border: 1px solid rgba(23,50,71,.22) !important;
+    background: rgba(255,255,255,.72) !important;
+    box-shadow: none !important;
+  }
+
+  .page .processAccordionIcon::before,
+  .page .processAccordionIcon::after {
+    background: #173247 !important;
+  }
+
+  .page .processAccordionCard[open] {
+    border-color: rgba(214,179,107,.46) !important;
+    background:
+      radial-gradient(circle at 90% 10%, rgba(214,179,107,.15), transparent 7rem),
+      linear-gradient(180deg, #ffffff, #f8f5ef) !important;
+  }
+
+  .page .processAccordionCard[open] .processAccordionSummary {
+    min-height: 116px !important;
+    border-bottom: 1px solid rgba(23,50,71,.10) !important;
+  }
+
+  .page .processAccordionBody {
+    padding: 1rem 1.25rem 1.25rem 1.35rem !important;
     margin: 0 !important;
-    padding: 0 !important;
-    background: #07101a !important;
   }
 
-  .aereoFinalStack :global([class*="homeFinalCta"]) {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-    background: #07101a !important;
+  .page .processAccordionBody p {
+    max-width: 290px !important;
+    margin: 0 !important;
+    color: rgba(7,17,29,.68) !important;
+    -webkit-text-fill-color: rgba(7,17,29,.68) !important;
+    font-size: .84rem !important;
+    line-height: 1.52 !important;
+    font-weight: 520 !important;
+    text-shadow: none !important;
   }
 
-  .aereoFinalStack :global([class*="homeFinalCtaInner"]) {
-    margin-bottom: 0 !important;
-    padding-bottom: 2rem !important;
-  }
-
-  .aereoFinalStack :global(footer),
-  .aereoFinalStack :global([class*="Footer_footer"]),
-  .aereoFinalStack :global([class*="footer"]) {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    border-top: 0 !important;
-    background: #07101a !important;
-  }
-
-  .aereoFinalStack :global(footer > *),
-  .aereoFinalStack :global([class*="Footer_footer"] > *) {
-    margin-top: 0 !important;
+  .page .processAccordionBody a {
+    display: none !important;
   }
 }
 
-/* END AEREO FINAL STACK CONTACT FOOTER TRUE FIX */
-
-/* === AEREO FINAL STACK CONTACT FOOTER TRUE FIX === */
-
-@media (max-width: 1180px) {
-  .aereoFinalStack {
-    margin: 0 !important;
-    padding: 0 !important;
-    background: #07101a !important;
-    overflow: hidden !important;
-  }
-
-  .aereoFinalStack .homeFinalContact {
-    margin: 0 !important;
-    padding: 0 !important;
-    background: #07101a !important;
-  }
-
-  .aereoFinalStack :global([class*="homeFinalCta"]) {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-    background: #07101a !important;
-  }
-
-  .aereoFinalStack :global([class*="homeFinalCtaInner"]) {
-    margin-bottom: 0 !important;
-    padding-bottom: 2rem !important;
-  }
-
-  .aereoFinalStack :global(footer),
-  .aereoFinalStack :global([class*="Footer_footer"]),
-  .aereoFinalStack :global([class*="footer"]) {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    border-top: 0 !important;
-    background: #07101a !important;
-  }
-
-  .aereoFinalStack :global(footer > *),
-  .aereoFinalStack :global([class*="Footer_footer"] > *) {
-    margin-top: 0 !important;
-  }
-}
-
-/* END AEREO FINAL STACK CONTACT FOOTER TRUE FIX */
-
-/* === AEREO FINAL STACK CONTACT FOOTER TRUE FIX === */
-
-@media (max-width: 1180px) {
-  .aereoFinalStack {
-    margin: 0 !important;
-    padding: 0 !important;
-    background: #07101a !important;
-    overflow: hidden !important;
-  }
-
-  .aereoFinalStack .homeFinalContact {
-    margin: 0 !important;
-    padding: 0 !important;
-    background: #07101a !important;
-  }
-
-  .aereoFinalStack :global([class*="homeFinalCta"]) {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-    background: #07101a !important;
-  }
-
-  .aereoFinalStack :global([class*="homeFinalCtaInner"]) {
-    margin-bottom: 0 !important;
-    padding-bottom: 2rem !important;
-  }
-
-  .aereoFinalStack :global(footer),
-  .aereoFinalStack :global([class*="Footer_footer"]),
-  .aereoFinalStack :global([class*="footer"]) {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    border-top: 0 !important;
-    background: #07101a !important;
-  }
-
-  .aereoFinalStack :global(footer > *),
-  .aereoFinalStack :global([class*="Footer_footer"] > *) {
-    margin-top: 0 !important;
-  }
-}
-
-/* END AEREO FINAL STACK CONTACT FOOTER TRUE FIX */
+/* END AEREO PROCESS ACCORDION CLEAN PREMIUM FINAL */

@@ -656,8 +656,7 @@ export default function TransporteAereoPage() {
             })}
           </div>
         </section>
-
-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/contactoimagen.png')" } as CSSProperties}>
+<section className={styles.services} data-mobile-hide-after-cert="true">
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -778,19 +777,39 @@ export default function TransporteAereoPage() {
                   </Link>
                 </div>
               </details>
-            ))}
-          </div>
-        </section>
-<section className={styles.darkBand} data-mobile-hide-after-cert="true">
-          <div className={styles.darkBandImage}>
-            <Image
-              src="/images/cargaaerea.png"
-              alt={t.bandTitle}
-              fill
-              sizes="(max-width: 900px) 100vw, 42vw"
-            />
+            ))}          </div>
+
+          <div className={styles.processAccordionActions}>
+            <div>
+              <strong>
+                {locale === "es"
+                  ? "¿Tenés una operación aérea en curso?"
+                  : locale === "en"
+                    ? "Do you have an air operation in progress?"
+                    : "您是否有正在进行的空运操作？"}
+              </strong>
+              <p>
+                {locale === "es"
+                  ? "Coordinamos ruta, documentación y seguimiento para que tu carga avance sin fricción."
+                  : locale === "en"
+                    ? "We coordinate routing, documentation and tracking so your cargo moves without friction."
+                    : "我们协调路线、文件和跟踪，确保您的货物顺利推进。"}
+              </p>
+            </div>
+
+            <div>
+              <Link href="/cotizacion?servicio=transporte-aereo">
+                {locale === "es" ? "Solicitar cotización aérea" : locale === "en" ? "Request air quote" : "申请空运报价"}
+              </Link>
+
+              <Link href="/contacto?servicio=transporte-aereo">
+                {locale === "es" ? "Hablar con asesor" : locale === "en" ? "Talk to an advisor" : "联系顾问"}
+              </Link>
+            </div>
           </div>
 
+        </section>
+<section className={styles.darkBand} data-mobile-hide-after-cert="true">
           <div className={styles.darkBandContent}>
             <h2>{t.bandTitle}</h2>
             <p>{t.bandText}</p>

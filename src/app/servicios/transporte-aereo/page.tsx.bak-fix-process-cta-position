@@ -656,8 +656,7 @@ export default function TransporteAereoPage() {
             })}
           </div>
         </section>
-
-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/contactoimagen.png')" } as CSSProperties}>
+<section className={styles.services} data-mobile-hide-after-cert="true">
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -779,18 +778,37 @@ export default function TransporteAereoPage() {
                 </div>
               </details>
             ))}
+          <div className={styles.processAccordionActions}>
+            <div>
+              <strong>
+                {locale === "es"
+                  ? "¿Tenés una operación aérea en curso?"
+                  : locale === "en"
+                    ? "Do you have an air operation in progress?"
+                    : "您是否有正在进行的空运操作？"}
+              </strong>
+              <p>
+                {locale === "es"
+                  ? "Coordinamos ruta, documentación y seguimiento para que tu carga avance sin fricción."
+                  : locale === "en"
+                    ? "We coordinate routing, documentation and tracking so your cargo moves without friction."
+                    : "我们协调路线、文件和跟踪，确保您的货物顺利推进。"}
+              </p>
+            </div>
+
+            <div>
+              <Link href="/cotizacion?servicio=transporte-aereo">
+                {locale === "es" ? "Solicitar cotización aérea" : locale === "en" ? "Request air quote" : "申请空运报价"}
+              </Link>
+
+              <Link href="/contacto?servicio=transporte-aereo">
+                {locale === "es" ? "Hablar con asesor" : locale === "en" ? "Talk to an advisor" : "联系顾问"}
+              </Link>
+            </div>
+          </div>
           </div>
         </section>
 <section className={styles.darkBand} data-mobile-hide-after-cert="true">
-          <div className={styles.darkBandImage}>
-            <Image
-              src="/images/cargaaerea.png"
-              alt={t.bandTitle}
-              fill
-              sizes="(max-width: 900px) 100vw, 42vw"
-            />
-          </div>
-
           <div className={styles.darkBandContent}>
             <h2>{t.bandTitle}</h2>
             <p>{t.bandText}</p>
@@ -919,107 +937,12 @@ export default function TransporteAereoPage() {
         </section>
         <RelatedServices current="transporte-aereo" locale={locale} />
 
-        <div className="aereoFinalStackHard">
-          <style>{`
-            @media (max-width: 1180px) {
-              .aereoFinalStackHard {
-                margin: 0 !important;
-                padding: 0 !important;
-                background: #07101a !important;
-                overflow: hidden !important;
-              }
-
-              .aereoFinalStackHard [class*="homeFinalContact"] {
-                margin: 0 !important;
-                padding: 0 !important;
-                background: #07101a !important;
-                overflow: hidden !important;
-              }
-
-              .aereoFinalStackHard [class*="services"] {
-                display: none !important;
-              }
-
-              .aereoFinalStackHard [class*="homeFinalCta"] {
-                margin: 0 !important;
-                padding-bottom: 0 !important;
-                background-color: #07101a !important;
-              }
-
-              .aereoFinalStackHard [class*="homeFinalCtaInner"] {
-                margin: 0 auto !important;
-                padding-bottom: 1.4rem !important;
-              }
-
-              /* AEREO_CTA_IMAGE_SOFT_FIX */
-
-              .aereoFinalStackHard [class*="homeFinalCta"]::before,
-              .aereoFinalStackHard [class*="homeFinalCta"]::after {
-                display: block !important;
-                content: "" !important;
-                opacity: 1 !important;
-                background-size: cover !important;
-                background-position: center center !important;
-              }
-
-              .aereoFinalStackHard [class*="homeFinalCta"] {
-                background-color: #07101a !important;
-                background-size: cover !important;
-                background-position: center center !important;
-                background-repeat: no-repeat !important;
-              }
-
-              .aereoFinalStackHard [class*="homeFinalCtaInner"],
-              .aereoFinalStackHard [class*="homeFinalCtaInner"] > div {
-                background: transparent !important;
-                background-color: transparent !important;
-                box-shadow: none !important;
-                border: 0 !important;
-                backdrop-filter: none !important;
-                -webkit-backdrop-filter: none !important;
-              }
-
-              .aereoBottomDarkFill {
-                display: block !important;
-                height: calc(5.8rem + env(safe-area-inset-bottom)) !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                background: #07101a !important;
-              }
-
-              .aereoFinalStackHard footer,
-              .aereoFinalStackHard [class*="Footer_footer"],
-              .aereoFinalStackHard [class*="footer"] {
-                margin-top: 0 !important;
-                padding-top: 0 !important;
-                border-top: 0 !important;
-                background: #07101a !important;
-              }
-
-              /* AEREO_STICKY_OPAQUE_BOTTOM_FIX */
-              .mobileStickyCta {
-                bottom: 0 !important;
-                margin: 0 !important;
-                background: #07101a !important;
-                border-top: 1px solid rgba(255,255,255,.08) !important;
-              }
-
-              .aereoFinalStackHard footer::before,
-              .aereoFinalStackHard footer::after,
-              .aereoFinalStackHard [class*="Footer_footer"]::before,
-              .aereoFinalStackHard [class*="Footer_footer"]::after {
-                display: none !important;
-                content: none !important;
-              }
-            }
-          `}</style>
-
+        <div className={styles.aereoFinalStack}>
           <div className={styles.homeFinalContact}>
             <HomeCorporateFinal />
           </div>
 
           <Footer />
-          <div className="aereoBottomDarkFill" aria-hidden="true" />
         </div>
       </main>
 

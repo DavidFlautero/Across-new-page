@@ -11187,36 +11187,284 @@
 
 /* END AEREO FINAL CLEAN SINGLE SOURCE 2 */
 
+/* === AEREO DESKTOP ACCORDION PREMIUM LINES === */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* === AEREO SERVICES WIDTH ICONS PAGE MATCH FINAL === */
-
-@media (min-width: 1181px) {
+@media (min-width: 901px) {
   /*
-    Services debe respetar el mismo ancho visual de la página:
-    1180px, no 1360px.
+    Solo desktop.
+    Mobile queda como está.
   */
 
-  .page .services {
+  .processAccordionSection {
+    width: min(1180px, calc(100% - 64px)) !important;
+    margin: 4.6rem auto 5.4rem !important;
+    padding: clamp(3rem, 4vw, 4.4rem) clamp(2rem, 4vw, 3.4rem) !important;
+    border-radius: 34px !important;
+    background:
+      radial-gradient(circle at 92% 8%, rgba(23, 50, 71, .10), transparent 24rem),
+      linear-gradient(180deg, #f8f4ed 0%, #eee8dd 100%) !important;
+    border: 1px solid rgba(23, 50, 71, .08) !important;
+    box-shadow: 0 26px 90px rgba(7, 17, 29, .055) !important;
+  }
+
+  .processAccordionHead {
+    max-width: 860px !important;
+    margin: 0 0 2.4rem !important;
+    text-align: left !important;
+  }
+
+  .processAccordionHead h2 {
+    max-width: 780px !important;
+  }
+
+  .processAccordionList {
+    gap: 1.05rem !important;
+  }
+
+  .processAccordionCard {
+    position: relative !important;
+    min-height: 118px !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.96) 0%, rgba(250,248,244,.98) 100%) !important;
+    border: 1px solid rgba(23, 50, 71, .13) !important;
+    box-shadow: 0 22px 62px rgba(7, 17, 29, .075) !important;
+  }
+
+  .processAccordionCard::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 auto 0 0 !important;
+    width: 5px !important;
+    background: linear-gradient(180deg, #173247 0%, #d6b36b 100%) !important;
+    opacity: .95 !important;
+  }
+
+  .processAccordionCard::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 5px !important;
+    right: 0 !important;
+    top: 0 !important;
+    height: 3px !important;
+    background: linear-gradient(90deg, rgba(214,179,107,.9), rgba(23,50,71,.15), transparent) !important;
+  }
+
+  .processAccordionSummary {
+    min-height: 118px !important;
+    padding: 1.25rem 1.25rem 1.2rem 1.45rem !important;
+    grid-template-columns: 2.35rem minmax(0, 1fr) 2rem !important;
+    user-select: none !important;
+  }
+
+  .processAccordionNumber {
+    background: #173247 !important;
+    border-color: rgba(214,179,107,.45) !important;
+    color: #fff !important;
+    box-shadow: 0 10px 24px rgba(23,50,71,.24) !important;
+  }
+
+  .processAccordionTitle strong {
+    color: #07111d !important;
+    font-size: 1.04rem !important;
+  }
+
+  .processAccordionTitle small {
+    color: rgba(7,17,29,.64) !important;
+  }
+
+  .processAccordionIcon {
+    background: #fff !important;
+    border-color: rgba(23,50,71,.22) !important;
+    box-shadow: inset 0 0 0 1px rgba(214,179,107,.18) !important;
+  }
+
+  .processAccordionIcon::before,
+  .processAccordionIcon::after {
+    background: #173247 !important;
+  }
+
+  .processAccordionCard[open] {
+    background:
+      radial-gradient(circle at 100% 0%, rgba(214,179,107,.16), transparent 16rem),
+      linear-gradient(145deg, #07101a 0%, #102f45 100%) !important;
+    border-color: rgba(214,179,107,.34) !important;
+    box-shadow: 0 28px 78px rgba(7,17,29,.18) !important;
+  }
+
+  .processAccordionCard[open] .processAccordionTitle strong {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+  }
+
+  .processAccordionCard[open] .processAccordionTitle small,
+  .processAccordionCard[open] .processAccordionBody p {
+    color: rgba(255,255,255,.78) !important;
+    -webkit-text-fill-color: rgba(255,255,255,.78) !important;
+  }
+
+  .processAccordionCard[open] .processAccordionNumber {
+    background: #d6b36b !important;
+    color: #07101a !important;
+  }
+
+  .processAccordionCard[open] .processAccordionIcon {
+    background: #fff !important;
+    border-color: #d6b36b !important;
+  }
+
+  .processAccordionCard[open] .processAccordionBody a {
+    color: #d6b36b !important;
+    -webkit-text-fill-color: #d6b36b !important;
+  }
+
+  .faqSection {
+    width: min(1180px, calc(100% - 64px)) !important;
+    margin: 4.8rem auto 5.8rem !important;
+    padding: clamp(3rem, 4vw, 4.2rem) clamp(2rem, 4vw, 3.4rem) !important;
+    border-radius: 34px !important;
+    background:
+      radial-gradient(circle at 8% 0%, rgba(214, 179, 107, .11), transparent 22rem),
+      radial-gradient(circle at 94% 12%, rgba(23, 50, 71, .09), transparent 24rem),
+      linear-gradient(180deg, #f8f4ed 0%, #eee8dd 100%) !important;
+    border: 1px solid rgba(23, 50, 71, .08) !important;
+    box-shadow: 0 26px 90px rgba(7, 17, 29, .055) !important;
+  }
+
+  .faqHead {
+    max-width: 860px !important;
+    margin: 0 0 2.4rem !important;
+    text-align: left !important;
+  }
+
+  .faqHead h2 {
+    max-width: 780px !important;
+  }
+
+  .faqHead p {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .faqList {
+    gap: 1rem !important;
+  }
+
+  .faqItem {
+    position: relative !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    background: rgba(255,255,255,.96) !important;
+    border: 1px solid rgba(23,50,71,.13) !important;
+    box-shadow: 0 22px 62px rgba(7,17,29,.075) !important;
+  }
+
+  .faqItem::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 5px !important;
+    background: linear-gradient(180deg, #d6b36b 0%, #173247 100%) !important;
+  }
+
+  .faqItem::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 5px !important;
+    right: 0 !important;
+    top: 0 !important;
+    height: 3px !important;
+    background: linear-gradient(90deg, rgba(23,50,71,.72), rgba(214,179,107,.38), transparent) !important;
+  }
+
+  .faqItem summary {
+    min-height: 82px !important;
+    padding: 1.15rem 1.25rem 1.15rem 1.45rem !important;
+    user-select: none !important;
+  }
+
+  .faqItem summary:focus {
+    outline: none !important;
+  }
+
+  .faqItem summary span {
+    color: #07111d !important;
+    font-size: 1.02rem !important;
+  }
+
+  .faqItem summary i {
+    background: #fff !important;
+    border-color: rgba(23,50,71,.22) !important;
+    box-shadow: inset 0 0 0 1px rgba(214,179,107,.18) !important;
+  }
+
+  .faqItem summary i::before,
+  .faqItem summary i::after {
+    background: #173247 !important;
+  }
+
+  .faqItem[open] {
+    border-color: rgba(214,179,107,.36) !important;
+    box-shadow: 0 28px 78px rgba(7,17,29,.14) !important;
+  }
+
+  .faqItem[open] summary {
+    background:
+      radial-gradient(circle at 100% 0%, rgba(214,179,107,.18), transparent 14rem),
+      linear-gradient(145deg, #07101a 0%, #102f45 100%) !important;
+  }
+
+  .faqItem[open] summary span {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+  }
+
+  .faqItem[open] summary i {
+    background: #fff !important;
+    border-color: #d6b36b !important;
+  }
+
+  .faqItem[open] > div {
+    padding: 1rem 1.35rem 1.35rem 1.45rem !important;
+    border-top: 1px solid rgba(23,50,71,.10) !important;
+    background: #fff !important;
+  }
+
+  .faqItem p {
+    max-width: 620px !important;
+    color: rgba(7,17,29,.72) !important;
+    font-size: .94rem !important;
+    line-height: 1.62 !important;
+  }
+}
+
+/* END AEREO DESKTOP ACCORDION PREMIUM LINES */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === AEREO SERVICES CLEAN PROFESSIONAL SINGLE SOURCE === */
+
+@media (min-width: 1181px) {
+  .services {
     position: relative !important;
     isolation: isolate !important;
 
-    width: min(1180px, calc(100% - 40px)) !important;
-    max-width: 1180px !important;
-    margin: 4.8rem auto 5.2rem !important;
+    width: min(1360px, calc(100% - 96px)) !important;
+    max-width: 1360px !important;
+    margin: 5rem auto 5.4rem !important;
     padding: 0 !important;
     transform: none !important;
 
@@ -11230,117 +11478,124 @@
     box-shadow: none !important;
   }
 
-  .page .services::before {
+  .services::before {
     content: none !important;
     display: none !important;
   }
 
-  .page .services::after {
+  .services::after {
     content: "" !important;
     position: absolute !important;
     right: 0 !important;
-    top: -1.1rem !important;
-    width: 150px !important;
-    height: 100px !important;
-    opacity: .18 !important;
+    top: -1.4rem !important;
+    width: 185px !important;
+    height: 120px !important;
+    opacity: .24 !important;
     background-image: radial-gradient(rgba(23, 50, 71, .34) 1px, transparent 1px) !important;
     background-size: 12px 12px !important;
     pointer-events: none !important;
   }
 
-  .page .services,
-  .page .services * {
+  .services,
+  .services * {
     font-family: inherit !important;
     text-shadow: none !important;
-    filter: none !important;
-    mix-blend-mode: normal !important;
   }
 
-  .page .services > * {
+  .services > * {
     position: relative !important;
     z-index: 2 !important;
   }
 
-  .page .services .sectionHead {
+  .services .sectionHead {
     position: relative !important;
     width: 100% !important;
     max-width: none !important;
-    margin: 0 0 2rem !important;
+    margin: 0 0 2.1rem !important;
     padding: 0 !important;
 
     display: grid !important;
-    grid-template-columns: minmax(0, 620px) minmax(330px, 420px) !important;
+    grid-template-columns: minmax(560px, 660px) minmax(360px, 455px) !important;
+    grid-template-rows: auto auto !important;
     justify-content: space-between !important;
-    column-gap: 4rem !important;
+    column-gap: clamp(3rem, 8vw, 8rem) !important;
     align-items: end !important;
     text-align: left !important;
   }
 
-  .page .services .sectionHead::before {
+  .services .sectionHead::before {
     content: "" !important;
     position: absolute !important;
-    left: -18px !important;
-    top: -14px !important;
-    width: 30px !important;
-    height: 68px !important;
-    border-left: 1px solid rgba(214, 179, 107, .72) !important;
-    border-top: 1px solid rgba(214, 179, 107, .72) !important;
-    border-bottom: 1px solid rgba(214, 179, 107, .28) !important;
-    border-radius: 10px 0 0 10px !important;
+    left: -22px !important;
+    top: -16px !important;
+    width: 34px !important;
+    height: 74px !important;
+    border-left: 1px solid rgba(214, 179, 107, .76) !important;
+    border-top: 1px solid rgba(214, 179, 107, .76) !important;
+    border-bottom: 1px solid rgba(214, 179, 107, .34) !important;
+    border-radius: 12px 0 0 12px !important;
     pointer-events: none !important;
   }
 
-  .page .services .sectionHead::after {
+  .services .sectionHead::after {
     content: "Diseñamos soluciones a medida para que tu carga llegue más rápido, segura y donde la necesites." !important;
 
+    grid-column: 2 !important;
+    grid-row: 1 / 3 !important;
+    align-self: end !important;
     display: block !important;
-    max-width: 420px !important;
-    padding-bottom: .52rem !important;
 
+    max-width: 455px !important;
+    padding-bottom: .52rem !important;
     color: rgba(7, 17, 29, .78) !important;
     -webkit-text-fill-color: rgba(7, 17, 29, .78) !important;
-    font-size: .95rem !important;
+    font-size: .98rem !important;
     line-height: 1.55 !important;
     font-weight: 650 !important;
     letter-spacing: 0 !important;
-
     border-bottom: 2px solid rgba(214, 179, 107, .78) !important;
   }
 
-  .page .services .eyebrow {
+  .services .eyebrow {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+
     display: inline-flex !important;
-    margin: 0 0 .7rem !important;
+    margin: 0 0 .68rem !important;
 
     color: #b99545 !important;
     -webkit-text-fill-color: #b99545 !important;
-    font-size: .72rem !important;
+    font-size: .74rem !important;
     font-weight: 950 !important;
     line-height: 1 !important;
     letter-spacing: .17em !important;
     text-transform: uppercase !important;
   }
 
-  .page .services .sectionHead h2 {
-    max-width: 620px !important;
+  .services .sectionHead h2 {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+
+    max-width: 650px !important;
     margin: 0 !important;
 
     color: #07101a !important;
     -webkit-text-fill-color: #07101a !important;
-    font-size: clamp(2.55rem, 3.15vw, 3.7rem) !important;
-    line-height: .96 !important;
-    letter-spacing: -.055em !important;
+    font-size: clamp(2.75rem, 3.35vw, 4rem) !important;
+    line-height: .94 !important;
+    letter-spacing: -.058em !important;
     font-weight: 950 !important;
     text-align: left !important;
   }
 
-  .page .services .serviceGrid {
+  .serviceGrid {
     width: 100% !important;
     max-width: none !important;
     margin: 0 !important;
 
     display: grid !important;
     grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
-    gap: 1rem !important;
+    gap: 1.35rem !important;
 
     border: 0 !important;
     background: transparent !important;
@@ -11348,26 +11603,188 @@
     box-shadow: none !important;
   }
 
+  .serviceGrid article {
+    position: relative !important;
+    min-height: 172px !important;
+    padding: 1.35rem 1.2rem 1.35rem !important;
+    text-align: left !important;
+
+    border-radius: 15px !important;
+    border: 1px solid rgba(23, 50, 71, .10) !important;
+    background: rgba(255, 255, 255, .88) !important;
+    background-image: none !important;
+    box-shadow: 0 18px 48px rgba(7, 17, 29, .055) !important;
+    overflow: hidden !important;
+  }
+
+  .serviceGrid article::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 3px !important;
+    background: linear-gradient(180deg, #173247 0%, #d6b36b 100%) !important;
+  }
+
+  .serviceGrid article::after {
+    content: "→" !important;
+    position: absolute !important;
+    right: 1rem !important;
+    bottom: .88rem !important;
+    color: #c59f52 !important;
+    font-size: 1.05rem !important;
+    font-weight: 950 !important;
+  }
+
+  .serviceGrid i {
+    width: 40px !important;
+    height: 40px !important;
+    margin: 0 0 .95rem !important;
+
+    color: #d6b36b !important;
+    border: 1px solid rgba(214, 179, 107, .45) !important;
+    background: #07101a !important;
+    box-shadow: 0 10px 24px rgba(7, 17, 29, .14) !important;
+  }
+
+  .serviceGrid h3 {
+    max-width: 180px !important;
+    margin: 0 !important;
+
+    color: #07101a !important;
+    -webkit-text-fill-color: #07101a !important;
+    font-size: .96rem !important;
+    line-height: 1.14 !important;
+    letter-spacing: -.025em !important;
+    font-weight: 900 !important;
+    text-align: left !important;
+  }
+
+  .serviceGrid p {
+    max-width: 180px !important;
+    margin-top: .65rem !important;
+
+    color: rgba(7, 17, 29, .68) !important;
+    -webkit-text-fill-color: rgba(7, 17, 29, .68) !important;
+    font-size: .82rem !important;
+    line-height: 1.48 !important;
+    font-weight: 500 !important;
+    letter-spacing: 0 !important;
+    text-align: left !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1180px) {
+  .services {
+    width: min(980px, calc(100% - 56px)) !important;
+    margin: 4.4rem auto 4.8rem !important;
+    padding: 0 !important;
+    transform: none !important;
+    background: transparent !important;
+    background-image: none !important;
+  }
+
+  .services::before,
+  .services::after,
+  .services .sectionHead::before,
+  .services .sectionHead::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .services .sectionHead {
+    display: block !important;
+    max-width: 760px !important;
+    margin: 0 0 2rem !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+
+  .services .sectionHead h2 {
+    max-width: 680px !important;
+    color: #07101a !important;
+    -webkit-text-fill-color: #07101a !important;
+    font-size: clamp(2.45rem, 4.4vw, 3.7rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.055em !important;
+    text-shadow: none !important;
+  }
+
+  .serviceGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1rem !important;
+  }
+}
+
+/* END AEREO SERVICES CLEAN PROFESSIONAL SINGLE SOURCE */
+
+/* === AEREO SERVICES CARDS PREMIUM FINAL FIX === */
+
+@media (min-width: 1181px) {
+  /* Mata sombras raras heredadas */
+  .page .services,
+  .page .services *,
+  .page .services h2,
+  .page .services h3,
+  .page .services p,
+  .page .services span,
+  .page .services i {
+    text-shadow: none !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+  }
+
+  .page .services .sectionHead h2 {
+    color: #07101a !important;
+    -webkit-text-fill-color: #07101a !important;
+    text-shadow: none !important;
+  }
+
+  .page .services .sectionHead::after {
+    color: rgba(7,17,29,.78) !important;
+    -webkit-text-fill-color: rgba(7,17,29,.78) !important;
+    text-shadow: none !important;
+  }
+
+  /* Cards profesionales */
+  .page .services .serviceGrid {
+    gap: 1.35rem !important;
+    align-items: stretch !important;
+  }
+
   .page .services .serviceGrid article {
     position: relative !important;
-    min-height: 188px !important;
-    padding: 1.35rem 1.1rem 1.35rem !important;
-    text-align: left !important;
+    min-height: 184px !important;
+    padding: 1.45rem 1.25rem 1.45rem !important;
 
     border-radius: 18px !important;
     border: 1px solid rgba(23, 50, 71, .12) !important;
 
     background:
-      radial-gradient(circle at 88% 12%, rgba(214,179,107,.10), transparent 7rem),
+      radial-gradient(circle at 88% 12%, rgba(214,179,107,.12), transparent 7rem),
       linear-gradient(180deg, rgba(255,255,255,.96) 0%, rgba(248,245,239,.94) 100%) !important;
 
     box-shadow:
-      0 20px 52px rgba(7, 17, 29, .07),
-      inset 0 1px 0 rgba(255,255,255,.9) !important;
+      0 22px 58px rgba(7, 17, 29, .075),
+      inset 0 1px 0 rgba(255,255,255,.92) !important;
 
     overflow: hidden !important;
+    transition:
+      transform .22s ease,
+      box-shadow .22s ease,
+      border-color .22s ease !important;
   }
 
+  .page .services .serviceGrid article:hover {
+    transform: translateY(-5px) !important;
+    border-color: rgba(214,179,107,.44) !important;
+    box-shadow:
+      0 30px 76px rgba(7, 17, 29, .11),
+      inset 0 1px 0 rgba(255,255,255,.95) !important;
+  }
+
+  /* Línea lateral azul/dorada */
   .page .services .serviceGrid article::before {
     content: "" !important;
     position: absolute !important;
@@ -11378,550 +11795,74 @@
     background: linear-gradient(180deg, #173247 0%, #d6b36b 100%) !important;
   }
 
+  /* Flecha */
   .page .services .serviceGrid article::after {
     content: "→" !important;
     position: absolute !important;
     right: 1rem !important;
     bottom: .9rem !important;
-
     color: #b99545 !important;
     -webkit-text-fill-color: #b99545 !important;
-    font-size: 1rem !important;
+    font-size: 1.05rem !important;
     font-weight: 950 !important;
     text-shadow: none !important;
   }
 
-  /*
-    Íconos iguales al sistema de arriba:
-    48x48, azul corporativo, borde circular.
-  */
+  /* Íconos sin fondo azul pesado */
   .page .services .serviceGrid i {
-    display: inline-grid !important;
-    place-items: center !important;
-
-    width: 48px !important;
-    height: 48px !important;
-    margin: 0 0 1.1rem !important;
+    width: 42px !important;
+    height: 42px !important;
+    margin: 0 0 1rem !important;
 
     color: #173247 !important;
-    background: rgba(23, 50, 71, .035) !important;
-    border: 1px solid rgba(23, 50, 71, .5) !important;
+    background:
+      linear-gradient(180deg, #ffffff 0%, #f3eee4 100%) !important;
+
+    border: 1px solid rgba(214,179,107,.58) !important;
     border-radius: 999px !important;
 
-    font-style: normal !important;
-    font-size: 1.3rem !important;
-    font-weight: 900 !important;
-
-    box-shadow: none !important;
+    box-shadow:
+      0 12px 28px rgba(7,17,29,.10),
+      inset 0 0 0 1px rgba(255,255,255,.78) !important;
   }
 
   .page .services .serviceGrid i svg {
-    width: 100% !important;
-    height: 100% !important;
-    display: block !important;
+    width: 21px !important;
+    height: 21px !important;
     stroke: currentColor !important;
   }
 
+  /* Texto de cards */
   .page .services .serviceGrid h3 {
-    max-width: 170px !important;
+    max-width: 185px !important;
     margin: 0 !important;
 
     color: #07101a !important;
     -webkit-text-fill-color: #07101a !important;
-    font-size: .95rem !important;
+
+    font-size: .98rem !important;
     line-height: 1.14 !important;
     letter-spacing: -.025em !important;
     font-weight: 950 !important;
     text-align: left !important;
+
+    text-shadow: none !important;
   }
 
   .page .services .serviceGrid p {
-    max-width: 170px !important;
+    max-width: 185px !important;
     margin: .68rem 0 0 !important;
 
-    color: rgba(7, 17, 29, .68) !important;
-    -webkit-text-fill-color: rgba(7, 17, 29, .68) !important;
-    font-size: .8rem !important;
+    color: rgba(7,17,29,.68) !important;
+    -webkit-text-fill-color: rgba(7,17,29,.68) !important;
+
+    font-size: .82rem !important;
     line-height: 1.5 !important;
     font-weight: 520 !important;
     text-align: left !important;
-  }
-}
 
-@media (min-width: 901px) and (max-width: 1180px) {
-  .page .services {
-    width: min(980px, calc(100% - 56px)) !important;
-    max-width: 980px !important;
-    margin: 4.4rem auto 4.8rem !important;
-    padding: 0 !important;
-    transform: none !important;
-    background: transparent !important;
-    background-image: none !important;
-  }
-
-  .page .services::before,
-  .page .services::after,
-  .page .services .sectionHead::before,
-  .page .services .sectionHead::after {
-    content: none !important;
-    display: none !important;
-  }
-
-  .page .services .sectionHead {
-    display: block !important;
-    max-width: 760px !important;
-    margin: 0 0 2rem !important;
-    padding: 0 !important;
-    text-align: left !important;
-  }
-
-  .page .services .sectionHead h2 {
-    max-width: 680px !important;
-    color: #07101a !important;
-    -webkit-text-fill-color: #07101a !important;
-    font-size: clamp(2.45rem, 4.4vw, 3.7rem) !important;
-    line-height: .96 !important;
-    letter-spacing: -.055em !important;
     text-shadow: none !important;
   }
-
-  .page .services .serviceGrid {
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 1rem !important;
-  }
 }
 
-/* END AEREO SERVICES WIDTH ICONS PAGE MATCH FINAL */
-
-/* === AEREO SERVICES TITLE LEFT STATIC CARDS FINAL === */
-
-@media (min-width: 1181px) {
-  /* Header: título izquierda, texto derecha */
-  .page .services .sectionHead {
-    display: grid !important;
-    grid-template-columns: minmax(0, 620px) minmax(320px, 420px) !important;
-    grid-template-rows: auto auto !important;
-    justify-content: space-between !important;
-    align-items: end !important;
-    column-gap: 4rem !important;
-    text-align: left !important;
-  }
-
-  .page .services .sectionHead .eyebrow {
-    grid-column: 1 !important;
-    grid-row: 1 !important;
-  }
-
-  .page .services .sectionHead h2 {
-    grid-column: 1 !important;
-    grid-row: 2 !important;
-    max-width: 620px !important;
-    margin: 0 !important;
-    text-align: left !important;
-  }
-
-  .page .services .sectionHead::after {
-    grid-column: 2 !important;
-    grid-row: 1 / 3 !important;
-    align-self: end !important;
-    justify-self: end !important;
-    max-width: 420px !important;
-  }
-
-  /* Cards: no parecen botones ni enlaces */
-  .page .services .serviceGrid article {
-    cursor: default !important;
-  }
-
-  .page .services .serviceGrid article::after {
-    content: none !important;
-    display: none !important;
-  }
-
-  .page .services .serviceGrid article:hover {
-    transform: none !important;
-  }
-
-  /* Íconos iguales al sistema de arriba, sin exagerar */
-  .page .services .serviceGrid i {
-    width: 48px !important;
-    height: 48px !important;
-    color: #173247 !important;
-    background: rgba(23, 50, 71, .035) !important;
-    border: 1px solid rgba(23, 50, 71, .5) !important;
-    box-shadow: none !important;
-  }
-
-  .page .services .serviceGrid i svg {
-    width: 100% !important;
-    height: 100% !important;
-  }
-}
-
-/* END AEREO SERVICES TITLE LEFT STATIC CARDS FINAL */
-
-
-
-
-
-/* === AEREO PROCESS CLEAN RESET ONLY === */
-
-.processDesktopSection {
-  display: none !important;
-}
-
-@media (min-width: 901px) {
-  .page .processAccordionSection {
-    display: block !important;
-    width: min(1180px, calc(100% - 40px)) !important;
-    max-width: 1180px !important;
-    margin: 5.2rem auto !important;
-    padding: 0 !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    background: transparent !important;
-    background-image: none !important;
-    box-shadow: none !important;
-    overflow: visible !important;
-  }
-
-  .page .processAccordionSection::before,
-  .page .processAccordionSection::after {
-    content: none !important;
-    display: none !important;
-  }
-
-  .page .processAccordionHead {
-    max-width: 780px !important;
-    margin: 0 0 2.2rem !important;
-    text-align: left !important;
-  }
-
-  .page .processAccordionHead h2 {
-    color: #07101a !important;
-    -webkit-text-fill-color: #07101a !important;
-    text-shadow: none !important;
-  }
-
-  .page .processAccordionList {
-    display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 1rem !important;
-    border: 0 !important;
-    background: transparent !important;
-  }
-
-  .page .processAccordionCard {
-    border: 1px solid rgba(23,50,71,.12) !important;
-    border-radius: 22px !important;
-    background: rgba(255,255,255,.88) !important;
-    box-shadow: 0 18px 52px rgba(7,17,29,.06) !important;
-    overflow: hidden !important;
-  }
-
-  .page .processAccordionSummary {
-    border: 0 !important;
-    background: transparent !important;
-  }
-
-  .page .processAccordionCard[open] {
-    background: rgba(255,255,255,.94) !important;
-    border-color: rgba(214,179,107,.42) !important;
-  }
-
-  .page .processAccordionCard[open] .processAccordionTitle strong,
-  .page .processAccordionTitle strong {
-    color: #07101a !important;
-    -webkit-text-fill-color: #07101a !important;
-    text-shadow: none !important;
-  }
-
-  .page .processAccordionCard[open] .processAccordionTitle small,
-  .page .processAccordionTitle small,
-  .page .processAccordionBody p {
-    color: rgba(7,17,29,.68) !important;
-    -webkit-text-fill-color: rgba(7,17,29,.68) !important;
-    text-shadow: none !important;
-  }
-
-  .page .processAccordionBody a {
-    color: #173247 !important;
-    -webkit-text-fill-color: #173247 !important;
-  }
-}
-
-/* END AEREO PROCESS CLEAN RESET ONLY */
-
-/* === AEREO PROCESS ACCORDION CLEAN PREMIUM FINAL === */
-
-@media (min-width: 901px) {
-  .page .processAccordionSection {
-    width: min(1180px, calc(100% - 40px)) !important;
-    max-width: 1180px !important;
-    margin: 5.8rem auto 5.8rem !important;
-    padding: 0 !important;
-    background: transparent !important;
-    background-image: none !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    overflow: visible !important;
-  }
-
-  .page .processAccordionHead {
-    max-width: 760px !important;
-    margin: 0 0 2rem !important;
-    text-align: left !important;
-  }
-
-  .page .processAccordionHead h2 {
-    max-width: 760px !important;
-    color: #07101a !important;
-    -webkit-text-fill-color: #07101a !important;
-    text-shadow: none !important;
-    font-size: clamp(2.35rem, 3.15vw, 3.65rem) !important;
-    line-height: .96 !important;
-    letter-spacing: -.055em !important;
-  }
-
-  .page .processAccordionList {
-    display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 1rem !important;
-    border: 0 !important;
-    background: transparent !important;
-  }
-
-  .page .processAccordionCard {
-    position: relative !important;
-    min-height: 150px !important;
-    border-radius: 20px !important;
-    border: 1px solid rgba(23, 50, 71, .12) !important;
-    background:
-      radial-gradient(circle at 90% 10%, rgba(214,179,107,.10), transparent 7rem),
-      linear-gradient(180deg, rgba(255,255,255,.96), rgba(248,245,239,.95)) !important;
-    box-shadow: 0 18px 52px rgba(7,17,29,.06) !important;
-    overflow: hidden !important;
-  }
-
-  .page .processAccordionCard::before {
-    content: "" !important;
-    position: absolute !important;
-    left: 0 !important;
-    top: 0 !important;
-    bottom: 0 !important;
-    width: 4px !important;
-    background: linear-gradient(180deg, #173247, #d6b36b) !important;
-  }
-
-  .page .processAccordionSummary {
-    min-height: 150px !important;
-    padding: 1.25rem 1.15rem 1.2rem 1.35rem !important;
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) 2rem !important;
-    gap: 1rem !important;
-    align-items: center !important;
-    background: transparent !important;
-    border: 0 !important;
-    outline: none !important;
-    cursor: pointer !important;
-  }
-
-  .page .processAccordionSummary:focus,
-  .page .processAccordionSummary:focus-visible {
-    outline: none !important;
-    box-shadow: none !important;
-  }
-
-  .page .processAccordionNumber {
-    display: none !important;
-  }
-
-  .page .processAccordionTitle strong {
-    max-width: 250px !important;
-    color: #07101a !important;
-    -webkit-text-fill-color: #07101a !important;
-    font-size: 1rem !important;
-    line-height: 1.12 !important;
-    letter-spacing: -.025em !important;
-    font-weight: 950 !important;
-    text-align: left !important;
-    text-shadow: none !important;
-  }
-
-  .page .processAccordionTitle small {
-    max-width: 255px !important;
-    margin-top: .48rem !important;
-    color: rgba(7,17,29,.66) !important;
-    -webkit-text-fill-color: rgba(7,17,29,.66) !important;
-    font-size: .84rem !important;
-    line-height: 1.5 !important;
-    font-weight: 520 !important;
-    text-align: left !important;
-    text-shadow: none !important;
-  }
-
-  .page .processAccordionIcon {
-    width: 1.85rem !important;
-    height: 1.85rem !important;
-    border-radius: 999px !important;
-    border: 1px solid rgba(23,50,71,.22) !important;
-    background: rgba(255,255,255,.72) !important;
-    box-shadow: none !important;
-  }
-
-  .page .processAccordionIcon::before,
-  .page .processAccordionIcon::after {
-    background: #173247 !important;
-  }
-
-  .page .processAccordionCard[open] {
-    border-color: rgba(214,179,107,.46) !important;
-    background:
-      radial-gradient(circle at 90% 10%, rgba(214,179,107,.15), transparent 7rem),
-      linear-gradient(180deg, #ffffff, #f8f5ef) !important;
-  }
-
-  .page .processAccordionCard[open] .processAccordionSummary {
-    min-height: 116px !important;
-    border-bottom: 1px solid rgba(23,50,71,.10) !important;
-  }
-
-  .page .processAccordionBody {
-    padding: 1rem 1.25rem 1.25rem 1.35rem !important;
-    margin: 0 !important;
-  }
-
-  .page .processAccordionBody p {
-    max-width: 290px !important;
-    margin: 0 !important;
-    color: rgba(7,17,29,.68) !important;
-    -webkit-text-fill-color: rgba(7,17,29,.68) !important;
-    font-size: .84rem !important;
-    line-height: 1.52 !important;
-    font-weight: 520 !important;
-    text-shadow: none !important;
-  }
-
-  .page .processAccordionBody a {
-    display: none !important;
-  }
-}
-
-/* END AEREO PROCESS ACCORDION CLEAN PREMIUM FINAL */
-
-/* === AEREO PROCESS CTA FINAL === */
-
-.processAccordionActions {
-  margin-top: 1.8rem;
-  padding: 1.15rem 1.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.25rem;
-
-  border-radius: 22px;
-  border: 1px solid rgba(23, 50, 71, .12);
-  background:
-    radial-gradient(circle at 96% 10%, rgba(214,179,107,.12), transparent 10rem),
-    linear-gradient(180deg, rgba(255,255,255,.88), rgba(248,245,239,.92));
-  box-shadow: 0 18px 52px rgba(7,17,29,.055);
-}
-
-.processAccordionActions strong {
-  display: block;
-  color: #07101a;
-  font-size: 1rem;
-  line-height: 1.15;
-  letter-spacing: -.025em;
-  font-weight: 950;
-}
-
-.processAccordionActions p {
-  max-width: 560px;
-  margin: .35rem 0 0;
-  color: rgba(7,17,29,.66);
-  font-size: .86rem;
-  line-height: 1.5;
-  font-weight: 520;
-}
-
-.processAccordionActions > div:last-child {
-  display: flex;
-  gap: .75rem;
-  flex-shrink: 0;
-}
-
-.processAccordionActions a {
-  min-height: 2.85rem;
-  padding: 0 1.15rem;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 999px;
-  text-decoration: none;
-  text-transform: uppercase;
-
-  font-size: .7rem;
-  font-weight: 950;
-  letter-spacing: .045em;
-  white-space: nowrap;
-}
-
-.processAccordionActions a:first-child {
-  background: #173247;
-  color: #fff;
-  border: 1px solid rgba(214,179,107,.42);
-  box-shadow: 0 14px 32px rgba(23,50,71,.24);
-}
-
-.processAccordionActions a:first-child::after {
-  content: "→";
-  margin-left: .65rem;
-}
-
-.processAccordionActions a:last-child {
-  color: #173247;
-  background: transparent;
-  border: 1px solid rgba(23,50,71,.24);
-}
-
-@media (max-width: 900px) {
-  .processAccordionActions {
-    margin-top: 1.35rem;
-    padding: 1rem;
-    display: grid;
-    gap: 1rem;
-  }
-
-  .processAccordionActions > div:last-child {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .processAccordionActions a {
-    width: 100%;
-  }
-}
-
-/* END AEREO PROCESS CTA FINAL */
-
-/* === AEREO PROCESS CTA POSITION FIX === */
-
-.processAccordionActions {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 1.35rem 0 0 !important;
-  box-sizing: border-box !important;
-}
-
-@media (min-width: 901px) {
-  .page .processAccordionActions {
-    width: 100% !important;
-    margin-top: 1.45rem !important;
-  }
-}
-
-/* END AEREO PROCESS CTA POSITION FIX */
+/* END AEREO SERVICES CARDS PREMIUM FINAL FIX */

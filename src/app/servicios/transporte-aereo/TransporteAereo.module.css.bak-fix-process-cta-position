@@ -11907,21 +11907,3 @@
 }
 
 /* END AEREO PROCESS CTA FINAL */
-
-/* === AEREO PROCESS CTA POSITION FIX === */
-
-.processAccordionActions {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 1.35rem 0 0 !important;
-  box-sizing: border-box !important;
-}
-
-@media (min-width: 901px) {
-  .page .processAccordionActions {
-    width: 100% !important;
-    margin-top: 1.45rem !important;
-  }
-}
-
-/* END AEREO PROCESS CTA POSITION FIX */
