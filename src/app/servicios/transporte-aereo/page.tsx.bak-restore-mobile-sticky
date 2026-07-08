@@ -946,17 +946,6 @@ export default function TransporteAereoPage() {
         </div>
       </main>
 
-      <div className={styles.mobileStickyCta} aria-label="Acciones rápidas de transporte aéreo">
-        <Link href="/cotizacion?servicio=transporte-aereo">
-          SOLICITAR COTIZACIÓN
-        </Link>
-
-        <Link href="/contacto?servicio=transporte-aereo">
-          HABLAR CON ASESOR
-        </Link>
-      </div>
-
-
     </div>
   );
 }

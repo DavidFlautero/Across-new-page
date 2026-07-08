@@ -8,7 +8,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import RelatedServices from "@/app/servicios/_shared/RelatedServices";
-import HomeCorporateFinal from "@/components/sections/HomeCorporateFinal";
 import styles from "./Servicio.module.css";
 
 type Locale = "es" | "en" | "zh";
@@ -799,16 +798,9 @@ export default function TransporteTerrestrePage() {
             />
           </div>
         </section>
+
         <RelatedServices current="transporte-terrestre" locale={locale} />
-
-        <div className={styles.serviceFinalStack}>
-          <div className={styles.homeFinalContact}>
-            <HomeCorporateFinal />
-          </div>
-        </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import RelatedServices from "@/app/servicios/_shared/RelatedServices";
+import ServiceCtaButtons from "@/app/servicios/_shared/ServiceCtaButtons";
 import HomeCorporateFinal from "@/components/sections/HomeCorporateFinal";
 import styles from "./TransporteAereo.module.css";
 
@@ -631,7 +632,10 @@ export default function TransporteAereoPage() {
           </div>
         </section>
 <Certifications />
-<section className={styles.overview}>
+
+        <ServiceCtaButtons locale={locale} service="transporte-aereo" />
+
+        <section className={styles.overview}>
           <div className={styles.overviewCopy}>
             <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
             <h2>{t.overviewTitle}</h2>
@@ -945,17 +949,6 @@ export default function TransporteAereoPage() {
           <Footer />
         </div>
       </main>
-
-      <div className={styles.mobileStickyCta} aria-label="Acciones rápidas de transporte aéreo">
-        <Link href="/cotizacion?servicio=transporte-aereo">
-          SOLICITAR COTIZACIÓN
-        </Link>
-
-        <Link href="/contacto?servicio=transporte-aereo">
-          HABLAR CON ASESOR
-        </Link>
-      </div>
-
 
     </div>
   );

@@ -948,11 +948,11 @@ export default function TransporteAereoPage() {
 
       <div className={styles.mobileStickyCta} aria-label="Acciones rápidas de transporte aéreo">
         <Link href="/cotizacion?servicio=transporte-aereo">
-          SOLICITAR COTIZACIÓN
+          {t.stickyPrimary}
         </Link>
 
-        <Link href="/contacto?servicio=transporte-aereo">
-          HABLAR CON ASESOR
+        <Link href={t.stickySecondaryHref || "/contacto?servicio=transporte-aereo"}>
+          {t.stickySecondary}
         </Link>
       </div>
 

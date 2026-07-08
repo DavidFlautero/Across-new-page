@@ -1,0 +1,3296 @@
+===== AEREO PAGE 650-830 =====
+   650	                    <Icon name={icons[index]} />
+   651	                  </i>
+   652	                  <h3>{title}</h3>
+   653	                  <p>{text}</p>
+   654	                </article>
+   655	              );
+   656	            })}
+   657	          </div>
+   658	        </section>
+   659	<section className={styles.services} data-mobile-hide-after-cert="true">
+   660	          <div className={styles.sectionHead}>
+   661	            <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
+   662	            <h2>{t.servicesTitle}</h2>
+   663	          </div>
+   664	
+   665	          <div className={styles.serviceGrid}>
+   666	            {t.services.map(([title, text]: string[], index: number) => {
+   667	              const icons: IconName[] = ["plane", "box", "diamond", "charter", "globe", "door"];
+   668	
+   669	              return (
+   670	                <article key={title}>
+   671	                  <i>
+   672	                    <Icon name={icons[index]} />
+   673	                  </i>
+   674	                  <h3>{title}</h3>
+   675	                  <p>{text}</p>
+   676	                </article>
+   677	              );
+   678	            })}
+   679	          </div>
+   680	        </section>
+   681	
+   682	        <section className={styles.useCases} data-mobile-hide-after-cert="true">
+   683	          <div className={styles.sectionHead}>
+   684	            <span className={styles.eyebrow}>{t.useCasesEyebrow}</span>
+   685	            <h2>{t.useCasesTitle}</h2>
+   686	          </div>
+   687	
+   688	          <div className={styles.useCaseGrid}>
+   689	            {t.useCases.map(([title, text]: string[], index: number) => {
+   690	              const icons: IconName[] = ["gear", "laptop", "package", "medical", "cart", "document"];
+   691	
+   692	              return (
+   693	                <article key={title}>
+   694	                  <i>
+   695	                    <Icon name={icons[index]} />
+   696	                  </i>
+   697	                  <h3>{title}</h3>
+   698	                  <p>{text}</p>
+   699	                </article>
+   700	              );
+   701	            })}
+   702	          </div>
+   703	        </section>
+   704	
+   705	        <section className={`${styles.processAccordionSection} aereoProcessPremium`}>
+   706	          <div className={styles.processAccordionHead}>
+   707	            <span className={styles.eyebrow}>{t.processEyebrow}</span>
+   708	            <h2>{t.processTitle}</h2>
+   709	          </div>
+   710	          <style>{`
+   711	            /* AEREO_PROCESS_INLINE_FORCE */
+   712	            @media (max-width: 900px) {
+   713	              .aereoProcessPremium .aereoProcessCard {
+   714	                background: linear-gradient(145deg, #07111d 0%, #102f45 100%) !important;
+   715	                color: #fff !important;
+   716	              }
+   717	
+   718	              .aereoProcessPremium .aereoProcessTitle,
+   719	              .aereoProcessPremium .aereoProcessTitle *,
+   720	              .aereoProcessPremium .aereoProcessSummary,
+   721	              .aereoProcessPremium .aereoProcessSummary * {
+   722	                color: #fff !important;
+   723	                -webkit-text-fill-color: #fff !important;
+   724	                opacity: 1 !important;
+   725	                filter: none !important;
+   726	                mix-blend-mode: normal !important;
+   727	              }
+   728	
+   729	              .aereoProcessPremium .aereoProcessTitle small {
+   730	                color: rgba(255,255,255,.72) !important;
+   731	                -webkit-text-fill-color: rgba(255,255,255,.72) !important;
+   732	              }
+   733	
+   734	              .aereoProcessPremium .aereoProcessBody,
+   735	              .aereoProcessPremium .aereoProcessBody p {
+   736	                color: rgba(255,255,255,.78) !important;
+   737	                -webkit-text-fill-color: rgba(255,255,255,.78) !important;
+   738	              }
+   739	
+   740	              .aereoProcessPremium .aereoProcessBody a {
+   741	                color: #fff !important;
+   742	                -webkit-text-fill-color: #fff !important;
+   743	              }
+   744	
+   745	              .aereoProcessPremium .aereoProcessIcon::before,
+   746	              .aereoProcessPremium .aereoProcessIcon::after {
+   747	                background: #d6b36b !important;
+   748	              }
+   749	            }
+   750	          `}</style>
+   751	
+   752	          <div className={styles.processAccordionList}>
+   753	            {t.process.map(([title, text]: string[], index: number) => (
+   754	              <details className={`${styles.processAccordionCard} aereoProcessCard`} key={title}>
+   755	                <summary className={`${styles.processAccordionSummary} aereoProcessSummary`}>
+   756	                  <span className={styles.processAccordionNumber}>{index + 1}</span>
+   757	
+   758	                  <span className={`${styles.processAccordionTitle} aereoProcessTitle`}>
+   759	                    <strong>{title}</strong>
+   760	                    <small>{text}</small>
+   761	                  </span>
+   762	
+   763	                  <span className={`${styles.processAccordionIcon} aereoProcessIcon`} aria-hidden="true" />
+   764	                </summary>
+   765	
+   766	                <div className={`${styles.processAccordionBody} aereoProcessBody`}>
+   767	                  <p>
+   768	                    {locale === "es"
+   769	                      ? "Coordinamos ruta, documentación, tiempos y seguimiento operativo según la urgencia de la carga."
+   770	                      : locale === "en"
+   771	                        ? "We coordinate route, documentation, timing and operational tracking according to cargo urgency."
+   772	                        : "我们根据货物紧急程度协调路线、文件、时间和操作跟踪。"}
+   773	                  </p>
+   774	
+   775	                  <Link href="/cotizacion?servicio=transporte-aereo">
+   776	                    {locale === "es" ? "Cotizar esta modalidad" : locale === "en" ? "Quote this option" : "获取报价"}
+   777	                  </Link>
+   778	                </div>
+   779	              </details>
+   780	            ))}          </div>
+   781	
+   782	          <div className={styles.processAccordionActions}>
+   783	            <div>
+   784	              <strong>
+   785	                {locale === "es"
+   786	                  ? "¿Tenés una operación aérea en curso?"
+   787	                  : locale === "en"
+   788	                    ? "Do you have an air operation in progress?"
+   789	                    : "您是否有正在进行的空运操作？"}
+   790	              </strong>
+   791	              <p>
+   792	                {locale === "es"
+   793	                  ? "Coordinamos ruta, documentación y seguimiento para que tu carga avance sin fricción."
+   794	                  : locale === "en"
+   795	                    ? "We coordinate routing, documentation and tracking so your cargo moves without friction."
+   796	                    : "我们协调路线、文件和跟踪，确保您的货物顺利推进。"}
+   797	              </p>
+   798	            </div>
+   799	
+   800	            <div>
+   801	              <Link href="/cotizacion?servicio=transporte-aereo">
+   802	                {locale === "es" ? "Solicitar cotización aérea" : locale === "en" ? "Request air quote" : "申请空运报价"}
+   803	              </Link>
+   804	
+   805	              <Link href="/contacto?servicio=transporte-aereo">
+   806	                {locale === "es" ? "Hablar con asesor" : locale === "en" ? "Talk to an advisor" : "联系顾问"}
+   807	              </Link>
+   808	            </div>
+   809	          </div>
+   810	
+   811	        </section>
+   812	<section className={styles.darkBand} data-mobile-hide-after-cert="true">
+   813	          <div className={styles.darkBandContent}>
+   814	            <h2>{t.bandTitle}</h2>
+   815	            <p>{t.bandText}</p>
+   816	
+   817	            <div className={styles.stats}>
+   818	              {t.stats.map(([value, label]: string[]) => (
+   819	                <article key={value}>
+   820	                  <strong>{value}</strong>
+   821	                  <span>{label}</span>
+   822	                </article>
+   823	              ))}
+   824	            </div>
+   825	
+   826	            <div className={styles.darkBandActions}>
+   827	                <Link href="/cotizacion?servicio=transporte-aereo">
+   828	                  {locale === "es" ? "Cotizar carga aérea" : locale === "en" ? "Quote air cargo" : "获取空运报价"}
+   829	                </Link>
+   830	                <Link href="/contacto?servicio=transporte-aereo">
+
+===== MARITIMO PAGE 720-930 =====
+   720	                    <Icon name={icons[index]} />
+   721	                  </i>
+   722	                  <span>
+   723	                    <strong>{title}</strong>
+   724	                    <small>{text}</small>
+   725	                  </span>
+   726	                </div>
+   727	              );
+   728	            })}
+   729	          </div>
+   730	        </section>
+   731	
+   732	        <Certifications />
+   733	
+   734	        <section className={styles.overview}>
+   735	          <div className={styles.overviewCopy}>
+   736	            <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
+   737	            <h2>{t.overviewTitle}</h2>
+   738	            <p>{t.overviewText}</p>
+   739	            <Link href="/tracking">{t.overviewButton}</Link>
+   740	          </div>
+   741	
+   742	          <div className={styles.pillars}>
+   743	            {t.pillars.map(([title, text]: string[], index: number) => {
+   744	              const icons: IconName[] = ["airport", "document", "tracking", "truck"];
+   745	
+   746	              return (
+   747	                <article key={title}>
+   748	                  <i>
+   749	                    <Icon name={icons[index]} />
+   750	                  </i>
+   751	                  <h3>{title}</h3>
+   752	                  <p>{text}</p>
+   753	                </article>
+   754	              );
+   755	            })}
+   756	          </div>
+   757	        </section>
+   758	
+   759	
+   760	        
+   761	
+   762	
+   763	
+   764	        <section className={styles.services} data-mobile-hide-after-cert="true">
+   765	          <div className={styles.sectionHead}>
+   766	            <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
+   767	            <h2>{t.servicesTitle}</h2>
+   768	          </div>
+   769	
+   770	          <div className={styles.serviceGrid}>
+   771	            {t.services.map(([title, text]: string[], index: number) => {
+   772	              const icons: IconName[] = ["plane", "box", "diamond", "charter", "globe", "door"];
+   773	
+   774	              return (
+   775	                <article key={title}>
+   776	                  <i>
+   777	                    <Icon name={icons[index]} />
+   778	                  </i>
+   779	                  <h3>{title}</h3>
+   780	                  <p>{text}</p>
+   781	                </article>
+   782	              );
+   783	            })}
+   784	          </div>
+   785	        </section>
+   786	
+   787	        <section className={styles.useCases} data-mobile-hide-after-cert="true">
+   788	          <div className={styles.sectionHead}>
+   789	            <span className={styles.eyebrow}>{t.useCasesEyebrow}</span>
+   790	            <h2>{t.useCasesTitle}</h2>
+   791	          </div>
+   792	
+   793	          <div className={styles.useCaseGrid}>
+   794	            {t.useCases.map(([title, text]: string[], index: number) => {
+   795	              const icons: IconName[] = ["gear", "laptop", "package", "medical", "cart", "document"];
+   796	
+   797	              return (
+   798	                <article key={title}>
+   799	                  <i>
+   800	                    <Icon name={icons[index]} />
+   801	                  </i>
+   802	                  <h3>{title}</h3>
+   803	                  <p>{text}</p>
+   804	                </article>
+   805	              );
+   806	            })}
+   807	          </div>
+   808	        </section>
+   809	
+   810	        <section className={`${styles.processAccordionSection} aereoProcessPremium`}>
+   811	          <div className={styles.processAccordionHead}>
+   812	            <span className={styles.eyebrow}>{t.processEyebrow}</span>
+   813	            <h2>{t.processTitle}</h2>
+   814	          </div>
+   815	          <style>{`
+   816	            /* AEREO_PROCESS_INLINE_FORCE */
+   817	            @media (max-width: 900px) {
+   818	              .aereoProcessPremium .aereoProcessCard {
+   819	                background: linear-gradient(145deg, #07111d 0%, #102f45 100%) !important;
+   820	                color: #fff !important;
+   821	              }
+   822	
+   823	              .aereoProcessPremium .aereoProcessTitle,
+   824	              .aereoProcessPremium .aereoProcessTitle *,
+   825	              .aereoProcessPremium .aereoProcessSummary,
+   826	              .aereoProcessPremium .aereoProcessSummary * {
+   827	                color: #fff !important;
+   828	                -webkit-text-fill-color: #fff !important;
+   829	                opacity: 1 !important;
+   830	                filter: none !important;
+   831	                mix-blend-mode: normal !important;
+   832	              }
+   833	
+   834	              .aereoProcessPremium .aereoProcessTitle small {
+   835	                color: rgba(255,255,255,.72) !important;
+   836	                -webkit-text-fill-color: rgba(255,255,255,.72) !important;
+   837	              }
+   838	
+   839	              .aereoProcessPremium .aereoProcessBody,
+   840	              .aereoProcessPremium .aereoProcessBody p {
+   841	                color: rgba(255,255,255,.78) !important;
+   842	                -webkit-text-fill-color: rgba(255,255,255,.78) !important;
+   843	              }
+   844	
+   845	              .aereoProcessPremium .aereoProcessBody a {
+   846	                color: #fff !important;
+   847	                -webkit-text-fill-color: #fff !important;
+   848	              }
+   849	
+   850	              .aereoProcessPremium .aereoProcessIcon::before,
+   851	              .aereoProcessPremium .aereoProcessIcon::after {
+   852	                background: #d6b36b !important;
+   853	              }
+   854	            }
+   855	          `}</style>
+   856	
+   857	          <div className={styles.processAccordionList}>
+   858	            {t.process.map(([title, text]: string[], index: number) => (
+   859	              <details className={`${styles.processAccordionCard} aereoProcessCard`} key={title}>
+   860	                <summary className={`${styles.processAccordionSummary} aereoProcessSummary`}>
+   861	                  <span className={styles.processAccordionNumber}>{index + 1}</span>
+   862	
+   863	                  <span className={`${styles.processAccordionTitle} aereoProcessTitle`}>
+   864	                    <strong>{title}</strong>
+   865	                    <small>{text}</small>
+   866	                  </span>
+   867	
+   868	                  <span className={`${styles.processAccordionIcon} aereoProcessIcon`} aria-hidden="true" />
+   869	                </summary>
+   870	
+   871	                <div className={`${styles.processAccordionBody} aereoProcessBody`}>
+   872	                  <p>
+   873	                    {locale === "es"
+   874	                      ? "Coordinamos ruta, documentación, tiempos y seguimiento operativo según la urgencia de la carga."
+   875	                      : locale === "en"
+   876	                        ? "We coordinate route, documentation, timing and operational tracking according to cargo urgency."
+   877	                        : "我们根据货物紧急程度协调路线、文件、时间和操作跟踪。"}
+   878	                  </p>
+   879	
+   880	                  <Link href="/cotizacion?servicio=transporte-maritimo">
+   881	                    {locale === "es" ? "Cotizar esta modalidad" : locale === "en" ? "Quote this option" : "获取报价"}
+   882	                  </Link>
+   883	                </div>
+   884	              </details>
+   885	            ))}          </div>
+   886	
+   887	          <div className={styles.processAccordionActions}>
+   888	            <div>
+   889	              <strong>
+   890	                {locale === "es"
+   891	                  ? "¿Tenés un embarque marítimo en curso?"
+   892	                  : locale === "en"
+   893	                    ? "Do you have an ocean shipment in progress?"
+   894	                    : "您是否有正在进行的海运操作？"}
+   895	              </strong>
+   896	              <p>
+   897	                {locale === "es"
+   898	                  ? "Coordinamos ruta marítima, documentación, booking y seguimiento para que tu carga avance sin fricción."
+   899	                  : locale === "en"
+   900	                    ? "We coordinate ocean routing, documentation, booking and tracking so your cargo moves without friction."
+   901	                    : "我们协调海运路线、文件、订舱和跟踪，确保您的货物顺利推进。"}
+   902	              </p>
+   903	            </div>
+   904	
+   905	            <div>
+   906	              <Link href="/cotizacion?servicio=transporte-maritimo">
+   907	                {locale === "es" ? "Cotizar carga marítima" : locale === "en" ? "Quote ocean freight" : "获取海运报价"}
+   908	              </Link>
+   909	
+   910	              <Link href="/contacto?servicio=transporte-maritimo">
+   911	                {locale === "es" ? "Hablar con especialista" : locale === "en" ? "Talk to a specialist" : "联系顾问"}
+   912	              </Link>
+   913	            </div>
+   914	          </div>
+   915	
+   916	        </section>
+   917	
+   918	<section className={styles.darkBand} data-mobile-hide-after-cert="true">
+   919	          <div className={styles.darkBandImage}>
+   920	            <Image
+   921	              src="/images/transporte-maritimo-desktop/1.png"
+   922	              alt={t.bandTitle}
+   923	              fill
+   924	              sizes="(max-width: 900px) 100vw, 42vw"
+   925	            />
+   926	          </div>
+   927	
+   928	          <div className={styles.darkBandContent}>
+   929	            <h2>{t.bandTitle}</h2>
+   930	            <p>{t.bandText}</p>
+
+===== AEREO CSS 11180-12240 =====
+ 11180	  }
+ 11181	
+ 11182	  .mobileStickyCta {
+ 11183	    background: #07101a !important;
+ 11184	    border-top: 1px solid rgba(255,255,255,.08) !important;
+ 11185	  }
+ 11186	}
+ 11187	
+ 11188	/* END AEREO FINAL CLEAN SINGLE SOURCE 2 */
+ 11189	
+ 11190	
+ 11191	
+ 11192	
+ 11193	
+ 11194	
+ 11195	
+ 11196	
+ 11197	
+ 11198	
+ 11199	
+ 11200	
+ 11201	
+ 11202	
+ 11203	
+ 11204	
+ 11205	/* === AEREO SERVICES WIDTH ICONS PAGE MATCH FINAL === */
+ 11206	
+ 11207	@media (min-width: 1181px) {
+ 11208	  /*
+ 11209	    Services debe respetar el mismo ancho visual de la página:
+ 11210	    1180px, no 1360px.
+ 11211	  */
+ 11212	
+ 11213	  .page .services {
+ 11214	    position: relative !important;
+ 11215	    isolation: isolate !important;
+ 11216	
+ 11217	    width: min(1180px, calc(100% - 40px)) !important;
+ 11218	    max-width: 1180px !important;
+ 11219	    margin: 4.8rem auto 5.2rem !important;
+ 11220	    padding: 0 !important;
+ 11221	    transform: none !important;
+ 11222	
+ 11223	    background: transparent !important;
+ 11224	    background-color: transparent !important;
+ 11225	    background-image: none !important;
+ 11226	    color: #07101a !important;
+ 11227	
+ 11228	    overflow: visible !important;
+ 11229	    border: 0 !important;
+ 11230	    box-shadow: none !important;
+ 11231	  }
+ 11232	
+ 11233	  .page .services::before {
+ 11234	    content: none !important;
+ 11235	    display: none !important;
+ 11236	  }
+ 11237	
+ 11238	  .page .services::after {
+ 11239	    content: "" !important;
+ 11240	    position: absolute !important;
+ 11241	    right: 0 !important;
+ 11242	    top: -1.1rem !important;
+ 11243	    width: 150px !important;
+ 11244	    height: 100px !important;
+ 11245	    opacity: .18 !important;
+ 11246	    background-image: radial-gradient(rgba(23, 50, 71, .34) 1px, transparent 1px) !important;
+ 11247	    background-size: 12px 12px !important;
+ 11248	    pointer-events: none !important;
+ 11249	  }
+ 11250	
+ 11251	  .page .services,
+ 11252	  .page .services * {
+ 11253	    font-family: inherit !important;
+ 11254	    text-shadow: none !important;
+ 11255	    filter: none !important;
+ 11256	    mix-blend-mode: normal !important;
+ 11257	  }
+ 11258	
+ 11259	  .page .services > * {
+ 11260	    position: relative !important;
+ 11261	    z-index: 2 !important;
+ 11262	  }
+ 11263	
+ 11264	  .page .services .sectionHead {
+ 11265	    position: relative !important;
+ 11266	    width: 100% !important;
+ 11267	    max-width: none !important;
+ 11268	    margin: 0 0 2rem !important;
+ 11269	    padding: 0 !important;
+ 11270	
+ 11271	    display: grid !important;
+ 11272	    grid-template-columns: minmax(0, 620px) minmax(330px, 420px) !important;
+ 11273	    justify-content: space-between !important;
+ 11274	    column-gap: 4rem !important;
+ 11275	    align-items: end !important;
+ 11276	    text-align: left !important;
+ 11277	  }
+ 11278	
+ 11279	  .page .services .sectionHead::before {
+ 11280	    content: "" !important;
+ 11281	    position: absolute !important;
+ 11282	    left: -18px !important;
+ 11283	    top: -14px !important;
+ 11284	    width: 30px !important;
+ 11285	    height: 68px !important;
+ 11286	    border-left: 1px solid rgba(214, 179, 107, .72) !important;
+ 11287	    border-top: 1px solid rgba(214, 179, 107, .72) !important;
+ 11288	    border-bottom: 1px solid rgba(214, 179, 107, .28) !important;
+ 11289	    border-radius: 10px 0 0 10px !important;
+ 11290	    pointer-events: none !important;
+ 11291	  }
+ 11292	
+ 11293	  .page .services .sectionHead::after {
+ 11294	    content: "Diseñamos soluciones a medida para que tu carga llegue más rápido, segura y donde la necesites." !important;
+ 11295	
+ 11296	    display: block !important;
+ 11297	    max-width: 420px !important;
+ 11298	    padding-bottom: .52rem !important;
+ 11299	
+ 11300	    color: rgba(7, 17, 29, .78) !important;
+ 11301	    -webkit-text-fill-color: rgba(7, 17, 29, .78) !important;
+ 11302	    font-size: .95rem !important;
+ 11303	    line-height: 1.55 !important;
+ 11304	    font-weight: 650 !important;
+ 11305	    letter-spacing: 0 !important;
+ 11306	
+ 11307	    border-bottom: 2px solid rgba(214, 179, 107, .78) !important;
+ 11308	  }
+ 11309	
+ 11310	  .page .services .eyebrow {
+ 11311	    display: inline-flex !important;
+ 11312	    margin: 0 0 .7rem !important;
+ 11313	
+ 11314	    color: #b99545 !important;
+ 11315	    -webkit-text-fill-color: #b99545 !important;
+ 11316	    font-size: .72rem !important;
+ 11317	    font-weight: 950 !important;
+ 11318	    line-height: 1 !important;
+ 11319	    letter-spacing: .17em !important;
+ 11320	    text-transform: uppercase !important;
+ 11321	  }
+ 11322	
+ 11323	  .page .services .sectionHead h2 {
+ 11324	    max-width: 620px !important;
+ 11325	    margin: 0 !important;
+ 11326	
+ 11327	    color: #07101a !important;
+ 11328	    -webkit-text-fill-color: #07101a !important;
+ 11329	    font-size: clamp(2.55rem, 3.15vw, 3.7rem) !important;
+ 11330	    line-height: .96 !important;
+ 11331	    letter-spacing: -.055em !important;
+ 11332	    font-weight: 950 !important;
+ 11333	    text-align: left !important;
+ 11334	  }
+ 11335	
+ 11336	  .page .services .serviceGrid {
+ 11337	    width: 100% !important;
+ 11338	    max-width: none !important;
+ 11339	    margin: 0 !important;
+ 11340	
+ 11341	    display: grid !important;
+ 11342	    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+ 11343	    gap: 1rem !important;
+ 11344	
+ 11345	    border: 0 !important;
+ 11346	    background: transparent !important;
+ 11347	    background-image: none !important;
+ 11348	    box-shadow: none !important;
+ 11349	  }
+ 11350	
+ 11351	  .page .services .serviceGrid article {
+ 11352	    position: relative !important;
+ 11353	    min-height: 188px !important;
+ 11354	    padding: 1.35rem 1.1rem 1.35rem !important;
+ 11355	    text-align: left !important;
+ 11356	
+ 11357	    border-radius: 18px !important;
+ 11358	    border: 1px solid rgba(23, 50, 71, .12) !important;
+ 11359	
+ 11360	    background:
+ 11361	      radial-gradient(circle at 88% 12%, rgba(214,179,107,.10), transparent 7rem),
+ 11362	      linear-gradient(180deg, rgba(255,255,255,.96) 0%, rgba(248,245,239,.94) 100%) !important;
+ 11363	
+ 11364	    box-shadow:
+ 11365	      0 20px 52px rgba(7, 17, 29, .07),
+ 11366	      inset 0 1px 0 rgba(255,255,255,.9) !important;
+ 11367	
+ 11368	    overflow: hidden !important;
+ 11369	  }
+ 11370	
+ 11371	  .page .services .serviceGrid article::before {
+ 11372	    content: "" !important;
+ 11373	    position: absolute !important;
+ 11374	    left: 0 !important;
+ 11375	    top: 0 !important;
+ 11376	    bottom: 0 !important;
+ 11377	    width: 4px !important;
+ 11378	    background: linear-gradient(180deg, #173247 0%, #d6b36b 100%) !important;
+ 11379	  }
+ 11380	
+ 11381	  .page .services .serviceGrid article::after {
+ 11382	    content: "→" !important;
+ 11383	    position: absolute !important;
+ 11384	    right: 1rem !important;
+ 11385	    bottom: .9rem !important;
+ 11386	
+ 11387	    color: #b99545 !important;
+ 11388	    -webkit-text-fill-color: #b99545 !important;
+ 11389	    font-size: 1rem !important;
+ 11390	    font-weight: 950 !important;
+ 11391	    text-shadow: none !important;
+ 11392	  }
+ 11393	
+ 11394	  /*
+ 11395	    Íconos iguales al sistema de arriba:
+ 11396	    48x48, azul corporativo, borde circular.
+ 11397	  */
+ 11398	  .page .services .serviceGrid i {
+ 11399	    display: inline-grid !important;
+ 11400	    place-items: center !important;
+ 11401	
+ 11402	    width: 48px !important;
+ 11403	    height: 48px !important;
+ 11404	    margin: 0 0 1.1rem !important;
+ 11405	
+ 11406	    color: #173247 !important;
+ 11407	    background: rgba(23, 50, 71, .035) !important;
+ 11408	    border: 1px solid rgba(23, 50, 71, .5) !important;
+ 11409	    border-radius: 999px !important;
+ 11410	
+ 11411	    font-style: normal !important;
+ 11412	    font-size: 1.3rem !important;
+ 11413	    font-weight: 900 !important;
+ 11414	
+ 11415	    box-shadow: none !important;
+ 11416	  }
+ 11417	
+ 11418	  .page .services .serviceGrid i svg {
+ 11419	    width: 100% !important;
+ 11420	    height: 100% !important;
+ 11421	    display: block !important;
+ 11422	    stroke: currentColor !important;
+ 11423	  }
+ 11424	
+ 11425	  .page .services .serviceGrid h3 {
+ 11426	    max-width: 170px !important;
+ 11427	    margin: 0 !important;
+ 11428	
+ 11429	    color: #07101a !important;
+ 11430	    -webkit-text-fill-color: #07101a !important;
+ 11431	    font-size: .95rem !important;
+ 11432	    line-height: 1.14 !important;
+ 11433	    letter-spacing: -.025em !important;
+ 11434	    font-weight: 950 !important;
+ 11435	    text-align: left !important;
+ 11436	  }
+ 11437	
+ 11438	  .page .services .serviceGrid p {
+ 11439	    max-width: 170px !important;
+ 11440	    margin: .68rem 0 0 !important;
+ 11441	
+ 11442	    color: rgba(7, 17, 29, .68) !important;
+ 11443	    -webkit-text-fill-color: rgba(7, 17, 29, .68) !important;
+ 11444	    font-size: .8rem !important;
+ 11445	    line-height: 1.5 !important;
+ 11446	    font-weight: 520 !important;
+ 11447	    text-align: left !important;
+ 11448	  }
+ 11449	}
+ 11450	
+ 11451	@media (min-width: 901px) and (max-width: 1180px) {
+ 11452	  .page .services {
+ 11453	    width: min(980px, calc(100% - 56px)) !important;
+ 11454	    max-width: 980px !important;
+ 11455	    margin: 4.4rem auto 4.8rem !important;
+ 11456	    padding: 0 !important;
+ 11457	    transform: none !important;
+ 11458	    background: transparent !important;
+ 11459	    background-image: none !important;
+ 11460	  }
+ 11461	
+ 11462	  .page .services::before,
+ 11463	  .page .services::after,
+ 11464	  .page .services .sectionHead::before,
+ 11465	  .page .services .sectionHead::after {
+ 11466	    content: none !important;
+ 11467	    display: none !important;
+ 11468	  }
+ 11469	
+ 11470	  .page .services .sectionHead {
+ 11471	    display: block !important;
+ 11472	    max-width: 760px !important;
+ 11473	    margin: 0 0 2rem !important;
+ 11474	    padding: 0 !important;
+ 11475	    text-align: left !important;
+ 11476	  }
+ 11477	
+ 11478	  .page .services .sectionHead h2 {
+ 11479	    max-width: 680px !important;
+ 11480	    color: #07101a !important;
+ 11481	    -webkit-text-fill-color: #07101a !important;
+ 11482	    font-size: clamp(2.45rem, 4.4vw, 3.7rem) !important;
+ 11483	    line-height: .96 !important;
+ 11484	    letter-spacing: -.055em !important;
+ 11485	    text-shadow: none !important;
+ 11486	  }
+ 11487	
+ 11488	  .page .services .serviceGrid {
+ 11489	    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+ 11490	    gap: 1rem !important;
+ 11491	  }
+ 11492	}
+ 11493	
+ 11494	/* END AEREO SERVICES WIDTH ICONS PAGE MATCH FINAL */
+ 11495	
+ 11496	/* === AEREO SERVICES TITLE LEFT STATIC CARDS FINAL === */
+ 11497	
+ 11498	@media (min-width: 1181px) {
+ 11499	  /* Header: título izquierda, texto derecha */
+ 11500	  .page .services .sectionHead {
+ 11501	    display: grid !important;
+ 11502	    grid-template-columns: minmax(0, 620px) minmax(320px, 420px) !important;
+ 11503	    grid-template-rows: auto auto !important;
+ 11504	    justify-content: space-between !important;
+ 11505	    align-items: end !important;
+ 11506	    column-gap: 4rem !important;
+ 11507	    text-align: left !important;
+ 11508	  }
+ 11509	
+ 11510	  .page .services .sectionHead .eyebrow {
+ 11511	    grid-column: 1 !important;
+ 11512	    grid-row: 1 !important;
+ 11513	  }
+ 11514	
+ 11515	  .page .services .sectionHead h2 {
+ 11516	    grid-column: 1 !important;
+ 11517	    grid-row: 2 !important;
+ 11518	    max-width: 620px !important;
+ 11519	    margin: 0 !important;
+ 11520	    text-align: left !important;
+ 11521	  }
+ 11522	
+ 11523	  .page .services .sectionHead::after {
+ 11524	    grid-column: 2 !important;
+ 11525	    grid-row: 1 / 3 !important;
+ 11526	    align-self: end !important;
+ 11527	    justify-self: end !important;
+ 11528	    max-width: 420px !important;
+ 11529	  }
+ 11530	
+ 11531	  /* Cards: no parecen botones ni enlaces */
+ 11532	  .page .services .serviceGrid article {
+ 11533	    cursor: default !important;
+ 11534	  }
+ 11535	
+ 11536	  .page .services .serviceGrid article::after {
+ 11537	    content: none !important;
+ 11538	    display: none !important;
+ 11539	  }
+ 11540	
+ 11541	  .page .services .serviceGrid article:hover {
+ 11542	    transform: none !important;
+ 11543	  }
+ 11544	
+ 11545	  /* Íconos iguales al sistema de arriba, sin exagerar */
+ 11546	  .page .services .serviceGrid i {
+ 11547	    width: 48px !important;
+ 11548	    height: 48px !important;
+ 11549	    color: #173247 !important;
+ 11550	    background: rgba(23, 50, 71, .035) !important;
+ 11551	    border: 1px solid rgba(23, 50, 71, .5) !important;
+ 11552	    box-shadow: none !important;
+ 11553	  }
+ 11554	
+ 11555	  .page .services .serviceGrid i svg {
+ 11556	    width: 100% !important;
+ 11557	    height: 100% !important;
+ 11558	  }
+ 11559	}
+ 11560	
+ 11561	/* END AEREO SERVICES TITLE LEFT STATIC CARDS FINAL */
+ 11562	
+ 11563	
+ 11564	
+ 11565	
+ 11566	
+ 11567	/* === AEREO PROCESS CLEAN RESET ONLY === */
+ 11568	
+ 11569	.processDesktopSection {
+ 11570	  display: none !important;
+ 11571	}
+ 11572	
+ 11573	@media (min-width: 901px) {
+ 11574	  .page .processAccordionSection {
+ 11575	    display: block !important;
+ 11576	    width: min(1180px, calc(100% - 40px)) !important;
+ 11577	    max-width: 1180px !important;
+ 11578	    margin: 5.2rem auto !important;
+ 11579	    padding: 0 !important;
+ 11580	    border: 0 !important;
+ 11581	    border-radius: 0 !important;
+ 11582	    background: transparent !important;
+ 11583	    background-image: none !important;
+ 11584	    box-shadow: none !important;
+ 11585	    overflow: visible !important;
+ 11586	  }
+ 11587	
+ 11588	  .page .processAccordionSection::before,
+ 11589	  .page .processAccordionSection::after {
+ 11590	    content: none !important;
+ 11591	    display: none !important;
+ 11592	  }
+ 11593	
+ 11594	  .page .processAccordionHead {
+ 11595	    max-width: 780px !important;
+ 11596	    margin: 0 0 2.2rem !important;
+ 11597	    text-align: left !important;
+ 11598	  }
+ 11599	
+ 11600	  .page .processAccordionHead h2 {
+ 11601	    color: #07101a !important;
+ 11602	    -webkit-text-fill-color: #07101a !important;
+ 11603	    text-shadow: none !important;
+ 11604	  }
+ 11605	
+ 11606	  .page .processAccordionList {
+ 11607	    display: grid !important;
+ 11608	    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+ 11609	    gap: 1rem !important;
+ 11610	    border: 0 !important;
+ 11611	    background: transparent !important;
+ 11612	  }
+ 11613	
+ 11614	  .page .processAccordionCard {
+ 11615	    border: 1px solid rgba(23,50,71,.12) !important;
+ 11616	    border-radius: 22px !important;
+ 11617	    background: rgba(255,255,255,.88) !important;
+ 11618	    box-shadow: 0 18px 52px rgba(7,17,29,.06) !important;
+ 11619	    overflow: hidden !important;
+ 11620	  }
+ 11621	
+ 11622	  .page .processAccordionSummary {
+ 11623	    border: 0 !important;
+ 11624	    background: transparent !important;
+ 11625	  }
+ 11626	
+ 11627	  .page .processAccordionCard[open] {
+ 11628	    background: rgba(255,255,255,.94) !important;
+ 11629	    border-color: rgba(214,179,107,.42) !important;
+ 11630	  }
+ 11631	
+ 11632	  .page .processAccordionCard[open] .processAccordionTitle strong,
+ 11633	  .page .processAccordionTitle strong {
+ 11634	    color: #07101a !important;
+ 11635	    -webkit-text-fill-color: #07101a !important;
+ 11636	    text-shadow: none !important;
+ 11637	  }
+ 11638	
+ 11639	  .page .processAccordionCard[open] .processAccordionTitle small,
+ 11640	  .page .processAccordionTitle small,
+ 11641	  .page .processAccordionBody p {
+ 11642	    color: rgba(7,17,29,.68) !important;
+ 11643	    -webkit-text-fill-color: rgba(7,17,29,.68) !important;
+ 11644	    text-shadow: none !important;
+ 11645	  }
+ 11646	
+ 11647	  .page .processAccordionBody a {
+ 11648	    color: #173247 !important;
+ 11649	    -webkit-text-fill-color: #173247 !important;
+ 11650	  }
+ 11651	}
+ 11652	
+ 11653	/* END AEREO PROCESS CLEAN RESET ONLY */
+ 11654	
+ 11655	/* === AEREO PROCESS ACCORDION CLEAN PREMIUM FINAL === */
+ 11656	
+ 11657	@media (min-width: 901px) {
+ 11658	  .page .processAccordionSection {
+ 11659	    width: min(1180px, calc(100% - 40px)) !important;
+ 11660	    max-width: 1180px !important;
+ 11661	    margin: 5.8rem auto 5.8rem !important;
+ 11662	    padding: 0 !important;
+ 11663	    background: transparent !important;
+ 11664	    background-image: none !important;
+ 11665	    border: 0 !important;
+ 11666	    border-radius: 0 !important;
+ 11667	    box-shadow: none !important;
+ 11668	    overflow: visible !important;
+ 11669	  }
+ 11670	
+ 11671	  .page .processAccordionHead {
+ 11672	    max-width: 760px !important;
+ 11673	    margin: 0 0 2rem !important;
+ 11674	    text-align: left !important;
+ 11675	  }
+ 11676	
+ 11677	  .page .processAccordionHead h2 {
+ 11678	    max-width: 760px !important;
+ 11679	    color: #07101a !important;
+ 11680	    -webkit-text-fill-color: #07101a !important;
+ 11681	    text-shadow: none !important;
+ 11682	    font-size: clamp(2.35rem, 3.15vw, 3.65rem) !important;
+ 11683	    line-height: .96 !important;
+ 11684	    letter-spacing: -.055em !important;
+ 11685	  }
+ 11686	
+ 11687	  .page .processAccordionList {
+ 11688	    display: grid !important;
+ 11689	    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+ 11690	    gap: 1rem !important;
+ 11691	    border: 0 !important;
+ 11692	    background: transparent !important;
+ 11693	  }
+ 11694	
+ 11695	  .page .processAccordionCard {
+ 11696	    position: relative !important;
+ 11697	    min-height: 150px !important;
+ 11698	    border-radius: 20px !important;
+ 11699	    border: 1px solid rgba(23, 50, 71, .12) !important;
+ 11700	    background:
+ 11701	      radial-gradient(circle at 90% 10%, rgba(214,179,107,.10), transparent 7rem),
+ 11702	      linear-gradient(180deg, rgba(255,255,255,.96), rgba(248,245,239,.95)) !important;
+ 11703	    box-shadow: 0 18px 52px rgba(7,17,29,.06) !important;
+ 11704	    overflow: hidden !important;
+ 11705	  }
+ 11706	
+ 11707	  .page .processAccordionCard::before {
+ 11708	    content: "" !important;
+ 11709	    position: absolute !important;
+ 11710	    left: 0 !important;
+ 11711	    top: 0 !important;
+ 11712	    bottom: 0 !important;
+ 11713	    width: 4px !important;
+ 11714	    background: linear-gradient(180deg, #173247, #d6b36b) !important;
+ 11715	  }
+ 11716	
+ 11717	  .page .processAccordionSummary {
+ 11718	    min-height: 150px !important;
+ 11719	    padding: 1.25rem 1.15rem 1.2rem 1.35rem !important;
+ 11720	    display: grid !important;
+ 11721	    grid-template-columns: minmax(0, 1fr) 2rem !important;
+ 11722	    gap: 1rem !important;
+ 11723	    align-items: center !important;
+ 11724	    background: transparent !important;
+ 11725	    border: 0 !important;
+ 11726	    outline: none !important;
+ 11727	    cursor: pointer !important;
+ 11728	  }
+ 11729	
+ 11730	  .page .processAccordionSummary:focus,
+ 11731	  .page .processAccordionSummary:focus-visible {
+ 11732	    outline: none !important;
+ 11733	    box-shadow: none !important;
+ 11734	  }
+ 11735	
+ 11736	  .page .processAccordionNumber {
+ 11737	    display: none !important;
+ 11738	  }
+ 11739	
+ 11740	  .page .processAccordionTitle strong {
+ 11741	    max-width: 250px !important;
+ 11742	    color: #07101a !important;
+ 11743	    -webkit-text-fill-color: #07101a !important;
+ 11744	    font-size: 1rem !important;
+ 11745	    line-height: 1.12 !important;
+ 11746	    letter-spacing: -.025em !important;
+ 11747	    font-weight: 950 !important;
+ 11748	    text-align: left !important;
+ 11749	    text-shadow: none !important;
+ 11750	  }
+ 11751	
+ 11752	  .page .processAccordionTitle small {
+ 11753	    max-width: 255px !important;
+ 11754	    margin-top: .48rem !important;
+ 11755	    color: rgba(7,17,29,.66) !important;
+ 11756	    -webkit-text-fill-color: rgba(7,17,29,.66) !important;
+ 11757	    font-size: .84rem !important;
+ 11758	    line-height: 1.5 !important;
+ 11759	    font-weight: 520 !important;
+ 11760	    text-align: left !important;
+ 11761	    text-shadow: none !important;
+ 11762	  }
+ 11763	
+ 11764	  .page .processAccordionIcon {
+ 11765	    width: 1.85rem !important;
+ 11766	    height: 1.85rem !important;
+ 11767	    border-radius: 999px !important;
+ 11768	    border: 1px solid rgba(23,50,71,.22) !important;
+ 11769	    background: rgba(255,255,255,.72) !important;
+ 11770	    box-shadow: none !important;
+ 11771	  }
+ 11772	
+ 11773	  .page .processAccordionIcon::before,
+ 11774	  .page .processAccordionIcon::after {
+ 11775	    background: #173247 !important;
+ 11776	  }
+ 11777	
+ 11778	  .page .processAccordionCard[open] {
+ 11779	    border-color: rgba(214,179,107,.46) !important;
+ 11780	    background:
+ 11781	      radial-gradient(circle at 90% 10%, rgba(214,179,107,.15), transparent 7rem),
+ 11782	      linear-gradient(180deg, #ffffff, #f8f5ef) !important;
+ 11783	  }
+ 11784	
+ 11785	  .page .processAccordionCard[open] .processAccordionSummary {
+ 11786	    min-height: 116px !important;
+ 11787	    border-bottom: 1px solid rgba(23,50,71,.10) !important;
+ 11788	  }
+ 11789	
+ 11790	  .page .processAccordionBody {
+ 11791	    padding: 1rem 1.25rem 1.25rem 1.35rem !important;
+ 11792	    margin: 0 !important;
+ 11793	  }
+ 11794	
+ 11795	  .page .processAccordionBody p {
+ 11796	    max-width: 290px !important;
+ 11797	    margin: 0 !important;
+ 11798	    color: rgba(7,17,29,.68) !important;
+ 11799	    -webkit-text-fill-color: rgba(7,17,29,.68) !important;
+ 11800	    font-size: .84rem !important;
+ 11801	    line-height: 1.52 !important;
+ 11802	    font-weight: 520 !important;
+ 11803	    text-shadow: none !important;
+ 11804	  }
+ 11805	
+ 11806	  .page .processAccordionBody a {
+ 11807	    display: none !important;
+ 11808	  }
+ 11809	}
+ 11810	
+ 11811	/* END AEREO PROCESS ACCORDION CLEAN PREMIUM FINAL */
+ 11812	
+ 11813	/* === AEREO PROCESS CTA FINAL === */
+ 11814	
+ 11815	.processAccordionActions {
+ 11816	  margin-top: 1.8rem;
+ 11817	  padding: 1.15rem 1.25rem;
+ 11818	  display: flex;
+ 11819	  align-items: center;
+ 11820	  justify-content: space-between;
+ 11821	  gap: 1.25rem;
+ 11822	
+ 11823	  border-radius: 22px;
+ 11824	  border: 1px solid rgba(23, 50, 71, .12);
+ 11825	  background:
+ 11826	    radial-gradient(circle at 96% 10%, rgba(214,179,107,.12), transparent 10rem),
+ 11827	    linear-gradient(180deg, rgba(255,255,255,.88), rgba(248,245,239,.92));
+ 11828	  box-shadow: 0 18px 52px rgba(7,17,29,.055);
+ 11829	}
+ 11830	
+ 11831	.processAccordionActions strong {
+ 11832	  display: block;
+ 11833	  color: #07101a;
+ 11834	  font-size: 1rem;
+ 11835	  line-height: 1.15;
+ 11836	  letter-spacing: -.025em;
+ 11837	  font-weight: 950;
+ 11838	}
+ 11839	
+ 11840	.processAccordionActions p {
+ 11841	  max-width: 560px;
+ 11842	  margin: .35rem 0 0;
+ 11843	  color: rgba(7,17,29,.66);
+ 11844	  font-size: .86rem;
+ 11845	  line-height: 1.5;
+ 11846	  font-weight: 520;
+ 11847	}
+ 11848	
+ 11849	.processAccordionActions > div:last-child {
+ 11850	  display: flex;
+ 11851	  gap: .75rem;
+ 11852	  flex-shrink: 0;
+ 11853	}
+ 11854	
+ 11855	.processAccordionActions a {
+ 11856	  min-height: 2.85rem;
+ 11857	  padding: 0 1.15rem;
+ 11858	
+ 11859	  display: inline-flex;
+ 11860	  align-items: center;
+ 11861	  justify-content: center;
+ 11862	
+ 11863	  border-radius: 999px;
+ 11864	  text-decoration: none;
+ 11865	  text-transform: uppercase;
+ 11866	
+ 11867	  font-size: .7rem;
+ 11868	  font-weight: 950;
+ 11869	  letter-spacing: .045em;
+ 11870	  white-space: nowrap;
+ 11871	}
+ 11872	
+ 11873	.processAccordionActions a:first-child {
+ 11874	  background: #173247;
+ 11875	  color: #fff;
+ 11876	  border: 1px solid rgba(214,179,107,.42);
+ 11877	  box-shadow: 0 14px 32px rgba(23,50,71,.24);
+ 11878	}
+ 11879	
+ 11880	.processAccordionActions a:first-child::after {
+ 11881	  content: "→";
+ 11882	  margin-left: .65rem;
+ 11883	}
+ 11884	
+ 11885	.processAccordionActions a:last-child {
+ 11886	  color: #173247;
+ 11887	  background: transparent;
+ 11888	  border: 1px solid rgba(23,50,71,.24);
+ 11889	}
+ 11890	
+ 11891	@media (max-width: 900px) {
+ 11892	  .processAccordionActions {
+ 11893	    margin-top: 1.35rem;
+ 11894	    padding: 1rem;
+ 11895	    display: grid;
+ 11896	    gap: 1rem;
+ 11897	  }
+ 11898	
+ 11899	  .processAccordionActions > div:last-child {
+ 11900	    display: grid;
+ 11901	    grid-template-columns: 1fr;
+ 11902	  }
+ 11903	
+ 11904	  .processAccordionActions a {
+ 11905	    width: 100%;
+ 11906	  }
+ 11907	}
+ 11908	
+ 11909	/* END AEREO PROCESS CTA FINAL */
+ 11910	
+ 11911	/* === AEREO PROCESS CTA POSITION FIX === */
+ 11912	
+ 11913	.processAccordionActions {
+ 11914	  width: 100% !important;
+ 11915	  max-width: 100% !important;
+ 11916	  margin: 1.35rem 0 0 !important;
+ 11917	  box-sizing: border-box !important;
+ 11918	}
+ 11919	
+ 11920	@media (min-width: 901px) {
+ 11921	  .page .processAccordionActions {
+ 11922	    width: 100% !important;
+ 11923	    margin-top: 1.45rem !important;
+ 11924	  }
+ 11925	}
+ 11926	
+ 11927	/* END AEREO PROCESS CTA POSITION FIX */
+ 11928	
+ 11929	/* === AEREO DESKTOP BRAND UNIFIED POLISH FINAL === */
+ 11930	
+ 11931	/*
+ 11932	  Marca internacional:
+ 11933	  - fondo único crema en las primeras secciones
+ 11934	  - mismo ancho visual
+ 11935	  - líneas doradas divisorias
+ 11936	  - proceso más limpio
+ 11937	  - CTA de proceso profesional
+ 11938	*/
+ 11939	
+ 11940	.page {
+ 11941	  background: #f4f1eb !important;
+ 11942	}
+ 11943	
+ 11944	@media (min-width: 901px) {
+ 11945	  .page .overview,
+ 11946	  .page .services,
+ 11947	  .page .processAccordionSection,
+ 11948	  .page .faqSection {
+ 11949	    background-color: transparent !important;
+ 11950	  }
+ 11951	
+ 11952	  /* Misma caja visual para las primeras secciones */
+ 11953	  .page .overview,
+ 11954	  .page .services,
+ 11955	  .page .processAccordionSection {
+ 11956	    width: min(1180px, calc(100% - 40px)) !important;
+ 11957	    max-width: 1180px !important;
+ 11958	    margin-left: auto !important;
+ 11959	    margin-right: auto !important;
+ 11960	  }
+ 11961	
+ 11962	  /* Separadores dorados finos entre bloques */
+ 11963	  .page .overview,
+ 11964	  .page .services,
+ 11965	  .page .processAccordionSection {
+ 11966	    position: relative !important;
+ 11967	  }
+ 11968	
+ 11969	  .page .overview::after,
+ 11970	  .page .services::after,
+ 11971	  .page .processAccordionSection::after {
+ 11972	    content: "" !important;
+ 11973	    position: absolute !important;
+ 11974	    left: 0 !important;
+ 11975	    right: 0 !important;
+ 11976	    bottom: -2.9rem !important;
+ 11977	    height: 1px !important;
+ 11978	    background: linear-gradient(
+ 11979	      90deg,
+ 11980	      transparent 0%,
+ 11981	      rgba(214,179,107,.72) 16%,
+ 11982	      rgba(214,179,107,.42) 50%,
+ 11983	      rgba(214,179,107,.72) 84%,
+ 11984	      transparent 100%
+ 11985	    ) !important;
+ 11986	    pointer-events: none !important;
+ 11987	  }
+ 11988	
+ 11989	  .page .overview {
+ 11990	    margin-bottom: 5.7rem !important;
+ 11991	  }
+ 11992	
+ 11993	  .page .services {
+ 11994	    margin-top: 5.2rem !important;
+ 11995	    margin-bottom: 5.9rem !important;
+ 11996	  }
+ 11997	
+ 11998	  .page .processAccordionSection {
+ 11999	    margin-top: 5.4rem !important;
+ 12000	    margin-bottom: 5.8rem !important;
+ 12001	  }
+ 12002	
+ 12003	  /* Services: más compacto y con marca */
+ 12004	  .page .services .sectionHead {
+ 12005	    margin-bottom: 2.05rem !important;
+ 12006	  }
+ 12007	
+ 12008	  .page .services .sectionHead h2 {
+ 12009	    font-size: clamp(2.45rem, 3.05vw, 3.55rem) !important;
+ 12010	    line-height: .96 !important;
+ 12011	  }
+ 12012	
+ 12013	  .page .services .serviceGrid {
+ 12014	    gap: .95rem !important;
+ 12015	  }
+ 12016	
+ 12017	  .page .services .serviceGrid article {
+ 12018	    min-height: 178px !important;
+ 12019	    border-radius: 18px !important;
+ 12020	    background:
+ 12021	      radial-gradient(circle at 92% 10%, rgba(214,179,107,.09), transparent 7rem),
+ 12022	      linear-gradient(180deg, rgba(255,255,255,.94), rgba(248,245,239,.94)) !important;
+ 12023	    border: 1px solid rgba(23,50,71,.11) !important;
+ 12024	    box-shadow: 0 18px 46px rgba(7,17,29,.055) !important;
+ 12025	  }
+ 12026	
+ 12027	  .page .services .serviceGrid article::before {
+ 12028	    width: 3px !important;
+ 12029	    background: linear-gradient(180deg, #173247, #d6b36b) !important;
+ 12030	  }
+ 12031	
+ 12032	  .page .services .serviceGrid i {
+ 12033	    width: 44px !important;
+ 12034	    height: 44px !important;
+ 12035	    color: #173247 !important;
+ 12036	    background: rgba(255,255,255,.64) !important;
+ 12037	    border: 1px solid rgba(23,50,71,.38) !important;
+ 12038	  }
+ 12039	
+ 12040	  /* Proceso: quitar sensación de cards pegadas sin perder acordeón */
+ 12041	  .page .processAccordionSection {
+ 12042	    padding: 0 !important;
+ 12043	    border: 0 !important;
+ 12044	    border-radius: 0 !important;
+ 12045	    box-shadow: none !important;
+ 12046	    background: transparent !important;
+ 12047	    overflow: visible !important;
+ 12048	  }
+ 12049	
+ 12050	  .page .processAccordionHead {
+ 12051	    max-width: 780px !important;
+ 12052	    margin: 0 0 2.05rem !important;
+ 12053	    text-align: left !important;
+ 12054	  }
+ 12055	
+ 12056	  .page .processAccordionHead h2 {
+ 12057	    max-width: 760px !important;
+ 12058	    font-size: clamp(2.35rem, 3.05vw, 3.55rem) !important;
+ 12059	    line-height: .96 !important;
+ 12060	    letter-spacing: -.055em !important;
+ 12061	  }
+ 12062	
+ 12063	  .page .processAccordionList {
+ 12064	    display: grid !important;
+ 12065	    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+ 12066	    gap: .95rem !important;
+ 12067	    background: transparent !important;
+ 12068	    border: 0 !important;
+ 12069	  }
+ 12070	
+ 12071	  .page .processAccordionCard {
+ 12072	    min-height: 132px !important;
+ 12073	    border-radius: 18px !important;
+ 12074	    border: 1px solid rgba(23,50,71,.11) !important;
+ 12075	    background:
+ 12076	      radial-gradient(circle at 92% 10%, rgba(214,179,107,.08), transparent 7rem),
+ 12077	      linear-gradient(180deg, rgba(255,255,255,.94), rgba(248,245,239,.94)) !important;
+ 12078	    box-shadow: 0 18px 46px rgba(7,17,29,.055) !important;
+ 12079	  }
+ 12080	
+ 12081	  .page .processAccordionCard::before {
+ 12082	    content: "" !important;
+ 12083	    position: absolute !important;
+ 12084	    left: 0 !important;
+ 12085	    top: 0 !important;
+ 12086	    bottom: 0 !important;
+ 12087	    width: 3px !important;
+ 12088	    background: linear-gradient(180deg, #173247, #d6b36b) !important;
+ 12089	  }
+ 12090	
+ 12091	  .page .processAccordionSummary {
+ 12092	    min-height: 132px !important;
+ 12093	    padding: 1.15rem 1.05rem 1.1rem 1.2rem !important;
+ 12094	    grid-template-columns: minmax(0, 1fr) 1.85rem !important;
+ 12095	  }
+ 12096	
+ 12097	  .page .processAccordionTitle strong {
+ 12098	    font-size: .96rem !important;
+ 12099	    line-height: 1.13 !important;
+ 12100	  }
+ 12101	
+ 12102	  .page .processAccordionTitle small {
+ 12103	    font-size: .79rem !important;
+ 12104	    line-height: 1.46 !important;
+ 12105	  }
+ 12106	
+ 12107	  .page .processAccordionCard[open] {
+ 12108	    border-color: rgba(214,179,107,.48) !important;
+ 12109	    background:
+ 12110	      radial-gradient(circle at 92% 10%, rgba(214,179,107,.13), transparent 7rem),
+ 12111	      linear-gradient(180deg, #fff, #f8f5ef) !important;
+ 12112	  }
+ 12113	
+ 12114	  .page .processAccordionCard[open] .processAccordionSummary {
+ 12115	    min-height: 105px !important;
+ 12116	    border-bottom: 1px solid rgba(23,50,71,.10) !important;
+ 12117	  }
+ 12118	
+ 12119	  .page .processAccordionBody {
+ 12120	    padding: .85rem 1.1rem 1.1rem 1.2rem !important;
+ 12121	  }
+ 12122	
+ 12123	  .page .processAccordionBody p {
+ 12124	    max-width: 290px !important;
+ 12125	    font-size: .8rem !important;
+ 12126	    line-height: 1.5 !important;
+ 12127	  }
+ 12128	
+ 12129	  .page .processAccordionBody a {
+ 12130	    display: none !important;
+ 12131	  }
+ 12132	
+ 12133	  /* CTA del proceso: que parezca banda de marca, no una séptima card */
+ 12134	  .page .processAccordionActions {
+ 12135	    width: 100% !important;
+ 12136	    margin: 1.15rem 0 0 !important;
+ 12137	    padding: 1.05rem 1.15rem !important;
+ 12138	
+ 12139	    display: flex !important;
+ 12140	    align-items: center !important;
+ 12141	    justify-content: space-between !important;
+ 12142	    gap: 1.2rem !important;
+ 12143	
+ 12144	    border-radius: 18px !important;
+ 12145	    border: 1px solid rgba(23,50,71,.12) !important;
+ 12146	
+ 12147	    background:
+ 12148	      linear-gradient(135deg, rgba(7,16,26,.98), rgba(23,50,71,.96)) !important;
+ 12149	
+ 12150	    box-shadow: 0 18px 48px rgba(7,17,29,.16) !important;
+ 12151	  }
+ 12152	
+ 12153	  .page .processAccordionActions strong {
+ 12154	    color: #fff !important;
+ 12155	    -webkit-text-fill-color: #fff !important;
+ 12156	    font-size: .96rem !important;
+ 12157	    line-height: 1.15 !important;
+ 12158	    letter-spacing: -.02em !important;
+ 12159	  }
+ 12160	
+ 12161	  .page .processAccordionActions p {
+ 12162	    max-width: 560px !important;
+ 12163	    margin-top: .28rem !important;
+ 12164	    color: rgba(255,255,255,.72) !important;
+ 12165	    -webkit-text-fill-color: rgba(255,255,255,.72) !important;
+ 12166	    font-size: .82rem !important;
+ 12167	    line-height: 1.46 !important;
+ 12168	  }
+ 12169	
+ 12170	  .page .processAccordionActions > div:last-child {
+ 12171	    display: flex !important;
+ 12172	    gap: .65rem !important;
+ 12173	    flex-shrink: 0 !important;
+ 12174	  }
+ 12175	
+ 12176	  .page .processAccordionActions a {
+ 12177	    min-height: 2.65rem !important;
+ 12178	    padding: 0 1rem !important;
+ 12179	    border-radius: 999px !important;
+ 12180	    text-transform: uppercase !important;
+ 12181	    font-size: .66rem !important;
+ 12182	    font-weight: 950 !important;
+ 12183	    letter-spacing: .045em !important;
+ 12184	    text-decoration: none !important;
+ 12185	    white-space: nowrap !important;
+ 12186	  }
+ 12187	
+ 12188	  .page .processAccordionActions a:first-child {
+ 12189	    background: #fff !important;
+ 12190	    color: #173247 !important;
+ 12191	    -webkit-text-fill-color: #173247 !important;
+ 12192	    border: 1px solid rgba(214,179,107,.55) !important;
+ 12193	    box-shadow: none !important;
+ 12194	  }
+ 12195	
+ 12196	  .page .processAccordionActions a:last-child {
+ 12197	    color: #fff !important;
+ 12198	    -webkit-text-fill-color: #fff !important;
+ 12199	    background: transparent !important;
+ 12200	    border: 1px solid rgba(255,255,255,.28) !important;
+ 12201	  }
+ 12202	
+ 12203	  /* La banda oscura debe respirar después del bloque claro */
+ 12204	  .page .darkBand {
+ 12205	    margin-top: 5.4rem !important;
+ 12206	  }
+ 12207	}
+ 12208	
+ 12209	@media (max-width: 900px) {
+ 12210	  .page {
+ 12211	    background: #f4f1eb !important;
+ 12212	  }
+ 12213	
+ 12214	  .page .processAccordionActions {
+ 12215	    margin-top: 1rem !important;
+ 12216	    padding: 1rem !important;
+ 12217	    display: grid !important;
+ 12218	    gap: .9rem !important;
+ 12219	  }
+ 12220	
+ 12221	  .page .processAccordionActions > div:last-child {
+ 12222	    display: grid !important;
+ 12223	    grid-template-columns: 1fr !important;
+ 12224	    gap: .65rem !important;
+ 12225	  }
+ 12226	
+ 12227	  .page .processAccordionActions a {
+ 12228	    width: 100% !important;
+ 12229	  }
+ 12230	}
+ 12231	
+ 12232	/* END AEREO DESKTOP BRAND UNIFIED POLISH FINAL */
+ 12233	
+ 12234	
+ 12235	
+ 12236	
+ 12237	
+ 12238	
+ 12239	
+ 12240	/* === AEREO CERTIFICATIONS MEDIUM DESKTOP ONLY FINAL === */
+
+===== MARITIMO CSS 8800-10650 =====
+  8800	.page > .hero[data-service-hero-home="true"] [data-hero-role="desktop-image"],
+  8801	.page > .hero[data-service-hero-home="true"] [data-hero-role="mobile-image"],
+  8802	.page > .hero[data-service-hero-home="true"] [data-hero-role="video"] {
+  8803	  object-fit: cover !important;
+  8804	  object-position: center center !important;
+  8805	}
+  8806	
+  8807	.page > .hero[data-service-hero-home="true"] [data-hero-role="inner"],
+  8808	.page > .hero[data-service-hero-home="true"] .heroInner {
+  8809	  min-height: 100% !important;
+  8810	  height: 100% !important;
+  8811	  max-height: inherit !important;
+  8812	  padding-bottom: 112px !important;
+  8813	}
+  8814	
+  8815	.page > .hero[data-service-hero-home="true"] [data-hero-role="content"],
+  8816	.page > .hero[data-service-hero-home="true"] .heroContent {
+  8817	  position: relative !important;
+  8818	  z-index: 3 !important;
+  8819	}
+  8820	
+  8821	/* TrustBar integrada abajo como en el home */
+  8822	.page > .hero[data-service-hero-home="true"] + .trustBar,
+  8823	.page > .hero[data-service-hero-home="true"] + section[class*="trustBar"] {
+  8824	  position: relative !important;
+  8825	  z-index: 5 !important;
+  8826	  margin-top: -96px !important;
+  8827	  margin-bottom: 0 !important;
+  8828	}
+  8829	
+  8830	@media (max-width: 900px) {
+  8831	  .page > .hero[data-service-hero-home="true"] {
+  8832	    min-height: 86svh !important;
+  8833	    height: 86svh !important;
+  8834	    max-height: 760px !important;
+  8835	  }
+  8836	
+  8837	  .page > .hero[data-service-hero-home="true"] [data-hero-role="inner"],
+  8838	  .page > .hero[data-service-hero-home="true"] .heroInner {
+  8839	    padding-bottom: 0 !important;
+  8840	  }
+  8841	
+  8842	  .page > .hero[data-service-hero-home="true"] + .trustBar,
+  8843	  .page > .hero[data-service-hero-home="true"] + section[class*="trustBar"] {
+  8844	    margin-top: 0 !important;
+  8845	  }
+  8846	}
+  8847	
+  8848	@media (max-width: 520px) {
+  8849	  .page > .hero[data-service-hero-home="true"] {
+  8850	    min-height: 82svh !important;
+  8851	    height: 82svh !important;
+  8852	    max-height: 690px !important;
+  8853	  }
+  8854	}
+  8855	/* END ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL */
+  8856	
+  8857	/* =====================================================
+  8858	   ACROSS COMMAND BAR EXPORTS
+  8859	   Necesario para que CSS Modules exporte styles.commandBar/item.
+  8860	   El estilo visual real vive en globals.css.
+  8861	   ===================================================== */
+  8862	
+  8863	.commandBar {}
+  8864	.commandItem {}
+  8865	
+  8866	/* END ACROSS COMMAND BAR EXPORTS */
+  8867	
+  8868	/* ZZZ MARITIMO SERVICES LITERAL DARKBAND AUTOMOCION FINAL
+  8869	   Copia LITERAL del darkBand de Automoción.
+  8870	*/
+  8871	.page .services {
+  8872	  position: relative !important;
+  8873	  isolation: isolate !important;
+  8874	  background-color: rgba(0, 0, 0, 0) !important;
+  8875	  background-image: url("/images/sectores/automocion2.png") !important;
+  8876	  background-size: cover !important;
+  8877	  background-position: center center !important;
+  8878	  background-repeat: no-repeat !important;
+  8879	  background-blend-mode: normal !important;
+  8880	}
+  8881	
+  8882	.page .services::before {
+  8883	  content: "" !important;
+  8884	  opacity: 0 !important;
+  8885	  background: none !important;
+  8886	  background-image: none !important;
+  8887	}
+  8888	
+  8889	.page .services::after {
+  8890	  content: "" !important;
+  8891	  position: absolute !important;
+  8892	  inset: 0 !important;
+  8893	  z-index: 0 !important;
+  8894	  pointer-events: none !important;
+  8895	  opacity: 1 !important;
+  8896	  background:
+  8897	    radial-gradient(
+  8898	      circle at 82% 18%,
+  8899	      rgba(18, 63, 89, .42) 0%,
+  8900	      rgba(3, 10, 18, .20) 60%,
+  8901	      rgba(3, 10, 18, .45) 100%
+  8902	    ) !important;
+  8903	}
+  8904	
+  8905	.page .services > * {
+  8906	  position: relative !important;
+  8907	  z-index: 2 !important;
+  8908	}
+  8909	/* END ZZZ MARITIMO SERVICES LITERAL DARKBAND AUTOMOCION FINAL */
+  8910	
+  8911	/* ZZZ MARITIMO SERVICES SAME AS AUTOMOCION DARKBAND FINAL
+  8912	   Copia el sombreado/degradado de darkBand Automoción.
+  8913	   No copia la imagen de Automoción; conserva la imagen de fondo de Marítimo.
+  8914	*/
+  8915	.page .services {
+  8916	  position: relative !important;
+  8917	  isolation: isolate !important;
+  8918	  background-color: rgba(0, 0, 0, 0) !important;
+  8919	  background-blend-mode: normal !important;
+  8920	}
+  8921	
+  8922	.page .services::before {
+  8923	  content: "" !important;
+  8924	  opacity: 0 !important;
+  8925	  background: none !important;
+  8926	  background-image: none !important;
+  8927	}
+  8928	
+  8929	.page .services::after {
+  8930	  content: "" !important;
+  8931	  position: absolute !important;
+  8932	  inset: 0 !important;
+  8933	  pointer-events: none !important;
+  8934	  z-index: 0 !important;
+  8935	  opacity: 1 !important;
+  8936	  background:
+  8937	    radial-gradient(
+  8938	      circle at 82% 18%,
+  8939	      rgba(18, 63, 89, .42) 0%,
+  8940	      rgba(3, 10, 18, .20) 60%,
+  8941	      rgba(3, 10, 18, .45) 100%
+  8942	    ) !important;
+  8943	}
+  8944	
+  8945	.page .services > * {
+  8946	  position: relative !important;
+  8947	  z-index: 2 !important;
+  8948	}
+  8949	
+  8950	.page .services article,
+  8951	.page .services [class*="card"],
+  8952	.page .services [class*="Card"] {
+  8953	  background:
+  8954	    linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.018)) !important;
+  8955	  border: 1px solid rgba(244, 239, 229, .16) !important;
+  8956	  box-shadow: 0 14px 34px rgba(0,0,0,.18) !important;
+  8957	}
+  8958	/* END ZZZ MARITIMO SERVICES SAME AS AUTOMOCION DARKBAND FINAL */
+  8959	
+  8960	/* ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED
+  8961	   Tablet / iPad chico:
+  8962	   Orden aprobado:
+  8963	   1) texto
+  8964	   2) iconos/cards
+  8965	   3) botón abajo centrado
+  8966	*/
+  8967	@media (min-width: 701px) and (max-width: 900px) {
+  8968	  .page .overview {
+  8969	    display: flex !important;
+  8970	    flex-direction: column !important;
+  8971	    width: min(100% - 48px, 820px) !important;
+  8972	    margin: 2.6rem auto 3.2rem !important;
+  8973	    padding: 0 !important;
+  8974	    gap: 1.8rem !important;
+  8975	  }
+  8976	
+  8977	  .page .overviewCopy {
+  8978	    display: contents !important;
+  8979	  }
+  8980	
+  8981	  .page .airKicker {
+  8982	    order: 1 !important;
+  8983	    margin-bottom: -.9rem !important;
+  8984	  }
+  8985	
+  8986	  .page .overviewCopy > h2 {
+  8987	    order: 2 !important;
+  8988	    width: 100% !important;
+  8989	    max-width: 560px !important;
+  8990	    font-size: clamp(2.45rem, 5.4vw, 3.25rem) !important;
+  8991	    line-height: .92 !important;
+  8992	    letter-spacing: -.055em !important;
+  8993	    margin: 0 !important;
+  8994	    text-align: left !important;
+  8995	  }
+  8996	
+  8997	  .page .overviewCopy > p {
+  8998	    order: 3 !important;
+  8999	    width: 100% !important;
+  9000	    max-width: 560px !important;
+  9001	    font-size: .94rem !important;
+  9002	    line-height: 1.58 !important;
+  9003	    margin: 0 !important;
+  9004	    text-align: left !important;
+  9005	  }
+  9006	
+  9007	  .page .pillars {
+  9008	    order: 4 !important;
+  9009	    display: grid !important;
+  9010	    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  9011	    gap: 0 !important;
+  9012	    width: 100% !important;
+  9013	    margin-top: .35rem !important;
+  9014	  }
+  9015	
+  9016	  .page .pillars article {
+  9017	    min-height: 185px !important;
+  9018	    padding: 1rem .8rem !important;
+  9019	    border-left: 1px solid rgba(3, 18, 30, .12) !important;
+  9020	    border-right: 0 !important;
+  9021	    border-top: 0 !important;
+  9022	    border-bottom: 0 !important;
+  9023	    text-align: center !important;
+  9024	    display: flex !important;
+  9025	    flex-direction: column !important;
+  9026	    align-items: center !important;
+  9027	  }
+  9028	
+  9029	  .page .pillars article:last-child {
+  9030	    border-right: 1px solid rgba(3, 18, 30, .12) !important;
+  9031	  }
+  9032	
+  9033	  .page .pillars i {
+  9034	    width: 2.35rem !important;
+  9035	    height: 2.35rem !important;
+  9036	    margin: 0 auto .85rem !important;
+  9037	  }
+  9038	
+  9039	  .page .pillars i svg {
+  9040	    width: 1.35rem !important;
+  9041	    height: 1.35rem !important;
+  9042	  }
+  9043	
+  9044	  .page .pillars h3 {
+  9045	    font-size: .98rem !important;
+  9046	    line-height: .96 !important;
+  9047	    letter-spacing: -.035em !important;
+  9048	    max-width: 120px !important;
+  9049	    margin: 0 auto .65rem !important;
+  9050	    text-align: center !important;
+  9051	  }
+  9052	
+  9053	  .page .pillars p {
+  9054	    font-size: .78rem !important;
+  9055	    line-height: 1.45 !important;
+  9056	    max-width: 122px !important;
+  9057	    margin: 0 auto !important;
+  9058	    text-align: center !important;
+  9059	  }
+  9060	
+  9061	  .page .overviewCopy > a,
+  9062	  .page .overviewCopy > button {
+  9063	    order: 5 !important;
+  9064	    align-self: center !important;
+  9065	    margin: .2rem auto 0 !important;
+  9066	    transform: scale(.95) !important;
+  9067	    transform-origin: center center !important;
+  9068	  }
+  9069	}
+  9070	/* END ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED */
+  9071	
+  9072	/* ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL
+  9073	   iPad / tablet chico 701px-900px:
+  9074	   CTA final aprobado por consola:
+  9075	   - imagen acoplada al cuadro 100% x 100%
+  9076	   - sin bandas azules arriba/abajo
+  9077	   - alto compacto
+  9078	   - usa --mobile-bg de cada página
+  9079	*/
+  9080	@media (min-width: 701px) and (max-width: 900px) {
+  9081	  .page .finalCta,
+  9082	  .page section[data-across-final-cta="true"] {
+  9083	    width: 100% !important;
+  9084	    max-width: none !important;
+  9085	    min-height: 390px !important;
+  9086	
+  9087	    margin-left: 0 !important;
+  9088	    margin-right: 0 !important;
+  9089	    margin-bottom: 3.2rem !important;
+  9090	
+  9091	    padding-top: 3rem !important;
+  9092	    padding-bottom: 3rem !important;
+  9093	    padding-left: 3.2rem !important;
+  9094	    padding-right: 3.2rem !important;
+  9095	
+  9096	    display: flex !important;
+  9097	    align-items: center !important;
+  9098	    justify-content: flex-start !important;
+  9099	
+  9100	    position: relative !important;
+  9101	    isolation: isolate !important;
+  9102	    overflow: hidden !important;
+  9103	
+  9104	    border-radius: 0 !important;
+  9105	    border: 0 !important;
+  9106	    box-shadow: none !important;
+  9107	    transform: none !important;
+  9108	
+  9109	    background-color: #0d2838 !important;
+  9110	    background:
+  9111	      linear-gradient(
+  9112	        90deg,
+  9113	        rgba(3,10,18,.72) 0%,
+  9114	        rgba(3,10,18,.50) 42%,
+  9115	        rgba(3,10,18,.16) 100%
+  9116	      ),
+  9117	      radial-gradient(circle at 70% 32%, rgba(15,111,150,.13), transparent 42%),
+  9118	      var(--mobile-bg, url("/images/hero/cargaAereahero.png")) center center / 100% 100% no-repeat !important;
+  9119	  }
+  9120	
+  9121	  .page .finalCta::before,
+  9122	  .page .finalCta::after,
+  9123	  .page section[data-across-final-cta="true"]::before,
+  9124	  .page section[data-across-final-cta="true"]::after {
+  9125	    content: none !important;
+  9126	    display: none !important;
+  9127	  }
+  9128	
+  9129	  .page .finalCta .finalImage,
+  9130	  .page .finalCta [class*="finalImage"],
+  9131	  .page section[data-across-final-cta="true"] .finalImage,
+  9132	  .page section[data-across-final-cta="true"] [class*="finalImage"] {
+  9133	    display: none !important;
+  9134	    opacity: 0 !important;
+  9135	    visibility: hidden !important;
+  9136	    pointer-events: none !important;
+  9137	  }
+  9138	
+  9139	  .page .finalCta > div:first-child,
+  9140	  .page section[data-across-final-cta="true"] > div:first-child {
+  9141	    position: relative !important;
+  9142	    z-index: 3 !important;
+  9143	    max-width: 520px !important;
+  9144	    width: 100% !important;
+  9145	  }
+  9146	
+  9147	  .page .finalCta h2,
+  9148	  .page section[data-across-final-cta="true"] h2 {
+  9149	    max-width: 520px !important;
+  9150	    margin: 0 0 1.35rem !important;
+  9151	
+  9152	    font-size: clamp(2.45rem, 5.1vw, 3.25rem) !important;
+  9153	    line-height: .94 !important;
+  9154	    letter-spacing: -.055em !important;
+  9155	
+  9156	    color: #f4efe5 !important;
+  9157	    -webkit-text-fill-color: #f4efe5 !important;
+  9158	    text-shadow: 0 5px 22px rgba(0,0,0,.42) !important;
+  9159	  }
+  9160	
+  9161	  .page .finalCta p,
+  9162	  .page section[data-across-final-cta="true"] p {
+  9163	    max-width: 500px !important;
+  9164	    margin: 0 0 1.9rem !important;
+  9165	
+  9166	    font-size: .96rem !important;
+  9167	    line-height: 1.58 !important;
+  9168	
+  9169	    color: rgba(244,239,229,.90) !important;
+  9170	    -webkit-text-fill-color: rgba(244,239,229,.90) !important;
+  9171	    text-shadow: 0 2px 12px rgba(0,0,0,.32) !important;
+  9172	  }
+  9173	
+  9174	  .page .finalCta .finalActions,
+  9175	  .page .finalCta [class*="finalActions"],
+  9176	  .page section[data-across-final-cta="true"] [class*="finalActions"] {
+  9177	    display: flex !important;
+  9178	    flex-wrap: wrap !important;
+  9179	    gap: .85rem !important;
+  9180	    align-items: center !important;
+  9181	  }
+  9182	
+  9183	  .page .finalCta .finalActions a,
+  9184	  .page .finalCta [class*="finalActions"] a,
+  9185	  .page section[data-across-final-cta="true"] [class*="finalActions"] a {
+  9186	    min-height: 3.05rem !important;
+  9187	    padding: 0 1.45rem !important;
+  9188	
+  9189	    display: inline-flex !important;
+  9190	    align-items: center !important;
+  9191	    justify-content: center !important;
+  9192	
+  9193	    border-radius: 999px !important;
+  9194	    font-size: .75rem !important;
+  9195	    letter-spacing: .045em !important;
+  9196	    white-space: nowrap !important;
+  9197	  }
+  9198	}
+  9199	/* END ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL */
+  9200	
+  9201	/* ZZZ SERVICIOS SERVICES USE OWN MOBILE BG FINAL
+  9202	   Cada .services usa su propia imagen del page.tsx:
+  9203	   style={ "--mobile-bg": "url(...)" }
+  9204	   No mezcla con finalCta.
+  9205	*/
+  9206	.page .services {
+  9207	  position: relative !important;
+  9208	  isolation: isolate !important;
+  9209	  overflow: hidden !important;
+  9210	
+  9211	  background:
+  9212	    linear-gradient(
+  9213	      90deg,
+  9214	      rgba(3, 18, 30, .46) 0%,
+  9215	      rgba(5, 18, 31, .30) 48%,
+  9216	      rgba(8, 32, 48, .18) 100%
+  9217	    ),
+  9218	    radial-gradient(circle at 78% 18%, rgba(15,111,150,.14), transparent 38%),
+  9219	    linear-gradient(
+  9220	      180deg,
+  9221	      rgba(244,239,229,.025) 0%,
+  9222	      rgba(3,10,18,.20) 100%
+  9223	    ),
+  9224	    var(--mobile-bg) center center / cover no-repeat !important;
+  9225	
+  9226	  background-color: #0d2838 !important;
+  9227	}
+  9228	
+  9229	.page .services > * {
+  9230	  position: relative !important;
+  9231	  z-index: 2 !important;
+  9232	}
+  9233	/* END ZZZ SERVICIOS SERVICES USE OWN MOBILE BG FINAL */
+  9234	
+  9235	/* ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL
+  9236	   DarkBand restaurado correctamente:
+  9237	   - usa SU imagen original del page.tsx: /images/transporte-maritimo-desktop/1.png
+  9238	   - no usa imagen del CTA
+  9239	   - elimina capas oscuras viejas
+  9240	   - mantiene el estilo azul/premium
+  9241	*/
+  9242	.page .darkBand {
+  9243	  position: relative !important;
+  9244	  isolation: isolate !important;
+  9245	  overflow: hidden !important;
+  9246	
+  9247	  background-color: #0d2838 !important;
+  9248	  background:
+  9249	    linear-gradient(
+  9250	      90deg,
+  9251	      rgba(3, 10, 18, .54) 0%,
+  9252	      rgba(3, 10, 18, .34) 42%,
+  9253	      rgba(3, 10, 18, .14) 100%
+  9254	    ),
+  9255	    radial-gradient(circle at 76% 20%, rgba(15,111,150,.16), transparent 40%),
+  9256	    linear-gradient(
+  9257	      180deg,
+  9258	      rgba(244,239,229,.025) 0%,
+  9259	      rgba(3,10,18,.16) 100%
+  9260	    ),
+  9261	    url("/images/transporte-maritimo-desktop/1.png") center center / cover no-repeat !important;
+  9262	}
+  9263	
+  9264	.page .darkBand::before {
+  9265	  content: "" !important;
+  9266	  position: absolute !important;
+  9267	  inset: 0 !important;
+  9268	  z-index: 1 !important;
+  9269	  pointer-events: none !important;
+  9270	  opacity: .22 !important;
+  9271	  background:
+  9272	    linear-gradient(
+  9273	      90deg,
+  9274	      rgba(3,18,30,.34) 0%,
+  9275	      rgba(12,47,68,.16) 52%,
+  9276	      rgba(15,111,150,.06) 100%
+  9277	    ) !important;
+  9278	}
+  9279	
+  9280	.page .darkBand::after {
+  9281	  content: "" !important;
+  9282	  position: absolute !important;
+  9283	  inset: 0 !important;
+  9284	  z-index: 1 !important;
+  9285	  pointer-events: none !important;
+  9286	  opacity: .34 !important;
+  9287	  background:
+  9288	    radial-gradient(circle at 72% 22%, rgba(15,111,150,.12), transparent 40%),
+  9289	    linear-gradient(180deg, rgba(3,10,18,.04), rgba(3,10,18,.14)) !important;
+  9290	}
+  9291	
+  9292	.page .darkBand > * {
+  9293	  position: relative !important;
+  9294	  z-index: 2 !important;
+  9295	}
+  9296	
+  9297	.page .darkBand .darkBandImage,
+  9298	.page .darkBand [class*="darkBandImage"] {
+  9299	  display: none !important;
+  9300	  opacity: 0 !important;
+  9301	  visibility: hidden !important;
+  9302	  pointer-events: none !important;
+  9303	}
+  9304	
+  9305	.page .darkBand h2 {
+  9306	  color: #f4efe5 !important;
+  9307	  -webkit-text-fill-color: #f4efe5 !important;
+  9308	  text-shadow: 0 5px 22px rgba(0,0,0,.42) !important;
+  9309	}
+  9310	
+  9311	.page .darkBand p {
+  9312	  color: rgba(244,239,229,.90) !important;
+  9313	  -webkit-text-fill-color: rgba(244,239,229,.90) !important;
+  9314	  text-shadow: 0 2px 12px rgba(0,0,0,.32) !important;
+  9315	}
+  9316	
+  9317	.page .darkBand article,
+  9318	.page .darkBand [class*="stat"],
+  9319	.page .darkBand [class*="Stat"] {
+  9320	  background:
+  9321	    linear-gradient(
+  9322	      145deg,
+  9323	      rgba(3, 10, 18, .72),
+  9324	      rgba(4, 18, 29, .58)
+  9325	    ) !important;
+  9326	
+  9327	  border: 1px solid rgba(244, 239, 229, .34) !important;
+  9328	
+  9329	  box-shadow:
+  9330	    0 18px 44px rgba(0,0,0,.34),
+  9331	    inset 0 1px 0 rgba(255,255,255,.09),
+  9332	    inset 0 0 0 1px rgba(255,255,255,.035) !important;
+  9333	
+  9334	  backdrop-filter: blur(5px) saturate(1.05) !important;
+  9335	  -webkit-backdrop-filter: blur(5px) saturate(1.05) !important;
+  9336	}
+  9337	/* END ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL */
+  9338	
+  9339	/* ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL
+  9340	   Mobile real <=700px:
+  9341	   finalCta usa SU PROPIA imagen definida en --mobile-bg del page.tsx.
+  9342	   No usa imagen de services ni darkBand.
+  9343	*/
+  9344	@media (max-width: 700px) {
+  9345	  .page .finalCta,
+  9346	  .page section[data-across-final-cta="true"] {
+  9347	    width: 100% !important;
+  9348	    max-width: none !important;
+  9349	    min-height: 470px !important;
+  9350	
+  9351	    margin-left: 0 !important;
+  9352	    margin-right: 0 !important;
+  9353	    margin-bottom: 3.2rem !important;
+  9354	
+  9355	    padding-top: 3.4rem !important;
+  9356	    padding-bottom: 3.4rem !important;
+  9357	
+  9358	    position: relative !important;
+  9359	    isolation: isolate !important;
+  9360	    overflow: hidden !important;
+  9361	
+  9362	    background-color: #0d2838 !important;
+  9363	    background:
+  9364	      linear-gradient(
+  9365	        90deg,
+  9366	        rgba(3,10,18,.76) 0%,
+  9367	        rgba(3,10,18,.54) 48%,
+  9368	        rgba(3,10,18,.24) 100%
+  9369	      ),
+  9370	      radial-gradient(circle at 70% 32%, rgba(15,111,150,.13), transparent 42%),
+  9371	      var(--mobile-bg) center center / 100% 100% no-repeat !important;
+  9372	  }
+  9373	
+  9374	  .page .finalCta::before,
+  9375	  .page .finalCta::after,
+  9376	  .page section[data-across-final-cta="true"]::before,
+  9377	  .page section[data-across-final-cta="true"]::after {
+  9378	    content: none !important;
+  9379	    display: none !important;
+  9380	  }
+  9381	
+  9382	  .page .finalCta .finalImage,
+  9383	  .page .finalCta [class*="finalImage"],
+  9384	  .page section[data-across-final-cta="true"] .finalImage,
+  9385	  .page section[data-across-final-cta="true"] [class*="finalImage"] {
+  9386	    display: none !important;
+  9387	    opacity: 0 !important;
+  9388	    visibility: hidden !important;
+  9389	    pointer-events: none !important;
+  9390	  }
+  9391	
+  9392	  .page .finalCta > div:first-child,
+  9393	  .page section[data-across-final-cta="true"] > div:first-child {
+  9394	    position: relative !important;
+  9395	    z-index: 3 !important;
+  9396	    width: 100% !important;
+  9397	  }
+  9398	}
+  9399	/* END ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL */
+  9400	
+  9401	/* ZZZ MARITIMO SERVICES SEAM ONLY FINAL
+  9402	   Tapa la línea/seam superior del bloque services sin cambiar imagen.
+  9403	*/
+  9404	.page .services {
+  9405	  margin-top: -6px !important;
+  9406	  padding-top: calc(76.8px + 6px) !important;
+  9407	  border-top: 0 !important;
+  9408	  outline: 0 !important;
+  9409	  background-position:
+  9410	    center center,
+  9411	    center center,
+  9412	    center center,
+  9413	    center -6px !important;
+  9414	}
+  9415	
+  9416	.page .services::before,
+  9417	.page .services::after {
+  9418	  top: -6px !important;
+  9419	  height: calc(100% + 6px) !important;
+  9420	}
+  9421	/* END ZZZ MARITIMO SERVICES SEAM ONLY FINAL */
+  9422	
+  9423	/* ZZZ MARITIMO MOBILE HERO TITLE DOWN FINAL
+  9424	   Baja un poco el título del hero en mobile.
+  9425	   No toca desktop/tablet.
+  9426	*/
+  9427	@media (max-width: 700px) {
+  9428	  .page .hero [class*="content"],
+  9429	  .page .hero [class*="heroContent"],
+  9430	  .page .hero [class*="copy"],
+  9431	  .page .hero [class*="HeroCopy"] {
+  9432	    padding-top: 2.2rem !important;
+  9433	    transform: translateY(1.4rem) !important;
+  9434	  }
+  9435	
+  9436	  .page .hero h1 {
+  9437	    margin-top: .9rem !important;
+  9438	  }
+  9439	}
+  9440	/* END ZZZ MARITIMO MOBILE HERO TITLE DOWN FINAL */
+  9441	
+  9442	/* ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED
+  9443	   Tablet / iPad chico:
+  9444	   Proceso operativo aprobado:
+  9445	   - título centrado
+  9446	   - pasos en 3 columnas x 2 filas
+  9447	   - número a la izquierda
+  9448	   - icono sutil a la derecha
+  9449	   - sin descripción chica para evitar cortes horribles
+  9450	*/
+  9451	@media (min-width: 701px) and (max-width: 900px) {
+  9452	  .page .process {
+  9453	    width: min(100% - 48px, 820px) !important;
+  9454	    margin: 0 auto !important;
+  9455	    padding: 3.2rem 0 3.4rem !important;
+  9456	    overflow: hidden !important;
+  9457	  }
+  9458	
+  9459	  .page .process .sectionHead,
+  9460	  .page .process header {
+  9461	    max-width: 720px !important;
+  9462	    margin: 0 auto 2.35rem !important;
+  9463	    text-align: center !important;
+  9464	  }
+  9465	
+  9466	  .page .process .eyebrow,
+  9467	  .page .process small {
+  9468	    display: block !important;
+  9469	    text-align: center !important;
+  9470	    margin-left: auto !important;
+  9471	    margin-right: auto !important;
+  9472	    margin-bottom: .75rem !important;
+  9473	  }
+  9474	
+  9475	  .page .process h2 {
+  9476	    max-width: 640px !important;
+  9477	    margin: 0 auto !important;
+  9478	    text-align: center !important;
+  9479	    font-size: clamp(2.5rem, 5.3vw, 3.25rem) !important;
+  9480	    line-height: .94 !important;
+  9481	    letter-spacing: -.055em !important;
+  9482	  }
+  9483	
+  9484	  .page .processGrid {
+  9485	    display: grid !important;
+  9486	    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  9487	    gap: 1rem !important;
+  9488	    width: 100% !important;
+  9489	  }
+  9490	
+  9491	  .page .processGrid article {
+  9492	    min-height: 132px !important;
+  9493	    padding: 1.1rem 1rem !important;
+  9494	
+  9495	    display: grid !important;
+  9496	    grid-template-columns: 2.45rem 1fr 2rem !important;
+  9497	    grid-template-rows: auto 1fr !important;
+  9498	    column-gap: .7rem !important;
+  9499	    row-gap: .45rem !important;
+  9500	    align-items: center !important;
+  9501	
+  9502	    text-align: left !important;
+  9503	    position: relative !important;
+  9504	
+  9505	    border: 1px solid rgba(3, 18, 30, .10) !important;
+  9506	    border-radius: 1.05rem !important;
+  9507	
+  9508	    background:
+  9509	      linear-gradient(145deg, rgba(255,255,255,.58), rgba(244,239,229,.28)) !important;
+  9510	
+  9511	    box-shadow:
+  9512	      0 16px 34px rgba(3, 10, 18, .06),
+  9513	      inset 0 1px 0 rgba(255,255,255,.65) !important;
+  9514	  }
+  9515	
+  9516	  .page .processGrid article::before,
+  9517	  .page .processGrid article::after {
+  9518	    display: none !important;
+  9519	    content: none !important;
+  9520	  }
+  9521	
+  9522	  .page .processGrid article strong {
+  9523	    position: static !important;
+  9524	    grid-column: 1 !important;
+  9525	    grid-row: 1 / span 2 !important;
+  9526	
+  9527	    width: 2.28rem !important;
+  9528	    height: 2.28rem !important;
+  9529	    min-width: 2.28rem !important;
+  9530	    min-height: 2.28rem !important;
+  9531	
+  9532	    display: inline-flex !important;
+  9533	    align-items: center !important;
+  9534	    justify-content: center !important;
+  9535	
+  9536	    margin: 0 !important;
+  9537	    border-radius: 999px !important;
+  9538	
+  9539	    background:
+  9540	      radial-gradient(circle at 35% 25%, rgba(244,239,229,.22), transparent 34%),
+  9541	      linear-gradient(145deg, #12384e 0%, #061d2d 100%) !important;
+  9542	
+  9543	    color: #f4efe5 !important;
+  9544	    -webkit-text-fill-color: #f4efe5 !important;
+  9545	
+  9546	    border: 1px solid rgba(199, 169, 107, .48) !important;
+  9547	
+  9548	    box-shadow:
+  9549	      0 8px 18px rgba(3, 10, 18, .16),
+  9550	      inset 0 1px 0 rgba(255,255,255,.14),
+  9551	      0 0 0 5px rgba(15, 111, 150, .045) !important;
+  9552	
+  9553	    font-size: .78rem !important;
+  9554	    font-weight: 900 !important;
+  9555	    line-height: 1 !important;
+  9556	    z-index: 3 !important;
+  9557	  }
+  9558	
+  9559	  .page .processGrid article strong::after {
+  9560	    display: none !important;
+  9561	    content: none !important;
+  9562	  }
+  9563	
+  9564	  .page .processGrid article i {
+  9565	    grid-column: 3 !important;
+  9566	    grid-row: 1 !important;
+  9567	
+  9568	    width: 1.75rem !important;
+  9569	    height: 1.75rem !important;
+  9570	    margin: 0 !important;
+  9571	    justify-self: end !important;
+  9572	
+  9573	    display: inline-flex !important;
+  9574	    align-items: center !important;
+  9575	    justify-content: center !important;
+  9576	
+  9577	    border-radius: 999px !important;
+  9578	    background: rgba(15, 111, 150, .07) !important;
+  9579	    border: 1px solid rgba(15, 111, 150, .18) !important;
+  9580	  }
+  9581	
+  9582	  .page .processGrid article i svg,
+  9583	  .page .processGrid article svg {
+  9584	    width: .95rem !important;
+  9585	    height: .95rem !important;
+  9586	    color: #0f6f96 !important;
+  9587	    stroke: #0f6f96 !important;
+  9588	    opacity: .95 !important;
+  9589	  }
+  9590	
+  9591	  .page .processGrid article h3 {
+  9592	    grid-column: 2 / span 2 !important;
+  9593	    grid-row: 1 / span 2 !important;
+  9594	
+  9595	    font-size: 1.02rem !important;
+  9596	    line-height: 1.02 !important;
+  9597	    letter-spacing: -.035em !important;
+  9598	    max-width: none !important;
+  9599	
+  9600	    margin: 0 !important;
+  9601	    align-self: center !important;
+  9602	    text-align: left !important;
+  9603	  }
+  9604	
+  9605	  .page .processGrid article p {
+  9606	    display: none !important;
+  9607	  }
+  9608	}
+  9609	/* END ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED */
+  9610	
+  9611	/* =====================================================
+  9612	   MARITIMO MOBILE HEIGHT LIKE MARITIMO
+  9613	   Solo iguala el alto del hero mobile.
+  9614	   No toca barra, titulo, texto, boton ni imagen.
+  9615	   ===================================================== */
+  9616	@media (max-width: 900px) {
+  9617	  .hero {
+  9618	    height: 100svh !important;
+  9619	    min-height: 100svh !important;
+  9620	    max-height: none !important;
+  9621	  }
+  9622	
+  9623	  .heroInner {
+  9624	    height: 100svh !important;
+  9625	    min-height: 100svh !important;
+  9626	    max-height: 100svh !important;
+  9627	  }
+  9628	}
+  9629	
+  9630	/* =====================================================
+  9631	   MARITIMO MOBILE HEIGHT LIKE MARITIMO
+  9632	   Solo iguala el alto del hero mobile.
+  9633	   No toca barra, titulo, texto, boton ni imagen.
+  9634	   ===================================================== */
+  9635	@media (max-width: 900px) {
+  9636	  .hero {
+  9637	    height: 100svh !important;
+  9638	    min-height: 100svh !important;
+  9639	    max-height: none !important;
+  9640	  }
+  9641	
+  9642	  .heroInner {
+  9643	    height: 100svh !important;
+  9644	    min-height: 100svh !important;
+  9645	    max-height: 100svh !important;
+  9646	  }
+  9647	}
+  9648	
+  9649	
+  9650	/* === MARITIMO FINAL CTA IMAGE FIX START === */
+  9651	/* Reemplaza SOLO la imagen del bloque:
+  9652	   "Coordinemos su próximo embarque marítimo internacional"
+  9653	   Desktop y mobile usan las imágenes marítimas nuevas.
+  9654	*/
+  9655	
+  9656	.finalCta {
+  9657	  position: relative !important;
+  9658	  overflow: hidden !important;
+  9659	  background-image:
+  9660	    linear-gradient(
+  9661	      90deg,
+  9662	      rgba(3, 7, 13, .92) 0%,
+  9663	      rgba(3, 7, 13, .74) 42%,
+  9664	      rgba(3, 7, 13, .38) 72%,
+  9665	      rgba(3, 7, 13, .22) 100%
+  9666	    ),
+  9667	    url("/images/transporte-maritimo-desktop/1.png") !important;
+  9668	  background-size: cover !important;
+  9669	  background-position: center center !important;
+  9670	  background-repeat: no-repeat !important;
+  9671	}
+  9672	
+  9673	.finalCta > div:first-child {
+  9674	  position: relative !important;
+  9675	  z-index: 2 !important;
+  9676	}
+  9677	
+  9678	/* Si esa sección además tiene una imagen interna tipo <Image>, también la reemplaza */
+  9679	.finalImage img {
+  9680	  content: url("/images/transporte-maritimo-desktop/1.png") !important;
+  9681	  object-fit: cover !important;
+  9682	  object-position: center center !important;
+  9683	}
+  9684	
+  9685	@media (max-width: 900px) {
+  9686	  .finalCta {
+  9687	    background-image:
+  9688	      linear-gradient(
+  9689	        180deg,
+  9690	        rgba(3, 7, 13, .60) 0%,
+  9691	        rgba(3, 7, 13, .82) 58%,
+  9692	        rgba(3, 7, 13, .94) 100%
+  9693	      ),
+  9694	      url("/images/transporte-maritimo-mobile/1.png") !important;
+  9695	    background-size: cover !important;
+  9696	    background-position: center center !important;
+  9697	    background-repeat: no-repeat !important;
+  9698	  }
+  9699	
+  9700	  .finalImage img {
+  9701	    content: url("/images/transporte-maritimo-mobile/1.png") !important;
+  9702	    object-fit: cover !important;
+  9703	    object-position: center center !important;
+  9704	  }
+  9705	}
+  9706	/* === MARITIMO FINAL CTA IMAGE FIX END === */
+  9707	
+  9708	
+  9709	/* === ACROSS LOCAL DARKBAND LAYOUT START === */
+  9710	/* Layout profesional:
+  9711	   izquierda: título + texto + botones
+  9712	   derecha: 4 cuadros/stats en una sola fila.
+  9713	   Se aplica localmente porque los CSS Modules pisan globals.css.
+  9714	*/
+  9715	
+  9716	.darkBandContent {
+  9717	  display: grid !important;
+  9718	  grid-template-columns: minmax(390px, .86fr) minmax(520px, 1.14fr) !important;
+  9719	  grid-template-rows: auto auto auto !important;
+  9720	  column-gap: clamp(2.2rem, 5vw, 5.5rem) !important;
+  9721	  row-gap: 0 !important;
+  9722	  align-items: center !important;
+  9723	  position: relative !important;
+  9724	  z-index: 5 !important;
+  9725	}
+  9726	
+  9727	.darkBandContent h2 {
+  9728	  grid-column: 1 !important;
+  9729	  grid-row: 1 !important;
+  9730	  max-width: 620px !important;
+  9731	  margin: 0 !important;
+  9732	  color: #fff7e8 !important;
+  9733	  -webkit-text-fill-color: #fff7e8 !important;
+  9734	  text-shadow: 0 5px 24px rgba(0,0,0,.55) !important;
+  9735	}
+  9736	
+  9737	.darkBandContent > p {
+  9738	  grid-column: 1 !important;
+  9739	  grid-row: 2 !important;
+  9740	  max-width: 560px !important;
+  9741	  margin: 1.15rem 0 0 !important;
+  9742	  padding: 0 !important;
+  9743	  background: transparent !important;
+  9744	  border: 0 !important;
+  9745	  box-shadow: none !important;
+  9746	  color: rgba(255,247,232,.88) !important;
+  9747	  -webkit-text-fill-color: rgba(255,247,232,.88) !important;
+  9748	  font-size: 1rem !important;
+  9749	  line-height: 1.65 !important;
+  9750	  font-weight: 500 !important;
+  9751	  text-shadow: 0 3px 16px rgba(0,0,0,.48) !important;
+  9752	}
+  9753	
+  9754	.darkBandActions {
+  9755	  grid-column: 1 !important;
+  9756	  grid-row: 3 !important;
+  9757	  display: flex !important;
+  9758	  flex-wrap: wrap !important;
+  9759	  gap: .85rem !important;
+  9760	  align-items: center !important;
+  9761	  justify-content: flex-start !important;
+  9762	  margin-top: 1.45rem !important;
+  9763	  transform: none !important;
+  9764	  position: relative !important;
+  9765	  z-index: 20 !important;
+  9766	}
+  9767	
+  9768	.darkBandActions a {
+  9769	  min-height: 44px !important;
+  9770	  padding: 0 1.35rem !important;
+  9771	  border-radius: 999px !important;
+  9772	  display: inline-flex !important;
+  9773	  align-items: center !important;
+  9774	  justify-content: center !important;
+  9775	  text-decoration: none !important;
+  9776	  text-transform: uppercase !important;
+  9777	  font-size: .72rem !important;
+  9778	  letter-spacing: .055em !important;
+  9779	  font-weight: 950 !important;
+  9780	  white-space: nowrap !important;
+  9781	}
+  9782	
+  9783	.darkBandActions a:first-child {
+  9784	  background: #173247 !important;
+  9785	  color: #fff7e8 !important;
+  9786	  -webkit-text-fill-color: #fff7e8 !important;
+  9787	  border: 1px solid rgba(214,192,141,.46) !important;
+  9788	  box-shadow: 0 16px 34px rgba(0,0,0,.24) !important;
+  9789	}
+  9790	
+  9791	.darkBandActions a:last-child {
+  9792	  background: rgba(5,8,13,.42) !important;
+  9793	  color: #fff7e8 !important;
+  9794	  -webkit-text-fill-color: #fff7e8 !important;
+  9795	  border: 1px solid rgba(255,255,255,.30) !important;
+  9796	  box-shadow: 0 14px 30px rgba(0,0,0,.20) !important;
+  9797	  backdrop-filter: blur(8px) !important;
+  9798	  -webkit-backdrop-filter: blur(8px) !important;
+  9799	}
+  9800	
+  9801	.stats {
+  9802	  grid-column: 2 !important;
+  9803	  grid-row: 1 / span 3 !important;
+  9804	  display: grid !important;
+  9805	  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  9806	  gap: 12px !important;
+  9807	  align-self: center !important;
+  9808	  margin: 0 !important;
+  9809	  width: 100% !important;
+  9810	}
+  9811	
+  9812	.stats article {
+  9813	  min-height: 155px !important;
+  9814	  height: 155px !important;
+  9815	  padding: 1.15rem 1rem !important;
+  9816	  display: flex !important;
+  9817	  flex-direction: column !important;
+  9818	  justify-content: center !important;
+  9819	}
+  9820	
+  9821	/* Mobile: flujo vertical */
+  9822	@media (max-width: 900px) {
+  9823	  .darkBandContent {
+  9824	    display: block !important;
+  9825	  }
+  9826	
+  9827	  .darkBandActions {
+  9828	    margin-top: 1.25rem !important;
+  9829	  }
+  9830	
+  9831	  .stats {
+  9832	    display: grid !important;
+  9833	    grid-template-columns: 1fr !important;
+  9834	    margin-top: 1.6rem !important;
+  9835	  }
+  9836	
+  9837	  .stats article {
+  9838	    height: auto !important;
+  9839	    min-height: 120px !important;
+  9840	  }
+  9841	}
+  9842	/* === ACROSS LOCAL DARKBAND LAYOUT END === */
+  9843	
+  9844	/* === FINAL OVERRIDE PROCESS ONLY NUMBERS START === */
+  9845	/* Tablet + mobile:
+  9846	   Solo números en el proceso.
+  9847	   Sin círculo azul, sin íconos, sin flechas.
+  9848	*/
+  9849	@media (max-width: 1180px) {
+  9850	  .processGrid strong,
+  9851	  .processGrid article strong,
+  9852	  .page .processGrid strong,
+  9853	  .page .processGrid article strong {
+  9854	    all: unset !important;
+  9855	
+  9856	    display: inline !important;
+  9857	    position: static !important;
+  9858	
+  9859	    color: #07101a !important;
+  9860	    -webkit-text-fill-color: #07101a !important;
+  9861	
+  9862	    font-size: 1rem !important;
+  9863	    font-weight: 950 !important;
+  9864	    line-height: 1 !important;
+  9865	
+  9866	    background: none !important;
+  9867	    background-color: transparent !important;
+  9868	    background-image: none !important;
+  9869	
+  9870	    border: none !important;
+  9871	    border-radius: 0 !important;
+  9872	    box-shadow: none !important;
+  9873	    outline: none !important;
+  9874	
+  9875	    width: auto !important;
+  9876	    height: auto !important;
+  9877	    min-width: 0 !important;
+  9878	    min-height: 0 !important;
+  9879	
+  9880	    padding: 0 !important;
+  9881	    margin: 0 0 .55rem 0 !important;
+  9882	  }
+  9883	
+  9884	  .processGrid strong::before,
+  9885	  .processGrid strong::after,
+  9886	  .processGrid article strong::before,
+  9887	  .processGrid article strong::after,
+  9888	  .page .processGrid strong::before,
+  9889	  .page .processGrid strong::after,
+  9890	  .page .processGrid article strong::before,
+  9891	  .page .processGrid article strong::after {
+  9892	    content: none !important;
+  9893	    display: none !important;
+  9894	    background: none !important;
+  9895	    box-shadow: none !important;
+  9896	    border: none !important;
+  9897	  }
+  9898	
+  9899	  .processGrid i,
+  9900	  .processGrid article i,
+  9901	  .page .processGrid i,
+  9902	  .page .processGrid article i {
+  9903	    display: none !important;
+  9904	    opacity: 0 !important;
+  9905	    visibility: hidden !important;
+  9906	    width: 0 !important;
+  9907	    height: 0 !important;
+  9908	    margin: 0 !important;
+  9909	    padding: 0 !important;
+  9910	    pointer-events: none !important;
+  9911	  }
+  9912	
+  9913	  .processGrid article::after,
+  9914	  .processGrid article:not(:last-child)::after,
+  9915	  .page .processGrid article::after,
+  9916	  .page .processGrid article:not(:last-child)::after {
+  9917	    content: none !important;
+  9918	    display: none !important;
+  9919	  }
+  9920	}
+  9921	/* === FINAL OVERRIDE PROCESS ONLY NUMBERS END === */
+  9922	
+  9923	
+  9924	/* === ACROSS HERO IMAGES VISIBLE FINAL START === */
+  9925	/* Corrige imágenes invisibles del hero.
+  9926	   Causa: z-index negativo mandaba la imagen detrás del fondo del hero.
+  9927	*/
+  9928	
+  9929	.hero {
+  9930	  position: relative !important;
+  9931	  isolation: isolate !important;
+  9932	  overflow: hidden !important;
+  9933	  background-color: #05070b !important;
+  9934	}
+  9935	
+  9936	.heroImage,
+  9937	.heroImageDesktop,
+  9938	.heroImageMobile,
+  9939	.page > .hero .heroImage,
+  9940	.page > .hero .heroImageDesktop,
+  9941	.page > .hero .heroImageMobile {
+  9942	  opacity: 1 !important;
+  9943	  visibility: visible !important;
+  9944	  z-index: 0 !important;
+  9945	  pointer-events: none !important;
+  9946	}
+  9947	
+  9948	.heroOverlay,
+  9949	.page > .hero .heroOverlay {
+  9950	  z-index: 1 !important;
+  9951	  pointer-events: none !important;
+  9952	}
+  9953	
+  9954	.heroInner,
+  9955	.heroContent,
+  9956	.operationCard,
+  9957	.page > .hero .heroInner,
+  9958	.page > .hero .heroContent,
+  9959	.page > .hero .operationCard {
+  9960	  position: relative !important;
+  9961	  z-index: 2 !important;
+  9962	}
+  9963	
+  9964	/* Desktop y tablet grande: mostrar desktop */
+  9965	@media (min-width: 901px) {
+  9966	  .heroImageDesktop,
+  9967	  .page > .hero .heroImageDesktop {
+  9968	    display: block !important;
+  9969	    opacity: 1 !important;
+  9970	    visibility: visible !important;
+  9971	    z-index: 0 !important;
+  9972	  }
+  9973	
+  9974	  .heroImageMobile,
+  9975	  .page > .hero .heroImageMobile {
+  9976	    display: none !important;
+  9977	    opacity: 0 !important;
+  9978	    visibility: hidden !important;
+  9979	  }
+  9980	}
+  9981	
+  9982	/* Tablet/mobile: si querés usar mobile hasta 900px */
+  9983	@media (max-width: 900px) {
+  9984	  .heroImageDesktop,
+  9985	  .page > .hero .heroImageDesktop {
+  9986	    display: none !important;
+  9987	    opacity: 0 !important;
+  9988	    visibility: hidden !important;
+  9989	  }
+  9990	
+  9991	  .heroImageMobile,
+  9992	  .page > .hero .heroImageMobile {
+  9993	    display: block !important;
+  9994	    opacity: 1 !important;
+  9995	    visibility: visible !important;
+  9996	    z-index: 0 !important;
+  9997	    object-fit: cover !important;
+  9998	    object-position: center center !important;
+  9999	  }
+ 10000	}
+ 10001	/* === ACROSS HERO IMAGES VISIBLE FINAL END === */
+ 10002	
+ 10003	
+ 10004	/* === ACROSS PROCESS SOLO NUMEROS GLOBAL FINAL START === */
+ 10005	/* Proceso global limpio:
+ 10006	   solo números en desktop, tablet y mobile.
+ 10007	   Sin círculo azul, sin íconos y sin flechas.
+ 10008	*/
+ 10009	
+ 10010	.processGrid::before,
+ 10011	.page .processGrid::before {
+ 10012	  display: none !important;
+ 10013	  content: none !important;
+ 10014	}
+ 10015	
+ 10016	.processGrid article::after,
+ 10017	.processGrid article:not(:last-child)::after,
+ 10018	.page .processGrid article::after,
+ 10019	.page .processGrid article:not(:last-child)::after {
+ 10020	  display: none !important;
+ 10021	  content: none !important;
+ 10022	}
+ 10023	
+ 10024	.processGrid i,
+ 10025	.processGrid article i,
+ 10026	.processGrid i svg,
+ 10027	.processGrid article i svg,
+ 10028	.page .processGrid i,
+ 10029	.page .processGrid article i,
+ 10030	.page .processGrid i svg,
+ 10031	.page .processGrid article i svg {
+ 10032	  display: none !important;
+ 10033	  opacity: 0 !important;
+ 10034	  visibility: hidden !important;
+ 10035	  width: 0 !important;
+ 10036	  height: 0 !important;
+ 10037	  min-width: 0 !important;
+ 10038	  min-height: 0 !important;
+ 10039	  margin: 0 !important;
+ 10040	  padding: 0 !important;
+ 10041	  pointer-events: none !important;
+ 10042	}
+ 10043	
+ 10044	.processGrid strong,
+ 10045	.processGrid article strong,
+ 10046	.page .processGrid strong,
+ 10047	.page .processGrid article strong {
+ 10048	  position: static !important;
+ 10049	
+ 10050	  display: inline !important;
+ 10051	  place-items: unset !important;
+ 10052	  align-items: unset !important;
+ 10053	  justify-content: unset !important;
+ 10054	
+ 10055	  width: auto !important;
+ 10056	  height: auto !important;
+ 10057	  min-width: 0 !important;
+ 10058	  min-height: 0 !important;
+ 10059	
+ 10060	  margin: 0 0 .55rem 0 !important;
+ 10061	  padding: 0 !important;
+ 10062	
+ 10063	  background: transparent !important;
+ 10064	  background-image: none !important;
+ 10065	
+ 10066	  border: 0 !important;
+ 10067	  border-radius: 0 !important;
+ 10068	  box-shadow: none !important;
+ 10069	  outline: 0 !important;
+ 10070	
+ 10071	  color: #07101a !important;
+ 10072	  -webkit-text-fill-color: #07101a !important;
+ 10073	
+ 10074	  font-size: 1rem !important;
+ 10075	  font-weight: 950 !important;
+ 10076	  line-height: 1 !important;
+ 10077	}
+ 10078	
+ 10079	.processGrid strong::before,
+ 10080	.processGrid strong::after,
+ 10081	.processGrid article strong::before,
+ 10082	.processGrid article strong::after,
+ 10083	.page .processGrid strong::before,
+ 10084	.page .processGrid strong::after,
+ 10085	.page .processGrid article strong::before,
+ 10086	.page .processGrid article strong::after {
+ 10087	  display: none !important;
+ 10088	  content: none !important;
+ 10089	  background: transparent !important;
+ 10090	  background-image: none !important;
+ 10091	  border: 0 !important;
+ 10092	  box-shadow: none !important;
+ 10093	}
+ 10094	
+ 10095	/* También gana contra reglas específicas desktop/tablet viejas */
+ 10096	@media (min-width: 901px) {
+ 10097	  .processGrid strong,
+ 10098	  .processGrid article strong,
+ 10099	  .page .processGrid strong,
+ 10100	  .page .processGrid article strong {
+ 10101	    display: inline !important;
+ 10102	    width: auto !important;
+ 10103	    height: auto !important;
+ 10104	    background: transparent !important;
+ 10105	    background-image: none !important;
+ 10106	    color: #07101a !important;
+ 10107	    -webkit-text-fill-color: #07101a !important;
+ 10108	    border-radius: 0 !important;
+ 10109	    box-shadow: none !important;
+ 10110	  }
+ 10111	
+ 10112	  .processGrid i,
+ 10113	  .processGrid article i,
+ 10114	  .processGrid article::after,
+ 10115	  .processGrid article:not(:last-child)::after {
+ 10116	    display: none !important;
+ 10117	    content: none !important;
+ 10118	  }
+ 10119	}
+ 10120	
+ 10121	@media (max-width: 1180px) {
+ 10122	  .processGrid strong,
+ 10123	  .processGrid article strong,
+ 10124	  .page .processGrid strong,
+ 10125	  .page .processGrid article strong {
+ 10126	    display: inline !important;
+ 10127	    width: auto !important;
+ 10128	    height: auto !important;
+ 10129	    background: transparent !important;
+ 10130	    background-image: none !important;
+ 10131	    color: #07101a !important;
+ 10132	    -webkit-text-fill-color: #07101a !important;
+ 10133	    border-radius: 0 !important;
+ 10134	    box-shadow: none !important;
+ 10135	  }
+ 10136	
+ 10137	  .processGrid i,
+ 10138	  .processGrid article i,
+ 10139	  .processGrid article::after,
+ 10140	  .processGrid article:not(:last-child)::after {
+ 10141	    display: none !important;
+ 10142	    content: none !important;
+ 10143	  }
+ 10144	}
+ 10145	/* === ACROSS PROCESS SOLO NUMEROS GLOBAL FINAL END === */
+ 10146	
+ 10147	/* === ACROSS DESKTOP HERO TYPO FIX === */
+ 10148	/* Solo desktop. Arregla títulos hero demasiado angostos/altos en páginas internas. */
+ 10149	@media (min-width: 1024px) {
+ 10150	  :global(section[data-aereo-hero="true"]),
+ 10151	  :global(section[data-service-hero-home="true"]),
+ 10152	  :global(section[data-quienes-hero="true"]) {
+ 10153	    overflow: hidden !important;
+ 10154	  }
+ 10155	
+ 10156	  :global(section[data-aereo-hero="true"] [class*="heroContent"]),
+ 10157	  :global(section[data-aereo-hero="true"] [class*="heroCopy"]),
+ 10158	  :global(section[data-aereo-hero="true"] [class*="heroText"]),
+ 10159	  :global(section[data-aereo-hero="true"] [class*="heroInner"]),
+ 10160	  :global(section[data-aereo-hero="true"] [class*="content"]),
+ 10161	  :global(section[data-aereo-hero="true"] div:has(> h1)),
+ 10162	  :global(section[data-service-hero-home="true"] [class*="heroContent"]),
+ 10163	  :global(section[data-service-hero-home="true"] [class*="heroCopy"]),
+ 10164	  :global(section[data-service-hero-home="true"] [class*="heroText"]),
+ 10165	  :global(section[data-service-hero-home="true"] [class*="heroInner"]),
+ 10166	  :global(section[data-service-hero-home="true"] [class*="content"]),
+ 10167	  :global(section[data-service-hero-home="true"] div:has(> h1)),
+ 10168	  :global(section[data-quienes-hero="true"] [class*="heroContent"]),
+ 10169	  :global(section[data-quienes-hero="true"] [class*="heroCopy"]),
+ 10170	  :global(section[data-quienes-hero="true"] [class*="heroText"]),
+ 10171	  :global(section[data-quienes-hero="true"] [class*="heroInner"]),
+ 10172	  :global(section[data-quienes-hero="true"] [class*="content"]),
+ 10173	  :global(section[data-quienes-hero="true"] div:has(> h1)) {
+ 10174	    width: min(980px, 62vw) !important;
+ 10175	    max-width: min(980px, 62vw) !important;
+ 10176	  }
+ 10177	
+ 10178	  :global(section[data-aereo-hero="true"] h1),
+ 10179	  :global(section[data-service-hero-home="true"] h1),
+ 10180	  :global(section[data-quienes-hero="true"] h1) {
+ 10181	    width: min(980px, 62vw) !important;
+ 10182	    max-width: min(980px, 62vw) !important;
+ 10183	
+ 10184	    font-size: clamp(48px, 4.25vw, 76px) !important;
+ 10185	    line-height: 0.98 !important;
+ 10186	    letter-spacing: -0.04em !important;
+ 10187	    font-weight: 850 !important;
+ 10188	
+ 10189	    text-wrap: balance !important;
+ 10190	    overflow-wrap: normal !important;
+ 10191	    word-break: normal !important;
+ 10192	    hyphens: none !important;
+ 10193	  }
+ 10194	
+ 10195	  :global(section[data-aereo-hero="true"] h1 br),
+ 10196	  :global(section[data-service-hero-home="true"] h1 br),
+ 10197	  :global(section[data-quienes-hero="true"] h1 br) {
+ 10198	    display: none !important;
+ 10199	  }
+ 10200	
+ 10201	  :global(section[data-aereo-hero="true"] p),
+ 10202	  :global(section[data-service-hero-home="true"] p),
+ 10203	  :global(section[data-quienes-hero="true"] p) {
+ 10204	    max-width: 720px !important;
+ 10205	  }
+ 10206	}
+ 10207	
+ 10208	@media (min-width: 1440px) {
+ 10209	  :global(section[data-aereo-hero="true"] [class*="heroContent"]),
+ 10210	  :global(section[data-aereo-hero="true"] [class*="heroCopy"]),
+ 10211	  :global(section[data-aereo-hero="true"] [class*="heroText"]),
+ 10212	  :global(section[data-aereo-hero="true"] [class*="heroInner"]),
+ 10213	  :global(section[data-aereo-hero="true"] [class*="content"]),
+ 10214	  :global(section[data-aereo-hero="true"] div:has(> h1)),
+ 10215	  :global(section[data-service-hero-home="true"] [class*="heroContent"]),
+ 10216	  :global(section[data-service-hero-home="true"] [class*="heroCopy"]),
+ 10217	  :global(section[data-service-hero-home="true"] [class*="heroText"]),
+ 10218	  :global(section[data-service-hero-home="true"] [class*="heroInner"]),
+ 10219	  :global(section[data-service-hero-home="true"] [class*="content"]),
+ 10220	  :global(section[data-service-hero-home="true"] div:has(> h1)),
+ 10221	  :global(section[data-quienes-hero="true"] [class*="heroContent"]),
+ 10222	  :global(section[data-quienes-hero="true"] [class*="heroCopy"]),
+ 10223	  :global(section[data-quienes-hero="true"] [class*="heroText"]),
+ 10224	  :global(section[data-quienes-hero="true"] [class*="heroInner"]),
+ 10225	  :global(section[data-quienes-hero="true"] [class*="content"]),
+ 10226	  :global(section[data-quienes-hero="true"] div:has(> h1)) {
+ 10227	    width: min(1080px, 64vw) !important;
+ 10228	    max-width: min(1080px, 64vw) !important;
+ 10229	  }
+ 10230	
+ 10231	  :global(section[data-aereo-hero="true"] h1),
+ 10232	  :global(section[data-service-hero-home="true"] h1),
+ 10233	  :global(section[data-quienes-hero="true"] h1) {
+ 10234	    width: min(1080px, 64vw) !important;
+ 10235	    max-width: min(1080px, 64vw) !important;
+ 10236	    font-size: clamp(54px, 4vw, 82px) !important;
+ 10237	  }
+ 10238	}
+ 10239	
+ 10240	/* === /ACROSS DESKTOP HERO TYPO FIX === */
+ 10241	
+ 10242	
+ 10243	/* === FIX MARITIME HERO WIDTH FINAL === */
+ 10244	@media (min-width: 901px) {
+ 10245	  .heroInner {
+ 10246	    width: min(1500px, calc(100% - 120px)) !important;
+ 10247	  }
+ 10248	
+ 10249	  .heroContent {
+ 10250	    max-width: 980px !important;
+ 10251	    width: min(980px, 64vw) !important;
+ 10252	  }
+ 10253	
+ 10254	  .title {
+ 10255	    max-width: 980px !important;
+ 10256	    font-size: clamp(4.6rem, 5.8vw, 7.4rem) !important;
+ 10257	    line-height: .92 !important;
+ 10258	    letter-spacing: -0.075em !important;
+ 10259	    text-wrap: balance !important;
+ 10260	  }
+ 10261	
+ 10262	  .subtitle {
+ 10263	    max-width: 690px !important;
+ 10264	  }
+ 10265	
+ 10266	  .actions {
+ 10267	    max-width: 760px !important;
+ 10268	  }
+ 10269	}
+ 10270	
+ 10271	@media (min-width: 1200px) {
+ 10272	  .title {
+ 10273	    max-width: 1050px !important;
+ 10274	  }
+ 10275	
+ 10276	  .heroContent {
+ 10277	    max-width: 1050px !important;
+ 10278	    width: min(1050px, 66vw) !important;
+ 10279	  }
+ 10280	}
+ 10281	
+ 10282	/* === SERVICE PROCESS ICONS LIKE SECTORES FINAL START === */
+ 10283	
+ 10284	/* Iconos para procesos de servicios, estilo Sectores */
+ 10285	.processGrid > article,
+ 10286	.process article {
+ 10287	  position: relative !important;
+ 10288	}
+ 10289	
+ 10290	.processGrid > article h3,
+ 10291	.process article h3 {
+ 10292	  display: flex !important;
+ 10293	  align-items: center !important;
+ 10294	  gap: .55rem !important;
+ 10295	  min-width: 0 !important;
+ 10296	}
+ 10297	
+ 10298	.processGrid > article h3::before,
+ 10299	.process article h3::before {
+ 10300	  content: "" !important;
+ 10301	  width: 22px !important;
+ 10302	  height: 22px !important;
+ 10303	  flex: 0 0 22px !important;
+ 10304	  border-radius: 999px !important;
+ 10305	  border: 1px solid rgba(18,63,89,.28) !important;
+ 10306	  background:
+ 10307	    rgba(18,63,89,.06)
+ 10308	    center / 13px 13px
+ 10309	    no-repeat !important;
+ 10310	  box-shadow: inset 0 1px 0 rgba(255,255,255,.85) !important;
+ 10311	}
+ 10312	
+ 10313	/* 1 búsqueda/análisis */
+ 10314	.processGrid > article:nth-child(1) h3::before,
+ 10315	.process article:nth-child(1) h3::before {
+ 10316	  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23123f59' stroke-width='2'%3E%3Ccircle cx='10' cy='10' r='6'/%3E%3Cpath d='M15 15l5 5'/%3E%3C/svg%3E") !important;
+ 10317	}
+ 10318	
+ 10319	/* 2 ruta/diseño */
+ 10320	.processGrid > article:nth-child(2) h3::before,
+ 10321	.process article:nth-child(2) h3::before {
+ 10322	  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23123f59' stroke-width='2'%3E%3Cpath d='M7 7h6a4 4 0 010 8H6'/%3E%3Cpath d='M9 4L6 7l3 3'/%3E%3C/svg%3E") !important;
+ 10323	}
+ 10324	
+ 10325	/* 3 documentación */
+ 10326	.processGrid > article:nth-child(3) h3::before,
+ 10327	.process article:nth-child(3) h3::before {
+ 10328	  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23123f59' stroke-width='2'%3E%3Cpath d='M7 3h7l4 4v14H7z'/%3E%3Cpath d='M14 3v5h5'/%3E%3Cpath d='M9 13h6M9 17h6'/%3E%3C/svg%3E") !important;
+ 10329	}
+ 10330	
+ 10331	/* 4 ejecución */
+ 10332	.processGrid > article:nth-child(4) h3::before,
+ 10333	.process article:nth-child(4) h3::before {
+ 10334	  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23123f59' stroke-width='2'%3E%3Cpath d='M4 16l5-5 4 4 7-7'/%3E%3Cpath d='M14 8h6v6'/%3E%3C/svg%3E") !important;
+ 10335	}
+ 10336	
+ 10337	/* 5 seguimiento */
+ 10338	.processGrid > article:nth-child(5) h3::before,
+ 10339	.process article:nth-child(5) h3::before {
+ 10340	  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23123f59' stroke-width='2'%3E%3Cpath d='M12 21s7-4 7-10a7 7 0 10-14 0c0 6 7 10 7 10z'/%3E%3Ccircle cx='12' cy='11' r='2'/%3E%3C/svg%3E") !important;
+ 10341	}
+ 10342	
+ 10343	/* 6 entrega final */
+ 10344	.processGrid > article:nth-child(6) h3::before,
+ 10345	.process article:nth-child(6) h3::before {
+ 10346	  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23123f59' stroke-width='2'%3E%3Cpath d='M3 7h12v10H3z'/%3E%3Cpath d='M15 11h3l3 3v3h-6z'/%3E%3Ccircle cx='7' cy='18' r='1.5'/%3E%3Ccircle cx='18' cy='18' r='1.5'/%3E%3C/svg%3E") !important;
+ 10347	}
+ 10348	
+ 10349	@media (max-width: 760px) {
+ 10350	  .processGrid > article h3,
+ 10351	  .process article h3 {
+ 10352	    display: flex !important;
+ 10353	    align-items: center !important;
+ 10354	    gap: .52rem !important;
+ 10355	  }
+ 10356	
+ 10357	  .processGrid > article h3::before,
+ 10358	  .process article h3::before {
+ 10359	    width: 21px !important;
+ 10360	    height: 21px !important;
+ 10361	    flex-basis: 21px !important;
+ 10362	    background-size: 12px 12px !important;
+ 10363	  }
+ 10364	}
+ 10365	
+ 10366	/* === SERVICE PROCESS ICONS LIKE SECTORES FINAL END === */
+ 10367	
+ 10368	/* === INLINE PROCESS ICONS REAL FINAL START === */
+ 10369	
+ 10370	/* Ya no usamos .processGrid i ni h3::before para los iconos */
+ 10371	.processGrid i,
+ 10372	.processGrid article i {
+ 10373	  display: none !important;
+ 10374	}
+ 10375	
+ 10376	.processGrid h3::before,
+ 10377	.processGrid article h3::before,
+ 10378	.process article h3::before {
+ 10379	  content: none !important;
+ 10380	  display: none !important;
+ 10381	  background: none !important;
+ 10382	  border: 0 !important;
+ 10383	  box-shadow: none !important;
+ 10384	}
+ 10385	
+ 10386	/* Layout del proceso: número + título con icono real */
+ 10387	.processGrid article {
+ 10388	  display: grid !important;
+ 10389	  grid-template-columns: 44px minmax(0, 1fr) !important;
+ 10390	  column-gap: .85rem !important;
+ 10391	  align-items: start !important;
+ 10392	}
+ 10393	
+ 10394	.processGrid article strong {
+ 10395	  grid-column: 1 !important;
+ 10396	  grid-row: 1 / span 2 !important;
+ 10397	  display: block !important;
+ 10398	  width: auto !important;
+ 10399	  height: auto !important;
+ 10400	  margin: 0 !important;
+ 10401	  padding: 0 !important;
+ 10402	  background: transparent !important;
+ 10403	  border: 0 !important;
+ 10404	  border-radius: 0 !important;
+ 10405	  box-shadow: none !important;
+ 10406	  color: #07111d !important;
+ 10407	  -webkit-text-fill-color: #07111d !important;
+ 10408	  font-size: 1rem !important;
+ 10409	  line-height: 1 !important;
+ 10410	  font-weight: 950 !important;
+ 10411	}
+ 10412	
+ 10413	.processGrid article h3 {
+ 10414	  grid-column: 2 !important;
+ 10415	  display: flex !important;
+ 10416	  align-items: center !important;
+ 10417	  gap: .55rem !important;
+ 10418	  margin: 0 !important;
+ 10419	  min-width: 0 !important;
+ 10420	  color: #07111d !important;
+ 10421	  -webkit-text-fill-color: #07111d !important;
+ 10422	}
+ 10423	
+ 10424	.processIconInline {
+ 10425	  width: 22px !important;
+ 10426	  height: 22px !important;
+ 10427	  min-width: 22px !important;
+ 10428	  min-height: 22px !important;
+ 10429	  display: inline-flex !important;
+ 10430	  align-items: center !important;
+ 10431	  justify-content: center !important;
+ 10432	  border-radius: 999px !important;
+ 10433	  color: #123f59 !important;
+ 10434	  -webkit-text-fill-color: #123f59 !important;
+ 10435	  background: rgba(18, 63, 89, .055) !important;
+ 10436	  border: 1px solid rgba(18, 63, 89, .24) !important;
+ 10437	  box-shadow: inset 0 1px 0 rgba(255,255,255,.80) !important;
+ 10438	  flex: 0 0 22px !important;
+ 10439	}
+ 10440	
+ 10441	.processIconInline svg {
+ 10442	  display: block !important;
+ 10443	  width: 13px !important;
+ 10444	  height: 13px !important;
+ 10445	  min-width: 13px !important;
+ 10446	  min-height: 13px !important;
+ 10447	  opacity: 1 !important;
+ 10448	  visibility: visible !important;
+ 10449	  color: #123f59 !important;
+ 10450	  stroke: #123f59 !important;
+ 10451	  stroke-width: 2 !important;
+ 10452	}
+ 10453	
+ 10454	.processTitleText {
+ 10455	  display: inline !important;
+ 10456	  min-width: 0 !important;
+ 10457	}
+ 10458	
+ 10459	.processGrid article p {
+ 10460	  grid-column: 2 !important;
+ 10461	  margin-top: .55rem !important;
+ 10462	}
+ 10463	
+ 10464	@media (max-width: 900px) {
+ 10465	  .processGrid {
+ 10466	    grid-template-columns: 1fr !important;
+ 10467	    gap: 0 !important;
+ 10468	  }
+ 10469	
+ 10470	  .processGrid article {
+ 10471	    grid-template-columns: 42px minmax(0, 1fr) !important;
+ 10472	    padding: 1.05rem 0 !important;
+ 10473	    border-bottom: 1px solid rgba(8, 11, 16, .10) !important;
+ 10474	  }
+ 10475	
+ 10476	  .processIconInline {
+ 10477	    width: 22px !important;
+ 10478	    height: 22px !important;
+ 10479	    min-width: 22px !important;
+ 10480	    min-height: 22px !important;
+ 10481	  }
+ 10482	}
+ 10483	
+ 10484	/* === INLINE PROCESS ICONS REAL FINAL END === */
+ 10485	
+ 10486	
+ 10487	/* === CONTACT HERO SECTION === */
+ 10488	
+ 10489	.contactHero {
+ 10490	  position: relative;
+ 10491	  width: 100vw;
+ 10492	  max-width: none;
+ 10493	  margin: 0 50%;
+ 10494	  transform: translateX(-50%);
+ 10495	  min-height: clamp(360px, 34vw, 480px);
+ 10496	  display: grid;
+ 10497	  grid-template-columns: minmax(0, 1fr) minmax(320px, .72fr);
+ 10498	  align-items: center;
+ 10499	  gap: 2rem;
+ 10500	  padding: clamp(3.5rem, 6vw, 5.5rem) max(24px, calc((100vw - 1180px) / 2));
+ 10501	  background: #07101a;
+ 10502	  color: #fff;
+ 10503	  overflow: hidden;
+ 10504	}
+ 10505	
+ 10506	.contactHeroContent {
+ 10507	  position: relative;
+ 10508	  z-index: 2;
+ 10509	  max-width: 680px;
+ 10510	}
+ 10511	
+ 10512	.contactHero .eyebrow {
+ 10513	  color: #d6b36b;
+ 10514	}
+ 10515	
+ 10516	.contactHero h2 {
+ 10517	  margin: 0;
+ 10518	  max-width: 680px;
+ 10519	  color: #f4efe5;
+ 10520	  font-size: clamp(2.7rem, 4.8vw, 5rem);
+ 10521	  line-height: .92;
+ 10522	  letter-spacing: -.065em;
+ 10523	  font-weight: 950;
+ 10524	}
+ 10525	
+ 10526	.contactHero p {
+ 10527	  max-width: 620px;
+ 10528	  margin: 1.2rem 0 0;
+ 10529	  color: rgba(255,255,255,.82);
+ 10530	  font-size: clamp(.98rem, 1.15vw, 1.08rem);
+ 10531	  line-height: 1.6;
+ 10532	}
+ 10533	
+ 10534	.contactHeroActions {
+ 10535	  display: flex;
+ 10536	  flex-wrap: wrap;
+ 10537	  gap: .85rem;
+ 10538	  margin-top: 1.6rem;
+ 10539	}
+ 10540	
+ 10541	.contactHeroActions a {
+ 10542	  min-height: 46px;
+ 10543	  display: inline-flex;
+ 10544	  align-items: center;
+ 10545	  justify-content: center;
+ 10546	  border-radius: 999px;
+ 10547	  padding: 0 1.25rem;
+ 10548	  text-decoration: none;
+ 10549	  text-transform: uppercase;
+ 10550	  font-size: .72rem;
+ 10551	  letter-spacing: .055em;
+ 10552	  font-weight: 950;
+ 10553	}
+ 10554	
+ 10555	.contactHeroActions a:first-child {
+ 10556	  background: #173247;
+ 10557	  color: #fff;
+ 10558	  box-shadow: 0 18px 42px rgba(23,50,71,.32);
+ 10559	}
+ 10560	
+ 10561	.contactHeroActions a:first-child::after {
+ 10562	  content: "→";
+ 10563	  margin-left: .65rem;
+ 10564	}
+ 10565	
+ 10566	.contactHeroActions a:last-child {
+ 10567	  color: #fff;
+ 10568	  border: 1px solid rgba(255,255,255,.34);
+ 10569	  background: rgba(255,255,255,.06);
+ 10570	}
+ 10571	
+ 10572	.contactHeroImage {
+ 10573	  position: absolute;
+ 10574	  top: 0;
+ 10575	  right: 0;
+ 10576	  width: min(52vw, 760px);
+ 10577	  height: 100%;
+ 10578	  opacity: .72;
+ 10579	}
+ 10580	
+ 10581	.contactHeroImage::after {
+ 10582	  content: "";
+ 10583	  position: absolute;
+ 10584	  inset: 0;
+ 10585	  background:
+ 10586	    linear-gradient(90deg, #07101a 0%, rgba(7,16,26,.84) 18%, rgba(7,16,26,.18) 100%),
+ 10587	    linear-gradient(180deg, rgba(7,16,26,.18), rgba(7,16,26,.68));
+ 10588	}
+ 10589	
+ 10590	.contactHeroImage img {
+ 10591	  object-fit: cover;
+ 10592	  object-position: center;
+ 10593	}
+ 10594	
+ 10595	@media (max-width: 900px) {
+ 10596	  .contactHero {
+ 10597	    min-height: 500px;
+ 10598	    grid-template-columns: 1fr;
+ 10599	    margin-top: 0;
+ 10600	    padding: 3.4rem 18px 4rem;
+ 10601	    background:
+ 10602	      linear-gradient(180deg, rgba(5,8,13,.92), rgba(5,8,13,.88)),
+ 10603	      url("/images/contactoimagen.png");
+ 10604	    background-size: cover;
+ 10605	    background-position: center;
+ 10606	  }
+ 10607	
+ 10608	  .contactHeroImage {
+ 10609	    display: none;
+ 10610	  }
+ 10611	
+ 10612	  .contactHero h2 {
+ 10613	    max-width: 380px;
+ 10614	    font-size: clamp(2.45rem, 10vw, 3.45rem);
+ 10615	  }
+ 10616	
+ 10617	  .contactHero p {
+ 10618	    max-width: 360px;
+ 10619	    font-size: .9rem;
+ 10620	  }
+ 10621	
+ 10622	  .contactHeroActions {
+ 10623	    display: grid;
+ 10624	    grid-template-columns: 1fr;
+ 10625	    max-width: 360px;
+ 10626	  }
+ 10627	
+ 10628	  .contactHeroActions a {
+ 10629	    width: 100%;
+ 10630	  }
+ 10631	}
+ 10632	
+ 10633	/* END CONTACT HERO SECTION */
+ 10634	
+ 10635	

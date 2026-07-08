@@ -12856,30 +12856,3 @@
 
 /* END FINAL STACK GAP AND HOMEFINAL CLEAN */
 
-/* === CENTER PROCESS QUOTE BUTTON TEXT FINAL === */
-.processAccordionPanel a,
-.processAccordionBody a,
-.processAccordionContent a,
-.processAccordionItem a,
-.processAccordionSection details a {
-  min-height: 38px !important;
-  height: 38px !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  line-height: 1 !important;
-  vertical-align: middle !important;
-  text-align: center !important;
-}
-
-.processAccordionPanel a *,
-.processAccordionBody a *,
-.processAccordionContent a *,
-.processAccordionItem a *,
-.processAccordionSection details a * {
-  line-height: 1 !important;
-}
-/* END CENTER PROCESS QUOTE BUTTON TEXT FINAL */
-

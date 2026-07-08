@@ -8,7 +8,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import RelatedServices from "@/app/servicios/_shared/RelatedServices";
-import HomeCorporateFinal from "@/components/sections/HomeCorporateFinal";
 import styles from "./Servicio.module.css";
 
 type Locale = "es" | "en" | "zh";
@@ -779,14 +778,15 @@ export default function TransporteTerrestrePage() {
             </div>
           </div>
         </section>
+
         <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/sectores/transporteterrestre.png')" } as CSSProperties} data-across-final-cta="true">
           <div>
             <h2>{t.finalTitle}</h2>
             <p>{t.finalText}</p>
 
             <div className={styles.finalActions}>
-              <Link href="/cotizacion?servicio=transporte-terrestre">{t.finalPrimary}</Link>
-              <Link href="/contacto?servicio=transporte-terrestre">{t.finalSecondary}</Link>
+              <Link href="/cotizacion">{t.finalPrimary}</Link>
+              <Link href="/contacto">{t.finalSecondary}</Link>
             </div>
           </div>
 
@@ -799,13 +799,30 @@ export default function TransporteTerrestrePage() {
             />
           </div>
         </section>
-        <RelatedServices current="transporte-terrestre" locale={locale} />
+        <section className={styles.contactHero} aria-labelledby="contact-hero-title">
+          <div className={styles.contactHeroContent}>
+            <span className={styles.eyebrow}>{t.contactEyebrow}</span>
+            <h2 id="contact-hero-title">{t.contactTitle}</h2>
+            <p>{t.contactText}</p>
 
-        <div className={styles.serviceFinalStack}>
-          <div className={styles.homeFinalContact}>
-            <HomeCorporateFinal />
+            <div className={styles.contactHeroActions}>
+              <Link href="/contacto">{t.contactPrimary}</Link>
+              <Link href={`/cotizacion?servicio=transporte-terrestre`}>{t.contactSecondary}</Link>
+            </div>
           </div>
-        </div>
+
+          <div className={styles.contactHeroImage} aria-hidden="true">
+            <Image
+              src="/images/contactoimagen.png"
+              alt=""
+              fill
+              sizes="(max-width: 900px) 100vw, 46vw"
+            />
+          </div>
+        </section>
+
+
+<RelatedServices current="transporte-terrestre" locale={locale} />
       </main>
 
       <Footer />

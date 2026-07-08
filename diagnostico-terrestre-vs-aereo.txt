@@ -1,0 +1,3203 @@
+
+
+==========================================================================================
+RUTAS
+==========================================================================================
+
+AEREO PAGE:      src\app\servicios\transporte-aereo\page.tsx | existe=True
+AEREO CSS:       src\app\servicios\transporte-aereo\TransporteAereo.module.css | existe=True
+TERRESTRE PAGE:  src\app\servicios\transporte-terrestre\page.tsx | existe=True
+TERRESTRE CSS:   src\app\servicios\transporte-terrestre\Servicio.module.css | existe=True
+
+
+
+==========================================================================================
+GIT STATUS
+==========================================================================================
+M  src/app/servicios/transporte-aereo/TransporteAereo.module.css
+A  src/app/servicios/transporte-aereo/TransporteAereo.module.css.bak-bone-bg-unify
+A  src/app/servicios/transporte-aereo/TransporteAereo.module.css.bak-hide-homecorporate-extra-desktop
+ M src/app/servicios/transporte-terrestre/Servicio.module.css
+ M src/app/servicios/transporte-terrestre/page.tsx
+ D src/app/servicios/transporte-terrestre/page.tsx.bak-before-inline-process-icons-final
+M  src/components/sections/HomeCorporateFinal.module.css
+A  src/components/sections/HomeCorporateFinal.module.css.bak-bone-bg-unify
+?? src/app/servicios/transporte-terrestre/Servicio.module.css.bak-terrestre-align-aereo
+?? src/app/servicios/transporte-terrestre/page.tsx.bak-terrestre-align-aereo
+
+
+
+==========================================================================================
+GIT DIFF DE AEREO + TERRESTRE
+==========================================================================================
+diff --git a/src/app/servicios/transporte-terrestre/Servicio.module.css b/src/app/servicios/transporte-terrestre/Servicio.module.css
+index 9cf314f..3202268 100644
+--- a/src/app/servicios/transporte-terrestre/Servicio.module.css
++++ b/src/app/servicios/transporte-terrestre/Servicio.module.css
+@@ -11122,3 +11122,81 @@
+ }
+ 
+ /* END CONTACT HERO SECTION */
++
++/* === TERRESTRE ALIGN WITH AEREO FINAL SYSTEM === */
++
++/*
++  Transporte terrestre:
++  - Corrige consistencia visual como aéreo.
++  - No toca footer.
++  - No toca hero.
++  - No agrega HomeCorporateFinal.
++  - Oculta en desktop el contactHero duplicado, porque ya existe finalCta.
++*/
++
++.page,
++.content,
++.overview,
++.useCases,
++.process,
++.finalCta {
++  background-color: #f4f1eb !important;
++}
++
++@media (min-width: 901px) {
++  .overview,
++  .services,
++  .useCases,
++  .process {
++    margin-top: 3.2rem !important;
++    margin-bottom: 3.2rem !important;
++  }
++
++  .sectionHead {
++    margin-bottom: 1.45rem !important;
++  }
++
++  .pillars article {
++    min-height: 172px !important;
++    padding-top: 1.2rem !important;
++    padding-bottom: 1.2rem !important;
++  }
++
++  .serviceGrid article {
++    min-height: 218px !important;
++    padding: 1.35rem 1rem !important;
++  }
++
++  .useCaseGrid article {
++    min-height: 176px !important;
++    padding: 1.25rem .9rem !important;
++  }
++
++  .darkBand,
++  .darkBandImage,
++  .finalCta,
++  .finalImage {
++    min-height: 320px !important;
++  }
++
++  .darkBandContent,
++  .finalCta > div:first-child {
++    padding-top: clamp(2.4rem, 3.8vw, 3.8rem) !important;
++    padding-bottom: clamp(2.4rem, 3.8vw, 3.8rem) !important;
++  }
++
++  .stats {
++    margin-top: 1.65rem !important;
++  }
++
++  /*
++    En esta página hay finalCta y luego contactHero.
++    Para que no se sienta duplicado en desktop, dejamos finalCta y ocultamos contactHero.
++    Mobile queda intacto.
++  */
++  .contactHero {
++    display: none !important;
++  }
++}
++
++/* END TERRESTRE ALIGN WITH AEREO FINAL SYSTEM */
+diff --git a/src/app/servicios/transporte-terrestre/page.tsx b/src/app/servicios/transporte-terrestre/page.tsx
+index 7916257..fb47feb 100644
+--- a/src/app/servicios/transporte-terrestre/page.tsx
++++ b/src/app/servicios/transporte-terrestre/page.tsx
+@@ -822,7 +822,7 @@ export default function TransporteTerrestrePage() {
+         </section>
+ 
+ 
+-<RelatedServices current="transporte-aereo" locale={locale} />
++<RelatedServices current="transporte-terrestre" locale={locale} />
+       </main>
+ 
+       <Footer />
+
+
+
+==========================================================================================
+AEREO PAGE - IMPORTS / RENDER / FINAL
+==========================================================================================
+00003: import { useEffect, useState } from "react";
+00004: import type { CSSProperties } from "react";
+00005: import Header from "@/components/layout/Header";
+00006: import Footer from "@/components/layout/Footer";
+00007: import Image from "next/image";
+00008: import Link from "next/link";
+00009: import Certifications from "@/components/sections/Certifications";
+00010: import RelatedServices from "@/app/servicios/_shared/RelatedServices";
+00011: import HomeCorporateFinal from "@/components/sections/HomeCorporateFinal";
+00012: import styles from "./TransporteAereo.module.css";
+00633: <Certifications />
+00939:         <RelatedServices current="transporte-aereo" locale={locale} />
+00941:         <div className={styles.aereoFinalStack}>
+00942:           <div className={styles.homeFinalContact}>
+00943:             <HomeCorporateFinal />
+00946:           <Footer />
+
+
+==========================================================================================
+TERRESTRE PAGE - IMPORTS / RENDER / FINAL
+==========================================================================================
+00003: import { useEffect, useState } from "react";
+00004: import type { CSSProperties } from "react";
+00005: import Header from "@/components/layout/Header";
+00006: import Footer from "@/components/layout/Footer";
+00007: import Image from "next/image";
+00008: import Link from "next/link";
+00009: import Certifications from "@/components/sections/Certifications";
+00010: import RelatedServices from "@/app/servicios/_shared/RelatedServices";
+00011: import styles from "./Servicio.module.css";
+00148:       ["Operational tracking", "Monitoring to maintain visibility over every movement."],
+00582:       <main className={styles.page}>
+00654:         <Certifications />
+00753:         <section className={styles.darkBand} data-mobile-hide-after-cert="true">
+00754:           <div className={styles.darkBandImage}>
+00763:           <div className={styles.darkBandContent}>
+00767:             <div className={styles.darkBandActions}>
+00782:         <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/sectores/transporteterrestre.png')" } as CSSProperties} data-across-final-cta="true">
+00802:         <section className={styles.contactHero} aria-labelledby="contact-hero-title">
+00803:           <div className={styles.contactHeroContent}>
+00808:             <div className={styles.contactHeroActions}>
+00814:           <div className={styles.contactHeroImage} aria-hidden="true">
+00825: <RelatedServices current="transporte-terrestre" locale={locale} />
+00826:       </main>
+00828:       <Footer />
+
+
+==========================================================================================
+AEREO PAGE - ULTIMAS 180 LINEAS
+==========================================================================================
+00783:             <div>
+00784:               <strong>
+00785:                 {locale === "es"
+00786:                   ? "¿Tenés una operación aérea en curso?"
+00787:                   : locale === "en"
+00788:                     ? "Do you have an air operation in progress?"
+00789:                     : "您是否有正在进行的空运操作？"}
+00790:               </strong>
+00791:               <p>
+00792:                 {locale === "es"
+00793:                   ? "Coordinamos ruta, documentación y seguimiento para que tu carga avance sin fricción."
+00794:                   : locale === "en"
+00795:                     ? "We coordinate routing, documentation and tracking so your cargo moves without friction."
+00796:                     : "我们协调路线、文件和跟踪，确保您的货物顺利推进。"}
+00797:               </p>
+00798:             </div>
+00799: 
+00800:             <div>
+00801:               <Link href="/cotizacion?servicio=transporte-aereo">
+00802:                 {locale === "es" ? "Solicitar cotización aérea" : locale === "en" ? "Request air quote" : "申请空运报价"}
+00803:               </Link>
+00804: 
+00805:               <Link href="/contacto?servicio=transporte-aereo">
+00806:                 {locale === "es" ? "Hablar con asesor" : locale === "en" ? "Talk to an advisor" : "联系顾问"}
+00807:               </Link>
+00808:             </div>
+00809:           </div>
+00810: 
+00811:         </section>
+00812: <section className={styles.darkBand} data-mobile-hide-after-cert="true">
+00813:           <div className={styles.darkBandContent}>
+00814:             <h2>{t.bandTitle}</h2>
+00815:             <p>{t.bandText}</p>
+00816: 
+00817:             <div className={styles.stats}>
+00818:               {t.stats.map(([value, label]: string[]) => (
+00819:                 <article key={value}>
+00820:                   <strong>{value}</strong>
+00821:                   <span>{label}</span>
+00822:                 </article>
+00823:               ))}
+00824:             </div>
+00825: 
+00826:             <div className={styles.darkBandActions}>
+00827:                 <Link href="/cotizacion?servicio=transporte-aereo">
+00828:                   {locale === "es" ? "Cotizar carga aérea" : locale === "en" ? "Quote air cargo" : "获取空运报价"}
+00829:                 </Link>
+00830:                 <Link href="/contacto?servicio=transporte-aereo">
+00831:                   {locale === "es" ? "Contacto" : locale === "en" ? "Contact" : "联系"}
+00832:                 </Link>
+00833:               </div>
+00834:           </div>
+00835:         </section>
+00836:         <section className={styles.faqSection} data-aereo-faq-section="true">
+00837:           <div className={styles.faqHead}>
+00838:             <span className={styles.eyebrow}>
+00839:               {locale === "es" ? "Preguntas frecuentes" : locale === "en" ? "Frequently asked questions" : "常见问题"}
+00840:             </span>
+00841: 
+00842:             <h2>
+00843:               {locale === "es"
+00844:                 ? "Dudas frecuentes sobre transporte aéreo internacional."
+00845:                 : locale === "en"
+00846:                   ? "Common questions about international air freight."
+00847:                   : "关于国际空运的常见问题。"}
+00848:             </h2>
+00849: 
+00850:             <p>
+00851:               {locale === "es"
+00852:                 ? "Resolvemos las principales dudas antes de iniciar una operación aérea: documentación, tiempos, seguimiento, restricciones y coordinación logística."
+00853:                 : locale === "en"
+00854:                   ? "We answer the main questions before starting an air freight operation: documentation, timing, tracking, restrictions and logistics coordination."
+00855:                   : "我们解答空运操作前的主要问题：文件、时效、跟踪、限制和物流协调。"}
+00856:             </p>
+00857:           </div>
+00858: 
+00859:           <div className={styles.faqList}>
+00860:             {[
+00861:               [
+00862:                 locale === "es" ? "¿Cuándo conviene usar transporte aéreo internacional?" : locale === "en" ? "When should I use international air freight?" : "什么时候适合使用国际空运？",
+00863:                 locale === "es"
+00864:                   ? "Cuando la carga requiere velocidad, control documental y tiempos de entrega ajustados. Es ideal para mercancía urgente, repuestos críticos, productos de alto valor o envíos sensibles."
+00865:                   : locale === "en"
+00866:                     ? "When cargo requires speed, document control and tight delivery times. It is ideal for urgent goods, critical spare parts, high-value products or sensitive shipments."
+00867:                     : "当货物需要速度、文件管控和紧迫交付时间时，空运是理想选择，适用于紧急货物、关键备件、高价值产品或敏感货物。"
+00868:               ],
+00869:               [
+00870:                 locale === "es" ? "¿Cómo se calcula una cotización aérea?" : locale === "en" ? "How is an air freight quote calculated?" : "空运报价如何计算？",
+00871:                 locale === "es"
+00872:                   ? "Depende del origen, destino, peso real, peso volumétrico, dimensiones, tipo de mercancía, urgencia, documentación requerida y servicios adicionales como aduana o entrega final."
+00873:                   : locale === "en"
+00874:                     ? "It depends on origin, destination, actual weight, volumetric weight, dimensions, cargo type, urgency, required documentation and additional services such as customs or final delivery."
+00875:                     : "报价取决于起点、目的地、实际重量、体积重量、尺寸、货物类型、紧急程度、所需文件以及清关或末端配送等附加服务。"
+00876:               ],
+00877:               [
+00878:                 locale === "es" ? "¿Qué documentos necesito para una operación aérea?" : locale === "en" ? "What documents are required for air freight?" : "空运需要哪些文件？",
+00879:                 locale === "es"
+00880:                   ? "Generalmente se requiere factura comercial, packing list, información del consignatario, datos de la carga y documentos aduaneros o permisos especiales según el tipo de mercancía."
+00881:                   : locale === "en"
+00882:                     ? "Usually a commercial invoice, packing list, consignee information, cargo details and customs documents or special permits are required depending on the type of goods."
+00883:                     : "通常需要商业发票、装箱单、收货人信息、货物信息，以及根据货物类型所需的海关文件或特殊许可。"
+00884:               ],
+00885:               [
+00886:                 locale === "es" ? "¿Qué es una guía aérea o AWB?" : locale === "en" ? "What is an Air Waybill or AWB?" : "什么是空运提单 AWB？",
+00887:                 locale === "es"
+00888:                   ? "La guía aérea o AWB es el documento principal del transporte aéreo. Identifica la operación, la aerolínea, la carga, el origen, el destino y permite hacer seguimiento del envío."
+00889:                   : locale === "en"
+00890:                     ? "The Air Waybill or AWB is the main air transport document. It identifies the shipment, airline, cargo, origin, destination and allows shipment tracking."
+00891:                     : "空运提单 AWB 是空运的主要文件，用于识别运输、航空公司、货物、起点、目的地，并支持货物跟踪。"
+00892:               ],
+00893:               [
+00894:                 locale === "es" ? "¿Across gestiona aduanas y documentación?" : locale === "en" ? "Does Across handle customs and documentation?" : "Across 是否处理清关和文件？",
+00895:                 locale === "es"
+00896:                   ? "Sí. Coordinamos la operación aérea junto con los documentos necesarios, gestión aduanera, seguimiento operativo y conexión con otros servicios logísticos cuando la carga lo requiere."
+00897:                   : locale === "en"
+00898:                     ? "Yes. We coordinate the air operation together with the required documents, customs management, operational tracking and connection with other logistics services when needed."
+00899:                     : "是的。我们协调空运操作、所需文件、清关管理、操作跟踪，并在需要时连接其他物流服务。"
+00900:               ],
+00901:               [
+00902:                 locale === "es" ? "¿Qué tipo de carga puede transportarse por vía aérea?" : locale === "en" ? "What type of cargo can be shipped by air?" : "哪些货物可以通过空运运输？",
+00903:                 locale === "es"
+00904:                   ? "Se puede transportar carga general, urgente, tecnológica, farmacéutica, repuestos, muestras comerciales y mercancía de alto valor. Algunas cargas requieren revisión especial por regulación."
+00905:                   : locale === "en"
+00906:                     ? "General, urgent, technology, pharmaceutical, spare parts, commercial samples and high-value cargo can be shipped by air. Some cargo requires special regulatory review."
+00907:                     : "可空运普通货物、紧急货物、科技产品、医药产品、备件、商业样品和高价值货物。部分货物需根据法规进行特殊审核。"
+00908:               ],
+00909:               [
+00910:                 locale === "es" ? "¿Puedo hacer seguimiento de mi carga?" : locale === "en" ? "Can I track my cargo?" : "可以跟踪我的货物吗？",
+00911:                 locale === "es"
+00912:                   ? "Sí. Realizamos seguimiento operativo durante el proceso y mantenemos visibilidad sobre los hitos principales: recepción, reserva, despacho, tránsito y entrega final."
+00913:                   : locale === "en"
+00914:                     ? "Yes. We provide operational tracking throughout the process and visibility over key milestones: reception, booking, dispatch, transit and final delivery."
+00915:                     : "可以。我们在整个流程中进行操作跟踪，并提供关键节点可视化：收货、订舱、发运、运输和最终交付。"
+00916:               ],
+00917:               [
+00918:                 locale === "es" ? "¿Qué pasa si mi carga requiere manejo urgente o especial?" : locale === "en" ? "What if my cargo requires urgent or special handling?" : "如果货物需要紧急或特殊处理怎么办？",
+00919:                 locale === "es"
+00920:                   ? "Evaluamos la urgencia, tipo de mercancía, restricciones, documentación y ruta disponible para coordinar una alternativa viable con el menor riesgo operativo posible."
+00921:                   : locale === "en"
+00922:                     ? "We evaluate urgency, cargo type, restrictions, documentation and available routes to coordinate a viable alternative with the lowest possible operational risk."
+00923:                     : "我们会评估紧急程度、货物类型、限制、文件和可用路线，以协调风险最低的可行方案。"
+00924:               ]
+00925:             ].map(([question, answer]) => (
+00926:               <details className={styles.faqItem} key={question}>
+00927:                 <summary>
+00928:                   <span>{question}</span>
+00929:                   <i aria-hidden="true" />
+00930:                 </summary>
+00931: 
+00932:                 <div>
+00933:                   <p>{answer}</p>
+00934:                 </div>
+00935:               </details>
+00936:             ))}
+00937:           </div>
+00938:         </section>
+00939:         <RelatedServices current="transporte-aereo" locale={locale} />
+00940: 
+00941:         <div className={styles.aereoFinalStack}>
+00942:           <div className={styles.homeFinalContact}>
+00943:             <HomeCorporateFinal />
+00944:           </div>
+00945: 
+00946:           <Footer />
+00947:         </div>
+00948:       </main>
+00949: 
+00950:       <div className={styles.mobileStickyCta} aria-label="Acciones rápidas de transporte aéreo">
+00951:         <Link href="/cotizacion?servicio=transporte-aereo">
+00952:           {locale === "es" ? "Solicitar cotización" : locale === "en" ? "Request a quote" : "申请报价"}
+00953:         </Link>
+00954: 
+00955:         <Link href="/contacto?servicio=transporte-aereo">
+00956:           {locale === "es" ? "Hablar con asesor" : locale === "en" ? "Talk to an advisor" : "联系顾问"}
+00957:         </Link>
+00958:       </div>
+00959: 
+00960:     </div>
+00961:   );
+00962: }
+
+
+==========================================================================================
+TERRESTRE PAGE - ULTIMAS 220 LINEAS
+==========================================================================================
+00612:               <div className={styles.actions}>
+00613:                 <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>
+00614:                 <Link href="/contacto" className={styles.secondaryBtn}>{t.secondaryCta}</Link>
+00615:               </div>
+00616:             </div>
+00617: 
+00618:             <div className={styles.operationCard}>
+00619:               <span>{t.activeLabel}</span>
+00620:               <strong>{t.activeRoute}</strong>
+00621:               <p>{t.activeCargo}</p>
+00622: 
+00623:               <div>
+00624:                 <small>{t.activeStatusLabel}</small>
+00625:                 <b>{t.activeStatus}</b>
+00626:               </div>
+00627: 
+00628:               <div>
+00629:                 <small>{t.activeEtaLabel}</small>
+00630:                 <em>{t.activeEta}</em>
+00631:               </div>
+00632:             </div>
+00633:           </div>
+00634: 
+00635:           <div className={styles.commandBar} data-service-trust="transporte-terrestre">
+00636:             {t.trust.map(([title, text]: string[], index: number) => {
+00637:               const icons: IconName[] = ["timer", "shield", "document", "tracking"];
+00638: 
+00639:               return (
+00640:                 <div key={title} className={styles.commandItem}>
+00641:                   <i>
+00642:                     <Icon name={icons[index]} />
+00643:                   </i>
+00644:                   <span>
+00645:                     <strong>{title}</strong>
+00646:                     <small>{text}</small>
+00647:                   </span>
+00648:                 </div>
+00649:               );
+00650:             })}
+00651:           </div>
+00652:         </section>
+00653: 
+00654:         <Certifications />
+00655: 
+00656:         <section className={styles.overview}>
+00657:           <div className={styles.overviewCopy}>
+00658:             <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
+00659:             <h2>{t.overviewTitle}</h2>
+00660:             <p>{t.overviewText}</p>
+00661:             <Link href="/contacto">{t.overviewButton}</Link>
+00662:           </div>
+00663: 
+00664:           <div className={styles.pillars}>
+00665:             {t.pillars.map(([title, text]: string[], index: number) => {
+00666:               const icons: IconName[] = ["airport", "document", "tracking", "truck"];
+00667: 
+00668:               return (
+00669:                 <article key={title}>
+00670:                   <i>
+00671:                     <Icon name={icons[index]} />
+00672:                   </i>
+00673:                   <h3>{title}</h3>
+00674:                   <p>{text}</p>
+00675:                 </article>
+00676:               );
+00677:             })}
+00678:           </div>
+00679:         </section>
+00680: 
+00681:         <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/sectores/transporteterrestre.png')" } as CSSProperties}>
+00682:           <div className={styles.sectionHead}>
+00683:             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
+00684:             <h2>{t.servicesTitle}</h2>
+00685:           </div>
+00686: 
+00687:           <div className={styles.serviceGrid}>
+00688:             {t.services.map(([title, text]: string[], index: number) => {
+00689:               const icons: IconName[] = ["plane", "box", "diamond", "charter", "globe", "door"];
+00690: 
+00691:               return (
+00692:                 <article key={title}>
+00693:                   <i>
+00694:                     <Icon name={icons[index]} />
+00695:                   </i>
+00696:                   <h3>{title}</h3>
+00697:                   <p>{text}</p>
+00698:                 </article>
+00699:               );
+00700:             })}
+00701:           </div>
+00702:         </section>
+00703: 
+00704:         <section className={styles.useCases} data-mobile-hide-after-cert="true">
+00705:           <div className={styles.sectionHead}>
+00706:             <span className={styles.eyebrow}>{t.useCasesEyebrow}</span>
+00707:             <h2>{t.useCasesTitle}</h2>
+00708:           </div>
+00709: 
+00710:           <div className={styles.useCaseGrid}>
+00711:             {t.useCases.map(([title, text]: string[], index: number) => {
+00712:               const icons: IconName[] = ["gear", "laptop", "package", "medical", "cart", "document"];
+00713: 
+00714:               return (
+00715:                 <article key={title}>
+00716:                   <i>
+00717:                     <Icon name={icons[index]} />
+00718:                   </i>
+00719:                   <h3>{title}</h3>
+00720:                   <p>{text}</p>
+00721:                 </article>
+00722:               );
+00723:             })}
+00724:           </div>
+00725:         </section>
+00726: 
+00727:         <section className={styles.process}>
+00728:           <div className={styles.sectionHead}>
+00729:             <span className={styles.eyebrow}>{t.processEyebrow}</span>
+00730:             <h2>{t.processTitle}</h2>
+00731:           </div>
+00732: 
+00733:           <div className={styles.processGrid}>
+00734:             {t.process.map(([title, text]: string[], index: number) => {
+00735:               const icons: IconName[] = ["search", "route", "document", "plane", "tracking", "truck"];
+00736: 
+00737:               return (
+00738:                 <article key={title}>
+00739:                   <strong>{index + 1}</strong>
+00740:                   <h3>
+00741:                     <span className={styles.processIconInline} aria-hidden="true">
+00742:                       <Icon name={icons[index]} />
+00743:                     </span>
+00744:                     <span className={styles.processTitleText}>{title}</span>
+00745:                   </h3>
+00746:                   <p>{text}</p>
+00747:                 </article>
+00748:               );
+00749:             })}
+00750:           </div>
+00751:         </section>
+00752: 
+00753:         <section className={styles.darkBand} data-mobile-hide-after-cert="true">
+00754:           <div className={styles.darkBandImage}>
+00755:             <Image
+00756:               src="/images/cargaaerea.png"
+00757:               alt={t.bandTitle}
+00758:               fill
+00759:               sizes="(max-width: 900px) 100vw, 42vw"
+00760:             />
+00761:           </div>
+00762: 
+00763:           <div className={styles.darkBandContent}>
+00764:             <h2>{t.bandTitle}</h2>
+00765:             <p>{t.bandText}</p>
+00766: 
+00767:             <div className={styles.darkBandActions}>
+00768:               <Link href="/cotizacion">{t.finalPrimary}</Link>
+00769:               <Link href="/contacto">{t.finalSecondary}</Link>
+00770:             </div>
+00771:             <div className={styles.stats}>
+00772:               {t.stats.map(([value, label]: string[]) => (
+00773:                 <article key={value}>
+00774:                   <strong>{value}</strong>
+00775:                   <span>{label}</span>
+00776:                 </article>
+00777:               ))}
+00778:             </div>
+00779:           </div>
+00780:         </section>
+00781: 
+00782:         <section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/sectores/transporteterrestre.png')" } as CSSProperties} data-across-final-cta="true">
+00783:           <div>
+00784:             <h2>{t.finalTitle}</h2>
+00785:             <p>{t.finalText}</p>
+00786: 
+00787:             <div className={styles.finalActions}>
+00788:               <Link href="/cotizacion">{t.finalPrimary}</Link>
+00789:               <Link href="/contacto">{t.finalSecondary}</Link>
+00790:             </div>
+00791:           </div>
+00792: 
+00793:           <div className={styles.finalImage}>
+00794:             <Image
+00795:               src="/images/sectores/transporteterrestre.png"
+00796:               alt={t.finalTitle}
+00797:               fill
+00798:               sizes="(max-width: 900px) 100vw, 44vw"
+00799:             />
+00800:           </div>
+00801:         </section>
+00802:         <section className={styles.contactHero} aria-labelledby="contact-hero-title">
+00803:           <div className={styles.contactHeroContent}>
+00804:             <span className={styles.eyebrow}>{t.contactEyebrow}</span>
+00805:             <h2 id="contact-hero-title">{t.contactTitle}</h2>
+00806:             <p>{t.contactText}</p>
+00807: 
+00808:             <div className={styles.contactHeroActions}>
+00809:               <Link href="/contacto">{t.contactPrimary}</Link>
+00810:               <Link href={`/cotizacion?servicio=transporte-terrestre`}>{t.contactSecondary}</Link>
+00811:             </div>
+00812:           </div>
+00813: 
+00814:           <div className={styles.contactHeroImage} aria-hidden="true">
+00815:             <Image
+00816:               src="/images/contactoimagen.png"
+00817:               alt=""
+00818:               fill
+00819:               sizes="(max-width: 900px) 100vw, 46vw"
+00820:             />
+00821:           </div>
+00822:         </section>
+00823: 
+00824: 
+00825: <RelatedServices current="transporte-terrestre" locale={locale} />
+00826:       </main>
+00827: 
+00828:       <Footer />
+00829:     </div>
+00830:   );
+00831: }
+
+
+==========================================================================================
+AEREO CSS - SELECTORES IMPORTANTES
+==========================================================================================
+00001: .page {
+00007: .hero {
+00037: .hero::after {
+00258: .overview {
+00270: .finalCta h2 {
+00342: .services,
+00343: .useCases,
+00344: .process {
+00391: .process {
+00434: .darkBand {
+00510: .finalCta {
+00518: .finalCta > div:first-child {
+00523: .finalCta p {
+00597: @media (max-width: 900px) {
+00782: @media (max-width: 1180px) and (min-width: 901px) {
+00816: @media (min-width: 901px) {
+00948: @media (min-width: 901px) and (max-height: 760px) {
+01010: @media (min-width: 901px) {
+01055: .page {
+01071: .content {
+01086: @media (min-width: 901px) {
+01130: @media (max-width: 900px) {
+01233: .overview {
+01239: @media (min-width: 901px) {
+01262: @media (max-width: 900px) {
+01273: .page {
+01278: .overview {
+01284: .useCases {
+01291: .darkBand {
+01310: .finalCta {
+01314: .finalCta > div:first-child {
+01318: /* Related services después: separación limpia */
+01319: .related,
+01320: .relatedGrid {
+01355: .page {
+01360: .overview {
+01366: .useCases {
+01373: .darkBand {
+01392: .finalCta {
+01396: .finalCta > div:first-child {
+01400: /* Related services después: separación limpia */
+01401: .related,
+01402: .relatedGrid {
+01435: .useCases {
+01440: .process {
+01445: .services {
+01449: @media (max-width: 900px) {
+01457: .process {
+01463: .process .sectionHead {
+01467: .process .sectionHead h2 {
+01520: @media (max-width: 900px) {
+01540: @media (min-width: 901px) {
+01676: @media (min-width: 901px) and (max-width: 1180px) {
+01697: @media (max-width: 900px) {
+01711: .darkBand {
+01791: .finalCta {
+01804: .finalCta > div:first-child {
+01815: .finalCta h2 {
+01823: .finalCta p {
+01932: .darkBand {
+02070: .finalCta {
+02075: .related {
+02138: .darkBand {
+02276: .finalCta {
+02281: .related {
+02342: .darkBand {
+02387: .darkBand .stats {
+02428: .finalCta {
+02432: .related {
+02436: @media (max-width: 900px) {
+02457: .darkBand {
+02501: .darkBand .stats {
+02515: .darkBand .stats article {
+02522: .darkBand .stats article:last-child {
+02526: .darkBand .stats strong {
+02532: .darkBand .stats span {
+02603: .darkBand {
+02612: .darkBand::before {
+02645: .darkBand .stats {
+02658: .darkBand .stats article {
+02666: .darkBand .stats article:nth-child(2),
+02667: .darkBand .stats article:nth-child(4) {
+02671: .darkBand .stats article:nth-child(3),
+02672: .darkBand .stats article:nth-child(4) {
+02676: .darkBand .stats strong {
+02681: .darkBand .stats span {
+02694: @media (max-width: 900px) {
+02718: .darkBand {
+02736: .darkBand::before {
+02755: .darkBand .stats {
+02764: @media (max-width: 900px) {
+02788: .darkBand {
+02804: @media (max-width: 900px) {
+02816: .darkBand {
+02832: @media (max-width: 900px) {
+02949: @media (max-width: 900px) {
+03010: @media (min-width: 390px) and (max-width: 900px) and (min-height: 760px) {
+03156: @media (min-width: 901px) {
+03177: @media (min-width: 641px) and (max-width: 900px) {
+03349: @media (max-width: 900px) {
+03513: @media (max-width: 900px) {
+03621: @media (min-width: 901px) and (max-height: 700px) {
+03680: @media (min-width: 901px) and (max-width: 1100px) and (max-height: 700px) {
+03996: .hero {
+04047: .hero::after {
+04059: .hero::before {
+04298: .hero {
+04353: .hero::before {
+04366: .hero::after {
+05171: .finalCta a,
+05206: .finalCta h2,
+05212: .finalCta p,
+05246: .page {
+05250: .page .hero {
+05258: .page .trustBar {
+05266: @media (min-width: 901px) {
+05315: @media (min-width: 901px) and (max-height: 700px) {
+05347: @media (min-width: 701px) and (max-width: 900px) {
+05461: .page > .hero {
+05472: .page > .hero .heroImage {
+05482: .page > .hero .heroOverlay {
+05492: .page > .hero .heroInner {
+05503: .page > .hero .heroContent {
+05509: .page > .hero .operationCard {
+05513: .page > .hero .eyebrow {
+05521: .page > .hero .title {
+05531: .page > .hero .subtitle {
+05538: .page > .hero .actions {
+05543: .page > .hero .actions a,
+05544: .page > .hero .primaryBtn,
+05545: .page > .hero .secondaryBtn {
+05619: @media (min-width: 901px) and (max-width: 1200px) {
+05679: @media (min-width: 701px) and (max-width: 900px) {
+05809: @media (min-width: 901px) {
+05827: @media (max-width: 900px) {
+05845: .page > .trustBar i {
+05851: .page > .trustBar strong,
+05852: .page > .trustBar small {
+05864: .page > .hero .eyebrow {
+05868: .page > .hero .title {
+05873: .page > .hero .subtitle {
+05878: .page > .hero .actions {
+05883: .page > .hero .actions a,
+05884: .page > .hero .primaryBtn,
+05885: .page > .hero .secondaryBtn {
+05891: @media (min-width: 701px) and (max-width: 900px) {
+05945: .page > .hero .title {
+05949: .page > .hero .subtitle {
+05954: .page > .hero .actions {
+05959: @media (min-width: 701px) and (max-width: 900px) {
+06029: .page > .hero .heroImage {
+06034: .page > .hero .heroOverlay {
+06052: .page > .hero::after {
+06067: @media (max-width: 900px) {
+06096: .page > .hero .heroImage {
+06101: .page > .hero .heroOverlay {
+06119: .page > .hero::after {
+06140: @media (max-width: 900px) {
+06322: .page > .hero .heroImage {
+06329: @media (min-width: 901px) {
+06340: @media (max-width: 900px) {
+06356: @media (min-width: 901px) {
+06368: @media (max-width: 900px) {
+06453: .page > .hero .heroImage {
+06458: .page > .hero .heroOverlay {
+06476: .page > .hero::after {
+06497: @media (max-width: 900px) {
+06535: .page > .hero .heroImageDesktop {
+06542: .page > .hero .heroImageMobile {
+06549: @media (max-width: 900px) {
+06565: @media (min-width: 901px) {
+06587: .page > .hero .heroImageDesktop {
+06594: .page > .hero .heroImageMobile {
+06601: @media (max-width: 900px) {
+06617: @media (min-width: 901px) {
+06673:    La única sección oscura con imagen queda antes de RelatedServices:
+06677: @media (max-width: 900px) {
+06716:   /* La CTA final sí queda visible antes de RelatedServices/oficinas */
+06758: @media (max-width: 900px) {
+06831: @media (max-width: 900px) {
+06899: @media (max-width: 900px) {
+07044: .page > .hero {
+07052: .page > .hero h1,
+07053: .page > .hero [data-hero-role="title"],
+07054: .page > .hero .title,
+07055: .page > .hero [class*="title"],
+07056: .page > .hero [class*="Title"] {
+07067: .page > .hero p,
+07068: .page > .hero [data-hero-role="text"],
+07069: .page > .hero .subtitle,
+07070: .page > .hero [class*="subtitle"],
+07071: .page > .hero [class*="Subtitle"] {
+07078: .page > .hero .eyebrow,
+07079: .page > .hero [data-hero-role="eyebrow"],
+07080: .page > .hero [class*="eyebrow"],
+07081: .page > .hero [class*="Eyebrow"] {
+07088: .page > .hero a,
+07089: .page > .hero button,
+07090: .page > .hero [data-hero-role="actions"] a,
+07091: .page > .hero .actions a {
+07102: .page .process .eyebrow,
+07103: .page .process [class*="eyebrow"],
+07104: .page .process [class*="Eyebrow"],
+07105: .page section[class*="process"] .eyebrow,
+07106: .page section[class*="process"] [class*="eyebrow"],
+07107: .page section[class*="Process"] .eyebrow,
+07108: .page section[class*="Process"] [class*="Eyebrow"] {
+07124: .page .process .eyebrow::before,
+07125: .page .process .eyebrow::after,
+07126: .page .process [class*="eyebrow"]::before,
+07127: .page .process [class*="eyebrow"]::after,
+07128: .page section[class*="process"] [class*="eyebrow"]::before,
+07129: .page section[class*="process"] [class*="eyebrow"]::after,
+07130: .page section[class*="Process"] [class*="Eyebrow"]::before,
+07131: .page section[class*="Process"] [class*="Eyebrow"]::after {
+07145: .page {
+07152: .page > .hero h1,
+07153: .page > .hero h2,
+07154: .page > .hero h3,
+07155: .page > .hero p,
+07156: .page > .hero a,
+07157: .page > .hero button,
+07158: .page > .hero strong,
+07159: .page > .hero small,
+07160: .page > .hero em,
+07161: .page > .hero span:not(.eyebrow),
+07162: .page > .hero [data-hero-role="title"],
+07163: .page > .hero [data-hero-role="text"],
+07164: .page > .hero [data-hero-role="actions"] a {
+07170: .page > .hero p,
+07171: .page > .hero [data-hero-role="text"],
+07172: .page > .hero .subtitle,
+07173: .page > .hero [class*="subtitle"],
+07174: .page > .hero [class*="Subtitle"] {
+07180: .page .trustBar strong,
+07181: .page .trustBar span,
+07182: .page .trustBar small,
+07183: .page .trustBar p,
+07184: .page [data-aereo-trust="true"] strong,
+07185: .page [data-aereo-trust="true"] span,
+07186: .page [data-aereo-trust="true"] small,
+07187: .page [data-aereo-trust="true"] p {
+07193: .page .darkBand h1,
+07194: .page .darkBand h2,
+07195: .page .darkBand h3,
+07196: .page .darkBand p,
+07197: .page .darkBand a,
+07198: .page .darkBand strong,
+07199: .page .darkBand span,
+07200: .page .darkBand small,
+07201: .page section[data-sector-dark-band="true"] h1,
+07202: .page section[data-sector-dark-band="true"] h2,
+07203: .page section[data-sector-dark-band="true"] h3,
+07204: .page section[data-sector-dark-band="true"] p,
+07205: .page section[data-sector-dark-band="true"] a,
+07206: .page section[data-sector-dark-band="true"] strong,
+07207: .page section[data-sector-dark-band="true"] span,
+07208: .page section[data-sector-dark-band="true"] small {
+07214: .page .finalCta h1,
+07215: .page .finalCta h2,
+07216: .page .finalCta h3,
+07217: .page .finalCta p,
+07218: .page .finalCta a,
+07219: .page .finalCta button,
+07220: .page .finalCta strong,
+07221: .page .finalCta span,
+07222: .page .finalCta small,
+07223: .page section[data-across-final-cta="true"] h1,
+07224: .page section[data-across-final-cta="true"] h2,
+07225: .page section[data-across-final-cta="true"] h3,
+07226: .page section[data-across-final-cta="true"] p,
+07227: .page section[data-across-final-cta="true"] a,
+07228: .page section[data-across-final-cta="true"] button,
+07229: .page section[data-across-final-cta="true"] strong,
+07230: .page section[data-across-final-cta="true"] span,
+07231: .page section[data-across-final-cta="true"] small {
+07237: .page .finalCta p,
+07238: .page section[data-across-final-cta="true"] p {
+07244: .page > .hero *,
+07245: .page .darkBand *,
+07246: .page .finalCta *,
+07247: .page section[data-across-final-cta="true"] * {
+07700: @media (max-width: 900px) {
+07862: @media (max-width: 900px) {
+08047:    - Aplica a overview, process, finalCta, related, cards.
+08055: @media (min-width: 901px) {
+08109: @media (min-width: 701px) and (max-width: 900px) {
+08378: .page .trustBar {
+08385: .page .trustBar > div,
+08386: .page .trustBar div {
+08391: .page .trustBar > div:last-child,
+08392: .page .trustBar div:last-child {
+08396: .page .trustBar i {
+08406: .page .trustBar i svg {
+08410: .page .trustBar strong {
+08418: .page .trustBar span,
+08419: .page .trustBar p,
+08420: .page .trustBar small {
+08425: .page .trustBar small {
+08429: @media (max-width: 900px) {
+08442: .page > .hero[data-service-hero-home="true"] {
+08459: .page > .hero[data-service-hero-home="true"] img,
+08460: .page > .hero[data-service-hero-home="true"] video,
+08461: .page > .hero[data-service-hero-home="true"] [data-hero-role="desktop-image"],
+08462: .page > .hero[data-service-hero-home="true"] [data-hero-role="mobile-image"],
+08463: .page > .hero[data-service-hero-home="true"] [data-hero-role="video"] {
+08468: .page > .hero[data-service-hero-home="true"] [data-hero-role="inner"],
+08469: .page > .hero[data-service-hero-home="true"] .heroInner {
+08476: .page > .hero[data-service-hero-home="true"] [data-hero-role="content"],
+08477: .page > .hero[data-service-hero-home="true"] .heroContent {
+08483: .page > .hero[data-service-hero-home="true"] + .trustBar,
+08484: .page > .hero[data-service-hero-home="true"] + section[class*="trustBar"] {
+08491: @media (max-width: 900px) {
+08538: @media (min-width: 701px) and (max-width: 900px) {
+08651: @media (min-width: 701px) and (max-width: 900px) {
+08780: .page .darkBand {
+08802: .page .darkBand::before {
+08818: .page .darkBand::after {
+08830: .page .darkBand > * {
+08835: .page .darkBand .darkBandImage,
+08836: .page .darkBand [class*="darkBandImage"] {
+08843: .page .darkBand h2 {
+08849: .page .darkBand p {
+08855: .page .darkBand article,
+08856: .page .darkBand [class*="stat"],
+08857: .page .darkBand [class*="Stat"] {
+08968: @media (min-width: 701px) and (max-width: 900px) {
+09133: @media (max-width: 900px) {
+09152: @media (max-width: 900px) {
+09280: @media (max-width: 900px) {
+09387: .hero {
+09397: .page > .hero .heroImage,
+09398: .page > .hero .heroImageDesktop,
+09399: .page > .hero .heroImageMobile {
+09407: .page > .hero .heroOverlay {
+09415: .page > .hero .heroInner,
+09416: .page > .hero .heroContent,
+09417: .page > .hero .operationCard {
+09423: @media (min-width: 901px) {
+09441: @media (max-width: 900px) {
+09469: .page .processGrid::before {
+09476: .page .processGrid article::after,
+09477: .page .processGrid article:not(:last-child)::after {
+09486: .page .processGrid i,
+09487: .page .processGrid article i,
+09488: .page .processGrid i svg,
+09489: .page .processGrid article i svg {
+09504: .page .processGrid strong,
+09505: .page .processGrid article strong {
+09541: .page .processGrid strong::before,
+09542: .page .processGrid strong::after,
+09543: .page .processGrid article strong::before,
+09544: .page .processGrid article strong::after {
+09554: @media (min-width: 901px) {
+09704: .process article {
+09709: .process article h3 {
+09717: .process article h3::before {
+09733: .process article:nth-child(1) h3::before {
+09739: .process article:nth-child(2) h3::before {
+09745: .process article:nth-child(3) h3::before {
+09751: .process article:nth-child(4) h3::before {
+09757: .process article:nth-child(5) h3::before {
+09763: .process article:nth-child(6) h3::before {
+09796: .process article h3::before {
+09882: @media (max-width: 900px) {
+09914: @media (max-width: 900px) {
+10144: @media (max-width: 900px) {
+10273: @media (max-width: 900px) {
+10453: @media (max-width: 900px) {
+10490: @media (max-width: 900px) {
+10524: @media (max-width: 900px) {
+10666: @media (max-width: 900px) {
+10758: @media (max-width: 900px) {
+10809: @media (max-width: 900px) {
+10846:     Componentes externos como RelatedServices / HomeCorporateFinal.
+10878: @media (max-width: 900px) {
+11007: @media (max-width: 900px) {
+11072:   .page :global([class*="Related"]) h2,
+11073:   .page :global([class*="related"]) h2,
+11093:   .page :global([class*="Related"]) h2,
+11094:   .page :global([class*="related"]) h2,
+11119: .aereoFinalStack {
+11129:   .aereoFinalStack {
+11136:   .aereoFinalStack .homeFinalContact {
+11147:   .aereoFinalStack .homeFinalContact :global([class*="services"]) {
+11151:   .aereoFinalStack .homeFinalContact :global([class*="homeFinalCta"]) {
+11155:   .aereoFinalStack :global(footer),
+11156:   .aereoFinalStack :global([class*="Footer_footer"]),
+11157:   .aereoFinalStack :global([class*="footer"]) {
+11165: @media (max-width: 900px) {
+11178:   .aereoFinalStack {
+11451: @media (min-width: 901px) and (max-width: 1180px) {
+11573: @media (min-width: 901px) {
+11657: @media (min-width: 901px) {
+11891: @media (max-width: 900px) {
+11920: @media (min-width: 901px) {
+11940: .page {
+11944: @media (min-width: 901px) {
+12209: @media (max-width: 900px) {
+12252:   .homeFinalContact :global(section:first-of-type) {
+12261:   .homeFinalContact :global(section:first-of-type > div:first-child) {
+12265:   .homeFinalContact :global(section:first-of-type h2) {
+12272:   .homeFinalContact :global(section:first-of-type article) {
+12281:   .homeFinalContact :global(section:first-of-type > div:first-child) {
+12296:   .homeFinalContact :global(section:first-of-type) {
+12302:   .homeFinalContact :global(section:first-of-type [class*="map"]),
+12303:   .homeFinalContact :global(section:first-of-type [class*="Map"]),
+12304:   .homeFinalContact :global(section:first-of-type [class*="world"]),
+12305:   .homeFinalContact :global(section:first-of-type [class*="World"]) {
+12319:   NO toca .aereoFinalStack.
+12323: .homeFinalContact {
+12344: @media (min-width: 901px) {
+12345:   .homeFinalContact :global([class*="integrated"]),
+12346:   .homeFinalContact :global([class*="services"]) {
+12360: .page,
+12361: .content,
+12362: .overview,
+12363: .services,
+12364: .useCases,
+12365: .process,
+12371: @media (min-width: 901px) {
+12372:   .homeFinalContact {
+
+
+==========================================================================================
+TERRESTRE CSS - SELECTORES IMPORTANTES
+==========================================================================================
+00001: .page {
+00007: .hero {
+00037: .hero::after {
+00258: .overview {
+00270: .finalCta h2 {
+00342: .services,
+00343: .useCases,
+00344: .process {
+00391: .process {
+00434: .darkBand {
+00510: .finalCta {
+00518: .finalCta > div:first-child {
+00523: .finalCta p {
+00597: @media (max-width: 900px) {
+00782: @media (max-width: 1180px) and (min-width: 901px) {
+00816: @media (min-width: 901px) {
+00948: @media (min-width: 901px) and (max-height: 760px) {
+01010: @media (min-width: 901px) {
+01055: .page {
+01071: .content {
+01086: @media (min-width: 901px) {
+01130: @media (max-width: 900px) {
+01233: .overview {
+01239: @media (min-width: 901px) {
+01262: @media (max-width: 900px) {
+01273: .page {
+01278: .overview {
+01283: .services {
+01295: .services .sectionHead {
+01301: .services .sectionHead h2 {
+01306: .services .eyebrow {
+01358: .useCases {
+01365: .darkBand {
+01384: .finalCta {
+01388: .finalCta > div:first-child {
+01392: /* Related services después: separación limpia */
+01393: .related,
+01394: .relatedGrid {
+01429: .page {
+01434: .overview {
+01439: .services {
+01451: .services .sectionHead {
+01457: .services .sectionHead h2 {
+01462: .services .eyebrow {
+01514: .useCases {
+01521: .darkBand {
+01540: .finalCta {
+01544: .finalCta > div:first-child {
+01548: /* Related services después: separación limpia */
+01549: .related,
+01550: .relatedGrid {
+01583: .useCases {
+01588: .process {
+01593: .services {
+01597: @media (max-width: 900px) {
+01605: .process {
+01611: .process .sectionHead {
+01615: .process .sectionHead h2 {
+01668: @media (max-width: 900px) {
+01688: @media (min-width: 901px) {
+01824: @media (min-width: 901px) and (max-width: 1180px) {
+01845: @media (max-width: 900px) {
+01859: .darkBand {
+01939: .finalCta {
+01952: .finalCta > div:first-child {
+01963: .finalCta h2 {
+01971: .finalCta p {
+02080: .darkBand {
+02218: .finalCta {
+02223: .related {
+02286: .darkBand {
+02424: .finalCta {
+02429: .related {
+02490: .darkBand {
+02535: .darkBand .stats {
+02576: .finalCta {
+02580: .related {
+02584: @media (max-width: 900px) {
+02605: .darkBand {
+02649: .darkBand .stats {
+02663: .darkBand .stats article {
+02670: .darkBand .stats article:last-child {
+02674: .darkBand .stats strong {
+02680: .darkBand .stats span {
+02750: .services {
+02759: .services::before {
+02771: .services > * {
+02776: .services .sectionHead {
+02780: .services .sectionHead h2 {
+02839: .darkBand {
+02848: .darkBand::before {
+02881: .darkBand .stats {
+02894: .darkBand .stats article {
+02902: .darkBand .stats article:nth-child(2),
+02903: .darkBand .stats article:nth-child(4) {
+02907: .darkBand .stats article:nth-child(3),
+02908: .darkBand .stats article:nth-child(4) {
+02912: .darkBand .stats strong {
+02917: .darkBand .stats span {
+02930: @media (max-width: 900px) {
+02955: .services {
+02973: .services::before {
+02986: .services::after {
+02996: .services > * {
+03001: .services .sectionHead {
+03006: .services .sectionHead h2 {
+03057: .darkBand {
+03075: .darkBand::before {
+03094: .darkBand .stats {
+03103: @media (max-width: 900px) {
+03127: .darkBand {
+03143: @media (max-width: 900px) {
+03155: .darkBand {
+03171: @media (max-width: 900px) {
+03288: @media (max-width: 900px) {
+03349: @media (min-width: 390px) and (max-width: 900px) and (min-height: 760px) {
+03495: @media (min-width: 901px) {
+03516: @media (min-width: 641px) and (max-width: 900px) {
+03688: @media (max-width: 900px) {
+03852: @media (max-width: 900px) {
+03960: @media (min-width: 901px) and (max-height: 700px) {
+04019: @media (min-width: 901px) and (max-width: 1100px) and (max-height: 700px) {
+04335: .hero {
+04386: .hero::after {
+04398: .hero::before {
+04637: .hero {
+04692: .hero::before {
+04705: .hero::after {
+05510: .finalCta a,
+05545: .finalCta h2,
+05551: .finalCta p,
+05585: .page {
+05589: .page .hero {
+05597: .page .trustBar {
+05605: @media (min-width: 901px) {
+05654: @media (min-width: 901px) and (max-height: 700px) {
+05686: @media (min-width: 701px) and (max-width: 900px) {
+05800: .page > .hero {
+05811: .page > .hero .heroImage {
+05821: .page > .hero .heroOverlay {
+05831: .page > .hero .heroInner {
+05842: .page > .hero .heroContent {
+05848: .page > .hero .operationCard {
+05852: .page > .hero .eyebrow {
+05860: .page > .hero .title {
+05870: .page > .hero .subtitle {
+05877: .page > .hero .actions {
+05882: .page > .hero .actions a,
+05883: .page > .hero .primaryBtn,
+05884: .page > .hero .secondaryBtn {
+05958: @media (min-width: 901px) and (max-width: 1200px) {
+06018: @media (min-width: 701px) and (max-width: 900px) {
+06148: @media (min-width: 901px) {
+06166: @media (max-width: 900px) {
+06184: .page > .trustBar i {
+06190: .page > .trustBar strong,
+06191: .page > .trustBar small {
+06203: .page > .hero .eyebrow {
+06207: .page > .hero .title {
+06212: .page > .hero .subtitle {
+06217: .page > .hero .actions {
+06222: .page > .hero .actions a,
+06223: .page > .hero .primaryBtn,
+06224: .page > .hero .secondaryBtn {
+06230: @media (min-width: 701px) and (max-width: 900px) {
+06284: .page > .hero .title {
+06288: .page > .hero .subtitle {
+06293: .page > .hero .actions {
+06298: @media (min-width: 701px) and (max-width: 900px) {
+06368: .page > .hero .heroImage {
+06373: .page > .hero .heroOverlay {
+06391: .page > .hero::after {
+06406: @media (max-width: 900px) {
+06435: .page > .hero .heroImage {
+06440: .page > .hero .heroOverlay {
+06458: .page > .hero::after {
+06479: @media (max-width: 900px) {
+06661: .page > .hero .heroImage {
+06668: @media (min-width: 901px) {
+06679: @media (max-width: 900px) {
+06695: @media (min-width: 901px) {
+06707: @media (max-width: 900px) {
+06792: .page > .hero .heroImage {
+06797: .page > .hero .heroOverlay {
+06815: .page > .hero::after {
+06836: @media (max-width: 900px) {
+06874: .page > .hero .heroImageDesktop {
+06881: .page > .hero .heroImageMobile {
+06888: @media (max-width: 900px) {
+06904: @media (min-width: 901px) {
+06926: .page > .hero .heroImageDesktop {
+06933: .page > .hero .heroImageMobile {
+06940: @media (max-width: 900px) {
+06956: @media (min-width: 901px) {
+07012:    La única sección oscura con imagen queda antes de RelatedServices:
+07016: @media (max-width: 900px) {
+07055:   /* La CTA final sí queda visible antes de RelatedServices/oficinas */
+07097: @media (max-width: 900px) {
+07170: @media (max-width: 900px) {
+07238: @media (max-width: 900px) {
+07383: .page > .hero {
+07391: .page > .hero h1,
+07392: .page > .hero [data-hero-role="title"],
+07393: .page > .hero .title,
+07394: .page > .hero [class*="title"],
+07395: .page > .hero [class*="Title"] {
+07406: .page > .hero p,
+07407: .page > .hero [data-hero-role="text"],
+07408: .page > .hero .subtitle,
+07409: .page > .hero [class*="subtitle"],
+07410: .page > .hero [class*="Subtitle"] {
+07417: .page > .hero .eyebrow,
+07418: .page > .hero [data-hero-role="eyebrow"],
+07419: .page > .hero [class*="eyebrow"],
+07420: .page > .hero [class*="Eyebrow"] {
+07427: .page > .hero a,
+07428: .page > .hero button,
+07429: .page > .hero [data-hero-role="actions"] a,
+07430: .page > .hero .actions a {
+07441: .page .process .eyebrow,
+07442: .page .process [class*="eyebrow"],
+07443: .page .process [class*="Eyebrow"],
+07444: .page section[class*="process"] .eyebrow,
+07445: .page section[class*="process"] [class*="eyebrow"],
+07446: .page section[class*="Process"] .eyebrow,
+07447: .page section[class*="Process"] [class*="Eyebrow"] {
+07463: .page .process .eyebrow::before,
+07464: .page .process .eyebrow::after,
+07465: .page .process [class*="eyebrow"]::before,
+07466: .page .process [class*="eyebrow"]::after,
+07467: .page section[class*="process"] [class*="eyebrow"]::before,
+07468: .page section[class*="process"] [class*="eyebrow"]::after,
+07469: .page section[class*="Process"] [class*="Eyebrow"]::before,
+07470: .page section[class*="Process"] [class*="Eyebrow"]::after {
+07484: .page {
+07491: .page > .hero h1,
+07492: .page > .hero h2,
+07493: .page > .hero h3,
+07494: .page > .hero p,
+07495: .page > .hero a,
+07496: .page > .hero button,
+07497: .page > .hero strong,
+07498: .page > .hero small,
+07499: .page > .hero em,
+07500: .page > .hero span:not(.eyebrow),
+07501: .page > .hero [data-hero-role="title"],
+07502: .page > .hero [data-hero-role="text"],
+07503: .page > .hero [data-hero-role="actions"] a {
+07509: .page > .hero p,
+07510: .page > .hero [data-hero-role="text"],
+07511: .page > .hero .subtitle,
+07512: .page > .hero [class*="subtitle"],
+07513: .page > .hero [class*="Subtitle"] {
+07519: .page .trustBar strong,
+07520: .page .trustBar span,
+07521: .page .trustBar small,
+07522: .page .trustBar p,
+07523: .page [data-transporte-terrestre-trust="true"] strong,
+07524: .page [data-transporte-terrestre-trust="true"] span,
+07525: .page [data-transporte-terrestre-trust="true"] small,
+07526: .page [data-transporte-terrestre-trust="true"] p {
+07532: .page .darkBand h1,
+07533: .page .darkBand h2,
+07534: .page .darkBand h3,
+07535: .page .darkBand p,
+07536: .page .darkBand a,
+07537: .page .darkBand strong,
+07538: .page .darkBand span,
+07539: .page .darkBand small,
+07540: .page section[data-sector-dark-band="true"] h1,
+07541: .page section[data-sector-dark-band="true"] h2,
+07542: .page section[data-sector-dark-band="true"] h3,
+07543: .page section[data-sector-dark-band="true"] p,
+07544: .page section[data-sector-dark-band="true"] a,
+07545: .page section[data-sector-dark-band="true"] strong,
+07546: .page section[data-sector-dark-band="true"] span,
+07547: .page section[data-sector-dark-band="true"] small {
+07553: .page .finalCta h1,
+07554: .page .finalCta h2,
+07555: .page .finalCta h3,
+07556: .page .finalCta p,
+07557: .page .finalCta a,
+07558: .page .finalCta button,
+07559: .page .finalCta strong,
+07560: .page .finalCta span,
+07561: .page .finalCta small,
+07562: .page section[data-across-final-cta="true"] h1,
+07563: .page section[data-across-final-cta="true"] h2,
+07564: .page section[data-across-final-cta="true"] h3,
+07565: .page section[data-across-final-cta="true"] p,
+07566: .page section[data-across-final-cta="true"] a,
+07567: .page section[data-across-final-cta="true"] button,
+07568: .page section[data-across-final-cta="true"] strong,
+07569: .page section[data-across-final-cta="true"] span,
+07570: .page section[data-across-final-cta="true"] small {
+07576: .page .finalCta p,
+07577: .page section[data-across-final-cta="true"] p {
+07583: .page > .hero *,
+07584: .page .darkBand *,
+07585: .page .finalCta *,
+07586: .page section[data-across-final-cta="true"] * {
+08039: @media (max-width: 900px) {
+08201: @media (max-width: 900px) {
+08386:    - Aplica a overview, process, finalCta, related, cards.
+08394: @media (min-width: 901px) {
+08448: @media (min-width: 701px) and (max-width: 900px) {
+08717: .page .trustBar {
+08724: .page .trustBar > div,
+08725: .page .trustBar div {
+08730: .page .trustBar > div:last-child,
+08731: .page .trustBar div:last-child {
+08735: .page .trustBar i {
+08745: .page .trustBar i svg {
+08749: .page .trustBar strong {
+08757: .page .trustBar span,
+08758: .page .trustBar p,
+08759: .page .trustBar small {
+08764: .page .trustBar small {
+08768: @media (max-width: 900px) {
+08781: .page > .hero[data-service-hero-home="true"] {
+08798: .page > .hero[data-service-hero-home="true"] img,
+08799: .page > .hero[data-service-hero-home="true"] video,
+08800: .page > .hero[data-service-hero-home="true"] [data-hero-role="desktop-image"],
+08801: .page > .hero[data-service-hero-home="true"] [data-hero-role="mobile-image"],
+08802: .page > .hero[data-service-hero-home="true"] [data-hero-role="video"] {
+08807: .page > .hero[data-service-hero-home="true"] [data-hero-role="inner"],
+08808: .page > .hero[data-service-hero-home="true"] .heroInner {
+08815: .page > .hero[data-service-hero-home="true"] [data-hero-role="content"],
+08816: .page > .hero[data-service-hero-home="true"] .heroContent {
+08822: .page > .hero[data-service-hero-home="true"] + .trustBar,
+08823: .page > .hero[data-service-hero-home="true"] + section[class*="trustBar"] {
+08830: @media (max-width: 900px) {
+08871: .page .services {
+08882: .page .services::before {
+08889: .page .services::after {
+08905: .page .services > * {
+08915: .page .services {
+08922: .page .services::before {
+08929: .page .services::after {
+08945: .page .services > * {
+08950: .page .services article,
+08951: .page .services [class*="card"],
+08952: .page .services [class*="Card"] {
+08967: @media (min-width: 701px) and (max-width: 900px) {
+09080: @media (min-width: 701px) and (max-width: 900px) {
+09206: .page .services {
+09229: .page .services > * {
+09242: .page .darkBand {
+09264: .page .darkBand::before {
+09280: .page .darkBand::after {
+09292: .page .darkBand > * {
+09297: .page .darkBand .darkBandImage,
+09298: .page .darkBand [class*="darkBandImage"] {
+09305: .page .darkBand h2 {
+09311: .page .darkBand p {
+09317: .page .darkBand article,
+09318: .page .darkBand [class*="stat"],
+09319: .page .darkBand [class*="Stat"] {
+09404: .page .services {
+09416: .page .services::before,
+09417: .page .services::after {
+09451: @media (min-width: 701px) and (max-width: 900px) {
+09616: @media (max-width: 900px) {
+09635: @media (max-width: 900px) {
+09652: .services {
+09667: @media (max-width: 900px) {
+09690: .finalCta {
+09707: .finalCta > div:first-child {
+09719: @media (max-width: 900px) {
+09750: .services,
+09751: .page .services {
+09770: .services > *,
+09771: .page .services > * {
+09776: .darkBand,
+09777: .page .darkBand {
+09796: .darkBand > *,
+09797: .page .darkBand > * {
+09802: @media (max-width: 900px) {
+09842: .services,
+09843: .page .services {
+09861: .services::before,
+09862: .page .services::before {
+09866: .services::after,
+09867: .page .services::after {
+09871: .services .sectionHead,
+09872: .page .services .sectionHead,
+09874: .page .serviceGrid {
+09881: .darkBand,
+09882: .page .darkBand {
+09900: .darkBand::before,
+09901: .page .darkBand::before {
+09906: .darkBand::after,
+09907: .page .darkBand::after {
+09912: .page .darkBandContent {
+09919: .page .darkBandImage,
+09920: .darkBand [class*="darkBandImage"],
+09921: .page .darkBand [class*="darkBandImage"] {
+09925: @media (max-width: 900px) {
+09964: .services .serviceGrid {
+09971: .services .serviceGrid article,
+09972: .darkBand .stats article {
+09994: .services .serviceGrid article::before,
+09995: .darkBand .stats article::before {
+10007: .services .serviceGrid article::after {
+10018: .services .serviceGrid article > *,
+10019: .darkBand .stats article > * {
+10024: .services .serviceGrid article i {
+10037: .services .serviceGrid article h3,
+10038: .darkBand .stats article strong {
+10047: .services .serviceGrid article p,
+10048: .darkBand .stats article span {
+10058: .darkBand .stats {
+10062: @media (max-width: 900px) {
+10190: @media (max-width: 900px) {
+10326: @media (max-width: 900px) {
+10433: .hero {
+10443: .page > .hero .heroImage,
+10444: .page > .hero .heroImageDesktop,
+10445: .page > .hero .heroImageMobile {
+10453: .page > .hero .heroOverlay {
+10461: .page > .hero .heroInner,
+10462: .page > .hero .heroContent,
+10463: .page > .hero .operationCard {
+10469: @media (min-width: 901px) {
+10487: @media (max-width: 900px) {
+10515: .page .processGrid::before {
+10522: .page .processGrid article::after,
+10523: .page .processGrid article:not(:last-child)::after {
+10532: .page .processGrid i,
+10533: .page .processGrid article i,
+10534: .page .processGrid i svg,
+10535: .page .processGrid article i svg {
+10550: .page .processGrid strong,
+10551: .page .processGrid article strong {
+10587: .page .processGrid strong::before,
+10588: .page .processGrid strong::after,
+10589: .page .processGrid article strong::before,
+10590: .page .processGrid article strong::after {
+10600: @media (min-width: 901px) {
+10653: @media (max-width: 900px) {
+10668: @media (min-width: 901px) {
+10777: .process article {
+10782: .process article h3 {
+10790: .process article h3::before {
+10806: .process article:nth-child(1) h3::before {
+10812: .process article:nth-child(2) h3::before {
+10818: .process article:nth-child(3) h3::before {
+10824: .process article:nth-child(4) h3::before {
+10830: .process article:nth-child(5) h3::before {
+10836: .process article:nth-child(6) h3::before {
+10869: .process article h3::before {
+10955: @media (max-width: 900px) {
+10980: .contactHero {
+11003: .contactHero .eyebrow {
+11007: .contactHero h2 {
+11017: .contactHero p {
+11086: @media (max-width: 900px) {
+11137: .page,
+11138: .content,
+11139: .overview,
+11140: .useCases,
+11141: .process,
+11142: .finalCta {
+11146: @media (min-width: 901px) {
+
+
+==========================================================================================
+AEREO CSS - MARCADORES/PARCHES FINALES
+==========================================================================================
+00089: .finalActions {
+00097: .finalActions a,
+00112: .finalActions a:first-child,
+00120: .finalActions a:first-child::after,
+00127: .finalActions a:last-child {
+00135:   justify-self: end;
+00270: .finalCta h2 {
+00510: .finalCta {
+00518: .finalCta > div:first-child {
+00523: .finalCta p {
+00530: .finalActions a:last-child {
+00536: .finalImage {
+00542: .finalImage img {
+00642:   .finalCta {
+00666:   .finalImage {
+00670:   .finalImage {
+00685:   .finalActions {
+00690:   .finalActions a,
+00707:   .finalCta h2 {
+00716: /* === REAL SVG ICON SYSTEM === */
+00815: /* === HERO INTERNATIONAL PREMIUM CLEAN === */
+01009: /* === FINAL HERO / SECTION CONSISTENCY: NO PAGE GRADIENT === */
+01018:   /* No niebla blanca al final del hero */
+01083: /* === HERO FINAL BALANCE: DESKTOP + MOBILE === */
+01135:     align-items: flex-end !important;
+01230: /* === TIGHTEN SPACE AFTER CERTIFICATIONS === */
+01270: /* === BRAND COHERENCE: BLACK / WHITE / RED SYSTEM === */
+01309: /* CTA final: que no parezca cortado raro, más premium */
+01310: .finalCta {
+01314: .finalCta > div:first-child {
+01352: /* === BRAND COHERENCE: BLACK / WHITE / RED SYSTEM === */
+01391: /* CTA final: que no parezca cortado raro, más premium */
+01392: .finalCta {
+01396: .finalCta > div:first-child {
+01434: /* === FINAL: HIDE REDUNDANT USE CASES SECTION === */
+01456: /* === COMPACT PROCESS SECTION === */
+01539: /* === PROCESS DESKTOP: COMPACT HORIZONTAL FLOW === */
+01708: /* === FIX DARK BAND + FINAL CTA: ONE PREMIUM ENDING === */
+01790: /* CTA final: quitar segunda imagen gigante y volverlo franja ejecutiva */
+01791: .finalCta {
+01804: .finalCta > div:first-child {
+01815: .finalCta h2 {
+01823: .finalCta p {
+01831: .finalActions {
+01835:   justify-content: flex-end !important;
+01840: .finalActions a:first-child {
+01845: .finalActions a:last-child {
+01852: .finalImage {
+01876:   .finalCta > div:first-child {
+01880:   .finalActions {
+01912:   .finalCta > div:first-child {
+01917:   .finalActions {
+01923:   .finalActions a {
+01929: /* === FINAL OPERATIVE STRIP: COMPACT, NOT SECOND HERO === */
+02070: .finalCta {
+02135: /* === FINAL OPERATIVE STRIP: COMPACT, NOT SECOND HERO === */
+02276: .finalCta {
+02341: /* === FINAL CTA CLEAN: NO METRICS, NO SECOND HERO === */
+02386: /* Sacamos las métricas: estaban haciendo ruido */
+02393:   justify-self: end !important;
+02428: .finalCta {
+02456: /* === FINAL CTA BALANCED: TITLE + COPY + ACTION CARD === */
+02599: /* === PREMIUM BLACK SECTIONS POLISH === */
+02602: /* CTA oscuro final: más armado, menos vacío */
+02717: /* CTA final con imagen lateral integrada, no segundo hero */
+02787: /* === USE DIFFERENT IMAGE FOR FINAL CTA === */
+02815: /* === FINAL CTA: DIFFERENT AIR IMAGE === */
+02843: /* === MOBILE HERO: SUBIR CONTENIDO EN PANTALLAS PEQUEÑAS === */
+02946: /* === MOBILE HERO UNIVERSAL FIT === */
+03150: /* =====================================================
+03153:    ===================================================== */
+03344: /* =====================================================
+03347:    ===================================================== */
+03509: /* =====================================================
+03510:    FIX CTA FINAL MOBILE: barra roja no debe tapar texto
+03511:    ===================================================== */
+03616: /* =====================================================
+03619:    ===================================================== */
+03705: /* =====================================================
+03709:    - services y finalCta usan --mobile-bg
+03711:    ===================================================== */
+03737:   .finalCta {
+03757:   .finalCta {
+03762:   .finalCta::before {
+03777:   .finalCta::after {
+03794:   .finalCta > *:not(.finalImage),
+03795:   .finalActions {
+03808:   .finalCta h2 {
+03836:   .finalCta > div:first-child {
+03844:   .finalCta p {
+03852:   .finalActions {
+03861:   .finalActions a {
+03868:   .finalImage {
+03878:   .finalCta {
+03883:   .finalCta h2 {
+03888: /* END SERVICE MOBILE UNIFIED SYSTEM V3 */
+03891: /* =====================================================
+03894:    ===================================================== */
+03989: /* END HERO CTA BUTTONS PILL SYSTEM V2 */
+03991: /* =====================================================
+03994:    ===================================================== */
+04046: /* Capa final estilo hero principal: profundidad, no oscuridad pesada */
+04193: /* =====================================================
+04194:    MOBILE HERO NO ZOOM FINAL
+04196:    ===================================================== */
+04243: /* =====================================================
+04244:    MOBILE HERO NO ZOOM FINAL
+04246:    ===================================================== */
+04293: /* =====================================================
+04294:    SERVICE HERO FINAL SYSTEM — MATCH HOME HERO
+04296:    ===================================================== */
+04582: /* =====================================================
+04586:    ===================================================== */
+04589: /* =====================================================
+04591:    CSS real dentro del module, no depende de globals.
+04592:    ===================================================== */
+04642: /* =====================================================
+04643:    FINAL SERVICE HERO RESET — SAME RHYTHM AS HOME
+04646:    ===================================================== */
+04930: /* =====================================================
+04931:    SERVICE HERO MOBILE FINAL SIZE
+04933:    ===================================================== */
+05020: /* =====================================================
+05023:    ===================================================== */
+05165: /* =====================================================
+05168:    ===================================================== */
+05171: .finalCta a,
+05206: .finalCta h2,
+05212: .finalCta p,
+05239: /* =====================================================
+05240:    AEREO VIEWPORT LOCK FINAL
+05243:    ===================================================== */
+05247:   --aereo-trust-h: 88px;
+05251:   height: calc(100svh - var(--aereo-trust-h)) !important;
+05252:   min-height: calc(100svh - var(--aereo-trust-h)) !important;
+05253:   max-height: calc(100svh - var(--aereo-trust-h)) !important;
+05259:   height: var(--aereo-trust-h) !important;
+05260:   min-height: var(--aereo-trust-h) !important;
+05261:   max-height: var(--aereo-trust-h) !important;
+05268:     --aereo-trust-h: 88px;
+05317:     --aereo-trust-h: 78px;
+05349:     --aereo-trust-h: 108px;
+05399:     --aereo-trust-h: 108px;
+05403:     min-height: calc(100svh - var(--aereo-trust-h)) !important;
+05454: /* =====================================================
+05455:    AEREO HERO REAL JSX FINAL
+05459:    ===================================================== */
+05808: /* TRUSTBAR FINAL */
+05858: /* =====================================================
+05859:    AEREO HERO TEXT SPACING ONLY
+05862:    ===================================================== */
+05940: /* =====================================================
+05941:    AEREO HERO EXTRA BLOCK SPACING
+05943:    ===================================================== */
+05981: /* =====================================================
+05982:    AEREO MOBILE FINAL TWEAK
+05986:    ===================================================== */
+06012:   .finalImage {
+06023: /* =====================================================
+06024:    AEREO HERO IMAGE COLOR / LIGHT FINAL
+06027:    ===================================================== */
+06066: /* Tablet y mobile: un poco más oscuro para que el texto siga leyendo */
+06090: /* =====================================================
+06091:    AEREO HERO LIGHT RIGHT + MOBILE IMAGE HIDE
+06093:    ===================================================== */
+06172: /* =====================================================
+06175:    ===================================================== */
+06188:   .finalImage {
+06196:   .finalCta [class*="image"],
+06197:   .finalCta [class*="Image"],
+06198:   .finalCta [class*="media"],
+06199:   .finalCta [class*="Media"] {
+06205:   .finalCta {
+06217: /* =====================================================
+06218:    AEREO MOBILE HIDE PILLARS SECTION
+06221:    ===================================================== */
+06234: /* =====================================================
+06235:    AEREO DESKTOP BUTTON SAFE FIX
+06237:    ===================================================== */
+06317: /* =====================================================
+06318:    AEREO HERO IMAGE NO ZOOM FINAL
+06320:    ===================================================== */
+06351: /* =====================================================
+06352:    AEREO HERO MOBILE IMAGE SOURCE FIX
+06354:    ===================================================== */
+06381: /* =====================================================
+06382:    AEREO DESKTOP TITLE REFINEMENT
+06385:    ===================================================== */
+06448: /* =====================================================
+06449:    AEREO HERO BRIGHT CORPORATE FINAL
+06451:    ===================================================== */
+06530: /* =====================================================
+06531:    AEREO HERO REAL IMAGE SWITCH HARD LOCK
+06533:    ===================================================== */
+06582: /* =====================================================
+06583:    AEREO HERO REAL IMAGE SWITCH HARD LOCK
+06585:    ===================================================== */
+06634: /* =====================================================
+06635:    AEREO MOBILE CERTIFICATIONS GAP FIX
+06637:    ===================================================== */
+06668: /* =====================================================
+06669:    ZZZ MOBILE FLOW AFTER CERTIFICATIONS CLEAN FINAL
+06674:    finalCta / data-across-final-cta.
+06675:    ===================================================== */
+06716:   /* La CTA final sí queda visible antes de RelatedServices/oficinas */
+06717:   .page section[data-across-final-cta="true"] {
+06727: /* =====================================================
+06728:    ZZZ MOBILE FINAL CTA ONLY ONE BUTTON
+06729:    En mobile la CTA final queda con un solo botón.
+06730:    ===================================================== */
+06733:   .page section[data-across-final-cta="true"] a:nth-of-type(2),
+06734:   .page section[data-sector-final-cta="true"] a:nth-of-type(2),
+06735:   .page .finalCta a:nth-of-type(2) {
+06739:   .page section[data-across-final-cta="true"] a:first-of-type,
+06740:   .page section[data-sector-final-cta="true"] a:first-of-type,
+06741:   .page .finalCta a:first-of-type {
+06749: /* =====================================================
+06756:    ===================================================== */
+06801:     mix-blend-mode: normal !important;
+06825: /* =====================================================
+06826:    ZZZ MOBILE OVERVIEW FORCE DARK TEXT FINAL
+06828:    color, text-fill, background-clip, blend y filtros.
+06829:    ===================================================== */
+06840:     mix-blend-mode: normal !important;
+06861:     mix-blend-mode: normal !important;
+06892: /* =====================================================
+06893:    ZZZ MOBILE CLEAR SECTIONS TYPOGRAPHY FINAL
+06897:    ===================================================== */
+06935:     mix-blend-mode: normal !important;
+07037: /* =====================================================
+07038:    ZZZ HERO IVORY TYPOGRAPHY FINAL
+07042:    ===================================================== */
+07096: /* =====================================================
+07097:    ZZZ PROCESS EYEBROW CLEAN FINAL
+07100:    ===================================================== */
+07120:   mix-blend-mode: normal !important;
+07138: /* =====================================================
+07139:    ZZZ IVORY TEXT ON DARK AREAS FINAL
+07143:    ===================================================== */
+07184: .page [data-aereo-trust="true"] strong,
+07185: .page [data-aereo-trust="true"] span,
+07186: .page [data-aereo-trust="true"] small,
+07187: .page [data-aereo-trust="true"] p {
+07213: /* CTA final oscura */
+07214: .page .finalCta h1,
+07215: .page .finalCta h2,
+07216: .page .finalCta h3,
+07217: .page .finalCta p,
+07218: .page .finalCta a,
+07219: .page .finalCta button,
+07220: .page .finalCta strong,
+07221: .page .finalCta span,
+07222: .page .finalCta small,
+07223: .page section[data-across-final-cta="true"] h1,
+07224: .page section[data-across-final-cta="true"] h2,
+07225: .page section[data-across-final-cta="true"] h3,
+07226: .page section[data-across-final-cta="true"] p,
+07227: .page section[data-across-final-cta="true"] a,
+07228: .page section[data-across-final-cta="true"] button,
+07229: .page section[data-across-final-cta="true"] strong,
+07230: .page section[data-across-final-cta="true"] span,
+07231: .page section[data-across-final-cta="true"] small {
+07236: /* Párrafos de CTA final más suaves */
+07237: .page .finalCta p,
+07238: .page section[data-across-final-cta="true"] p {
+07246: .page .finalCta *,
+07247: .page section[data-across-final-cta="true"] * {
+07251: /* =====================================================
+07252:    ZZZ MOBILE PROCESS COMPACT PREMIUM FINAL
+07258:    ===================================================== */
+07412: /* =====================================================
+07417:    ===================================================== */
+07420:   /* =========================
+07422:      ========================= */
+07517:   /* =========================
+07519:      ========================= */
+07693: /* =====================================================
+07694:    ZZZ PROCESS MOBILE NO NUMBERS PREMIUM FINAL
+07698:    ===================================================== */
+07854: /* =====================================================
+07855:    ZZZ PROCESS MOBILE SPACED TRANSPARENT NUMBERS FINAL
+07860:    ===================================================== */
+08042: /* =====================================================
+08043:    ZZZ TYPOGRAPHIC HIERARCHY HERO WINS FINAL
+08047:    - Aplica a overview, process, finalCta, related, cards.
+08049:    ===================================================== */
+08051: /* =========================
+08053:    ========================= */
+08083:   .page .finalCta h2,
+08084:   .page section[data-across-final-cta="true"] h2,
+08085:   .page section[data-sector-final-cta="true"] h2 {
+08105: /* =========================
+08107:    ========================= */
+08127:   .page .finalCta h2,
+08128:   .page section[data-across-final-cta="true"] h2,
+08129:   .page section[data-sector-final-cta="true"] h2 {
+08141: /* =========================
+08143:    ========================= */
+08173:   .page .finalCta h2,
+08174:   .page section[data-across-final-cta="true"] h2,
+08175:   .page section[data-sector-final-cta="true"] h2 {
+08203:   .page .finalCta p,
+08204:   .page section[data-across-final-cta="true"] p,
+08205:   .page section[data-sector-final-cta="true"] p {
+08211: /* =========================
+08213:    ========================= */
+08221:   .page .finalCta h2,
+08222:   .page section[data-across-final-cta="true"] h2,
+08223:   .page section[data-sector-final-cta="true"] h2 {
+08239: /* =====================================================
+08240:    ZZZ MOBILE HERO WINS REAL FINAL
+08243:    - Overview/process/finalCta nunca compiten con hero.
+08245:    ===================================================== */
+08317:   .page .finalCta h2,
+08318:   .page section[data-across-final-cta="true"] h2,
+08319:   .page section[data-sector-final-cta="true"] h2 {
+08367:   .page .finalCta h2,
+08368:   .page section[data-across-final-cta="true"] h2 {
+08374: /* ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL
+08436: /* END ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL */
+08438: /* ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL
+08516: /* END ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL */
+08518: /* =====================================================
+08522:    ===================================================== */
+08527: /* END ACROSS COMMAND BAR EXPORTS */
+08531: /* ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED
+08641: /* END ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED */
+08643: /* ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL
+08645:    CTA final aprobado por consola:
+08652:   .page .finalCta,
+08653:   .page section[data-across-final-cta="true"] {
+08692:   .page .finalCta::before,
+08693:   .page .finalCta::after,
+08694:   .page section[data-across-final-cta="true"]::before,
+08695:   .page section[data-across-final-cta="true"]::after {
+08700:   .page .finalCta .finalImage,
+08701:   .page .finalCta [class*="finalImage"],
+08702:   .page section[data-across-final-cta="true"] .finalImage,
+08703:   .page section[data-across-final-cta="true"] [class*="finalImage"] {
+08710:   .page .finalCta > div:first-child,
+08711:   .page section[data-across-final-cta="true"] > div:first-child {
+08718:   .page .finalCta h2,
+08719:   .page section[data-across-final-cta="true"] h2 {
+08732:   .page .finalCta p,
+08733:   .page section[data-across-final-cta="true"] p {
+08745:   .page .finalCta .finalActions,
+08746:   .page .finalCta [class*="finalActions"],
+08747:   .page section[data-across-final-cta="true"] [class*="finalActions"] {
+08754:   .page .finalCta .finalActions a,
+08755:   .page .finalCta [class*="finalActions"] a,
+08756:   .page section[data-across-final-cta="true"] [class*="finalActions"] a {
+08770: /* END ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL */
+08773: /* ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL
+08875: /* END ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL */
+08877: /* ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL
+08879:    finalCta usa SU PROPIA imagen definida en --mobile-bg del page.tsx.
+08883:   .page .finalCta,
+08884:   .page section[data-across-final-cta="true"] {
+08912:   .page .finalCta::before,
+08913:   .page .finalCta::after,
+08914:   .page section[data-across-final-cta="true"]::before,
+08915:   .page section[data-across-final-cta="true"]::after {
+08920:   .page .finalCta .finalImage,
+08921:   .page .finalCta [class*="finalImage"],
+08922:   .page section[data-across-final-cta="true"] .finalImage,
+08923:   .page section[data-across-final-cta="true"] [class*="finalImage"] {
+08930:   .page .finalCta > div:first-child,
+08931:   .page section[data-across-final-cta="true"] > div:first-child {
+08937: /* END ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL */
+08940: /* ZZZ AEREO MOBILE HERO TITLE DOWN FINAL
+08957: /* END ZZZ AEREO MOBILE HERO TITLE DOWN FINAL */
+08959: /* ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED
+09088:     justify-self: end !important;
+09126: /* END ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED */
+09128: /* =====================================================
+09129:    AEREO MOBILE HEIGHT LIKE MARITIMO
+09132:    ===================================================== */
+09147: /* =====================================================
+09148:    AEREO MOBILE HEIGHT LIKE MARITIMO
+09151:    ===================================================== */
+09167: /* === ACROSS LOCAL DARKBAND LAYOUT START === */
+09300: /* === ACROSS LOCAL DARKBAND LAYOUT END === */
+09302: /* === FINAL OVERRIDE PROCESS ONLY NUMBERS START === */
+09379: /* === FINAL OVERRIDE PROCESS ONLY NUMBERS END === */
+09382: /* === ACROSS HERO IMAGES VISIBLE FINAL START === */
+09459: /* === ACROSS HERO IMAGES VISIBLE FINAL END === */
+09462: /* === ACROSS PROCESS SOLO NUMEROS GLOBAL FINAL START === */
+09603: /* === ACROSS PROCESS SOLO NUMEROS GLOBAL FINAL END === */
+09605: /* === ACROSS DESKTOP HERO TYPO FIX === */
+09608:   :global(section[data-aereo-hero="true"]),
+09614:   :global(section[data-aereo-hero="true"] [class*="heroContent"]),
+09615:   :global(section[data-aereo-hero="true"] [class*="heroCopy"]),
+09616:   :global(section[data-aereo-hero="true"] [class*="heroText"]),
+09617:   :global(section[data-aereo-hero="true"] [class*="heroInner"]),
+09618:   :global(section[data-aereo-hero="true"] [class*="content"]),
+09619:   :global(section[data-aereo-hero="true"] div:has(> h1)),
+09636:   :global(section[data-aereo-hero="true"] h1),
+09653:   :global(section[data-aereo-hero="true"] h1 br),
+09659:   :global(section[data-aereo-hero="true"] p),
+09667:   :global(section[data-aereo-hero="true"] [class*="heroContent"]),
+09668:   :global(section[data-aereo-hero="true"] [class*="heroCopy"]),
+09669:   :global(section[data-aereo-hero="true"] [class*="heroText"]),
+09670:   :global(section[data-aereo-hero="true"] [class*="heroInner"]),
+09671:   :global(section[data-aereo-hero="true"] [class*="content"]),
+09672:   :global(section[data-aereo-hero="true"] div:has(> h1)),
+09689:   :global(section[data-aereo-hero="true"] h1),
+09698: /* === /ACROSS DESKTOP HERO TYPO FIX === */
+09700: /* === SERVICE PROCESS ICONS LIKE SECTORES FINAL START === */
+09761: /* 6 entrega final */
+09784: /* === SERVICE PROCESS ICONS LIKE SECTORES FINAL END === */
+09786: /* === INLINE PROCESS ICONS REAL FINAL START === */
+09902: /* === INLINE PROCESS ICONS REAL FINAL END === */
+09908: /* === AEREO STEP 1 STICKY FINAL === */
+09981: /* END AEREO STEP 1 STICKY FINAL */
+10013: /* === AEREO PROCESS ACCORDION ISOLATED FINAL === */
+10268: /* END AEREO PROCESS ACCORDION ISOLATED FINAL */
+10271: /* === AEREO PROCESS ACCORDION MOBILE PREMIUM === */
+10449: /* END AEREO PROCESS ACCORDION MOBILE PREMIUM */
+10451: /* === AEREO PROCESS ACCORDION TEXT VISIBILITY FIX === */
+10458:     mix-blend-mode: normal !important;
+10486: /* END AEREO PROCESS ACCORDION TEXT VISIBILITY FIX */
+10488: /* === FORCE PROCESS ACCORDION TEXT WHITE REAL === */
+10505:     mix-blend-mode: normal !important;
+10520: /* END FORCE PROCESS ACCORDION TEXT WHITE REAL */
+10522: /* === AEREO PROCESS FINAL POLISH === */
+10556: /* END AEREO PROCESS FINAL POLISH */
+10558: /* === AEREO FAQ ACCORDION PROFESSIONAL FINAL === */
+10754: /* END AEREO FAQ ACCORDION PROFESSIONAL FINAL */
+10756: /* === AEREO FAQ MOBILE FINAL POLISH === */
+10801: /* END AEREO FAQ MOBILE FINAL POLISH */
+10807: /* === AEREO MOBILE TITLES LEFT ALIGN FINAL === */
+10846:     Componentes externos como RelatedServices / HomeCorporateFinal.
+10874: /* END AEREO MOBILE TITLES LEFT ALIGN FINAL */
+10876: /* === AEREO PROCESS LIGHT PREMIUM FINAL === */
+11003: /* END AEREO PROCESS LIGHT PREMIUM FINAL */
+11005: /* === AEREO MOBILE TITLES FULL WIDTH CLEAN === */
+11103: /* END AEREO MOBILE TITLES FULL WIDTH CLEAN */
+11117: /* === AEREO FINAL CLEAN SINGLE SOURCE 2 === */
+11119: .aereoFinalStack {
+11125:     Única fuente de verdad para el final:
+11126:     HomeCorporateFinal + Footer dentro del mismo wrapper oscuro.
+11129:   .aereoFinalStack {
+11136:   .aereoFinalStack .homeFinalContact {
+11144:     Oculta solo la sección repetida de servicios del HomeCorporateFinal,
+11147:   .aereoFinalStack .homeFinalContact :global([class*="services"]) {
+11151:   .aereoFinalStack .homeFinalContact :global([class*="homeFinalCta"]) {
+11155:   .aereoFinalStack :global(footer),
+11156:   .aereoFinalStack :global([class*="Footer_footer"]),
+11157:   .aereoFinalStack :global([class*="footer"]) {
+11178:   .aereoFinalStack {
+11188: /* END AEREO FINAL CLEAN SINGLE SOURCE 2 */
+11205: /* === AEREO SERVICES WIDTH ICONS PAGE MATCH FINAL === */
+11256:     mix-blend-mode: normal !important;
+11275:     align-items: end !important;
+11494: /* END AEREO SERVICES WIDTH ICONS PAGE MATCH FINAL */
+11496: /* === AEREO SERVICES TITLE LEFT STATIC CARDS FINAL === */
+11505:     align-items: end !important;
+11526:     align-self: end !important;
+11527:     justify-self: end !important;
+11561: /* END AEREO SERVICES TITLE LEFT STATIC CARDS FINAL */
+11567: /* === AEREO PROCESS CLEAN RESET ONLY === */
+11653: /* END AEREO PROCESS CLEAN RESET ONLY */
+11655: /* === AEREO PROCESS ACCORDION CLEAN PREMIUM FINAL === */
+11811: /* END AEREO PROCESS ACCORDION CLEAN PREMIUM FINAL */
+11813: /* === AEREO PROCESS CTA FINAL === */
+11909: /* END AEREO PROCESS CTA FINAL */
+11911: /* === AEREO PROCESS CTA POSITION FIX === */
+11927: /* END AEREO PROCESS CTA POSITION FIX */
+11929: /* === AEREO DESKTOP BRAND UNIFIED POLISH FINAL === */
+12232: /* END AEREO DESKTOP BRAND UNIFIED POLISH FINAL */
+12240: /* === AEREO CERTIFICATIONS MEDIUM DESKTOP ONLY FINAL === */
+12252:   .homeFinalContact :global(section:first-of-type) {
+12261:   .homeFinalContact :global(section:first-of-type > div:first-child) {
+12265:   .homeFinalContact :global(section:first-of-type h2) {
+12272:   .homeFinalContact :global(section:first-of-type article) {
+12281:   .homeFinalContact :global(section:first-of-type > div:first-child) {
+12286: /* END AEREO CERTIFICATIONS MEDIUM DESKTOP ONLY FINAL */
+12288: /* === AEREO CERTIFICATIONS MAP ZOOM OUT FINAL === */
+12296:   .homeFinalContact :global(section:first-of-type) {
+12302:   .homeFinalContact :global(section:first-of-type [class*="map"]),
+12303:   .homeFinalContact :global(section:first-of-type [class*="Map"]),
+12304:   .homeFinalContact :global(section:first-of-type [class*="world"]),
+12305:   .homeFinalContact :global(section:first-of-type [class*="World"]) {
+12311: /* END AEREO CERTIFICATIONS MAP ZOOM OUT FINAL */
+12314: /* === AEREO HOMEFINAL CONTACT BG ONLY FINAL === */
+12317:   Quita el azul lateral detrás de HomeCorporateFinal.
+12319:   NO toca .aereoFinalStack.
+12323: .homeFinalContact {
+12327: /* END AEREO HOMEFINAL CONTACT BG ONLY FINAL */
+12329: /* === AEREO HIDE HOMECORPORATE EXTRA SECTIONS DESKTOP === */
+12333:   oculta las secciones del HomeCorporateFinal que parecen mini-home:
+12345:   .homeFinalContact :global([class*="integrated"]),
+12346:   .homeFinalContact :global([class*="services"]) {
+12351: /* END AEREO HIDE HOMECORPORATE EXTRA SECTIONS DESKTOP */
+12353: /* === AEREO BONE BACKGROUND UNIFY FINAL === */
+12372:   .homeFinalContact {
+12377: /* END AEREO BONE BACKGROUND UNIFY FINAL */
+
+
+==========================================================================================
+TERRESTRE CSS - MARCADORES/PARCHES FINALES
+==========================================================================================
+00089: .finalActions {
+00097: .finalActions a,
+00112: .finalActions a:first-child,
+00120: .finalActions a:first-child::after,
+00127: .finalActions a:last-child {
+00135:   justify-self: end;
+00270: .finalCta h2 {
+00510: .finalCta {
+00518: .finalCta > div:first-child {
+00523: .finalCta p {
+00530: .finalActions a:last-child {
+00536: .finalImage {
+00542: .finalImage img {
+00642:   .finalCta {
+00666:   .finalImage {
+00670:   .finalImage {
+00685:   .finalActions {
+00690:   .finalActions a,
+00707:   .finalCta h2 {
+00716: /* === REAL SVG ICON SYSTEM === */
+00815: /* === HERO INTERNATIONAL PREMIUM CLEAN === */
+01009: /* === FINAL HERO / SECTION CONSISTENCY: NO PAGE GRADIENT === */
+01018:   /* No niebla blanca al final del hero */
+01083: /* === HERO FINAL BALANCE: DESKTOP + MOBILE === */
+01135:     align-items: flex-end !important;
+01230: /* === TIGHTEN SPACE AFTER CERTIFICATIONS === */
+01270: /* === BRAND COHERENCE: BLACK / WHITE / RED SYSTEM === */
+01383: /* CTA final: que no parezca cortado raro, más premium */
+01384: .finalCta {
+01388: .finalCta > div:first-child {
+01426: /* === BRAND COHERENCE: BLACK / WHITE / RED SYSTEM === */
+01539: /* CTA final: que no parezca cortado raro, más premium */
+01540: .finalCta {
+01544: .finalCta > div:first-child {
+01582: /* === FINAL: HIDE REDUNDANT USE CASES SECTION === */
+01604: /* === COMPACT PROCESS SECTION === */
+01687: /* === PROCESS DESKTOP: COMPACT HORIZONTAL FLOW === */
+01856: /* === FIX DARK BAND + FINAL CTA: ONE PREMIUM ENDING === */
+01938: /* CTA final: quitar segunda imagen gigante y volverlo franja ejecutiva */
+01939: .finalCta {
+01952: .finalCta > div:first-child {
+01963: .finalCta h2 {
+01971: .finalCta p {
+01979: .finalActions {
+01983:   justify-content: flex-end !important;
+01988: .finalActions a:first-child {
+01993: .finalActions a:last-child {
+02000: .finalImage {
+02024:   .finalCta > div:first-child {
+02028:   .finalActions {
+02060:   .finalCta > div:first-child {
+02065:   .finalActions {
+02071:   .finalActions a {
+02077: /* === FINAL OPERATIVE STRIP: COMPACT, NOT SECOND HERO === */
+02218: .finalCta {
+02283: /* === FINAL OPERATIVE STRIP: COMPACT, NOT SECOND HERO === */
+02424: .finalCta {
+02489: /* === FINAL CTA CLEAN: NO METRICS, NO SECOND HERO === */
+02534: /* Sacamos las métricas: estaban haciendo ruido */
+02541:   justify-self: end !important;
+02576: .finalCta {
+02604: /* === FINAL CTA BALANCED: TITLE + COPY + ACTION CARD === */
+02747: /* === PREMIUM BLACK SECTIONS POLISH === */
+02838: /* CTA oscuro final: más armado, menos vacío */
+02952: /* === PREMIUM IMAGE INTEGRATION: SERVICES + FINAL CTA === */
+03056: /* CTA final con imagen lateral integrada, no segundo hero */
+03126: /* === USE DIFFERENT IMAGE FOR FINAL CTA === */
+03154: /* === FINAL CTA: DIFFERENT AIR IMAGE === */
+03182: /* === MOBILE HERO: SUBIR CONTENIDO EN PANTALLAS PEQUEÑAS === */
+03285: /* === MOBILE HERO UNIVERSAL FIT === */
+03489: /* =====================================================
+03492:    ===================================================== */
+03683: /* =====================================================
+03686:    ===================================================== */
+03848: /* =====================================================
+03849:    FIX CTA FINAL MOBILE: barra roja no debe tapar texto
+03850:    ===================================================== */
+03955: /* =====================================================
+03958:    ===================================================== */
+04044: /* =====================================================
+04048:    - services y finalCta usan --mobile-bg
+04050:    ===================================================== */
+04076:   .finalCta {
+04096:   .finalCta {
+04101:   .finalCta::before {
+04116:   .finalCta::after {
+04133:   .finalCta > *:not(.finalImage),
+04134:   .finalActions {
+04147:   .finalCta h2 {
+04175:   .finalCta > div:first-child {
+04183:   .finalCta p {
+04191:   .finalActions {
+04200:   .finalActions a {
+04207:   .finalImage {
+04217:   .finalCta {
+04222:   .finalCta h2 {
+04227: /* END SERVICE MOBILE UNIFIED SYSTEM V3 */
+04230: /* =====================================================
+04233:    ===================================================== */
+04328: /* END HERO CTA BUTTONS PILL SYSTEM V2 */
+04330: /* =====================================================
+04333:    ===================================================== */
+04385: /* Capa final estilo hero principal: profundidad, no oscuridad pesada */
+04532: /* =====================================================
+04533:    MOBILE HERO NO ZOOM FINAL
+04535:    ===================================================== */
+04582: /* =====================================================
+04583:    MOBILE HERO NO ZOOM FINAL
+04585:    ===================================================== */
+04632: /* =====================================================
+04633:    SERVICE HERO FINAL SYSTEM — MATCH HOME HERO
+04635:    ===================================================== */
+04921: /* =====================================================
+04925:    ===================================================== */
+04928: /* =====================================================
+04930:    CSS real dentro del module, no depende de globals.
+04931:    ===================================================== */
+04981: /* =====================================================
+04982:    FINAL SERVICE HERO RESET — SAME RHYTHM AS HOME
+04985:    ===================================================== */
+05269: /* =====================================================
+05270:    SERVICE HERO MOBILE FINAL SIZE
+05272:    ===================================================== */
+05359: /* =====================================================
+05362:    ===================================================== */
+05504: /* =====================================================
+05507:    ===================================================== */
+05510: .finalCta a,
+05545: .finalCta h2,
+05551: .finalCta p,
+05578: /* =====================================================
+05579:    TRANSPORTE-TERRESTRE VIEWPORT LOCK FINAL
+05582:    ===================================================== */
+05586:   --transporte-terrestre-trust-h: 88px;
+05590:   height: calc(100svh - var(--transporte-terrestre-trust-h)) !important;
+05591:   min-height: calc(100svh - var(--transporte-terrestre-trust-h)) !important;
+05592:   max-height: calc(100svh - var(--transporte-terrestre-trust-h)) !important;
+05598:   height: var(--transporte-terrestre-trust-h) !important;
+05599:   min-height: var(--transporte-terrestre-trust-h) !important;
+05600:   max-height: var(--transporte-terrestre-trust-h) !important;
+05607:     --transporte-terrestre-trust-h: 88px;
+05656:     --transporte-terrestre-trust-h: 78px;
+05688:     --transporte-terrestre-trust-h: 108px;
+05738:     --transporte-terrestre-trust-h: 108px;
+05742:     min-height: calc(100svh - var(--transporte-terrestre-trust-h)) !important;
+05793: /* =====================================================
+05794:    TRANSPORTE-TERRESTRE HERO REAL JSX FINAL
+05798:    ===================================================== */
+06147: /* TRUSTBAR FINAL */
+06197: /* =====================================================
+06198:    TRANSPORTE-TERRESTRE HERO TEXT SPACING ONLY
+06201:    ===================================================== */
+06279: /* =====================================================
+06280:    TRANSPORTE-TERRESTRE HERO EXTRA BLOCK SPACING
+06282:    ===================================================== */
+06320: /* =====================================================
+06321:    TRANSPORTE-TERRESTRE MOBILE FINAL TWEAK
+06325:    ===================================================== */
+06351:   .finalImage {
+06362: /* =====================================================
+06363:    TRANSPORTE-TERRESTRE HERO IMAGE COLOR / LIGHT FINAL
+06366:    ===================================================== */
+06405: /* Tablet y mobile: un poco más oscuro para que el texto siga leyendo */
+06429: /* =====================================================
+06430:    TRANSPORTE-TERRESTRE HERO LIGHT RIGHT + MOBILE IMAGE HIDE
+06432:    ===================================================== */
+06511: /* =====================================================
+06514:    ===================================================== */
+06527:   .finalImage {
+06535:   .finalCta [class*="image"],
+06536:   .finalCta [class*="Image"],
+06537:   .finalCta [class*="media"],
+06538:   .finalCta [class*="Media"] {
+06544:   .finalCta {
+06556: /* =====================================================
+06557:    TRANSPORTE-TERRESTRE MOBILE HIDE PILLARS SECTION
+06560:    ===================================================== */
+06573: /* =====================================================
+06574:    TRANSPORTE-TERRESTRE DESKTOP BUTTON SAFE FIX
+06576:    ===================================================== */
+06656: /* =====================================================
+06657:    TRANSPORTE-TERRESTRE HERO IMAGE NO ZOOM FINAL
+06659:    ===================================================== */
+06690: /* =====================================================
+06691:    TRANSPORTE-TERRESTRE HERO MOBILE IMAGE SOURCE FIX
+06693:    ===================================================== */
+06720: /* =====================================================
+06721:    TRANSPORTE-TERRESTRE DESKTOP TITLE REFINEMENT
+06724:    ===================================================== */
+06787: /* =====================================================
+06788:    TRANSPORTE-TERRESTRE HERO BRIGHT CORPORATE FINAL
+06790:    ===================================================== */
+06869: /* =====================================================
+06870:    TRANSPORTE-TERRESTRE HERO REAL IMAGE SWITCH HARD LOCK
+06872:    ===================================================== */
+06921: /* =====================================================
+06922:    TRANSPORTE-TERRESTRE HERO REAL IMAGE SWITCH HARD LOCK
+06924:    ===================================================== */
+06973: /* =====================================================
+06974:    TRANSPORTE-TERRESTRE MOBILE CERTIFICATIONS GAP FIX
+06976:    ===================================================== */
+07007: /* =====================================================
+07008:    ZZZ MOBILE FLOW AFTER CERTIFICATIONS CLEAN FINAL
+07013:    finalCta / data-across-final-cta.
+07014:    ===================================================== */
+07055:   /* La CTA final sí queda visible antes de RelatedServices/oficinas */
+07056:   .page section[data-across-final-cta="true"] {
+07066: /* =====================================================
+07067:    ZZZ MOBILE FINAL CTA ONLY ONE BUTTON
+07068:    En mobile la CTA final queda con un solo botón.
+07069:    ===================================================== */
+07072:   .page section[data-across-final-cta="true"] a:nth-of-type(2),
+07073:   .page section[data-sector-final-cta="true"] a:nth-of-type(2),
+07074:   .page .finalCta a:nth-of-type(2) {
+07078:   .page section[data-across-final-cta="true"] a:first-of-type,
+07079:   .page section[data-sector-final-cta="true"] a:first-of-type,
+07080:   .page .finalCta a:first-of-type {
+07088: /* =====================================================
+07095:    ===================================================== */
+07140:     mix-blend-mode: normal !important;
+07164: /* =====================================================
+07165:    ZZZ MOBILE OVERVIEW FORCE DARK TEXT FINAL
+07167:    color, text-fill, background-clip, blend y filtros.
+07168:    ===================================================== */
+07179:     mix-blend-mode: normal !important;
+07200:     mix-blend-mode: normal !important;
+07231: /* =====================================================
+07232:    ZZZ MOBILE CLEAR SECTIONS TYPOGRAPHY FINAL
+07236:    ===================================================== */
+07274:     mix-blend-mode: normal !important;
+07376: /* =====================================================
+07377:    ZZZ HERO IVORY TYPOGRAPHY FINAL
+07381:    ===================================================== */
+07435: /* =====================================================
+07436:    ZZZ PROCESS EYEBROW CLEAN FINAL
+07439:    ===================================================== */
+07459:   mix-blend-mode: normal !important;
+07477: /* =====================================================
+07478:    ZZZ IVORY TEXT ON DARK AREAS FINAL
+07482:    ===================================================== */
+07523: .page [data-transporte-terrestre-trust="true"] strong,
+07524: .page [data-transporte-terrestre-trust="true"] span,
+07525: .page [data-transporte-terrestre-trust="true"] small,
+07526: .page [data-transporte-terrestre-trust="true"] p {
+07552: /* CTA final oscura */
+07553: .page .finalCta h1,
+07554: .page .finalCta h2,
+07555: .page .finalCta h3,
+07556: .page .finalCta p,
+07557: .page .finalCta a,
+07558: .page .finalCta button,
+07559: .page .finalCta strong,
+07560: .page .finalCta span,
+07561: .page .finalCta small,
+07562: .page section[data-across-final-cta="true"] h1,
+07563: .page section[data-across-final-cta="true"] h2,
+07564: .page section[data-across-final-cta="true"] h3,
+07565: .page section[data-across-final-cta="true"] p,
+07566: .page section[data-across-final-cta="true"] a,
+07567: .page section[data-across-final-cta="true"] button,
+07568: .page section[data-across-final-cta="true"] strong,
+07569: .page section[data-across-final-cta="true"] span,
+07570: .page section[data-across-final-cta="true"] small {
+07575: /* Párrafos de CTA final más suaves */
+07576: .page .finalCta p,
+07577: .page section[data-across-final-cta="true"] p {
+07585: .page .finalCta *,
+07586: .page section[data-across-final-cta="true"] * {
+07590: /* =====================================================
+07591:    ZZZ MOBILE PROCESS COMPACT PREMIUM FINAL
+07597:    ===================================================== */
+07751: /* =====================================================
+07756:    ===================================================== */
+07759:   /* =========================
+07761:      ========================= */
+07856:   /* =========================
+07858:      ========================= */
+08032: /* =====================================================
+08033:    ZZZ PROCESS MOBILE NO NUMBERS PREMIUM FINAL
+08037:    ===================================================== */
+08193: /* =====================================================
+08194:    ZZZ PROCESS MOBILE SPACED TRANSPARENT NUMBERS FINAL
+08199:    ===================================================== */
+08381: /* =====================================================
+08382:    ZZZ TYPOGRAPHIC HIERARCHY HERO WINS FINAL
+08386:    - Aplica a overview, process, finalCta, related, cards.
+08388:    ===================================================== */
+08390: /* =========================
+08392:    ========================= */
+08422:   .page .finalCta h2,
+08423:   .page section[data-across-final-cta="true"] h2,
+08424:   .page section[data-sector-final-cta="true"] h2 {
+08444: /* =========================
+08446:    ========================= */
+08466:   .page .finalCta h2,
+08467:   .page section[data-across-final-cta="true"] h2,
+08468:   .page section[data-sector-final-cta="true"] h2 {
+08480: /* =========================
+08482:    ========================= */
+08512:   .page .finalCta h2,
+08513:   .page section[data-across-final-cta="true"] h2,
+08514:   .page section[data-sector-final-cta="true"] h2 {
+08542:   .page .finalCta p,
+08543:   .page section[data-across-final-cta="true"] p,
+08544:   .page section[data-sector-final-cta="true"] p {
+08550: /* =========================
+08552:    ========================= */
+08560:   .page .finalCta h2,
+08561:   .page section[data-across-final-cta="true"] h2,
+08562:   .page section[data-sector-final-cta="true"] h2 {
+08578: /* =====================================================
+08579:    ZZZ MOBILE HERO WINS REAL FINAL
+08582:    - Overview/process/finalCta nunca compiten con hero.
+08584:    ===================================================== */
+08656:   .page .finalCta h2,
+08657:   .page section[data-across-final-cta="true"] h2,
+08658:   .page section[data-sector-final-cta="true"] h2 {
+08706:   .page .finalCta h2,
+08707:   .page section[data-across-final-cta="true"] h2 {
+08713: /* ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL
+08775: /* END ZZZ SERVICIOS TRUSTBAR GOLD BLUE SAFE FINAL */
+08777: /* ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL
+08855: /* END ZZZ SERVICE HERO LIKE HOME CONTROLLED FINAL */
+08857: /* =====================================================
+08861:    ===================================================== */
+08866: /* END ACROSS COMMAND BAR EXPORTS */
+08868: /* ZZZ TRANSPORTE-TERRESTRE SERVICES LITERAL DARKBAND AUTOMOCION FINAL
+08879:   background-blend-mode: normal !important;
+08909: /* END ZZZ TRANSPORTE-TERRESTRE SERVICES LITERAL DARKBAND AUTOMOCION FINAL */
+08911: /* ZZZ TRANSPORTE-TERRESTRE SERVICES SAME AS AUTOMOCION DARKBAND FINAL
+08913:    No copia la imagen de Automoción; conserva la imagen de fondo de TransporteTerrestre.
+08919:   background-blend-mode: normal !important;
+08958: /* END ZZZ TRANSPORTE-TERRESTRE SERVICES SAME AS AUTOMOCION DARKBAND FINAL */
+08960: /* ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED
+09070: /* END ZZZ SERVICIOS OVERVIEW TABLET FINAL APPROVED */
+09072: /* ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL
+09074:    CTA final aprobado por consola:
+09081:   .page .finalCta,
+09082:   .page section[data-across-final-cta="true"] {
+09121:   .page .finalCta::before,
+09122:   .page .finalCta::after,
+09123:   .page section[data-across-final-cta="true"]::before,
+09124:   .page section[data-across-final-cta="true"]::after {
+09129:   .page .finalCta .finalImage,
+09130:   .page .finalCta [class*="finalImage"],
+09131:   .page section[data-across-final-cta="true"] .finalImage,
+09132:   .page section[data-across-final-cta="true"] [class*="finalImage"] {
+09139:   .page .finalCta > div:first-child,
+09140:   .page section[data-across-final-cta="true"] > div:first-child {
+09147:   .page .finalCta h2,
+09148:   .page section[data-across-final-cta="true"] h2 {
+09161:   .page .finalCta p,
+09162:   .page section[data-across-final-cta="true"] p {
+09174:   .page .finalCta .finalActions,
+09175:   .page .finalCta [class*="finalActions"],
+09176:   .page section[data-across-final-cta="true"] [class*="finalActions"] {
+09183:   .page .finalCta .finalActions a,
+09184:   .page .finalCta [class*="finalActions"] a,
+09185:   .page section[data-across-final-cta="true"] [class*="finalActions"] a {
+09199: /* END ZZZ SERVICIOS FINALCTA IPAD ACOPLADO 100 FINAL */
+09201: /* ZZZ SERVICIOS SERVICES USE OWN MOBILE BG FINAL
+09204:    No mezcla con finalCta.
+09233: /* END ZZZ SERVICIOS SERVICES USE OWN MOBILE BG FINAL */
+09235: /* ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL
+09337: /* END ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL */
+09339: /* ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL
+09341:    finalCta usa SU PROPIA imagen definida en --mobile-bg del page.tsx.
+09345:   .page .finalCta,
+09346:   .page section[data-across-final-cta="true"] {
+09374:   .page .finalCta::before,
+09375:   .page .finalCta::after,
+09376:   .page section[data-across-final-cta="true"]::before,
+09377:   .page section[data-across-final-cta="true"]::after {
+09382:   .page .finalCta .finalImage,
+09383:   .page .finalCta [class*="finalImage"],
+09384:   .page section[data-across-final-cta="true"] .finalImage,
+09385:   .page section[data-across-final-cta="true"] [class*="finalImage"] {
+09392:   .page .finalCta > div:first-child,
+09393:   .page section[data-across-final-cta="true"] > div:first-child {
+09399: /* END ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL */
+09401: /* ZZZ TRANSPORTE-TERRESTRE SERVICES SEAM ONLY FINAL
+09421: /* END ZZZ TRANSPORTE-TERRESTRE SERVICES SEAM ONLY FINAL */
+09423: /* ZZZ TRANSPORTE-TERRESTRE MOBILE HERO TITLE DOWN FINAL
+09440: /* END ZZZ TRANSPORTE-TERRESTRE MOBILE HERO TITLE DOWN FINAL */
+09442: /* ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED
+09571:     justify-self: end !important;
+09609: /* END ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED */
+09611: /* =====================================================
+09612:    TRANSPORTE-TERRESTRE MOBILE HEIGHT LIKE MARITIMO
+09615:    ===================================================== */
+09630: /* =====================================================
+09631:    TRANSPORTE-TERRESTRE MOBILE HEIGHT LIKE MARITIMO
+09634:    ===================================================== */
+09650: /* === TERRESTRE SERVICES BG START === */
+09651: /* Solo sección de arriba: "Soluciones terrestres para cada necesidad logística." */
+09682: /* === TERRESTRE SERVICES BG END === */
+09685: /* === TERRESTRE FINAL CTA CSS IMAGE TWO START === */
+09686: /* Imagen de abajo: "Coordinemos su próximo embarque terrestre..."
+09690: .finalCta {
+09701:     url("C:/Program Files/Git/images/transporte_terrestre/transporte_two.png") !important;
+09707: .finalCta > div:first-child {
+09713: .finalImage img {
+09714:   content: url("C:/Program Files/Git/images/transporte_terrestre/transporte_two.png") !important;
+09720:   .finalCta {
+09728:       url("C:/Program Files/Git/images/transporte-terrestre-mobile/transporte-terrestre-mobile-two.png") !important;
+09734:   .finalImage img {
+09735:     content: url("C:/Program Files/Git/images/transporte-terrestre-mobile/transporte-terrestre-mobile-two.png") !important;
+09740: /* === TERRESTRE FINAL CTA CSS IMAGE TWO END === */
+09743: /* === TERRESTRE FINAL IMAGE OVERRIDE START === */
+09744: /* Único bloque final de imágenes:
+09747:    Este bloque va al final para pisar los parches viejos de cargaaerea.
+09764:     url("C:/Program Files/Git/images/transporte_terrestre/terrestre_one.png") !important;
+09790:     url("C:/Program Files/Git/images/transporte_terrestre/transporte_two.png") !important;
+09813:       url("C:/Program Files/Git/images/transporte-terrestre-mobile/transporte-terrestre-mobile.png") !important;
+09829:       url("C:/Program Files/Git/images/transporte-terrestre-mobile/transporte-terrestre-mobile-two.png") !important;
+09835: /* === TERRESTRE FINAL IMAGE OVERRIDE END === */
+09838: /* === TERRESTRE SHOW REAL IMAGES START === */
+09839: /* Bloque final: pisa los fondos viejos de avión y destapa las imágenes reales. */
+09855:     url("/images/transporte_terrestre/terrestre_one.png") !important;
+09894:     url("/images/transporte_terrestre/transporte_two.png") !important;
+09935:       url("/images/transporte-terrestre-mobile/transporte-terrestre-mobile.png") !important;
+09950:       url("/images/transporte-terrestre-mobile/transporte-terrestre-mobile-two.png") !important;
+09956: /* === TERRESTRE SHOW REAL IMAGES END === */
+09959: /* === TERRESTRE GLASS CARDS SCOPED START === */
+09960: /* Solo aplica al bloque con imagen de servicios terrestres y al darkBand.
+10075: /* === TERRESTRE GLASS CARDS SCOPED END === */
+10078: /* === TERRESTRE DARKBAND LAYOUT FINAL START === */
+10079: /* Layout final:
+10210: /* === TERRESTRE DARKBAND LAYOUT FINAL END === */
+10213: /* === ACROSS LOCAL DARKBAND LAYOUT START === */
+10346: /* === ACROSS LOCAL DARKBAND LAYOUT END === */
+10348: /* === FINAL OVERRIDE PROCESS ONLY NUMBERS START === */
+10425: /* === FINAL OVERRIDE PROCESS ONLY NUMBERS END === */
+10428: /* === ACROSS HERO IMAGES VISIBLE FINAL START === */
+10505: /* === ACROSS HERO IMAGES VISIBLE FINAL END === */
+10508: /* === ACROSS PROCESS SOLO NUMEROS GLOBAL FINAL START === */
+10649: /* === ACROSS PROCESS SOLO NUMEROS GLOBAL FINAL END === */
+10652: /* TRANSPORTE TERRESTRE - HERO IMAGE MOBILE FINAL */
+10678: /* === ACROSS DESKTOP HERO TYPO FIX === */
+10771: /* === /ACROSS DESKTOP HERO TYPO FIX === */
+10773: /* === SERVICE PROCESS ICONS LIKE SECTORES FINAL START === */
+10834: /* 6 entrega final */
+10857: /* === SERVICE PROCESS ICONS LIKE SECTORES FINAL END === */
+10859: /* === INLINE PROCESS ICONS REAL FINAL START === */
+10975: /* === INLINE PROCESS ICONS REAL FINAL END === */
+10978: /* === CONTACT HERO SECTION === */
+11124: /* END CONTACT HERO SECTION */
+11126: /* === TERRESTRE ALIGN WITH AEREO FINAL SYSTEM === */
+11129:   Transporte terrestre:
+11133:   - No agrega HomeCorporateFinal.
+11134:   - Oculta en desktop el contactHero duplicado, porque ya existe finalCta.
+11142: .finalCta {
+11177:   .finalCta,
+11178:   .finalImage {
+11183:   .finalCta > div:first-child {
+11193:     En esta página hay finalCta y luego contactHero.
+11194:     Para que no se sienta duplicado en desktop, dejamos finalCta y ocultamos contactHero.
+11202: /* END TERRESTRE ALIGN WITH AEREO FINAL SYSTEM */
+
+
+==========================================================================================
+AEREO CSS - ULTIMAS 320 LINEAS
+==========================================================================================
+12058:     font-size: clamp(2.35rem, 3.05vw, 3.55rem) !important;
+12059:     line-height: .96 !important;
+12060:     letter-spacing: -.055em !important;
+12061:   }
+12062: 
+12063:   .page .processAccordionList {
+12064:     display: grid !important;
+12065:     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+12066:     gap: .95rem !important;
+12067:     background: transparent !important;
+12068:     border: 0 !important;
+12069:   }
+12070: 
+12071:   .page .processAccordionCard {
+12072:     min-height: 132px !important;
+12073:     border-radius: 18px !important;
+12074:     border: 1px solid rgba(23,50,71,.11) !important;
+12075:     background:
+12076:       radial-gradient(circle at 92% 10%, rgba(214,179,107,.08), transparent 7rem),
+12077:       linear-gradient(180deg, rgba(255,255,255,.94), rgba(248,245,239,.94)) !important;
+12078:     box-shadow: 0 18px 46px rgba(7,17,29,.055) !important;
+12079:   }
+12080: 
+12081:   .page .processAccordionCard::before {
+12082:     content: "" !important;
+12083:     position: absolute !important;
+12084:     left: 0 !important;
+12085:     top: 0 !important;
+12086:     bottom: 0 !important;
+12087:     width: 3px !important;
+12088:     background: linear-gradient(180deg, #173247, #d6b36b) !important;
+12089:   }
+12090: 
+12091:   .page .processAccordionSummary {
+12092:     min-height: 132px !important;
+12093:     padding: 1.15rem 1.05rem 1.1rem 1.2rem !important;
+12094:     grid-template-columns: minmax(0, 1fr) 1.85rem !important;
+12095:   }
+12096: 
+12097:   .page .processAccordionTitle strong {
+12098:     font-size: .96rem !important;
+12099:     line-height: 1.13 !important;
+12100:   }
+12101: 
+12102:   .page .processAccordionTitle small {
+12103:     font-size: .79rem !important;
+12104:     line-height: 1.46 !important;
+12105:   }
+12106: 
+12107:   .page .processAccordionCard[open] {
+12108:     border-color: rgba(214,179,107,.48) !important;
+12109:     background:
+12110:       radial-gradient(circle at 92% 10%, rgba(214,179,107,.13), transparent 7rem),
+12111:       linear-gradient(180deg, #fff, #f8f5ef) !important;
+12112:   }
+12113: 
+12114:   .page .processAccordionCard[open] .processAccordionSummary {
+12115:     min-height: 105px !important;
+12116:     border-bottom: 1px solid rgba(23,50,71,.10) !important;
+12117:   }
+12118: 
+12119:   .page .processAccordionBody {
+12120:     padding: .85rem 1.1rem 1.1rem 1.2rem !important;
+12121:   }
+12122: 
+12123:   .page .processAccordionBody p {
+12124:     max-width: 290px !important;
+12125:     font-size: .8rem !important;
+12126:     line-height: 1.5 !important;
+12127:   }
+12128: 
+12129:   .page .processAccordionBody a {
+12130:     display: none !important;
+12131:   }
+12132: 
+12133:   /* CTA del proceso: que parezca banda de marca, no una séptima card */
+12134:   .page .processAccordionActions {
+12135:     width: 100% !important;
+12136:     margin: 1.15rem 0 0 !important;
+12137:     padding: 1.05rem 1.15rem !important;
+12138: 
+12139:     display: flex !important;
+12140:     align-items: center !important;
+12141:     justify-content: space-between !important;
+12142:     gap: 1.2rem !important;
+12143: 
+12144:     border-radius: 18px !important;
+12145:     border: 1px solid rgba(23,50,71,.12) !important;
+12146: 
+12147:     background:
+12148:       linear-gradient(135deg, rgba(7,16,26,.98), rgba(23,50,71,.96)) !important;
+12149: 
+12150:     box-shadow: 0 18px 48px rgba(7,17,29,.16) !important;
+12151:   }
+12152: 
+12153:   .page .processAccordionActions strong {
+12154:     color: #fff !important;
+12155:     -webkit-text-fill-color: #fff !important;
+12156:     font-size: .96rem !important;
+12157:     line-height: 1.15 !important;
+12158:     letter-spacing: -.02em !important;
+12159:   }
+12160: 
+12161:   .page .processAccordionActions p {
+12162:     max-width: 560px !important;
+12163:     margin-top: .28rem !important;
+12164:     color: rgba(255,255,255,.72) !important;
+12165:     -webkit-text-fill-color: rgba(255,255,255,.72) !important;
+12166:     font-size: .82rem !important;
+12167:     line-height: 1.46 !important;
+12168:   }
+12169: 
+12170:   .page .processAccordionActions > div:last-child {
+12171:     display: flex !important;
+12172:     gap: .65rem !important;
+12173:     flex-shrink: 0 !important;
+12174:   }
+12175: 
+12176:   .page .processAccordionActions a {
+12177:     min-height: 2.65rem !important;
+12178:     padding: 0 1rem !important;
+12179:     border-radius: 999px !important;
+12180:     text-transform: uppercase !important;
+12181:     font-size: .66rem !important;
+12182:     font-weight: 950 !important;
+12183:     letter-spacing: .045em !important;
+12184:     text-decoration: none !important;
+12185:     white-space: nowrap !important;
+12186:   }
+12187: 
+12188:   .page .processAccordionActions a:first-child {
+12189:     background: #fff !important;
+12190:     color: #173247 !important;
+12191:     -webkit-text-fill-color: #173247 !important;
+12192:     border: 1px solid rgba(214,179,107,.55) !important;
+12193:     box-shadow: none !important;
+12194:   }
+12195: 
+12196:   .page .processAccordionActions a:last-child {
+12197:     color: #fff !important;
+12198:     -webkit-text-fill-color: #fff !important;
+12199:     background: transparent !important;
+12200:     border: 1px solid rgba(255,255,255,.28) !important;
+12201:   }
+12202: 
+12203:   /* La banda oscura debe respirar después del bloque claro */
+12204:   .page .darkBand {
+12205:     margin-top: 5.4rem !important;
+12206:   }
+12207: }
+12208: 
+12209: @media (max-width: 900px) {
+12210:   .page {
+12211:     background: #f4f1eb !important;
+12212:   }
+12213: 
+12214:   .page .processAccordionActions {
+12215:     margin-top: 1rem !important;
+12216:     padding: 1rem !important;
+12217:     display: grid !important;
+12218:     gap: .9rem !important;
+12219:   }
+12220: 
+12221:   .page .processAccordionActions > div:last-child {
+12222:     display: grid !important;
+12223:     grid-template-columns: 1fr !important;
+12224:     gap: .65rem !important;
+12225:   }
+12226: 
+12227:   .page .processAccordionActions a {
+12228:     width: 100% !important;
+12229:   }
+12230: }
+12231: 
+12232: /* END AEREO DESKTOP BRAND UNIFIED POLISH FINAL */
+12233: 
+12234: 
+12235: 
+12236: 
+12237: 
+12238: 
+12239: 
+12240: /* === AEREO CERTIFICATIONS MEDIUM DESKTOP ONLY FINAL === */
+12241: 
+12242: /*
+12243:   SOLO desktop mediano.
+12244:   Este es el caso de tu computadora:
+12245:   - no toca tablet/mobile
+12246:   - no toca desktop grande
+12247:   - no quita mapa/foto
+12248:   - solo compacta y sube el contenido para que no quede perdido abajo
+12249: */
+12250: 
+12251: @media (min-width: 1181px) and (max-width: 1700px) {
+12252:   .homeFinalContact :global(section:first-of-type) {
+12253:     padding-top: 1.6rem !important;
+12254:     padding-bottom: 1rem !important;
+12255:     min-height: 520px !important;
+12256:     height: 520px !important;
+12257:     max-height: 520px !important;
+12258:     overflow: hidden !important;
+12259:   }
+12260: 
+12261:   .homeFinalContact :global(section:first-of-type > div:first-child) {
+12262:     transform: translateY(-135px) !important;
+12263:   }
+12264: 
+12265:   .homeFinalContact :global(section:first-of-type h2) {
+12266:     margin-top: 0 !important;
+12267:     margin-bottom: 1.15rem !important;
+12268:     font-size: clamp(2.25rem, 3vw, 3.45rem) !important;
+12269:     line-height: .94 !important;
+12270:   }
+12271: 
+12272:   .homeFinalContact :global(section:first-of-type article) {
+12273:     min-height: auto !important;
+12274:     padding-top: 1.05rem !important;
+12275:     padding-bottom: 1.05rem !important;
+12276:   }
+12277: }
+12278: 
+12279: /* Desktop grande queda sin este ajuste */
+12280: @media (min-width: 1701px) {
+12281:   .homeFinalContact :global(section:first-of-type > div:first-child) {
+12282:     transform: none !important;
+12283:   }
+12284: }
+12285: 
+12286: /* END AEREO CERTIFICATIONS MEDIUM DESKTOP ONLY FINAL */
+12287: 
+12288: /* === AEREO CERTIFICATIONS MAP ZOOM OUT FINAL === */
+12289: 
+12290: /*
+12291:   Aleja un poco la imagen/mapa del bloque de certificaciones.
+12292:   No toca textos, cards ni logos.
+12293: */
+12294: 
+12295: @media (min-width: 1181px) {
+12296:   .homeFinalContact :global(section:first-of-type) {
+12297:     background-size: 88% auto !important;
+12298:     background-position: center 48% !important;
+12299:     background-repeat: no-repeat !important;
+12300:   }
+12301: 
+12302:   .homeFinalContact :global(section:first-of-type [class*="map"]),
+12303:   .homeFinalContact :global(section:first-of-type [class*="Map"]),
+12304:   .homeFinalContact :global(section:first-of-type [class*="world"]),
+12305:   .homeFinalContact :global(section:first-of-type [class*="World"]) {
+12306:     transform: scale(.88) !important;
+12307:     transform-origin: center center !important;
+12308:   }
+12309: }
+12310: 
+12311: /* END AEREO CERTIFICATIONS MAP ZOOM OUT FINAL */
+12312: 
+12313: 
+12314: /* === AEREO HOMEFINAL CONTACT BG ONLY FINAL === */
+12315: 
+12316: /*
+12317:   Quita el azul lateral detrás de HomeCorporateFinal.
+12318:   NO toca footer.
+12319:   NO toca .aereoFinalStack.
+12320:   NO toca mapa ni cards.
+12321: */
+12322: 
+12323: .homeFinalContact {
+12324:   background: #f4f1eb !important;
+12325: }
+12326: 
+12327: /* END AEREO HOMEFINAL CONTACT BG ONLY FINAL */
+12328: 
+12329: /* === AEREO HIDE HOMECORPORATE EXTRA SECTIONS DESKTOP === */
+12330: 
+12331: /*
+12332:   Solo en desktop de transporte aéreo:
+12333:   oculta las secciones del HomeCorporateFinal que parecen mini-home:
+12334:   - Logística integrada
+12335:   - Servicios logísticos internacionales
+12336: 
+12337:   No toca:
+12338:   - mapa / confianza global
+12339:   - oficinas
+12340:   - CTA
+12341:   - footer
+12342: */
+12343: 
+12344: @media (min-width: 901px) {
+12345:   .homeFinalContact :global([class*="integrated"]),
+12346:   .homeFinalContact :global([class*="services"]) {
+12347:     display: none !important;
+12348:   }
+12349: }
+12350: 
+12351: /* END AEREO HIDE HOMECORPORATE EXTRA SECTIONS DESKTOP */
+12352: 
+12353: /* === AEREO BONE BACKGROUND UNIFY FINAL === */
+12354: 
+12355: /*
+12356:   Unifica el color hueso de la página.
+12357:   No toca secciones oscuras, mapa ni footer.
+12358: */
+12359: 
+12360: .page,
+12361: .content,
+12362: .overview,
+12363: .services,
+12364: .useCases,
+12365: .process,
+12366: .processAccordionSection,
+12367: .faqSection {
+12368:   background-color: #f4f1eb !important;
+12369: }
+12370: 
+12371: @media (min-width: 901px) {
+12372:   .homeFinalContact {
+12373:     background-color: #f4f1eb !important;
+12374:   }
+12375: }
+12376: 
+12377: /* END AEREO BONE BACKGROUND UNIFY FINAL */
+
+
+==========================================================================================
+TERRESTRE CSS - ULTIMAS 420 LINEAS
+==========================================================================================
+10783:   display: flex !important;
+10784:   align-items: center !important;
+10785:   gap: .55rem !important;
+10786:   min-width: 0 !important;
+10787: }
+10788: 
+10789: .processGrid > article h3::before,
+10790: .process article h3::before {
+10791:   content: "" !important;
+10792:   width: 22px !important;
+10793:   height: 22px !important;
+10794:   flex: 0 0 22px !important;
+10795:   border-radius: 999px !important;
+10796:   border: 1px solid rgba(18,63,89,.28) !important;
+10797:   background:
+10798:     rgba(18,63,89,.06)
+10799:     center / 13px 13px
+10800:     no-repeat !important;
+10801:   box-shadow: inset 0 1px 0 rgba(255,255,255,.85) !important;
+10802: }
+10803: 
+10804: /* 1 búsqueda/análisis */
+10805: .processGrid > article:nth-child(1) h3::before,
+10806: .process article:nth-child(1) h3::before {
+10807:   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23123f59' stroke-width='2'%3E%3Ccircle cx='10' cy='10' r='6'/%3E%3Cpath d='M15 15l5 5'/%3E%3C/svg%3E") !important;
+10808: }
+10809: 
+10810: /* 2 ruta/diseño */
+10811: .processGrid > article:nth-child(2) h3::before,
+10812: .process article:nth-child(2) h3::before {
+10813:   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23123f59' stroke-width='2'%3E%3Cpath d='M7 7h6a4 4 0 010 8H6'/%3E%3Cpath d='M9 4L6 7l3 3'/%3E%3C/svg%3E") !important;
+10814: }
+10815: 
+10816: /* 3 documentación */
+10817: .processGrid > article:nth-child(3) h3::before,
+10818: .process article:nth-child(3) h3::before {
+10819:   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23123f59' stroke-width='2'%3E%3Cpath d='M7 3h7l4 4v14H7z'/%3E%3Cpath d='M14 3v5h5'/%3E%3Cpath d='M9 13h6M9 17h6'/%3E%3C/svg%3E") !important;
+10820: }
+10821: 
+10822: /* 4 ejecución */
+10823: .processGrid > article:nth-child(4) h3::before,
+10824: .process article:nth-child(4) h3::before {
+10825:   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23123f59' stroke-width='2'%3E%3Cpath d='M4 16l5-5 4 4 7-7'/%3E%3Cpath d='M14 8h6v6'/%3E%3C/svg%3E") !important;
+10826: }
+10827: 
+10828: /* 5 seguimiento */
+10829: .processGrid > article:nth-child(5) h3::before,
+10830: .process article:nth-child(5) h3::before {
+10831:   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23123f59' stroke-width='2'%3E%3Cpath d='M12 21s7-4 7-10a7 7 0 10-14 0c0 6 7 10 7 10z'/%3E%3Ccircle cx='12' cy='11' r='2'/%3E%3C/svg%3E") !important;
+10832: }
+10833: 
+10834: /* 6 entrega final */
+10835: .processGrid > article:nth-child(6) h3::before,
+10836: .process article:nth-child(6) h3::before {
+10837:   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23123f59' stroke-width='2'%3E%3Cpath d='M3 7h12v10H3z'/%3E%3Cpath d='M15 11h3l3 3v3h-6z'/%3E%3Ccircle cx='7' cy='18' r='1.5'/%3E%3Ccircle cx='18' cy='18' r='1.5'/%3E%3C/svg%3E") !important;
+10838: }
+10839: 
+10840: @media (max-width: 760px) {
+10841:   .processGrid > article h3,
+10842:   .process article h3 {
+10843:     display: flex !important;
+10844:     align-items: center !important;
+10845:     gap: .52rem !important;
+10846:   }
+10847: 
+10848:   .processGrid > article h3::before,
+10849:   .process article h3::before {
+10850:     width: 21px !important;
+10851:     height: 21px !important;
+10852:     flex-basis: 21px !important;
+10853:     background-size: 12px 12px !important;
+10854:   }
+10855: }
+10856: 
+10857: /* === SERVICE PROCESS ICONS LIKE SECTORES FINAL END === */
+10858: 
+10859: /* === INLINE PROCESS ICONS REAL FINAL START === */
+10860: 
+10861: /* Ya no usamos .processGrid i ni h3::before para los iconos */
+10862: .processGrid i,
+10863: .processGrid article i {
+10864:   display: none !important;
+10865: }
+10866: 
+10867: .processGrid h3::before,
+10868: .processGrid article h3::before,
+10869: .process article h3::before {
+10870:   content: none !important;
+10871:   display: none !important;
+10872:   background: none !important;
+10873:   border: 0 !important;
+10874:   box-shadow: none !important;
+10875: }
+10876: 
+10877: /* Layout del proceso: número + título con icono real */
+10878: .processGrid article {
+10879:   display: grid !important;
+10880:   grid-template-columns: 44px minmax(0, 1fr) !important;
+10881:   column-gap: .85rem !important;
+10882:   align-items: start !important;
+10883: }
+10884: 
+10885: .processGrid article strong {
+10886:   grid-column: 1 !important;
+10887:   grid-row: 1 / span 2 !important;
+10888:   display: block !important;
+10889:   width: auto !important;
+10890:   height: auto !important;
+10891:   margin: 0 !important;
+10892:   padding: 0 !important;
+10893:   background: transparent !important;
+10894:   border: 0 !important;
+10895:   border-radius: 0 !important;
+10896:   box-shadow: none !important;
+10897:   color: #07111d !important;
+10898:   -webkit-text-fill-color: #07111d !important;
+10899:   font-size: 1rem !important;
+10900:   line-height: 1 !important;
+10901:   font-weight: 950 !important;
+10902: }
+10903: 
+10904: .processGrid article h3 {
+10905:   grid-column: 2 !important;
+10906:   display: flex !important;
+10907:   align-items: center !important;
+10908:   gap: .55rem !important;
+10909:   margin: 0 !important;
+10910:   min-width: 0 !important;
+10911:   color: #07111d !important;
+10912:   -webkit-text-fill-color: #07111d !important;
+10913: }
+10914: 
+10915: .processIconInline {
+10916:   width: 22px !important;
+10917:   height: 22px !important;
+10918:   min-width: 22px !important;
+10919:   min-height: 22px !important;
+10920:   display: inline-flex !important;
+10921:   align-items: center !important;
+10922:   justify-content: center !important;
+10923:   border-radius: 999px !important;
+10924:   color: #123f59 !important;
+10925:   -webkit-text-fill-color: #123f59 !important;
+10926:   background: rgba(18, 63, 89, .055) !important;
+10927:   border: 1px solid rgba(18, 63, 89, .24) !important;
+10928:   box-shadow: inset 0 1px 0 rgba(255,255,255,.80) !important;
+10929:   flex: 0 0 22px !important;
+10930: }
+10931: 
+10932: .processIconInline svg {
+10933:   display: block !important;
+10934:   width: 13px !important;
+10935:   height: 13px !important;
+10936:   min-width: 13px !important;
+10937:   min-height: 13px !important;
+10938:   opacity: 1 !important;
+10939:   visibility: visible !important;
+10940:   color: #123f59 !important;
+10941:   stroke: #123f59 !important;
+10942:   stroke-width: 2 !important;
+10943: }
+10944: 
+10945: .processTitleText {
+10946:   display: inline !important;
+10947:   min-width: 0 !important;
+10948: }
+10949: 
+10950: .processGrid article p {
+10951:   grid-column: 2 !important;
+10952:   margin-top: .55rem !important;
+10953: }
+10954: 
+10955: @media (max-width: 900px) {
+10956:   .processGrid {
+10957:     grid-template-columns: 1fr !important;
+10958:     gap: 0 !important;
+10959:   }
+10960: 
+10961:   .processGrid article {
+10962:     grid-template-columns: 42px minmax(0, 1fr) !important;
+10963:     padding: 1.05rem 0 !important;
+10964:     border-bottom: 1px solid rgba(8, 11, 16, .10) !important;
+10965:   }
+10966: 
+10967:   .processIconInline {
+10968:     width: 22px !important;
+10969:     height: 22px !important;
+10970:     min-width: 22px !important;
+10971:     min-height: 22px !important;
+10972:   }
+10973: }
+10974: 
+10975: /* === INLINE PROCESS ICONS REAL FINAL END === */
+10976: 
+10977: 
+10978: /* === CONTACT HERO SECTION === */
+10979: 
+10980: .contactHero {
+10981:   position: relative;
+10982:   width: 100vw;
+10983:   max-width: none;
+10984:   margin: 0 50%;
+10985:   transform: translateX(-50%);
+10986:   min-height: clamp(360px, 34vw, 480px);
+10987:   display: grid;
+10988:   grid-template-columns: minmax(0, 1fr) minmax(320px, .72fr);
+10989:   align-items: center;
+10990:   gap: 2rem;
+10991:   padding: clamp(3.5rem, 6vw, 5.5rem) max(24px, calc((100vw - 1180px) / 2));
+10992:   background: #07101a;
+10993:   color: #fff;
+10994:   overflow: hidden;
+10995: }
+10996: 
+10997: .contactHeroContent {
+10998:   position: relative;
+10999:   z-index: 2;
+11000:   max-width: 680px;
+11001: }
+11002: 
+11003: .contactHero .eyebrow {
+11004:   color: #d6b36b;
+11005: }
+11006: 
+11007: .contactHero h2 {
+11008:   margin: 0;
+11009:   max-width: 680px;
+11010:   color: #f4efe5;
+11011:   font-size: clamp(2.7rem, 4.8vw, 5rem);
+11012:   line-height: .92;
+11013:   letter-spacing: -.065em;
+11014:   font-weight: 950;
+11015: }
+11016: 
+11017: .contactHero p {
+11018:   max-width: 620px;
+11019:   margin: 1.2rem 0 0;
+11020:   color: rgba(255,255,255,.82);
+11021:   font-size: clamp(.98rem, 1.15vw, 1.08rem);
+11022:   line-height: 1.6;
+11023: }
+11024: 
+11025: .contactHeroActions {
+11026:   display: flex;
+11027:   flex-wrap: wrap;
+11028:   gap: .85rem;
+11029:   margin-top: 1.6rem;
+11030: }
+11031: 
+11032: .contactHeroActions a {
+11033:   min-height: 46px;
+11034:   display: inline-flex;
+11035:   align-items: center;
+11036:   justify-content: center;
+11037:   border-radius: 999px;
+11038:   padding: 0 1.25rem;
+11039:   text-decoration: none;
+11040:   text-transform: uppercase;
+11041:   font-size: .72rem;
+11042:   letter-spacing: .055em;
+11043:   font-weight: 950;
+11044: }
+11045: 
+11046: .contactHeroActions a:first-child {
+11047:   background: #173247;
+11048:   color: #fff;
+11049:   box-shadow: 0 18px 42px rgba(23,50,71,.32);
+11050: }
+11051: 
+11052: .contactHeroActions a:first-child::after {
+11053:   content: "→";
+11054:   margin-left: .65rem;
+11055: }
+11056: 
+11057: .contactHeroActions a:last-child {
+11058:   color: #fff;
+11059:   border: 1px solid rgba(255,255,255,.34);
+11060:   background: rgba(255,255,255,.06);
+11061: }
+11062: 
+11063: .contactHeroImage {
+11064:   position: absolute;
+11065:   top: 0;
+11066:   right: 0;
+11067:   width: min(52vw, 760px);
+11068:   height: 100%;
+11069:   opacity: .72;
+11070: }
+11071: 
+11072: .contactHeroImage::after {
+11073:   content: "";
+11074:   position: absolute;
+11075:   inset: 0;
+11076:   background:
+11077:     linear-gradient(90deg, #07101a 0%, rgba(7,16,26,.84) 18%, rgba(7,16,26,.18) 100%),
+11078:     linear-gradient(180deg, rgba(7,16,26,.18), rgba(7,16,26,.68));
+11079: }
+11080: 
+11081: .contactHeroImage img {
+11082:   object-fit: cover;
+11083:   object-position: center;
+11084: }
+11085: 
+11086: @media (max-width: 900px) {
+11087:   .contactHero {
+11088:     min-height: 500px;
+11089:     grid-template-columns: 1fr;
+11090:     margin-top: 0;
+11091:     padding: 3.4rem 18px 4rem;
+11092:     background:
+11093:       linear-gradient(180deg, rgba(5,8,13,.92), rgba(5,8,13,.88)),
+11094:       url("/images/contactoimagen.png");
+11095:     background-size: cover;
+11096:     background-position: center;
+11097:   }
+11098: 
+11099:   .contactHeroImage {
+11100:     display: none;
+11101:   }
+11102: 
+11103:   .contactHero h2 {
+11104:     max-width: 380px;
+11105:     font-size: clamp(2.45rem, 10vw, 3.45rem);
+11106:   }
+11107: 
+11108:   .contactHero p {
+11109:     max-width: 360px;
+11110:     font-size: .9rem;
+11111:   }
+11112: 
+11113:   .contactHeroActions {
+11114:     display: grid;
+11115:     grid-template-columns: 1fr;
+11116:     max-width: 360px;
+11117:   }
+11118: 
+11119:   .contactHeroActions a {
+11120:     width: 100%;
+11121:   }
+11122: }
+11123: 
+11124: /* END CONTACT HERO SECTION */
+11125: 
+11126: /* === TERRESTRE ALIGN WITH AEREO FINAL SYSTEM === */
+11127: 
+11128: /*
+11129:   Transporte terrestre:
+11130:   - Corrige consistencia visual como aéreo.
+11131:   - No toca footer.
+11132:   - No toca hero.
+11133:   - No agrega HomeCorporateFinal.
+11134:   - Oculta en desktop el contactHero duplicado, porque ya existe finalCta.
+11135: */
+11136: 
+11137: .page,
+11138: .content,
+11139: .overview,
+11140: .useCases,
+11141: .process,
+11142: .finalCta {
+11143:   background-color: #f4f1eb !important;
+11144: }
+11145: 
+11146: @media (min-width: 901px) {
+11147:   .overview,
+11148:   .services,
+11149:   .useCases,
+11150:   .process {
+11151:     margin-top: 3.2rem !important;
+11152:     margin-bottom: 3.2rem !important;
+11153:   }
+11154: 
+11155:   .sectionHead {
+11156:     margin-bottom: 1.45rem !important;
+11157:   }
+11158: 
+11159:   .pillars article {
+11160:     min-height: 172px !important;
+11161:     padding-top: 1.2rem !important;
+11162:     padding-bottom: 1.2rem !important;
+11163:   }
+11164: 
+11165:   .serviceGrid article {
+11166:     min-height: 218px !important;
+11167:     padding: 1.35rem 1rem !important;
+11168:   }
+11169: 
+11170:   .useCaseGrid article {
+11171:     min-height: 176px !important;
+11172:     padding: 1.25rem .9rem !important;
+11173:   }
+11174: 
+11175:   .darkBand,
+11176:   .darkBandImage,
+11177:   .finalCta,
+11178:   .finalImage {
+11179:     min-height: 320px !important;
+11180:   }
+11181: 
+11182:   .darkBandContent,
+11183:   .finalCta > div:first-child {
+11184:     padding-top: clamp(2.4rem, 3.8vw, 3.8rem) !important;
+11185:     padding-bottom: clamp(2.4rem, 3.8vw, 3.8rem) !important;
+11186:   }
+11187: 
+11188:   .stats {
+11189:     margin-top: 1.65rem !important;
+11190:   }
+11191: 
+11192:   /*
+11193:     En esta página hay finalCta y luego contactHero.
+11194:     Para que no se sienta duplicado en desktop, dejamos finalCta y ocultamos contactHero.
+11195:     Mobile queda intacto.
+11196:   */
+11197:   .contactHero {
+11198:     display: none !important;
+11199:   }
+11200: }
+11201: 
+11202: /* END TERRESTRE ALIGN WITH AEREO FINAL SYSTEM */

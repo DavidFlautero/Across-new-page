@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import RelatedServices from "@/app/servicios/_shared/RelatedServices";
+import HomeCorporateFinal from "@/components/sections/HomeCorporateFinal";
 import styles from "./Servicio.module.css";
 
 type Locale = "es" | "en" | "zh";
@@ -15,11 +16,11 @@ type Locale = "es" | "en" | "zh";
 const copy = {
   es: {
     heroEyebrow: "TRANSPORTE MARÍTIMO INTERNACIONAL",
-    heroTitle: "Movemos su carga marítima con control, coordinación portuaria y trazabilidad.",
+    heroTitle: "Cotice y coordine su embarque marítimo con control de origen a destino.",
     heroText:
-      "Gestionamos embarques FCL, LCL y proyectos marítimos con control documental, coordinación portuaria, aduanas y seguimiento operativo de origen a destino.",
-    primaryCta: "Cotizar carga marítima",
-    secondaryCta: "Hablar con un especialista",
+      "Gestionamos FCL, LCL y proyectos con documentación, puerto, aduanas y seguimiento operativo.",
+    primaryCta: "Solicitar cotización marítima",
+    secondaryCta: "Coordinar mi embarque",
     contactEyebrow: "CONTACTO DIRECTO",
     contactTitle: "Coordinemos su próxima operación internacional.",
     contactText: "Hable con un especialista y reciba una solución logística adaptada a su carga, destino y urgencia.",
@@ -39,15 +40,27 @@ const copy = {
       ["Carga FCL", "Contenedor completo"],
       ["Carga LCL", "Consolidado"],
       ["Documentación", "Gestión aduanera"],
-      ["Seguimiento", "Trazabilidad operativa"],
+      ["Seguimiento operativo", "Trazabilidad operativa"],
     ],
 
-    overviewEyebrow: "OPERACIÓN MARÍTIMA BAJO CONTROL",
-    overviewTitle: "Coordinación portuaria, documentación y seguimiento para su embarque.",
+    overviewEyebrow: "OPERACIONES CONFIABLES",
+    overviewTitle: "Control portuario y documental para su embarque.",
     overviewText: "El transporte marítimo exige control entre origen, naviera, puerto, aduana y destino final. Gestionamos cada etapa para reducir errores documentales y mantener visibilidad operativa.",
-    overviewButton: "Hablar con un especialista marítimo",
+    overviewButton: "Rastrear su envío",
 
-
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     stickyPrimary: "Cotizar marítimo",
     stickySecondary: "Hablar ahora",
@@ -66,19 +79,19 @@ const copy = {
     pillars: [
       ["Coordinación portuaria", "Gestión con navieras, agentes y operadores logísticos."],
       ["Control documental", "Revisión de documentos comerciales, aduaneros y operativos."],
-      ["Seguimiento de operación", "Monitoreo del avance desde origen hasta destino."],
+      ["Seguimiento operativo de operación", "Monitoreo del avance desde origen hasta destino."],
       ["Soluciones puerta a puerta", "Integración con transporte terrestre y entrega final."],
     ],
 
     servicesEyebrow: "Nuestros servicios marítimos",
     servicesTitle: "Soluciones marítimas para cada tipo de embarque.",
     services: [
-      ["Carga marítima FCL", "Para envíos donde el tiempo define la operación."],
-      ["Carga LCL consolidada", "Optimización de costos mediante espacios compartidos."],
-      ["Carga de alto valor", "Coordinación segura para productos sensibles o estratégicos."],
-      ["Proyectos marítimos", "Soluciones dedicadas para operaciones especiales o cargas críticas."],
-      ["Cross trade marítimo", "Operaciones internacionales entre terceros países."],
-      ["Door to door", "Desde retiro en origen hasta entrega final en destino."],
+      ["Carga marítima FCL", "Contenedor completo para embarques que requieren capacidad exclusiva, control y trazabilidad."],
+      ["Carga LCL consolidada", "Consolidación marítima para optimizar costos sin perder control documental ni operativo."],
+      ["Carga sensible o de alto valor", "Coordinación para mercancías que requieren seguridad, documentación y seguimiento especializado."],
+      ["Proyectos marítimos", "Soluciones para cargas sobredimensionadas, industriales o con requerimientos especiales."],
+      ["Cross trade marítimo", "Operaciones entre terceros países con coordinación documental, portuaria y seguimiento operativo."],
+      ["Door to door", "Retiro en origen, coordinación marítima, conexión terrestre y entrega final en destino."],
     ],
 
     useCasesEyebrow: "Cuándo conviene usar transporte marítimo",
@@ -92,15 +105,15 @@ const copy = {
       ["Documentación crítica", "Soluciones para envíos donde el plazo no admite demoras."],
     ],
 
-    processEyebrow: "Nuestro proceso operativo",
-    processTitle: "Una operación marítima clara desde el primer contacto.",
+    processEyebrow: "Proceso operativo marítimo",
+    processTitle: "Un embarque marítimo claro desde el primer contacto.",
     process: [
-      ["Análisis de carga", "Revisamos peso, volumen, origen, destino y urgencia."],
-      ["Selección de ruta", "Buscamos la alternativa marítima más eficiente."],
-      ["Coordinación documental", "Validamos requisitos comerciales y aduaneros."],
-      ["Booking y despacho", "Coordinamos naviera, puerto y operación de salida."],
-      ["Seguimiento", "Monitoreamos el avance de la carga."],
-      ["Entrega final", "Gestionamos conexión terrestre y entrega en destino."],
+      ["Análisis del embarque", "Revisamos tipo de carga, volumen, Incoterm, origen, destino, tiempos y requisitos documentales."],
+      ["Selección de ruta marítima", "Definimos puerto, naviera y alternativa FCL, LCL o proyecto según la operación."],
+      ["Coordinación documental", "Validamos documentos comerciales, aduaneros, permisos y requisitos operativos del embarque."],
+      ["Reserva naviera y salida", "Coordinamos reserva con naviera, operación portuaria y salida del embarque."],
+      ["Seguimiento operativo", "Monitoreamos hitos del embarque y mantenemos visibilidad durante el tránsito."],
+      ["Entrega final", "Coordinamos conexión terrestre, entrega en destino y cierre operativo."],
     ],
 
     bandTitle: "Operaciones marítimas diseñadas para cargas que no pueden detenerse.",
@@ -152,9 +165,21 @@ const copy = {
     overviewEyebrow: "OCEAN OPERATION UNDER CONTROL",
     overviewTitle: "Port coordination, documentation and tracking for your shipment.",
     overviewText: "Ocean freight requires control between origin, carrier, port, customs and final destination. We manage each stage to reduce document errors and maintain operational visibility.",
-    overviewButton: "Talk to an ocean specialist",
+    overviewButton: "Track your shipment",
 
-
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     stickyPrimary: "Quote ocean",
     stickySecondary: "Talk now",
@@ -177,13 +202,13 @@ const copy = {
       ["Door-to-door solutions", "Integration with road transport and final delivery."],
     ],
 
-    servicesEyebrow: "Our air services",
-    servicesTitle: "Air solutions for every type of operation.",
+    servicesEyebrow: "Our ocean freight services",
+    servicesTitle: "Ocean freight solutions for every type of shipment.",
     services: [
-      ["Urgent air cargo", "For shipments where time defines the operation."],
-      ["Consolidated cargo", "Cost optimization through shared spaces."],
-      ["High-value cargo", "Secure coordination for sensitive or strategic products."],
-      ["Air charter", "Dedicated solutions for special operations or critical cargo."],
+      ["FCL ocean freight", "For shipments where time defines the operation."],
+      ["LCL consolidated cargo", "Cost optimization through shared spaces."],
+      ["Sensitive or high-value cargo", "Secure coordination for sensitive or strategic products."],
+      ["Ocean project cargo", "Dedicated solutions for special operations or critical cargo."],
       ["Cross trade marítimo", "International operations between third countries."],
       ["Door to door", "From pickup at origin to final delivery at destination."],
     ],
@@ -200,12 +225,12 @@ const copy = {
     ],
 
     processEyebrow: "Our operational process",
-    processTitle: "A clear air operation from the first contact.",
+    processTitle: "A clear ocean shipment from the first contact.",
     process: [
       ["Cargo analysis", "We review weight, volume, origin, destination and urgency."],
-      ["Route selection", "We look for the most efficient air alternative."],
+      ["Route selection", "We define port, carrier and FCL, LCL or project routing according to the operation."],
       ["Document coordination", "We validate commercial and customs requirements."],
-      ["Booking and dispatch", "We coordinate airline, airport and departure operation."],
+      ["Booking and dispatch", "We manage booking, port coordination, carrier and departure operation."],
       ["Tracking", "We monitor cargo progress."],
       ["Final delivery", "We manage road connection and delivery at destination."],
     ],
@@ -259,9 +284,21 @@ const copy = {
     overviewEyebrow: "海运操作管控",
     overviewTitle: "为您的货物提供港口协调、文件和跟踪。",
     overviewText: "海运需要在始发地、船公司、港口、海关和最终目的地之间进行管控。我们管理每个环节，以减少文件错误并保持运营可视性。",
-    overviewButton: "联系海运专家",
+    overviewButton: "追踪货物",
 
-
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     stickyPrimary: "海运报价",
     stickySecondary: "立即联系",
@@ -284,7 +321,7 @@ const copy = {
       ["门到门方案", "整合陆运和最终交付。"],
     ],
 
-    servicesEyebrow: "我们的空运服务",
+    servicesEyebrow: "我们的海运服务",
     servicesTitle: "适用于不同业务类型的空运解决方案。",
     services: [
       ["紧急空运", "适用于时间决定成败的运输。"],
@@ -307,7 +344,7 @@ const copy = {
     ],
 
     processEyebrow: "我们的运营流程",
-    processTitle: "从第一次联系开始，空运操作清晰可控。",
+    processTitle: "从第一次联系开始，海运操作清晰可控。",
     process: [
       ["货物分析", "审核重量、体积、始发地、目的地和紧急程度。"],
       ["路线选择", "寻找最高效的空运方案。"],
@@ -652,8 +689,8 @@ export default function TransporteMaritimoPage() {
               <p className={styles.subtitle}>{t.heroText}</p>
 
               <div className={styles.actions}>
-                <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>
-                <Link href="/contacto" className={styles.secondaryBtn}>{t.secondaryCta}</Link>
+                <Link href="/cotizacion?servicio=transporte-maritimo" className={styles.primaryBtn}>{t.primaryCta}</Link>
+                <Link href="/contacto?servicio=transporte-maritimo" className={styles.secondaryBtn}>{t.secondaryCta}</Link>
               </div>
             </div>
 
@@ -694,13 +731,12 @@ export default function TransporteMaritimoPage() {
         </section>
 
         <Certifications />
-
-        <section className={styles.overview}>
+<section className={styles.overview} data-mobile-first-after-cert="true">
           <div className={styles.overviewCopy}>
             <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
             <h2>{t.overviewTitle}</h2>
             <p>{t.overviewText}</p>
-            <Link href="/contacto">{t.overviewButton}</Link>
+            <Link href="/tracking">{t.overviewButton}</Link>
           </div>
 
           <div className={styles.pillars}>
@@ -720,7 +756,12 @@ export default function TransporteMaritimoPage() {
           </div>
         </section>
 
-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/maritimo.png')" } as CSSProperties}>
+
+        
+
+
+
+        <section className={styles.services}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -743,7 +784,7 @@ export default function TransporteMaritimoPage() {
           </div>
         </section>
 
-        <section className={styles.useCases} data-mobile-hide-after-cert="true">
+        <section className={styles.useCases}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.useCasesEyebrow}</span>
             <h2>{t.useCasesTitle}</h2>
@@ -766,33 +807,115 @@ export default function TransporteMaritimoPage() {
           </div>
         </section>
 
-        <section className={styles.process}>
-          <div className={styles.sectionHead}>
+        <section className={`${styles.processAccordionSection} aereoProcessPremium`}>
+          <div className={styles.processAccordionHead}>
             <span className={styles.eyebrow}>{t.processEyebrow}</span>
             <h2>{t.processTitle}</h2>
           </div>
+          <style>{`
+            /* AEREO_PROCESS_INLINE_FORCE */
+            @media (max-width: 900px) {
+              .aereoProcessPremium .aereoProcessCard {
+                background: linear-gradient(145deg, #07111d 0%, #102f45 100%) !important;
+                color: #fff !important;
+              }
 
-          <div className={styles.processGrid}>
-            {t.process.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["search", "route", "document", "plane", "tracking", "truck"];
+              .aereoProcessPremium .aereoProcessTitle,
+              .aereoProcessPremium .aereoProcessTitle *,
+              .aereoProcessPremium .aereoProcessSummary,
+              .aereoProcessPremium .aereoProcessSummary * {
+                color: #fff !important;
+                -webkit-text-fill-color: #fff !important;
+                opacity: 1 !important;
+                filter: none !important;
+                mix-blend-mode: normal !important;
+              }
 
-              return (
-                <article key={title}>
-                  <strong>{index + 1}</strong>
-                  <h3>
-                    <span className={styles.processIconInline} aria-hidden="true">
-                      <Icon name={icons[index]} />
-                    </span>
-                    <span className={styles.processTitleText}>{title}</span>
-                  </h3>
-                  <p>{text}</p>
-                </article>
-              );
-            })}
+              .aereoProcessPremium .aereoProcessTitle small {
+                color: rgba(255,255,255,.72) !important;
+                -webkit-text-fill-color: rgba(255,255,255,.72) !important;
+              }
+
+              .aereoProcessPremium .aereoProcessBody,
+              .aereoProcessPremium .aereoProcessBody p {
+                color: rgba(255,255,255,.78) !important;
+                -webkit-text-fill-color: rgba(255,255,255,.78) !important;
+              }
+
+              .aereoProcessPremium .aereoProcessBody a {
+                color: #fff !important;
+                -webkit-text-fill-color: #fff !important;
+              }
+
+              .aereoProcessPremium .aereoProcessIcon::before,
+              .aereoProcessPremium .aereoProcessIcon::after {
+                background: #d6b36b !important;
+              }
+            }
+          `}</style>
+
+          <div className={styles.processAccordionList}>
+            {t.process.map(([title, text]: string[], index: number) => (
+              <details className={`${styles.processAccordionCard} aereoProcessCard`} key={title}>
+                <summary className={`${styles.processAccordionSummary} aereoProcessSummary`}>
+                  <span className={styles.processAccordionNumber}>{index + 1}</span>
+
+                  <span className={`${styles.processAccordionTitle} aereoProcessTitle`}>
+                    <strong>{title}</strong>
+                    <small>{text}</small>
+                  </span>
+
+                  <span className={`${styles.processAccordionIcon} aereoProcessIcon`} aria-hidden="true" />
+                </summary>
+
+                <div className={`${styles.processAccordionBody} aereoProcessBody`}>
+                  <p>
+                    {locale === "es"
+                      ? "Coordinamos ruta, documentación, tiempos y seguimiento operativo según la urgencia de la carga."
+                      : locale === "en"
+                        ? "We coordinate route, documentation, timing and operational tracking according to cargo urgency."
+                        : "我们根据货物紧急程度协调路线、文件、时间和操作跟踪。"}
+                  </p>
+
+                  <Link href="/cotizacion?servicio=transporte-maritimo">
+                    {locale === "es" ? "Cotizar esta modalidad" : locale === "en" ? "Quote this option" : "获取报价"}
+                  </Link>
+                </div>
+              </details>
+            ))}          </div>
+
+          <div className={styles.processAccordionActions}>
+            <div>
+              <strong>
+                {locale === "es"
+                  ? "¿Tiene un embarque marítimo en curso?"
+                  : locale === "en"
+                    ? "Do you have an ocean shipment in progress?"
+                    : "您是否有正在进行的海运操作？"}
+              </strong>
+              <p>
+                {locale === "es"
+                  ? "Coordinamos ruta marítima, documentación, booking y seguimiento para que su carga avance sin fricción."
+                  : locale === "en"
+                    ? "We coordinate ocean routing, documentation, booking and tracking so your cargo moves without friction."
+                    : "我们协调海运路线、文件、订舱和跟踪，确保您的货物顺利推进。"}
+              </p>
+            </div>
+
+            <div>
+              <Link href="/cotizacion?servicio=transporte-maritimo">
+                {locale === "es" ? "Cotizar carga marítima" : locale === "en" ? "Quote ocean freight" : "获取海运报价"}
+              </Link>
+
+              <Link href="/contacto?servicio=transporte-maritimo">
+                {locale === "es" ? "Hablar con especialista" : locale === "en" ? "Talk to a specialist" : "联系顾问"}
+              </Link>
+            </div>
           </div>
+
         </section>
 
-        <section className={styles.darkBand} data-mobile-hide-after-cert="true">
+<section className={styles.darkBand} data-mobile-hide-after-cert="true">
           <div className={styles.darkBandImage}>
             <Image
               src="/images/transporte-maritimo-desktop/1.png"
@@ -821,84 +944,137 @@ export default function TransporteMaritimoPage() {
             </div>
           </div>
         </section>
-        <section className={styles.servicePreQuote} aria-labelledby="service-prequote-title">
-          <span className={styles.eyebrow}>{t.preQuoteEyebrow}</span>
-          <h2 id="service-prequote-title">{t.preQuoteTitle}</h2>
-          <p>{t.preQuoteText}</p>
+        
+        
+        
+        
+        <section className={styles.faqSection} data-maritimo-faq-section="true">
+          <div className={styles.faqHead}>
+            <span className={styles.eyebrow}>
+              {locale === "es" ? "Preguntas frecuentes" : locale === "en" ? "Frequently asked questions" : "常见问题"}
+            </span>
 
-          <div className={styles.servicePreQuotePoints}>
-            {t.preQuotePoints.map(([title, text]: string[]) => (
-              <article key={title}>
-                <strong>{title}</strong>
-                <span>{text}</span>
-              </article>
+            <h2>
+              {locale === "es"
+                ? "Dudas frecuentes sobre transporte marítimo internacional."
+                : locale === "en"
+                  ? "Common questions about international ocean freight."
+                  : "关于国际海运的常见问题。"}
+            </h2>
+
+            <p>
+              {locale === "es"
+                ? "Resolvemos las principales dudas antes de iniciar una operación marítima: documentación, tiempos, seguimiento, tipo de carga, puertos y coordinación logística."
+                : locale === "en"
+                  ? "We answer the main questions before starting an ocean freight operation: documentation, timing, tracking, cargo type, ports and logistics coordination."
+                  : "我们解答海运操作前的主要问题：文件、时效、跟踪、货物类型、港口和物流协调。"}
+            </p>
+          </div>
+
+          <div className={styles.faqList}>
+            {[
+              [
+                locale === "es" ? "¿Cuándo conviene usar transporte marítimo internacional?" : locale === "en" ? "When should I use international ocean freight?" : "什么时候适合使用国际海运？",
+                locale === "es"
+                  ? "Conviene cuando la carga permite tiempos de tránsito más amplios y se busca optimizar costos para grandes volúmenes, contenedores completos, carga consolidada o proyectos especiales."
+                  : locale === "en"
+                    ? "It is suitable when cargo allows longer transit times and the goal is to optimize costs for large volumes, full containers, consolidated cargo or special projects."
+                    : "当货物允许较长运输时间，并希望优化大批量、整柜、拼箱或特殊项目运输成本时，海运更合适。"
+              ],
+              [
+                locale === "es" ? "¿Cómo se calcula una cotización marítima?" : locale === "en" ? "How is an ocean freight quote calculated?" : "海运报价如何计算？",
+                locale === "es"
+                  ? "Depende del origen, destino, puerto de carga, puerto de descarga, tipo de contenedor, volumen, peso, Incoterm, documentación, aduana y servicios adicionales como retiro o entrega final."
+                  : locale === "en"
+                    ? "It depends on origin, destination, loading port, discharge port, container type, volume, weight, Incoterm, documentation, customs and additional services such as pickup or final delivery."
+                    : "报价取决于起点、目的地、装货港、卸货港、集装箱类型、体积、重量、贸易条款、文件、清关以及提货或最终交付等附加服务。"
+              ],
+              [
+                locale === "es" ? "¿Qué documentos necesito para una operación marítima?" : locale === "en" ? "What documents are required for ocean freight?" : "海运需要哪些文件？",
+                locale === "es"
+                  ? "Generalmente se requiere factura comercial, packing list, datos del consignatario, información de la carga, documentos aduaneros y, según el caso, certificados o permisos especiales."
+                  : locale === "en"
+                    ? "Usually a commercial invoice, packing list, consignee details, cargo information, customs documents and, when applicable, certificates or special permits are required."
+                    : "通常需要商业发票、装箱单、收货人信息、货物信息、海关文件，并视情况需要证书或特殊许可。"
+              ],
+              [
+                locale === "es" ? "¿Qué es un Bill of Lading o BL?" : locale === "en" ? "What is a Bill of Lading or BL?" : "什么是海运提单 BL？",
+                locale === "es"
+                  ? "El Bill of Lading o BL es el documento principal del transporte marítimo. Identifica la carga, naviera, origen, destino, condiciones del embarque y permite gestionar la liberación de la mercancía."
+                  : locale === "en"
+                    ? "The Bill of Lading or BL is the main ocean freight document. It identifies the cargo, carrier, origin, destination, shipment conditions and supports cargo release."
+                    : "海运提单 BL 是海运的主要文件，用于识别货物、承运人、起点、目的地、运输条件，并支持货物放行。"
+              ],
+              [
+                locale === "es" ? "¿Across gestiona aduanas y documentación?" : locale === "en" ? "Does Across handle customs and documentation?" : "Across 是否处理清关和文件？",
+                locale === "es"
+                  ? "Sí. Coordinamos la operación marítima junto con la documentación requerida, gestión aduanera, seguimiento operativo y conexión con transporte terrestre cuando la operación lo necesita."
+                  : locale === "en"
+                    ? "Yes. We coordinate the ocean operation together with the required documentation, customs management, operational tracking and road transport connection when needed."
+                    : "是的。我们协调海运操作、所需文件、清关管理、操作跟踪，并在需要时连接陆运服务。"
+              ],
+              [
+                locale === "es" ? "¿Qué tipo de carga puede transportarse por vía marítima?" : locale === "en" ? "What type of cargo can be shipped by ocean freight?" : "哪些货物可以通过海运运输？",
+                locale === "es"
+                  ? "Se puede transportar carga general, consolidada, contenedores completos, carga sobredimensionada, maquinaria, materia prima, productos industriales y mercancías de alto volumen."
+                  : locale === "en"
+                    ? "General cargo, consolidated cargo, full containers, oversized cargo, machinery, raw materials, industrial products and high-volume goods can be shipped by ocean freight."
+                    : "可通过海运运输普通货物、拼箱货、整柜货、超尺寸货物、机械、原材料、工业产品和大批量货物。"
+              ],
+              [
+                locale === "es" ? "¿Puedo hacer seguimiento de mi embarque?" : locale === "en" ? "Can I track my shipment?" : "可以跟踪我的货物吗？",
+                locale === "es"
+                  ? "Sí. Realizamos seguimiento operativo sobre los hitos principales del embarque: reserva, salida, tránsito, llegada a puerto, nacionalización y entrega final."
+                  : locale === "en"
+                    ? "Yes. We provide operational tracking over key shipment milestones: booking, departure, transit, port arrival, customs clearance and final delivery."
+                    : "可以。我们跟踪运输关键节点：订舱、离港、运输、到港、清关和最终交付。"
+              ],
+              [
+                locale === "es" ? "¿Qué pasa si mi carga requiere manejo especial o proyecto?" : locale === "en" ? "What if my cargo requires special or project handling?" : "如果货物需要特殊或项目操作怎么办？",
+                locale === "es"
+                  ? "Evaluamos dimensiones, peso, ruta, restricciones portuarias, documentación y disponibilidad operativa para coordinar una solución viable con el menor riesgo posible."
+                  : locale === "en"
+                    ? "We evaluate dimensions, weight, route, port restrictions, documentation and operational availability to coordinate a viable solution with the lowest possible risk."
+                    : "我们会评估尺寸、重量、路线、港口限制、文件和操作可用性，以协调风险最低的可行方案。"
+              ]
+            ].map(([question, answer]) => (
+              <details className={styles.faqItem} key={question}>
+                <summary>
+                  <span>{question}</span>
+                  <i aria-hidden="true" />
+                </summary>
+
+                <div>
+                  <p>{answer}</p>
+                </div>
+              </details>
             ))}
           </div>
-
-          <Link href="/cotizacion?servicio=transporte-maritimo">
-            {t.preQuoteCta}
-          </Link>
         </section>
 
 
-<section className={styles.finalCta} style={{ "--mobile-bg": "url('/images/maritimo.png')" } as CSSProperties} data-across-final-cta="true">
-          <div>
-            <h2>{t.finalTitle}</h2>
-            <p>{t.finalText}</p>
+        <RelatedServices current="transporte-maritimo" locale={locale} />
 
-            <div className={styles.finalActions}>
-              <Link href="/contacto?servicio=transporte-maritimo">{t.finalPrimary}</Link>
-              <Link href="/cotizacion?servicio=transporte-maritimo">{t.finalSecondary}</Link>
-            </div>
+        <div className={styles.aereoFinalStack}>
+          <div className={styles.homeFinalContact}>
+            <HomeCorporateFinal />
           </div>
 
-          <div className={styles.finalImage}>
-            <Image
-              src="/images/maritimo.png"
-              alt={t.finalTitle}
-              fill
-              sizes="(max-width: 900px) 100vw, 44vw"
-            />
-          </div>
-        </section>
-        <section className={styles.contactHero} aria-labelledby="contact-hero-title">
-          <div className={styles.contactHeroContent}>
-            <span className={styles.eyebrow}>{t.contactEyebrow}</span>
-            <h2 id="contact-hero-title">{t.contactTitle}</h2>
-            <p>{t.contactText}</p>
+          <Footer />
+        </div>
+</main>
 
-            <div className={styles.contactHeroActions}>
-              <Link href="/contacto">{t.contactPrimary}</Link>
-              <Link href={`/cotizacion?servicio=transporte-maritimo`}>{t.contactSecondary}</Link>
-            </div>
-          </div>
-
-          <div className={styles.contactHeroImage} aria-hidden="true">
-            <Image
-              src="/images/contactoimagen.png"
-              alt=""
-              fill
-              sizes="(max-width: 900px) 100vw, 46vw"
-            />
-          </div>
-        </section>
-
-
-<RelatedServices current="transporte-aereo" locale={locale} />
-      </main>
-
-
-      <div className={styles.mobileStickyCta} aria-label="Acciones rápidas">
+      <div className={styles.mobileStickyCta} aria-label="Acciones rápidas de transporte marítimo">
         <Link href="/cotizacion?servicio=transporte-maritimo">
-          {t.stickyPrimary}
+          SOLICITAR COTIZACIÓN
         </Link>
 
-        <Link href={t.stickySecondaryHref || "/contacto?servicio=transporte-maritimo"}>
-          {t.stickySecondary}
+        <Link href="/contacto?servicio=transporte-maritimo">
+          HABLAR CON ASESOR
         </Link>
       </div>
 
-      <Footer />
+
     </div>
   );
 }

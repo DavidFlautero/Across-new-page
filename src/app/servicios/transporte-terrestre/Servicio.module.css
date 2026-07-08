@@ -11122,3 +11122,56 @@
 }
 
 /* END CONTACT HERO SECTION */
+
+
+
+
+/* === TERRESTRE ADD MISSING FINAL SECTIONS === */
+
+/*
+  Mete las secciones faltantes como en aéreo:
+  RelatedServices
+  ↓
+  HomeCorporateFinal
+  ↓
+  Footer
+
+  En desktop se ocultan las dos partes que en aéreo también sacamos:
+  - Logística integrada
+  - Servicios logísticos internacionales
+
+  Queda visible:
+  - mapa / confianza global
+  - oficinas
+  - CTA corporativo
+*/
+
+.serviceFinalStack {
+  background: #f4f1eb !important;
+  overflow: hidden !important;
+}
+
+.homeFinalContact {
+  background: #f4f1eb !important;
+  overflow: hidden !important;
+}
+
+@media (min-width: 901px) {
+  .homeFinalContact :global([class*="integrated"]),
+  .homeFinalContact :global([class*="services"]) {
+    display: none !important;
+  }
+
+  .homeFinalContact :global([class*="mobileCertifications"]) {
+    display: none !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .serviceFinalStack,
+  .homeFinalContact {
+    background: #f4f1eb !important;
+  }
+}
+
+/* END TERRESTRE ADD MISSING FINAL SECTIONS */

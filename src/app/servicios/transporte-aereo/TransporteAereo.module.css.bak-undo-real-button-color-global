@@ -1129,7 +1129,7 @@
 /* Mobile real: no hero gigante, no botones flotando raro */
 @media (max-width: 900px) {
   .hero {
-    min-height: 560px !important;
+    min-height: 520px !important;
     height: auto !important;
     padding: 5.8rem 24px 3.2rem !important;
     align-items: flex-end !important;
@@ -1279,80 +1279,6 @@
   background: #f4f1eb !important;
 }
 
-/* SERVICIOS: pasar de grilla blanca genérica a bloque oscuro premium */
-.services {
-  width: 100vw !important;
-  max-width: none !important;
-  margin: 4.8rem 50% 0 !important;
-  transform: translateX(-50%) !important;
-  padding: clamp(4rem, 6vw, 6rem) max(24px, calc((100vw - 1180px) / 2)) !important;
-  background:
-    radial-gradient(circle at 78% 18%, rgba(23, 50, 71, .14), transparent 28rem),
-    linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
-  color: #fff !important;
-}
-
-.services .sectionHead {
-  text-align: left !important;
-  margin: 0 0 2.4rem !important;
-  max-width: 740px !important;
-}
-
-.services .sectionHead h2 {
-  color: #fff !important;
-  max-width: 720px !important;
-}
-
-.services .eyebrow {
-  color: #173247 !important;
-}
-
-/* Cards de servicios oscuras, no cajitas blancas */
-.serviceGrid {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 14px !important;
-  border: 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-.serviceGrid article {
-  min-height: 190px !important;
-  padding: 1.6rem !important;
-  text-align: left !important;
-  border: 1px solid rgba(255,255,255,.10) !important;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.025)) !important;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.08) !important;
-}
-
-.serviceGrid i {
-  width: 46px !important;
-  height: 46px !important;
-  margin-bottom: 1rem !important;
-  color: #173247 !important;
-  background: rgba(23, 50, 71, .07) !important;
-  border: 1px solid rgba(23, 50, 71, .32) !important;
-}
-
-.serviceGrid i svg {
-  width: 25px !important;
-  height: 25px !important;
-}
-
-.serviceGrid h3 {
-  color: #fff !important;
-  max-width: none !important;
-  margin: 0 !important;
-  font-size: 1.05rem !important;
-}
-
-.serviceGrid p {
-  color: rgba(255,255,255,.72) !important;
-  max-width: 260px !important;
-  margin: .75rem 0 0 !important;
-}
 
 /* Casos de uso: o se deja blanco, o se vuelve más discreto */
 .useCases {
@@ -1435,80 +1361,6 @@
   background: #f4f1eb !important;
 }
 
-/* SERVICIOS: pasar de grilla blanca genérica a bloque oscuro premium */
-.services {
-  width: 100vw !important;
-  max-width: none !important;
-  margin: 4.8rem 50% 0 !important;
-  transform: translateX(-50%) !important;
-  padding: clamp(4rem, 6vw, 6rem) max(24px, calc((100vw - 1180px) / 2)) !important;
-  background:
-    radial-gradient(circle at 78% 18%, rgba(23, 50, 71, .14), transparent 28rem),
-    linear-gradient(180deg, #07080c 0%, #050609 100%) !important;
-  color: #fff !important;
-}
-
-.services .sectionHead {
-  text-align: left !important;
-  margin: 0 0 2.4rem !important;
-  max-width: 740px !important;
-}
-
-.services .sectionHead h2 {
-  color: #fff !important;
-  max-width: 720px !important;
-}
-
-.services .eyebrow {
-  color: #173247 !important;
-}
-
-/* Cards de servicios oscuras, no cajitas blancas */
-.serviceGrid {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 14px !important;
-  border: 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-.serviceGrid article {
-  min-height: 190px !important;
-  padding: 1.6rem !important;
-  text-align: left !important;
-  border: 1px solid rgba(255,255,255,.10) !important;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.025)) !important;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.08) !important;
-}
-
-.serviceGrid i {
-  width: 46px !important;
-  height: 46px !important;
-  margin-bottom: 1rem !important;
-  color: #173247 !important;
-  background: rgba(23, 50, 71, .07) !important;
-  border: 1px solid rgba(23, 50, 71, .32) !important;
-}
-
-.serviceGrid i svg {
-  width: 25px !important;
-  height: 25px !important;
-}
-
-.serviceGrid h3 {
-  color: #fff !important;
-  max-width: none !important;
-  margin: 0 !important;
-  font-size: 1.05rem !important;
-}
-
-.serviceGrid p {
-  color: rgba(255,255,255,.72) !important;
-  max-width: 260px !important;
-  margin: .75rem 0 0 !important;
-}
 
 /* Casos de uso: o se deja blanco, o se vuelve más discreto */
 .useCases {
@@ -2746,94 +2598,6 @@
 
 /* === PREMIUM BLACK SECTIONS POLISH === */
 
-/* Servicios oscuros con más profundidad */
-.services {
-  position: relative !important;
-  background:
-    radial-gradient(circle at 18% 20%, rgba(23, 50, 71, .14), transparent 24rem),
-    radial-gradient(circle at 92% 72%, rgba(255, 255, 255, .055), transparent 26rem),
-    linear-gradient(180deg, #08090e 0%, #050609 100%) !important;
-  overflow: hidden !important;
-}
-
-.services::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  pointer-events: none !important;
-  background:
-    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(255,255,255,.025) 1px, transparent 1px) !important;
-  background-size: 72px 72px !important;
-  opacity: .18 !important;
-}
-
-.services > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-.services .sectionHead {
-  margin-bottom: 2rem !important;
-}
-
-.services .sectionHead h2 {
-  max-width: 760px !important;
-  font-size: clamp(2.3rem, 3.4vw, 4.4rem) !important;
-  line-height: .95 !important;
-}
-
-.serviceGrid {
-  gap: 16px !important;
-}
-
-.serviceGrid article {
-  position: relative !important;
-  min-height: 178px !important;
-  padding: 1.45rem 1.45rem 1.35rem !important;
-  border: 1px solid rgba(255,255,255,.12) !important;
-  background:
-    linear-gradient(145deg, rgba(255,255,255,.075), rgba(255,255,255,.026)) !important;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.09),
-    0 18px 50px rgba(0,0,0,.16) !important;
-  transition: transform .22s ease, border-color .22s ease, background .22s ease !important;
-}
-
-.serviceGrid article::after {
-  content: "→" !important;
-  position: absolute !important;
-  right: 1.25rem !important;
-  bottom: 1.05rem !important;
-  color: #173247 !important;
-  font-size: 1.1rem !important;
-  opacity: .85 !important;
-}
-
-.serviceGrid article:hover {
-  transform: translateY(-4px) !important;
-  border-color: rgba(23,50,71,.45) !important;
-  background:
-    linear-gradient(145deg, rgba(23,50,71,.12), rgba(255,255,255,.035)) !important;
-}
-
-.serviceGrid i {
-  width: 42px !important;
-  height: 42px !important;
-  margin-bottom: .9rem !important;
-}
-
-.serviceGrid h3 {
-  font-size: .98rem !important;
-  line-height: 1.15 !important;
-}
-
-.serviceGrid p {
-  max-width: 240px !important;
-  font-size: .82rem !important;
-  line-height: 1.48 !important;
-  padding-right: 1.4rem !important;
-}
 
 /* CTA oscuro final: más armado, menos vacío */
 .darkBand {
@@ -2949,109 +2713,6 @@
 }
 
 
-/* === PREMIUM IMAGE INTEGRATION: SERVICES + FINAL CTA === */
-
-/* Servicios aéreos con imagen integrada, estilo empresa internacional */
-.services {
-  position: relative !important;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5, 6, 9, .98) 0%,
-      rgba(5, 6, 9, .94) 38%,
-      rgba(5, 6, 9, .78) 62%,
-      rgba(5, 6, 9, .55) 100%
-    ),
-    radial-gradient(circle at 18% 18%, rgba(23, 50, 71, .16), transparent 24rem),
-    url("/images/transporte-maritimo-desktop/1.png") !important;
-  background-size: cover !important;
-  background-position: center 48% !important;
-  background-repeat: no-repeat !important;
-  overflow: hidden !important;
-}
-
-.services::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  pointer-events: none !important;
-  background:
-    linear-gradient(180deg, rgba(0,0,0,.16), rgba(0,0,0,.58)),
-    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(255,255,255,.022) 1px, transparent 1px) !important;
-  background-size: auto, 80px 80px, 80px 80px !important;
-  opacity: .72 !important;
-}
-
-.services::after {
-  content: "" !important;
-  position: absolute !important;
-  inset: auto 0 0 0 !important;
-  height: 120px !important;
-  pointer-events: none !important;
-  background: linear-gradient(180deg, transparent, #050609) !important;
-  opacity: .72 !important;
-}
-
-.services > * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-.services .sectionHead {
-  max-width: 780px !important;
-  margin-bottom: 2.2rem !important;
-}
-
-.services .sectionHead h2 {
-  color: #fff !important;
-  text-shadow: 0 18px 48px rgba(0,0,0,.42) !important;
-}
-
-/* Cards más premium sobre imagen */
-.serviceGrid {
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 16px !important;
-  max-width: 980px !important;
-}
-
-.serviceGrid article {
-  min-height: 165px !important;
-  padding: 1.35rem 1.4rem !important;
-  border: 1px solid rgba(255,255,255,.13) !important;
-  background:
-    linear-gradient(145deg, rgba(10, 12, 18, .78), rgba(10, 12, 18, .48)) !important;
-  backdrop-filter: blur(10px) saturate(1.08) !important;
-  -webkit-backdrop-filter: blur(10px) saturate(1.08) !important;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.08),
-    0 24px 70px rgba(0,0,0,.26) !important;
-}
-
-.serviceGrid article:hover {
-  transform: translateY(-4px) !important;
-  border-color: rgba(23,50,71,.55) !important;
-  background:
-    linear-gradient(145deg, rgba(23,50,71,.16), rgba(10, 12, 18, .58)) !important;
-}
-
-.serviceGrid i {
-  width: 40px !important;
-  height: 40px !important;
-  background: rgba(23, 50, 71, .10) !important;
-  border-color: rgba(23, 50, 71, .42) !important;
-}
-
-.serviceGrid h3 {
-  color: #fff !important;
-  font-size: .98rem !important;
-}
-
-.serviceGrid p {
-  color: rgba(255,255,255,.74) !important;
-  font-size: .8rem !important;
-  line-height: 1.45 !important;
-}
 
 /* CTA final con imagen lateral integrada, no segundo hero */
 .darkBand {
@@ -3065,7 +2726,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/transporte-maritimo-desktop/1.png") !important;
+    url("/images/cargaaerea.png") !important;
   background-size: cover !important;
   background-position: center 55% !important;
   background-repeat: no-repeat !important;
@@ -3104,7 +2765,7 @@
   .services {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.90)),
-      url("/images/transporte-maritimo-desktop/1.png") !important;
+      url("/images/cargaaerea.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3116,7 +2777,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/transporte-maritimo-desktop/1.png") !important;
+      url("/images/cargaaerea.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -5576,35 +5237,35 @@
 }
 
 /* =====================================================
-   MARITIMO VIEWPORT LOCK FINAL
+   AEREO VIEWPORT LOCK FINAL
    El hero NO puede comerse el bloque azul.
    Hero + trustBar = 100svh
    ===================================================== */
 
 /* Base */
 .page {
-  --maritimo-trust-h: 88px;
+  --aereo-trust-h: 88px;
 }
 
 .page .hero {
-  height: calc(100svh - var(--maritimo-trust-h)) !important;
-  min-height: calc(100svh - var(--maritimo-trust-h)) !important;
-  max-height: calc(100svh - var(--maritimo-trust-h)) !important;
+  height: calc(100svh - var(--aereo-trust-h)) !important;
+  min-height: calc(100svh - var(--aereo-trust-h)) !important;
+  max-height: calc(100svh - var(--aereo-trust-h)) !important;
   padding: 0 !important;
   overflow: hidden !important;
 }
 
 .page .trustBar {
-  height: var(--maritimo-trust-h) !important;
-  min-height: var(--maritimo-trust-h) !important;
-  max-height: var(--maritimo-trust-h) !important;
+  height: var(--aereo-trust-h) !important;
+  min-height: var(--aereo-trust-h) !important;
+  max-height: var(--aereo-trust-h) !important;
   overflow: hidden !important;
 }
 
 /* Desktop normal */
 @media (min-width: 901px) {
   .page {
-    --maritimo-trust-h: 88px;
+    --aereo-trust-h: 88px;
   }
 
   .page .content {
@@ -5653,7 +5314,7 @@
 /* Desktop bajo tipo Nest Hub */
 @media (min-width: 901px) and (max-height: 700px) {
   .page {
-    --maritimo-trust-h: 78px;
+    --aereo-trust-h: 78px;
   }
 
   .page .content {
@@ -5685,7 +5346,7 @@
 /* iPad / tablets */
 @media (min-width: 701px) and (max-width: 900px) {
   .page {
-    --maritimo-trust-h: 108px;
+    --aereo-trust-h: 108px;
   }
 
   .page .content {
@@ -5735,11 +5396,11 @@
 /* Mobile */
 @media (max-width: 700px) {
   .page {
-    --maritimo-trust-h: 108px;
+    --aereo-trust-h: 108px;
   }
 
   .page .hero {
-    min-height: calc(100svh - var(--maritimo-trust-h)) !important;
+    min-height: calc(100svh - var(--aereo-trust-h)) !important;
   }
 
   .page .content {
@@ -5791,7 +5452,7 @@
 }
 
 /* =====================================================
-   MARITIMO HERO REAL JSX FINAL
+   AEREO HERO REAL JSX FINAL
    Usa las clases reales:
    hero / heroImage / heroOverlay / heroInner / heroContent /
    eyebrow / title / subtitle / actions / trustBar
@@ -6195,7 +5856,7 @@
 
 
 /* =====================================================
-   MARITIMO HERO TEXT SPACING ONLY
+   AEREO HERO TEXT SPACING ONLY
    Solo mejora aire entre eyebrow, título, texto y botones.
    No toca altura, fondo ni trustBar.
    ===================================================== */
@@ -6277,7 +5938,7 @@
 
 
 /* =====================================================
-   MARITIMO HERO EXTRA BLOCK SPACING
+   AEREO HERO EXTRA BLOCK SPACING
    Separa mejor título, texto y botón. Solo aire interno.
    ===================================================== */
 
@@ -6318,7 +5979,7 @@
 
 
 /* =====================================================
-   MARITIMO MOBILE FINAL TWEAK
+   AEREO MOBILE FINAL TWEAK
    Más aire entre menú y primer texto.
    Oculta imágenes decorativas internas en mobile.
    No toca el fondo del hero.
@@ -6360,7 +6021,7 @@
 
 
 /* =====================================================
-   MARITIMO HERO IMAGE COLOR / LIGHT FINAL
+   AEREO HERO IMAGE COLOR / LIGHT FINAL
    Solo mejora luz, contraste y overlay del fondo.
    No toca estructura, textos, botones ni trustBar.
    ===================================================== */
@@ -6427,7 +6088,7 @@
 
 
 /* =====================================================
-   MARITIMO HERO LIGHT RIGHT + MOBILE IMAGE HIDE
+   AEREO HERO LIGHT RIGHT + MOBILE IMAGE HIDE
    Más iluminación a la derecha y ocultar imágenes decorativas en mobile
    ===================================================== */
 
@@ -6554,7 +6215,7 @@
 
 
 /* =====================================================
-   MARITIMO MOBILE HIDE PILLARS SECTION
+   AEREO MOBILE HIDE PILLARS SECTION
    Oculta las cards/pilares en dispositivos menores a tablet.
    No toca hero, trustBar ni certificaciones.
    ===================================================== */
@@ -6571,7 +6232,7 @@
 
 
 /* =====================================================
-   MARITIMO DESKTOP BUTTON SAFE FIX
+   AEREO DESKTOP BUTTON SAFE FIX
    Solo desktop grande: evita que los botones toquen el trustBar.
    ===================================================== */
 
@@ -6654,7 +6315,7 @@
 
 
 /* =====================================================
-   MARITIMO HERO IMAGE NO ZOOM FINAL
+   AEREO HERO IMAGE NO ZOOM FINAL
    Quita el recorte/zoom del hero principal.
    ===================================================== */
 
@@ -6688,7 +6349,7 @@
 
 
 /* =====================================================
-   MARITIMO HERO MOBILE IMAGE SOURCE FIX
+   AEREO HERO MOBILE IMAGE SOURCE FIX
    Desktop usa horizontal. Mobile usa vertical.
    ===================================================== */
 
@@ -6718,7 +6379,7 @@
 
 
 /* =====================================================
-   MARITIMO DESKTOP TITLE REFINEMENT
+   AEREO DESKTOP TITLE REFINEMENT
    Solo pantallas grandes: título más elegante y menos monstruoso.
    No toca mobile ni tablet.
    ===================================================== */
@@ -6785,7 +6446,7 @@
 
 
 /* =====================================================
-   MARITIMO HERO BRIGHT CORPORATE FINAL
+   AEREO HERO BRIGHT CORPORATE FINAL
    Más luz al hero sin tocar estructura, texto ni botones.
    ===================================================== */
 
@@ -6867,7 +6528,7 @@
 
 
 /* =====================================================
-   MARITIMO HERO REAL IMAGE SWITCH HARD LOCK
+   AEREO HERO REAL IMAGE SWITCH HARD LOCK
    Fuerza desktop/mobile con las clases reales del JSX.
    ===================================================== */
 
@@ -6919,7 +6580,7 @@
 
 
 /* =====================================================
-   MARITIMO HERO REAL IMAGE SWITCH HARD LOCK
+   AEREO HERO REAL IMAGE SWITCH HARD LOCK
    Fuerza desktop/mobile con las clases reales del JSX.
    ===================================================== */
 
@@ -6971,7 +6632,7 @@
 
 
 /* =====================================================
-   MARITIMO MOBILE CERTIFICATIONS GAP FIX
+   AEREO MOBILE CERTIFICATIONS GAP FIX
    Reduce espacio vacío entre certificaciones y overview.
    ===================================================== */
 
@@ -7520,10 +7181,10 @@
 .page .trustBar span,
 .page .trustBar small,
 .page .trustBar p,
-.page [data-maritimo-trust="true"] strong,
-.page [data-maritimo-trust="true"] span,
-.page [data-maritimo-trust="true"] small,
-.page [data-maritimo-trust="true"] p {
+.page [data-aereo-trust="true"] strong,
+.page [data-aereo-trust="true"] span,
+.page [data-aereo-trust="true"] small,
+.page [data-aereo-trust="true"] p {
   color: var(--across-ivory-soft) !important;
   -webkit-text-fill-color: var(--across-ivory-soft) !important;
 }
@@ -9111,7 +8772,7 @@
 
 /* ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL
    DarkBand restaurado correctamente:
-   - usa SU imagen original del page.tsx: /images/transporte-maritimo-desktop/1.png
+   - usa SU imagen original del page.tsx: /images/cargaaerea.png
    - no usa imagen del CTA
    - elimina capas oscuras viejas
    - mantiene el estilo azul/premium
@@ -9135,7 +8796,7 @@
       rgba(244,239,229,.025) 0%,
       rgba(3,10,18,.16) 100%
     ),
-    url("/images/transporte-maritimo-desktop/1.png") center center / cover no-repeat !important;
+    url("/images/cargaaerea.png") center center / cover no-repeat !important;
 }
 
 .page .darkBand::before {
@@ -9276,7 +8937,7 @@
 /* END ZZZ SERVICIOS FINALCTA MOBILE OWN BG FINAL */
 
 
-/* ZZZ MARITIMO MOBILE HERO TITLE DOWN FINAL
+/* ZZZ AEREO MOBILE HERO TITLE DOWN FINAL
    Baja un poco el título del hero en mobile.
    No toca desktop/tablet.
 */
@@ -9293,7 +8954,7 @@
     margin-top: .9rem !important;
   }
 }
-/* END ZZZ MARITIMO MOBILE HERO TITLE DOWN FINAL */
+/* END ZZZ AEREO MOBILE HERO TITLE DOWN FINAL */
 
 /* ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED
    Tablet / iPad chico:
@@ -9465,7 +9126,7 @@
 /* END ZZZ SERVICIOS PROCESS TABLET 3X2 FINAL APPROVED */
 
 /* =====================================================
-   MARITIMO MOBILE HEIGHT LIKE MARITIMO
+   AEREO MOBILE HEIGHT LIKE MARITIMO
    Solo iguala el alto del hero mobile.
    No toca barra, titulo, texto, boton ni imagen.
    ===================================================== */
@@ -9484,7 +9145,7 @@
 }
 
 /* =====================================================
-   MARITIMO MOBILE HEIGHT LIKE MARITIMO
+   AEREO MOBILE HEIGHT LIKE MARITIMO
    Solo iguala el alto del hero mobile.
    No toca barra, titulo, texto, boton ni imagen.
    ===================================================== */
@@ -9501,65 +9162,6 @@
     max-height: 100svh !important;
   }
 }
-
-
-/* === MARITIMO FINAL CTA IMAGE FIX START === */
-/* Reemplaza SOLO la imagen del bloque:
-   "Coordinemos su próximo embarque marítimo internacional"
-   Desktop y mobile usan las imágenes marítimas nuevas.
-*/
-
-.finalCta {
-  position: relative !important;
-  overflow: hidden !important;
-  background-image:
-    linear-gradient(
-      90deg,
-      rgba(3, 7, 13, .92) 0%,
-      rgba(3, 7, 13, .74) 42%,
-      rgba(3, 7, 13, .38) 72%,
-      rgba(3, 7, 13, .22) 100%
-    ),
-    url("/images/transporte-maritimo-desktop/1.png") !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-}
-
-.finalCta > div:first-child {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-/* Si esa sección además tiene una imagen interna tipo <Image>, también la reemplaza */
-.finalImage img {
-  content: url("/images/transporte-maritimo-desktop/1.png") !important;
-  object-fit: cover !important;
-  object-position: center center !important;
-}
-
-@media (max-width: 900px) {
-  .finalCta {
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(3, 7, 13, .60) 0%,
-        rgba(3, 7, 13, .82) 58%,
-        rgba(3, 7, 13, .94) 100%
-      ),
-      url("/images/transporte-maritimo-mobile/1.png") !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-  }
-
-  .finalImage img {
-    content: url("/images/transporte-maritimo-mobile/1.png") !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-  }
-}
-/* === MARITIMO FINAL CTA IMAGE FIX END === */
 
 
 /* === ACROSS LOCAL DARKBAND LAYOUT START === */
@@ -10095,46 +9697,6 @@
 
 /* === /ACROSS DESKTOP HERO TYPO FIX === */
 
-
-/* === FIX MARITIME HERO WIDTH FINAL === */
-@media (min-width: 901px) {
-  .heroInner {
-    width: min(1500px, calc(100% - 120px)) !important;
-  }
-
-  .heroContent {
-    max-width: 980px !important;
-    width: min(980px, 64vw) !important;
-  }
-
-  .title {
-    max-width: 980px !important;
-    font-size: clamp(4.6rem, 5.8vw, 7.4rem) !important;
-    line-height: .92 !important;
-    letter-spacing: -0.075em !important;
-    text-wrap: balance !important;
-  }
-
-  .subtitle {
-    max-width: 690px !important;
-  }
-
-  .actions {
-    max-width: 760px !important;
-  }
-}
-
-@media (min-width: 1200px) {
-  .title {
-    max-width: 1050px !important;
-  }
-
-  .heroContent {
-    max-width: 1050px !important;
-    width: min(1050px, 66vw) !important;
-  }
-}
-
 /* === SERVICE PROCESS ICONS LIKE SECTORES FINAL START === */
 
 /* Iconos para procesos de servicios, estilo Sectores */
@@ -10340,166 +9902,114 @@
 /* === INLINE PROCESS ICONS REAL FINAL END === */
 
 
-/* === CONTACT HERO SECTION === */
 
-.contactHero {
-  position: relative;
-  width: 100vw;
-  max-width: none;
-  margin: 0 50%;
-  transform: translateX(-50%);
-  min-height: clamp(360px, 34vw, 480px);
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, .72fr);
-  align-items: center;
-  gap: 2rem;
-  padding: clamp(3.5rem, 6vw, 5.5rem) max(24px, calc((100vw - 1180px) / 2));
-  background: #07101a;
-  color: #fff;
-  overflow: hidden;
-}
 
-.contactHeroContent {
-  position: relative;
-  z-index: 2;
-  max-width: 680px;
-}
 
-.contactHero .eyebrow {
-  color: #d6b36b;
-}
+/* === AEREO STEP 1 STICKY FINAL === */
 
-.contactHero h2 {
-  margin: 0;
-  max-width: 680px;
-  color: #f4efe5;
-  font-size: clamp(2.7rem, 4.8vw, 5rem);
-  line-height: .92;
-  letter-spacing: -.065em;
-  font-weight: 950;
-}
-
-.contactHero p {
-  max-width: 620px;
-  margin: 1.2rem 0 0;
-  color: rgba(255,255,255,.82);
-  font-size: clamp(.98rem, 1.15vw, 1.08rem);
-  line-height: 1.6;
-}
-
-.contactHeroActions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .85rem;
-  margin-top: 1.6rem;
-}
-
-.contactHeroActions a {
-  min-height: 46px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  padding: 0 1.25rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: .72rem;
-  letter-spacing: .055em;
-  font-weight: 950;
-}
-
-.contactHeroActions a:first-child {
-  background: #173247;
-  color: #fff;
-  box-shadow: 0 18px 42px rgba(23,50,71,.32);
-}
-
-.contactHeroActions a:first-child::after {
-  content: "→";
-  margin-left: .65rem;
-}
-
-.contactHeroActions a:last-child {
-  color: #fff;
-  border: 1px solid rgba(255,255,255,.34);
-  background: rgba(255,255,255,.06);
-}
-
-.contactHeroImage {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: min(52vw, 760px);
-  height: 100%;
-  opacity: .72;
-}
-
-.contactHeroImage::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, #07101a 0%, rgba(7,16,26,.84) 18%, rgba(7,16,26,.18) 100%),
-    linear-gradient(180deg, rgba(7,16,26,.18), rgba(7,16,26,.68));
-}
-
-.contactHeroImage img {
-  object-fit: cover;
-  object-position: center;
+.mobileStickyCta {
+  display: none;
 }
 
 @media (max-width: 900px) {
-  .contactHero {
-    min-height: 500px;
-    grid-template-columns: 1fr;
-    margin-top: 0;
-    padding: 3.4rem 18px 4rem;
-    background:
-      linear-gradient(180deg, rgba(5,8,13,.92), rgba(5,8,13,.88)),
-      url("/images/contactoimagen.png");
-    background-size: cover;
-    background-position: center;
+  .page {
+    padding-bottom: calc(86px + env(safe-area-inset-bottom)) !important;
   }
 
-  .contactHeroImage {
-    display: none;
+  .mobileStickyCta {
+    position: fixed !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    z-index: 2147483647 !important;
+
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: .55rem !important;
+
+    padding: .58rem .68rem calc(.58rem + env(safe-area-inset-bottom)) !important;
+    background: rgba(5, 8, 13, .94) !important;
+    border-top: 1px solid rgba(255,255,255,.12) !important;
+    box-shadow: 0 -16px 42px rgba(5,8,13,.32) !important;
+
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
   }
 
-  .contactHero h2 {
-    max-width: 380px;
-    font-size: clamp(2.45rem, 10vw, 3.45rem);
+  .mobileStickyCta a {
+    min-width: 0 !important;
+    min-height: 46px !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 999px !important;
+    padding: 0 .72rem !important;
+
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    font-size: .63rem !important;
+    font-weight: 950 !important;
+    letter-spacing: .045em !important;
+    line-height: 1 !important;
+
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
   }
 
-  .contactHero p {
-    max-width: 360px;
-    font-size: .9rem;
+  .mobileStickyCta a:first-child {
+    background: #173247 !important;
+    color: #fff !important;
+    border: 1px solid rgba(214,179,107,.42) !important;
+    box-shadow: 0 14px 30px rgba(23,50,71,.28) !important;
   }
 
-  .contactHeroActions {
-    display: grid;
-    grid-template-columns: 1fr;
-    max-width: 360px;
+  .mobileStickyCta a:first-child::after {
+    content: "→" !important;
+    margin-left: .45rem !important;
   }
 
-  .contactHeroActions a {
-    width: 100%;
+  .mobileStickyCta a:last-child {
+    color: #fff !important;
+    background: rgba(255,255,255,.04) !important;
+    border: 1px solid rgba(255,255,255,.34) !important;
   }
 }
 
-/* END CONTACT HERO SECTION */
+/* END AEREO STEP 1 STICKY FINAL */
 
 
 
 
-/* === MARITIMO SERVICES PROCESS FINAL FROM AEREO === */
-/*
-  Copiado desde:
-  src/app/servicios/transporte-aereo/TransporteAereo.module.css
 
-  No usa aereoStyles.
-  No inventa estilos.
-  Solo reemplaza el pseudo-content textual de aéreo por marítimo.
-*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* === AEREO PROCESS ACCORDION ISOLATED FINAL === */
 
 .processAccordionSection {
@@ -10757,6 +10267,543 @@
 
 /* END AEREO PROCESS ACCORDION ISOLATED FINAL */
 
+
+/* === AEREO PROCESS ACCORDION MOBILE PREMIUM === */
+
+@media (max-width: 900px) {
+  .processAccordionSection {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 3rem 18px 3.4rem !important;
+    background:
+      radial-gradient(circle at 92% 8%, rgba(23, 50, 71, .16), transparent 14rem),
+      linear-gradient(180deg, #f6f2ea 0%, #eee8dd 100%) !important;
+  }
+
+  .processAccordionHead {
+    max-width: 430px !important;
+    margin: 0 0 1.45rem !important;
+    text-align: left !important;
+  }
+
+  .processAccordionHead h2 {
+    max-width: 390px !important;
+    margin: 0 !important;
+    color: #07111d !important;
+    font-size: clamp(2.15rem, 9.2vw, 3rem) !important;
+    line-height: .92 !important;
+    letter-spacing: -.065em !important;
+    font-weight: 950 !important;
+  }
+
+  .processAccordionList {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: .75rem !important;
+    border: 0 !important;
+  }
+
+  .processAccordionCard {
+    border: 1px solid rgba(255,255,255,.10) !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    background:
+      linear-gradient(145deg, rgba(7, 17, 29, .98), rgba(10, 34, 51, .96)) !important;
+    box-shadow:
+      0 18px 42px rgba(7,17,29,.18),
+      inset 0 1px 0 rgba(255,255,255,.06) !important;
+  }
+
+  .processAccordionSummary {
+    list-style: none !important;
+    cursor: pointer !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 2rem !important;
+    gap: .85rem !important;
+    align-items: center !important;
+    padding: 1.05rem 1.05rem !important;
+  }
+
+  .processAccordionSummary::-webkit-details-marker {
+    display: none !important;
+  }
+
+  .processAccordionNumber {
+    display: none !important;
+  }
+
+  .processAccordionTitle strong {
+    display: block !important;
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+    font-size: 1rem !important;
+    line-height: 1.08 !important;
+    letter-spacing: -.035em !important;
+    font-weight: 950 !important;
+  }
+
+  .processAccordionTitle small {
+    display: block !important;
+    max-width: 330px !important;
+    margin-top: .38rem !important;
+    color: rgba(255,255,255,.68) !important;
+    -webkit-text-fill-color: rgba(255,255,255,.68) !important;
+    font-size: .78rem !important;
+    line-height: 1.36 !important;
+    font-weight: 550 !important;
+  }
+
+  .processAccordionIcon {
+    position: relative !important;
+    width: 2rem !important;
+    height: 2rem !important;
+    border-radius: 999px !important;
+    background: rgba(255,255,255,.08) !important;
+    border: 1px solid rgba(255,255,255,.16) !important;
+  }
+
+  .processAccordionIcon::before,
+  .processAccordionIcon::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    width: .68rem !important;
+    height: 2px !important;
+    background: #d6b36b !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .processAccordionIcon::after {
+    transform: translate(-50%, -50%) rotate(90deg) !important;
+  }
+
+  .processAccordionCard[open] .processAccordionIcon::after {
+    display: none !important;
+  }
+
+  .processAccordionCard[open] {
+    background:
+      radial-gradient(circle at 88% 12%, rgba(214,179,107,.16), transparent 12rem),
+      linear-gradient(145deg, #07111d 0%, #102f45 100%) !important;
+  }
+
+  .processAccordionBody {
+    padding: 0 1.05rem 1.15rem !important;
+  }
+
+  .processAccordionBody p {
+    max-width: 360px !important;
+    margin: 0 !important;
+    color: rgba(255,255,255,.76) !important;
+    -webkit-text-fill-color: rgba(255,255,255,.76) !important;
+    font-size: .82rem !important;
+    line-height: 1.48 !important;
+  }
+
+  .processAccordionBody a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin-top: .95rem !important;
+    min-height: 38px !important;
+    padding: 0 1rem !important;
+    border-radius: 999px !important;
+
+    background: rgba(214,179,107,.14) !important;
+    border: 1px solid rgba(214,179,107,.42) !important;
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+
+    font-size: .68rem !important;
+    line-height: 1 !important;
+    letter-spacing: .055em !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .processAccordionSection {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  .processAccordionSummary {
+    padding: .95rem !important;
+  }
+
+  .processAccordionTitle strong {
+    font-size: .95rem !important;
+  }
+
+  .processAccordionTitle small,
+  .processAccordionBody p {
+    font-size: .75rem !important;
+  }
+}
+
+/* END AEREO PROCESS ACCORDION MOBILE PREMIUM */
+
+/* === AEREO PROCESS ACCORDION TEXT VISIBILITY FIX === */
+
+@media (max-width: 900px) {
+  .processAccordionCard,
+  .processAccordionCard * {
+    opacity: 1 !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+  }
+
+  .processAccordionTitle strong,
+  .processAccordionSummary strong {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    text-shadow: none !important;
+  }
+
+  .processAccordionTitle small,
+  .processAccordionSummary small {
+    color: rgba(255, 255, 255, .72) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, .72) !important;
+    text-shadow: none !important;
+  }
+
+  .processAccordionBody p {
+    color: rgba(255, 255, 255, .78) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, .78) !important;
+  }
+
+  .processAccordionBody a {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+}
+
+/* END AEREO PROCESS ACCORDION TEXT VISIBILITY FIX */
+
+/* === FORCE PROCESS ACCORDION TEXT WHITE REAL === */
+
+@media (max-width: 900px) {
+  :global([class*="processAccordionCard"]) {
+    color: #fff !important;
+  }
+
+  :global([class*="processAccordionCard"]) :global([class*="processAccordionTitle"]),
+  :global([class*="processAccordionCard"]) :global([class*="processAccordionTitle"]) *,
+  :global([class*="processAccordionCard"]) strong,
+  :global([class*="processAccordionCard"]) small,
+  :global([class*="processAccordionCard"]) p,
+  :global([class*="processAccordionCard"]) a {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+    opacity: 1 !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+  }
+
+  :global([class*="processAccordionCard"]) small,
+  :global([class*="processAccordionCard"]) p {
+    color: rgba(255,255,255,.74) !important;
+    -webkit-text-fill-color: rgba(255,255,255,.74) !important;
+  }
+
+  :global([class*="processAccordionCard"]) summary {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+  }
+}
+
+/* END FORCE PROCESS ACCORDION TEXT WHITE REAL */
+
+/* === AEREO PROCESS FINAL POLISH === */
+
+@media (max-width: 900px) {
+  .processAccordionHead {
+    margin-bottom: 1.85rem !important;
+  }
+
+  .processAccordionCard {
+    background:
+      linear-gradient(145deg, rgba(7, 17, 29, .96), rgba(13, 41, 59, .94)) !important;
+    box-shadow:
+      0 14px 34px rgba(7, 17, 29, .14),
+      inset 0 1px 0 rgba(255,255,255,.05) !important;
+  }
+
+  .processAccordionSummary {
+    min-height: 76px !important;
+  }
+
+  .processAccordionIcon {
+    width: 1.75rem !important;
+    height: 1.75rem !important;
+  }
+
+  .processAccordionTitle strong {
+    font-size: .98rem !important;
+  }
+
+  .processAccordionTitle small {
+    margin-top: .3rem !important;
+    font-size: .77rem !important;
+  }
+}
+
+/* END AEREO PROCESS FINAL POLISH */
+
+/* === AEREO FAQ ACCORDION PROFESSIONAL FINAL === */
+
+.faqSection {
+  width: min(1180px, calc(100% - 40px));
+  margin: 5.2rem auto;
+}
+
+.faqHead {
+  max-width: 760px;
+  margin: 0 auto 2.2rem;
+  text-align: center;
+}
+
+.faqHead h2 {
+  margin: 0;
+  color: #080b10;
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  line-height: 1;
+  letter-spacing: -.055em;
+  font-weight: 950;
+}
+
+.faqHead p {
+  max-width: 680px;
+  margin: 1rem auto 0;
+  color: rgba(8, 11, 16, .68);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.faqList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .9rem;
+}
+
+.faqItem {
+  background: #fff;
+  border: 1px solid rgba(8, 11, 16, .10);
+  border-radius: 20px;
+  box-shadow: 0 18px 55px rgba(0, 0, 0, .055);
+  overflow: hidden;
+}
+
+.faqItem summary {
+  list-style: none;
+  cursor: pointer;
+  min-height: 74px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 2rem;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.1rem 1.2rem;
+}
+
+.faqItem summary::-webkit-details-marker {
+  display: none;
+}
+
+.faqItem summary span {
+  color: #07111d;
+  font-size: 1rem;
+  line-height: 1.15;
+  letter-spacing: -.03em;
+  font-weight: 950;
+}
+
+.faqItem summary i {
+  position: relative;
+  width: 1.85rem;
+  height: 1.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(18, 63, 89, .20);
+  background: rgba(18, 63, 89, .035);
+}
+
+.faqItem summary i::before,
+.faqItem summary i::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: .7rem;
+  height: 2px;
+  background: #123f59;
+  transform: translate(-50%, -50%);
+}
+
+.faqItem summary i::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.faqItem[open] summary i::after {
+  display: none;
+}
+
+.faqItem > div {
+  padding: 0 1.2rem 1.2rem;
+}
+
+.faqItem p {
+  margin: 0;
+  max-width: 560px;
+  color: rgba(7, 17, 29, .68);
+  font-size: .92rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .faqSection {
+    width: 100%;
+    margin: 0;
+    padding: 3rem 18px 3.4rem;
+    background:
+      radial-gradient(circle at 92% 6%, rgba(23, 50, 71, .08), transparent 16rem),
+      linear-gradient(180deg, #f6f2ea 0%, #eee8dd 100%);
+  }
+
+  .faqHead {
+    max-width: 430px;
+    margin: 0 0 1.7rem;
+    text-align: left;
+  }
+
+  .faqHead h2 {
+    max-width: 410px;
+    font-size: clamp(2.1rem, 9vw, 2.85rem);
+    line-height: .94;
+    letter-spacing: -.06em;
+  }
+
+  .faqHead p {
+    max-width: 390px;
+    margin: 1rem 0 0;
+    font-size: .9rem;
+    line-height: 1.55;
+  }
+
+  .faqList {
+    grid-template-columns: 1fr;
+    gap: .75rem;
+  }
+
+  .faqItem {
+    border-radius: 18px;
+    background: rgba(255, 255, 255, .76);
+    box-shadow:
+      0 14px 34px rgba(7, 17, 29, .10),
+      inset 0 1px 0 rgba(255, 255, 255, .6);
+  }
+
+  .faqItem summary {
+    min-height: 70px;
+    padding: 1rem;
+    grid-template-columns: minmax(0, 1fr) 1.85rem;
+  }
+
+  .faqItem summary span {
+    font-size: .96rem;
+    line-height: 1.12;
+  }
+
+  .faqItem summary i {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .faqItem > div {
+    padding: 0 1rem 1.05rem;
+  }
+
+  .faqItem p {
+    font-size: .82rem;
+    line-height: 1.48;
+  }
+
+  .faqItem[open] {
+    background: #fff;
+  }
+}
+
+@media (max-width: 390px) {
+  .faqSection {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .faqItem summary span {
+    font-size: .9rem;
+  }
+
+  .faqItem p {
+    font-size: .78rem;
+  }
+}
+
+/* END AEREO FAQ ACCORDION PROFESSIONAL FINAL */
+
+/* === AEREO FAQ MOBILE FINAL POLISH === */
+
+@media (max-width: 900px) {
+  .faqSection {
+    padding-top: 5.4rem !important;
+    padding-bottom: 6.4rem !important;
+  }
+
+  .faqHead {
+    margin-bottom: 1.45rem !important;
+  }
+
+  .faqHead h2 {
+    max-width: 390px !important;
+  }
+
+  .faqHead p {
+    max-width: 360px !important;
+    color: rgba(7, 17, 29, .66) !important;
+  }
+
+  .faqList {
+    gap: .68rem !important;
+  }
+
+  .faqItem {
+    border-radius: 17px !important;
+  }
+
+  .faqItem summary {
+    min-height: 64px !important;
+    padding: .95rem 1rem !important;
+  }
+
+  .faqItem summary span {
+    font-size: .92rem !important;
+    line-height: 1.12 !important;
+  }
+
+  .faqItem summary i {
+    width: 1.65rem !important;
+    height: 1.65rem !important;
+  }
+}
+
+/* END AEREO FAQ MOBILE FINAL POLISH */
+
+
+
+
+
 /* === AEREO MOBILE TITLES LEFT ALIGN FINAL === */
 
 @media (max-width: 900px) {
@@ -10955,6 +11002,206 @@
 
 /* END AEREO PROCESS LIGHT PREMIUM FINAL */
 
+/* === AEREO MOBILE TITLES FULL WIDTH CLEAN === */
+
+@media (max-width: 900px) {
+  /*
+    Títulos mobile: usar casi todo el ancho disponible.
+    Evita que queden columnas angostas con mucho aire a la derecha.
+    No toca hero.
+  */
+
+  .sectionHead,
+  .processAccordionHead,
+  .faqHead {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+  }
+
+  .sectionHead h2,
+  .overviewCopy h2,
+  .processAccordionHead h2,
+  .faqHead h2 {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    text-align: left !important;
+    text-wrap: balance !important;
+
+    font-size: clamp(2rem, 8.1vw, 2.65rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.058em !important;
+  }
+
+  .sectionHead p,
+  .overviewCopy p,
+  .faqHead p {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+  }
+
+  /*
+    Cards/acordeones: que el texto use más ancho,
+    sin dejar una columna vacía grande antes del botón +
+  */
+  .processAccordionSummary,
+  .faqItem summary {
+    grid-template-columns: minmax(0, 1fr) 1.65rem !important;
+  }
+
+  .processAccordionNumber {
+    display: none !important;
+  }
+
+  .processAccordionTitle small,
+  .faqItem p {
+    max-width: none !important;
+  }
+
+  /*
+    Servicios relacionados / componentes externos.
+  */
+  .page :global([class*="Related"]) h2,
+  .page :global([class*="related"]) h2,
+  .page :global([class*="homeOffices"]) h2,
+  .page :global([class*="global"]) h2,
+  .page :global([class*="integrated"]) h2 {
+    width: 100% !important;
+    max-width: none !important;
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    font-size: clamp(2rem, 8.1vw, 2.65rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.058em !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .sectionHead h2,
+  .overviewCopy h2,
+  .processAccordionHead h2,
+  .faqHead h2,
+  .page :global([class*="Related"]) h2,
+  .page :global([class*="related"]) h2,
+  .page :global([class*="homeOffices"]) h2,
+  .page :global([class*="global"]) h2,
+  .page :global([class*="integrated"]) h2 {
+    font-size: clamp(1.9rem, 7.7vw, 2.38rem) !important;
+    line-height: .98 !important;
+  }
+}
+
+/* END AEREO MOBILE TITLES FULL WIDTH CLEAN */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === AEREO FINAL CLEAN SINGLE SOURCE 2 === */
+
+.aereoFinalStack {
+  background: #07101a;
+}
+
+@media (max-width: 1180px) {
+  /*
+    Única fuente de verdad para el final:
+    HomeCorporateFinal + Footer dentro del mismo wrapper oscuro.
+  */
+
+  .aereoFinalStack {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #07101a !important;
+    overflow: hidden !important;
+  }
+
+  .aereoFinalStack .homeFinalContact {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #07101a !important;
+    overflow: hidden !important;
+  }
+
+  /*
+    Oculta solo la sección repetida de servicios del HomeCorporateFinal,
+    no toca el footer.
+  */
+  .aereoFinalStack .homeFinalContact :global([class*="services"]) {
+    display: none !important;
+  }
+
+  .aereoFinalStack .homeFinalContact :global([class*="homeFinalCta"]) {
+    margin-bottom: 0 !important;
+  }
+
+  .aereoFinalStack :global(footer),
+  .aereoFinalStack :global([class*="Footer_footer"]),
+  .aereoFinalStack :global([class*="footer"]) {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    border-top: 0 !important;
+    background: #07101a !important;
+  }
+}
+
+@media (max-width: 900px) {
+  /*
+    Antes .page tenía padding-bottom crema para el sticky.
+    Eso era la franja clara debajo del footer.
+  */
+  .page {
+    padding-bottom: 0 !important;
+  }
+
+  /*
+    El espacio para que el sticky no tape contenido ahora lo pone
+    el wrapper oscuro del footer.
+  */
+  .aereoFinalStack {
+    padding-bottom: calc(86px + env(safe-area-inset-bottom)) !important;
+  }
+
+  .mobileStickyCta {
+    background: #07101a !important;
+    border-top: 1px solid rgba(255,255,255,.08) !important;
+  }
+}
+
+/* END AEREO FINAL CLEAN SINGLE SOURCE 2 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* === AEREO SERVICES WIDTH ICONS PAGE MATCH FINAL === */
 
 @media (min-width: 1181px) {
@@ -11044,7 +11291,7 @@
   }
 
   .page .services .sectionHead::after {
-    content: "Diseñamos operaciones FCL, LCL, proyectos y door to door con control documental, coordinación portuaria y seguimiento de origen a destino." !important;
+    content: "Diseñamos soluciones a medida para que tu carga llegue más rápido, segura y donde la necesites." !important;
 
     display: block !important;
     max-width: 420px !important;
@@ -11312,6 +11559,10 @@
 }
 
 /* END AEREO SERVICES TITLE LEFT STATIC CARDS FINAL */
+
+
+
+
 
 /* === AEREO PROCESS CLEAN RESET ONLY === */
 
@@ -11979,741 +12230,153 @@
 }
 
 /* END AEREO DESKTOP BRAND UNIFIED POLISH FINAL */
-/* END MARITIMO SERVICES PROCESS FINAL FROM AEREO */
 
 
-/* === MARITIMO MOBILE FIRST SECTION AFTER CERT LOCK === */
-@media (max-width: 900px) {
-  .page section[data-mobile-first-after-cert="true"] {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-
-    width: 100% !important;
-    max-width: none !important;
-
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-
-    padding-top: 1rem !important;
-    padding-left: 22px !important;
-    padding-right: 22px !important;
-    padding-bottom: 2.2rem !important;
-
-    background: #f4f1eb !important;
-    background-image: none !important;
-    color: #07111d !important;
-  }
-
-  .page section[data-mobile-first-after-cert="true"] .overviewCopy {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-  }
-
-  .page section[data-mobile-first-after-cert="true"] .eyebrow {
-    margin-top: 0 !important;
-  }
-
-  .page section[data-mobile-first-after-cert="true"] .pillars {
-    display: none !important;
-  }
-}
-
-@media (max-width: 390px) {
-  .page section[data-mobile-first-after-cert="true"] {
-    padding-top: .75rem !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-    padding-bottom: 2rem !important;
-  }
-}
-/* END MARITIMO MOBILE FIRST SECTION AFTER CERT LOCK */
 
 
-/* === MARITIMO FAQ FROM AEREO FINAL === */
+
+
+
+/* === AEREO CERTIFICATIONS MEDIUM DESKTOP ONLY FINAL === */
+
 /*
-  Copiado desde transporte-aereo.
-  Se usa para la sección FAQ marítima.
+  SOLO desktop mediano.
+  Este es el caso de tu computadora:
+  - no toca tablet/mobile
+  - no toca desktop grande
+  - no quita mapa/foto
+  - solo compacta y sube el contenido para que no quede perdido abajo
 */
-/* === AEREO FAQ ACCORDION PROFESSIONAL FINAL === */
 
-.faqSection {
-  width: min(1180px, calc(100% - 40px));
-  margin: 5.2rem auto;
-}
-
-.faqHead {
-  max-width: 760px;
-  margin: 0 auto 2.2rem;
-  text-align: center;
-}
-
-.faqHead h2 {
-  margin: 0;
-  color: #080b10;
-  font-size: clamp(2rem, 3.5vw, 3.5rem);
-  line-height: 1;
-  letter-spacing: -.055em;
-  font-weight: 950;
-}
-
-.faqHead p {
-  max-width: 680px;
-  margin: 1rem auto 0;
-  color: rgba(8, 11, 16, .68);
-  font-size: 1rem;
-  line-height: 1.65;
-}
-
-.faqList {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: .9rem;
-}
-
-.faqItem {
-  background: #fff;
-  border: 1px solid rgba(8, 11, 16, .10);
-  border-radius: 20px;
-  box-shadow: 0 18px 55px rgba(0, 0, 0, .055);
-  overflow: hidden;
-}
-
-.faqItem summary {
-  list-style: none;
-  cursor: pointer;
-  min-height: 74px;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 2rem;
-  gap: 1rem;
-  align-items: center;
-  padding: 1.1rem 1.2rem;
-}
-
-.faqItem summary::-webkit-details-marker {
-  display: none;
-}
-
-.faqItem summary span {
-  color: #07111d;
-  font-size: 1rem;
-  line-height: 1.15;
-  letter-spacing: -.03em;
-  font-weight: 950;
-}
-
-.faqItem summary i {
-  position: relative;
-  width: 1.85rem;
-  height: 1.85rem;
-  border-radius: 999px;
-  border: 1px solid rgba(18, 63, 89, .20);
-  background: rgba(18, 63, 89, .035);
-}
-
-.faqItem summary i::before,
-.faqItem summary i::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: .7rem;
-  height: 2px;
-  background: #123f59;
-  transform: translate(-50%, -50%);
-}
-
-.faqItem summary i::after {
-  transform: translate(-50%, -50%) rotate(90deg);
-}
-
-.faqItem[open] summary i::after {
-  display: none;
-}
-
-.faqItem > div {
-  padding: 0 1.2rem 1.2rem;
-}
-
-.faqItem p {
-  margin: 0;
-  max-width: 560px;
-  color: rgba(7, 17, 29, .68);
-  font-size: .92rem;
-  line-height: 1.55;
-}
-
-@media (max-width: 900px) {
-  .faqSection {
-    width: 100%;
-    margin: 0;
-    padding: 3rem 18px 3.4rem;
-    background:
-      radial-gradient(circle at 92% 6%, rgba(23, 50, 71, .08), transparent 16rem),
-      linear-gradient(180deg, #f6f2ea 0%, #eee8dd 100%);
-  }
-
-  .faqHead {
-    max-width: 430px;
-    margin: 0 0 1.7rem;
-    text-align: left;
-  }
-
-  .faqHead h2 {
-    max-width: 410px;
-    font-size: clamp(2.1rem, 9vw, 2.85rem);
-    line-height: .94;
-    letter-spacing: -.06em;
-  }
-
-  .faqHead p {
-    max-width: 390px;
-    margin: 1rem 0 0;
-    font-size: .9rem;
-    line-height: 1.55;
-  }
-
-  .faqList {
-    grid-template-columns: 1fr;
-    gap: .75rem;
-  }
-
-  .faqItem {
-    border-radius: 18px;
-    background: rgba(255, 255, 255, .76);
-    box-shadow:
-      0 14px 34px rgba(7, 17, 29, .10),
-      inset 0 1px 0 rgba(255, 255, 255, .6);
-  }
-
-  .faqItem summary {
-    min-height: 70px;
-    padding: 1rem;
-    grid-template-columns: minmax(0, 1fr) 1.85rem;
-  }
-
-  .faqItem summary span {
-    font-size: .96rem;
-    line-height: 1.12;
-  }
-
-  .faqItem summary i {
-    width: 1.75rem;
-    height: 1.75rem;
-  }
-
-  .faqItem > div {
-    padding: 0 1rem 1.05rem;
-  }
-
-  .faqItem p {
-    font-size: .82rem;
-    line-height: 1.48;
-  }
-
-  .faqItem[open] {
-    background: #fff;
-  }
-}
-
-@media (max-width: 390px) {
-  .faqSection {
-    padding-left: 14px;
-    padding-right: 14px;
-  }
-
-  .faqItem summary span {
-    font-size: .9rem;
-  }
-
-  .faqItem p {
-    font-size: .78rem;
-  }
-}
-
-/* END AEREO FAQ ACCORDION PROFESSIONAL FINAL */
-
-/* === AEREO FAQ MOBILE FINAL POLISH === */
-
-@media (max-width: 900px) {
-  .faqSection {
-    padding-top: 5.4rem !important;
-    padding-bottom: 6.4rem !important;
-  }
-
-  .faqHead {
-    margin-bottom: 1.45rem !important;
-  }
-
-  .faqHead h2 {
-    max-width: 390px !important;
-  }
-
-  .faqHead p {
-    max-width: 360px !important;
-    color: rgba(7, 17, 29, .66) !important;
-  }
-
-  .faqList {
-    gap: .68rem !important;
-  }
-
-  .faqItem {
-    border-radius: 17px !important;
-  }
-
-  .faqItem summary {
-    min-height: 64px !important;
-    padding: .95rem 1rem !important;
-  }
-
-  .faqItem summary span {
-    font-size: .92rem !important;
-    line-height: 1.12 !important;
-  }
-
-  .faqItem summary i {
-    width: 1.65rem !important;
-    height: 1.65rem !important;
-  }
-}
-
-/* END AEREO FAQ MOBILE FINAL POLISH */
-/* END MARITIMO FAQ FROM AEREO FINAL */
-
-
-/* === MARITIMO AEREO FINAL STACK EXACT === */
-/*
-  Copiado desde transporte-aereo.
-  Mantiene el mismo cierre:
-  RelatedServices + HomeCorporateFinal + Footer.
-*/
-/* === AEREO FINAL CLEAN SINGLE SOURCE 2 === */
-
-.aereoFinalStack {
-  background: #07101a;
-}
-
-@media (max-width: 1180px) {
-  /*
-    Única fuente de verdad para el final:
-    HomeCorporateFinal + Footer dentro del mismo wrapper oscuro.
-  */
-
-  .aereoFinalStack {
-    margin: 0 !important;
-    padding: 0 !important;
-    background: #07101a !important;
+@media (min-width: 1181px) and (max-width: 1700px) {
+  .homeFinalContact :global(section:first-of-type) {
+    padding-top: 1.6rem !important;
+    padding-bottom: 1rem !important;
+    min-height: 520px !important;
+    height: 520px !important;
+    max-height: 520px !important;
     overflow: hidden !important;
   }
 
-  .aereoFinalStack .homeFinalContact {
-    margin: 0 !important;
-    padding: 0 !important;
-    background: #07101a !important;
-    overflow: hidden !important;
+  .homeFinalContact :global(section:first-of-type > div:first-child) {
+    transform: translateY(-135px) !important;
   }
 
-  /*
-    Oculta solo la sección repetida de servicios del HomeCorporateFinal,
-    no toca el footer.
-  */
-  .aereoFinalStack .homeFinalContact :global([class*="services"]) {
-    display: none !important;
-  }
-
-  .aereoFinalStack .homeFinalContact :global([class*="homeFinalCta"]) {
-    margin-bottom: 0 !important;
-  }
-
-  .aereoFinalStack :global(footer),
-  .aereoFinalStack :global([class*="Footer_footer"]),
-  .aereoFinalStack :global([class*="footer"]) {
+  .homeFinalContact :global(section:first-of-type h2) {
     margin-top: 0 !important;
-    padding-top: 0 !important;
-    border-top: 0 !important;
-    background: #07101a !important;
+    margin-bottom: 1.15rem !important;
+    font-size: clamp(2.25rem, 3vw, 3.45rem) !important;
+    line-height: .94 !important;
+  }
+
+  .homeFinalContact :global(section:first-of-type article) {
+    min-height: auto !important;
+    padding-top: 1.05rem !important;
+    padding-bottom: 1.05rem !important;
   }
 }
 
-@media (max-width: 900px) {
-  /*
-    Antes .page tenía padding-bottom crema para el sticky.
-    Eso era la franja clara debajo del footer.
-  */
-  .page {
-    padding-bottom: 0 !important;
-  }
-
-  /*
-    El espacio para que el sticky no tape contenido ahora lo pone
-    el wrapper oscuro del footer.
-  */
-  .aereoFinalStack {
-    padding-bottom: calc(86px + env(safe-area-inset-bottom)) !important;
-  }
-
-  .mobileStickyCta {
-    background: #07101a !important;
-    border-top: 1px solid rgba(255,255,255,.08) !important;
+/* Desktop grande queda sin este ajuste */
+@media (min-width: 1701px) {
+  .homeFinalContact :global(section:first-of-type > div:first-child) {
+    transform: none !important;
   }
 }
 
-/* END AEREO FINAL CLEAN SINGLE SOURCE 2 */
-/* END MARITIMO AEREO FINAL STACK EXACT */
+/* END AEREO CERTIFICATIONS MEDIUM DESKTOP ONLY FINAL */
 
+/* === AEREO CERTIFICATIONS MAP ZOOM OUT FINAL === */
 
-/* === MARITIMO HIDE HOMEFINAL INTERNAL SERVICES FINAL === */
 /*
-  Oculta dentro de HomeCorporateFinal:
-  - Solución logística integrada
+  Aleja un poco la imagen/mapa del bloque de certificaciones.
+  No toca textos, cards ni logos.
+*/
+
+@media (min-width: 1181px) {
+  .homeFinalContact :global(section:first-of-type) {
+    background-size: 88% auto !important;
+    background-position: center 48% !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .homeFinalContact :global(section:first-of-type [class*="map"]),
+  .homeFinalContact :global(section:first-of-type [class*="Map"]),
+  .homeFinalContact :global(section:first-of-type [class*="world"]),
+  .homeFinalContact :global(section:first-of-type [class*="World"]) {
+    transform: scale(.88) !important;
+    transform-origin: center center !important;
+  }
+}
+
+/* END AEREO CERTIFICATIONS MAP ZOOM OUT FINAL */
+
+
+/* === AEREO HOMEFINAL CONTACT BG ONLY FINAL === */
+
+/*
+  Quita el azul lateral detrás de HomeCorporateFinal.
+  NO toca footer.
+  NO toca .aereoFinalStack.
+  NO toca mapa ni cards.
+*/
+
+.homeFinalContact {
+  background: #f4f1eb !important;
+}
+
+/* END AEREO HOMEFINAL CONTACT BG ONLY FINAL */
+
+/* === AEREO HIDE HOMECORPORATE EXTRA SECTIONS DESKTOP === */
+
+/*
+  Solo en desktop de transporte aéreo:
+  oculta las secciones del HomeCorporateFinal que parecen mini-home:
+  - Logística integrada
   - Servicios logísticos internacionales
 
-  Mantiene visibles:
-  - Experiencia certificada / red global
-  - Oficinas
+  No toca:
+  - mapa / confianza global
+  - oficinas
+  - CTA
+  - footer
 */
-.aereoFinalStack .homeFinalContact :global([class*="integrated"]),
-.aereoFinalStack .homeFinalContact :global([class*="Integrated"]),
-.aereoFinalStack .homeFinalContact :global([class*="solutions"]),
-.aereoFinalStack .homeFinalContact :global([class*="Solutions"]),
-.aereoFinalStack .homeFinalContact :global([class*="services"]),
-.aereoFinalStack .homeFinalContact :global([class*="Services"]) {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  height: 0 !important;
-  min-height: 0 !important;
-  max-height: 0 !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  overflow: hidden !important;
-}
-/* END MARITIMO HIDE HOMEFINAL INTERNAL SERVICES FINAL */
 
-/* === MARITIMO FORCE HIDE SERVICES MOBILE FINAL === */
-@media (max-width: 900px) {
-  .page .services,
-  .page .useCases,
-  .page .darkBand {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    height: 0 !important;
-    min-height: 0 !important;
-    max-height: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    overflow: hidden !important;
-    pointer-events: none !important;
-  }
-
-  .page .processAccordionSection {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    margin-top: 0 !important;
-  }
-}
-/* END MARITIMO FORCE HIDE SERVICES MOBILE FINAL */
-
-/* === MARITIMO COMPACT SECTION SPACING FINAL === */
-
-/* Desktop: menos aire entre bloques */
 @media (min-width: 901px) {
-  .page .overview {
-    margin-top: 1.4rem !important;
-    margin-bottom: 2.2rem !important;
-  }
-
-  .page .services,
-  .page .useCases,
-  .page .processAccordionSection,
-  .page .faqSection {
-    margin-top: 2.4rem !important;
-    margin-bottom: 2.4rem !important;
-  }
-
-  .page .sectionHead,
-  .page .processAccordionHead,
-  .page .faqHead {
-    margin-bottom: 1.25rem !important;
-  }
-
-  .page .processAccordionSection {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-  }
-
-  .page .faqSection {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-  }
-
-  .page :global([class*="Related"]),
-  .page :global([class*="related"]) {
-    margin-top: 2rem !important;
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
-  }
-
-  .page .aereoFinalStack,
-  .page .homeFinalContact {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-  }
-}
-
-/* Mobile/tablet: que no queden huecos grandes entre certificaciones, overview, proceso, FAQ y final */
-@media (max-width: 900px) {
-  .page .overview {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    padding-top: 1rem !important;
-    padding-bottom: 1.5rem !important;
-  }
-
-  .page .processAccordionSection {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    padding-top: 1.7rem !important;
-    padding-bottom: 2rem !important;
-  }
-
-  .page .faqSection {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    padding-top: 2rem !important;
-    padding-bottom: 2.4rem !important;
-  }
-
-  .page .processAccordionHead,
-  .page .faqHead {
-    margin-bottom: 1rem !important;
-  }
-
-  .page :global([class*="Related"]),
-  .page :global([class*="related"]) {
-    margin-top: 0 !important;
-    padding-top: 1.6rem !important;
-    padding-bottom: 1.8rem !important;
-  }
-
-  .page .aereoFinalStack,
-  .page .homeFinalContact {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-  }
-}
-
-@media (max-width: 430px) {
-  .page .overview {
-    padding-top: .75rem !important;
-    padding-bottom: 1.25rem !important;
-  }
-
-  .page .processAccordionSection {
-    padding-top: 1.45rem !important;
-    padding-bottom: 1.8rem !important;
-  }
-
-  .page .faqSection {
-    padding-top: 1.7rem !important;
-    padding-bottom: 2rem !important;
-  }
-}
-
-/* END MARITIMO COMPACT SECTION SPACING FINAL */
-
-
-/* === RESTORE MOBILE STICKY CTA FINAL === */
-.mobileStickyCta {
-  display: none;
-}
-
-@media (max-width: 900px) {
-  .mobileStickyCta {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 80;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: .6rem;
-    padding: .72rem .85rem calc(.72rem + env(safe-area-inset-bottom));
-    background: rgba(7, 16, 26, .96);
-    border-top: 1px solid rgba(255,255,255,.10);
-    backdrop-filter: blur(16px);
-  }
-
-  .mobileStickyCta a {
-    min-height: 46px;
-    border-radius: 999px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 .85rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: .68rem;
-    line-height: 1;
-    letter-spacing: .045em;
-    font-weight: 950;
-    white-space: nowrap;
-  }
-
-  .mobileStickyCta a:first-child {
-    color: #07101a;
-    background: #fff;
-  }
-
-  .mobileStickyCta a:last-child {
-    color: #fff;
-    border: 1px solid rgba(255,255,255,.26);
-    background: rgba(255,255,255,.08);
-  }
-
-  .page {
-    padding-bottom: calc(76px + env(safe-area-inset-bottom)) !important;
-  }
-}
-/* END RESTORE MOBILE STICKY CTA FINAL */
-
-/* === MARITIMO MOBILE STICKY CTA CLEAN FINAL === */
-.mobileStickyCta {
-  display: none;
-}
-
-@media (max-width: 900px) {
-  .page {
-    padding-bottom: calc(82px + env(safe-area-inset-bottom)) !important;
-  }
-
-  .mobileStickyCta {
-    position: fixed !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    z-index: 999 !important;
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: .6rem !important;
-    padding: .72rem .85rem calc(.72rem + env(safe-area-inset-bottom)) !important;
-    background: rgba(7, 16, 26, .96) !important;
-    border-top: 1px solid rgba(255,255,255,.12) !important;
-    backdrop-filter: blur(16px) !important;
-  }
-
-  .mobileStickyCta a {
-    min-height: 46px !important;
-    border-radius: 999px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 0 .7rem !important;
-    text-decoration: none !important;
-    text-transform: uppercase !important;
-    font-size: .64rem !important;
-    line-height: 1 !important;
-    letter-spacing: .035em !important;
-    font-weight: 950 !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-
-  .mobileStickyCta a::before,
-  .mobileStickyCta a::after {
-    content: none !important;
+  .homeFinalContact :global([class*="integrated"]),
+  .homeFinalContact :global([class*="services"]) {
     display: none !important;
   }
-
-  .mobileStickyCta a:first-child {
-    color: #07101a !important;
-    background: #fff !important;
-    border: 1px solid rgba(255,255,255,.45) !important;
-  }
-
-  .mobileStickyCta a:last-child {
-    color: #fff !important;
-    background: rgba(255,255,255,.08) !important;
-    border: 1px solid rgba(255,255,255,.28) !important;
-  }
-}
-/* END MARITIMO MOBILE STICKY CTA CLEAN FINAL */
-
-/* === MARITIMO REAL MOBILE STICKY BUTTONS VISIBLE === */
-.mobileStickyCta {
-  display: none !important;
 }
 
-@media (max-width: 900px) {
-  .page {
-    padding-bottom: calc(84px + env(safe-area-inset-bottom)) !important;
-  }
+/* END AEREO HIDE HOMECORPORATE EXTRA SECTIONS DESKTOP */
 
-  .mobileStickyCta {
-    position: fixed !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    z-index: 9999 !important;
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: .62rem !important;
-    padding: .72rem .82rem calc(.72rem + env(safe-area-inset-bottom)) !important;
-    background: rgba(7, 16, 26, .98) !important;
-    border-top: 1px solid rgba(214, 170, 82, .22) !important;
-    box-shadow: 0 -18px 42px rgba(0, 0, 0, .32) !important;
-    backdrop-filter: blur(16px) !important;
-  }
+/* === AEREO BONE BACKGROUND UNIFY FINAL === */
 
-  .mobileStickyCta a {
-    min-width: 0 !important;
-    min-height: 46px !important;
-    border-radius: 999px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 0 .68rem !important;
-    text-decoration: none !important;
-    text-transform: uppercase !important;
-    font-size: .64rem !important;
-    line-height: 1 !important;
-    letter-spacing: .035em !important;
-    font-weight: 950 !important;
-    white-space: nowrap !important;
-    overflow: visible !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    text-indent: 0 !important;
-  }
+/*
+  Unifica el color hueso de la página.
+  No toca secciones oscuras, mapa ni footer.
+*/
 
-  .mobileStickyCta a::before,
-  .mobileStickyCta a::after {
-    content: none !important;
-    display: none !important;
-  }
+.page,
+.content,
+.overview,
+.services,
+.useCases,
+.process,
+.processAccordionSection,
+.faqSection {
+  background-color: #f4f1eb !important;
+}
 
-  .mobileStickyCta a:first-child {
-    color: #ffffff !important;
-    background: #102f44 !important;
-    border: 1px solid rgba(214, 170, 82, .62) !important;
-    box-shadow: 0 14px 32px rgba(0, 0, 0, .26) !important;
-  }
-
-  .mobileStickyCta a:last-child {
-    color: #ffffff !important;
-    background: transparent !important;
-    border: 1px solid rgba(255, 255, 255, .38) !important;
+@media (min-width: 901px) {
+  .homeFinalContact {
+    background-color: #f4f1eb !important;
   }
 }
-/* END MARITIMO REAL MOBILE STICKY BUTTONS VISIBLE */
 
-/* === MARITIMO STICKY CTA TEXT FIX REAL === */
+/* END AEREO BONE BACKGROUND UNIFY FINAL */
+
+/* === AEREO STICKY CTA TEXT FIX REAL === */
 .mobileStickyCta {
   display: none !important;
 }
@@ -12784,102 +12447,43 @@
     border: 1px solid rgba(255,255,255,.42) !important;
   }
 }
-/* END MARITIMO STICKY CTA TEXT FIX REAL */
+/* END AEREO STICKY CTA TEXT FIX REAL */
 
-/* === FINAL STACK GAP AND HOMEFINAL CLEAN === */
-
-/* Oculta la sección interna repetida: "Logística integrada..." */
-.page .homeFinalContact :global(section:first-of-type),
-.page .homeFinalContact :global([class*="integrated"]),
-.page .homeFinalContact :global([class*="Integrated"]),
-.page .homeFinalContact :global([class*="solution"]),
-.page .homeFinalContact :global([class*="Solution"]),
-.page .homeFinalContact :global([class*="services"]),
-.page .homeFinalContact :global([class*="Services"]) {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  height: 0 !important;
-  min-height: 0 !important;
-  max-height: 0 !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  overflow: hidden !important;
+/* === REAL ACROSS BUTTON COLOR FINAL === */
+:root {
+  --across-button-blue: #123f59;
 }
 
-/* Quita huecos del cierre */
-.page .aereoFinalStack,
-.page .homeFinalContact {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-  background: #07101a !important;
-  overflow: hidden !important;
+/* Botones principales del hero */
+.primaryBtn,
+.actions a:first-child {
+  background: #123f59 !important;
+  color: #ffffff !important;
+  border-color: #123f59 !important;
 }
 
-.page .aereoFinalStack :global(footer),
-.page .aereoFinalStack :global([class*="footer"]),
-.page .aereoFinalStack :global([class*="Footer"]) {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-  background: #07101a !important;
-  border-top: 0 !important;
+/* Botón de tracking / rastreo */
+.overviewCopy a {
+  background: #123f59 !important;
+  color: #ffffff !important;
+  border-color: #123f59 !important;
 }
 
-/* Mobile: que el espacio para los botones sea oscuro, no una franja crema/blanca */
+/* Botones principales de CTAs finales */
+.finalActions a:first-child,
+.darkBandActions a:first-child {
+  background: #123f59 !important;
+  color: #ffffff !important;
+  border-color: #123f59 !important;
+}
+
+/* Sticky mobile inferior */
 @media (max-width: 900px) {
-  .page {
-    padding-bottom: 0 !important;
-  }
-
-  .page .aereoFinalStack {
-    padding-bottom: calc(76px + env(safe-area-inset-bottom)) !important;
-    background: #07101a !important;
-  }
-
-  .page .homeFinalContact {
-    padding-bottom: 0 !important;
-    margin-bottom: 0 !important;
-  }
-
-  .page .aereoFinalStack :global(footer),
-  .page .aereoFinalStack :global([class*="footer"]),
-  .page .aereoFinalStack :global([class*="Footer"]) {
-    padding-bottom: 0 !important;
-    margin-bottom: 0 !important;
-  }
-
-  .mobileStickyCta {
-    bottom: 0 !important;
-    background: #07101a !important;
+  .mobileStickyCta a:first-child {
+    background: #123f59 !important;
+    color: #ffffff !important;
+    border-color: #123f59 !important;
   }
 }
-
-/* END FINAL STACK GAP AND HOMEFINAL CLEAN */
-
-/* === CENTER PROCESS QUOTE BUTTON TEXT FINAL === */
-.processAccordionPanel a,
-.processAccordionBody a,
-.processAccordionContent a,
-.processAccordionItem a,
-.processAccordionSection details a {
-  min-height: 38px !important;
-  height: 38px !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  line-height: 1 !important;
-  vertical-align: middle !important;
-  text-align: center !important;
-}
-
-.processAccordionPanel a *,
-.processAccordionBody a *,
-.processAccordionContent a *,
-.processAccordionItem a *,
-.processAccordionSection details a * {
-  line-height: 1 !important;
-}
-/* END CENTER PROCESS QUOTE BUTTON TEXT FINAL */
+/* END REAL ACROSS BUTTON COLOR FINAL */
 

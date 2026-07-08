@@ -5913,30 +5913,3 @@
 }
 
 /* END HOME CORPORATE GLOBALTRUST DESKTOP CLEAN FINAL */
-
-/* === HOME CORPORATE BONE BACKGROUND UNIFY FINAL === */
-
-/*
-  Unifica el hueso de las secciones claras del HomeCorporateFinal.
-  No toca globalTrust/mapa.
-  No toca CTA oscura.
-  No toca footer.
-*/
-
-.integrated,
-.services,
-.homeOffices {
-  background: #f4f1eb !important;
-  background-color: #f4f1eb !important;
-}
-
-.integrated::before,
-.integrated::after,
-.services::before,
-.services::after,
-.homeOffices::before,
-.homeOffices::after {
-  background-color: transparent !important;
-}
-
-/* END HOME CORPORATE BONE BACKGROUND UNIFY FINAL */

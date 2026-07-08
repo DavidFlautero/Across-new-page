@@ -9,60 +9,93 @@ import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import RelatedServices from "@/app/servicios/_shared/RelatedServices";
 import HomeCorporateFinal from "@/components/sections/HomeCorporateFinal";
-import styles from "./TransporteAereo.module.css";
+import styles from "./Servicio.module.css";
 
 type Locale = "es" | "en" | "zh";
 
 const copy = {
   es: {
-    heroEyebrow: "TRANSPORTE AÉREO INTERNACIONAL",
-    heroTitle: "Transporte aéreo internacional para cargas urgentes, sensibles o de alto valor.",
+    heroEyebrow: "TRANSPORTE MARÍTIMO INTERNACIONAL",
+    heroTitle: "Cotice y controle su embarque marítimo de origen a destino.",
     heroText:
-      "Coordinamos envíos aéreos internacionales con control documental, seguimiento operativo y soluciones adaptadas a cargas críticas, sensibles o de alto valor.",
-    primaryCta: "Solicitar cotización aérea",
-    secondaryCta: "Hablar con un especialista",
+      "Coordinamos operaciones FCL, LCL y proyectos marítimos con control documental, gestión portuaria, aduanas y seguimiento operativo. Solicite una cotización clara y mantenga visibilidad sobre cada etapa de su carga.",
+    primaryCta: "Cotizar mi embarque",
+    secondaryCta: "Hablar con operaciones",
+    contactEyebrow: "CONTACTO DIRECTO",
+    contactTitle: "Coordinemos su próxima operación internacional.",
+    contactText: "Hable con un especialista y reciba una solución logística adaptada a su carga, destino y urgencia.",
+    contactPrimary: "Hablar con un especialista",
+    contactSecondary: "Cotizar ahora",
 
-    activeLabel: "Operación aérea activa",
-    activeRoute: "Madrid → Bogotá",
-    activeCargo: "Carga crítica",
+
+    activeLabel: "Operación marítima activa",
+    activeRoute: "Puerto → Destino",
+    activeCargo: "Embarque internacional",
     activeStatusLabel: "Estado:",
     activeStatus: "En coordinación",
     activeEtaLabel: "ETA:",
-    activeEta: "Prioritario",
+    activeEta: "Programado",
 
     trust: [
-      ["Carga urgente", "Operaciones críticas"],
-      ["Alto valor", "Máxima seguridad"],
-      ["Documentación", "Control internacional"],
-      ["Seguimiento operativo", "Visibilidad en tiempo real"],
+      ["Carga FCL", "Contenedor completo"],
+      ["Carga LCL", "Consolidado"],
+      ["Documentación", "Gestión aduanera"],
+      ["Seguimiento operativo", "Trazabilidad operativa"],
     ],
 
-    overviewEyebrow: "Operaciones confiables",
-    overviewTitle: "Velocidad, precisión y control en cada etapa del envío aéreo.",
-    overviewText:
-      "El transporte aéreo exige coordinación exacta entre origen, aerolínea, aduana y destino final. En Across Logistics gestionamos cada etapa para reducir tiempos, evitar errores documentales y mantener visibilidad sobre la operación.",
-    overviewButton: "Rastrea tu envío",
+    overviewEyebrow: "OPERACIONES CONFIABLES",
+    overviewTitle: "Control portuario y documental para su embarque.",
+    overviewText: "El transporte marítimo exige control entre origen, naviera, puerto, aduana y destino final. Gestionamos cada etapa para reducir errores documentales y mantener visibilidad operativa.",
+    overviewButton: "Rastrear su envío",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    stickyPrimary: "Cotizar marítimo",
+    stickySecondary: "Hablar ahora",
+    stickySecondaryHref: "",
+
+    preQuoteEyebrow: "ANTES DE COTIZAR",
+    preQuoteTitle: "El embarque marítimo se define por volumen, ruta y documentación.",
+    preQuoteText: "Revisamos origen, destino, tipo de carga, volumen, Incoterm y documentos para definir si conviene FCL, LCL, proyecto, cross trade o puerta a puerta.",
+    preQuoteCta: "Cotizar carga marítima",
+    preQuotePoints: [
+      ["Carga", "Tipo, volumen, peso y condiciones de la mercancía."],
+      ["Ruta", "Puerto de origen, destino, tiempos y disponibilidad."],
+      ["Control", "Documentos, aduanas y seguimiento operativo."],
+    ],
 
     pillars: [
-      ["Coordinación aeroportuaria", "Gestión con aerolíneas, agentes y operadores logísticos."],
+      ["Coordinación portuaria", "Gestión con navieras, agentes y operadores logísticos."],
       ["Control documental", "Revisión de documentos comerciales, aduaneros y operativos."],
-      ["Seguimiento de operación", "Monitoreo del avance desde origen hasta destino."],
+      ["Seguimiento operativo de operación", "Monitoreo del avance desde origen hasta destino."],
       ["Soluciones puerta a puerta", "Integración con transporte terrestre y entrega final."],
     ],
 
-    servicesEyebrow: "Nuestros servicios aéreos",
-    servicesTitle: "Soluciones aéreas para cada tipo de operación.",
+    servicesEyebrow: "Nuestros servicios marítimos",
+    servicesTitle: "Soluciones marítimas para cada tipo de embarque.",
     services: [
-      ["Carga aérea urgente", "Para envíos donde el tiempo define la operación."],
-      ["Carga consolidada", "Optimización de costos mediante espacios compartidos."],
-      ["Carga de alto valor", "Coordinación segura para productos sensibles o estratégicos."],
-      ["Chárter aéreo", "Soluciones dedicadas para operaciones especiales o cargas críticas."],
-      ["Cross trade", "Operaciones internacionales entre terceros países."],
-      ["Door to door", "Desde retiro en origen hasta entrega final en destino."],
+      ["Carga marítima FCL", "Contenedor completo para embarques que requieren capacidad exclusiva, control y trazabilidad."],
+      ["Carga LCL consolidada", "Consolidación marítima para optimizar costos sin perder control documental ni operativo."],
+      ["Carga sensible o de alto valor", "Coordinación para mercancías que requieren seguridad, documentación y seguimiento especializado."],
+      ["Proyectos marítimos", "Soluciones para cargas sobredimensionadas, industriales o con requerimientos especiales."],
+      ["Cross trade marítimo", "Operaciones entre terceros países con coordinación documental, portuaria y seguimiento operativo."],
+      ["Door to door", "Retiro en origen, coordinación marítima, conexión terrestre y entrega final en destino."],
     ],
 
-    useCasesEyebrow: "Cuándo conviene usar transporte aéreo",
-    useCasesTitle: "El transporte aéreo marca la diferencia.",
+    useCasesEyebrow: "Cuándo conviene usar transporte marítimo",
+    useCasesTitle: "El transporte marítimo marca la diferencia.",
     useCases: [
       ["Repuestos industriales urgentes", "Evite detener una línea de producción por falta de componentes."],
       ["Productos tecnológicos", "Ideal para cargas de alto valor, sensibles o con rápida rotación."],
@@ -72,62 +105,95 @@ const copy = {
       ["Documentación crítica", "Soluciones para envíos donde el plazo no admite demoras."],
     ],
 
-    processEyebrow: "Nuestro proceso operativo",
-    processTitle: "Una operación aérea clara desde el primer contacto.",
+    processEyebrow: "Proceso operativo marítimo",
+    processTitle: "Un embarque marítimo claro desde el primer contacto.",
     process: [
-      ["Análisis de carga", "Revisamos peso, volumen, origen, destino y urgencia."],
-      ["Selección de ruta", "Buscamos la alternativa aérea más eficiente."],
-      ["Coordinación documental", "Validamos requisitos comerciales y aduaneros."],
-      ["Reserva y despacho", "Coordinamos aerolínea, aeropuerto y operación de salida."],
-      ["Seguimiento", "Monitoreamos el avance de la carga."],
-      ["Entrega final", "Gestionamos conexión terrestre y entrega en destino."],
+      ["Análisis del embarque", "Revisamos tipo de carga, volumen, Incoterm, origen, destino, tiempos y requisitos documentales."],
+      ["Selección de ruta marítima", "Definimos puerto, naviera y alternativa FCL, LCL o proyecto según la operación."],
+      ["Coordinación documental", "Validamos documentos comerciales, aduaneros, permisos y requisitos operativos del embarque."],
+      ["Reserva naviera y salida", "Coordinamos reserva con naviera, operación portuaria y salida del embarque."],
+      ["Seguimiento operativo", "Monitoreamos hitos del embarque y mantenemos visibilidad durante el tránsito."],
+      ["Entrega final", "Coordinamos conexión terrestre, entrega en destino y cierre operativo."],
     ],
 
-    bandTitle: "Operaciones aéreas diseñadas para cargas que no pueden esperar.",
+    bandTitle: "Operaciones marítimas diseñadas para cargas que no pueden detenerse.",
     bandText:
-      "Nuestro equipo coordina soluciones aéreas internacionales para empresas que necesitan rapidez, trazabilidad y respuesta profesional ante operaciones sensibles.",
+      "Nuestro equipo coordina soluciones marítimas internacionales para empresas que necesitan rapidez, trazabilidad y respuesta profesional ante operaciones sensibles.",
     stats: [
-      ["Cobertura global", "Más de 120 países"],
-      ["Envíos urgentes", "Respuesta prioritaria"],
-      ["Seguridad y control", "Estándares internacionales"],
-      ["Soporte especializado", "Especialistas dedicados"],
+      ["Cobertura global", "Principales rutas globales"],
+      ["Envíos urgentes", "Coordinación portuaria"],
+      ["Seguridad y control", "Documentación y compliance"],
+      ["Soporte especializado", "Especialistas marítimos"],
     ],
 
-    finalTitle: "Coordinemos su próximo envío aéreo internacional.",
+    finalTitle: "Coordinemos su próxima operación internacional.",
     finalText:
-      "Cuéntenos origen, destino, tipo de carga y urgencia. Nuestro equipo analizará la mejor alternativa aérea para su operación.",
+      "Hable con un especialista y reciba una solución logística adaptada a su carga, destino y urgencia.",
     finalPrimary: "Hablar con un especialista",
-    finalSecondary: "Hablar con un especialista",
+    finalSecondary: "Cotizar carga marítima",
   },
 
   en: {
-    heroEyebrow: "International air freight",
-    heroTitle: "Speed that moves critical business.",
+    heroEyebrow: "INTERNATIONAL OCEAN FREIGHT",
+    heroTitle: "We move your ocean cargo with port coordination, control and traceability.",
     heroText:
-      "We coordinate international air shipments with document control, operational tracking and solutions adapted to sensitive, urgent or high-value cargo.",
-    primaryCta: "Plan my operation",
-    secondaryCta: "Talk to our team",
+      "We manage FCL, LCL and ocean project shipments with document control, port coordination, customs and operational tracking from origin to destination.",
+    primaryCta: "Quote ocean freight",
+    secondaryCta: "Talk to a specialist",
+    contactEyebrow: "DIRECT CONTACT",
+    contactTitle: "Let’s coordinate your next international operation.",
+    contactText: "Talk to a specialist and receive a logistics solution adapted to your cargo, destination and urgency.",
+    contactPrimary: "Talk to a specialist",
+    contactSecondary: "Quote now",
 
-    activeLabel: "Active air operation",
-    activeRoute: "Madrid → Bogotá",
-    activeCargo: "Critical cargo",
+
+    activeLabel: "Active ocean operation",
+    activeRoute: "Port → Destination",
+    activeCargo: "International shipment",
     activeStatusLabel: "Status:",
     activeStatus: "In coordination",
     activeEtaLabel: "ETA:",
-    activeEta: "Priority",
+    activeEta: "Scheduled",
 
     trust: [
-      ["Urgent cargo", "Critical operations"],
-      ["High value", "Maximum security"],
-      ["Documentation", "International control"],
-      ["Operational tracking", "Real-time visibility"],
+      ["FCL cargo", "Full container"],
+      ["LCL cargo", "Consolidated"],
+      ["Documentation", "Customs management"],
+      ["Tracking", "Operational traceability"],
     ],
 
-    overviewEyebrow: "Reliable operations",
-    overviewTitle: "Speed, precision and control at every stage of air shipping.",
-    overviewText:
-      "Air freight requires exact coordination between origin, airline, customs and final destination. At Across Logistics, we manage each stage to reduce times, avoid documentation errors and maintain visibility over the operation.",
+    overviewEyebrow: "OCEAN OPERATION UNDER CONTROL",
+    overviewTitle: "Port coordination, documentation and tracking for your shipment.",
+    overviewText: "Ocean freight requires control between origin, carrier, port, customs and final destination. We manage each stage to reduce document errors and maintain operational visibility.",
     overviewButton: "Track your shipment",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    stickyPrimary: "Quote ocean",
+    stickySecondary: "Talk now",
+    stickySecondaryHref: "",
+
+    preQuoteEyebrow: "BEFORE QUOTING",
+    preQuoteTitle: "Ocean freight is defined by volume, route and documentation.",
+    preQuoteText: "We review origin, destination, cargo type, volume, Incoterm and documents to define whether FCL, LCL, project, cross trade or door-to-door is more viable.",
+    preQuoteCta: "Quote ocean freight",
+    preQuotePoints: [
+      ["Cargo", "Type, volume, weight and cargo conditions."],
+      ["Route", "Port of origin, destination, timing and availability."],
+      ["Control", "Documents, customs and operational tracking."],
+    ],
 
     pillars: [
       ["Airport coordination", "Management with airlines, agents and logistics operators."],
@@ -136,19 +202,19 @@ const copy = {
       ["Door-to-door solutions", "Integration with road transport and final delivery."],
     ],
 
-    servicesEyebrow: "Our air services",
-    servicesTitle: "Air solutions for every type of operation.",
+    servicesEyebrow: "Our ocean freight services",
+    servicesTitle: "Ocean freight solutions for every type of shipment.",
     services: [
-      ["Urgent air cargo", "For shipments where time defines the operation."],
-      ["Consolidated cargo", "Cost optimization through shared spaces."],
-      ["High-value cargo", "Secure coordination for sensitive or strategic products."],
-      ["Air charter", "Dedicated solutions for special operations or critical cargo."],
-      ["Cross trade", "International operations between third countries."],
+      ["FCL ocean freight", "For shipments where time defines the operation."],
+      ["LCL consolidated cargo", "Cost optimization through shared spaces."],
+      ["Sensitive or high-value cargo", "Secure coordination for sensitive or strategic products."],
+      ["Ocean project cargo", "Dedicated solutions for special operations or critical cargo."],
+      ["Cross trade marítimo", "International operations between third countries."],
       ["Door to door", "From pickup at origin to final delivery at destination."],
     ],
 
-    useCasesEyebrow: "When to use air freight",
-    useCasesTitle: "Air freight makes the difference.",
+    useCasesEyebrow: "When to use ocean freight",
+    useCasesTitle: "Ocean freight makes the difference.",
     useCases: [
       ["Urgent industrial spare parts", "Avoid stopping a production line due to missing components."],
       ["Technology products", "Ideal for high-value, sensitive or fast-moving cargo."],
@@ -159,12 +225,12 @@ const copy = {
     ],
 
     processEyebrow: "Our operational process",
-    processTitle: "A clear air operation from the first contact.",
+    processTitle: "A clear ocean shipment from the first contact.",
     process: [
       ["Cargo analysis", "We review weight, volume, origin, destination and urgency."],
-      ["Route selection", "We look for the most efficient air alternative."],
+      ["Route selection", "We define port, carrier and FCL, LCL or project routing according to the operation."],
       ["Document coordination", "We validate commercial and customs requirements."],
-      ["Booking and dispatch", "We coordinate airline, airport and departure operation."],
+      ["Booking and dispatch", "We manage booking, port coordination, carrier and departure operation."],
       ["Tracking", "We monitor cargo progress."],
       ["Final delivery", "We manage road connection and delivery at destination."],
     ],
@@ -179,41 +245,74 @@ const copy = {
       ["Specialized support", "Dedicated specialists"],
     ],
 
-    finalTitle: "Let’s coordinate your next international air shipment.",
+    finalTitle: "Let’s coordinate your next international operation.",
     finalText:
-      "Tell us origin, destination, cargo type and urgency. Our team will analyze the best air alternative for your operation.",
+      "Talk to a specialist and receive a logistics solution adapted to your cargo, destination and urgency.",
     finalPrimary: "Talk to a specialist",
-    finalSecondary: "Talk to a specialist",
+    finalSecondary: "Quote ocean freight",
   },
 
   zh: {
-    heroEyebrow: "国际空运",
-    heroTitle: "面向紧急货物和关键业务的国际空运服务。",
+    heroEyebrow: "国际海运",
+    heroTitle: "通过港口协调、管控和可追踪性运输您的海运货物。",
     heroText:
-      "我们协调国际空运业务，提供文件控制、运营跟踪以及适用于敏感、紧急或高价值货物的定制方案。",
-    primaryCta: "规划物流操作",
-    secondaryCta: "联系我们的团队",
+      "我们管理 FCL、LCL 和项目海运，涵盖文件管控、港口协调、海关和从 始发地到目的地的运营跟踪。",
+    primaryCta: "获取海运报价",
+    secondaryCta: "联系专家",
+    contactEyebrow: "直接联系",
+    contactTitle: "协调您的下一次国际物流操作。",
+    contactText: "联系专家，根据您的货物、目的地和紧急程度获得合适的物流方案。",
+    contactPrimary: "联系专家",
+    contactSecondary: "立即报价",
 
-    activeLabel: "进行中的空运操作",
-    activeRoute: "马德里 → 波哥大",
-    activeCargo: "关键货物",
+
+    activeLabel: "海运操作中",
+    activeRoute: "港口 → 目的地",
+    activeCargo: "国际运输",
     activeStatusLabel: "状态：",
     activeStatus: "协调中",
     activeEtaLabel: "ETA：",
-    activeEta: "优先",
+    activeEta: "已安排",
 
     trust: [
-      ["紧急货物", "关键业务"],
-      ["高价值", "最高安全标准"],
-      ["文件管理", "国际控制"],
-      ["运营跟踪", "实时可视化"],
+      ["FCL整柜", "整箱运输"],
+      ["LCL拼箱", "拼箱运输"],
+      ["文件", "海关管理"],
+      ["跟踪", "运营可追踪"],
     ],
 
-    overviewEyebrow: "可靠运营",
-    overviewTitle: "在空运每个阶段实现速度、精准与控制。",
-    overviewText:
-      "空运需要始发地、航空公司、海关和最终目的地之间的精准协调。Across Logistics 管理每个阶段，以缩短时间、避免文件错误并保持运营可视化。",
-    overviewButton: "追踪您的货物",
+    overviewEyebrow: "海运操作管控",
+    overviewTitle: "为您的货物提供港口协调、文件和跟踪。",
+    overviewText: "海运需要在始发地、船公司、港口、海关和最终目的地之间进行管控。我们管理每个环节，以减少文件错误并保持运营可视性。",
+    overviewButton: "追踪货物",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    stickyPrimary: "海运报价",
+    stickySecondary: "立即联系",
+    stickySecondaryHref: "",
+
+    preQuoteEyebrow: "报价前",
+    preQuoteTitle: "海运方案取决于体积、路线和文件。",
+    preQuoteText: "我们会审核始发地、目的地、货物类型、体积、贸易条款和文件，以判断 FCL、LCL、项目运输、第三国贸易或门到门是否更合适。",
+    preQuoteCta: "获取海运报价",
+    preQuotePoints: [
+      ["货物", "类型、体积、重量和货物条件。"],
+      ["路线", "始发港、目的地、时间和舱位。"],
+      ["管控", "文件、海关和运营跟踪。"],
+    ],
 
     pillars: [
       ["机场协调", "与航空公司、代理和物流运营商协调。"],
@@ -222,7 +321,7 @@ const copy = {
       ["门到门方案", "整合陆运和最终交付。"],
     ],
 
-    servicesEyebrow: "我们的空运服务",
+    servicesEyebrow: "我们的海运服务",
     servicesTitle: "适用于不同业务类型的空运解决方案。",
     services: [
       ["紧急空运", "适用于时间决定成败的运输。"],
@@ -245,7 +344,7 @@ const copy = {
     ],
 
     processEyebrow: "我们的运营流程",
-    processTitle: "从第一次联系开始，空运操作清晰可控。",
+    processTitle: "从第一次联系开始，海运操作清晰可控。",
     process: [
       ["货物分析", "审核重量、体积、始发地、目的地和紧急程度。"],
       ["路线选择", "寻找最高效的空运方案。"],
@@ -265,11 +364,11 @@ const copy = {
       ["专业支持", "专属专家"],
     ],
 
-    finalTitle: "让我们协调您的下一次国际空运。",
+    finalTitle: "协调您的下一次国际物流操作。",
     finalText:
-      "告诉我们始发地、目的地、货物类型和紧急程度。我们的团队将为您的业务分析最佳空运方案。",
+      "联系专家，根据您的货物、目的地和紧急程度获得合适的物流方案。",
     finalPrimary: "联系专家",
-    finalSecondary: "联系专家",
+    finalSecondary: "获取海运报价",
   },
 } satisfies Record<Locale, any>;
 
@@ -512,7 +611,7 @@ function Icon({ name }: { name: IconName }) {
   }
 }
 
-export default function TransporteAereoPage() {
+export default function TransporteMaritimoPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
@@ -563,7 +662,7 @@ export default function TransporteAereoPage() {
         <section className={styles.hero} data-aereo-hero="true" data-service-hero-home="true"
       >
           <Image
-            src="/images/hero/cargaAereahero.png"
+            src="/images/maritimo.png"
             alt={t.heroTitle}
             fill
             priority
@@ -572,7 +671,7 @@ export default function TransporteAereoPage() {
           />
 
           <Image
-            src="/images/hero/cargaAereahero-mobile.png"
+            src="/images/maritimo-mobile.png"
             alt={t.heroTitle}
             fill
             priority
@@ -590,8 +689,8 @@ export default function TransporteAereoPage() {
               <p className={styles.subtitle}>{t.heroText}</p>
 
               <div className={styles.actions}>
-                <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>
-                <Link href="/contacto" className={styles.secondaryBtn}>{t.secondaryCta}</Link>
+                <Link href="/cotizacion?servicio=transporte-maritimo" className={styles.primaryBtn}>{t.primaryCta}</Link>
+                <Link href="/contacto?servicio=transporte-maritimo" className={styles.secondaryBtn}>{t.secondaryCta}</Link>
               </div>
             </div>
 
@@ -612,7 +711,7 @@ export default function TransporteAereoPage() {
             </div>
           </div>
 
-          <div className={styles.commandBar} data-aereo-trust="true">
+          <div className={styles.commandBar} data-service-trust="maritimo">
             {t.trust.map(([title, text]: string[], index: number) => {
               const icons: IconName[] = ["timer", "shield", "document", "tracking"];
 
@@ -630,8 +729,9 @@ export default function TransporteAereoPage() {
             })}
           </div>
         </section>
-<Certifications />
-<section className={styles.overview}>
+
+        <Certifications />
+<section className={styles.overview} data-mobile-first-after-cert="true">
           <div className={styles.overviewCopy}>
             <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
             <h2>{t.overviewTitle}</h2>
@@ -655,7 +755,13 @@ export default function TransporteAereoPage() {
             })}
           </div>
         </section>
-<section className={styles.services} data-mobile-hide-after-cert="true">
+
+
+        
+
+
+
+        <section className={styles.services}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -678,7 +784,7 @@ export default function TransporteAereoPage() {
           </div>
         </section>
 
-        <section className={styles.useCases} data-mobile-hide-after-cert="true">
+        <section className={styles.useCases}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.useCasesEyebrow}</span>
             <h2>{t.useCasesTitle}</h2>
@@ -771,7 +877,7 @@ export default function TransporteAereoPage() {
                         : "我们根据货物紧急程度协调路线、文件、时间和操作跟踪。"}
                   </p>
 
-                  <Link href="/cotizacion?servicio=transporte-aereo">
+                  <Link href="/cotizacion?servicio=transporte-maritimo">
                     {locale === "es" ? "Cotizar esta modalidad" : locale === "en" ? "Quote this option" : "获取报价"}
                   </Link>
                 </div>
@@ -782,33 +888,43 @@ export default function TransporteAereoPage() {
             <div>
               <strong>
                 {locale === "es"
-                  ? "¿Tenés una operación aérea en curso?"
+                  ? "¿Tiene un embarque marítimo en curso?"
                   : locale === "en"
-                    ? "Do you have an air operation in progress?"
-                    : "您是否有正在进行的空运操作？"}
+                    ? "Do you have an ocean shipment in progress?"
+                    : "您是否有正在进行的海运操作？"}
               </strong>
               <p>
                 {locale === "es"
-                  ? "Coordinamos ruta, documentación y seguimiento para que tu carga avance sin fricción."
+                  ? "Coordinamos ruta marítima, documentación, booking y seguimiento para que su carga avance sin fricción."
                   : locale === "en"
-                    ? "We coordinate routing, documentation and tracking so your cargo moves without friction."
-                    : "我们协调路线、文件和跟踪，确保您的货物顺利推进。"}
+                    ? "We coordinate ocean routing, documentation, booking and tracking so your cargo moves without friction."
+                    : "我们协调海运路线、文件、订舱和跟踪，确保您的货物顺利推进。"}
               </p>
             </div>
 
             <div>
-              <Link href="/cotizacion?servicio=transporte-aereo">
-                {locale === "es" ? "Solicitar cotización aérea" : locale === "en" ? "Request air quote" : "申请空运报价"}
+              <Link href="/cotizacion?servicio=transporte-maritimo">
+                {locale === "es" ? "Cotizar carga marítima" : locale === "en" ? "Quote ocean freight" : "获取海运报价"}
               </Link>
 
-              <Link href="/contacto?servicio=transporte-aereo">
-                {locale === "es" ? "Hablar con asesor" : locale === "en" ? "Talk to an advisor" : "联系顾问"}
+              <Link href="/contacto?servicio=transporte-maritimo">
+                {locale === "es" ? "Hablar con especialista" : locale === "en" ? "Talk to a specialist" : "联系顾问"}
               </Link>
             </div>
           </div>
 
         </section>
+
 <section className={styles.darkBand} data-mobile-hide-after-cert="true">
+          <div className={styles.darkBandImage}>
+            <Image
+              src="/images/transporte-maritimo-desktop/1.png"
+              alt={t.bandTitle}
+              fill
+              sizes="(max-width: 900px) 100vw, 42vw"
+            />
+          </div>
+
           <div className={styles.darkBandContent}>
             <h2>{t.bandTitle}</h2>
             <p>{t.bandText}</p>
@@ -823,16 +939,16 @@ export default function TransporteAereoPage() {
             </div>
 
             <div className={styles.darkBandActions}>
-                <Link href="/cotizacion?servicio=transporte-aereo">
-                  {locale === "es" ? "Cotizar carga aérea" : locale === "en" ? "Quote air cargo" : "获取空运报价"}
-                </Link>
-                <Link href="/contacto?servicio=transporte-aereo">
-                  {locale === "es" ? "Contacto" : locale === "en" ? "Contact" : "联系"}
-                </Link>
-              </div>
+              <Link href="/cotizacion">{t.finalPrimary}</Link>
+              <Link href="/contacto">{t.finalSecondary}</Link>
+            </div>
           </div>
         </section>
-        <section className={styles.faqSection} data-aereo-faq-section="true">
+        
+        
+        
+        
+        <section className={styles.faqSection} data-maritimo-faq-section="true">
           <div className={styles.faqHead}>
             <span className={styles.eyebrow}>
               {locale === "es" ? "Preguntas frecuentes" : locale === "en" ? "Frequently asked questions" : "常见问题"}
@@ -840,86 +956,86 @@ export default function TransporteAereoPage() {
 
             <h2>
               {locale === "es"
-                ? "Dudas frecuentes sobre transporte aéreo internacional."
+                ? "Dudas frecuentes sobre transporte marítimo internacional."
                 : locale === "en"
-                  ? "Common questions about international air freight."
-                  : "关于国际空运的常见问题。"}
+                  ? "Common questions about international ocean freight."
+                  : "关于国际海运的常见问题。"}
             </h2>
 
             <p>
               {locale === "es"
-                ? "Resolvemos las principales dudas antes de iniciar una operación aérea: documentación, tiempos, seguimiento, restricciones y coordinación logística."
+                ? "Resolvemos las principales dudas antes de iniciar una operación marítima: documentación, tiempos, seguimiento, tipo de carga, puertos y coordinación logística."
                 : locale === "en"
-                  ? "We answer the main questions before starting an air freight operation: documentation, timing, tracking, restrictions and logistics coordination."
-                  : "我们解答空运操作前的主要问题：文件、时效、跟踪、限制和物流协调。"}
+                  ? "We answer the main questions before starting an ocean freight operation: documentation, timing, tracking, cargo type, ports and logistics coordination."
+                  : "我们解答海运操作前的主要问题：文件、时效、跟踪、货物类型、港口和物流协调。"}
             </p>
           </div>
 
           <div className={styles.faqList}>
             {[
               [
-                locale === "es" ? "¿Cuándo conviene usar transporte aéreo internacional?" : locale === "en" ? "When should I use international air freight?" : "什么时候适合使用国际空运？",
+                locale === "es" ? "¿Cuándo conviene usar transporte marítimo internacional?" : locale === "en" ? "When should I use international ocean freight?" : "什么时候适合使用国际海运？",
                 locale === "es"
-                  ? "Cuando la carga requiere velocidad, control documental y tiempos de entrega ajustados. Es ideal para mercancía urgente, repuestos críticos, productos de alto valor o envíos sensibles."
+                  ? "Conviene cuando la carga permite tiempos de tránsito más amplios y se busca optimizar costos para grandes volúmenes, contenedores completos, carga consolidada o proyectos especiales."
                   : locale === "en"
-                    ? "When cargo requires speed, document control and tight delivery times. It is ideal for urgent goods, critical spare parts, high-value products or sensitive shipments."
-                    : "当货物需要速度、文件管控和紧迫交付时间时，空运是理想选择，适用于紧急货物、关键备件、高价值产品或敏感货物。"
+                    ? "It is suitable when cargo allows longer transit times and the goal is to optimize costs for large volumes, full containers, consolidated cargo or special projects."
+                    : "当货物允许较长运输时间，并希望优化大批量、整柜、拼箱或特殊项目运输成本时，海运更合适。"
               ],
               [
-                locale === "es" ? "¿Cómo se calcula una cotización aérea?" : locale === "en" ? "How is an air freight quote calculated?" : "空运报价如何计算？",
+                locale === "es" ? "¿Cómo se calcula una cotización marítima?" : locale === "en" ? "How is an ocean freight quote calculated?" : "海运报价如何计算？",
                 locale === "es"
-                  ? "Depende del origen, destino, peso real, peso volumétrico, dimensiones, tipo de mercancía, urgencia, documentación requerida y servicios adicionales como aduana o entrega final."
+                  ? "Depende del origen, destino, puerto de carga, puerto de descarga, tipo de contenedor, volumen, peso, Incoterm, documentación, aduana y servicios adicionales como retiro o entrega final."
                   : locale === "en"
-                    ? "It depends on origin, destination, actual weight, volumetric weight, dimensions, cargo type, urgency, required documentation and additional services such as customs or final delivery."
-                    : "报价取决于起点、目的地、实际重量、体积重量、尺寸、货物类型、紧急程度、所需文件以及清关或末端配送等附加服务。"
+                    ? "It depends on origin, destination, loading port, discharge port, container type, volume, weight, Incoterm, documentation, customs and additional services such as pickup or final delivery."
+                    : "报价取决于起点、目的地、装货港、卸货港、集装箱类型、体积、重量、贸易条款、文件、清关以及提货或最终交付等附加服务。"
               ],
               [
-                locale === "es" ? "¿Qué documentos necesito para una operación aérea?" : locale === "en" ? "What documents are required for air freight?" : "空运需要哪些文件？",
+                locale === "es" ? "¿Qué documentos necesito para una operación marítima?" : locale === "en" ? "What documents are required for ocean freight?" : "海运需要哪些文件？",
                 locale === "es"
-                  ? "Generalmente se requiere factura comercial, packing list, información del consignatario, datos de la carga y documentos aduaneros o permisos especiales según el tipo de mercancía."
+                  ? "Generalmente se requiere factura comercial, packing list, datos del consignatario, información de la carga, documentos aduaneros y, según el caso, certificados o permisos especiales."
                   : locale === "en"
-                    ? "Usually a commercial invoice, packing list, consignee information, cargo details and customs documents or special permits are required depending on the type of goods."
-                    : "通常需要商业发票、装箱单、收货人信息、货物信息，以及根据货物类型所需的海关文件或特殊许可。"
+                    ? "Usually a commercial invoice, packing list, consignee details, cargo information, customs documents and, when applicable, certificates or special permits are required."
+                    : "通常需要商业发票、装箱单、收货人信息、货物信息、海关文件，并视情况需要证书或特殊许可。"
               ],
               [
-                locale === "es" ? "¿Qué es una guía aérea o AWB?" : locale === "en" ? "What is an Air Waybill or AWB?" : "什么是空运提单 AWB？",
+                locale === "es" ? "¿Qué es un Bill of Lading o BL?" : locale === "en" ? "What is a Bill of Lading or BL?" : "什么是海运提单 BL？",
                 locale === "es"
-                  ? "La guía aérea o AWB es el documento principal del transporte aéreo. Identifica la operación, la aerolínea, la carga, el origen, el destino y permite hacer seguimiento del envío."
+                  ? "El Bill of Lading o BL es el documento principal del transporte marítimo. Identifica la carga, naviera, origen, destino, condiciones del embarque y permite gestionar la liberación de la mercancía."
                   : locale === "en"
-                    ? "The Air Waybill or AWB is the main air transport document. It identifies the shipment, airline, cargo, origin, destination and allows shipment tracking."
-                    : "空运提单 AWB 是空运的主要文件，用于识别运输、航空公司、货物、起点、目的地，并支持货物跟踪。"
+                    ? "The Bill of Lading or BL is the main ocean freight document. It identifies the cargo, carrier, origin, destination, shipment conditions and supports cargo release."
+                    : "海运提单 BL 是海运的主要文件，用于识别货物、承运人、起点、目的地、运输条件，并支持货物放行。"
               ],
               [
                 locale === "es" ? "¿Across gestiona aduanas y documentación?" : locale === "en" ? "Does Across handle customs and documentation?" : "Across 是否处理清关和文件？",
                 locale === "es"
-                  ? "Sí. Coordinamos la operación aérea junto con los documentos necesarios, gestión aduanera, seguimiento operativo y conexión con otros servicios logísticos cuando la carga lo requiere."
+                  ? "Sí. Coordinamos la operación marítima junto con la documentación requerida, gestión aduanera, seguimiento operativo y conexión con transporte terrestre cuando la operación lo necesita."
                   : locale === "en"
-                    ? "Yes. We coordinate the air operation together with the required documents, customs management, operational tracking and connection with other logistics services when needed."
-                    : "是的。我们协调空运操作、所需文件、清关管理、操作跟踪，并在需要时连接其他物流服务。"
+                    ? "Yes. We coordinate the ocean operation together with the required documentation, customs management, operational tracking and road transport connection when needed."
+                    : "是的。我们协调海运操作、所需文件、清关管理、操作跟踪，并在需要时连接陆运服务。"
               ],
               [
-                locale === "es" ? "¿Qué tipo de carga puede transportarse por vía aérea?" : locale === "en" ? "What type of cargo can be shipped by air?" : "哪些货物可以通过空运运输？",
+                locale === "es" ? "¿Qué tipo de carga puede transportarse por vía marítima?" : locale === "en" ? "What type of cargo can be shipped by ocean freight?" : "哪些货物可以通过海运运输？",
                 locale === "es"
-                  ? "Se puede transportar carga general, urgente, tecnológica, farmacéutica, repuestos, muestras comerciales y mercancía de alto valor. Algunas cargas requieren revisión especial por regulación."
+                  ? "Se puede transportar carga general, consolidada, contenedores completos, carga sobredimensionada, maquinaria, materia prima, productos industriales y mercancías de alto volumen."
                   : locale === "en"
-                    ? "General, urgent, technology, pharmaceutical, spare parts, commercial samples and high-value cargo can be shipped by air. Some cargo requires special regulatory review."
-                    : "可空运普通货物、紧急货物、科技产品、医药产品、备件、商业样品和高价值货物。部分货物需根据法规进行特殊审核。"
+                    ? "General cargo, consolidated cargo, full containers, oversized cargo, machinery, raw materials, industrial products and high-volume goods can be shipped by ocean freight."
+                    : "可通过海运运输普通货物、拼箱货、整柜货、超尺寸货物、机械、原材料、工业产品和大批量货物。"
               ],
               [
-                locale === "es" ? "¿Puedo hacer seguimiento de mi carga?" : locale === "en" ? "Can I track my cargo?" : "可以跟踪我的货物吗？",
+                locale === "es" ? "¿Puedo hacer seguimiento de mi embarque?" : locale === "en" ? "Can I track my shipment?" : "可以跟踪我的货物吗？",
                 locale === "es"
-                  ? "Sí. Realizamos seguimiento operativo durante el proceso y mantenemos visibilidad sobre los hitos principales: recepción, reserva, despacho, tránsito y entrega final."
+                  ? "Sí. Realizamos seguimiento operativo sobre los hitos principales del embarque: reserva, salida, tránsito, llegada a puerto, nacionalización y entrega final."
                   : locale === "en"
-                    ? "Yes. We provide operational tracking throughout the process and visibility over key milestones: reception, booking, dispatch, transit and final delivery."
-                    : "可以。我们在整个流程中进行操作跟踪，并提供关键节点可视化：收货、订舱、发运、运输和最终交付。"
+                    ? "Yes. We provide operational tracking over key shipment milestones: booking, departure, transit, port arrival, customs clearance and final delivery."
+                    : "可以。我们跟踪运输关键节点：订舱、离港、运输、到港、清关和最终交付。"
               ],
               [
-                locale === "es" ? "¿Qué pasa si mi carga requiere manejo urgente o especial?" : locale === "en" ? "What if my cargo requires urgent or special handling?" : "如果货物需要紧急或特殊处理怎么办？",
+                locale === "es" ? "¿Qué pasa si mi carga requiere manejo especial o proyecto?" : locale === "en" ? "What if my cargo requires special or project handling?" : "如果货物需要特殊或项目操作怎么办？",
                 locale === "es"
-                  ? "Evaluamos la urgencia, tipo de mercancía, restricciones, documentación y ruta disponible para coordinar una alternativa viable con el menor riesgo operativo posible."
+                  ? "Evaluamos dimensiones, peso, ruta, restricciones portuarias, documentación y disponibilidad operativa para coordinar una solución viable con el menor riesgo posible."
                   : locale === "en"
-                    ? "We evaluate urgency, cargo type, restrictions, documentation and available routes to coordinate a viable alternative with the lowest possible operational risk."
-                    : "我们会评估紧急程度、货物类型、限制、文件和可用路线，以协调风险最低的可行方案。"
+                    ? "We evaluate dimensions, weight, route, port restrictions, documentation and operational availability to coordinate a viable solution with the lowest possible risk."
+                    : "我们会评估尺寸、重量、路线、港口限制、文件和操作可用性，以协调风险最低的可行方案。"
               ]
             ].map(([question, answer]) => (
               <details className={styles.faqItem} key={question}>
@@ -935,7 +1051,9 @@ export default function TransporteAereoPage() {
             ))}
           </div>
         </section>
-        <RelatedServices current="transporte-aereo" locale={locale} />
+
+
+        <RelatedServices current="transporte-maritimo" locale={locale} />
 
         <div className={styles.aereoFinalStack}>
           <div className={styles.homeFinalContact}>
@@ -944,18 +1062,7 @@ export default function TransporteAereoPage() {
 
           <Footer />
         </div>
-      </main>
-
-      <div className={styles.mobileStickyCta} aria-label="Acciones rápidas de transporte aéreo">
-        <Link href="/cotizacion?servicio=transporte-aereo">
-          SOLICITAR COTIZACIÓN
-        </Link>
-
-        <Link href="/contacto?servicio=transporte-aereo">
-          HABLAR CON ASESOR
-        </Link>
-      </div>
-
+</main>
 
     </div>
   );

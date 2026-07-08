@@ -631,7 +631,8 @@ export default function TransporteAereoPage() {
           </div>
         </section>
 <Certifications />
-<section className={styles.overview}>
+
+        <section className={styles.overview}>
           <div className={styles.overviewCopy}>
             <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
             <h2>{t.overviewTitle}</h2>
@@ -948,14 +949,13 @@ export default function TransporteAereoPage() {
 
       <div className={styles.mobileStickyCta} aria-label="Acciones rápidas de transporte aéreo">
         <Link href="/cotizacion?servicio=transporte-aereo">
-          SOLICITAR COTIZACIÓN
+          {locale === "es" ? "Solicitar cotización" : locale === "en" ? "Request a quote" : "申请报价"}
         </Link>
 
         <Link href="/contacto?servicio=transporte-aereo">
-          HABLAR CON ASESOR
+          {locale === "es" ? "Hablar con asesor" : locale === "en" ? "Talk to an advisor" : "联系顾问"}
         </Link>
       </div>
-
 
     </div>
   );

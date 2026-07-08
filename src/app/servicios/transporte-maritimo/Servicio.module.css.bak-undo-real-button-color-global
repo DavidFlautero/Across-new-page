@@ -12786,100 +12786,41 @@
 }
 /* END MARITIMO STICKY CTA TEXT FIX REAL */
 
-/* === FINAL STACK GAP AND HOMEFINAL CLEAN === */
-
-/* Oculta la sección interna repetida: "Logística integrada..." */
-.page .homeFinalContact :global(section:first-of-type),
-.page .homeFinalContact :global([class*="integrated"]),
-.page .homeFinalContact :global([class*="Integrated"]),
-.page .homeFinalContact :global([class*="solution"]),
-.page .homeFinalContact :global([class*="Solution"]),
-.page .homeFinalContact :global([class*="services"]),
-.page .homeFinalContact :global([class*="Services"]) {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  height: 0 !important;
-  min-height: 0 !important;
-  max-height: 0 !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  overflow: hidden !important;
+/* === REAL ACROSS BUTTON COLOR FINAL === */
+:root {
+  --across-button-blue: #123f59;
 }
 
-/* Quita huecos del cierre */
-.page .aereoFinalStack,
-.page .homeFinalContact {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-  background: #07101a !important;
-  overflow: hidden !important;
+/* Botones principales del hero */
+.primaryBtn,
+.actions a:first-child {
+  background: #123f59 !important;
+  color: #ffffff !important;
+  border-color: #123f59 !important;
 }
 
-.page .aereoFinalStack :global(footer),
-.page .aereoFinalStack :global([class*="footer"]),
-.page .aereoFinalStack :global([class*="Footer"]) {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-  background: #07101a !important;
-  border-top: 0 !important;
+/* Botón de tracking / rastreo */
+.overviewCopy a {
+  background: #123f59 !important;
+  color: #ffffff !important;
+  border-color: #123f59 !important;
 }
 
-/* Mobile: que el espacio para los botones sea oscuro, no una franja crema/blanca */
+/* Botones principales de CTAs finales */
+.finalActions a:first-child,
+.darkBandActions a:first-child {
+  background: #123f59 !important;
+  color: #ffffff !important;
+  border-color: #123f59 !important;
+}
+
+/* Sticky mobile inferior */
 @media (max-width: 900px) {
-  .page {
-    padding-bottom: 0 !important;
-  }
-
-  .page .aereoFinalStack {
-    padding-bottom: calc(76px + env(safe-area-inset-bottom)) !important;
-    background: #07101a !important;
-  }
-
-  .page .homeFinalContact {
-    padding-bottom: 0 !important;
-    margin-bottom: 0 !important;
-  }
-
-  .page .aereoFinalStack :global(footer),
-  .page .aereoFinalStack :global([class*="footer"]),
-  .page .aereoFinalStack :global([class*="Footer"]) {
-    padding-bottom: 0 !important;
-    margin-bottom: 0 !important;
-  }
-
-  .mobileStickyCta {
-    bottom: 0 !important;
-    background: #07101a !important;
+  .mobileStickyCta a:first-child {
+    background: #123f59 !important;
+    color: #ffffff !important;
+    border-color: #123f59 !important;
   }
 }
-
-/* END FINAL STACK GAP AND HOMEFINAL CLEAN */
-
-/* === CENTER PROCESS QUOTE BUTTON TEXT FINAL === */
-.processAccordionPanel a,
-.processAccordionBody a,
-.processAccordionContent a,
-.processAccordionItem a,
-.processAccordionSection details a {
-  min-height: 38px !important;
-  height: 38px !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  line-height: 1 !important;
-  vertical-align: middle !important;
-  text-align: center !important;
-}
-
-.processAccordionPanel a *,
-.processAccordionBody a *,
-.processAccordionContent a *,
-.processAccordionItem a *,
-.processAccordionSection details a * {
-  line-height: 1 !important;
-}
-/* END CENTER PROCESS QUOTE BUTTON TEXT FINAL */
+/* END REAL ACROSS BUTTON COLOR FINAL */
 
