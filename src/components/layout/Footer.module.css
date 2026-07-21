@@ -894,3 +894,93 @@
   }
 }
 
+
+
+/* === FOOTER REMOVE NAV LINK PILL FINAL === */
+
+/* Links normales del footer: sin cápsula, sin fondo de hover pegado */
+.footer a:not([aria-label*="LinkedIn"]):not([aria-label*="Facebook"]):not([aria-label*="Instagram"]):not([aria-label*="Twitter"]):not([aria-label*="X"]) {
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+/* Hover/focus de links normales: que no parezca seleccionado */
+.footer a:not([aria-label*="LinkedIn"]):not([aria-label*="Facebook"]):not([aria-label*="Instagram"]):not([aria-label*="Twitter"]):not([aria-label*="X"]):hover,
+.footer a:not([aria-label*="LinkedIn"]):not([aria-label*="Facebook"]):not([aria-label*="Instagram"]):not([aria-label*="Twitter"]):not([aria-label*="X"]):focus,
+.footer a:not([aria-label*="LinkedIn"]):not([aria-label*="Facebook"]):not([aria-label*="Instagram"]):not([aria-label*="Twitter"]):not([aria-label*="X"]):focus-visible,
+.footer a:not([aria-label*="LinkedIn"]):not([aria-label*="Facebook"]):not([aria-label*="Instagram"]):not([aria-label*="Twitter"]):not([aria-label*="X"]):active {
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  color: #f4efe4 !important;
+  -webkit-text-fill-color: #f4efe4 !important;
+  text-decoration: none !important;
+}
+
+/* Círculos sociales: se mantienen crema */
+.footer a[aria-label*="LinkedIn"],
+.footer a[aria-label*="Facebook"],
+.footer a[aria-label*="Instagram"],
+.footer a[aria-label*="Twitter"],
+.footer a[aria-label*="X"] {
+  background: #f4efe4 !important;
+  color: #07111d !important;
+  -webkit-text-fill-color: #07111d !important;
+  border: 1px solid rgba(214, 192, 141, .65) !important;
+  border-radius: 999px !important;
+  box-shadow:
+    0 10px 24px rgba(0,0,0,.28),
+    inset 0 1px 0 rgba(255,255,255,.75) !important;
+}
+
+/* END FOOTER REMOVE NAV LINK PILL FINAL */
+
+
+/* === FOOTER BOTTOM CENTER STACK FINAL === */
+
+/* Última línea del footer: copyright centrado y Across Logistics debajo */
+.footer > :last-child {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: .28rem !important;
+  margin-top: 1rem !important;
+  padding-top: .65rem !important;
+  text-align: center !important;
+}
+
+.footer > :last-child > * {
+  margin: 0 auto !important;
+  text-align: center !important;
+  justify-self: center !important;
+  align-self: center !important;
+}
+
+.footer > :last-child a,
+.footer > :last-child span,
+.footer > :last-child p,
+.footer > :last-child small {
+  text-align: center !important;
+}
+
+@media (max-width: 900px) {
+  .footer > :last-child {
+    gap: .22rem !important;
+    margin-top: .8rem !important;
+    padding-top: .55rem !important;
+  }
+}
+
+/* END FOOTER BOTTOM CENTER STACK FINAL */

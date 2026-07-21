@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import RelatedServices from "@/app/servicios/_shared/RelatedServices";
+import HomeCorporateFinal from "@/components/sections/HomeCorporateFinal";
 import styles from "./Servicio.module.css";
 
 type Locale = "es" | "en" | "zh";
@@ -44,7 +45,7 @@ const copy = {
     overviewEyebrow: "LOGÍSTICA SENSIBLE",
     overviewTitle: "Control térmico, seguridad y trazabilidad para mercancías críticas.",
     overviewText: "La carga con temperatura controlada exige planificación, equipos adecuados, seguimiento y protocolos claros. Diseñamos operaciones para proteger la integridad del producto.",
-    overviewButton: "Hablar con un especialista",
+    overviewButton: "Rastrea tu carga",
 
     stickyPrimary: "Cotizar frío",
     stickySecondary: "Hablar ahora",
@@ -218,7 +219,7 @@ const copy = {
     overviewEyebrow: "SENSITIVE LOGISTICS",
     overviewTitle: "Thermal control, safety and traceability for critical goods.",
     overviewText: "Temperature-controlled cargo requires planning, proper equipment, tracking and clear protocols. We design operations to protect product integrity.",
-    overviewButton: "Talk to a specialist",
+    overviewButton: "Track your cargo",
 
     stickyPrimary: "Quote cold",
     stickySecondary: "Talk now",
@@ -392,7 +393,7 @@ const copy = {
     overviewEyebrow: "敏感物流",
     overviewTitle: "为关键货物提供温控、安全和可追踪性。",
     overviewText: "温控货物需要规划、合适设备、跟踪和明确协议。我们设计操作以保护产品完整性。",
-    overviewButton: "联系专家",
+    overviewButton: "追踪货物",
 
     stickyPrimary: "冷链报价",
     stickySecondary: "立即联系",
@@ -902,7 +903,7 @@ export default function TemperaturaControladaPage() {
             <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
             <h2>{t.overviewTitle}</h2>
             <p>{t.overviewText}</p>
-            <Link href="/contacto">{t.overviewButton}</Link>
+            <Link href="/tracking">{t.overviewButton}</Link>
           </div>
 
           <div className={styles.pillars}>
@@ -922,16 +923,7 @@ export default function TemperaturaControladaPage() {
           </div>
         </section>
 
-        <section
-          className={styles.services}
-          data-mobile-hide-after-cert="true"
-          style={
-            {
-              "--desktop-bg": "url('/images/transporte-cima/climatizado.png')",
-              "--mobile-bg": "url('/images/transporte-climamobile/clima.png')",
-            } as CSSProperties
-          }
-        >
+        <section className={styles.services} data-mobile-hide-after-cert="true">
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -977,28 +969,112 @@ export default function TemperaturaControladaPage() {
           </div>
         </section>
 
-        <section className={styles.process}>
-          <div className={styles.sectionHead}>
+        <section className={`${styles.processAccordionSection} aereoProcessPremium`}>
+          <div className={styles.processAccordionHead}>
             <span className={styles.eyebrow}>{t.processEyebrow}</span>
             <h2>{t.processTitle}</h2>
           </div>
+          <style>{`
+            /* AEREO_PROCESS_INLINE_FORCE */
+            @media (max-width: 900px) {
+              .aereoProcessPremium .aereoProcessCard {
+                background: linear-gradient(145deg, #07111d 0%, #102f45 100%) !important;
+                color: #fff !important;
+              }
 
-          <div className={styles.processGrid}>
-            {t.process.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["search", "route", "document", "plane", "tracking", "truck"];
+              .aereoProcessPremium .aereoProcessTitle,
+              .aereoProcessPremium .aereoProcessTitle *,
+              .aereoProcessPremium .aereoProcessSummary,
+              .aereoProcessPremium .aereoProcessSummary * {
+                color: #fff !important;
+                -webkit-text-fill-color: #fff !important;
+                opacity: 1 !important;
+                filter: none !important;
+                mix-blend-mode: normal !important;
+              }
 
-              return (
-                <article key={title}>
-                  <strong>{index + 1}</strong>
-                  <i>
-                    <Icon name={icons[index]} />
-                  </i>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                </article>
-              );
-            })}
+              .aereoProcessPremium .aereoProcessTitle small {
+                color: rgba(255,255,255,.72) !important;
+                -webkit-text-fill-color: rgba(255,255,255,.72) !important;
+              }
+
+              .aereoProcessPremium .aereoProcessBody,
+              .aereoProcessPremium .aereoProcessBody p {
+                color: rgba(255,255,255,.78) !important;
+                -webkit-text-fill-color: rgba(255,255,255,.78) !important;
+              }
+
+              .aereoProcessPremium .aereoProcessBody a {
+                color: #fff !important;
+                -webkit-text-fill-color: #fff !important;
+              }
+
+              .aereoProcessPremium .aereoProcessIcon::before,
+              .aereoProcessPremium .aereoProcessIcon::after {
+                background: #d6b36b !important;
+              }
+            }
+          `}</style>
+
+          <div className={styles.processAccordionList}>
+            {t.process.map(([title, text]: string[], index: number) => (
+              <details className={`${styles.processAccordionCard} aereoProcessCard`} key={title}>
+                <summary className={`${styles.processAccordionSummary} aereoProcessSummary`}>
+                  <span className={styles.processAccordionNumber}>{index + 1}</span>
+
+                  <span className={`${styles.processAccordionTitle} aereoProcessTitle`}>
+                    <strong>{title}</strong>
+                    <small>{text}</small>
+                  </span>
+
+                  <span className={`${styles.processAccordionIcon} aereoProcessIcon`} aria-hidden="true" />
+                </summary>
+
+                <div className={`${styles.processAccordionBody} aereoProcessBody`}>
+                  <p>
+                    {locale === "es"
+                      ? "Coordinamos ruta, documentación, tiempos y seguimiento operativo según la urgencia de la carga."
+                      : locale === "en"
+                        ? "We coordinate route, documentation, timing and operational tracking according to cargo urgency."
+                        : "我们根据货物紧急程度协调路线、文件、时间和操作跟踪。"}
+                  </p>
+
+                  <Link href="/cotizacion?servicio=temperatura-controlada">
+                    {locale === "es" ? "Cotizar esta modalidad" : locale === "en" ? "Quote this option" : "获取报价"}
+                  </Link>
+                </div>
+              </details>
+            ))}          </div>
+
+          <div className={styles.processAccordionActions}>
+            <div>
+              <strong>
+                {locale === "es"
+                  ? "¿Tenés una operación de temperatura controlada en curso?"
+                  : locale === "en"
+                    ? "Do you have an air operation in progress?"
+                    : "您是否有正在进行的空运操作？"}
+              </strong>
+              <p>
+                {locale === "es"
+                  ? "Coordinamos ruta, documentación y seguimiento para que tu carga avance sin fricción."
+                  : locale === "en"
+                    ? "We coordinate routing, documentation and tracking so your cargo moves without friction."
+                    : "我们协调路线、文件和跟踪，确保您的货物顺利推进。"}
+              </p>
+            </div>
+
+            <div>
+              <Link href="/cotizacion?servicio=temperatura-controlada">
+                {locale === "es" ? "Solicitar cotización de temperatura controlada" : locale === "en" ? "Request air quote" : "申请空运报价"}
+              </Link>
+
+              <Link href="/contacto?servicio=temperatura-controlada">
+                {locale === "es" ? "Hablar con asesor" : locale === "en" ? "Talk to an advisor" : "联系顾问"}
+              </Link>
+            </div>
           </div>
+
         </section>
 
         <section className={styles.darkBand} data-mobile-hide-after-cert="true">
@@ -1031,60 +1107,120 @@ export default function TemperaturaControladaPage() {
           </div>
         </section>
 
-        <section
-          className={styles.finalCta}
-          style={
-            {
-              "--desktop-bg": "url('/images/transporte-cima/controltemp.png')",
-              "--mobile-bg": "url('/images/transporte-climamobile/clima.png')",
-            } as CSSProperties
-          }
-          data-across-final-cta="true"
-        >
-          <div>
-            <h2>{t.finalTitle}</h2>
-            <p>{t.finalText}</p>
+        <section className={styles.faqSection} data-temperatura-controlada-faq-section="true">
+          <div className={styles.faqHead}>
+            <span className={styles.eyebrow}>
+              {locale === "es" ? "Preguntas frecuentes" : locale === "en" ? "Frequently asked questions" : "常见问题"}
+            </span>
 
-            <div className={styles.finalActions}>
-              <Link href="/contacto?servicio=temperatura-controlada">{t.finalPrimary}</Link>
-              <Link href="/cotizacion?servicio=temperatura-controlada">{t.finalSecondary}</Link>
-            </div>
+            <h2>
+              {locale === "es"
+                ? "Dudas frecuentes sobre logística con temperatura controlada."
+                : locale === "en"
+                  ? "Common questions about temperature-controlled logistics."
+                  : "关于温控物流的常见问题。"}
+            </h2>
+
+            <p>
+              {locale === "es"
+                ? "Resolvemos las principales dudas antes de coordinar una carga sensible a temperatura: rango térmico, embalaje, trazabilidad, documentación y entrega."
+                : locale === "en"
+                  ? "We answer the main questions before coordinating temperature-sensitive cargo: temperature range, packaging, traceability, documentation and delivery."
+                  : "我们解答温控货物运输前的主要问题：温度范围、包装、可追溯性、文件和交付。"}
+            </p>
           </div>
 
-          <div className={styles.finalImage}>
-            <Image
-              src="/images/o.png"
-              alt={t.finalTitle}
-              fill
-              sizes="(max-width: 900px) 100vw, 44vw"
-            />
+          <div className={styles.faqList}>
+            {[
+              [
+                locale === "es" ? "¿Qué cargas requieren temperatura controlada?" : locale === "en" ? "What cargo requires temperature control?" : "哪些货物需要温控？",
+                locale === "es"
+                  ? "Productos farmacéuticos, sanitarios, alimentos, perecederos, químicos sensibles, cosmética y mercancía que requiere un rango térmico estable."
+                  : locale === "en"
+                    ? "Pharmaceuticals, healthcare products, food, perishables, sensitive chemicals, cosmetics and goods that require a stable temperature range."
+                    : "药品、医疗产品、食品、易腐品、敏感化学品、化妆品以及需要稳定温度范围的货物。"
+              ],
+              [
+                locale === "es" ? "¿Cómo se define el rango de temperatura?" : locale === "en" ? "How is the temperature range defined?" : "温度范围如何确定？",
+                locale === "es"
+                  ? "Se define según el producto, ficha técnica, requisitos del fabricante, embalaje, normativa y condiciones de tránsito."
+                  : locale === "en"
+                    ? "It is defined according to the product, technical sheet, manufacturer requirements, packaging, regulations and transit conditions."
+                    : "温度范围根据产品、技术资料、制造商要求、包装、法规和运输条件确定。"
+              ],
+              [
+                locale === "es" ? "¿Se puede hacer seguimiento de la cadena de frío?" : locale === "en" ? "Can the cold chain be tracked?" : "冷链可以跟踪吗？",
+                locale === "es"
+                  ? "Sí. Coordinamos seguimiento operativo y trazabilidad de hitos críticos para mantener visibilidad durante la operación."
+                  : locale === "en"
+                    ? "Yes. We coordinate operational tracking and traceability of critical milestones to maintain visibility during the operation."
+                    : "可以。我们协调关键节点的操作跟踪和可追溯性，以保持运输过程可视化。"
+              ],
+              [
+                locale === "es" ? "¿Across coordina transporte internacional con temperatura controlada?" : locale === "en" ? "Does Across coordinate international temperature-controlled transport?" : "Across 是否协调国际温控运输？",
+                locale === "es"
+                  ? "Sí. Coordinamos operaciones internacionales con proveedores, documentación, aduanas, manipulación y entrega final."
+                  : locale === "en"
+                    ? "Yes. We coordinate international operations with providers, documentation, customs, handling and final delivery."
+                    : "是的。我们协调国际操作，包括供应商、文件、清关、操作和最终交付。"
+              ],
+              [
+                locale === "es" ? "¿Qué información necesito para cotizar?" : locale === "en" ? "What information is needed for a quote?" : "报价需要哪些信息？",
+                locale === "es"
+                  ? "Producto, volumen, peso, origen, destino, rango de temperatura, embalaje, fecha estimada y requisitos documentales."
+                  : locale === "en"
+                    ? "Product, volume, weight, origin, destination, temperature range, packaging, estimated date and documentation requirements."
+                    : "产品、体积、重量、起点、目的地、温度范围、包装、预计日期和文件要求。"
+              ],
+              [
+                locale === "es" ? "¿Qué pasa si la carga es farmacéutica o sanitaria?" : locale === "en" ? "What if the cargo is pharmaceutical or healthcare-related?" : "如果货物是药品或医疗产品怎么办？",
+                locale === "es"
+                  ? "Revisamos requisitos de manipulación, documentación, trazabilidad y condiciones de transporte para reducir riesgos operativos."
+                  : locale === "en"
+                    ? "We review handling, documentation, traceability and transport conditions to reduce operational risks."
+                    : "我们审核操作、文件、可追溯性和运输条件，以降低操作风险。"
+              ]
+            ].map(([question, answer]) => (
+              <details className={styles.faqItem} key={question}>
+                <summary>
+                  <span>{question}</span>
+                  <i aria-hidden="true" />
+                </summary>
+
+                <div>
+                  <p>{answer}</p>
+                </div>
+              </details>
+            ))}
           </div>
         </section>
-        <section className={styles.contactHero} aria-labelledby="contact-hero-title">
-          <div className={styles.contactHeroContent}>
-            <span className={styles.eyebrow}>{t.contactEyebrow}</span>
-            <h2 id="contact-hero-title">{t.contactTitle}</h2>
-            <p>{t.contactText}</p>
 
-            <div className={styles.contactHeroActions}>
-              <Link href="/contacto">{t.contactPrimary}</Link>
-              <Link href={`/cotizacion?servicio=temperatura-controlada`}>{t.contactSecondary}</Link>
-            </div>
+
+
+
+
+<RelatedServices current="temperatura-controlada" locale={locale} />
+
+        <div className={styles.aereoFinalStack}>
+          <div className={styles.homeFinalContact}>
+            <HomeCorporateFinal />
           </div>
 
-          <div className={styles.contactHeroImage} aria-hidden="true">
-            <Image
-              src="/images/contactoimagen.png"
-              alt=""
-              fill
-              sizes="(max-width: 900px) 100vw, 46vw"
-            />
-          </div>
-        </section>
+          <Footer />
+        </div>
 
-
-<RelatedServices current="transporte-aereo" locale={locale} />
       </main>
+
+      <div className={styles.mobileStickyCta} aria-label="Acciones rápidas de temperatura controlada">
+        <Link href="/cotizacion?servicio=temperatura-controlada">
+          SOLICITAR COTIZACIÓN
+        </Link>
+
+        <Link href="/contacto?servicio=temperatura-controlada">
+          HABLAR CON ASESOR
+        </Link>
+      </div>
+
 
 
       <div className={styles.mobileStickyCta} aria-label="Acciones rápidas">
@@ -1097,7 +1233,7 @@ export default function TemperaturaControladaPage() {
         </Link>
       </div>
 
-      <Footer />
+      
     </div>
   );
 }

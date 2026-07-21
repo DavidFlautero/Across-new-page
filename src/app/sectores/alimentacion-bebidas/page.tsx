@@ -15,9 +15,9 @@ type Locale = "es" | "en" | "zh";
 
 const copy = {
   "es": {
-    "heroEyebrow": "Sector alimentación y bebidas",
-    "heroTitle": "Logística para productos que exigen tiempo, control y confianza.",
-    "heroText": "Diseñamos operaciones logísticas para alimentos, bebidas, perecederos y productos de consumo, integrando transporte, almacenaje, distribución, trazabilidad y control operativo.",
+    "heroEyebrow": "Transporte especial para",
+    "heroTitle": "Alimentos y Bebidas",
+    "heroText": "Soluciones logísticas para alimentos y bebidas, con control, trazabilidad y cadena de frío cuando el producto lo requiere.",
     "primaryCta": "Solicitar propuesta logística",
     "secondaryCta": "Hablar con un especialista",
     "activeLabel": "Operación alimentaria activa",
@@ -46,7 +46,7 @@ const copy = {
       ]
     ],
     "overviewEyebrow": "Logística sectorial",
-    "overviewTitle": "Soluciones logísticas para cadenas alimentarias que no pueden fallar.",
+    "overviewTitle": "Expertos en transporte y logística en el sector de Alimentos y Bebidas.",
     "overviewText": "El sector de alimentación y bebidas exige velocidad, cuidado del producto, cumplimiento documental y continuidad. Coordinamos operaciones diseñadas para proteger mercancía, reducir riesgos y mantener la cadena en movimiento.",
     "overviewButton": "Conocer más sobre alimentación y bebidas",
     "pillars": [
@@ -817,6 +817,8 @@ export default function AlimentacionBebidasSectorPage() {
               <span className={styles.eyebrow}>{t.heroEyebrow}</span>
               <h1 className={styles.title}>{t.heroTitle}</h1>
               <p className={styles.subtitle}>{t.heroText}</p>
+
+              
 
               <div className={styles.actions}>
                 <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>

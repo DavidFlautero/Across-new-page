@@ -9958,3 +9958,26 @@ a.primaryBtn:hover {
 }
 
 /* === SERVICE PROCESS ICONS LIKE SECTORES FINAL END === */
+
+
+/* Más aire en el texto pequeño del hero */
+.hero .eyebrow {
+  letter-spacing: .28em !important;
+}
+
+
+/* === ALIMENTOS Y BEBIDAS TITLE ONE LINE FINAL === */
+@media (min-width: 901px) {
+  .page > .hero .heroContent {
+    width: auto !important;
+    max-width: none !important;
+  }
+
+  .page > .hero .title {
+    width: max-content !important;
+    max-width: none !important;
+    white-space: nowrap !important;
+    text-wrap: nowrap !important;
+    font-size: clamp(3.4rem, 4.2vw, 4.8rem) !important;
+  }
+}
