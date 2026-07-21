@@ -275,7 +275,7 @@ export default function SectorLeadForm() {
           <textarea
             name="message"
             placeholder={t.message}
-            rows={6}
+            rows={4}
             required
             minLength={10}
             className={`${styles.sectorLeadControl} ${styles.sectorLeadMessage}`}
@@ -324,6 +324,66 @@ export default function SectorLeadForm() {
         </form>
 
       </div>
+
+      <style jsx global>{`
+        /* Quita las pequeñas flechas/pseudo-elementos duplicados a la izquierda
+           sin tocar la flecha principal de navegación a la derecha. */
+        [class*="serviceGrid"] article::before,
+        [class*="serviceGrid"] article::after,
+        [class*="serviceGrid"] a::before {
+          content: none !important;
+          display: none !important;
+        }
+
+        /* La segunda línea "Across Logistics" del copyright no aporta información. */
+        footer [class*="bottom"] > span:last-child {
+          display: none !important;
+        }
+
+        @media (max-width: 700px) {
+          /* Formulario móvil más compacto, manteniendo áreas táctiles cómodas. */
+          #solicitar-propuesta form {
+            gap: 0.62rem !important;
+            padding: 1.15rem 1rem 1.3rem !important;
+          }
+
+          #solicitar-propuesta input:not([type="checkbox"]),
+          #solicitar-propuesta select {
+            min-height: 44px !important;
+            padding-top: 0.68rem !important;
+            padding-bottom: 0.68rem !important;
+          }
+
+          #solicitar-propuesta textarea {
+            min-height: 96px !important;
+            padding-top: 0.72rem !important;
+            padding-bottom: 0.72rem !important;
+          }
+
+          /* Footer más liviano después del formulario. */
+          footer [class*="top"] {
+            gap: 0.48rem !important;
+          }
+
+          footer [class*="section"] {
+            border-radius: 13px !important;
+          }
+
+          footer [class*="section"] > h3 {
+            min-height: 46px !important;
+          }
+
+          footer [class*="brand"] {
+            padding-bottom: 0.8rem !important;
+            margin-bottom: 0.1rem !important;
+          }
+
+          footer [class*="bottom"] {
+            margin-top: 0.75rem !important;
+            padding-top: 0.55rem !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
