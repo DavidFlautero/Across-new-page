@@ -45,10 +45,10 @@ const copy = {
         "Documentación y control"
       ]
     ],
-    "overviewEyebrow": "Logística sectorial",
-    "overviewTitle": "Expertos en transporte y logística en el sector de Alimentos y Bebidas.",
-    "overviewText": "El sector de alimentación y bebidas exige velocidad, cuidado del producto, cumplimiento documental y continuidad. Coordinamos operaciones diseñadas para proteger mercancía, reducir riesgos y mantener la cadena en movimiento.",
-    "overviewButton": "Conocer más sobre alimentación y bebidas",
+    "overviewEyebrow": "Expertos en el sector",
+    "overviewTitle": "Expertos en transporte y logística para el sector de Alimentos y Bebidas.",
+    "overviewText": "El transporte de alimentos y bebidas exige precisión, trazabilidad y capacidad de respuesta. Diseñamos soluciones para mercancía perecedera, productos con temperatura controlada y operaciones nacionales e internacionales, adaptando cada movimiento a los requisitos del producto, el mercado y el destino.",
+    "overviewButton": "Hablar con un especialista",
     "pillars": [
       [
         "Control de producto",
@@ -67,34 +67,34 @@ const copy = {
         "Soluciones con control térmico cuando el producto lo requiere."
       ]
     ],
-    "servicesEyebrow": "Soluciones para alimentación y bebidas",
-    "servicesTitle": "Operaciones diseñadas para productos de consumo.",
+    "servicesEyebrow": "Soluciones especializadas",
+    "servicesTitle": "Servicios logísticos para cada necesidad del sector.",
     "services": [
       [
-        "Transporte nacional e internacional",
-        "Coordinación de movimientos terrestres, marítimos o aéreos según urgencia y volumen."
+            "Temperatura controlada",
+            "Soluciones para productos perecederos y mercancías sensibles que requieren condiciones térmicas específicas."
       ],
       [
-        "Distribución comercial",
-        "Entregas a clientes, cadenas, puntos de venta o centros de distribución."
+            "Transporte terrestre",
+            "Distribución nacional e internacional con planificación de rutas, tiempos y entregas."
       ],
       [
-        "Carga refrigerada",
-        "Soluciones para productos perecederos o sensibles a temperatura."
+            "Transporte aéreo",
+            "Soluciones para operaciones urgentes, productos sensibles y mercancías de alto valor."
       ],
       [
-        "Almacenaje y preparación",
-        "Gestión de stock, picking, packing y salidas programadas."
+            "Transporte marítimo",
+            "Gestión de cargas internacionales adaptada al volumen, destino y necesidades de cada operación."
       ],
       [
-        "Importación y exportación",
-        "Soporte documental, aduanero y operativo para comercio internacional."
+            "Almacén y distribución",
+            "Gestión de stock, preparación de pedidos y distribución hacia clientes, retail y centros logísticos."
       ],
       [
-        "Door to door",
-        "Coordinación completa desde origen hasta entrega final."
+            "Servicios de aduanas",
+            "Coordinación documental y aduanera para facilitar operaciones de importación y exportación."
       ]
-    ],
+],
     "useCasesEyebrow": "Cuándo necesita logística especializada",
     "useCasesTitle": "Cuando el producto debe llegar bien, a tiempo y bajo control.",
     "useCases": [
@@ -123,34 +123,26 @@ const copy = {
         "Mercancía que requiere cuidado, trazabilidad o control térmico."
       ]
     ],
-    "processEyebrow": "Nuestro proceso operativo",
-    "processTitle": "Una operación alimentaria clara desde la planificación hasta la entrega.",
+    "processEyebrow": "Nuestro proceso",
+    "processTitle": "Una operación clara y coordinada de principio a fin.",
     "process": [
       [
-        "Análisis del producto",
-        "Revisamos tipo de mercancía, sensibilidad, volumen y requisitos."
+            "Analizamos la mercancía",
+            "Revisamos el producto, sensibilidad, volumen, origen, destino y requisitos específicos."
       ],
       [
-        "Diseño logístico",
-        "Definimos transporte, almacenamiento, distribución y tiempos."
+            "Diseñamos la solución",
+            "Definimos transporte, temperatura, almacenamiento, documentación y tiempos según la operación."
       ],
       [
-        "Documentación",
-        "Coordinamos requisitos comerciales, sanitarios o aduaneros cuando aplica."
+            "Coordinamos y monitorizamos",
+            "Gestionamos la ejecución y el seguimiento de cada hito para mantener visibilidad y control."
       ],
       [
-        "Preparación operativa",
-        "Gestionamos retiro, carga, acondicionamiento y salida."
-      ],
-      [
-        "Seguimiento",
-        "Monitoreamos avance, hitos y trazabilidad."
-      ],
-      [
-        "Entrega final",
-        "Coordinamos recepción, descarga y cierre operativo."
+            "Entregamos",
+            "Coordinamos la entrega final y el cierre operativo asegurando continuidad y cumplimiento."
       ]
-    ],
+],
     "bandTitle": "Logística alimentaria diseñada para proteger producto y continuidad.",
     "bandText": "Nuestro equipo coordina operaciones para empresas que necesitan puntualidad, trazabilidad y respuesta profesional en alimentos, bebidas y productos de consumo.",
     "stats": [
@@ -171,8 +163,8 @@ const copy = {
         "Especialistas dedicados"
       ]
     ],
-    "finalTitle": "Coordinemos su próxima operación de alimentación y bebidas.",
-    "finalText": "Cuéntenos tipo de producto, volumen, origen, destino y requisitos. Nuestro equipo analizará la mejor solución logística.",
+    "finalTitle": "¿Necesita transportar alimentos o bebidas?",
+    "finalText": "Cuéntenos las características de su mercancía, origen y destino. Nuestro equipo diseñará una solución adaptada a sus necesidades de transporte, control y conservación.",
     "finalPrimary": "Solicitar propuesta logística",
     "finalSecondary": "Hablar con un especialista"
   },
@@ -207,10 +199,10 @@ const copy = {
         "Documentation and control"
       ]
     ],
-    "overviewEyebrow": "Sector logistics",
-    "overviewTitle": "Logistics solutions for food supply chains that cannot fail.",
-    "overviewText": "The food and beverage sector requires speed, product care, document compliance and continuity. We coordinate operations designed to protect goods, reduce risks and keep the chain moving.",
-    "overviewButton": "Learn more about food and beverages",
+    "overviewEyebrow": "Sector expertise",
+    "overviewTitle": "Experts in transport and logistics for the Food and Beverage sector.",
+    "overviewText": "Food and beverage transport demands precision, traceability and responsiveness. We design solutions for perishable goods, temperature-controlled products and domestic and international operations, adapting every movement to the product, market and destination requirements.",
+    "overviewButton": "Talk to a specialist",
     "pillars": [
       [
         "Product control",
@@ -229,34 +221,34 @@ const copy = {
         "Temperature-controlled solutions when the product requires it."
       ]
     ],
-    "servicesEyebrow": "Food and beverage solutions",
-    "servicesTitle": "Operations designed for consumer products.",
+    "servicesEyebrow": "Specialized solutions",
+    "servicesTitle": "Logistics services for every sector requirement.",
     "services": [
       [
-        "Domestic and international transport",
-        "Road, ocean or air movements according to urgency and volume."
+            "Temperature-controlled logistics",
+            "Solutions for perishable and sensitive products requiring specific thermal conditions."
       ],
       [
-        "Commercial distribution",
-        "Deliveries to clients, chains, points of sale or distribution centers."
+            "Road transport",
+            "Domestic and international distribution with coordinated routes, timing and deliveries."
       ],
       [
-        "Refrigerated cargo",
-        "Solutions for perishable or temperature-sensitive products."
+            "Air freight",
+            "Solutions for urgent operations, sensitive products and high-value cargo."
       ],
       [
-        "Warehousing and preparation",
-        "Stock management, picking, packing and scheduled dispatches."
+            "Ocean freight",
+            "International cargo management adapted to volume, destination and operational requirements."
       ],
       [
-        "Import and export",
-        "Document, customs and operational support for international trade."
+            "Warehousing and distribution",
+            "Stock management, order preparation and distribution to clients, retail and logistics centers."
       ],
       [
-        "Door to door",
-        "Complete coordination from origin to final delivery."
+            "Customs services",
+            "Customs and documentation coordination for efficient import and export operations."
       ]
-    ],
+],
     "useCasesEyebrow": "When specialized logistics is needed",
     "useCasesTitle": "When the product must arrive properly, on time and under control.",
     "useCases": [
@@ -285,34 +277,26 @@ const copy = {
         "Goods requiring care, traceability or thermal control."
       ]
     ],
-    "processEyebrow": "Our operational process",
-    "processTitle": "A clear food logistics operation from planning to delivery.",
+    "processEyebrow": "Our process",
+    "processTitle": "A clear and coordinated operation from start to finish.",
     "process": [
       [
-        "Product analysis",
-        "We review goods type, sensitivity, volume and requirements."
+            "We analyze the cargo",
+            "We review the product, sensitivity, volume, origin, destination and specific requirements."
       ],
       [
-        "Logistics design",
-        "We define transport, warehousing, distribution and timing."
+            "We design the solution",
+            "We define transport, temperature, warehousing, documentation and timing."
       ],
       [
-        "Documentation",
-        "We coordinate commercial, sanitary or customs requirements when applicable."
+            "We coordinate and monitor",
+            "We manage execution and track every milestone to maintain visibility and control."
       ],
       [
-        "Operational setup",
-        "We manage pickup, loading, conditioning and dispatch."
-      ],
-      [
-        "Tracking",
-        "We monitor progress, milestones and traceability."
-      ],
-      [
-        "Final delivery",
-        "We coordinate reception, unloading and operational closure."
+            "We deliver",
+            "We coordinate final delivery and operational closure, ensuring continuity and compliance."
       ]
-    ],
+],
     "bandTitle": "Food logistics designed to protect product and continuity.",
     "bandText": "Our team coordinates operations for companies that need punctuality, traceability and professional response in food, beverages and consumer products.",
     "stats": [
@@ -333,8 +317,8 @@ const copy = {
         "Dedicated specialists"
       ]
     ],
-    "finalTitle": "Let’s coordinate your next food and beverage operation.",
-    "finalText": "Tell us product type, volume, origin, destination and requirements. Our team will analyze the best logistics solution.",
+    "finalTitle": "Do you need to transport food or beverages?",
+    "finalText": "Tell us about your cargo, origin and destination. Our team will design a solution adapted to your transport, control and preservation requirements.",
     "finalPrimary": "Request logistics proposal",
     "finalSecondary": "Talk to a specialist"
   },
@@ -369,10 +353,10 @@ const copy = {
         "文件与控制"
       ]
     ],
-    "overviewEyebrow": "行业物流",
-    "overviewTitle": "为不能失败的食品供应链提供物流解决方案。",
-    "overviewText": "食品与饮料行业需要速度、产品保护、文件合规和连续性。我们协调运营以保护货物、降低风险并保持供应链流动。",
-    "overviewButton": "了解食品与饮料物流",
+    "overviewEyebrow": "行业专业能力",
+    "overviewTitle": "食品与饮料行业运输和物流专家。",
+    "overviewText": "食品与饮料运输需要精准、可追溯性和快速响应能力。我们为易腐产品、温控货物以及国内和国际业务设计物流解决方案，根据产品、市场和目的地的具体要求规划每一次运输。",
+    "overviewButton": "联系专家",
     "pillars": [
       [
         "产品控制",
@@ -391,34 +375,34 @@ const copy = {
         "当产品需要时提供温控解决方案。"
       ]
     ],
-    "servicesEyebrow": "食品与饮料解决方案",
-    "servicesTitle": "为消费品设计的物流运营。",
+    "servicesEyebrow": "专业解决方案",
+    "servicesTitle": "满足行业不同需求的专业物流服务。",
     "services": [
       [
-        "国内和国际运输",
-        "根据紧急程度和体量协调陆运、海运或空运。"
+            "温控物流",
+            "为易腐和温度敏感产品提供专业温控运输解决方案。"
       ],
       [
-        "商业配送",
-        "配送到客户、连锁、销售点或配送中心。"
+            "陆路运输",
+            "通过路线、时间和交付规划协调国内及国际配送。"
       ],
       [
-        "冷藏货物",
-        "为易腐或温度敏感产品提供解决方案。"
+            "航空运输",
+            "为紧急运输、敏感产品和高价值货物提供解决方案。"
       ],
       [
-        "仓储与准备",
-        "库存管理、拣货、包装和计划出库。"
+            "海运",
+            "根据货量、目的地和运营需求管理国际海运业务。"
       ],
       [
-        "进出口",
-        "为国际贸易提供文件、海关和运营支持。"
+            "仓储与配送",
+            "提供库存管理、订单准备以及客户和零售配送服务。"
       ],
       [
-        "门到门",
-        "从始发地到最终交付的完整协调。"
+            "海关服务",
+            "协调进出口业务所需的海关和文件流程。"
       ]
-    ],
+],
     "useCasesEyebrow": "何时需要专业物流",
     "useCasesTitle": "当产品必须完好、准时且受控到达时。",
     "useCases": [
@@ -447,34 +431,26 @@ const copy = {
         "需要保护、可追溯或温控的货物。"
       ]
     ],
-    "processEyebrow": "我们的运营流程",
-    "processTitle": "从规划到交付，食品物流清晰可控。",
+    "processEyebrow": "我们的流程",
+    "processTitle": "从开始到交付，清晰且协调的物流运营。",
     "process": [
       [
-        "产品分析",
-        "审核货物类型、敏感性、体量和要求。"
+            "分析货物",
+            "审核产品、敏感性、数量、始发地、目的地和具体要求。"
       ],
       [
-        "物流设计",
-        "确定运输、仓储、配送和时间安排。"
+            "设计解决方案",
+            "确定运输方式、温控、仓储、文件和时间安排。"
       ],
       [
-        "文件管理",
-        "按需协调商业、卫生或海关要求。"
+            "协调与监控",
+            "管理运营执行并跟踪关键节点，保持全程可视和可控。"
       ],
       [
-        "操作准备",
-        "管理提货、装载、处理和出库。"
-      ],
-      [
-        "跟踪",
-        "监控进度、节点和可追溯性。"
-      ],
-      [
-        "最终交付",
-        "协调收货、卸货和运营关闭。"
+            "完成交付",
+            "协调最终交付和运营关闭，确保连续性与合规。"
       ]
-    ],
+],
     "bandTitle": "为保护产品和连续性而设计的食品物流。",
     "bandText": "我们的团队为食品、饮料和消费品企业协调需要准时、可追溯和专业响应的运营。",
     "stats": [
@@ -495,8 +471,8 @@ const copy = {
         "专属专家"
       ]
     ],
-    "finalTitle": "让我们协调您的下一次食品与饮料操作。",
-    "finalText": "告诉我们产品类型、数量、始发地、目的地和要求。我们的团队将分析最佳物流方案。",
+    "finalTitle": "您需要运输食品或饮料吗？",
+    "finalText": "请告诉我们货物特点、始发地和目的地。我们的团队将根据运输、控制和保存要求设计合适的物流解决方案。",
     "finalPrimary": "申请物流方案",
     "finalSecondary": "联系专家"
   }
@@ -862,7 +838,6 @@ export default function AlimentacionBebidasSectorPage() {
           </div>
         </section>
 
-        <Certifications />
 
         <section className={styles.overview}>
           <div className={styles.overviewCopy}>
@@ -889,7 +864,7 @@ export default function AlimentacionBebidasSectorPage() {
           </div>
         </section>
 
-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/sectores/alimentosybebidas.png')" } as CSSProperties}>
+        <section className={styles.services} style={{ "--mobile-bg": "url('/images/sectores/alimentosybebidas.png')" } as CSSProperties}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -897,43 +872,37 @@ export default function AlimentacionBebidasSectorPage() {
 
           <div className={styles.serviceGrid}>
             {t.services.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["plane", "box", "diamond", "charter", "globe", "door"];
+              const icons: IconName[] = ["timer", "truck", "plane", "globe", "box", "document"];
+
+              const serviceHrefs = [
+                "/servicios/temperatura-controlada",
+                "/servicios/transporte-terrestre",
+                "/servicios/transporte-aereo",
+                "/servicios/transporte-maritimo",
+                "/servicios/almacen-distribucion",
+                "/servicios/aduanas",
+              ];
 
               return (
                 <article key={title}>
-                  <i>
-                    <Icon name={icons[index]} />
-                  </i>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
+                  <Link href={serviceHrefs[index]}>
+                    <i>
+                      <Icon name={icons[index]} />
+                    </i>
+
+                    <div>
+                      <h3>{title}</h3>
+                      <p>{text}</p>
+                    </div>
+
+                    <span aria-hidden="true">→</span>
+                  </Link>
                 </article>
               );
             })}
           </div>
         </section>
 
-        <section className={styles.useCases} data-mobile-hide-after-cert="true">
-          <div className={styles.sectionHead}>
-            <span className={styles.eyebrow}>{t.useCasesEyebrow}</span>
-            <h2>{t.useCasesTitle}</h2>
-          </div>
-
-          <div className={styles.useCaseGrid}>
-            {t.useCases.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["gear", "laptop", "package", "medical", "cart", "document"];
-
-              return (
-                <article key={title}>
-                  <i>
-                    <Icon name={icons[index]} />
-                  </i>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                </article>
-              );
-            })}
-          </div>
-        </section>
 
         <section className={styles.process}>
           <div className={styles.sectionHead}>
@@ -943,7 +912,7 @@ export default function AlimentacionBebidasSectorPage() {
 
           <div className={styles.processGrid}>
             {t.process.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["search", "route", "document", "plane", "tracking", "truck"];
+              const icons: IconName[] = ["search", "route", "tracking", "truck"];
 
               return (
                 <article key={title}>
@@ -959,8 +928,9 @@ export default function AlimentacionBebidasSectorPage() {
           </div>
         </section>
 
-        <HomeOperatorOnly />
+        <Certifications />
 
+        <HomeOperatorOnly />
 </main>
 
       <Footer />
