@@ -10585,466 +10585,1038 @@ a.primaryBtn:hover {
   }
 }
 
-/* ============================================================
-   SECTOR LEAD FINAL — ÚNICA VERSIÓN
-   ============================================================ */
+
+/* =========================================================
+   ALIMENTOS Y BEBIDAS — FORMULARIO FINAL DE PROPUESTA
+   ========================================================= */
 
 .sectorLead {
-  width: 100%;
-  padding: clamp(3.5rem, 6vw, 5.5rem) 0;
-  background: #f1eee8;
-}
-
-.sectorLeadInner {
-  width: min(1180px, calc(100% - 48px));
-  margin: 0 auto;
-
-  display: grid;
-  grid-template-columns:
-    minmax(0, .84fr)
-    minmax(520px, 1.16fr);
-
-  overflow: hidden;
-  border-radius: 28px;
-
-  background: #fff;
-
-  box-shadow:
-    0 32px 90px rgba(7, 19, 30, .16);
-}
-
-
-/* ============================================================
-   PANEL IZQUIERDO CON FOTO REAL
-   ============================================================ */
-
-.sectorLeadCopy {
   position: relative;
-  min-width: 0;
-  min-height: 620px;
-
-  display: flex;
-  align-items: center;
-
   overflow: hidden;
-  isolation: isolate;
-
-  background: #071522;
-}
-
-
-/* Contenedor físico de la imagen */
-
-.sectorLeadMedia {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-
-  overflow: hidden;
-}
-
-
-/* Next Image real */
-
-.sectorLeadOperatorImage {
-  object-fit: cover !important;
-  object-position: 72% center !important;
-
-  filter:
-    brightness(.76)
-    contrast(1.06)
-    saturate(.92);
-}
-
-
-/* Overlay separado.
-   Izquierda oscura para texto;
-   derecha más transparente para ver al operador. */
-
-.sectorLeadMedia::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  z-index: 1;
-
+  padding: clamp(4.5rem, 7vw, 7rem) 0;
+  color: #fff;
   background:
     linear-gradient(
       90deg,
-      rgba(4, 15, 25, .92) 0%,
-      rgba(5, 20, 32, .78) 42%,
-      rgba(5, 23, 36, .36) 70%,
-      rgba(5, 23, 36, .16) 100%
-    );
+      rgba(4, 10, 17, .99) 0%,
+      rgba(4, 10, 17, .96) 42%,
+      rgba(4, 10, 17, .86) 68%,
+      rgba(4, 10, 17, .78) 100%
+    ),
+    url("/images/operador/contacenter.png") right center / auto 110% no-repeat,
+    #050a10;
+  isolation: isolate;
+}
 
+.sectorLead::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 10% 40%,
+      rgba(35, 82, 112, .18),
+      transparent 32rem
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, .025),
+      transparent 30%
+    );
 }
 
-
-/* Texto */
-
-.sectorLeadCopyContent {
-  position: relative;
-  z-index: 2;
-
-  width: 100%;
-  padding:
-    clamp(3rem, 5vw, 5rem)
-    clamp(2.3rem, 4vw, 4rem);
+.sectorLeadInner {
+  width: min(1240px, calc(100% - 48px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, .78fr) minmax(560px, 1.22fr);
+  gap: clamp(3rem, 6vw, 6.5rem);
+  align-items: start;
 }
 
-.sectorLeadCopyContent h2 {
-  max-width: 500px;
+.sectorLeadCopy {
+  position: sticky;
+  top: 140px;
+  padding-top: 1rem;
+}
+
+.sectorLeadCopy > span,
+.sectorLeadFormHead > span {
+  display: block;
+  margin-bottom: .85rem;
+  color: #d8ab62;
+  font-size: .68rem;
+  font-weight: 950;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+}
+
+.sectorLeadCopy h2 {
+  max-width: 560px;
   margin: 0;
-
   color: #fff;
-
-  font-size:
-    clamp(2.7rem, 4vw, 4.45rem);
-
-  line-height: .95;
+  font-size: clamp(2.5rem, 4.4vw, 4.8rem);
+  line-height: .94;
   letter-spacing: -.065em;
   font-weight: 950;
-
   text-wrap: balance;
 }
 
-.sectorLeadCopyContent h2::after {
+.sectorLeadCopy h2::after {
   content: ".";
   color: #d8ab62;
 }
 
-.sectorLeadCopyContent p {
-  max-width: 430px;
+.sectorLeadCopy > p {
+  max-width: 510px;
   margin: 1.35rem 0 0;
-
-  color: rgba(255, 255, 255, .82);
-
-  font-size: .98rem;
-  line-height: 1.65;
+  color: rgba(255, 255, 255, .72);
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
+.sectorLeadLine {
+  margin-top: 2.2rem;
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
 
-/* ============================================================
-   FORMULARIO
-   ============================================================ */
+.sectorLeadLine i {
+  width: 42px;
+  height: 1px;
+  display: block;
+  background: #d8ab62;
+}
+
+.sectorLeadLine small {
+  color: rgba(255, 255, 255, .5);
+  font-size: .66rem;
+  font-weight: 900;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
 
 .sectorLeadForm {
-  width: 100%;
-  min-width: 0;
-
-  display: grid;
-  align-content: center;
-  gap: .9rem;
-
-  padding:
-    clamp(2.2rem, 4vw, 3.5rem);
-
-  background: #fff;
+  position: relative;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border: 1px solid rgba(255, 255, 255, .13);
+  border-radius: 18px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(14, 29, 42, .94),
+      rgba(7, 16, 25, .96)
+    );
+  box-shadow:
+    0 35px 90px rgba(0, 0, 0, .32),
+    inset 0 1px 0 rgba(255, 255, 255, .05);
+  backdrop-filter: blur(18px);
 }
 
-.sectorLeadFormTitle {
-  margin: 0 0 .8rem;
+.sectorLeadFormHead {
+  margin-bottom: 1.7rem;
+}
 
-  color: #07131e;
-
-  font-size:
-    clamp(1.8rem, 2.5vw, 2.55rem);
-
+.sectorLeadFormHead h3 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.65rem, 2.5vw, 2.45rem);
   line-height: 1;
   letter-spacing: -.045em;
   font-weight: 950;
 }
 
-
-.sectorLeadTwoCols {
+.sectorLeadGrid {
   display: grid;
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: .85rem;
 }
 
-
-.sectorLeadControl {
+.sectorLeadGrid input,
+.sectorLeadGrid select,
+.sectorLeadGrid textarea {
   width: 100%;
   min-width: 0;
   min-height: 52px;
-
-  padding: .95rem 1rem;
-
-  border: 1px solid transparent;
-  border-radius: 16px;
-  outline: 0;
-
-  background: #f0ede7;
-
-  color: #080b10;
-  -webkit-text-fill-color: #080b10;
-
+  padding: 0 1rem;
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 7px;
+  outline: none;
+  background: rgba(255, 255, 255, .055);
+  color: #fff;
   font: inherit;
-  font-size: .94rem;
-  font-weight: 700;
-
-  box-sizing: border-box;
+  font-size: .88rem;
+  transition:
+    border-color .2s ease,
+    background .2s ease,
+    box-shadow .2s ease;
 }
 
-.sectorLeadControl::placeholder {
-  color: rgba(8, 11, 16, .52);
-  -webkit-text-fill-color:
-    rgba(8, 11, 16, .52);
+.sectorLeadGrid input::placeholder,
+.sectorLeadGrid textarea::placeholder {
+  color: rgba(255, 255, 255, .54);
 }
 
-.sectorLeadControl:focus {
-  background: #f5f2ed;
-
-  border-color:
-    rgba(23, 50, 71, .25);
-
-  box-shadow:
-    0 0 0 3px rgba(23, 50, 71, .07);
+.sectorLeadGrid input:focus,
+.sectorLeadGrid select:focus,
+.sectorLeadGrid textarea:focus {
+  border-color: rgba(216, 171, 98, .7);
+  background: rgba(255, 255, 255, .08);
+  box-shadow: 0 0 0 3px rgba(216, 171, 98, .08);
 }
 
+.sectorLeadGrid select {
+  color: rgba(255, 255, 255, .72);
+  cursor: pointer;
+}
 
-.sectorLeadMessage {
-  min-height: 135px;
+.sectorLeadGrid select option {
+  background: #0d1c2b;
+  color: #fff;
+}
+
+.sectorLeadGrid .sectorLeadMessage {
+  grid-column: 1 / -1;
+  min-height: 130px;
+  padding-top: .9rem;
+  padding-bottom: .9rem;
   resize: vertical;
+  line-height: 1.55;
 }
-
 
 .sectorLeadLegal {
-  margin: .15rem 0 0;
-
-  color: rgba(8, 11, 16, .56);
-
-  font-size: .76rem;
-  line-height: 1.5;
+  margin: 1.25rem 0 1rem;
+  color: rgba(255, 255, 255, .45);
+  font-size: .66rem;
+  line-height: 1.55;
 }
 
-
 .sectorLeadCheck {
-  display: grid;
-  grid-template-columns: auto 1fr;
-
-  gap: .65rem;
-  align-items: start;
-
-  color: rgba(8, 11, 16, .68);
-
-  font-size: .83rem;
-  line-height: 1.4;
+  display: flex;
+  align-items: flex-start;
+  gap: .7rem;
+  margin-top: .65rem;
+  cursor: pointer;
 }
 
 .sectorLeadCheck input {
-  width: 18px;
-  height: 18px;
-
+  flex: 0 0 auto;
+  width: 15px;
+  height: 15px;
   margin-top: .12rem;
-
-  accent-color: #173247;
+  accent-color: #d8ab62;
 }
 
+.sectorLeadCheck span {
+  color: rgba(255, 255, 255, .66);
+  font-size: .72rem;
+  line-height: 1.45;
+}
 
 .sectorLeadSubmit {
   width: 100%;
-  min-height: 56px;
-
-  margin-top: .3rem;
-  padding: 0 1.35rem;
-
-  border:
-    1px solid rgba(216, 171, 98, .42);
-
-  border-radius: 999px;
-
-  background: #123149;
+  min-height: 54px;
+  margin-top: 1.4rem;
+  padding: 0 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid rgba(216, 171, 98, .65);
+  border-radius: 7px;
+  background: #173247;
   color: #fff;
-
   cursor: pointer;
-
   font-size: .76rem;
   font-weight: 950;
-  letter-spacing: .045em;
-
+  letter-spacing: .055em;
   text-transform: uppercase;
-
-  box-shadow:
-    0 18px 42px rgba(18, 49, 73, .24);
-
   transition:
     transform .2s ease,
-    background .2s ease;
+    background .2s ease,
+    border-color .2s ease;
 }
 
 .sectorLeadSubmit:hover {
   transform: translateY(-2px);
-  background: #1a4563;
+  background: #204762;
+  border-color: #d8ab62;
 }
 
 .sectorLeadSubmit:disabled {
-  opacity: .65;
+  opacity: .58;
   cursor: wait;
   transform: none;
 }
 
+.sectorLeadSubmit span {
+  font-size: 1rem;
+}
 
 .sectorLeadSuccess,
 .sectorLeadError {
-  margin: .4rem 0 0;
-
-  font-size: .84rem;
-  font-weight: 800;
+  margin: 1rem 0 0;
+  padding: .85rem 1rem;
+  border-radius: 6px;
+  font-size: .78rem;
+  line-height: 1.45;
 }
 
 .sectorLeadSuccess {
-  color: #08763b;
+  color: #dff7e8;
+  background: rgba(45, 145, 88, .16);
+  border: 1px solid rgba(79, 190, 123, .28);
 }
 
 .sectorLeadError {
-  color: #b40032;
+  color: #ffdada;
+  background: rgba(180, 53, 53, .16);
+  border: 1px solid rgba(216, 87, 87, .28);
 }
 
-
-/* ============================================================
-   TABLET
-   ============================================================ */
-
 @media (max-width: 1000px) {
-
   .sectorLeadInner {
-    max-width: 760px;
-
     grid-template-columns: 1fr;
+    max-width: 760px;
   }
 
   .sectorLeadCopy {
-    min-height: 440px;
+    position: relative;
+    top: auto;
+    padding-top: 0;
   }
 
-  .sectorLeadOperatorImage {
-    object-position: 70% center !important;
+  .sectorLeadCopy h2 {
+    max-width: 620px;
   }
 
+  .sectorLeadCopy > p {
+    max-width: 620px;
+  }
 }
 
-
-/* ============================================================
-   MOBILE
-   ============================================================ */
-
 @media (max-width: 700px) {
-
   .sectorLead {
-    padding: 2.5rem 0;
+    padding: 3.5rem 0;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(4, 10, 17, .98),
+        rgba(4, 10, 17, .94)
+      ),
+      url("/images/operador/contacenter.png") 78% top / auto 520px no-repeat,
+      #050a10;
   }
 
   .sectorLeadInner {
     width: calc(100% - 28px);
-
-    border-radius: 20px;
+    gap: 2.2rem;
   }
 
-  .sectorLeadCopy {
-    min-height: 390px;
+  .sectorLeadCopy h2 {
+    max-width: 320px;
+    font-size: clamp(2rem, 10vw, 2.8rem);
+    line-height: .96;
   }
 
-  .sectorLeadOperatorImage {
-    object-position: 68% center !important;
-  }
-
-  .sectorLeadMedia::after {
-    background:
-      linear-gradient(
-        90deg,
-        rgba(4, 15, 25, .90) 0%,
-        rgba(5, 20, 32, .64) 62%,
-        rgba(5, 23, 36, .24) 100%
-      );
-  }
-
-  .sectorLeadCopyContent {
-    padding: 2.4rem 1.5rem;
-  }
-
-  .sectorLeadCopyContent h2 {
+  .sectorLeadCopy > p {
     max-width: 340px;
-
-    font-size:
-      clamp(2rem, 10vw, 2.85rem);
+    margin-top: 1rem;
+    font-size: .9rem;
+    line-height: 1.55;
   }
 
-  .sectorLeadCopyContent p {
-    max-width: 330px;
-
-    font-size: .88rem;
+  .sectorLeadLine {
+    margin-top: 1.5rem;
   }
 
   .sectorLeadForm {
-    padding: 1.4rem 1rem 1.6rem;
+    padding: 1.25rem 1rem 1.35rem;
+    border-radius: 12px;
   }
 
-  .sectorLeadFormTitle {
-    font-size: 1.9rem;
+  .sectorLeadFormHead {
+    margin-bottom: 1.25rem;
   }
 
-  .sectorLeadTwoCols {
+  .sectorLeadFormHead h3 {
+    font-size: 1.6rem;
+  }
+
+  .sectorLeadGrid {
     grid-template-columns: 1fr;
-    gap: .78rem;
+    gap: .7rem;
   }
 
-  .sectorLeadControl {
+  .sectorLeadGrid input,
+  .sectorLeadGrid select {
     min-height: 50px;
-
-    padding: .9rem .95rem;
-
-    font-size: .9rem;
   }
 
-  .sectorLeadMessage {
+  .sectorLeadGrid .sectorLeadMessage {
+    grid-column: auto;
     min-height: 120px;
   }
 
   .sectorLeadLegal {
-    font-size: .7rem;
+    font-size: .62rem;
   }
 
-  .sectorLeadCheck {
-    font-size: .76rem;
+  .sectorLeadCheck span {
+    font-size: .68rem;
   }
 
   .sectorLeadSubmit {
     min-height: 52px;
+    font-size: .7rem;
+  }
+}
+
+
+/* === FORMULARIO BÁSICO FINAL — MISMO CONTENIDO QUE CONTACTO === */
+
+.sectorLeadForm {
+  display: grid !important;
+  gap: .95rem !important;
+  padding: clamp(1.25rem, 2.5vw, 2.3rem) !important;
+  border-radius: 30px !important;
+  background: rgba(255,255,255,.97) !important;
+  border: 1px solid rgba(0,0,0,.06) !important;
+  box-shadow: 0 30px 90px rgba(0,0,0,.24) !important;
+  color: #080b10 !important;
+}
+
+.sectorLeadFormTitle {
+  margin: 0 0 .45rem !important;
+  color: #080b10 !important;
+  font-size: clamp(1.9rem, 3vw, 2.8rem) !important;
+  line-height: .95 !important;
+  letter-spacing: -.055em !important;
+  font-weight: 950 !important;
+}
+
+.sectorLeadTwoCols {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: .85rem !important;
+}
+
+.sectorLeadControl {
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 52px !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 16px !important;
+  padding: .95rem 1rem !important;
+  background: #ece7de !important;
+  color: #080b10 !important;
+  -webkit-text-fill-color: #080b10 !important;
+  font: inherit !important;
+  font-size: .94rem !important;
+  font-weight: 750 !important;
+  box-sizing: border-box !important;
+}
+
+.sectorLeadControl::placeholder {
+  color: rgba(8,11,16,.55) !important;
+  -webkit-text-fill-color: rgba(8,11,16,.55) !important;
+}
+
+.sectorLeadControl:focus {
+  background: #f1ede6 !important;
+  box-shadow:
+    0 0 0 2px rgba(180,0,50,.16),
+    0 12px 34px rgba(0,0,0,.08) !important;
+}
+
+.sectorLeadMessage {
+  min-height: 135px !important;
+  resize: vertical !important;
+}
+
+.sectorLeadLegal {
+  margin: .15rem 0 0 !important;
+  color: rgba(8,11,16,.56) !important;
+  font-size: .76rem !important;
+  line-height: 1.5 !important;
+}
+
+.sectorLeadCheck {
+  display: grid !important;
+  grid-template-columns: auto 1fr !important;
+  gap: .65rem !important;
+  align-items: start !important;
+  color: rgba(8,11,16,.68) !important;
+  font-size: .83rem !important;
+  line-height: 1.4 !important;
+}
+
+.sectorLeadCheck input {
+  width: 18px !important;
+  height: 18px !important;
+  margin-top: .12rem !important;
+  accent-color: #b40032 !important;
+}
+
+.sectorLeadCheck span {
+  color: rgba(8,11,16,.68) !important;
+}
+
+.sectorLeadSubmit {
+  width: 100% !important;
+  min-height: 56px !important;
+  margin-top: .3rem !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  background: linear-gradient(135deg, #9c0b29, #e11343) !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  font-weight: 950 !important;
+  cursor: pointer !important;
+  box-shadow: 0 24px 70px rgba(180,0,45,.28) !important;
+}
+
+@media (max-width: 700px) {
+  .sectorLeadTwoCols {
+    grid-template-columns: 1fr !important;
+    gap: .78rem !important;
   }
 
+  .sectorLeadForm {
+    padding: 1rem !important;
+    border-radius: 24px !important;
+    gap: .78rem !important;
+  }
+
+  .sectorLeadFormTitle {
+    font-size: 1.9rem !important;
+  }
+
+  .sectorLeadControl {
+    min-height: 50px !important;
+    border-radius: 15px !important;
+    padding: .9rem .95rem !important;
+    font-size: .9rem !important;
+  }
+
+  .sectorLeadMessage {
+    min-height: 120px !important;
+  }
 }
 
-/* === ENCUADRE FINAL FOTO OPERADOR === */
-.sectorLeadOperatorImage {
-  object-fit: cover !important;
-  object-position: center center !important;
-}
+/* === FORMULARIO FINAL: FONDO CLARO PREMIUM === */
 
-/* === FORMULARIO FINAL: MENOS ESPACIO VERTICAL === */
 .sectorLead {
-  padding-top: 2.4rem !important;
-  padding-bottom: 2.4rem !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(242, 239, 233, .99) 0%,
+      rgba(239, 236, 229, .97) 42%,
+      rgba(229, 235, 238, .90) 72%,
+      rgba(218, 229, 234, .78) 100%
+    ),
+    url("/images/operador/contacenter.png") right center / auto 112% no-repeat !important;
+
+  color: #07131e !important;
+  padding: clamp(5rem, 7vw, 7rem) 0 !important;
+}
+
+.sectorLead::before {
+  background:
+    radial-gradient(
+      circle at 10% 45%,
+      rgba(23, 50, 71, .09),
+      transparent 32rem
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.18),
+      transparent 45%
+    ) !important;
+}
+
+.sectorLeadInner {
+  width: min(1320px, calc(100% - 48px)) !important;
+  grid-template-columns:
+    minmax(0, .95fr)
+    minmax(540px, 1.05fr) !important;
+  gap: clamp(3rem, 5vw, 5rem) !important;
+  align-items: center !important;
+}
+
+.sectorLeadCopy {
+  position: relative !important;
+  top: auto !important;
+  padding: 0 !important;
+}
+
+.sectorLeadCopy h2 {
+  max-width: 700px !important;
+  color: #07131e !important;
+  font-size: clamp(2.7rem, 4vw, 4.65rem) !important;
+  line-height: .94 !important;
+  letter-spacing: -.06em !important;
+}
+
+.sectorLeadCopy h2::after {
+  color: #c99a4d !important;
+}
+
+.sectorLeadCopy > p {
+  max-width: 540px !important;
+  color: rgba(7, 19, 30, .68) !important;
+  font-size: 1rem !important;
+  line-height: 1.65 !important;
+}
+
+.sectorLeadForm {
+  background: rgba(255, 255, 255, .96) !important;
+  border: 1px solid rgba(7, 19, 30, .07) !important;
+  box-shadow:
+    0 34px 90px rgba(7, 19, 30, .15),
+    inset 0 1px 0 rgba(255,255,255,.85) !important;
+}
+
+@media (max-width: 1000px) {
+  .sectorLeadInner {
+    grid-template-columns: 1fr !important;
+    max-width: 760px !important;
+  }
 }
 
 @media (max-width: 700px) {
   .sectorLead {
-    padding-top: 1.6rem !important;
-    padding-bottom: 1.6rem !important;
+    padding: 3.5rem 0 !important;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(242,239,233,.97) 0%,
+        rgba(233,237,237,.94) 100%
+      ),
+      url("/images/operador/contacenter.png") 75% top / auto 480px no-repeat !important;
+  }
+
+  .sectorLeadInner {
+    width: calc(100% - 28px) !important;
+  }
+
+  .sectorLeadCopy h2 {
+    max-width: 340px !important;
+    font-size: clamp(2rem, 10vw, 2.8rem) !important;
+  }
+
+  .sectorLeadCopy > p {
+    color: rgba(7, 19, 30, .67) !important;
   }
 }
 
-/* === EXPERTOS EN EL SECTOR: DORADO === */
-.overview .eyebrow {
-  color: #d8ab62 !important;
+/* === FORMULARIO FINAL: BLOQUE CORPORATIVO UNIFICADO === */
+
+.sectorLead {
+  padding: clamp(3.5rem, 6vw, 5.5rem) 0 !important;
+  background:
+    linear-gradient(180deg, #f2efe9 0%, #e8e5de 100%) !important;
+  color: #07131e !important;
 }
 
-/* === EYEBROWS SECCIONES: DORADO UNIFICADO === */
-.page .overview .eyebrow,
-.page .services .eyebrow {
+.sectorLead::before {
+  display: none !important;
+}
+
+.sectorLeadInner {
+  width: min(1180px, calc(100% - 48px)) !important;
+  margin: 0 auto !important;
+
+  display: grid !important;
+  grid-template-columns: minmax(0, .85fr) minmax(520px, 1.15fr) !important;
+  gap: 0 !important;
+  align-items: stretch !important;
+
+  overflow: hidden !important;
+  border-radius: 28px !important;
+
+  background: #fff !important;
+
+  box-shadow:
+    0 35px 90px rgba(7, 19, 30, .16) !important;
+}
+
+/* =========================
+   IZQUIERDA
+   ========================= */
+
+.sectorLeadCopy {
+  position: relative !important;
+  top: auto !important;
+
+  min-height: 620px !important;
+  padding: clamp(3rem, 5vw, 5rem) clamp(2.4rem, 4vw, 4rem) !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+
+  overflow: hidden !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(5, 17, 28, .98) 0%,
+      rgba(9, 32, 49, .94) 58%,
+      rgba(16, 53, 76, .88) 100%
+    ),
+    url("/images/operador/contacenter.png")
+      center / cover no-repeat !important;
+}
+
+.sectorLeadCopy::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(216, 171, 98, .15),
+      transparent 23rem
+    ) !important;
+}
+
+.sectorLeadCopy > * {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.sectorLeadCopy h2 {
+  max-width: 500px !important;
+  margin: 0 !important;
+
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+
+  font-size: clamp(2.7rem, 4vw, 4.5rem) !important;
+  line-height: .95 !important;
+  letter-spacing: -.065em !important;
+  font-weight: 950 !important;
+}
+
+.sectorLeadCopy h2::after {
   color: #d8ab62 !important;
   -webkit-text-fill-color: #d8ab62 !important;
 }
+
+.sectorLeadCopy > p {
+  max-width: 440px !important;
+  margin: 1.35rem 0 0 !important;
+
+  color: rgba(255,255,255,.72) !important;
+  -webkit-text-fill-color: rgba(255,255,255,.72) !important;
+
+  font-size: .98rem !important;
+  line-height: 1.65 !important;
+}
+
+/* =========================
+   FORMULARIO DERECHA
+   ========================= */
+
+.sectorLeadForm {
+  width: 100% !important;
+  margin: 0 !important;
+
+  padding: clamp(2.2rem, 4vw, 3.5rem) !important;
+
+  border: 0 !important;
+  border-radius: 0 !important;
+
+  background: #fff !important;
+
+  box-shadow: none !important;
+
+  display: grid !important;
+  align-content: center !important;
+  gap: .9rem !important;
+}
+
+.sectorLeadFormTitle {
+  margin-bottom: .8rem !important;
+
+  color: #07131e !important;
+  -webkit-text-fill-color: #07131e !important;
+
+  font-size: clamp(1.8rem, 2.5vw, 2.55rem) !important;
+}
+
+.sectorLeadControl {
+  background: #f0ede7 !important;
+  border: 1px solid transparent !important;
+}
+
+.sectorLeadControl:focus {
+  border-color: rgba(23, 50, 71, .24) !important;
+
+  background: #f5f2ed !important;
+
+  box-shadow:
+    0 0 0 3px rgba(23, 50, 71, .07) !important;
+}
+
+.sectorLeadSubmit {
+  background: #123149 !important;
+  border: 1px solid rgba(216, 171, 98, .4) !important;
+
+  box-shadow:
+    0 16px 38px rgba(18, 49, 73, .22) !important;
+}
+
+.sectorLeadSubmit:hover {
+  background: #1a4563 !important;
+}
+
+/* =========================
+   TABLET / MOBILE
+   ========================= */
+
+@media (max-width: 1000px) {
+
+  .sectorLeadInner {
+    max-width: 760px !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .sectorLeadCopy {
+    min-height: auto !important;
+    padding: 3.5rem 3rem !important;
+  }
+
+  .sectorLeadCopy h2 {
+    max-width: 600px !important;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .sectorLead {
+    padding: 2.5rem 0 !important;
+  }
+
+  .sectorLeadInner {
+    width: calc(100% - 28px) !important;
+    border-radius: 20px !important;
+  }
+
+  .sectorLeadCopy {
+    min-height: 320px !important;
+    padding: 2.5rem 1.5rem !important;
+
+    background:
+      linear-gradient(
+        135deg,
+        rgba(5,17,28,.97),
+        rgba(12,42,62,.90)
+      ),
+      url("/images/operador/contacenter.png")
+        center / cover no-repeat !important;
+  }
+
+  .sectorLeadCopy h2 {
+    max-width: 340px !important;
+    font-size: clamp(2rem, 10vw, 2.85rem) !important;
+  }
+
+  .sectorLeadCopy > p {
+    max-width: 330px !important;
+    font-size: .88rem !important;
+  }
+
+  .sectorLeadForm {
+    padding: 1.4rem 1rem 1.6rem !important;
+  }
+
+}
+
+/* === PANEL IZQUIERDO: OPERADOR VISIBLE DE FONDO === */
+
+.sectorLeadCopy {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 17, 28, .92) 0%,
+      rgba(7, 25, 39, .82) 45%,
+      rgba(12, 42, 62, .63) 100%
+    ),
+    url("/images/operador/contacenter.png")
+      62% center / cover no-repeat !important;
+}
+
+/* Profundidad suave sin tapar la imagen */
+.sectorLeadCopy::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(4, 12, 20, .08),
+      rgba(4, 12, 20, .24)
+    ),
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(216, 171, 98, .12),
+      transparent 45%
+    ) !important;
+}
+
+@media (max-width: 700px) {
+  .sectorLeadCopy {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(5, 17, 28, .91),
+        rgba(10, 36, 54, .68)
+      ),
+      url("/images/operador/contacenter.png")
+        68% center / cover no-repeat !important;
+  }
+}
+
+/* === OPERADOR REAL VISIBLE EN PANEL IZQUIERDO === */
+
+.sectorLeadCopy {
+  position: relative !important;
+  isolation: isolate !important;
+  background:
+    linear-gradient(
+      135deg,
+      #071522 0%,
+      #102d41 100%
+    ) !important;
+}
+
+/* La imagen va en su propia capa */
+.sectorLeadCopy::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+
+  background-image:
+    url("/images/operador/contacenter.png") !important;
+
+  background-size: cover !important;
+  background-position: 88% center !important;
+  background-repeat: no-repeat !important;
+
+  opacity: .72 !important;
+
+  pointer-events: none !important;
+}
+
+/* Oscurecer solamente la zona del texto */
+.sectorLeadCopy::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 15, 25, .88) 0%,
+      rgba(5, 20, 32, .66) 48%,
+      rgba(7, 28, 43, .18) 100%
+    ) !important;
+
+  pointer-events: none !important;
+}
+
+/* Texto siempre encima */
+.sectorLeadCopy > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+@media (max-width: 700px) {
+  .sectorLeadCopy::before {
+    background-position: 82% center !important;
+    opacity: .65 !important;
+  }
+}
+
+/* =========================================================
+   OPERADOR REAL COMO IMAGEN — NO BACKGROUND
+   ========================================================= */
+
+.sectorLeadCopy {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background: #071522 !important;
+}
+
+/* Desactivar todas las capas viejas */
+.sectorLeadCopy::before,
+.sectorLeadCopy::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Imagen real */
+.sectorLeadCopy > .sectorLeadOperatorImage {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  object-fit: cover !important;
+  object-position: 78% center !important;
+
+  opacity: 1 !important;
+  visibility: visible !important;
+
+  filter:
+    brightness(.72)
+    contrast(1.08)
+    saturate(.9) !important;
+}
+
+/* Oscurecido solamente para leer el texto */
+.sectorLeadCopy > .sectorLeadOperatorShade {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 14, 24, .90) 0%,
+      rgba(5, 22, 35, .62) 48%,
+      rgba(5, 22, 35, .18) 100%
+    ) !important;
+
+  pointer-events: none !important;
+}
+
+/* Texto encima */
+.sectorLeadCopy > h2,
+.sectorLeadCopy > p {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+@media (max-width: 700px) {
+  .sectorLeadCopy > .sectorLeadOperatorImage {
+    object-position: 76% center !important;
+  }
+}
+

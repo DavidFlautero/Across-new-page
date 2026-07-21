@@ -9,7 +9,7 @@ import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import styles from "./Sector.module.css";
 
-import HomeOperatorOnly from "@/components/sections/HomeOperatorOnly";
+import SectorLeadForm from "./SectorLeadForm";
 
 type Locale = "es" | "en" | "zh";
 
@@ -797,7 +797,7 @@ export default function AlimentacionBebidasSectorPage() {
               
 
               <div className={styles.actions}>
-                <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>
+                <Link href="#solicitar-propuesta" className={styles.primaryBtn}>{t.primaryCta}</Link>
                 <Link href="/contacto" className={styles.secondaryBtn}>{t.secondaryCta}</Link>
               </div>
             </div>
@@ -930,7 +930,7 @@ export default function AlimentacionBebidasSectorPage() {
 
         <Certifications />
 
-        <HomeOperatorOnly />
+        <SectorLeadForm />
 </main>
 
       <Footer />
