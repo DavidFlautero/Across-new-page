@@ -9,7 +9,6 @@ import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import styles from "./Sector.module.css";
 import final from "./RenewablesFinal.module.css";
-import heroStyles from "./RenewablesHero.module.css";
 import SectorLeadForm from "./SectorLeadForm";
 
 type Locale = "es" | "en" | "zh";
@@ -17,11 +16,10 @@ type IconName = "wind" | "solar" | "box" | "route" | "document" | "truck" | "sea
 
 const copy = {
   es: {
-    heroEyebrow: "Transporte especial para",
+    heroEyebrow: "Logística especializada para",
     heroTitle: "Energías Renovables",
-    heroText: "Soluciones logísticas para proyectos de energías renovables, con transporte especial, coordinación multimodal y entrega en obra.",
+    heroText: "Soluciones logísticas para componentes eólicos, proyectos solares y cargas industriales, con planificación técnica, coordinación multimodal y entrega en obra.",
     primaryCta: "Solicitar propuesta logística",
-    trust: ["Carga especial", "Multimodal", "Permisos", "Entrega en obra"],
     overviewEyebrow: "Expertos en el sector",
     overviewTitle: "Logística especializada para proyectos energéticos de alta exigencia.",
     overviewText: "Gestionamos componentes sobredimensionados, equipos sensibles y cargas críticas para parques solares, eólicos e infraestructuras energéticas, coordinando rutas, permisos, manipulación y entrega final.",
@@ -52,11 +50,10 @@ const copy = {
     ]
   },
   en: {
-    heroEyebrow: "Special transport for",
+    heroEyebrow: "Specialized logistics for",
     heroTitle: "Renewable Energy",
-    heroText: "Logistics solutions for renewable energy projects, with special transport, multimodal coordination and site delivery.",
+    heroText: "Logistics solutions for wind components, solar projects and industrial cargo, with technical planning, multimodal coordination and site delivery.",
     primaryCta: "Request logistics proposal",
-    trust: ["Special cargo", "Multimodal", "Permits", "Site delivery"],
     overviewEyebrow: "Sector expertise",
     overviewTitle: "Specialized logistics for demanding energy projects.",
     overviewText: "We manage oversized components, sensitive equipment and critical cargo for solar farms, wind projects and energy infrastructure, coordinating routes, permits, handling and final delivery.",
@@ -87,11 +84,10 @@ const copy = {
     ]
   },
   zh: {
-    heroEyebrow: "特殊运输服务",
+    heroEyebrow: "专业物流服务",
     heroTitle: "可再生能源",
-    heroText: "为可再生能源项目提供特殊运输、多式联运协调和工地交付物流解决方案。",
+    heroText: "为风电组件、太阳能项目和工业货物提供物流方案，包括技术规划、多式联运协调和工地交付。",
     primaryCta: "申请物流方案",
-    trust: ["特殊货物", "多式联运", "许可", "工地交付"],
     overviewEyebrow: "行业专长",
     overviewTitle: "面向高要求能源项目的专业物流。",
     overviewText: "我们为太阳能、风能和能源基础设施管理超限组件、敏感设备和关键货物，协调路线、许可、装卸和最终交付。",
@@ -176,33 +172,23 @@ export default function EnergiasRenovablesPage() {
     "/servicios/transporte-terrestre"
   ];
   const pillarIcons: IconName[] = ["search", "document", "route", "tracking"];
-  const trustIcons: IconName[] = ["box", "route", "document", "tracking"];
 
   return (
     <div className="page-shell">
       <Header />
       <main className={`${styles.page} ${final.page}`}>
-        <section className={`${styles.hero} ${final.hero} ${heroStyles.hero}`} data-aereo-hero="true" data-service-hero-home="true">
-          <Image src="/images/sectores/energiasrenovables.png" alt={t.heroTitle} fill priority sizes="100vw" className={`${styles.heroImage} ${heroStyles.heroImage}`} />
-          <div className={`${styles.heroOverlay} ${heroStyles.heroOverlay}`} />
-          <div className={`${styles.heroInner} ${heroStyles.heroInner}`}>
-            <div className={`${styles.heroContent} ${heroStyles.heroContent}`}>
-              <span className={`${styles.eyebrow} ${heroStyles.eyebrow}`}>{t.heroEyebrow}</span>
-              <h1 className={`${styles.title} ${heroStyles.title}`}>{t.heroTitle}</h1>
-              <p className={heroStyles.subtitle}>{t.heroText}</p>
-              <div className={`${styles.actions} ${heroStyles.actions}`}>
+        <section className={`${styles.hero} ${final.hero}`} data-aereo-hero="true" data-service-hero-home="true">
+          <Image src="/images/sectores/energiasrenovables.png" alt={t.heroTitle} fill priority sizes="100vw" className={styles.heroImage} />
+          <div className={styles.heroOverlay} />
+          <div className={styles.heroInner}>
+            <div className={styles.heroContent}>
+              <span className={styles.eyebrow}>{t.heroEyebrow}</span>
+              <h1 className={styles.title}>{t.heroTitle}</h1>
+              <p>{t.heroText}</p>
+              <div className={styles.actions}>
                 <Link href="#solicitar-propuesta">{t.primaryCta}</Link>
               </div>
             </div>
-          </div>
-
-          <div className={heroStyles.trustBar}>
-            {t.trust.map((label: string, index: number) => (
-              <div className={heroStyles.trustItem} key={label}>
-                <i><Icon name={trustIcons[index]} /></i>
-                <strong>{label}</strong>
-              </div>
-            ))}
           </div>
         </section>
 
