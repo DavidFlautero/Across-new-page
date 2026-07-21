@@ -1,0 +1,489 @@
+.page {
+  background: #f4f1eb;
+}
+
+.hero {
+  min-height: 100svh;
+}
+
+.hero :global(h1) {
+  max-width: 760px !important;
+}
+
+.overview :global(.eyebrow),
+.services :global(.eyebrow),
+.process :global(.eyebrow) {
+  color: #d8ab62 !important;
+  -webkit-text-fill-color: #d8ab62 !important;
+}
+
+.services {
+  width: 100vw !important;
+  max-width: none !important;
+  margin: 0 50% !important;
+  transform: translateX(-50%) !important;
+  padding: clamp(4rem, 6vw, 6rem) max(30px, calc((100vw - 1180px) / 2)) !important;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(5, 16, 25, .56), rgba(5, 16, 25, .72)),
+    var(--sector-bg) center / cover no-repeat !important;
+  color: #fff;
+}
+
+.services::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(8, 31, 47, .42), rgba(7, 18, 28, .16)),
+    radial-gradient(circle at 80% 20%, rgba(216, 171, 98, .12), transparent 30rem);
+}
+
+.services :global(.sectionHead) {
+  max-width: 760px !important;
+  margin: 0 0 2.2rem !important;
+  text-align: left !important;
+}
+
+.services :global(.sectionHead h2) {
+  color: #fff !important;
+}
+
+.serviceGrid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 12px !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.serviceGrid article {
+  min-height: 148px !important;
+  padding: 0 !important;
+  text-align: left !important;
+  border: 1px solid rgba(255, 255, 255, .22) !important;
+  background: rgba(11, 28, 40, .38) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.serviceGrid article > a {
+  min-height: 148px;
+  padding: 1.45rem 1.7rem;
+  display: grid;
+  grid-template-columns: 58px 1fr auto;
+  align-items: center;
+  gap: 1.15rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.serviceGrid article > a > span {
+  color: rgba(255, 255, 255, .88);
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.serviceGrid article i {
+  width: 48px !important;
+  height: 48px !important;
+  margin: 0 !important;
+  color: #d8ab62 !important;
+  border-color: rgba(216, 171, 98, .54) !important;
+  background: rgba(10, 34, 51, .68) !important;
+}
+
+.serviceGrid article i svg {
+  width: 26px !important;
+  height: 26px !important;
+}
+
+.serviceGrid article h3 {
+  color: #fff !important;
+  max-width: none !important;
+  margin: 0 !important;
+  font-size: clamp(1.15rem, 2vw, 1.55rem) !important;
+}
+
+.serviceGrid article p {
+  max-width: 760px !important;
+  margin: .55rem 0 0 !important;
+  color: rgba(255, 255, 255, .74) !important;
+}
+
+.process {
+  width: 100% !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+  padding: clamp(3rem, 5vw, 4.5rem) 0 !important;
+}
+
+.process :global(.sectionHead) {
+  max-width: 820px !important;
+  margin-bottom: 2rem !important;
+}
+
+.processGrid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+  gap: 0 !important;
+}
+
+.processGrid::before {
+  display: none !important;
+}
+
+.processGrid article {
+  min-height: 190px !important;
+  padding: 1.2rem 1.5rem !important;
+  display: block !important;
+  border-right: 1px solid rgba(8, 11, 16, .12) !important;
+}
+
+.processGrid article:last-child {
+  border-right: 0 !important;
+}
+
+.processGrid article strong {
+  display: grid !important;
+  place-items: center !important;
+  width: 54px !important;
+  height: 54px !important;
+  margin: 0 0 1rem !important;
+  border-radius: 999px !important;
+  background: #071b2b !important;
+  color: #fff !important;
+  font-size: 1rem !important;
+  box-shadow: none !important;
+}
+
+.processGrid article h3 {
+  display: block !important;
+  margin: 0 !important;
+  color: #080b10 !important;
+  font-size: 1.06rem !important;
+}
+
+.processGrid article h3::before,
+.processGrid article h3::after {
+  content: none !important;
+  display: none !important;
+}
+
+.processGrid article p {
+  display: block !important;
+  margin-top: .55rem !important;
+  color: rgba(8, 11, 16, .68) !important;
+  font-size: .9rem !important;
+  line-height: 1.5 !important;
+}
+
+.sectorLead {
+  width: 100%;
+  padding: 2.4rem 0;
+  background: #f1eee8;
+}
+
+.sectorLeadInner {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, .84fr) minmax(520px, 1.16fr);
+  overflow: hidden;
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0 32px 90px rgba(7, 19, 30, .16);
+}
+
+.sectorLeadCopy {
+  position: relative;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  background: #071522;
+}
+
+.sectorLeadMedia {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.sectorLeadOperatorImage {
+  object-fit: cover !important;
+  object-position: center center !important;
+  filter: brightness(.74) contrast(1.06) saturate(.92);
+}
+
+.sectorLeadMedia::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(4, 15, 25, .92), rgba(5, 20, 32, .68) 58%, rgba(5, 23, 36, .22));
+}
+
+.sectorLeadCopyContent {
+  position: relative;
+  z-index: 2;
+  padding: clamp(3rem, 5vw, 5rem) clamp(2.3rem, 4vw, 4rem);
+}
+
+.sectorLeadCopyContent h2 {
+  max-width: 520px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.7rem, 4vw, 4.45rem);
+  line-height: .95;
+  letter-spacing: -.065em;
+  font-weight: 950;
+}
+
+.sectorLeadCopyContent h2::after {
+  content: ".";
+  color: #d8ab62;
+}
+
+.sectorLeadCopyContent p {
+  max-width: 430px;
+  margin: 1.35rem 0 0;
+  color: rgba(255, 255, 255, .82);
+  font-size: .98rem;
+  line-height: 1.65;
+}
+
+.sectorLeadForm {
+  display: grid;
+  align-content: center;
+  gap: .9rem;
+  padding: clamp(2.2rem, 4vw, 3.5rem);
+  background: #fff;
+}
+
+.sectorLeadFormTitle {
+  margin: 0 0 .8rem;
+  color: #07131e;
+  font-size: clamp(1.8rem, 2.5vw, 2.55rem);
+  line-height: 1;
+  letter-spacing: -.045em;
+  font-weight: 950;
+}
+
+.sectorLeadTwoCols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .85rem;
+}
+
+.sectorLeadControl {
+  width: 100%;
+  min-height: 52px;
+  padding: .95rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  outline: 0;
+  background: #f0ede7;
+  color: #080b10;
+  font: inherit;
+  font-size: .94rem;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+
+.sectorLeadControl::placeholder {
+  color: rgba(8, 11, 16, .52);
+}
+
+.sectorLeadMessage {
+  min-height: 135px;
+  resize: vertical;
+}
+
+.sectorLeadLegal {
+  margin: .15rem 0 0;
+  color: rgba(8, 11, 16, .56);
+  font-size: .76rem;
+  line-height: 1.5;
+}
+
+.sectorLeadCheck {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: .65rem;
+  align-items: start;
+  color: rgba(8, 11, 16, .68);
+  font-size: .83rem;
+  line-height: 1.4;
+}
+
+.sectorLeadCheck input {
+  width: 18px;
+  height: 18px;
+  margin-top: .12rem;
+  accent-color: #173247;
+}
+
+.sectorLeadSubmit {
+  width: 100%;
+  min-height: 56px;
+  margin-top: .3rem;
+  padding: 0 1.35rem;
+  border: 1px solid rgba(216, 171, 98, .42);
+  border-radius: 999px;
+  background: #123149;
+  color: #fff;
+  cursor: pointer;
+  font-size: .76rem;
+  font-weight: 950;
+  letter-spacing: .045em;
+  text-transform: uppercase;
+  box-shadow: 0 18px 42px rgba(18, 49, 73, .24);
+}
+
+.sectorLeadSuccess,
+.sectorLeadError {
+  margin: .4rem 0 0;
+  font-size: .84rem;
+  font-weight: 800;
+}
+
+.sectorLeadSuccess {
+  color: #08763b;
+}
+
+.sectorLeadError {
+  color: #b40032;
+}
+
+@media (min-width: 901px) {
+  .hero :global(h1) {
+    width: auto !important;
+    max-width: 760px !important;
+    white-space: normal !important;
+    text-wrap: balance !important;
+    font-size: clamp(3.6rem, 5vw, 5.8rem) !important;
+    line-height: .92 !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .sectorLeadInner {
+    max-width: 760px;
+    grid-template-columns: 1fr;
+  }
+
+  .sectorLeadCopy {
+    min-height: 440px;
+  }
+}
+
+@media (max-width: 700px) {
+  .services {
+    padding: 3.2rem 30px !important;
+  }
+
+  .serviceGrid article,
+  .serviceGrid article > a {
+    min-height: 132px !important;
+  }
+
+  .serviceGrid article > a {
+    grid-template-columns: 52px 1fr auto;
+    padding: 1.15rem 1.25rem;
+  }
+
+  .serviceGrid article p {
+    display: none !important;
+  }
+
+  .process {
+    width: calc(100% - 40px) !important;
+  }
+
+  .processGrid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .processGrid article {
+    min-height: auto !important;
+    padding: 1.35rem 0 !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid rgba(8, 11, 16, .12) !important;
+  }
+
+  .processGrid article:last-child {
+    border-bottom: 0 !important;
+  }
+
+  .processGrid article strong {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .sectorLead {
+    padding: 1.6rem 0;
+  }
+
+  .sectorLeadInner {
+    width: calc(100% - 28px);
+    border-radius: 20px;
+  }
+
+  .sectorLeadCopy {
+    min-height: 390px;
+  }
+
+  .sectorLeadCopyContent {
+    padding: 2.4rem 1.5rem;
+  }
+
+  .sectorLeadCopyContent h2 {
+    font-size: clamp(2rem, 10vw, 2.85rem);
+  }
+
+  .sectorLeadForm {
+    gap: .62rem;
+    padding: 1.15rem 1rem 1.3rem;
+  }
+
+  .sectorLeadFormTitle {
+    font-size: 1.9rem;
+  }
+
+  .sectorLeadTwoCols {
+    grid-template-columns: 1fr;
+    gap: .62rem;
+  }
+
+  .sectorLeadControl {
+    min-height: 44px;
+    padding: .68rem .95rem;
+    font-size: .9rem;
+  }
+
+  .sectorLeadMessage {
+    min-height: 96px;
+    padding-top: .72rem;
+    padding-bottom: .72rem;
+  }
+
+  .sectorLeadLegal {
+    font-size: .7rem;
+  }
+
+  .sectorLeadCheck {
+    font-size: .76rem;
+  }
+
+  .sectorLeadSubmit {
+    min-height: 52px;
+  }
+}
