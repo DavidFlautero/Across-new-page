@@ -2963,7 +2963,7 @@
       rgba(5, 6, 9, .55) 100%
     ),
     radial-gradient(circle at 18% 18%, rgba(23, 50, 71, .16), transparent 24rem),
-    url("/images/sectores/consumo1.png") !important;
+    url("/images/sectores/energiasrenovables.png") !important;
   background-size: cover !important;
   background-position: center 48% !important;
   background-repeat: no-repeat !important;
@@ -3065,7 +3065,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/sectores/consumo1.png") !important;
+    url("/images/sectores/energiasrenovables.png") !important;
   background-size: cover !important;
   background-position: center 55% !important;
   background-repeat: no-repeat !important;
@@ -3104,7 +3104,7 @@
   .services {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.90)),
-      url("/images/sectores/consumo1.png") !important;
+      url("/images/sectores/energiasrenovables.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3116,7 +3116,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/consumo1.png") !important;
+      url("/images/sectores/energiasrenovables.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3134,7 +3134,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/sectores/consumo1.png") !important;
+    url("/images/sectores/energiasrenovables.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3144,7 +3144,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/consumo1.png") !important;
+      url("/images/sectores/energiasrenovables.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3162,7 +3162,7 @@
       rgba(5, 6, 9, .44) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/sectores/consumo1.png") !important;
+    url("/images/sectores/energiasrenovables.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3172,7 +3172,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/consumo1.png") !important;
+      url("/images/sectores/energiasrenovables.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -8878,7 +8878,7 @@
   position: relative !important;
   isolation: isolate !important;
   background-color: rgba(0, 0, 0, 0) !important;
-  background-image: url("/images/sectores/consumo1.png") !important;
+  background-image: url("/images/sectores/energiasrenovables.png") !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
@@ -9121,7 +9121,7 @@
         rgba(3,10,18,.16) 100%
       ),
       radial-gradient(circle at 70% 32%, rgba(15,111,150,.13), transparent 42%),
-      var(--mobile-bg, url("/images/sectores/consumo1.png")) center center / 100% 100% no-repeat !important;
+      var(--mobile-bg, url("/images/sectores/energiasrenovables.png")) center center / 100% 100% no-repeat !important;
   }
 
   .page .finalCta::before,
@@ -9240,7 +9240,7 @@
 
 /* ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL
    DarkBand restaurado correctamente:
-   - usa SU imagen original del page.tsx: /images/sectores/consumo1.png
+   - usa SU imagen original del page.tsx: /images/sectores/energiasrenovables.png
    - no usa imagen del CTA
    - elimina capas oscuras viejas
    - mantiene el estilo azul/premium
@@ -9264,7 +9264,7 @@
       rgba(244,239,229,.025) 0%,
       rgba(3,10,18,.16) 100%
     ),
-    url("/images/sectores/consumo1.png") center center / cover no-repeat !important;
+    url("/images/sectores/energiasrenovables.png") center center / cover no-repeat !important;
 }
 
 .page .darkBand::before {
@@ -9983,207 +9983,351 @@ a.primaryBtn:hover {
 }
 
 
-/* === SECTOR SERVICES EYEBROW — GLOBAL CONSISTENCY === */
-.services .sectionHead .eyebrow,
-.services > .sectionHead > .eyebrow {
-  color: #d8ab62 !important;
-  -webkit-text-fill-color: #d8ab62 !important;
-}
-/* === /SECTOR SERVICES EYEBROW === */
+/* =====================================================
+   ENERGIAS RENOVABLES HERO FINAL
+   MISMA ESTRUCTURA VISUAL QUE ALIMENTOS Y BEBIDAS
+   ===================================================== */
 
-/* === SECTOR HERO POSITION STANDARD === */
-
-/* TODOS LOS SECTORES USAN LA MISMA GEOMETRÍA DEL HERO */
-
-.hero {
+.page > .hero {
   position: relative !important;
   width: 100% !important;
-  height: calc(100svh - 20px) !important;
-  min-height: 620px !important;
-  max-height: 740px !important;
-  padding: 0 !important;
   overflow: hidden !important;
-}
-
-.heroInner {
-  position: relative !important;
-  z-index: 5 !important;
-
-  width: min(1180px, calc(100% - 80px)) !important;
-  height: calc(100% - 96px) !important;
-
-  margin: 0 auto !important;
-  padding: 0 !important;
-
-  display: flex !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
-}
-
-.heroContent {
-  width: 100% !important;
-  max-width: 620px !important;
-
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.hero .eyebrow {
-  margin: 0 0 .85rem !important;
-  color: #d8ab62 !important;
-  -webkit-text-fill-color: #d8ab62 !important;
-}
-
-.hero .title,
-.heroContent h1 {
-  max-width: 620px !important;
-  margin: 0 !important;
-
+  isolation: isolate !important;
+  background: #07111d !important;
   color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
-
-  font-size: clamp(3.35rem, 4.6vw, 5.7rem) !important;
-  line-height: .9 !important;
-  letter-spacing: -.06em !important;
-  font-weight: 950 !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
-.hero .title::after,
-.heroContent h1::after {
-  content: none !important;
+.page > .hero .heroImage {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  z-index: -4 !important;
+  filter: brightness(.72) contrast(1.08) saturate(1.08) !important;
 }
 
-.hero .subtitle,
-.heroContent > p {
-  max-width: 540px !important;
-
-  margin: 1rem 0 0 !important;
-
-  color: rgba(255,255,255,.88) !important;
-  -webkit-text-fill-color: rgba(255,255,255,.88) !important;
-
-  font-size: clamp(.98rem, 1vw, 1.08rem) !important;
-  line-height: 1.5 !important;
+.page > .hero .heroOverlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -3 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3,7,13,.92) 0%,
+      rgba(3,7,13,.66) 46%,
+      rgba(3,7,13,.20) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3,7,13,.12) 0%,
+      rgba(3,7,13,.22) 46%,
+      rgba(3,7,13,.68) 100%
+    ) !important;
 }
 
-.hero .actions {
-  margin: 1.2rem 0 0 !important;
-}
-
-.hero .operationCard {
+.page > .hero .operationCard {
   display: none !important;
 }
 
-/* La barra siempre abajo, igual en todos */
-.hero .commandBar {
-  position: absolute !important;
-  left: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  top: auto !important;
+.page > .hero .eyebrow {
+  color: #d6c08d !important;
+  -webkit-text-fill-color: #d6c08d !important;
+  text-transform: uppercase !important;
+  font-weight: 950 !important;
+}
 
-  width: 100% !important;
-  height: 96px !important;
+.page > .hero .title {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  font-weight: 950 !important;
+  letter-spacing: -.055em !important;
+}
 
-  margin: 0 !important;
-  transform: none !important;
+.page > .hero .title::after {
+  content: none !important;
+}
 
-  display: grid !important;
-  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+.page > .hero .subtitle {
+  color: rgba(255,255,255,.88) !important;
+  -webkit-text-fill-color: rgba(255,255,255,.88) !important;
+}
+
+.page > .hero .actions .primaryBtn {
+  border-radius: 999px !important;
 }
 
 
-/* ============================
-   TABLET / MOBILE
-   ============================ */
+/* DESKTOP */
+
+@media (min-width: 901px) {
+
+  .page > .hero {
+    height: 720px !important;
+    min-height: 720px !important;
+    max-height: 720px !important;
+  }
+
+  .page > .hero .heroInner {
+    position: relative !important;
+    z-index: 5 !important;
+
+    width: min(1180px, calc(100% - 80px)) !important;
+    height: 100% !important;
+
+    margin: 0 auto !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    padding-bottom: 96px !important;
+  }
+
+  .page > .hero .heroContent {
+    width: 100% !important;
+    max-width: 620px !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin-bottom: .85rem !important;
+    font-size: .72rem !important;
+    letter-spacing: .24em !important;
+  }
+
+  .page > .hero .title {
+    width: max-content !important;
+    max-width: none !important;
+    white-space: nowrap !important;
+    font-size: clamp(3.4rem, 4.2vw, 4.8rem) !important;
+    line-height: .9 !important;
+  }
+
+  .page > .hero .subtitle {
+    max-width: 560px !important;
+    margin-top: 1rem !important;
+    font-size: 1rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: 1.4rem !important;
+  }
+
+  .page > .hero .actions .primaryBtn {
+    width: auto !important;
+    min-height: 46px !important;
+    padding: 0 1.35rem !important;
+  }
+
+  .page > .hero .commandBar {
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+
+    height: 96px !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+
+    background: rgba(3, 7, 12, .95) !important;
+    backdrop-filter: blur(14px) !important;
+  }
+
+  .page > .hero .commandItem {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: .8rem !important;
+
+    border-right: 1px solid rgba(255,255,255,.08) !important;
+  }
+
+  .page > .hero .commandItem:last-child {
+    border-right: 0 !important;
+  }
+
+  .page > .hero .commandItem i {
+    width: 28px !important;
+    height: 28px !important;
+    color: #d6c08d !important;
+  }
+
+  .page > .hero .commandItem strong {
+    display: block !important;
+    color: #fff !important;
+    font-size: .8rem !important;
+  }
+
+  .page > .hero .commandItem small {
+    display: block !important;
+    margin-top: .15rem !important;
+    color: rgba(255,255,255,.62) !important;
+    font-size: .68rem !important;
+  }
+}
+
+
+/* MOBILE */
 
 @media (max-width: 900px) {
 
-  .hero {
+  .page > .hero {
     height: 100svh !important;
-    min-height: 650px !important;
-    max-height: 820px !important;
+    min-height: 100svh !important;
+    max-height: 100svh !important;
   }
 
-  .heroInner {
-    width: 100% !important;
-    height: calc(100% - 76px) !important;
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+  }
 
-    margin: 0 !important;
+  .page > .hero .heroImageMobile {
+    display: block !important;
+  }
+
+  .page > .hero .heroImage {
+    object-position: center center !important;
+  }
+
+  .page > .hero .heroInner {
+    position: relative !important;
+    z-index: 5 !important;
+
+    width: 100% !important;
+    height: 100% !important;
 
     display: flex !important;
     align-items: flex-start !important;
 
     padding:
-      calc(env(safe-area-inset-top) + 8.5rem)
-      1.25rem
-      1.5rem !important;
+      calc(env(safe-area-inset-top) + 8.8rem)
+      1.2rem
+      90px !important;
   }
 
-  .heroContent {
+  .page > .hero .heroContent {
     width: 100% !important;
-    max-width: 360px !important;
+    max-width: 390px !important;
   }
 
-  .hero .eyebrow {
-    margin-bottom: .6rem !important;
+  .page > .hero .eyebrow {
+    margin: 0 0 .6rem !important;
     font-size: .58rem !important;
-    letter-spacing: .2em !important;
+    letter-spacing: .22em !important;
   }
 
-  .hero .title,
-  .heroContent h1 {
-    width: auto !important;
+  .page > .hero .title {
     max-width: 330px !important;
-
-    font-size: clamp(2.45rem, 11vw, 3.3rem) !important;
-    line-height: .88 !important;
-
+    font-size: clamp(2.3rem, 10vw, 3.15rem) !important;
+    line-height: .9 !important;
     white-space: normal !important;
   }
 
-  .hero .subtitle,
-  .heroContent > p {
-    max-width: 335px !important;
-
-    margin-top: .9rem !important;
-
+  .page > .hero .subtitle {
+    max-width: 350px !important;
+    margin-top: .75rem !important;
     font-size: .84rem !important;
-    line-height: 1.43 !important;
+    line-height: 1.42 !important;
   }
 
-  .hero .actions {
-    margin-top: 1.1rem !important;
+  .page > .hero .actions {
+    margin-top: .95rem !important;
   }
 
-  .hero .commandBar {
+  .page > .hero .actions .primaryBtn {
+    width: 245px !important;
+    min-height: 42px !important;
+    padding: 0 1rem !important;
+    font-size: .55rem !important;
+  }
+
+  .page > .hero .commandBar {
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+
     height: 76px !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+
+    background: rgba(3, 7, 12, .96) !important;
+  }
+
+  .page > .hero .commandItem {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: .3rem !important;
+
+    padding: .4rem .2rem !important;
+
+    text-align: center !important;
+
+    border-right: 1px solid rgba(255,255,255,.07) !important;
+  }
+
+  .page > .hero .commandItem:last-child {
+    border-right: 0 !important;
+  }
+
+  .page > .hero .commandItem i {
+    width: 21px !important;
+    height: 21px !important;
+    margin: 0 !important;
+    color: #d6c08d !important;
+  }
+
+  .page > .hero .commandItem i svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .page > .hero .commandItem strong {
+    display: block !important;
+    color: #fff !important;
+    font-size: .62rem !important;
+    line-height: 1 !important;
+    text-transform: none !important;
+  }
+
+  .page > .hero .commandItem small {
+    display: none !important;
   }
 }
-
 
 @media (max-width: 390px) {
 
-  .heroInner {
-    padding-top:
-      calc(env(safe-area-inset-top) + 7.9rem) !important;
+  .page > .hero .heroInner {
+    padding-top: calc(env(safe-area-inset-top) + 8rem) !important;
   }
 
-  .heroContent {
-    max-width: 320px !important;
+  .page > .hero .title {
+    max-width: 300px !important;
+    font-size: 2.2rem !important;
   }
 
-  .hero .title,
-  .heroContent h1 {
-    max-width: 290px !important;
-    font-size: 2.25rem !important;
-  }
-
-  .hero .subtitle,
-  .heroContent > p {
-    max-width: 305px !important;
+  .page > .hero .subtitle {
     font-size: .78rem !important;
+  }
+
+  .page > .hero .actions .primaryBtn {
+    width: 220px !important;
+    min-height: 39px !important;
+    font-size: .5rem !important;
+  }
+
+  .page > .hero .commandItem strong {
+    font-size: .56rem !important;
   }
 }
 
-/* === /SECTOR HERO POSITION STANDARD === */
+/* === /ENERGIAS RENOVABLES HERO FINAL === */

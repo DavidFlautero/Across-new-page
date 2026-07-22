@@ -9,8 +9,7 @@ import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import styles from "./Sector.module.css";
 
-import HomeOperatorOnly from "@/components/sections/HomeOperatorOnly";
-
+import SectorLeadForm from "@/app/sectores/alimentacion-bebidas/SectorLeadForm";
 type Locale = "es" | "en" | "zh";
 
 const copy = {
@@ -67,8 +66,8 @@ const copy = {
         "Integración con transporte, aduanas, almacén y entrega final."
       ]
     ],
-    "servicesEyebrow": "Soluciones para el sector químico",
-    "servicesTitle": "Operaciones diseñadas para mercancías sensibles y reguladas.",
+    "servicesEyebrow": "Soluciones especializadas",
+    "servicesTitle": "Servicios logísticos para cada necesidad del sector.",
     "services": [
       [
         "Transporte internacional",
@@ -229,8 +228,8 @@ const copy = {
         "Integration with transport, customs, warehousing and final delivery."
       ]
     ],
-    "servicesEyebrow": "Solutions for the chemical sector",
-    "servicesTitle": "Operations designed for sensitive and regulated goods.",
+    "servicesEyebrow": "Specialized solutions",
+    "servicesTitle": "Logistics services for every sector need.",
     "services": [
       [
         "International transport",
@@ -391,8 +390,8 @@ const copy = {
         "与运输、海关、仓储和最终交付整合。"
       ]
     ],
-    "servicesEyebrow": "化工行业解决方案",
-    "servicesTitle": "为敏感和受监管货物设计的运营。",
+    "servicesEyebrow": "专业解决方案",
+    "servicesTitle": "满足行业不同需求的专业物流服务。",
     "services": [
       [
         "国际运输",
@@ -860,8 +859,6 @@ export default function QuimicoSectorPage() {
           </div>
         </section>
 
-        <Certifications />
-
         <section className={styles.overview}>
           <div className={styles.overviewCopy}>
             <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
@@ -957,7 +954,9 @@ export default function QuimicoSectorPage() {
           </div>
         </section>
 
-        <HomeOperatorOnly />
+        <Certifications />
+
+        <SectorLeadForm />
 
 </main>
 

@@ -9,14 +9,13 @@ import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import styles from "./Sector.module.css";
 
-import HomeOperatorOnly from "@/components/sections/HomeOperatorOnly";
-
+import SectorLeadForm from "@/app/sectores/alimentacion-bebidas/SectorLeadForm";
 type Locale = "es" | "en" | "zh";
 
 const copy = {
   "es": {
-    "heroEyebrow": "Sector automoción",
-    "heroTitle": "Logística para cadenas automotrices que no pueden detenerse.",
+    "heroEyebrow": "Transporte especial para",
+    "heroTitle": "Automoción",
     "heroText": "Coordinamos transporte, almacenaje, distribución y operaciones especiales para componentes, repuestos, autopartes y proyectos de automoción con trazabilidad y control operativo.",
     "primaryCta": "Solicitar propuesta logística",
     "secondaryCta": "Hablar con un especialista",
@@ -45,10 +44,10 @@ const copy = {
         "Entrega coordinada"
       ]
     ],
-    "overviewEyebrow": "Logística automotriz",
-    "overviewTitle": "Precisión logística para operaciones industriales de alta exigencia.",
-    "overviewText": "La industria automotriz requiere entregas puntuales, control documental, disponibilidad de componentes y respuesta ante urgencias. Diseñamos operaciones para mantener la cadena productiva en movimiento.",
-    "overviewButton": "Conocer más sobre automoción",
+    "overviewEyebrow": "Expertos en el sector de:",
+    "overviewTitle": "Transporte y logística especializada para Automoción.",
+    "overviewText": "La industria del automóvil exige rapidez, precisión y una coordinación logística especialmente rigurosa. En Across Logistics gestionamos operaciones de transporte, importación y exportación para el sector de la automoción, optimizando la eficiencia de la cadena de suministro. Nuestra cobertura mundial y local nos permite coordinar cada operación con el objetivo de asegurar entregas en los tiempos previstos.",
+    "overviewButton": "Conocer servicios de automoción",
     "pillars": [
       [
         "Continuidad productiva",
@@ -67,8 +66,8 @@ const copy = {
         "Entregas hacia plantas, talleres, distribuidores o centros logísticos."
       ]
     ],
-    "servicesEyebrow": "Soluciones para automoción",
-    "servicesTitle": "Operaciones diseñadas para la cadena automotriz.",
+    "servicesEyebrow": "Soluciones especializadas",
+    "servicesTitle": "Servicios logísticos para cada necesidad del sector.",
     "services": [
       [
         "Transporte terrestre",
@@ -229,8 +228,8 @@ const copy = {
         "Deliveries to plants, workshops, distributors or logistics centers."
       ]
     ],
-    "servicesEyebrow": "Automotive solutions",
-    "servicesTitle": "Operations designed for the automotive chain.",
+    "servicesEyebrow": "Specialized solutions",
+    "servicesTitle": "Logistics services for every sector need.",
     "services": [
       [
         "Road transport",
@@ -391,8 +390,8 @@ const copy = {
         "交付到工厂、维修点、经销商或物流中心。"
       ]
     ],
-    "servicesEyebrow": "汽车行业解决方案",
-    "servicesTitle": "为汽车供应链设计的运营。",
+    "servicesEyebrow": "专业解决方案",
+    "servicesTitle": "满足行业不同需求的专业物流服务。",
     "services": [
       [
         "陆运",
@@ -820,7 +819,6 @@ export default function AutomocionSectorPage() {
 
               <div className={styles.actions}>
                 <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>
-                <Link href="/contacto" className={styles.secondaryBtn}>{t.secondaryCta}</Link>
               </div>
             </div>
 
@@ -859,9 +857,6 @@ export default function AutomocionSectorPage() {
             })}
           </div>
         </section>
-
-        <Certifications />
-
         <section className={styles.overview}>
           <div className={styles.overviewCopy}>
             <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
@@ -957,7 +952,9 @@ export default function AutomocionSectorPage() {
           </div>
         </section>
 
-        <HomeOperatorOnly />
+        <Certifications />
+
+        <SectorLeadForm />
 
 </main>
 

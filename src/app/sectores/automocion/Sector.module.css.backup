@@ -2963,7 +2963,7 @@
       rgba(5, 6, 9, .55) 100%
     ),
     radial-gradient(circle at 18% 18%, rgba(23, 50, 71, .16), transparent 24rem),
-    url("/images/sectores/consumo1.png") !important;
+    url("/images/sectores/transporte-logistica-automocion.png") !important;
   background-size: cover !important;
   background-position: center 48% !important;
   background-repeat: no-repeat !important;
@@ -3065,7 +3065,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/sectores/consumo1.png") !important;
+    url("/images/sectores/transporte-logistica-automocion.png") !important;
   background-size: cover !important;
   background-position: center 55% !important;
   background-repeat: no-repeat !important;
@@ -3104,7 +3104,7 @@
   .services {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.90)),
-      url("/images/sectores/consumo1.png") !important;
+      url("/images/sectores/transporte-logistica-automocion.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3116,7 +3116,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/consumo1.png") !important;
+      url("/images/sectores/transporte-logistica-automocion.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3134,7 +3134,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/sectores/consumo1.png") !important;
+    url("/images/sectores/transporte-logistica-automocion.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3144,7 +3144,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/consumo1.png") !important;
+      url("/images/sectores/transporte-logistica-automocion.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3162,7 +3162,7 @@
       rgba(5, 6, 9, .44) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/sectores/consumo1.png") !important;
+    url("/images/sectores/transporte-logistica-automocion.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3172,7 +3172,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/consumo1.png") !important;
+      url("/images/sectores/transporte-logistica-automocion.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -8878,7 +8878,7 @@
   position: relative !important;
   isolation: isolate !important;
   background-color: rgba(0, 0, 0, 0) !important;
-  background-image: url("/images/sectores/consumo1.png") !important;
+  background-image: url("/images/sectores/transporte-logistica-automocion.png") !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
@@ -9121,7 +9121,7 @@
         rgba(3,10,18,.16) 100%
       ),
       radial-gradient(circle at 70% 32%, rgba(15,111,150,.13), transparent 42%),
-      var(--mobile-bg, url("/images/sectores/consumo1.png")) center center / 100% 100% no-repeat !important;
+      var(--mobile-bg, url("/images/sectores/transporte-logistica-automocion.png")) center center / 100% 100% no-repeat !important;
   }
 
   .page .finalCta::before,
@@ -9240,7 +9240,7 @@
 
 /* ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL
    DarkBand restaurado correctamente:
-   - usa SU imagen original del page.tsx: /images/sectores/consumo1.png
+   - usa SU imagen original del page.tsx: /images/sectores/transporte-logistica-automocion.png
    - no usa imagen del CTA
    - elimina capas oscuras viejas
    - mantiene el estilo azul/premium
@@ -9264,7 +9264,7 @@
       rgba(244,239,229,.025) 0%,
       rgba(3,10,18,.16) 100%
     ),
-    url("/images/sectores/consumo1.png") center center / cover no-repeat !important;
+    url("/images/sectores/transporte-logistica-automocion.png") center center / cover no-repeat !important;
 }
 
 .page .darkBand::before {
@@ -9981,6 +9981,41 @@ a.primaryBtn:hover {
     font-size: clamp(3.4rem, 4.2vw, 4.8rem) !important;
   }
 }
+
+
+/* AUTOMOCION — EYEBROW OVERVIEW GOLD */
+.overview .eyebrow,
+.overviewCopy .eyebrow {
+  color: #d8ab62 !important;
+  -webkit-text-fill-color: #d8ab62 !important;
+}
+/* /AUTOMOCION — EYEBROW OVERVIEW GOLD */
+
+
+/* =========================================================
+   AUTOMOCION — OVERVIEW EYEBROW FINAL GOLD
+   ========================================================= */
+
+.page .overview .overviewCopy > .eyebrow {
+  color: #d8ab62 !important;
+  -webkit-text-fill-color: #d8ab62 !important;
+}
+
+/* === /AUTOMOCION OVERVIEW EYEBROW FINAL GOLD === */
+
+
+
+/* =========================================================
+   AUTOMOCION — OVERVIEW EYEBROW FINAL GOLD
+   ========================================================= */
+
+.page .overview .overviewCopy > .eyebrow {
+  color: #d8ab62 !important;
+  -webkit-text-fill-color: #d8ab62 !important;
+}
+
+/* === /AUTOMOCION OVERVIEW EYEBROW FINAL GOLD === */
+
 
 
 /* === SECTOR SERVICES EYEBROW — GLOBAL CONSISTENCY === */

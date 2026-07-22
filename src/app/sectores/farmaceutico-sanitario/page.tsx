@@ -9,15 +9,14 @@ import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import styles from "./Sector.module.css";
 
-import HomeOperatorOnly from "@/components/sections/HomeOperatorOnly";
-
+import SectorLeadForm from "@/app/sectores/alimentacion-bebidas/SectorLeadForm";
 type Locale = "es" | "en" | "zh";
 
 const copy = {
   "es": {
-    "heroEyebrow": "Sector farmacéutico y sanitario",
-    "heroTitle": "Logística sanitaria para productos que no admiten errores.",
-    "heroText": "Coordinamos operaciones para productos farmacéuticos, sanitarios, médicos y sensibles, integrando control documental, trazabilidad, cadena de frío cuando aplica y seguimiento operativo.",
+    "heroEyebrow": "Transporte especial para",
+    "heroTitle": "Farmacéutico y Sanitario",
+    "heroText": "Soluciones logísticas para productos farmacéuticos y sanitarios, con trazabilidad, control documental y cadena de frío cuando el producto lo requiere.",
     "primaryCta": "Solicitar propuesta logística",
     "secondaryCta": "Hablar con un especialista",
     "activeLabel": "Operación sanitaria activa",
@@ -67,8 +66,8 @@ const copy = {
         "Coordinación final para reducir riesgos y asegurar recepción."
       ]
     ],
-    "servicesEyebrow": "Soluciones farmacéuticas y sanitarias",
-    "servicesTitle": "Operaciones para productos críticos y sensibles.",
+    "servicesEyebrow": "Soluciones especializadas",
+    "servicesTitle": "Servicios logísticos para cada necesidad del sector.",
     "services": [
       [
         "Carga pharma",
@@ -177,9 +176,9 @@ const copy = {
     "finalSecondary": "Hablar con un especialista"
   },
   "en": {
-    "heroEyebrow": "Sector farmacéutico y sanitario",
-    "heroTitle": "Logística sanitaria para productos que no admiten errores.",
-    "heroText": "Coordinamos operaciones para productos farmacéuticos, sanitarios, médicos y sensibles, integrando control documental, trazabilidad, cadena de frío cuando aplica y seguimiento operativo.",
+    "heroEyebrow": "Special transport for",
+    "heroTitle": "Pharmaceutical & Healthcare",
+    "heroText": "Logistics solutions for pharmaceutical and healthcare products, with traceability, document control and temperature-controlled transport when required.",
     "primaryCta": "Plan my operation",
     "secondaryCta": "Talk to our team",
     "activeLabel": "Operación sanitaria activa",
@@ -229,8 +228,8 @@ const copy = {
         "Coordinación final para reducir riesgos y asegurar recepción."
       ]
     ],
-    "servicesEyebrow": "Soluciones farmacéuticas y sanitarias",
-    "servicesTitle": "Operaciones para productos críticos y sensibles.",
+    "servicesEyebrow": "Specialized solutions",
+    "servicesTitle": "Logistics services for every sector need.",
     "services": [
       [
         "Carga pharma",
@@ -339,9 +338,9 @@ const copy = {
     "finalSecondary": "Hablar con un especialista"
   },
   "zh": {
-    "heroEyebrow": "Sector farmacéutico y sanitario",
-    "heroTitle": "Logística sanitaria para productos que no admiten errores.",
-    "heroText": "Coordinamos operaciones para productos farmacéuticos, sanitarios, médicos y sensibles, integrando control documental, trazabilidad, cadena de frío cuando aplica y seguimiento operativo.",
+    "heroEyebrow": "医药与医疗专项运输",
+    "heroTitle": "医药与医疗",
+    "heroText": "为医药和医疗产品提供专业物流解决方案，包括可追溯管理、文件控制以及必要时的温控运输。",
     "primaryCta": "规划物流操作",
     "secondaryCta": "联系我们的团队",
     "activeLabel": "Operación sanitaria activa",
@@ -391,8 +390,8 @@ const copy = {
         "Coordinación final para reducir riesgos y asegurar recepción."
       ]
     ],
-    "servicesEyebrow": "Soluciones farmacéuticas y sanitarias",
-    "servicesTitle": "Operaciones para productos críticos y sensibles.",
+    "servicesEyebrow": "专业解决方案",
+    "servicesTitle": "满足行业不同需求的专业物流服务。",
     "services": [
       [
         "Carga pharma",
@@ -820,23 +819,6 @@ export default function FarmaceuticoSanitarioSectorPage() {
 
               <div className={styles.actions}>
                 <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>
-                <Link href="/contacto" className={styles.secondaryBtn}>{t.secondaryCta}</Link>
-              </div>
-            </div>
-
-            <div className={styles.operationCard}>
-              <span>{t.activeLabel}</span>
-              <strong>{t.activeRoute}</strong>
-              <p>{t.activeCargo}</p>
-
-              <div>
-                <small>{t.activeStatusLabel}</small>
-                <b>{t.activeStatus}</b>
-              </div>
-
-              <div>
-                <small>{t.activeEtaLabel}</small>
-                <em>{t.activeEta}</em>
               </div>
             </div>
           </div>
@@ -859,8 +841,6 @@ export default function FarmaceuticoSanitarioSectorPage() {
             })}
           </div>
         </section>
-
-        <Certifications />
 
         <section className={styles.overview}>
           <div className={styles.overviewCopy}>
@@ -957,7 +937,9 @@ export default function FarmaceuticoSanitarioSectorPage() {
           </div>
         </section>
 
-        <HomeOperatorOnly />
+        <Certifications />
+
+        <SectorLeadForm />
 
 </main>
 

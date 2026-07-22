@@ -2,542 +2,330 @@
 
 import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Image from "next/image";
 import Link from "next/link";
+
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 import Certifications from "@/components/sections/Certifications";
 import styles from "./Sector.module.css";
 
-import HomeOperatorOnly from "@/components/sections/HomeOperatorOnly";
-
+import SectorLeadForm from "@/app/sectores/alimentacion-bebidas/SectorLeadForm";
 type Locale = "es" | "en" | "zh";
 
+type IconName =
+  | "timer"
+  | "plane"
+  | "globe"
+  | "box"
+  | "route"
+  | "document"
+  | "tracking"
+  | "search"
+  | "truck"
+  | "wind"
+  | "solar";
+
 const copy = {
-  "es": {
-    "heroEyebrow": "Sector energías renovables",
-    "heroTitle": "Logística para proyectos energéticos que no pueden detenerse.",
-    "heroText": "Coordinamos transporte, manipulación y operaciones especiales para componentes de energía renovable, cargas industriales y proyectos de alta complejidad.",
-    "primaryCta": "Solicitar propuesta logística",
-    "secondaryCta": "Hablar con un especialista",
-    "activeLabel": "Proyecto renovable activo",
-    "activeRoute": "Puerto → Obra",
-    "activeCargo": "Componentes industriales",
-    "activeStatusLabel": "Estado:",
-    "activeStatus": "En planificación",
-    "activeEtaLabel": "Prioridad:",
-    "activeEta": "Alta complejidad",
-    "trust": [
-      [
-        "Carga sobredimensionada",
-        "Componentes especiales"
-      ],
-      [
-        "Coordinación multimodal",
-        "Puerto, ruta y obra"
-      ],
-      [
-        "Permisos",
-        "Gestión documental"
-      ],
-      [
-        "Entrega en obra",
-        "Control operativo"
-      ]
+  es: {
+    heroEyebrow: "Transporte especial para",
+    heroTitle: "Energías Renovables",
+    heroText:
+      "Soluciones logísticas para proyectos de energías renovables, con transporte especial, coordinación multimodal y entrega en obra.",
+    primaryCta: "Solicitar propuesta logística",
+
+    trust: [
+      ["Carga especial", "Componentes sobredimensionados"],
+      ["Multimodal", "Puerto, carretera y obra"],
+      ["Permisos", "Gestión documental"],
+      ["Entrega en obra", "Coordinación final"],
     ],
-    "overviewEyebrow": "Operación industrial especializada",
-    "overviewTitle": "Control operativo para proyectos energéticos que no pueden detenerse.",
-    "overviewText": "Gestionamos componentes sobredimensionados, equipos sensibles y cargas críticas para parques solares, eólicos e infraestructuras energéticas, coordinando rutas, permisos, manipulación y entrega final.",
-    "overviewButton": "Conocer más sobre renovables",
-    "pillars": [
+
+    overviewEyebrow: "Expertos en el sector de:",
+    overviewTitle: "Transporte y logística especializada para Energías Renovables.",
+    overviewText: "La industria de las energías renovables exige planificación, flexibilidad y experiencia en operaciones de alta complejidad. En Across Logistics coordinamos soluciones para parques eólicos, plantas solares e infraestructuras energéticas, adaptando cada operación a las necesidades del proyecto y manteniendo nuestro compromiso con una logística eficiente, responsable y respetuosa con el medio ambiente.",
+    overviewButton: "Hablar con un especialista",
+
+    pillars: [
       [
         "Planificación técnica",
-        "Análisis de dimensiones, peso, ruta, accesos y restricciones operativas."
+        "Analizamos dimensiones, rutas, accesos y necesidades específicas de cada proyecto.",
       ],
       [
-        "Gestión de permisos",
-        "Coordinación documental para rutas, maniobras y cargas especiales."
+        "Cargas especiales",
+        "Coordinamos componentes sobredimensionados, permisos y documentación.",
       ],
       [
         "Transporte multimodal",
-        "Integración marítima, terrestre o aérea según el proyecto."
+        "Integramos transporte marítimo, aéreo y terrestre.",
       ],
       [
         "Entrega en obra",
-        "Coordinación final con ventanas, accesos y equipos de descarga."
-      ]
+        "Coordinamos la entrega final, útiles y repuestos.",
+      ],
     ],
-    "servicesEyebrow": "Servicios logísticos para energías renovables",
-    "servicesTitle": "Soluciones diseñadas para operaciones energéticas.",
+
+    "servicesEyebrow": "Soluciones especializadas",
+    "servicesTitle": "Servicios logísticos para cada necesidad del sector.",
     "services": [
       [
-        "Componentes eólicos",
-        "Transporte de palas, torres, nacelles y equipos asociados."
+            "Temperatura controlada",
+            "Soluciones para productos perecederos y mercancías sensibles que requieren condiciones térmicas específicas."
       ],
       [
-        "Proyectos solares",
-        "Coordinación para paneles, estructuras, inversores y componentes técnicos."
+            "Transporte terrestre",
+            "Distribución nacional e internacional con planificación de rutas, tiempos y entregas."
       ],
       [
-        "Carga sobredimensionada",
-        "Operaciones para mercancías fuera de medidas estándar."
+            "Transporte aéreo",
+            "Soluciones para operaciones urgentes, productos sensibles y mercancías de alto valor."
       ],
       [
-        "Coordinación multimodal",
-        "Integración de puerto, carretera, almacén y entrega final."
+            "Transporte marítimo",
+            "Gestión de cargas internacionales adaptada al volumen, destino y necesidades de cada operación."
       ],
       [
-        "Gestión documental",
-        "Permisos, documentación y requisitos operativos para cargas especiales."
+            "Almacén y distribución",
+            "Gestión de stock, preparación de pedidos y distribución hacia clientes, retail y centros logísticos."
       ],
       [
-        "Entrega en obra",
-        "Coordinación con accesos, ventanas de entrega y equipos de manipulación."
+            "Servicios de aduanas",
+            "Coordinación documental y aduanera para facilitar operaciones de importación y exportación."
       ]
+],
+
+    processEyebrow: "Nuestro proceso",
+    processTitle:
+      "Una operación clara y coordinada de principio a fin.",
+
+    process: [
+      [
+        "Analizamos el proyecto",
+        "Revisamos dimensiones, peso, componente, origen, destino y requerimientos de obra.",
+      ],
+      [
+        "Diseñamos la operación",
+        "Definimos ruta, permisos, transporte, equipos y maniobras necesarias.",
+      ],
+      [
+        "Coordinamos y monitorizamos",
+        "Gestionamos documentación, operadores y cada hito crítico del proyecto.",
+      ],
+      [
+        "Entregamos en obra",
+        "Coordinamos acceso, descarga, recepción y cierre operativo.",
+      ],
     ],
-    "useCasesEyebrow": "Cuándo necesita logística renovable",
-    "useCasesTitle": "Cuando el proyecto exige precisión antes de mover la carga.",
-    "useCases": [
-      [
-        "Parques eólicos",
-        "Componentes de gran dimensión y operaciones de alta complejidad."
-      ],
-      [
-        "Proyectos solares",
-        "Cargas técnicas con planificación de entregas y control documental."
-      ],
-      [
-        "Infraestructura energética",
-        "Equipos industriales para obras y proyectos críticos."
-      ],
-      [
-        "Importación de componentes",
-        "Coordinación internacional desde origen hasta obra."
-      ],
-      [
-        "Carga industrial",
-        "Equipos que requieren manipulación y rutas especiales."
-      ],
-      [
-        "Proyectos llave en mano",
-        "Planificación integral para operaciones energéticas."
-      ]
-    ],
-    "processEyebrow": "Nuestro proceso operativo",
-    "processTitle": "Una operación renovable diseñada antes de mover la carga.",
-    "process": [
-      [
-        "Análisis técnico",
-        "Revisamos dimensiones, peso, tipo de componente y destino final."
-      ],
-      [
-        "Estudio de ruta",
-        "Evaluamos accesos, restricciones, permisos y viabilidad."
-      ],
-      [
-        "Plan documental",
-        "Coordinamos autorizaciones, seguros y requisitos operativos."
-      ],
-      [
-        "Transporte y manipulación",
-        "Definimos equipos, operadores y modalidad logística."
-      ],
-      [
-        "Seguimiento",
-        "Monitoreamos hitos críticos del proyecto."
-      ],
-      [
-        "Entrega en obra",
-        "Coordinamos descarga, recepción y cierre operativo."
-      ]
-    ],
-    "bandTitle": "Logística renovable diseñada para proyectos de alta exigencia.",
-    "bandText": "Nuestro equipo coordina operaciones para empresas energéticas que necesitan planificación técnica, control documental y ejecución precisa en cada etapa.",
-    "stats": [
-      [
-        "Proyectos energéticos",
-        "Operaciones de alta complejidad"
-      ],
-      [
-        "Carga especial",
-        "Sobredimensionada e industrial"
-      ],
-      [
-        "Multimodal",
-        "Puerto, ruta y obra"
-      ],
-      [
-        "Soporte experto",
-        "Especialistas dedicados"
-      ]
-    ],
-    "finalTitle": "Planifiquemos su próxima operación renovable.",
-    "finalText": "Analizamos tipo de componente, dimensiones, origen, destino y requerimientos de obra para construir una operación segura y viable.",
-    "finalPrimary": "Solicitar propuesta",
-    "finalSecondary": "Hablar con un especialista"
   },
-  "en": {
-    "heroEyebrow": "Renewable energy sector",
-    "heroTitle": "Logistics for energy projects that cannot stop.",
-    "heroText": "We coordinate transport, handling and special operations for renewable energy components, industrial cargo and high-complexity projects.",
-    "primaryCta": "Plan my operation",
-    "secondaryCta": "Talk to our team",
-    "activeLabel": "Active renewable project",
-    "activeRoute": "Port → Site",
-    "activeCargo": "Industrial components",
-    "activeStatusLabel": "Status:",
-    "activeStatus": "In planning",
-    "activeEtaLabel": "Priority:",
-    "activeEta": "High complexity",
-    "trust": [
-      [
-        "Oversized cargo",
-        "Special components"
-      ],
-      [
-        "Multimodal coordination",
-        "Port, road and site"
-      ],
-      [
-        "Permits",
-        "Document management"
-      ],
-      [
-        "Site delivery",
-        "Operational control"
-      ]
+
+  en: {
+    heroEyebrow: "Special transport for",
+    heroTitle: "Renewable Energy",
+    heroText:
+      "Logistics solutions for renewable energy projects, with special transport, multimodal coordination and final site delivery.",
+    primaryCta: "Request logistics proposal",
+
+    trust: [
+      ["Special cargo", "Oversized components"],
+      ["Multimodal", "Port, road and site"],
+      ["Permits", "Document management"],
+      ["Site delivery", "Final coordination"],
     ],
-    "overviewEyebrow": "Specialized industrial operation",
-    "overviewTitle": "Operational control for energy projects that cannot stop.",
-    "overviewText": "We manage oversized components, sensitive equipment and critical cargo for solar farms, wind projects and energy infrastructure, coordinating routes, permits, handling and final delivery.",
-    "overviewButton": "Learn more about renewables",
-    "pillars": [
+
+    overviewEyebrow: "Sector expertise",
+    overviewTitle:
+      "Specialized logistics for demanding energy projects.",
+    overviewText:
+      "We manage oversized components, sensitive equipment and critical cargo for solar farms, wind projects and energy infrastructure, coordinating routes, permits, handling and final delivery.",
+    overviewButton: "Talk to a specialist",
+
+    pillars: [
       [
         "Technical planning",
-        "Analysis of dimensions, weight, route, access and operational restrictions."
+        "We analyze dimensions, weight, routes, access and operational restrictions.",
       ],
       [
         "Permit management",
-        "Document coordination for routes, maneuvers and special cargo."
+        "We coordinate documentation for routes, maneuvers and special cargo.",
       ],
       [
         "Multimodal transport",
-        "Ocean, road or air integration according to the project."
+        "We integrate ocean and road transport according to project requirements.",
       ],
       [
         "Site delivery",
-        "Final coordination with windows, access and unloading equipment."
-      ]
+        "We coordinate time windows, access, unloading and final reception.",
+      ],
     ],
-    "servicesEyebrow": "Logistics services for renewable energy",
-    "servicesTitle": "Solutions designed for energy operations.",
+
+    "servicesEyebrow": "Specialized solutions",
+    "servicesTitle": "Logistics services for every sector need.",
     "services": [
       [
-        "Wind components",
-        "Transport of blades, towers, nacelles and associated equipment."
+            "Temperature-controlled logistics",
+            "Solutions for perishable and sensitive products requiring specific thermal conditions."
       ],
       [
-        "Solar projects",
-        "Coordination for panels, structures, inverters and technical components."
+            "Road transport",
+            "Domestic and international distribution with coordinated routes, timing and deliveries."
       ],
       [
-        "Oversized cargo",
-        "Operations for goods outside standard dimensions."
+            "Air freight",
+            "Solutions for urgent operations, sensitive products and high-value cargo."
       ],
       [
-        "Multimodal coordination",
-        "Integration of port, road, warehousing and final delivery."
+            "Ocean freight",
+            "International cargo management adapted to volume, destination and operational requirements."
       ],
       [
-        "Document management",
-        "Permits, documentation and operational requirements for special cargo."
+            "Warehousing and distribution",
+            "Stock management, order preparation and distribution to clients, retail and logistics centers."
       ],
       [
-        "Site delivery",
-        "Coordination with access, delivery windows and handling equipment."
+            "Customs services",
+            "Customs and documentation coordination for efficient import and export operations."
       ]
+],
+
+    processEyebrow: "Our process",
+    processTitle:
+      "A clear and coordinated operation from start to finish.",
+
+    process: [
+      [
+        "We analyze the project",
+        "We review dimensions, weight, component, origin, destination and site requirements.",
+      ],
+      [
+        "We design the operation",
+        "We define routes, permits, transport, equipment and required maneuvers.",
+      ],
+      [
+        "We coordinate and monitor",
+        "We manage documentation, operators and every critical project milestone.",
+      ],
+      [
+        "We deliver to site",
+        "We coordinate access, unloading, reception and operational closure.",
+      ],
     ],
-    "useCasesEyebrow": "When renewable logistics is needed",
-    "useCasesTitle": "When the project requires precision before moving cargo.",
-    "useCases": [
-      [
-        "Wind farms",
-        "Large components and high-complexity operations."
-      ],
-      [
-        "Solar projects",
-        "Technical cargo with delivery planning and document control."
-      ],
-      [
-        "Energy infrastructure",
-        "Industrial equipment for sites and critical projects."
-      ],
-      [
-        "Component imports",
-        "International coordination from origin to site."
-      ],
-      [
-        "Industrial cargo",
-        "Equipment requiring handling and special routes."
-      ],
-      [
-        "Turnkey projects",
-        "End-to-end planning for energy operations."
-      ]
-    ],
-    "processEyebrow": "Our operational process",
-    "processTitle": "A renewable operation designed before moving cargo.",
-    "process": [
-      [
-        "Technical analysis",
-        "We review dimensions, weight, component type and final destination."
-      ],
-      [
-        "Route study",
-        "We assess access, restrictions, permits and viability."
-      ],
-      [
-        "Document plan",
-        "We coordinate authorizations, insurance and operational requirements."
-      ],
-      [
-        "Transport and handling",
-        "We define equipment, operators and logistics modality."
-      ],
-      [
-        "Tracking",
-        "We monitor critical project milestones."
-      ],
-      [
-        "Site delivery",
-        "We coordinate unloading, reception and operational closure."
-      ]
-    ],
-    "bandTitle": "Renewable logistics designed for high-demand projects.",
-    "bandText": "Our team coordinates operations for energy companies that require technical planning, document control and precise execution at every stage.",
-    "stats": [
-      [
-        "Energy projects",
-        "High-complexity operations"
-      ],
-      [
-        "Special cargo",
-        "Oversized and industrial"
-      ],
-      [
-        "Multimodal",
-        "Port, road and site"
-      ],
-      [
-        "Expert support",
-        "Dedicated specialists"
-      ]
-    ],
-    "finalTitle": "Let’s plan your next renewable operation.",
-    "finalText": "We analyze component type, dimensions, origin, destination and site requirements to build a safe and viable operation.",
-    "finalPrimary": "Request proposal",
-    "finalSecondary": "Talk to a specialist"
   },
-  "zh": {
-    "heroEyebrow": "可再生能源行业",
-    "heroTitle": "为不能停滞的能源项目提供物流。",
-    "heroText": "我们为可再生能源组件、工业货物和高复杂度项目协调运输、装卸和特殊操作。",
-    "primaryCta": "规划物流操作",
-    "secondaryCta": "联系我们的团队",
-    "activeLabel": "进行中的可再生能源项目",
-    "activeRoute": "港口 → 工地",
-    "activeCargo": "工业组件",
-    "activeStatusLabel": "状态：",
-    "activeStatus": "规划中",
-    "activeEtaLabel": "优先级：",
-    "activeEta": "高复杂度",
-    "trust": [
-      [
-        "超限货物",
-        "特殊组件"
-      ],
-      [
-        "多式联运协调",
-        "港口、道路与工地"
-      ],
-      [
-        "许可",
-        "文件管理"
-      ],
-      [
-        "工地交付",
-        "运营控制"
-      ]
+
+  zh: {
+    heroEyebrow: "可再生能源专项运输",
+    heroTitle: "可再生能源",
+    heroText:
+      "为可再生能源项目提供物流解决方案，包括特殊运输、多式联运协调和最终工地交付。",
+    primaryCta: "申请物流方案",
+
+    trust: [
+      ["特殊货物", "超限组件"],
+      ["多式联运", "港口、道路和工地"],
+      ["许可", "文件管理"],
+      ["工地交付", "最终协调"],
     ],
-    "overviewEyebrow": "专业工业运营",
-    "overviewTitle": "为不能停止的能源项目提供运营控制。",
-    "overviewText": "我们为太阳能、风能和能源基础设施管理超限组件、敏感设备和关键货物，协调路线、许可、装卸和最终交付。",
-    "overviewButton": "了解可再生能源物流",
-    "pillars": [
+
+    overviewEyebrow: "行业专长",
+    overviewTitle:
+      "可再生能源行业运输与物流专家。",
+    overviewText:
+      "可再生能源行业需要快速响应、灵活性和精准的物流规划。Across Logistics 为风电场、太阳能电站及其他能源基础设施的建设、投产和维护提供物流协调服务。我们根据每个项目的具体需求设计高效的运输和国际协调方案，并致力于发展更加高效、负责任的物流解决方案，为向更可持续能源模式的转型提供支持。",
+    overviewButton: "联系专家",
+
+    pillars: [
       [
         "技术规划",
-        "分析尺寸、重量、路线、通行和运营限制。"
+        "分析尺寸、重量、路线、通行条件和运营限制。",
       ],
       [
         "许可管理",
-        "为路线、操作和特殊货物协调文件。"
+        "协调路线、操作和特殊货物所需文件。",
       ],
       [
         "多式联运",
-        "根据项目整合海运、陆运或空运。"
+        "根据项目需求整合海运和陆运。",
       ],
       [
         "工地交付",
-        "协调时间窗口、通行和卸货设备。"
-      ]
+        "协调时间窗口、通行、卸货和最终接收。",
+      ],
     ],
-    "servicesEyebrow": "可再生能源物流服务",
-    "servicesTitle": "为能源运营设计的解决方案。",
+
+    "servicesEyebrow": "专业解决方案",
+    "servicesTitle": "满足行业不同需求的专业物流服务。",
     "services": [
       [
-        "风电组件",
-        "运输叶片、塔筒、机舱和相关设备。"
+            "温控物流",
+            "为易腐和温度敏感产品提供专业温控运输解决方案。"
       ],
       [
-        "太阳能项目",
-        "协调面板、结构、逆变器和技术组件。"
+            "陆路运输",
+            "通过路线、时间和交付规划协调国内及国际配送。"
       ],
       [
-        "超限货物",
-        "为超出标准尺寸的货物提供操作。"
+            "航空运输",
+            "为紧急运输、敏感产品和高价值货物提供解决方案。"
       ],
       [
-        "多式联运协调",
-        "整合港口、道路、仓储和最终交付。"
+            "海运",
+            "根据货量、目的地和运营需求管理国际海运业务。"
       ],
       [
-        "文件管理",
-        "特殊货物的许可、文件和运营要求。"
+            "仓储与配送",
+            "提供库存管理、订单准备以及客户和零售配送服务。"
       ],
       [
-        "工地交付",
-        "协调通行、交付窗口和装卸设备。"
+            "海关服务",
+            "协调进出口业务所需的海关和文件流程。"
       ]
+],
+
+    processEyebrow: "我们的流程",
+    processTitle:
+      "从开始到结束，清晰协调每一步。",
+
+    process: [
+      [
+        "分析项目",
+        "审核尺寸、重量、组件、始发地、目的地和工地要求。",
+      ],
+      [
+        "设计物流方案",
+        "确定路线、许可、运输方式、设备和所需操作。",
+      ],
+      [
+        "协调并监控",
+        "管理文件、操作人员和项目关键节点。",
+      ],
+      [
+        "交付至工地",
+        "协调通行、卸货、接收和运营收尾。",
+      ],
     ],
-    "useCasesEyebrow": "何时需要可再生能源物流",
-    "useCasesTitle": "当项目在移动货物前需要精准规划时。",
-    "useCases": [
-      [
-        "风电场",
-        "大型组件和高复杂度操作。"
-      ],
-      [
-        "太阳能项目",
-        "需要交付规划和文件控制的技术货物。"
-      ],
-      [
-        "能源基础设施",
-        "用于工地和关键项目的工业设备。"
-      ],
-      [
-        "组件进口",
-        "从始发地到工地的国际协调。"
-      ],
-      [
-        "工业货物",
-        "需要装卸和特殊路线的设备。"
-      ],
-      [
-        "交钥匙项目",
-        "能源运营的整体规划。"
-      ]
-    ],
-    "processEyebrow": "我们的运营流程",
-    "processTitle": "在移动货物之前设计可再生能源操作。",
-    "process": [
-      [
-        "技术分析",
-        "审核尺寸、重量、组件类型和最终目的地。"
-      ],
-      [
-        "路线研究",
-        "评估通行、限制、许可和可行性。"
-      ],
-      [
-        "文件计划",
-        "协调授权、保险和运营要求。"
-      ],
-      [
-        "运输与装卸",
-        "确定设备、操作人员和物流方式。"
-      ],
-      [
-        "跟踪",
-        "监控项目关键节点。"
-      ],
-      [
-        "工地交付",
-        "协调卸货、接收和运营关闭。"
-      ]
-    ],
-    "bandTitle": "为高要求项目设计的可再生能源物流。",
-    "bandText": "我们的团队为需要技术规划、文件控制和精准执行的能源企业协调每个阶段的运营。",
-    "stats": [
-      [
-        "能源项目",
-        "高复杂度运营"
-      ],
-      [
-        "特殊货物",
-        "超限与工业"
-      ],
-      [
-        "多式联运",
-        "港口、道路与工地"
-      ],
-      [
-        "专家支持",
-        "专属专家"
-      ]
-    ],
-    "finalTitle": "让我们规划您的下一次可再生能源操作。",
-    "finalText": "我们分析组件类型、尺寸、始发地、目的地和工地要求，以构建安全可行的操作。",
-    "finalPrimary": "申请方案",
-    "finalSecondary": "联系专家"
-  }
+  },
 } satisfies Record<Locale, any>;
 
 function getInitialLocale(): Locale {
-  if (typeof window === "undefined") return "es";
+  if (typeof window === "undefined") {
+    return "es";
+  }
 
   const saved =
     window.localStorage.getItem("locale") ||
     window.localStorage.getItem("across-locale");
 
-  if (saved === "en" || saved === "zh" || saved === "es") return saved;
+  if (saved === "es" || saved === "en" || saved === "zh") {
+    return saved;
+  }
 
   const htmlLang = document.documentElement.lang;
-  if (htmlLang === "en" || htmlLang === "zh" || htmlLang === "es") return htmlLang;
+
+  if (htmlLang === "en" || htmlLang === "zh") {
+    return htmlLang;
+  }
 
   return "es";
 }
-
-type IconName =
-  | "timer"
-  | "shield"
-  | "document"
-  | "tracking"
-  | "airport"
-  | "box"
-  | "plane"
-  | "diamond"
-  | "charter"
-  | "globe"
-  | "door"
-  | "gear"
-  | "laptop"
-  | "medical"
-  | "cart"
-  | "search"
-  | "route"
-  | "package"
-  | "truck"
-  | "headset";
 
 function Icon({ name }: { name: IconName }) {
   const common = {
@@ -562,11 +350,38 @@ function Icon({ name }: { name: IconName }) {
         </svg>
       );
 
-    case "shield":
+    case "plane":
       return (
         <svg {...common}>
-          <path d="M12 3 5 6v5c0 4.4 2.8 8.3 7 10 4.2-1.7 7-5.6 7-10V6l-7-3Z" />
-          <path d="m9.5 12 1.8 1.8 3.7-4" />
+          <path d="M10.5 13.5 3 21l2.8-8.2L3 10l9 1 5.7-5.7a2.1 2.1 0 0 1 3 3L15 14l1 9-2.8-2.8L5 23l7.5-7.5" />
+        </svg>
+      );
+
+    case "globe":
+      return (
+        <svg {...common}>
+          <circle cx="12" cy="12" r="9" />
+          <path d="M3 12h18" />
+          <path d="M12 3c2.3 2.5 3.5 5.5 3.5 9S14.3 18.5 12 21" />
+          <path d="M12 3c-2.3 2.5-3.5 5.5-3.5 9s1.2 6.5 3.5 9" />
+        </svg>
+      );
+
+    case "box":
+      return (
+        <svg {...common}>
+          <path d="m21 8-9-5-9 5 9 5 9-5Z" />
+          <path d="M3 8v8l9 5 9-5V8" />
+          <path d="M12 13v8" />
+        </svg>
+      );
+
+    case "route":
+      return (
+        <svg {...common}>
+          <path d="M4 6h8a4 4 0 0 1 0 8H9a4 4 0 0 0 0 8h11" />
+          <path d="M4 6l3-3" />
+          <path d="M4 6l3 3" />
         </svg>
       );
 
@@ -588,134 +403,11 @@ function Icon({ name }: { name: IconName }) {
         </svg>
       );
 
-    case "airport":
-      return (
-        <svg {...common}>
-          <path d="M3 19h18" />
-          <path d="M5 19V9h14v10" />
-          <path d="M7 12h2" />
-          <path d="M11 12h2" />
-          <path d="M15 12h2" />
-          <path d="M8 19v-4h8v4" />
-          <path d="M4 9h16" />
-          <path d="M9 6h6" />
-          <path d="M12 3v3" />
-          <path d="M2.8 6.8 8.5 5.2" />
-          <path d="m15.5 5.2 5.7 1.6" />
-        </svg>
-      );
-
-    case "box":
-      return (
-        <svg {...common}>
-          <path d="m21 8-9-5-9 5 9 5 9-5Z" />
-          <path d="M3 8v8l9 5 9-5V8" />
-          <path d="M12 13v8" />
-        </svg>
-      );
-
-    case "plane":
-      return (
-        <svg {...common}>
-          <path d="M10.5 13.5 3 21l2.8-8.2L3 10l9 1 5.7-5.7a2.1 2.1 0 0 1 3 3L15 14l1 9-2.8-2.8L5 23l7.5-7.5" />
-        </svg>
-      );
-
-    case "diamond":
-      return (
-        <svg {...common}>
-          <path d="M6 3h12l4 6-10 12L2 9l4-6Z" />
-          <path d="M2 9h20" />
-          <path d="m9 3 3 6 3-6" />
-          <path d="m8 9 4 12 4-12" />
-        </svg>
-      );
-
-    case "charter":
-      return (
-        <svg {...common}>
-          <path d="M2 16 22 7l-7 10-4-4-4 7-2-2 3-6-6 4Z" />
-        </svg>
-      );
-
-    case "globe":
-      return (
-        <svg {...common}>
-          <circle cx="12" cy="12" r="9" />
-          <path d="M3 12h18" />
-          <path d="M12 3c2.3 2.5 3.5 5.5 3.5 9S14.3 18.5 12 21" />
-          <path d="M12 3c-2.3 2.5-3.5 5.5-3.5 9s1.2 6.5 3.5 9" />
-        </svg>
-      );
-
-    case "door":
-      return (
-        <svg {...common}>
-          <path d="M6 21V4a1 1 0 0 1 1-1h10v18" />
-          <path d="M10 12h.01" />
-          <path d="M4 21h16" />
-        </svg>
-      );
-
-    case "gear":
-      return (
-        <svg {...common}>
-          <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" />
-          <path d="M19.4 15a1.8 1.8 0 0 0 .36 2l.05.05a2 2 0 1 1-2.83 2.83l-.05-.05a1.8 1.8 0 0 0-2-.36 1.8 1.8 0 0 0-1 1.63V21a2 2 0 1 1-4 0v-.07a1.8 1.8 0 0 0-1-1.63 1.8 1.8 0 0 0-2 .36l-.05.05a2 2 0 1 1-2.83-2.83l.05-.05a1.8 1.8 0 0 0 .36-2 1.8 1.8 0 0 0-1.63-1H3a2 2 0 1 1 0-4h.07a1.8 1.8 0 0 0 1.63-1 1.8 1.8 0 0 0-.36-2l-.05-.05A2 2 0 1 1 7.12 3.95l.05.05a1.8 1.8 0 0 0 2 .36 1.8 1.8 0 0 0 1-1.63V3a2 2 0 1 1 4 0v.07a1.8 1.8 0 0 0 1 1.63 1.8 1.8 0 0 0 2-.36l.05-.05a2 2 0 1 1 2.83 2.83l-.05.05a1.8 1.8 0 0 0-.36 2 1.8 1.8 0 0 0 1.63 1H21a2 2 0 1 1 0 4h-.07a1.8 1.8 0 0 0-1.53 1Z" />
-        </svg>
-      );
-
-    case "laptop":
-      return (
-        <svg {...common}>
-          <path d="M5 5h14v10H5z" />
-          <path d="M3 19h18" />
-          <path d="M8 19h8" />
-        </svg>
-      );
-
-    case "medical":
-      return (
-        <svg {...common}>
-          <path d="M12 5v14" />
-          <path d="M5 12h14" />
-          <path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z" />
-        </svg>
-      );
-
-    case "cart":
-      return (
-        <svg {...common}>
-          <path d="M6 6h15l-2 8H8L6 3H3" />
-          <circle cx="9" cy="20" r="1" />
-          <circle cx="18" cy="20" r="1" />
-        </svg>
-      );
-
     case "search":
       return (
         <svg {...common}>
           <circle cx="10.5" cy="10.5" r="6.5" />
           <path d="m16 16 5 5" />
-        </svg>
-      );
-
-    case "route":
-      return (
-        <svg {...common}>
-          <path d="M4 6h8a4 4 0 0 1 0 8H9a4 4 0 0 0 0 8h11" />
-          <path d="M4 6l3-3" />
-          <path d="M4 6l3 3" />
-        </svg>
-      );
-
-    case "package":
-      return (
-        <svg {...common}>
-          <path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5v-9Z" />
-          <path d="M12 12 4 7.5" />
-          <path d="M12 12v9" />
-          <path d="m12 12 8-4.5" />
         </svg>
       );
 
@@ -729,15 +421,32 @@ function Icon({ name }: { name: IconName }) {
         </svg>
       );
 
-    case "headset":
+    case "wind":
       return (
         <svg {...common}>
-          <path d="M4 13a8 8 0 0 1 16 0" />
-          <path d="M4 13v4a2 2 0 0 0 2 2h2v-7H6a2 2 0 0 0-2 2Z" />
-          <path d="M20 13v4a2 2 0 0 1-2 2h-2v-7h2a2 2 0 0 1 2 2Z" />
-          <path d="M16 19c0 1.1-.9 2-2 2h-2" />
+          <circle cx="12" cy="12" r="2" />
+          <path d="M12 10 8 4c3-1 5 1 5 4" />
+          <path d="m14 12 6-2c1 3-1 5-4 5" />
+          <path d="m11 14-2 6c-3-1-3-4-1-6" />
+          <path d="M12 14v7" />
         </svg>
       );
+
+    case "solar":
+      return (
+        <svg {...common}>
+          <rect x="3" y="7" width="18" height="10" rx="1" />
+          <path d="M7 7v10" />
+          <path d="M12 7v10" />
+          <path d="M17 7v10" />
+          <path d="M3 12h18" />
+          <path d="M12 17v4" />
+          <path d="M8 21h8" />
+        </svg>
+      );
+
+    default:
+      return null;
   }
 }
 
@@ -746,18 +455,34 @@ export default function EnergiasRenovablesSectorPage() {
 
   useEffect(() => {
     const updateLocale = (event?: Event) => {
-      const rawDetail = event instanceof CustomEvent ? event.detail : null;
+      const rawDetail =
+        event instanceof CustomEvent
+          ? event.detail
+          : null;
 
       const next =
         typeof rawDetail === "string"
           ? rawDetail
-          : rawDetail && typeof rawDetail === "object" && "locale" in rawDetail
-            ? String((rawDetail as { locale?: unknown }).locale)
-            : rawDetail && typeof rawDetail === "object" && "language" in rawDetail
-              ? String((rawDetail as { language?: unknown }).language)
+          : rawDetail &&
+              typeof rawDetail === "object" &&
+              "locale" in rawDetail
+            ? String(
+                (rawDetail as { locale?: unknown }).locale,
+              )
+            : rawDetail &&
+                typeof rawDetail === "object" &&
+                "language" in rawDetail
+              ? String(
+                  (rawDetail as { language?: unknown })
+                    .language,
+                )
               : null;
 
-      if (next === "es" || next === "en" || next === "zh") {
+      if (
+        next === "es" ||
+        next === "en" ||
+        next === "zh"
+      ) {
         setLocale(next);
         return;
       }
@@ -767,30 +492,90 @@ export default function EnergiasRenovablesSectorPage() {
 
     updateLocale();
 
-    window.addEventListener("storage", updateLocale);
-    window.addEventListener("languagechange", updateLocale);
-    window.addEventListener("localechange", updateLocale);
-    window.addEventListener("across-language-change", updateLocale);
-    window.addEventListener("across-locale-change", updateLocale);
+    window.addEventListener(
+      "storage",
+      updateLocale,
+    );
+
+    window.addEventListener(
+      "languagechange",
+      updateLocale,
+    );
+
+    window.addEventListener(
+      "localechange",
+      updateLocale,
+    );
+
+    window.addEventListener(
+      "across-language-change",
+      updateLocale,
+    );
+
+    window.addEventListener(
+      "across-locale-change",
+      updateLocale,
+    );
 
     return () => {
-      window.removeEventListener("storage", updateLocale);
-      window.removeEventListener("languagechange", updateLocale);
-      window.removeEventListener("localechange", updateLocale);
-      window.removeEventListener("across-language-change", updateLocale);
-      window.removeEventListener("across-locale-change", updateLocale);
+      window.removeEventListener(
+        "storage",
+        updateLocale,
+      );
+
+      window.removeEventListener(
+        "languagechange",
+        updateLocale,
+      );
+
+      window.removeEventListener(
+        "localechange",
+        updateLocale,
+      );
+
+      window.removeEventListener(
+        "across-language-change",
+        updateLocale,
+      );
+
+      window.removeEventListener(
+        "across-locale-change",
+        updateLocale,
+      );
     };
   }, []);
 
   const t = copy[locale];
+
+  const trustIcons: IconName[] = [
+    "box",
+    "route",
+    "document",
+    "tracking",
+  ];
+
+  const pillarIcons: IconName[] = [
+    "search",
+    "document",
+    "route",
+    "truck",
+  ];
 
   return (
     <div className="page-shell">
       <Header />
 
       <main className={styles.page}>
-        <section className={styles.hero} data-aereo-hero="true" data-service-hero-home="true"
-      >
+
+        {/* =========================
+            HERO
+        ========================== */}
+
+        <section
+          className={styles.hero}
+          data-aereo-hero="true"
+          data-service-hero-home="true"
+        >
           <Image
             src="/images/sectores/energiasrenovables.png"
             alt={t.heroTitle}
@@ -811,83 +596,110 @@ export default function EnergiasRenovablesSectorPage() {
 
           <div className={styles.heroOverlay} />
 
-          <div className={styles.heroInner}
-      >
+          <div className={styles.heroInner}>
             <div className={styles.heroContent}>
-              <span className={styles.eyebrow}>{t.heroEyebrow}</span>
-              <h1 className={styles.title}>{t.heroTitle}</h1>
-              <p className={styles.subtitle}>{t.heroText}</p>
+              <span className={styles.eyebrow}>
+                {t.heroEyebrow}
+              </span>
+
+              <h1 className={styles.title}>
+                {t.heroTitle}
+              </h1>
+
+              <p className={styles.subtitle}>
+                {t.heroText}
+              </p>
 
               <div className={styles.actions}>
-                <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>
-                <Link href="/contacto" className={styles.secondaryBtn}>{t.secondaryCta}</Link>
-              </div>
-            </div>
-
-            <div className={styles.operationCard}>
-              <span>{t.activeLabel}</span>
-              <strong>{t.activeRoute}</strong>
-              <p>{t.activeCargo}</p>
-
-              <div>
-                <small>{t.activeStatusLabel}</small>
-                <b>{t.activeStatus}</b>
-              </div>
-
-              <div>
-                <small>{t.activeEtaLabel}</small>
-                <em>{t.activeEta}</em>
+                <Link
+                  href="/cotizacion"
+                  className={styles.primaryBtn}
+                >
+                  {t.primaryCta}
+                </Link>
               </div>
             </div>
           </div>
 
-          <div className={styles.commandBar} data-aereo-trust="true">
-            {t.trust.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["timer", "shield", "document", "tracking"];
-
-              return (
-                <div key={title} className={styles.commandItem}>
+          <div
+            className={styles.commandBar}
+            data-aereo-trust="true"
+          >
+            {t.trust.map(
+              (
+                [title, text]: string[],
+                index: number,
+              ) => (
+                <div
+                  key={title}
+                  className={styles.commandItem}
+                >
                   <i>
-                    <Icon name={icons[index]} />
+                    <Icon
+                      name={trustIcons[index]}
+                    />
                   </i>
+
                   <span>
                     <strong>{title}</strong>
                     <small>{text}</small>
                   </span>
                 </div>
-              );
-            })}
+              ),
+            )}
           </div>
         </section>
 
-        <Certifications />
+
+        {/* =========================
+            CERTIFICACIONES
+        ========================== */}
+        {/* =========================
+            INTRODUCCIÓN
+        ========================== */}
 
         <section className={styles.overview}>
           <div className={styles.overviewCopy}>
-            <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
+            <span className={styles.eyebrow}>
+              {t.overviewEyebrow}
+            </span>
+
             <h2>{t.overviewTitle}</h2>
+
             <p>{t.overviewText}</p>
-            <Link href="/contacto">{t.overviewButton}</Link>
+
+            <Link href="/contacto">
+              {t.overviewButton}
+            </Link>
           </div>
 
           <div className={styles.pillars}>
-            {t.pillars.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["airport", "document", "tracking", "truck"];
-
-              return (
+            {t.pillars.map(
+              (
+                [title, text]: string[],
+                index: number,
+              ) => (
                 <article key={title}>
                   <i>
-                    <Icon name={icons[index]} />
+                    <Icon
+                      name={pillarIcons[index]}
+                    />
                   </i>
+
                   <h3>{title}</h3>
                   <p>{text}</p>
                 </article>
-              );
-            })}
+              ),
+            )}
           </div>
         </section>
 
-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/sectores/energiasrenovables.png')" } as CSSProperties}>
+
+        {/* =========================
+            SERVICIOS
+        ========================== */}
+
+        <section className={styles.services} style={{ "--mobile-bg": "url('/images/sectores/energiasrenovables.png')" } as CSSProperties}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -895,71 +707,80 @@ export default function EnergiasRenovablesSectorPage() {
 
           <div className={styles.serviceGrid}>
             {t.services.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["plane", "box", "diamond", "charter", "globe", "door"];
+              const icons: IconName[] = ["timer", "truck", "plane", "globe", "box", "document"];
+
+              const serviceHrefs = [
+                "/servicios/temperatura-controlada",
+                "/servicios/transporte-terrestre",
+                "/servicios/transporte-aereo",
+                "/servicios/transporte-maritimo",
+                "/servicios/almacen-distribucion",
+                "/servicios/aduanas",
+              ];
 
               return (
                 <article key={title}>
-                  <i>
-                    <Icon name={icons[index]} />
-                  </i>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
+                  <Link href={serviceHrefs[index]}>
+                    <i>
+                      <Icon name={icons[index]} />
+                    </i>
+
+                    <div>
+                      <h3>{title}</h3>
+                      <p>{text}</p>
+                    </div>
+
+                    <span aria-hidden="true">→</span>
+                  </Link>
                 </article>
               );
             })}
           </div>
         </section>
 
-        <section className={styles.useCases} data-mobile-hide-after-cert="true">
-          <div className={styles.sectionHead}>
-            <span className={styles.eyebrow}>{t.useCasesEyebrow}</span>
-            <h2>{t.useCasesTitle}</h2>
-          </div>
 
-          <div className={styles.useCaseGrid}>
-            {t.useCases.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["gear", "laptop", "package", "medical", "cart", "document"];
-
-              return (
-                <article key={title}>
-                  <i>
-                    <Icon name={icons[index]} />
-                  </i>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                </article>
-              );
-            })}
-          </div>
-        </section>
+        {/* =========================
+            PROCESO
+        ========================== */}
 
         <section className={styles.process}>
           <div className={styles.sectionHead}>
-            <span className={styles.eyebrow}>{t.processEyebrow}</span>
+            <span className={styles.eyebrow}>
+              {t.processEyebrow}
+            </span>
+
             <h2>{t.processTitle}</h2>
           </div>
 
           <div className={styles.processGrid}>
-            {t.process.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["search", "route", "document", "plane", "tracking", "truck"];
-
-              return (
+            {t.process.map(
+              (
+                [title, text]: string[],
+                index: number,
+              ) => (
                 <article key={title}>
-                  <strong>{index + 1}</strong>
-                  <i>
-                    <Icon name={icons[index]} />
-                  </i>
+                  <strong>
+                    {index + 1}
+                  </strong>
+
                   <h3>{title}</h3>
                   <p>{text}</p>
                 </article>
-              );
-            })}
+              ),
+            )}
           </div>
         </section>
 
-        <HomeOperatorOnly />
+        <Certifications />
 
-</main>
+        <SectorLeadForm />
+
+
+        {/* =========================
+            CONTACTO
+        ========================== */}
+
+      </main>
 
       <Footer />
     </div>

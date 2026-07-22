@@ -10,15 +10,14 @@ import Certifications from "@/components/sections/Certifications";
 
 import styles from "./Sector.module.css";
 
-import HomeOperatorOnly from "@/components/sections/HomeOperatorOnly";
-
+import SectorLeadForm from "@/app/sectores/alimentacion-bebidas/SectorLeadForm";
 type Locale = "es" | "en" | "zh";
 
 const copy = {
   "es": {
-    "heroEyebrow": "Sector tecnológico",
-    "heroTitle": "Logística para tecnología que exige precisión, seguridad y trazabilidad.",
-    "heroText": "Coordinamos operaciones para equipos tecnológicos, dispositivos, componentes electrónicos y mercancía de alto valor, integrando transporte, documentación, almacenaje y seguimiento operativo.",
+    "heroEyebrow": "Transporte especial para",
+    "heroTitle": "Tecnología",
+    "heroText": "Soluciones logísticas para productos tecnológicos y mercancía de alto valor, con seguridad, trazabilidad y control documental.",
     "primaryCta": "Solicitar propuesta logística",
     "secondaryCta": "Hablar con un especialista",
     "activeLabel": "Operación tecnológica activa",
@@ -68,8 +67,8 @@ const copy = {
         "Visibilidad sobre cada etapa del movimiento logístico."
       ]
     ],
-    "servicesEyebrow": "Soluciones para tecnología",
-    "servicesTitle": "Operaciones para equipos, componentes y dispositivos.",
+    "servicesEyebrow": "Soluciones especializadas",
+    "servicesTitle": "Servicios logísticos para cada necesidad del sector.",
     "services": [
       [
         "Transporte internacional",
@@ -178,9 +177,9 @@ const copy = {
     "finalSecondary": "Hablar con un especialista"
   },
   "en": {
-    "heroEyebrow": "Technology sector",
-    "heroTitle": "Logistics for technology requiring precision, security and traceability.",
-    "heroText": "We coordinate operations for technology equipment, devices, electronic components and high-value goods, integrating transport, documentation, warehousing and operational tracking.",
+    "heroEyebrow": "Special transport for",
+    "heroTitle": "Technology",
+    "heroText": "Logistics solutions for technology products and high-value cargo, with security, traceability and document control.",
     "primaryCta": "Plan my operation",
     "secondaryCta": "Talk to our team",
     "activeLabel": "Active technology operation",
@@ -230,8 +229,8 @@ const copy = {
         "Visibility over every stage of the logistics movement."
       ]
     ],
-    "servicesEyebrow": "Technology solutions",
-    "servicesTitle": "Operations for equipment, components and devices.",
+    "servicesEyebrow": "Specialized solutions",
+    "servicesTitle": "Logistics services for every sector need.",
     "services": [
       [
         "International transport",
@@ -340,9 +339,9 @@ const copy = {
     "finalSecondary": "Talk to a specialist"
   },
   "zh": {
-    "heroEyebrow": "科技行业",
-    "heroTitle": "为需要精准、安全和可追溯的科技产品提供物流。",
-    "heroText": "我们为技术设备、电子组件和高价值货物协调运输、文件、仓储和运营跟踪。",
+    "heroEyebrow": "科技产品专项运输",
+    "heroTitle": "科技",
+    "heroText": "为科技产品和高价值货物提供专业物流解决方案，包括安全保障、全程追踪和文件管理。",
     "primaryCta": "规划物流操作",
     "secondaryCta": "联系我们的团队",
     "activeLabel": "进行中的科技物流",
@@ -392,8 +391,8 @@ const copy = {
         "保持每个物流阶段可视化。"
       ]
     ],
-    "servicesEyebrow": "科技解决方案",
-    "servicesTitle": "面向设备、组件和产品的运营。",
+    "servicesEyebrow": "专业解决方案",
+    "servicesTitle": "满足行业不同需求的专业物流服务。",
     "services": [
       [
         "国际运输",
@@ -821,7 +820,6 @@ export default function TecnologicoSectorPage() {
 
               <div className={styles.actions}>
                 <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>
-                <Link href="/contacto" className={styles.secondaryBtn}>{t.secondaryCta}</Link>
               </div>
             </div>
 
@@ -860,8 +858,6 @@ export default function TecnologicoSectorPage() {
             })}
           </div>
         </section>
-
-        <Certifications />
 
         <section className={styles.overview}>
           <div className={styles.overviewCopy}>
@@ -958,7 +954,9 @@ export default function TecnologicoSectorPage() {
           </div>
         </section>
 
-        <HomeOperatorOnly />
+        <Certifications />
+
+        <SectorLeadForm />
 
 </main>
 

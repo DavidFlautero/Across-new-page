@@ -45,8 +45,8 @@ const copy = {
         "Documentación y control"
       ]
     ],
-    "overviewEyebrow": "Expertos en el sector",
-    "overviewTitle": "Expertos en transporte y logística para el sector de Alimentos y Bebidas.",
+    "overviewEyebrow": "Expertos en el sector de:",
+    "overviewTitle": "Transporte y logística especializada para Alimentos y Bebidas.",
     "overviewText": "El transporte de alimentos y bebidas exige precisión, trazabilidad y capacidad de respuesta. Diseñamos soluciones para mercancía perecedera, productos con temperatura controlada y operaciones nacionales e internacionales, adaptando cada movimiento a los requisitos del producto, el mercado y el destino.",
     "overviewButton": "Hablar con un especialista",
     "pillars": [
@@ -222,7 +222,7 @@ const copy = {
       ]
     ],
     "servicesEyebrow": "Specialized solutions",
-    "servicesTitle": "Logistics services for every sector requirement.",
+    "servicesTitle": "Logistics services for every sector need.",
     "services": [
       [
             "Temperature-controlled logistics",

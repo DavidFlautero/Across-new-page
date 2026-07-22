@@ -9,8 +9,7 @@ import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import styles from "./Sector.module.css";
 
-import HomeOperatorOnly from "@/components/sections/HomeOperatorOnly";
-
+import SectorLeadForm from "@/app/sectores/alimentacion-bebidas/SectorLeadForm";
 type Locale = "es" | "en" | "zh";
 
 const copy = {
@@ -67,8 +66,8 @@ const copy = {
         "Seguimiento de estados, tiempos y avance operativo."
       ]
     ],
-    "servicesEyebrow": "Soluciones para consumo y distribución",
-    "servicesTitle": "Logística para productos que se mueven todos los días.",
+    "servicesEyebrow": "Soluciones especializadas",
+    "servicesTitle": "Servicios logísticos para cada necesidad del sector.",
     "services": [
       [
         "Distribución nacional",
@@ -229,8 +228,8 @@ const copy = {
         "Seguimiento de estados, tiempos y avance operativo."
       ]
     ],
-    "servicesEyebrow": "Soluciones para consumo y distribución",
-    "servicesTitle": "Logística para productos que se mueven todos los días.",
+    "servicesEyebrow": "Specialized solutions",
+    "servicesTitle": "Logistics services for every sector need.",
     "services": [
       [
         "Distribución nacional",
@@ -391,8 +390,8 @@ const copy = {
         "Seguimiento de estados, tiempos y avance operativo."
       ]
     ],
-    "servicesEyebrow": "Soluciones para consumo y distribución",
-    "servicesTitle": "Logística para productos que se mueven todos los días.",
+    "servicesEyebrow": "专业解决方案",
+    "servicesTitle": "满足行业不同需求的专业物流服务。",
     "services": [
       [
         "Distribución nacional",
@@ -860,8 +859,6 @@ export default function ConsumoDistribucionSectorPage() {
           </div>
         </section>
 
-        <Certifications />
-
         <section className={styles.overview}>
           <div className={styles.overviewCopy}>
             <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
@@ -957,7 +954,9 @@ export default function ConsumoDistribucionSectorPage() {
           </div>
         </section>
 
-        <HomeOperatorOnly />
+        <Certifications />
+
+        <SectorLeadForm />
 
 </main>
 
