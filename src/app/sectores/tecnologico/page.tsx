@@ -9,7 +9,6 @@ import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 
 import styles from "./Sector.module.css";
-
 import SectorLeadForm from "@/app/sectores/alimentacion-bebidas/SectorLeadForm";
 type Locale = "es" | "en" | "zh";
 
@@ -45,10 +44,10 @@ const copy = {
         "Gestión internacional"
       ]
     ],
-    "overviewEyebrow": "Logística tecnológica",
-    "overviewTitle": "Control logístico para mercancía sensible y de alto valor.",
+    "overviewEyebrow": "Expertos en el sector de:",
+    "overviewTitle": "Transporte y logística especializada para Tecnología.",
     "overviewText": "La tecnología requiere manipulación cuidadosa, control documental, seguridad, tiempos precisos y visibilidad. Coordinamos operaciones para proteger equipos, componentes y dispositivos durante toda la cadena.",
-    "overviewButton": "Conocer más sobre tecnología",
+    "overviewButton": "Hablar con un especialista",
     "pillars": [
       [
         "Seguridad operativa",
@@ -71,28 +70,28 @@ const copy = {
     "servicesTitle": "Servicios logísticos para cada necesidad del sector.",
     "services": [
       [
-        "Transporte internacional",
-        "Soluciones aéreas, marítimas o terrestres según urgencia y valor."
+        "Temperatura controlada",
+        "Soluciones para productos perecederos y mercancías sensibles que requieren condiciones térmicas específicas."
       ],
       [
-        "Carga de alto valor",
-        "Coordinación segura para dispositivos, equipos y componentes críticos."
+        "Transporte terrestre",
+        "Distribución nacional e internacional con planificación de rutas, tiempos y entregas."
       ],
       [
-        "Almacenaje tecnológico",
-        "Stock, preparación y distribución con control operativo."
+        "Transporte aéreo",
+        "Soluciones para operaciones urgentes, productos sensibles y mercancías de alto valor."
       ],
       [
-        "Importación y exportación",
-        "Gestión documental y aduanera para comercio tecnológico."
+        "Transporte marítimo",
+        "Gestión de cargas internacionales adaptada al volumen, destino y necesidades de cada operación."
       ],
       [
-        "Distribución B2B",
-        "Entregas a empresas, centros técnicos, retailers o integradores."
+        "Almacén y distribución",
+        "Gestión de stock, preparación de pedidos y distribución hacia clientes, retail y centros logísticos."
       ],
       [
-        "Door to door",
-        "Coordinación completa desde origen hasta entrega final."
+        "Servicios de aduanas",
+        "Coordinación documental y aduanera para facilitar operaciones de importación y exportación."
       ]
     ],
     "useCasesEyebrow": "Cuándo necesita logística tecnológica",
@@ -207,10 +206,10 @@ const copy = {
         "International management"
       ]
     ],
-    "overviewEyebrow": "Technology logistics",
-    "overviewTitle": "Logistics control for sensitive and high-value goods.",
+    "overviewEyebrow": "Sector expertise",
+    "overviewTitle": "Specialized transport and logistics for the Technology sector.",
     "overviewText": "Technology requires careful handling, document control, security, precise timing and visibility. We coordinate operations to protect equipment, components and devices across the entire chain.",
-    "overviewButton": "Learn more about technology",
+    "overviewButton": "Talk to a specialist",
     "pillars": [
       [
         "Operational security",
@@ -233,28 +232,28 @@ const copy = {
     "servicesTitle": "Logistics services for every sector need.",
     "services": [
       [
-        "International transport",
-        "Air, ocean or road solutions according to urgency and value."
+        "Temperature-controlled logistics",
+        "Solutions for perishable and sensitive products requiring specific thermal conditions."
       ],
       [
-        "High-value cargo",
-        "Secure coordination for devices, equipment and critical components."
+        "Road transport",
+        "Domestic and international distribution with coordinated routes, timing and deliveries."
       ],
       [
-        "Technology warehousing",
-        "Stock, preparation and distribution with operational control."
+        "Air freight",
+        "Solutions for urgent operations, sensitive products and high-value cargo."
       ],
       [
-        "Import and export",
-        "Document and customs management for technology trade."
+        "Ocean freight",
+        "International cargo management adapted to volume, destination and operational requirements."
       ],
       [
-        "B2B distribution",
-        "Deliveries to companies, technical centers, retailers or integrators."
+        "Warehousing and distribution",
+        "Stock management, order preparation and distribution to clients, retail and logistics centers."
       ],
       [
-        "Door to door",
-        "Complete coordination from origin to final delivery."
+        "Customs services",
+        "Customs and documentation coordination for efficient import and export operations."
       ]
     ],
     "useCasesEyebrow": "When technology logistics is needed",
@@ -369,10 +368,10 @@ const copy = {
         "国际管理"
       ]
     ],
-    "overviewEyebrow": "科技物流",
-    "overviewTitle": "为敏感和高价值货物提供物流控制。",
+    "overviewEyebrow": "行业专业能力",
+    "overviewTitle": "面向科技行业的专业运输与物流服务。",
     "overviewText": "科技产品需要谨慎处理、文件控制、安全、准时和可视化。我们协调全链路操作以保护设备、组件和产品。",
-    "overviewButton": "了解科技物流",
+    "overviewButton": "联系专家",
     "pillars": [
       [
         "运营安全",
@@ -395,28 +394,28 @@ const copy = {
     "servicesTitle": "满足行业不同需求的专业物流服务。",
     "services": [
       [
-        "国际运输",
-        "根据紧急程度和价值提供空运、海运或陆运。"
+        "温控物流",
+        "为易腐和温度敏感产品提供专业温控运输解决方案。"
       ],
       [
-        "高价值货物",
-        "为设备和关键组件提供安全协调。"
+        "陆路运输",
+        "通过路线、时间和交付规划协调国内及国际配送。"
       ],
       [
-        "科技仓储",
-        "库存、准备和配送运营控制。"
+        "航空运输",
+        "为紧急运输、敏感产品和高价值货物提供解决方案。"
       ],
       [
-        "进出口",
-        "科技贸易文件和海关管理。"
+        "海运",
+        "根据货量、目的地和运营需求管理国际海运业务。"
       ],
       [
-        "B2B 配送",
-        "交付到企业、技术中心、零售商或集成商。"
+        "仓储与配送",
+        "提供库存管理、订单准备以及客户和零售配送服务。"
       ],
       [
-        "门到门",
-        "从始发地到最终交付的完整协调。"
+        "海关服务",
+        "协调进出口业务所需的海关和文件流程。"
       ]
     ],
     "useCasesEyebrow": "何时需要科技物流",
@@ -892,7 +891,7 @@ export default function TecnologicoSectorPage() {
 
           <div className={styles.serviceGrid}>
             {t.services.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["plane", "box", "diamond", "charter", "globe", "door"];
+              const icons: IconName[] = ["timer", "truck", "plane", "globe", "box", "document"];
 
               return (
                 <article key={title}>

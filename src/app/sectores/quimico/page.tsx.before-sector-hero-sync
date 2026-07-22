@@ -14,8 +14,8 @@ type Locale = "es" | "en" | "zh";
 
 const copy = {
   "es": {
-    "heroEyebrow": "Transporte especial para",
-    "heroTitle": "Industria Química",
+    "heroEyebrow": "Sector químico",
+    "heroTitle": "Logística química para cargas que exigen control, seguridad y cumplimiento.",
     "heroText": "Coordinamos operaciones logísticas para productos químicos, materias primas, mercancía sensible y cargas reguladas, integrando transporte, documentación, trazabilidad y control operativo.",
     "primaryCta": "Solicitar propuesta logística",
     "secondaryCta": "Hablar con un especialista",
@@ -44,10 +44,10 @@ const copy = {
         "Seguimiento de origen a destino"
       ]
     ],
-    "overviewEyebrow": "Expertos en el sector de:",
-    "overviewTitle": "Transporte y logística especializada para la Industria Química.",
-    "overviewText": "El transporte de productos químicos exige seguridad, precisión y un control riguroso. Diseñamos soluciones para mercancías sensibles y reguladas, operaciones nacionales e internacionales, adaptando cada movimiento a los requisitos del producto, la normativa aplicable y el destino.",
-    "overviewButton": "Hablar con un especialista",
+    "overviewEyebrow": "Logística química especializada",
+    "overviewTitle": "Control operativo para productos que requieren precisión y responsabilidad.",
+    "overviewText": "El sector químico exige planificación, cumplimiento documental, manipulación adecuada y visibilidad en cada etapa. Diseñamos operaciones para reducir riesgos, mantener continuidad y proteger la integridad de la carga.",
+    "overviewButton": "Conocer más sobre química",
     "pillars": [
       [
         "Control documental",
@@ -70,28 +70,28 @@ const copy = {
     "servicesTitle": "Servicios logísticos para cada necesidad del sector.",
     "services": [
       [
-        "Temperatura controlada",
-        "Soluciones para productos perecederos y mercancías sensibles que requieren condiciones térmicas específicas."
+        "Transporte internacional",
+        "Coordinación aérea, marítima o terrestre según producto, urgencia y requisitos."
       ],
       [
-        "Transporte terrestre",
-        "Distribución nacional e internacional con planificación de rutas, tiempos y entregas."
+        "Carga regulada",
+        "Gestión logística para mercancías que requieren documentación y control específico."
       ],
       [
-        "Transporte aéreo",
-        "Soluciones para operaciones urgentes, productos sensibles y mercancías de alto valor."
+        "Productos sensibles",
+        "Soluciones para cargas que exigen cuidado, trazabilidad y seguimiento."
       ],
       [
-        "Transporte marítimo",
-        "Gestión de cargas internacionales adaptada al volumen, destino y necesidades de cada operación."
+        "Importación y exportación",
+        "Soporte documental, aduanero y operativo para comercio internacional."
       ],
       [
-        "Almacén y distribución",
-        "Gestión de stock, preparación de pedidos y distribución hacia clientes, retail y centros logísticos."
+        "Almacenaje especializado",
+        "Gestión de stock y preparación bajo criterios operativos controlados."
       ],
       [
-        "Servicios de aduanas",
-        "Coordinación documental y aduanera para facilitar operaciones de importación y exportación."
+        "Door to door",
+        "Coordinación completa desde origen hasta entrega final."
       ]
     ],
     "useCasesEyebrow": "Cuándo necesita logística química",
@@ -176,8 +176,8 @@ const copy = {
     "finalSecondary": "Hablar con un especialista"
   },
   "en": {
-    "heroEyebrow": "Special transport for",
-    "heroTitle": "Chemical Industry",
+    "heroEyebrow": "Chemical sector",
+    "heroTitle": "Chemical logistics for cargo that requires control, safety and compliance.",
     "heroText": "We coordinate logistics operations for chemical products, raw materials, sensitive goods and regulated cargo, integrating transport, documentation, traceability and operational control.",
     "primaryCta": "Plan my operation",
     "secondaryCta": "Talk to our team",
@@ -232,28 +232,28 @@ const copy = {
     "servicesTitle": "Logistics services for every sector need.",
     "services": [
       [
-        "Temperature-controlled logistics",
-        "Solutions for perishable and sensitive products requiring specific thermal conditions."
+        "International transport",
+        "Air, ocean or road coordination according to product, urgency and requirements."
       ],
       [
-        "Road transport",
-        "Domestic and international distribution with coordinated routes, timing and deliveries."
+        "Regulated cargo",
+        "Logistics management for goods requiring documentation and specific control."
       ],
       [
-        "Air freight",
-        "Solutions for urgent operations, sensitive products and high-value cargo."
+        "Sensitive products",
+        "Solutions for cargo requiring care, traceability and tracking."
       ],
       [
-        "Ocean freight",
-        "International cargo management adapted to volume, destination and operational requirements."
+        "Import and export",
+        "Document, customs and operational support for international trade."
       ],
       [
-        "Warehousing and distribution",
-        "Stock management, order preparation and distribution to clients, retail and logistics centers."
+        "Specialized warehousing",
+        "Stock management and preparation under controlled operational criteria."
       ],
       [
-        "Customs services",
-        "Customs and documentation coordination for efficient import and export operations."
+        "Door to door",
+        "Complete coordination from origin to final delivery."
       ]
     ],
     "useCasesEyebrow": "When chemical logistics is needed",
@@ -338,8 +338,8 @@ const copy = {
     "finalSecondary": "Talk to a specialist"
   },
   "zh": {
-    "heroEyebrow": "专项运输",
-    "heroTitle": "化工行业",
+    "heroEyebrow": "化工行业",
+    "heroTitle": "为需要控制、安全和合规的货物提供化工物流。",
     "heroText": "我们为化工产品、原材料、敏感货物和受监管货物协调物流运营，整合运输、文件、可追溯性和运营控制。",
     "primaryCta": "规划物流操作",
     "secondaryCta": "联系我们的团队",
@@ -394,28 +394,28 @@ const copy = {
     "servicesTitle": "满足行业不同需求的专业物流服务。",
     "services": [
       [
-        "温控物流",
-        "为易腐和温度敏感产品提供专业温控运输解决方案。"
+        "国际运输",
+        "根据产品、紧急程度和要求协调空运、海运或陆运。"
       ],
       [
-        "陆路运输",
-        "通过路线、时间和交付规划协调国内及国际配送。"
+        "受监管货物",
+        "为需要文件和特定控制的货物提供物流管理。"
       ],
       [
-        "航空运输",
-        "为紧急运输、敏感产品和高价值货物提供解决方案。"
+        "敏感产品",
+        "为需要保护、可追溯和跟踪的货物提供方案。"
       ],
       [
-        "海运",
-        "根据货量、目的地和运营需求管理国际海运业务。"
+        "进出口",
+        "为国际贸易提供文件、海关和运营支持。"
       ],
       [
-        "仓储与配送",
-        "提供库存管理、订单准备以及客户和零售配送服务。"
+        "专业仓储",
+        "在受控运营标准下进行库存管理和准备。"
       ],
       [
-        "海关服务",
-        "协调进出口业务所需的海关和文件流程。"
+        "门到门",
+        "从始发地到最终交付的完整协调。"
       ]
     ],
     "useCasesEyebrow": "何时需要化工物流",
@@ -892,7 +892,7 @@ export default function QuimicoSectorPage() {
 
           <div className={styles.serviceGrid}>
             {t.services.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["timer", "truck", "plane", "globe", "box", "document"];
+              const icons: IconName[] = ["plane", "box", "diamond", "charter", "globe", "door"];
 
               return (
                 <article key={title}>

@@ -70,28 +70,28 @@ const copy = {
     "servicesTitle": "Servicios logísticos para cada necesidad del sector.",
     "services": [
       [
+        "Temperatura controlada",
+        "Soluciones para productos perecederos y mercancías sensibles que requieren condiciones térmicas específicas."
+      ],
+      [
         "Transporte terrestre",
-        "Rutas nacionales e internacionales para autopartes y componentes."
+        "Distribución nacional e internacional con planificación de rutas, tiempos y entregas."
       ],
       [
-        "Carga urgente",
-        "Soluciones prioritarias para repuestos o piezas críticas."
+        "Transporte aéreo",
+        "Soluciones para operaciones urgentes, productos sensibles y mercancías de alto valor."
       ],
       [
-        "Almacenaje",
-        "Gestión de stock, preparación y distribución de componentes."
+        "Transporte marítimo",
+        "Gestión de cargas internacionales adaptada al volumen, destino y necesidades de cada operación."
       ],
       [
-        "Importación y exportación",
-        "Coordinación documental y aduanera para comercio internacional."
+        "Almacén y distribución",
+        "Gestión de stock, preparación de pedidos y distribución hacia clientes, retail y centros logísticos."
       ],
       [
-        "Cargas especiales",
-        "Transporte de equipos, maquinaria o piezas de gran volumen."
-      ],
-      [
-        "Door to door",
-        "Flujo completo desde proveedor hasta planta o destino final."
+        "Servicios de aduanas",
+        "Coordinación documental y aduanera para facilitar operaciones de importación y exportación."
       ]
     ],
     "useCasesEyebrow": "Cuándo necesita logística automotriz",
@@ -232,28 +232,28 @@ const copy = {
     "servicesTitle": "Logistics services for every sector need.",
     "services": [
       [
+        "Temperature-controlled logistics",
+        "Solutions for perishable and sensitive products requiring specific thermal conditions."
+      ],
+      [
         "Road transport",
-        "Domestic and international routes for auto parts and components."
+        "Domestic and international distribution with coordinated routes, timing and deliveries."
       ],
       [
-        "Urgent cargo",
-        "Priority solutions for spares or critical pieces."
+        "Air freight",
+        "Solutions for urgent operations, sensitive products and high-value cargo."
       ],
       [
-        "Warehousing",
-        "Stock management, preparation and component distribution."
+        "Ocean freight",
+        "International cargo management adapted to volume, destination and operational requirements."
       ],
       [
-        "Import and export",
-        "Document and customs coordination for international trade."
+        "Warehousing and distribution",
+        "Stock management, order preparation and distribution to clients, retail and logistics centers."
       ],
       [
-        "Special cargo",
-        "Transport of equipment, machinery or large parts."
-      ],
-      [
-        "Door to door",
-        "Full flow from supplier to plant or final destination."
+        "Customs services",
+        "Customs and documentation coordination for efficient import and export operations."
       ]
     ],
     "useCasesEyebrow": "When automotive logistics is needed",
@@ -394,28 +394,28 @@ const copy = {
     "servicesTitle": "满足行业不同需求的专业物流服务。",
     "services": [
       [
-        "陆运",
-        "汽车零部件的国内和国际路线。"
+        "温控物流",
+        "为易腐和温度敏感产品提供专业温控运输解决方案。"
       ],
       [
-        "紧急货物",
-        "备件或关键部件的优先方案。"
+        "陆路运输",
+        "通过路线、时间和交付规划协调国内及国际配送。"
       ],
       [
-        "仓储",
-        "库存管理、准备和组件配送。"
+        "航空运输",
+        "为紧急运输、敏感产品和高价值货物提供解决方案。"
       ],
       [
-        "进出口",
-        "国际贸易文件与海关协调。"
+        "海运",
+        "根据货量、目的地和运营需求管理国际海运业务。"
       ],
       [
-        "特殊货物",
-        "设备、机械或大型零件运输。"
+        "仓储与配送",
+        "提供库存管理、订单准备以及客户和零售配送服务。"
       ],
       [
-        "门到门",
-        "从供应商到工厂或最终目的地的完整流程。"
+        "海关服务",
+        "协调进出口业务所需的海关和文件流程。"
       ]
     ],
     "useCasesEyebrow": "何时需要汽车物流",
@@ -890,7 +890,7 @@ export default function AutomocionSectorPage() {
 
           <div className={styles.serviceGrid}>
             {t.services.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["plane", "box", "diamond", "charter", "globe", "door"];
+              const icons: IconName[] = ["timer", "truck", "plane", "globe", "box", "document"];
 
               return (
                 <article key={title}>

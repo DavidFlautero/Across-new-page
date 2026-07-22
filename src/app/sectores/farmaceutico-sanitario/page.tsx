@@ -70,28 +70,28 @@ const copy = {
     "servicesTitle": "Servicios logísticos para cada necesidad del sector.",
     "services": [
       [
-        "Carga pharma",
-        "Transporte para productos farmacéuticos y sanitarios."
-      ],
-      [
         "Temperatura controlada",
-        "Soluciones para productos que requieren rangos térmicos."
+        "Soluciones para productos perecederos y mercancías sensibles que requieren condiciones térmicas específicas."
       ],
       [
-        "Dispositivos médicos",
-        "Coordinación para equipos, insumos y productos sanitarios."
+        "Transporte terrestre",
+        "Distribución nacional e internacional con planificación de rutas, tiempos y entregas."
       ],
       [
-        "Importación y exportación",
-        "Soporte documental y aduanero para comercio sanitario."
+        "Transporte aéreo",
+        "Soluciones para operaciones urgentes, productos sensibles y mercancías de alto valor."
       ],
       [
-        "Almacenaje sensible",
-        "Gestión de stock y preparación bajo control operativo."
+        "Transporte marítimo",
+        "Gestión de cargas internacionales adaptada al volumen, destino y necesidades de cada operación."
       ],
       [
-        "Door to door",
-        "Coordinación completa hasta entrega final."
+        "Almacén y distribución",
+        "Gestión de stock, preparación de pedidos y distribución hacia clientes, retail y centros logísticos."
+      ],
+      [
+        "Servicios de aduanas",
+        "Coordinación documental y aduanera para facilitar operaciones de importación y exportación."
       ]
     ],
     "useCasesEyebrow": "Cuándo necesita logística sanitaria",
@@ -232,28 +232,28 @@ const copy = {
     "servicesTitle": "Logistics services for every sector need.",
     "services": [
       [
-        "Carga pharma",
-        "Transporte para productos farmacéuticos y sanitarios."
+        "Temperature-controlled logistics",
+        "Solutions for perishable and sensitive products requiring specific thermal conditions."
       ],
       [
-        "Temperatura controlada",
-        "Soluciones para productos que requieren rangos térmicos."
+        "Road transport",
+        "Domestic and international distribution with coordinated routes, timing and deliveries."
       ],
       [
-        "Dispositivos médicos",
-        "Coordinación para equipos, insumos y productos sanitarios."
+        "Air freight",
+        "Solutions for urgent operations, sensitive products and high-value cargo."
       ],
       [
-        "Importación y exportación",
-        "Soporte documental y aduanero para comercio sanitario."
+        "Ocean freight",
+        "International cargo management adapted to volume, destination and operational requirements."
       ],
       [
-        "Almacenaje sensible",
-        "Gestión de stock y preparación bajo control operativo."
+        "Warehousing and distribution",
+        "Stock management, order preparation and distribution to clients, retail and logistics centers."
       ],
       [
-        "Door to door",
-        "Coordinación completa hasta entrega final."
+        "Customs services",
+        "Customs and documentation coordination for efficient import and export operations."
       ]
     ],
     "useCasesEyebrow": "Cuándo necesita logística sanitaria",
@@ -394,28 +394,28 @@ const copy = {
     "servicesTitle": "满足行业不同需求的专业物流服务。",
     "services": [
       [
-        "Carga pharma",
-        "Transporte para productos farmacéuticos y sanitarios."
+        "温控物流",
+        "为易腐和温度敏感产品提供专业温控运输解决方案。"
       ],
       [
-        "Temperatura controlada",
-        "Soluciones para productos que requieren rangos térmicos."
+        "陆路运输",
+        "通过路线、时间和交付规划协调国内及国际配送。"
       ],
       [
-        "Dispositivos médicos",
-        "Coordinación para equipos, insumos y productos sanitarios."
+        "航空运输",
+        "为紧急运输、敏感产品和高价值货物提供解决方案。"
       ],
       [
-        "Importación y exportación",
-        "Soporte documental y aduanero para comercio sanitario."
+        "海运",
+        "根据货量、目的地和运营需求管理国际海运业务。"
       ],
       [
-        "Almacenaje sensible",
-        "Gestión de stock y preparación bajo control operativo."
+        "仓储与配送",
+        "提供库存管理、订单准备以及客户和零售配送服务。"
       ],
       [
-        "Door to door",
-        "Coordinación completa hasta entrega final."
+        "海关服务",
+        "协调进出口业务所需的海关和文件流程。"
       ]
     ],
     "useCasesEyebrow": "Cuándo necesita logística sanitaria",
@@ -875,7 +875,7 @@ export default function FarmaceuticoSanitarioSectorPage() {
 
           <div className={styles.serviceGrid}>
             {t.services.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["plane", "box", "diamond", "charter", "globe", "door"];
+              const icons: IconName[] = ["timer", "truck", "plane", "globe", "box", "document"];
 
               return (
                 <article key={title}>

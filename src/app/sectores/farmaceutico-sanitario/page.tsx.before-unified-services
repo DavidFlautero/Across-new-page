@@ -15,489 +15,489 @@ type Locale = "es" | "en" | "zh";
 const copy = {
   "es": {
     "heroEyebrow": "Transporte especial para",
-    "heroTitle": "Industria Química",
-    "heroText": "Coordinamos operaciones logísticas para productos químicos, materias primas, mercancía sensible y cargas reguladas, integrando transporte, documentación, trazabilidad y control operativo.",
+    "heroTitle": "Farmacéutico y Sanitario",
+    "heroText": "Soluciones logísticas para productos farmacéuticos y sanitarios, con trazabilidad, control documental y cadena de frío cuando el producto lo requiere.",
     "primaryCta": "Solicitar propuesta logística",
     "secondaryCta": "Hablar con un especialista",
-    "activeLabel": "Operación química activa",
-    "activeRoute": "Origen → Planta",
-    "activeCargo": "Producto químico",
+    "activeLabel": "Operación sanitaria activa",
+    "activeRoute": "Laboratorio → Destino",
+    "activeCargo": "Producto sensible",
     "activeStatusLabel": "Estado:",
-    "activeStatus": "En coordinación",
-    "activeEtaLabel": "Control:",
+    "activeStatus": "En control",
+    "activeEtaLabel": "Prioridad:",
     "activeEta": "Alta seguridad",
     "trust": [
       [
-        "Cumplimiento",
-        "Documentación controlada"
+        "Trazabilidad",
+        "Control operativo"
+      ],
+      [
+        "Cadena de frío",
+        "Cuando aplica"
+      ],
+      [
+        "Documentación",
+        "Cumplimiento"
       ],
       [
         "Carga sensible",
         "Manejo especializado"
+      ]
+    ],
+    "overviewEyebrow": "Logística sanitaria",
+    "overviewTitle": "Control, cumplimiento y trazabilidad para mercancía sensible.",
+    "overviewText": "El sector farmacéutico y sanitario exige precisión documental, seguridad, control de condiciones y continuidad. Diseñamos operaciones para proteger productos críticos de origen a destino.",
+    "overviewButton": "Conocer más sobre sanitario",
+    "pillars": [
+      [
+        "Cumplimiento documental",
+        "Gestión de requisitos comerciales, sanitarios y aduaneros."
       ],
       [
-        "Seguridad",
-        "Protocolos operativos"
+        "Control de condiciones",
+        "Coordinación de temperatura, manipulación y tiempos cuando aplica."
       ],
       [
         "Trazabilidad",
-        "Seguimiento de origen a destino"
-      ]
-    ],
-    "overviewEyebrow": "Expertos en el sector de:",
-    "overviewTitle": "Transporte y logística especializada para la Industria Química.",
-    "overviewText": "El transporte de productos químicos exige seguridad, precisión y un control riguroso. Diseñamos soluciones para mercancías sensibles y reguladas, operaciones nacionales e internacionales, adaptando cada movimiento a los requisitos del producto, la normativa aplicable y el destino.",
-    "overviewButton": "Hablar con un especialista",
-    "pillars": [
-      [
-        "Control documental",
-        "Revisión de documentos comerciales, técnicos, aduaneros y operativos según el tipo de producto."
+        "Seguimiento operativo para mantener visibilidad en cada etapa."
       ],
       [
-        "Manejo especializado",
-        "Coordinación de transporte y manipulación adaptada a mercancías sensibles o reguladas."
-      ],
-      [
-        "Seguridad operativa",
-        "Planificación con foco en prevención, trazabilidad y reducción de riesgos."
-      ],
-      [
-        "Coordinación integral",
-        "Integración con transporte, aduanas, almacén y entrega final."
+        "Entrega segura",
+        "Coordinación final para reducir riesgos y asegurar recepción."
       ]
     ],
     "servicesEyebrow": "Soluciones especializadas",
     "servicesTitle": "Servicios logísticos para cada necesidad del sector.",
     "services": [
       [
+        "Carga pharma",
+        "Transporte para productos farmacéuticos y sanitarios."
+      ],
+      [
         "Temperatura controlada",
-        "Soluciones para productos perecederos y mercancías sensibles que requieren condiciones térmicas específicas."
+        "Soluciones para productos que requieren rangos térmicos."
       ],
       [
-        "Transporte terrestre",
-        "Distribución nacional e internacional con planificación de rutas, tiempos y entregas."
+        "Dispositivos médicos",
+        "Coordinación para equipos, insumos y productos sanitarios."
       ],
       [
-        "Transporte aéreo",
-        "Soluciones para operaciones urgentes, productos sensibles y mercancías de alto valor."
+        "Importación y exportación",
+        "Soporte documental y aduanero para comercio sanitario."
       ],
       [
-        "Transporte marítimo",
-        "Gestión de cargas internacionales adaptada al volumen, destino y necesidades de cada operación."
+        "Almacenaje sensible",
+        "Gestión de stock y preparación bajo control operativo."
       ],
       [
-        "Almacén y distribución",
-        "Gestión de stock, preparación de pedidos y distribución hacia clientes, retail y centros logísticos."
-      ],
-      [
-        "Servicios de aduanas",
-        "Coordinación documental y aduanera para facilitar operaciones de importación y exportación."
+        "Door to door",
+        "Coordinación completa hasta entrega final."
       ]
     ],
-    "useCasesEyebrow": "Cuándo necesita logística química",
-    "useCasesTitle": "Cuando la carga requiere control antes, durante y después del movimiento.",
+    "useCasesEyebrow": "Cuándo necesita logística sanitaria",
+    "useCasesTitle": "Cuando el producto exige control, cumplimiento y cuidado.",
     "useCases": [
       [
-        "Materias primas",
-        "Movimientos para producción, industria y transformación."
+        "Productos farmacéuticos",
+        "Mercancía crítica con requisitos específicos."
       ],
       [
-        "Productos químicos",
-        "Operaciones con requisitos documentales y operativos específicos."
+        "Dispositivos médicos",
+        "Equipos, insumos y productos sanitarios."
       ],
       [
-        "Carga sensible",
-        "Mercancías que requieren cuidado, control y trazabilidad."
+        "Muestras clínicas",
+        "Envíos sensibles con trazabilidad."
       ],
       [
-        "Importadores químicos",
-        "Gestión internacional con documentación y coordinación aduanera."
+        "Cadena de frío",
+        "Productos que requieren control térmico."
       ],
       [
-        "Industria y manufactura",
-        "Abastecimiento para plantas, procesos y proyectos productivos."
+        "Importadores sanitarios",
+        "Operaciones internacionales reguladas."
       ],
       [
-        "Distribución especializada",
-        "Entregas a clientes industriales, laboratorios o centros técnicos."
+        "Distribución sanitaria",
+        "Entregas a centros, laboratorios o clientes B2B."
       ]
     ],
     "processEyebrow": "Nuestro proceso operativo",
-    "processTitle": "Una operación química clara desde la validación inicial.",
+    "processTitle": "Una operación sanitaria clara desde la validación inicial.",
     "process": [
       [
         "Análisis del producto",
-        "Revisamos tipo de carga, requisitos, documentación y sensibilidad."
+        "Revisamos sensibilidad, requisitos y condiciones."
       ],
       [
         "Diseño logístico",
-        "Definimos modalidad, ruta, controles y tiempos de operación."
+        "Definimos modalidad, tiempos y controles."
       ],
       [
-        "Validación documental",
-        "Coordinamos documentos comerciales, técnicos, aduaneros y operativos."
+        "Documentación",
+        "Coordinamos requisitos sanitarios, comerciales y aduaneros."
       ],
       [
         "Preparación",
-        "Gestionamos retiro, acondicionamiento, carga y salida."
+        "Gestionamos retiro, acondicionamiento y salida."
       ],
       [
         "Seguimiento",
-        "Monitoreamos avance, hitos y trazabilidad."
+        "Monitoreamos avance y condiciones operativas."
       ],
       [
         "Entrega final",
-        "Coordinamos recepción, descarga y cierre operativo."
+        "Coordinamos recepción y cierre seguro."
       ]
     ],
-    "bandTitle": "Logística química diseñada para operaciones que no admiten improvisación.",
-    "bandText": "Nuestro equipo coordina operaciones para empresas químicas e industriales que necesitan cumplimiento, trazabilidad y respuesta profesional en cada etapa logística.",
+    "bandTitle": "Logística sanitaria diseñada para productos que no pueden perder control.",
+    "bandText": "Nuestro equipo coordina operaciones para empresas que necesitan cumplimiento, trazabilidad y respuesta profesional en productos farmacéuticos y sanitarios.",
     "stats": [
       [
         "Cumplimiento",
         "Documentación y control"
       ],
       [
-        "Carga sensible",
-        "Manejo especializado"
-      ],
-      [
         "Trazabilidad",
         "Seguimiento operativo"
+      ],
+      [
+        "Carga sensible",
+        "Manejo especializado"
       ],
       [
         "Soporte experto",
         "Especialistas dedicados"
       ]
     ],
-    "finalTitle": "Coordinemos su próxima operación química.",
-    "finalText": "Cuéntenos tipo de producto, origen, destino, documentación disponible y requisitos. Nuestro equipo analizará la mejor solución logística.",
-    "finalPrimary": "Solicitar propuesta química",
+    "finalTitle": "Coordinemos su próxima operación sanitaria.",
+    "finalText": "Cuéntenos tipo de producto, requisitos, origen, destino y urgencia. Nuestro equipo analizará la mejor solución logística.",
+    "finalPrimary": "Solicitar propuesta sanitaria",
     "finalSecondary": "Hablar con un especialista"
   },
   "en": {
     "heroEyebrow": "Special transport for",
-    "heroTitle": "Chemical Industry",
-    "heroText": "We coordinate logistics operations for chemical products, raw materials, sensitive goods and regulated cargo, integrating transport, documentation, traceability and operational control.",
+    "heroTitle": "Pharmaceutical & Healthcare",
+    "heroText": "Logistics solutions for pharmaceutical and healthcare products, with traceability, document control and temperature-controlled transport when required.",
     "primaryCta": "Plan my operation",
     "secondaryCta": "Talk to our team",
-    "activeLabel": "Active chemical operation",
-    "activeRoute": "Origin → Plant",
-    "activeCargo": "Chemical product",
-    "activeStatusLabel": "Status:",
-    "activeStatus": "In coordination",
-    "activeEtaLabel": "Control:",
-    "activeEta": "High security",
+    "activeLabel": "Operación sanitaria activa",
+    "activeRoute": "Laboratorio → Destino",
+    "activeCargo": "Producto sensible",
+    "activeStatusLabel": "Estado:",
+    "activeStatus": "En control",
+    "activeEtaLabel": "Prioridad:",
+    "activeEta": "Alta seguridad",
     "trust": [
       [
-        "Compliance",
-        "Controlled documentation"
+        "Trazabilidad",
+        "Control operativo"
       ],
       [
-        "Sensitive cargo",
-        "Specialized handling"
+        "Cadena de frío",
+        "Cuando aplica"
       ],
       [
-        "Safety",
-        "Operational protocols"
+        "Documentación",
+        "Cumplimiento"
       ],
       [
-        "Traceability",
-        "Origin-to-destination tracking"
+        "Carga sensible",
+        "Manejo especializado"
       ]
     ],
-    "overviewEyebrow": "Specialized chemical logistics",
-    "overviewTitle": "Operational control for products that require precision and responsibility.",
-    "overviewText": "The chemical sector requires planning, documentary compliance, proper handling and visibility at every stage. We design operations to reduce risks, maintain continuity and protect cargo integrity.",
-    "overviewButton": "Learn more about chemical logistics",
+    "overviewEyebrow": "Logística sanitaria",
+    "overviewTitle": "Control, cumplimiento y trazabilidad para mercancía sensible.",
+    "overviewText": "El sector farmacéutico y sanitario exige precisión documental, seguridad, control de condiciones y continuidad. Diseñamos operaciones para proteger productos críticos de origen a destino.",
+    "overviewButton": "Conocer más sobre sanitario",
     "pillars": [
       [
-        "Document control",
-        "Review of commercial, technical, customs and operational documents according to product type."
+        "Cumplimiento documental",
+        "Gestión de requisitos comerciales, sanitarios y aduaneros."
       ],
       [
-        "Specialized handling",
-        "Transport and handling coordination adapted to sensitive or regulated goods."
+        "Control de condiciones",
+        "Coordinación de temperatura, manipulación y tiempos cuando aplica."
       ],
       [
-        "Operational safety",
-        "Planning focused on prevention, traceability and risk reduction."
+        "Trazabilidad",
+        "Seguimiento operativo para mantener visibilidad en cada etapa."
       ],
       [
-        "Integrated coordination",
-        "Integration with transport, customs, warehousing and final delivery."
+        "Entrega segura",
+        "Coordinación final para reducir riesgos y asegurar recepción."
       ]
     ],
     "servicesEyebrow": "Specialized solutions",
     "servicesTitle": "Logistics services for every sector need.",
     "services": [
       [
-        "Temperature-controlled logistics",
-        "Solutions for perishable and sensitive products requiring specific thermal conditions."
+        "Carga pharma",
+        "Transporte para productos farmacéuticos y sanitarios."
       ],
       [
-        "Road transport",
-        "Domestic and international distribution with coordinated routes, timing and deliveries."
+        "Temperatura controlada",
+        "Soluciones para productos que requieren rangos térmicos."
       ],
       [
-        "Air freight",
-        "Solutions for urgent operations, sensitive products and high-value cargo."
+        "Dispositivos médicos",
+        "Coordinación para equipos, insumos y productos sanitarios."
       ],
       [
-        "Ocean freight",
-        "International cargo management adapted to volume, destination and operational requirements."
+        "Importación y exportación",
+        "Soporte documental y aduanero para comercio sanitario."
       ],
       [
-        "Warehousing and distribution",
-        "Stock management, order preparation and distribution to clients, retail and logistics centers."
+        "Almacenaje sensible",
+        "Gestión de stock y preparación bajo control operativo."
       ],
       [
-        "Customs services",
-        "Customs and documentation coordination for efficient import and export operations."
+        "Door to door",
+        "Coordinación completa hasta entrega final."
       ]
     ],
-    "useCasesEyebrow": "When chemical logistics is needed",
-    "useCasesTitle": "When cargo requires control before, during and after movement.",
+    "useCasesEyebrow": "Cuándo necesita logística sanitaria",
+    "useCasesTitle": "Cuando el producto exige control, cumplimiento y cuidado.",
     "useCases": [
       [
-        "Raw materials",
-        "Movements for production, industry and transformation."
+        "Productos farmacéuticos",
+        "Mercancía crítica con requisitos específicos."
       ],
       [
-        "Chemical products",
-        "Operations with specific document and operational requirements."
+        "Dispositivos médicos",
+        "Equipos, insumos y productos sanitarios."
       ],
       [
-        "Sensitive cargo",
-        "Goods requiring care, control and traceability."
+        "Muestras clínicas",
+        "Envíos sensibles con trazabilidad."
       ],
       [
-        "Chemical importers",
-        "International management with documentation and customs coordination."
+        "Cadena de frío",
+        "Productos que requieren control térmico."
       ],
       [
-        "Industry and manufacturing",
-        "Supply for plants, processes and productive projects."
+        "Importadores sanitarios",
+        "Operaciones internacionales reguladas."
       ],
       [
-        "Specialized distribution",
-        "Deliveries to industrial clients, laboratories or technical centers."
+        "Distribución sanitaria",
+        "Entregas a centros, laboratorios o clientes B2B."
       ]
     ],
-    "processEyebrow": "Our operational process",
-    "processTitle": "A clear chemical operation from initial validation.",
+    "processEyebrow": "Nuestro proceso operativo",
+    "processTitle": "Una operación sanitaria clara desde la validación inicial.",
     "process": [
       [
-        "Product analysis",
-        "We review cargo type, requirements, documentation and sensitivity."
+        "Análisis del producto",
+        "Revisamos sensibilidad, requisitos y condiciones."
       ],
       [
-        "Logistics design",
-        "We define modality, route, controls and operational timing."
+        "Diseño logístico",
+        "Definimos modalidad, tiempos y controles."
       ],
       [
-        "Document validation",
-        "We coordinate commercial, technical, customs and operational documents."
+        "Documentación",
+        "Coordinamos requisitos sanitarios, comerciales y aduaneros."
       ],
       [
-        "Preparation",
-        "We manage pickup, conditioning, loading and dispatch."
+        "Preparación",
+        "Gestionamos retiro, acondicionamiento y salida."
       ],
       [
-        "Tracking",
-        "We monitor progress, milestones and traceability."
+        "Seguimiento",
+        "Monitoreamos avance y condiciones operativas."
       ],
       [
-        "Final delivery",
-        "We coordinate reception, unloading and operational closure."
+        "Entrega final",
+        "Coordinamos recepción y cierre seguro."
       ]
     ],
-    "bandTitle": "Chemical logistics designed for operations that cannot be improvised.",
-    "bandText": "Our team coordinates operations for chemical and industrial companies that need compliance, traceability and professional response at every logistics stage.",
+    "bandTitle": "Logística sanitaria diseñada para productos que no pueden perder control.",
+    "bandText": "Nuestro equipo coordina operaciones para empresas que necesitan cumplimiento, trazabilidad y respuesta profesional en productos farmacéuticos y sanitarios.",
     "stats": [
       [
-        "Compliance",
-        "Documentation and control"
+        "Cumplimiento",
+        "Documentación y control"
       ],
       [
-        "Sensitive cargo",
-        "Specialized handling"
+        "Trazabilidad",
+        "Seguimiento operativo"
       ],
       [
-        "Traceability",
-        "Operational tracking"
+        "Carga sensible",
+        "Manejo especializado"
       ],
       [
-        "Expert support",
-        "Dedicated specialists"
+        "Soporte experto",
+        "Especialistas dedicados"
       ]
     ],
-    "finalTitle": "Let’s coordinate your next chemical operation.",
-    "finalText": "Tell us product type, origin, destination, available documentation and requirements. Our team will analyze the best logistics solution.",
-    "finalPrimary": "Request chemical proposal",
-    "finalSecondary": "Talk to a specialist"
+    "finalTitle": "Coordinemos su próxima operación sanitaria.",
+    "finalText": "Cuéntenos tipo de producto, requisitos, origen, destino y urgencia. Nuestro equipo analizará la mejor solución logística.",
+    "finalPrimary": "Solicitar propuesta sanitaria",
+    "finalSecondary": "Hablar con un especialista"
   },
   "zh": {
-    "heroEyebrow": "专项运输",
-    "heroTitle": "化工行业",
-    "heroText": "我们为化工产品、原材料、敏感货物和受监管货物协调物流运营，整合运输、文件、可追溯性和运营控制。",
+    "heroEyebrow": "医药与医疗专项运输",
+    "heroTitle": "医药与医疗",
+    "heroText": "为医药和医疗产品提供专业物流解决方案，包括可追溯管理、文件控制以及必要时的温控运输。",
     "primaryCta": "规划物流操作",
     "secondaryCta": "联系我们的团队",
-    "activeLabel": "进行中的化工操作",
-    "activeRoute": "始发地 → 工厂",
-    "activeCargo": "化工产品",
-    "activeStatusLabel": "状态：",
-    "activeStatus": "协调中",
-    "activeEtaLabel": "控制：",
-    "activeEta": "高安全",
+    "activeLabel": "Operación sanitaria activa",
+    "activeRoute": "Laboratorio → Destino",
+    "activeCargo": "Producto sensible",
+    "activeStatusLabel": "Estado:",
+    "activeStatus": "En control",
+    "activeEtaLabel": "Prioridad:",
+    "activeEta": "Alta seguridad",
     "trust": [
       [
-        "合规",
-        "文件受控"
+        "Trazabilidad",
+        "Control operativo"
       ],
       [
-        "敏感货物",
-        "专业处理"
+        "Cadena de frío",
+        "Cuando aplica"
       ],
       [
-        "安全",
-        "运营协议"
+        "Documentación",
+        "Cumplimiento"
       ],
       [
-        "可追溯性",
-        "从始发地到目的地跟踪"
+        "Carga sensible",
+        "Manejo especializado"
       ]
     ],
-    "overviewEyebrow": "专业化工物流",
-    "overviewTitle": "为需要精准和责任的产品提供运营控制。",
-    "overviewText": "化工行业需要规划、文件合规、适当处理和每个阶段的可视化。我们设计运营以降低风险、保持连续性并保护货物完整性。",
-    "overviewButton": "了解化工物流",
+    "overviewEyebrow": "Logística sanitaria",
+    "overviewTitle": "Control, cumplimiento y trazabilidad para mercancía sensible.",
+    "overviewText": "El sector farmacéutico y sanitario exige precisión documental, seguridad, control de condiciones y continuidad. Diseñamos operaciones para proteger productos críticos de origen a destino.",
+    "overviewButton": "Conocer más sobre sanitario",
     "pillars": [
       [
-        "文件控制",
-        "根据产品类型审核商业、技术、海关和运营文件。"
+        "Cumplimiento documental",
+        "Gestión de requisitos comerciales, sanitarios y aduaneros."
       ],
       [
-        "专业处理",
-        "为敏感或受监管货物协调运输和处理。"
+        "Control de condiciones",
+        "Coordinación de temperatura, manipulación y tiempos cuando aplica."
       ],
       [
-        "运营安全",
-        "以预防、可追溯性和降低风险为重点进行规划。"
+        "Trazabilidad",
+        "Seguimiento operativo para mantener visibilidad en cada etapa."
       ],
       [
-        "综合协调",
-        "与运输、海关、仓储和最终交付整合。"
+        "Entrega segura",
+        "Coordinación final para reducir riesgos y asegurar recepción."
       ]
     ],
     "servicesEyebrow": "专业解决方案",
     "servicesTitle": "满足行业不同需求的专业物流服务。",
     "services": [
       [
-        "温控物流",
-        "为易腐和温度敏感产品提供专业温控运输解决方案。"
+        "Carga pharma",
+        "Transporte para productos farmacéuticos y sanitarios."
       ],
       [
-        "陆路运输",
-        "通过路线、时间和交付规划协调国内及国际配送。"
+        "Temperatura controlada",
+        "Soluciones para productos que requieren rangos térmicos."
       ],
       [
-        "航空运输",
-        "为紧急运输、敏感产品和高价值货物提供解决方案。"
+        "Dispositivos médicos",
+        "Coordinación para equipos, insumos y productos sanitarios."
       ],
       [
-        "海运",
-        "根据货量、目的地和运营需求管理国际海运业务。"
+        "Importación y exportación",
+        "Soporte documental y aduanero para comercio sanitario."
       ],
       [
-        "仓储与配送",
-        "提供库存管理、订单准备以及客户和零售配送服务。"
+        "Almacenaje sensible",
+        "Gestión de stock y preparación bajo control operativo."
       ],
       [
-        "海关服务",
-        "协调进出口业务所需的海关和文件流程。"
+        "Door to door",
+        "Coordinación completa hasta entrega final."
       ]
     ],
-    "useCasesEyebrow": "何时需要化工物流",
-    "useCasesTitle": "当货物在移动前、中、后都需要控制时。",
+    "useCasesEyebrow": "Cuándo necesita logística sanitaria",
+    "useCasesTitle": "Cuando el producto exige control, cumplimiento y cuidado.",
     "useCases": [
       [
-        "原材料",
-        "用于生产、工业和加工的运输。"
+        "Productos farmacéuticos",
+        "Mercancía crítica con requisitos específicos."
       ],
       [
-        "化工产品",
-        "具有特定文件和运营要求的操作。"
+        "Dispositivos médicos",
+        "Equipos, insumos y productos sanitarios."
       ],
       [
-        "敏感货物",
-        "需要保护、控制和可追溯的货物。"
+        "Muestras clínicas",
+        "Envíos sensibles con trazabilidad."
       ],
       [
-        "化工进口商",
-        "带有文件和海关协调的国际管理。"
+        "Cadena de frío",
+        "Productos que requieren control térmico."
       ],
       [
-        "工业与制造",
-        "为工厂、流程和生产项目供应。"
+        "Importadores sanitarios",
+        "Operaciones internacionales reguladas."
       ],
       [
-        "专业配送",
-        "交付至工业客户、实验室或技术中心。"
+        "Distribución sanitaria",
+        "Entregas a centros, laboratorios o clientes B2B."
       ]
     ],
-    "processEyebrow": "我们的运营流程",
-    "processTitle": "从初始验证开始，化工操作清晰可控。",
+    "processEyebrow": "Nuestro proceso operativo",
+    "processTitle": "Una operación sanitaria clara desde la validación inicial.",
     "process": [
       [
-        "产品分析",
-        "审核货物类型、要求、文件和敏感性。"
+        "Análisis del producto",
+        "Revisamos sensibilidad, requisitos y condiciones."
       ],
       [
-        "物流设计",
-        "确定方式、路线、控制和运营时间。"
+        "Diseño logístico",
+        "Definimos modalidad, tiempos y controles."
       ],
       [
-        "文件验证",
-        "协调商业、技术、海关和运营文件。"
+        "Documentación",
+        "Coordinamos requisitos sanitarios, comerciales y aduaneros."
       ],
       [
-        "准备",
-        "管理提货、处理、装载和出库。"
+        "Preparación",
+        "Gestionamos retiro, acondicionamiento y salida."
       ],
       [
-        "跟踪",
-        "监控进度、节点和可追溯性。"
+        "Seguimiento",
+        "Monitoreamos avance y condiciones operativas."
       ],
       [
-        "最终交付",
-        "协调接收、卸货和运营关闭。"
+        "Entrega final",
+        "Coordinamos recepción y cierre seguro."
       ]
     ],
-    "bandTitle": "为不能即兴处理的操作设计化工物流。",
-    "bandText": "我们的团队为需要合规、可追溯性和专业响应的化工与工业企业协调每个物流阶段。",
+    "bandTitle": "Logística sanitaria diseñada para productos que no pueden perder control.",
+    "bandText": "Nuestro equipo coordina operaciones para empresas que necesitan cumplimiento, trazabilidad y respuesta profesional en productos farmacéuticos y sanitarios.",
     "stats": [
       [
-        "合规",
-        "文件与控制"
+        "Cumplimiento",
+        "Documentación y control"
       ],
       [
-        "敏感货物",
-        "专业处理"
+        "Trazabilidad",
+        "Seguimiento operativo"
       ],
       [
-        "可追溯性",
-        "运营跟踪"
+        "Carga sensible",
+        "Manejo especializado"
       ],
       [
-        "专家支持",
-        "专属专家"
+        "Soporte experto",
+        "Especialistas dedicados"
       ]
     ],
-    "finalTitle": "让我们协调您的下一次化工操作。",
-    "finalText": "告诉我们产品类型、始发地、目的地、现有文件和要求。我们的团队将分析最佳物流方案。",
-    "finalPrimary": "申请化工方案",
-    "finalSecondary": "联系专家"
+    "finalTitle": "Coordinemos su próxima operación sanitaria.",
+    "finalText": "Cuéntenos tipo de producto, requisitos, origen, destino y urgencia. Nuestro equipo analizará la mejor solución logística.",
+    "finalPrimary": "Solicitar propuesta sanitaria",
+    "finalSecondary": "Hablar con un especialista"
   }
 } satisfies Record<Locale, any>;
 
@@ -740,7 +740,7 @@ function Icon({ name }: { name: IconName }) {
   }
 }
 
-export default function QuimicoSectorPage() {
+export default function FarmaceuticoSanitarioSectorPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
@@ -791,7 +791,7 @@ export default function QuimicoSectorPage() {
         <section className={styles.hero} data-aereo-hero="true" data-service-hero-home="true"
       >
           <Image
-            src="/images/sectores/quimico2.png"
+            src="/images/sectores/herofarmaceutico1.png"
             alt={t.heroTitle}
             fill
             priority
@@ -800,7 +800,7 @@ export default function QuimicoSectorPage() {
           />
 
           <Image
-            src="/images/sectores/quimico2.png"
+            src="/images/sectores/herofarmaceutico1.png"
             alt={t.heroTitle}
             fill
             priority
@@ -819,23 +819,6 @@ export default function QuimicoSectorPage() {
 
               <div className={styles.actions}>
                 <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>
-                <Link href="/contacto" className={styles.secondaryBtn}>{t.secondaryCta}</Link>
-              </div>
-            </div>
-
-            <div className={styles.operationCard}>
-              <span>{t.activeLabel}</span>
-              <strong>{t.activeRoute}</strong>
-              <p>{t.activeCargo}</p>
-
-              <div>
-                <small>{t.activeStatusLabel}</small>
-                <b>{t.activeStatus}</b>
-              </div>
-
-              <div>
-                <small>{t.activeEtaLabel}</small>
-                <em>{t.activeEta}</em>
               </div>
             </div>
           </div>
@@ -884,7 +867,7 @@ export default function QuimicoSectorPage() {
           </div>
         </section>
 
-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/sectores/quimicohero.png')" } as CSSProperties}>
+        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/sectores/herofarmaseutico.png')" } as CSSProperties}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -892,7 +875,7 @@ export default function QuimicoSectorPage() {
 
           <div className={styles.serviceGrid}>
             {t.services.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["timer", "truck", "plane", "globe", "box", "document"];
+              const icons: IconName[] = ["plane", "box", "diamond", "charter", "globe", "door"];
 
               return (
                 <article key={title}>

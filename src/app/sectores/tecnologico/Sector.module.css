@@ -9992,49 +9992,433 @@ a.primaryBtn:hover {
 /* === /SECTOR SERVICES EYEBROW === */
 
 
-/* === TECNOLOGIA HERO POSITION — MATCH AUTOMOCION === */
+/* === TECNOLOGIA HERO EXACT SYNC START === */
 
+/*
+  Copiado automáticamente desde:
+  alimentacion-bebidas/Sector.module.css
+
+  Solo reglas finales relacionadas con la composición
+  y posición del hero.
+*/
+
+/* === HERO ALIMENTOS Y BEBIDAS: COMPOSICIÓN FINAL DESKTOP === */
 @media (min-width: 901px) {
   .hero {
-    align-items: flex-start !important;
-    padding-top: 10.8rem !important;
+    display: flex !important;
+    align-items: center !important;
   }
 
+  /* La tarjeta derecha ya no existe: eliminamos la columna vacía */
   .heroInner {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    transform: none !important;
+    display: block !important;
+    width: min(1280px, 100%) !important;
+    margin: 0 auto !important;
   }
 
   .heroContent {
-    margin-top: 0 !important;
-    transform: none !important;
+    width: min(900px, 100%) !important;
+    max-width: 900px !important;
+    transform: translateY(18px);
+  }
+
+  .hero .eyebrow {
+    margin-bottom: .85rem !important;
+    letter-spacing: .28em !important;
+  }
+
+  .heroContent h1 {
+    width: max-content !important;
+    max-width: none !important;
+    white-space: nowrap !important;
+    font-size: clamp(3.6rem, 5vw, 5.5rem) !important;
+    line-height: .94 !important;
+    letter-spacing: -.055em !important;
+  }
+
+  .heroContent p {
+    max-width: 620px !important;
+    margin-top: 1rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .hero .actions {
+    margin-top: 1.4rem !important;
   }
 }
 
-/* === /TECNOLOGIA HERO POSITION — MATCH AUTOMOCION === */
+/* En móvil sí permitimos que el título se adapte */
+@media (max-width: 900px) {
+  .heroContent h1 {
+    width: auto !important;
+    white-space: normal !important;
+  }
+}
 
 
-
-/* === TECNOLOGIA HERO POSITION — MATCH AUTOMOCION === */
-
+/* === HERO ALIMENTOS Y BEBIDAS: COMPOSICIÓN FINAL DESKTOP === */
 @media (min-width: 901px) {
   .hero {
-    align-items: flex-start !important;
-    padding-top: 10.8rem !important;
+    display: flex !important;
+    align-items: center !important;
   }
 
+  /* La tarjeta derecha ya no existe: eliminamos la columna vacía */
   .heroInner {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    transform: none !important;
+    display: block !important;
+    width: min(1280px, 100%) !important;
+    margin: 0 auto !important;
   }
 
   .heroContent {
-    margin-top: 0 !important;
-    transform: none !important;
+    width: min(900px, 100%) !important;
+    max-width: 900px !important;
+    transform: translateY(18px);
+  }
+
+  .hero .eyebrow {
+    margin-bottom: .85rem !important;
+    letter-spacing: .28em !important;
+  }
+
+  .heroContent h1 {
+    width: max-content !important;
+    max-width: none !important;
+    white-space: nowrap !important;
+    font-size: clamp(3.6rem, 5vw, 5.5rem) !important;
+    line-height: .94 !important;
+    letter-spacing: -.055em !important;
+  }
+
+  .heroContent p {
+    max-width: 620px !important;
+    margin-top: 1rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .hero .actions {
+    margin-top: 1.4rem !important;
   }
 }
 
-/* === /TECNOLOGIA HERO POSITION — MATCH AUTOMOCION === */
+/* En móvil sí permitimos que el título se adapte */
+@media (max-width: 900px) {
+  .heroContent h1 {
+    width: auto !important;
+    white-space: normal !important;
+  }
+}
 
+
+/* === ALIMENTOS Y BEBIDAS TITLE ONE LINE FINAL === */
+@media (min-width: 901px) {
+  .page > .hero .heroContent {
+    width: auto !important;
+    max-width: none !important;
+  }
+
+  .page > .hero .title {
+    width: max-content !important;
+    max-width: none !important;
+    white-space: nowrap !important;
+    text-wrap: nowrap !important;
+    font-size: clamp(3.4rem, 4.2vw, 4.8rem) !important;
+  }
+}
+
+
+/* === AJUSTE FINAL HERO ALIMENTOS Y BEBIDAS === */
+@media (min-width: 901px) {
+  .page > .hero .heroContent {
+    transform: translateY(40px) !important;
+  }
+
+  .page > .hero .title {
+    font-size: clamp(3.2rem, 3.9vw, 4.5rem) !important;
+  }
+}
+
+
+/* === HERO ALIMENTOS: POSICIÓN VERTICAL FINAL === */
+@media (min-width: 901px) {
+  .page > .hero .heroContent {
+    transform: translateY(110px) !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin-bottom: .65rem !important;
+  }
+
+  .page > .hero .heroContent p {
+    margin-top: .7rem !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: 1.15rem !important;
+  }
+}
+
+
+/* === AJUSTE VISUAL FINAL HERO ALIMENTOS Y BEBIDAS === */
+@media (min-width: 901px) {
+  .page > .hero .heroContent {
+    transform: translateY(75px) !important;
+  }
+
+  .page > .hero .title {
+    font-size: clamp(3.1rem, 3.7vw, 4.35rem) !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 560px !important;
+  }
+}
+
+
+/* === HERO ALIMENTOS: POSICIÓN VERTICAL DEFINITIVA === */
+@media (min-width: 901px) {
+  .page > .hero .heroContent {
+    transform: translateY(115px) !important;
+  }
+}
+
+
+/* === HERO ALIMENTOS: RITMO ENTRE CONTENIDOS === */
+@media (min-width: 901px) {
+  .page > .hero .heroContent p {
+    margin-top: 1.25rem !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: .75rem !important;
+  }
+}
+
+
+/* === HERO ALIMENTOS: SUBTÍTULO MÁS ELEGANTE === */
+@media (min-width: 901px) {
+  .page > .hero .heroContent p {
+    font-weight: 500 !important;
+    color: rgba(255, 255, 255, .82) !important;
+  }
+}
+
+
+/* === SECTOR HERO POSITION STANDARD === */
+
+/* TODOS LOS SECTORES USAN LA MISMA GEOMETRÍA DEL HERO */
+
+.hero {
+  position: relative !important;
+  width: 100% !important;
+  height: calc(100svh - 20px) !important;
+  min-height: 620px !important;
+  max-height: 740px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.heroInner {
+  position: relative !important;
+  z-index: 5 !important;
+
+  width: min(1180px, calc(100% - 80px)) !important;
+  height: calc(100% - 96px) !important;
+
+  margin: 0 auto !important;
+  padding: 0 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+}
+
+.heroContent {
+  width: 100% !important;
+  max-width: 620px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.hero .eyebrow {
+  margin: 0 0 .85rem !important;
+  color: #d8ab62 !important;
+  -webkit-text-fill-color: #d8ab62 !important;
+}
+
+.hero .title,
+.heroContent h1 {
+  max-width: 620px !important;
+  margin: 0 !important;
+
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+
+  font-size: clamp(3.35rem, 4.6vw, 5.7rem) !important;
+  line-height: .9 !important;
+  letter-spacing: -.06em !important;
+  font-weight: 950 !important;
+}
+
+.hero .title::after,
+.heroContent h1::after {
+  content: none !important;
+}
+
+.hero .subtitle,
+.heroContent > p {
+  max-width: 540px !important;
+
+  margin: 1rem 0 0 !important;
+
+  color: rgba(255,255,255,.88) !important;
+  -webkit-text-fill-color: rgba(255,255,255,.88) !important;
+
+  font-size: clamp(.98rem, 1vw, 1.08rem) !important;
+  line-height: 1.5 !important;
+}
+
+.hero .actions {
+  margin: 1.2rem 0 0 !important;
+}
+
+.hero .operationCard {
+  display: none !important;
+}
+
+/* La barra siempre abajo, igual en todos */
+.hero .commandBar {
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  top: auto !important;
+
+  width: 100% !important;
+  height: 96px !important;
+
+  margin: 0 !important;
+  transform: none !important;
+
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+
+
+/* ============================
+   TABLET / MOBILE
+   ============================ */
+
+@media (max-width: 900px) {
+
+  .hero {
+    height: 100svh !important;
+    min-height: 650px !important;
+    max-height: 820px !important;
+  }
+
+  .heroInner {
+    width: 100% !important;
+    height: calc(100% - 76px) !important;
+
+    margin: 0 !important;
+
+    display: flex !important;
+    align-items: flex-start !important;
+
+    padding:
+      calc(env(safe-area-inset-top) + 8.5rem)
+      1.25rem
+      1.5rem !important;
+  }
+
+  .heroContent {
+    width: 100% !important;
+    max-width: 360px !important;
+  }
+
+  .hero .eyebrow {
+    margin-bottom: .6rem !important;
+    font-size: .58rem !important;
+    letter-spacing: .2em !important;
+  }
+
+  .hero .title,
+  .heroContent h1 {
+    width: auto !important;
+    max-width: 330px !important;
+
+    font-size: clamp(2.45rem, 11vw, 3.3rem) !important;
+    line-height: .88 !important;
+
+    white-space: normal !important;
+  }
+
+  .hero .subtitle,
+  .heroContent > p {
+    max-width: 335px !important;
+
+    margin-top: .9rem !important;
+
+    font-size: .84rem !important;
+    line-height: 1.43 !important;
+  }
+
+  .hero .actions {
+    margin-top: 1.1rem !important;
+  }
+
+  .hero .commandBar {
+    height: 76px !important;
+  }
+}
+
+
+@media (max-width: 390px) {
+
+  .heroInner {
+    padding-top:
+      calc(env(safe-area-inset-top) + 7.9rem) !important;
+  }
+
+  .heroContent {
+    max-width: 320px !important;
+  }
+
+  .hero .title,
+  .heroContent h1 {
+    max-width: 290px !important;
+    font-size: 2.25rem !important;
+  }
+
+  .hero .subtitle,
+  .heroContent > p {
+    max-width: 305px !important;
+    font-size: .78rem !important;
+  }
+}
+
+/* === /SECTOR HERO POSITION STANDARD === */
+
+/* === TECNOLOGIA HERO EXACT SYNC END === */
+
+/* === SECTOR OVERVIEW EYEBROW GOLD === */
+.overview .eyebrow {
+  color: #d8ab62 !important;
+}
+/* === /SECTOR OVERVIEW EYEBROW GOLD === */
+
+/* === OVERVIEW EYEBROW GOLD FINAL === */
+.page .overview .overviewCopy .eyebrow,
+.page .overview .eyebrow,
+.page .overviewCopy .eyebrow,
+.page .overview [class*="eyebrow"],
+.page .overviewCopy [class*="eyebrow"] {
+  color: #c7a96b !important;
+  -webkit-text-fill-color: #c7a96b !important;
+  text-shadow: none !important;
+  background: transparent !important;
+  background-image: none !important;
+}
+/* === /OVERVIEW EYEBROW GOLD FINAL === */

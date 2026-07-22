@@ -14,8 +14,8 @@ type Locale = "es" | "en" | "zh";
 
 const copy = {
   "es": {
-    "heroEyebrow": "Sector consumo y distribución",
-    "heroTitle": "Logística para productos de consumo que necesitan llegar a tiempo.",
+    "heroEyebrow": "Transporte especial para",
+    "heroTitle": "Consumo y Distribución",
     "heroText": "Coordinamos transporte, almacenaje, preparación, distribución y trazabilidad para productos de consumo, retail, e-commerce y operaciones comerciales.",
     "primaryCta": "Solicitar propuesta logística",
     "secondaryCta": "Hablar con un especialista",
@@ -70,28 +70,28 @@ const copy = {
     "servicesTitle": "Servicios logísticos para cada necesidad del sector.",
     "services": [
       [
-        "Distribución nacional",
-        "Entregas regionales o nacionales para productos de consumo."
+        "Temperatura controlada",
+        "Soluciones para productos perecederos y mercancías sensibles que requieren condiciones térmicas específicas."
       ],
       [
-        "Almacenaje",
-        "Gestión de stock y disponibilidad."
+        "Transporte terrestre",
+        "Distribución nacional e internacional con planificación de rutas, tiempos y entregas."
       ],
       [
-        "Picking y packing",
-        "Preparación de pedidos para retail, B2B o e-commerce."
+        "Transporte aéreo",
+        "Soluciones para operaciones urgentes, productos sensibles y mercancías de alto valor."
       ],
       [
-        "Retail logistics",
-        "Abastecimiento hacia puntos de venta y cadenas comerciales."
+        "Transporte marítimo",
+        "Gestión de cargas internacionales adaptada al volumen, destino y necesidades de cada operación."
       ],
       [
-        "E-commerce",
-        "Flujos de preparación y entrega para canal online."
+        "Almacén y distribución",
+        "Gestión de stock, preparación de pedidos y distribución hacia clientes, retail y centros logísticos."
       ],
       [
-        "Door to door",
-        "Coordinación completa hasta destino final."
+        "Servicios de aduanas",
+        "Coordinación documental y aduanera para facilitar operaciones de importación y exportación."
       ]
     ],
     "useCasesEyebrow": "Cuándo necesita logística de consumo",
@@ -232,28 +232,28 @@ const copy = {
     "servicesTitle": "Logistics services for every sector need.",
     "services": [
       [
-        "Distribución nacional",
-        "Entregas regionales o nacionales para productos de consumo."
+        "Temperature-controlled logistics",
+        "Solutions for perishable and sensitive products requiring specific thermal conditions."
       ],
       [
-        "Almacenaje",
-        "Gestión de stock y disponibilidad."
+        "Road transport",
+        "Domestic and international distribution with coordinated routes, timing and deliveries."
       ],
       [
-        "Picking y packing",
-        "Preparación de pedidos para retail, B2B o e-commerce."
+        "Air freight",
+        "Solutions for urgent operations, sensitive products and high-value cargo."
       ],
       [
-        "Retail logistics",
-        "Abastecimiento hacia puntos de venta y cadenas comerciales."
+        "Ocean freight",
+        "International cargo management adapted to volume, destination and operational requirements."
       ],
       [
-        "E-commerce",
-        "Flujos de preparación y entrega para canal online."
+        "Warehousing and distribution",
+        "Stock management, order preparation and distribution to clients, retail and logistics centers."
       ],
       [
-        "Door to door",
-        "Coordinación completa hasta destino final."
+        "Customs services",
+        "Customs and documentation coordination for efficient import and export operations."
       ]
     ],
     "useCasesEyebrow": "Cuándo necesita logística de consumo",
@@ -394,28 +394,28 @@ const copy = {
     "servicesTitle": "满足行业不同需求的专业物流服务。",
     "services": [
       [
-        "Distribución nacional",
-        "Entregas regionales o nacionales para productos de consumo."
+        "温控物流",
+        "为易腐和温度敏感产品提供专业温控运输解决方案。"
       ],
       [
-        "Almacenaje",
-        "Gestión de stock y disponibilidad."
+        "陆路运输",
+        "通过路线、时间和交付规划协调国内及国际配送。"
       ],
       [
-        "Picking y packing",
-        "Preparación de pedidos para retail, B2B o e-commerce."
+        "航空运输",
+        "为紧急运输、敏感产品和高价值货物提供解决方案。"
       ],
       [
-        "Retail logistics",
-        "Abastecimiento hacia puntos de venta y cadenas comerciales."
+        "海运",
+        "根据货量、目的地和运营需求管理国际海运业务。"
       ],
       [
-        "E-commerce",
-        "Flujos de preparación y entrega para canal online."
+        "仓储与配送",
+        "提供库存管理、订单准备以及客户和零售配送服务。"
       ],
       [
-        "Door to door",
-        "Coordinación completa hasta destino final."
+        "海关服务",
+        "协调进出口业务所需的海关和文件流程。"
       ]
     ],
     "useCasesEyebrow": "Cuándo necesita logística de consumo",
@@ -892,7 +892,7 @@ export default function ConsumoDistribucionSectorPage() {
 
           <div className={styles.serviceGrid}>
             {t.services.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["plane", "box", "diamond", "charter", "globe", "door"];
+              const icons: IconName[] = ["timer", "truck", "plane", "globe", "box", "document"];
 
               return (
                 <article key={title}>

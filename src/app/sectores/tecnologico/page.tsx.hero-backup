@@ -7,496 +7,496 @@ import Footer from "@/components/layout/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
-import styles from "./Sector.module.css";
 
+import styles from "./Sector.module.css";
 import SectorLeadForm from "@/app/sectores/alimentacion-bebidas/SectorLeadForm";
 type Locale = "es" | "en" | "zh";
 
 const copy = {
   "es": {
     "heroEyebrow": "Transporte especial para",
-    "heroTitle": "Industria Química",
-    "heroText": "Coordinamos operaciones logísticas para productos químicos, materias primas, mercancía sensible y cargas reguladas, integrando transporte, documentación, trazabilidad y control operativo.",
+    "heroTitle": "Tecnología",
+    "heroText": "Soluciones logísticas para productos tecnológicos y mercancía de alto valor, con seguridad, trazabilidad y control documental.",
     "primaryCta": "Solicitar propuesta logística",
     "secondaryCta": "Hablar con un especialista",
-    "activeLabel": "Operación química activa",
-    "activeRoute": "Origen → Planta",
-    "activeCargo": "Producto químico",
+    "activeLabel": "Operación tecnológica activa",
+    "activeRoute": "Origen → Centro técnico",
+    "activeCargo": "Carga tecnológica",
     "activeStatusLabel": "Estado:",
     "activeStatus": "En coordinación",
     "activeEtaLabel": "Control:",
     "activeEta": "Alta seguridad",
     "trust": [
       [
-        "Cumplimiento",
-        "Documentación controlada"
+        "Alto valor",
+        "Control reforzado"
       ],
       [
-        "Carga sensible",
-        "Manejo especializado"
-      ],
-      [
-        "Seguridad",
-        "Protocolos operativos"
+        "Tecnología",
+        "Equipos y componentes"
       ],
       [
         "Trazabilidad",
-        "Seguimiento de origen a destino"
+        "Visibilidad operativa"
+      ],
+      [
+        "Documentación",
+        "Gestión internacional"
       ]
     ],
-    "overviewEyebrow": "Expertos en el sector de:",
-    "overviewTitle": "Transporte y logística especializada para la Industria Química.",
-    "overviewText": "El transporte de productos químicos exige seguridad, precisión y un control riguroso. Diseñamos soluciones para mercancías sensibles y reguladas, operaciones nacionales e internacionales, adaptando cada movimiento a los requisitos del producto, la normativa aplicable y el destino.",
-    "overviewButton": "Hablar con un especialista",
+    "overviewEyebrow": "Logística tecnológica",
+    "overviewTitle": "Control logístico para mercancía sensible y de alto valor.",
+    "overviewText": "La tecnología requiere manipulación cuidadosa, control documental, seguridad, tiempos precisos y visibilidad. Coordinamos operaciones para proteger equipos, componentes y dispositivos durante toda la cadena.",
+    "overviewButton": "Conocer más sobre tecnología",
     "pillars": [
       [
-        "Control documental",
-        "Revisión de documentos comerciales, técnicos, aduaneros y operativos según el tipo de producto."
-      ],
-      [
-        "Manejo especializado",
-        "Coordinación de transporte y manipulación adaptada a mercancías sensibles o reguladas."
-      ],
-      [
         "Seguridad operativa",
-        "Planificación con foco en prevención, trazabilidad y reducción de riesgos."
+        "Coordinación para cargas de alto valor o sensibilidad técnica."
       ],
       [
-        "Coordinación integral",
-        "Integración con transporte, aduanas, almacén y entrega final."
+        "Documentación internacional",
+        "Gestión de requisitos comerciales, aduaneros y operativos."
+      ],
+      [
+        "Almacenaje especializado",
+        "Control de stock, preparación y distribución de productos tecnológicos."
+      ],
+      [
+        "Seguimiento",
+        "Visibilidad sobre cada etapa del movimiento logístico."
       ]
     ],
     "servicesEyebrow": "Soluciones especializadas",
     "servicesTitle": "Servicios logísticos para cada necesidad del sector.",
     "services": [
       [
-        "Temperatura controlada",
-        "Soluciones para productos perecederos y mercancías sensibles que requieren condiciones térmicas específicas."
+        "Transporte internacional",
+        "Soluciones aéreas, marítimas o terrestres según urgencia y valor."
       ],
       [
-        "Transporte terrestre",
-        "Distribución nacional e internacional con planificación de rutas, tiempos y entregas."
+        "Carga de alto valor",
+        "Coordinación segura para dispositivos, equipos y componentes críticos."
       ],
       [
-        "Transporte aéreo",
-        "Soluciones para operaciones urgentes, productos sensibles y mercancías de alto valor."
+        "Almacenaje tecnológico",
+        "Stock, preparación y distribución con control operativo."
       ],
       [
-        "Transporte marítimo",
-        "Gestión de cargas internacionales adaptada al volumen, destino y necesidades de cada operación."
+        "Importación y exportación",
+        "Gestión documental y aduanera para comercio tecnológico."
       ],
       [
-        "Almacén y distribución",
-        "Gestión de stock, preparación de pedidos y distribución hacia clientes, retail y centros logísticos."
+        "Distribución B2B",
+        "Entregas a empresas, centros técnicos, retailers o integradores."
       ],
       [
-        "Servicios de aduanas",
-        "Coordinación documental y aduanera para facilitar operaciones de importación y exportación."
+        "Door to door",
+        "Coordinación completa desde origen hasta entrega final."
       ]
     ],
-    "useCasesEyebrow": "Cuándo necesita logística química",
-    "useCasesTitle": "Cuando la carga requiere control antes, durante y después del movimiento.",
+    "useCasesEyebrow": "Cuándo necesita logística tecnológica",
+    "useCasesTitle": "Cuando la carga exige seguridad, cuidado y trazabilidad.",
     "useCases": [
       [
-        "Materias primas",
-        "Movimientos para producción, industria y transformación."
+        "Dispositivos electrónicos",
+        "Operaciones para productos sensibles y de alto valor."
       ],
       [
-        "Productos químicos",
-        "Operaciones con requisitos documentales y operativos específicos."
+        "Componentes tecnológicos",
+        "Movimientos para cadenas de suministro e integración."
       ],
       [
-        "Carga sensible",
-        "Mercancías que requieren cuidado, control y trazabilidad."
+        "Equipos profesionales",
+        "Transporte de hardware, servidores o equipos técnicos."
       ],
       [
-        "Importadores químicos",
-        "Gestión internacional con documentación y coordinación aduanera."
+        "Importadores",
+        "Coordinación internacional con documentación."
       ],
       [
-        "Industria y manufactura",
-        "Abastecimiento para plantas, procesos y proyectos productivos."
+        "Retail tecnológico",
+        "Distribución hacia puntos de venta o clientes B2B."
       ],
       [
-        "Distribución especializada",
-        "Entregas a clientes industriales, laboratorios o centros técnicos."
+        "Proyectos IT",
+        "Entrega de equipos para instalaciones o despliegues."
       ]
     ],
     "processEyebrow": "Nuestro proceso operativo",
-    "processTitle": "Una operación química clara desde la validación inicial.",
+    "processTitle": "Una operación tecnológica clara desde el primer contacto.",
     "process": [
       [
-        "Análisis del producto",
-        "Revisamos tipo de carga, requisitos, documentación y sensibilidad."
+        "Análisis de carga",
+        "Revisamos valor, sensibilidad, volumen y requisitos."
       ],
       [
         "Diseño logístico",
-        "Definimos modalidad, ruta, controles y tiempos de operación."
+        "Definimos modalidad, ruta y controles operativos."
       ],
       [
-        "Validación documental",
-        "Coordinamos documentos comerciales, técnicos, aduaneros y operativos."
+        "Documentación",
+        "Coordinamos requisitos comerciales y aduaneros."
       ],
       [
         "Preparación",
-        "Gestionamos retiro, acondicionamiento, carga y salida."
+        "Gestionamos retiro, acondicionamiento y salida."
       ],
       [
         "Seguimiento",
-        "Monitoreamos avance, hitos y trazabilidad."
+        "Monitoreamos avance e hitos críticos."
       ],
       [
         "Entrega final",
-        "Coordinamos recepción, descarga y cierre operativo."
+        "Coordinamos recepción segura y cierre."
       ]
     ],
-    "bandTitle": "Logística química diseñada para operaciones que no admiten improvisación.",
-    "bandText": "Nuestro equipo coordina operaciones para empresas químicas e industriales que necesitan cumplimiento, trazabilidad y respuesta profesional en cada etapa logística.",
+    "bandTitle": "Logística tecnológica diseñada para cargas que requieren control total.",
+    "bandText": "Nuestro equipo coordina operaciones para empresas que necesitan seguridad, precisión documental y trazabilidad en productos tecnológicos.",
     "stats": [
       [
-        "Cumplimiento",
-        "Documentación y control"
+        "Alto valor",
+        "Seguridad operativa"
       ],
       [
-        "Carga sensible",
-        "Manejo especializado"
+        "Tecnología",
+        "Equipos y componentes"
       ],
       [
         "Trazabilidad",
-        "Seguimiento operativo"
+        "Seguimiento completo"
       ],
       [
         "Soporte experto",
         "Especialistas dedicados"
       ]
     ],
-    "finalTitle": "Coordinemos su próxima operación química.",
-    "finalText": "Cuéntenos tipo de producto, origen, destino, documentación disponible y requisitos. Nuestro equipo analizará la mejor solución logística.",
-    "finalPrimary": "Solicitar propuesta química",
+    "finalTitle": "Coordinemos su próxima operación tecnológica.",
+    "finalText": "Cuéntenos tipo de producto, valor, origen, destino y urgencia. Nuestro equipo analizará la mejor solución logística.",
+    "finalPrimary": "Solicitar propuesta tecnológica",
     "finalSecondary": "Hablar con un especialista"
   },
   "en": {
     "heroEyebrow": "Special transport for",
-    "heroTitle": "Chemical Industry",
-    "heroText": "We coordinate logistics operations for chemical products, raw materials, sensitive goods and regulated cargo, integrating transport, documentation, traceability and operational control.",
+    "heroTitle": "Technology",
+    "heroText": "Logistics solutions for technology products and high-value cargo, with security, traceability and document control.",
     "primaryCta": "Plan my operation",
     "secondaryCta": "Talk to our team",
-    "activeLabel": "Active chemical operation",
-    "activeRoute": "Origin → Plant",
-    "activeCargo": "Chemical product",
+    "activeLabel": "Active technology operation",
+    "activeRoute": "Origin → Technical center",
+    "activeCargo": "Technology cargo",
     "activeStatusLabel": "Status:",
     "activeStatus": "In coordination",
     "activeEtaLabel": "Control:",
     "activeEta": "High security",
     "trust": [
       [
-        "Compliance",
-        "Controlled documentation"
+        "High value",
+        "Reinforced control"
       ],
       [
-        "Sensitive cargo",
-        "Specialized handling"
-      ],
-      [
-        "Safety",
-        "Operational protocols"
+        "Technology",
+        "Equipment and components"
       ],
       [
         "Traceability",
-        "Origin-to-destination tracking"
+        "Operational visibility"
+      ],
+      [
+        "Documentation",
+        "International management"
       ]
     ],
-    "overviewEyebrow": "Specialized chemical logistics",
-    "overviewTitle": "Operational control for products that require precision and responsibility.",
-    "overviewText": "The chemical sector requires planning, documentary compliance, proper handling and visibility at every stage. We design operations to reduce risks, maintain continuity and protect cargo integrity.",
-    "overviewButton": "Learn more about chemical logistics",
+    "overviewEyebrow": "Technology logistics",
+    "overviewTitle": "Logistics control for sensitive and high-value goods.",
+    "overviewText": "Technology requires careful handling, document control, security, precise timing and visibility. We coordinate operations to protect equipment, components and devices across the entire chain.",
+    "overviewButton": "Learn more about technology",
     "pillars": [
       [
-        "Document control",
-        "Review of commercial, technical, customs and operational documents according to product type."
+        "Operational security",
+        "Coordination for high-value or technically sensitive cargo."
       ],
       [
-        "Specialized handling",
-        "Transport and handling coordination adapted to sensitive or regulated goods."
+        "International documentation",
+        "Commercial, customs and operational requirement management."
       ],
       [
-        "Operational safety",
-        "Planning focused on prevention, traceability and risk reduction."
+        "Specialized warehousing",
+        "Stock control, preparation and distribution of technology products."
       ],
       [
-        "Integrated coordination",
-        "Integration with transport, customs, warehousing and final delivery."
+        "Tracking",
+        "Visibility over every stage of the logistics movement."
       ]
     ],
     "servicesEyebrow": "Specialized solutions",
     "servicesTitle": "Logistics services for every sector need.",
     "services": [
       [
-        "Temperature-controlled logistics",
-        "Solutions for perishable and sensitive products requiring specific thermal conditions."
+        "International transport",
+        "Air, ocean or road solutions according to urgency and value."
       ],
       [
-        "Road transport",
-        "Domestic and international distribution with coordinated routes, timing and deliveries."
+        "High-value cargo",
+        "Secure coordination for devices, equipment and critical components."
       ],
       [
-        "Air freight",
-        "Solutions for urgent operations, sensitive products and high-value cargo."
+        "Technology warehousing",
+        "Stock, preparation and distribution with operational control."
       ],
       [
-        "Ocean freight",
-        "International cargo management adapted to volume, destination and operational requirements."
+        "Import and export",
+        "Document and customs management for technology trade."
       ],
       [
-        "Warehousing and distribution",
-        "Stock management, order preparation and distribution to clients, retail and logistics centers."
+        "B2B distribution",
+        "Deliveries to companies, technical centers, retailers or integrators."
       ],
       [
-        "Customs services",
-        "Customs and documentation coordination for efficient import and export operations."
+        "Door to door",
+        "Complete coordination from origin to final delivery."
       ]
     ],
-    "useCasesEyebrow": "When chemical logistics is needed",
-    "useCasesTitle": "When cargo requires control before, during and after movement.",
+    "useCasesEyebrow": "When technology logistics is needed",
+    "useCasesTitle": "When cargo demands security, care and traceability.",
     "useCases": [
       [
-        "Raw materials",
-        "Movements for production, industry and transformation."
+        "Electronic devices",
+        "Operations for sensitive and high-value products."
       ],
       [
-        "Chemical products",
-        "Operations with specific document and operational requirements."
+        "Technology components",
+        "Movements for supply chains and integration."
       ],
       [
-        "Sensitive cargo",
-        "Goods requiring care, control and traceability."
+        "Professional equipment",
+        "Transport of hardware, servers or technical equipment."
       ],
       [
-        "Chemical importers",
-        "International management with documentation and customs coordination."
+        "Importers",
+        "International coordination with documentation."
       ],
       [
-        "Industry and manufacturing",
-        "Supply for plants, processes and productive projects."
+        "Technology retail",
+        "Distribution to points of sale or B2B customers."
       ],
       [
-        "Specialized distribution",
-        "Deliveries to industrial clients, laboratories or technical centers."
+        "IT projects",
+        "Equipment delivery for installations or deployments."
       ]
     ],
     "processEyebrow": "Our operational process",
-    "processTitle": "A clear chemical operation from initial validation.",
+    "processTitle": "A clear technology operation from the first contact.",
     "process": [
       [
-        "Product analysis",
-        "We review cargo type, requirements, documentation and sensitivity."
+        "Cargo analysis",
+        "We review value, sensitivity, volume and requirements."
       ],
       [
         "Logistics design",
-        "We define modality, route, controls and operational timing."
+        "We define modality, route and operational controls."
       ],
       [
-        "Document validation",
-        "We coordinate commercial, technical, customs and operational documents."
+        "Documentation",
+        "We coordinate commercial and customs requirements."
       ],
       [
         "Preparation",
-        "We manage pickup, conditioning, loading and dispatch."
+        "We manage pickup, conditioning and dispatch."
       ],
       [
         "Tracking",
-        "We monitor progress, milestones and traceability."
+        "We monitor progress and critical milestones."
       ],
       [
         "Final delivery",
-        "We coordinate reception, unloading and operational closure."
+        "We coordinate secure reception and closure."
       ]
     ],
-    "bandTitle": "Chemical logistics designed for operations that cannot be improvised.",
-    "bandText": "Our team coordinates operations for chemical and industrial companies that need compliance, traceability and professional response at every logistics stage.",
+    "bandTitle": "Technology logistics designed for cargo requiring full control.",
+    "bandText": "Our team coordinates operations for companies requiring security, document precision and traceability for technology products.",
     "stats": [
       [
-        "Compliance",
-        "Documentation and control"
+        "High value",
+        "Operational security"
       ],
       [
-        "Sensitive cargo",
-        "Specialized handling"
+        "Technology",
+        "Equipment and components"
       ],
       [
         "Traceability",
-        "Operational tracking"
+        "Full tracking"
       ],
       [
         "Expert support",
         "Dedicated specialists"
       ]
     ],
-    "finalTitle": "Let’s coordinate your next chemical operation.",
-    "finalText": "Tell us product type, origin, destination, available documentation and requirements. Our team will analyze the best logistics solution.",
-    "finalPrimary": "Request chemical proposal",
+    "finalTitle": "Let’s coordinate your next technology operation.",
+    "finalText": "Tell us product type, value, origin, destination and urgency. Our team will analyze the best logistics solution.",
+    "finalPrimary": "Request technology proposal",
     "finalSecondary": "Talk to a specialist"
   },
   "zh": {
-    "heroEyebrow": "专项运输",
-    "heroTitle": "化工行业",
-    "heroText": "我们为化工产品、原材料、敏感货物和受监管货物协调物流运营，整合运输、文件、可追溯性和运营控制。",
+    "heroEyebrow": "科技产品专项运输",
+    "heroTitle": "科技",
+    "heroText": "为科技产品和高价值货物提供专业物流解决方案，包括安全保障、全程追踪和文件管理。",
     "primaryCta": "规划物流操作",
     "secondaryCta": "联系我们的团队",
-    "activeLabel": "进行中的化工操作",
-    "activeRoute": "始发地 → 工厂",
-    "activeCargo": "化工产品",
+    "activeLabel": "进行中的科技物流",
+    "activeRoute": "始发地 → 技术中心",
+    "activeCargo": "科技货物",
     "activeStatusLabel": "状态：",
     "activeStatus": "协调中",
     "activeEtaLabel": "控制：",
     "activeEta": "高安全",
     "trust": [
       [
-        "合规",
-        "文件受控"
+        "高价值",
+        "加强控制"
       ],
       [
-        "敏感货物",
-        "专业处理"
+        "科技",
+        "设备和组件"
       ],
       [
-        "安全",
-        "运营协议"
+        "可追溯",
+        "运营可视化"
       ],
       [
-        "可追溯性",
-        "从始发地到目的地跟踪"
+        "文件",
+        "国际管理"
       ]
     ],
-    "overviewEyebrow": "专业化工物流",
-    "overviewTitle": "为需要精准和责任的产品提供运营控制。",
-    "overviewText": "化工行业需要规划、文件合规、适当处理和每个阶段的可视化。我们设计运营以降低风险、保持连续性并保护货物完整性。",
-    "overviewButton": "了解化工物流",
+    "overviewEyebrow": "科技物流",
+    "overviewTitle": "为敏感和高价值货物提供物流控制。",
+    "overviewText": "科技产品需要谨慎处理、文件控制、安全、准时和可视化。我们协调全链路操作以保护设备、组件和产品。",
+    "overviewButton": "了解科技物流",
     "pillars": [
       [
-        "文件控制",
-        "根据产品类型审核商业、技术、海关和运营文件。"
-      ],
-      [
-        "专业处理",
-        "为敏感或受监管货物协调运输和处理。"
-      ],
-      [
         "运营安全",
-        "以预防、可追溯性和降低风险为重点进行规划。"
+        "为高价值或技术敏感货物提供协调。"
       ],
       [
-        "综合协调",
-        "与运输、海关、仓储和最终交付整合。"
+        "国际文件",
+        "管理商业、海关和运营要求。"
+      ],
+      [
+        "专业仓储",
+        "科技产品库存、准备和配送控制。"
+      ],
+      [
+        "跟踪",
+        "保持每个物流阶段可视化。"
       ]
     ],
     "servicesEyebrow": "专业解决方案",
     "servicesTitle": "满足行业不同需求的专业物流服务。",
     "services": [
       [
-        "温控物流",
-        "为易腐和温度敏感产品提供专业温控运输解决方案。"
+        "国际运输",
+        "根据紧急程度和价值提供空运、海运或陆运。"
       ],
       [
-        "陆路运输",
-        "通过路线、时间和交付规划协调国内及国际配送。"
+        "高价值货物",
+        "为设备和关键组件提供安全协调。"
       ],
       [
-        "航空运输",
-        "为紧急运输、敏感产品和高价值货物提供解决方案。"
+        "科技仓储",
+        "库存、准备和配送运营控制。"
       ],
       [
-        "海运",
-        "根据货量、目的地和运营需求管理国际海运业务。"
+        "进出口",
+        "科技贸易文件和海关管理。"
       ],
       [
-        "仓储与配送",
-        "提供库存管理、订单准备以及客户和零售配送服务。"
+        "B2B 配送",
+        "交付到企业、技术中心、零售商或集成商。"
       ],
       [
-        "海关服务",
-        "协调进出口业务所需的海关和文件流程。"
+        "门到门",
+        "从始发地到最终交付的完整协调。"
       ]
     ],
-    "useCasesEyebrow": "何时需要化工物流",
-    "useCasesTitle": "当货物在移动前、中、后都需要控制时。",
+    "useCasesEyebrow": "何时需要科技物流",
+    "useCasesTitle": "当货物需要安全、保护和可追溯时。",
     "useCases": [
       [
-        "原材料",
-        "用于生产、工业和加工的运输。"
+        "电子设备",
+        "敏感和高价值产品操作。"
       ],
       [
-        "化工产品",
-        "具有特定文件和运营要求的操作。"
+        "技术组件",
+        "供应链和集成运输。"
       ],
       [
-        "敏感货物",
-        "需要保护、控制和可追溯的货物。"
+        "专业设备",
+        "硬件、服务器或技术设备运输。"
       ],
       [
-        "化工进口商",
-        "带有文件和海关协调的国际管理。"
+        "进口商",
+        "带文件的国际协调。"
       ],
       [
-        "工业与制造",
-        "为工厂、流程和生产项目供应。"
+        "科技零售",
+        "向销售点或 B2B 客户配送。"
       ],
       [
-        "专业配送",
-        "交付至工业客户、实验室或技术中心。"
+        "IT 项目",
+        "安装或部署设备交付。"
       ]
     ],
     "processEyebrow": "我们的运营流程",
-    "processTitle": "从初始验证开始，化工操作清晰可控。",
+    "processTitle": "从首次联系开始，科技物流清晰可控。",
     "process": [
       [
-        "产品分析",
-        "审核货物类型、要求、文件和敏感性。"
+        "货物分析",
+        "审核价值、敏感性、体量和要求。"
       ],
       [
         "物流设计",
-        "确定方式、路线、控制和运营时间。"
+        "确定方式、路线和控制。"
       ],
       [
-        "文件验证",
-        "协调商业、技术、海关和运营文件。"
+        "文件管理",
+        "协调商业和海关要求。"
       ],
       [
         "准备",
-        "管理提货、处理、装载和出库。"
+        "管理提货、处理和出库。"
       ],
       [
         "跟踪",
-        "监控进度、节点和可追溯性。"
+        "监控进度和关键节点。"
       ],
       [
         "最终交付",
-        "协调接收、卸货和运营关闭。"
+        "协调安全接收和关闭。"
       ]
     ],
-    "bandTitle": "为不能即兴处理的操作设计化工物流。",
-    "bandText": "我们的团队为需要合规、可追溯性和专业响应的化工与工业企业协调每个物流阶段。",
+    "bandTitle": "为需要全面控制的科技货物设计物流。",
+    "bandText": "我们的团队为需要安全、文件精准和可追溯性的科技企业协调物流。",
     "stats": [
       [
-        "合规",
-        "文件与控制"
+        "高价值",
+        "运营安全"
       ],
       [
-        "敏感货物",
-        "专业处理"
+        "科技",
+        "设备和组件"
       ],
       [
-        "可追溯性",
-        "运营跟踪"
+        "可追溯",
+        "全程跟踪"
       ],
       [
         "专家支持",
         "专属专家"
       ]
     ],
-    "finalTitle": "让我们协调您的下一次化工操作。",
-    "finalText": "告诉我们产品类型、始发地、目的地、现有文件和要求。我们的团队将分析最佳物流方案。",
-    "finalPrimary": "申请化工方案",
+    "finalTitle": "让我们协调您的下一次科技物流操作。",
+    "finalText": "告诉我们产品类型、价值、始发地、目的地和紧急程度。我们的团队将分析最佳物流方案。",
+    "finalPrimary": "申请科技物流方案",
     "finalSecondary": "联系专家"
   }
 } satisfies Record<Locale, any>;
@@ -740,7 +740,7 @@ function Icon({ name }: { name: IconName }) {
   }
 }
 
-export default function QuimicoSectorPage() {
+export default function TecnologicoSectorPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
@@ -791,7 +791,7 @@ export default function QuimicoSectorPage() {
         <section className={styles.hero} data-aereo-hero="true" data-service-hero-home="true"
       >
           <Image
-            src="/images/sectores/quimico2.png"
+            src="/images/sectores/tecnologico.png"
             alt={t.heroTitle}
             fill
             priority
@@ -800,7 +800,7 @@ export default function QuimicoSectorPage() {
           />
 
           <Image
-            src="/images/sectores/quimico2.png"
+            src="/images/sectores/tecnologico.png"
             alt={t.heroTitle}
             fill
             priority
@@ -819,7 +819,6 @@ export default function QuimicoSectorPage() {
 
               <div className={styles.actions}>
                 <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>
-                <Link href="/contacto" className={styles.secondaryBtn}>{t.secondaryCta}</Link>
               </div>
             </div>
 
@@ -884,7 +883,7 @@ export default function QuimicoSectorPage() {
           </div>
         </section>
 
-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/sectores/quimicohero.png')" } as CSSProperties}>
+        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/sectores/transporte-logistica-tecnologia.png')" } as CSSProperties}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -892,7 +891,7 @@ export default function QuimicoSectorPage() {
 
           <div className={styles.serviceGrid}>
             {t.services.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["timer", "truck", "plane", "globe", "box", "document"];
+              const icons: IconName[] = ["plane", "box", "diamond", "charter", "globe", "door"];
 
               return (
                 <article key={title}>
