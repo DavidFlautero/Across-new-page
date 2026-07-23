@@ -209,7 +209,7 @@ const copy = {
     "overviewEyebrow": "Specialized chemical logistics",
     "overviewTitle": "Operational control for products that require precision and responsibility.",
     "overviewText": "The chemical sector requires planning, documentary compliance, proper handling and visibility at every stage. We design operations to reduce risks, maintain continuity and protect cargo integrity.",
-    "overviewButton": "Learn more about chemical logistics",
+    "overviewButton": "Talk to a specialist",
     "pillars": [
       [
         "Document control",
@@ -371,7 +371,7 @@ const copy = {
     "overviewEyebrow": "专业化工物流",
     "overviewTitle": "为需要精准和责任的产品提供运营控制。",
     "overviewText": "化工行业需要规划、文件合规、适当处理和每个阶段的可视化。我们设计运营以降低风险、保持连续性并保护货物完整性。",
-    "overviewButton": "了解化工物流",
+    "overviewButton": "联系专家",
     "pillars": [
       [
         "文件控制",
@@ -783,6 +783,145 @@ export default function QuimicoSectorPage() {
 
   const t = copy[locale];
 
+const operationalEyebrow =
+    locale === "es"
+      ? "Capacidad operativa"
+      : locale === "en"
+        ? "Operational capability"
+        : "运营能力";
+
+  const operationalTitle =
+    locale === "es"
+      ? "Control técnico para el transporte de productos químicos y mercancías reguladas."
+      : locale === "en"
+        ? "Technical control for the transport of chemical products and regulated cargo."
+        : "面向化工产品和受监管货物运输的专业技术控制。";
+
+  const operationalIntro =
+    locale === "es"
+      ? "Coordinamos operaciones para productos químicos, materias primas y mercancías reguladas a partir de su clasificación, características y requisitos de transporte. Integramos validación documental, selección de medios adecuados, planificación de rutas y seguimiento operativo para mantener control sobre la mercancía desde la recogida hasta la recepción en planta, almacén o destino industrial."
+      : locale === "en"
+        ? "We coordinate operations for chemical products, raw materials and regulated cargo according to their classification, characteristics and transport requirements. We integrate documentation validation, appropriate transport selection, route planning and operational tracking to maintain control from collection through reception at the plant, warehouse or industrial destination."
+        : "我们根据化工产品、原材料和受监管货物的分类、特性及运输要求协调物流运营，并整合文件审核、运输方式选择、路线规划和运营跟踪，确保从提货到工厂、仓库或工业目的地收货的全过程受控。";
+
+  const operationalStages =
+    locale === "es"
+      ? [
+          {
+            number: "01",
+            eyebrow: "Clasificación y validación",
+            title: "La operación se define a partir de las características reales del producto.",
+            text:
+              "Revisamos la información técnica y documental disponible para identificar requisitos de manipulación, compatibilidad, acondicionamiento y transporte antes de iniciar el movimiento.",
+            details: [
+              "Revisión de clasificación y documentación técnica",
+              "Validación de requisitos de embalaje y etiquetado",
+              "Identificación de condiciones y restricciones operativas"
+            ]
+          },
+          {
+            number: "02",
+            eyebrow: "Transporte y seguridad operativa",
+            title: "Cada carga se coordina según su nivel de exigencia.",
+            text:
+              "Definimos modalidad, ruta y condiciones operativas teniendo en cuenta el tipo de mercancía, los puntos de transferencia y los requisitos aplicables a cada trayecto.",
+            details: [
+              "Coordinación de transporte terrestre y multimodal",
+              "Planificación de rutas y puntos de transferencia",
+              "Gestión de mercancías reguladas cuando aplica"
+            ]
+          },
+          {
+            number: "03",
+            eyebrow: "Trazabilidad y recepción",
+            title: "Control operativo hasta la entrega en destino.",
+            text:
+              "Supervisamos los principales hitos del movimiento y coordinamos documentación, aduanas y recepción para mantener visibilidad sobre la operación hasta su cierre.",
+            details: [
+              "Seguimiento de hitos y estado de la carga",
+              "Coordinación documental y aduanera",
+              "Gestión de incidencias, descarga y recepción"
+            ]
+          }
+        ]
+      : locale === "en"
+        ? [
+          {
+            number: "01",
+            eyebrow: "Classification and validation",
+            title: "The operation is defined around the actual characteristics of the product.",
+            text:
+              "We review available technical and documentary information to identify handling, compatibility, conditioning and transport requirements before movement begins.",
+            details: [
+              "Classification and technical-document review",
+              "Packaging and labeling requirement validation",
+              "Identification of operational conditions and restrictions"
+            ]
+          },
+          {
+            number: "02",
+            eyebrow: "Transport and operational safety",
+            title: "Every cargo movement is coordinated according to its level of complexity.",
+            text:
+              "We define transport mode, route and operational conditions according to cargo type, transfer points and the requirements applicable to each movement.",
+            details: [
+              "Road and multimodal transport coordination",
+              "Route and transfer-point planning",
+              "Regulated cargo management when applicable"
+            ]
+          },
+          {
+            number: "03",
+            eyebrow: "Traceability and reception",
+            title: "Operational control through final delivery.",
+            text:
+              "We monitor key transport milestones and coordinate documentation, customs and reception to maintain visibility over the operation through completion.",
+            details: [
+              "Cargo status and milestone tracking",
+              "Customs and document coordination",
+              "Incident, unloading and reception management"
+            ]
+          }
+        ]
+      : [
+          {
+            number: "01",
+            eyebrow: "分类与审核",
+            title: "根据产品的实际特性确定物流方案。",
+            text:
+              "审核现有技术资料和运输文件，以确定货物操作、相容性、包装处理和运输要求。",
+            details: [
+              "产品分类与技术文件审核",
+              "包装和标签要求确认",
+              "运营条件与限制识别"
+            ]
+          },
+          {
+            number: "02",
+            eyebrow: "运输与运营安全",
+            title: "根据货物的具体要求协调每项运输。",
+            text:
+              "根据货物类型、中转节点和适用要求确定运输方式、路线及运营条件。",
+            details: [
+              "陆运及多式联运协调",
+              "路线与中转节点规划",
+              "适用时的受监管货物管理"
+            ]
+          },
+          {
+            number: "03",
+            eyebrow: "追踪与收货",
+            title: "保持运营控制直至最终交付。",
+            text:
+              "跟踪主要运输节点，并协调文件、海关和最终收货，保持整个运营过程的可视化。",
+            details: [
+              "货物状态与关键节点跟踪",
+              "海关及文件协调",
+              "异常、卸货与收货管理"
+            ]
+          }
+        ];
+
   return (
     <div className="page-shell">
       <Header />
@@ -930,27 +1069,48 @@ export default function QuimicoSectorPage() {
           </div>
         </section>
 
-        <section className={styles.process}>
-          <div className={styles.sectionHead}>
-            <span className={styles.eyebrow}>{t.processEyebrow}</span>
-            <h2>{t.processTitle}</h2>
-          </div>
+        <section className={styles.operationalModel}>
+          <div className={styles.operationalModelInner}>
 
-          <div className={styles.processGrid}>
-            {t.process.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["search", "route", "document", "plane", "tracking", "truck"];
+            <header className={styles.operationalModelHead}>
+              <span className={styles.operationalModelEyebrow}>
+                {operationalEyebrow}
+              </span>
 
-              return (
-                <article key={title}>
-                  <strong>{index + 1}</strong>
-                  <i>
-                    <Icon name={icons[index]} />
-                  </i>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
+              <h2>{operationalTitle}</h2>
+
+              <p>{operationalIntro}</p>
+            </header>
+
+            <div className={styles.operationalStages}>
+              {operationalStages.map((stage) => (
+                <article
+                  key={stage.number}
+                  className={styles.operationalStage}
+                >
+                  <div className={styles.operationalStageNumber}>
+                    {stage.number}
+                  </div>
+
+                  <div className={styles.operationalStageMain}>
+                    <span>{stage.eyebrow}</span>
+
+                    <h3>{stage.title}</h3>
+
+                    <p>{stage.text}</p>
+                  </div>
+
+                  <ul className={styles.operationalStageDetails}>
+                    {stage.details.map((detail) => (
+                      <li key={detail}>
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
                 </article>
-              );
-            })}
+              ))}
+            </div>
+
           </div>
         </section>
 

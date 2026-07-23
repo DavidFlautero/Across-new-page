@@ -47,7 +47,7 @@ const copy = {
     "overviewEyebrow": "Logística sanitaria",
     "overviewTitle": "Control, cumplimiento y trazabilidad para mercancía sensible.",
     "overviewText": "El sector farmacéutico y sanitario exige precisión documental, seguridad, control de condiciones y continuidad. Diseñamos operaciones para proteger productos críticos de origen a destino.",
-    "overviewButton": "Conocer más sobre sanitario",
+    "overviewButton": "Hablar con un especialista",
     "pillars": [
       [
         "Cumplimiento documental",
@@ -209,7 +209,7 @@ const copy = {
     "overviewEyebrow": "Logística sanitaria",
     "overviewTitle": "Control, cumplimiento y trazabilidad para mercancía sensible.",
     "overviewText": "El sector farmacéutico y sanitario exige precisión documental, seguridad, control de condiciones y continuidad. Diseñamos operaciones para proteger productos críticos de origen a destino.",
-    "overviewButton": "Conocer más sobre sanitario",
+    "overviewButton": "Talk to a specialist",
     "pillars": [
       [
         "Cumplimiento documental",
@@ -371,7 +371,7 @@ const copy = {
     "overviewEyebrow": "Logística sanitaria",
     "overviewTitle": "Control, cumplimiento y trazabilidad para mercancía sensible.",
     "overviewText": "El sector farmacéutico y sanitario exige precisión documental, seguridad, control de condiciones y continuidad. Diseñamos operaciones para proteger productos críticos de origen a destino.",
-    "overviewButton": "Conocer más sobre sanitario",
+    "overviewButton": "联系专家",
     "pillars": [
       [
         "Cumplimiento documental",
@@ -783,6 +783,145 @@ export default function FarmaceuticoSanitarioSectorPage() {
 
   const t = copy[locale];
 
+const operationalEyebrow =
+    locale === "es"
+      ? "Capacidad operativa"
+      : locale === "en"
+        ? "Operational capability"
+        : "运营能力";
+
+  const operationalTitle =
+    locale === "es"
+      ? "Control logístico para productos farmacéuticos y sanitarios con requisitos críticos."
+      : locale === "en"
+        ? "Controlled logistics for pharmaceutical and healthcare products with critical requirements."
+        : "面向具有严格要求的医药与医疗产品的受控物流。";
+
+  const operationalIntro =
+    locale === "es"
+      ? "Coordinamos operaciones para medicamentos, dispositivos médicos, muestras clínicas e insumos sanitarios que requieren condiciones específicas de transporte. Definimos cada movimiento según la sensibilidad del producto, los rangos térmicos aplicables, los tiempos de tránsito y los requisitos documentales, integrando control de condiciones, trazabilidad y coordinación hasta la recepción final."
+      : locale === "en"
+        ? "We coordinate operations for medicines, medical devices, clinical samples and healthcare supplies requiring specific transport conditions. Each movement is defined according to product sensitivity, applicable temperature ranges, transit times and documentation requirements, integrating condition control, traceability and coordination through final reception."
+        : "我们为药品、医疗器械、临床样本和医疗物资协调物流运营。根据产品敏感性、适用温度范围、运输时效和文件要求制定运输方案，并整合条件控制、全程追踪和最终交付协调。";
+
+  const operationalStages =
+    locale === "es"
+      ? [
+          {
+            number: "01",
+            eyebrow: "Validación y acondicionamiento",
+            title: "Cada producto preparado según sus condiciones de transporte.",
+            text:
+              "Revisamos sensibilidad, requisitos térmicos, tiempos críticos y documentación antes de definir el acondicionamiento y la solución logística.",
+            details: [
+              "Revisión de sensibilidad y rango térmico",
+              "Acondicionamiento según requisitos del producto",
+              "Validación documental previa a la expedición"
+            ]
+          },
+          {
+            number: "02",
+            eyebrow: "Transporte y control de condiciones",
+            title: "Continuidad operativa durante los movimientos críticos.",
+            text:
+              "Coordinamos modalidad, ruta y tiempos de tránsito manteniendo control sobre las condiciones requeridas por la mercancía durante cada etapa del transporte.",
+            details: [
+              "Control térmico cuando el producto lo requiere",
+              "Planificación de rutas y tiempos críticos",
+              "Transporte terrestre, aéreo y multimodal"
+            ]
+          },
+          {
+            number: "03",
+            eyebrow: "Trazabilidad y entrega segura",
+            title: "Visibilidad hasta la recepción del producto.",
+            text:
+              "Supervisamos los principales hitos de la operación y coordinamos la entrega en laboratorios, centros sanitarios, distribuidores y otros destinos autorizados.",
+            details: [
+              "Seguimiento de hitos y condiciones operativas",
+              "Coordinación documental y de recepción",
+              "Gestión de incidencias y entrega final"
+            ]
+          }
+        ]
+      : locale === "en"
+        ? [
+          {
+            number: "01",
+            eyebrow: "Validation and conditioning",
+            title: "Every product prepared according to its transport requirements.",
+            text:
+              "We review sensitivity, temperature requirements, critical timing and documentation before defining conditioning and the logistics solution.",
+            details: [
+              "Sensitivity and temperature-range assessment",
+              "Conditioning according to product requirements",
+              "Documentation validation before dispatch"
+            ]
+          },
+          {
+            number: "02",
+            eyebrow: "Transport and condition control",
+            title: "Operational continuity throughout critical movements.",
+            text:
+              "We coordinate transport mode, route and transit times while maintaining control over the conditions required by the cargo throughout each stage.",
+            details: [
+              "Temperature control when required",
+              "Critical route and transit-time planning",
+              "Road, air and multimodal transport"
+            ]
+          },
+          {
+            number: "03",
+            eyebrow: "Traceability and secure delivery",
+            title: "Visibility through final product reception.",
+            text:
+              "We monitor key operational milestones and coordinate delivery to laboratories, healthcare centers, distributors and other designated destinations.",
+            details: [
+              "Milestone and operational-condition tracking",
+              "Documentation and reception coordination",
+              "Incident management and final delivery"
+            ]
+          }
+        ]
+      : [
+          {
+            number: "01",
+            eyebrow: "验证与运输准备",
+            title: "根据产品运输条件进行专业准备。",
+            text:
+              "在制定物流方案前评估产品敏感性、温度要求、关键时效和相关文件。",
+            details: [
+              "产品敏感性与温度范围评估",
+              "根据产品要求进行运输准备",
+              "发运前文件验证"
+            ]
+          },
+          {
+            number: "02",
+            eyebrow: "运输与条件控制",
+            title: "在关键运输过程中保持运营连续性。",
+            text:
+              "协调运输方式、路线和时效，并在各运输阶段保持对货物所需条件的控制。",
+            details: [
+              "根据产品要求进行温度控制",
+              "关键路线与运输时效规划",
+              "陆运、空运及多式联运"
+            ]
+          },
+          {
+            number: "03",
+            eyebrow: "追踪与安全交付",
+            title: "保持可视化直至产品最终收货。",
+            text:
+              "跟踪主要运营节点，并协调向实验室、医疗机构、经销商及其他指定目的地的交付。",
+            details: [
+              "关键节点与运营条件跟踪",
+              "文件与收货协调",
+              "异常管理与最终交付"
+            ]
+          }
+        ];
+
   return (
     <div className="page-shell">
       <Header />
@@ -913,27 +1052,48 @@ export default function FarmaceuticoSanitarioSectorPage() {
           </div>
         </section>
 
-        <section className={styles.process}>
-          <div className={styles.sectionHead}>
-            <span className={styles.eyebrow}>{t.processEyebrow}</span>
-            <h2>{t.processTitle}</h2>
-          </div>
+        <section className={styles.operationalModel}>
+          <div className={styles.operationalModelInner}>
 
-          <div className={styles.processGrid}>
-            {t.process.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["search", "route", "document", "plane", "tracking", "truck"];
+            <header className={styles.operationalModelHead}>
+              <span className={styles.operationalModelEyebrow}>
+                {operationalEyebrow}
+              </span>
 
-              return (
-                <article key={title}>
-                  <strong>{index + 1}</strong>
-                  <i>
-                    <Icon name={icons[index]} />
-                  </i>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
+              <h2>{operationalTitle}</h2>
+
+              <p>{operationalIntro}</p>
+            </header>
+
+            <div className={styles.operationalStages}>
+              {operationalStages.map((stage) => (
+                <article
+                  key={stage.number}
+                  className={styles.operationalStage}
+                >
+                  <div className={styles.operationalStageNumber}>
+                    {stage.number}
+                  </div>
+
+                  <div className={styles.operationalStageMain}>
+                    <span>{stage.eyebrow}</span>
+
+                    <h3>{stage.title}</h3>
+
+                    <p>{stage.text}</p>
+                  </div>
+
+                  <ul className={styles.operationalStageDetails}>
+                    {stage.details.map((detail) => (
+                      <li key={detail}>
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
                 </article>
-              );
-            })}
+              ))}
+            </div>
+
           </div>
         </section>
 

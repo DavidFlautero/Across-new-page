@@ -47,7 +47,7 @@ const copy = {
     "overviewEyebrow": "Logística de consumo",
     "overviewTitle": "Operaciones flexibles para marcas, retail y distribución comercial.",
     "overviewText": "El consumo exige velocidad, cobertura, preparación eficiente y capacidad para responder a picos de demanda. Diseñamos operaciones para mover mercancía con orden y visibilidad.",
-    "overviewButton": "Conocer más sobre consumo",
+    "overviewButton": "Hablar con un especialista",
     "pillars": [
       [
         "Gestión de stock",
@@ -66,6 +66,35 @@ const copy = {
         "Seguimiento de estados, tiempos y avance operativo."
       ]
     ],
+"whatWeDoEyebrow": "Capacidad operativa",
+    "whatWeDoTitle": "Gestión integral para operaciones de consumo y distribución.",
+    "whatWeDo": [
+      [
+        "Gestión de inventario y disponibilidad",
+        "Coordinación de entradas, control de stock, rotación y disponibilidad de mercancía para mantener continuidad operativa."
+      ],
+      [
+        "Preparación y consolidación de pedidos",
+        "Organización de picking, packing, agrupación de referencias y acondicionamiento según canal, destino y requisitos de entrega."
+      ],
+      [
+        "Distribución hacia retail",
+        "Planificación de expediciones y entregas hacia tiendas, cadenas, plataformas logísticas y puntos de venta."
+      ],
+      [
+        "Operaciones omnicanal",
+        "Integración de flujos B2B, retail y e-commerce dentro de una misma operación logística y de distribución."
+      ],
+      [
+        "Gestión de demanda",
+        "Adaptación de capacidad, almacenamiento y distribución durante campañas comerciales, lanzamientos y períodos de alta rotación."
+      ],
+      [
+        "Trazabilidad y control de entrega",
+        "Seguimiento de movimientos, estados operativos e incidencias desde la preparación del pedido hasta la recepción final."
+      ]
+    ],
+
     "servicesEyebrow": "Soluciones especializadas",
     "servicesTitle": "Servicios logísticos para cada necesidad del sector.",
     "services": [
@@ -209,7 +238,7 @@ const copy = {
     "overviewEyebrow": "Logística de consumo",
     "overviewTitle": "Operaciones flexibles para marcas, retail y distribución comercial.",
     "overviewText": "El consumo exige velocidad, cobertura, preparación eficiente y capacidad para responder a picos de demanda. Diseñamos operaciones para mover mercancía con orden y visibilidad.",
-    "overviewButton": "Conocer más sobre consumo",
+    "overviewButton": "Talk to a specialist",
     "pillars": [
       [
         "Gestión de stock",
@@ -228,6 +257,35 @@ const copy = {
         "Seguimiento de estados, tiempos y avance operativo."
       ]
     ],
+"whatWeDoEyebrow": "What we do",
+    "whatWeDoTitle": "Solutions across the entire distribution chain.",
+    "whatWeDo": [
+      [
+        "Stock management",
+        "We coordinate reception, control and product availability."
+      ],
+      [
+        "Order preparation",
+        "We organize picking, preparation and conditioning for each operation."
+      ],
+      [
+        "Retail distribution",
+        "We plan deliveries to stores, chains and points of sale."
+      ],
+      [
+        "E-commerce operations",
+        "We coordinate preparation and distribution for omnichannel operations."
+      ],
+      [
+        "Campaigns and demand peaks",
+        "We adapt capacity and planning to high-volume periods."
+      ],
+      [
+        "Delivery traceability",
+        "We maintain visibility from preparation through final delivery."
+      ]
+    ],
+
     "servicesEyebrow": "Specialized solutions",
     "servicesTitle": "Logistics services for every sector need.",
     "services": [
@@ -371,7 +429,7 @@ const copy = {
     "overviewEyebrow": "Logística de consumo",
     "overviewTitle": "Operaciones flexibles para marcas, retail y distribución comercial.",
     "overviewText": "El consumo exige velocidad, cobertura, preparación eficiente y capacidad para responder a picos de demanda. Diseñamos operaciones para mover mercancía con orden y visibilidad.",
-    "overviewButton": "Conocer más sobre consumo",
+    "overviewButton": "联系专家",
     "pillars": [
       [
         "Gestión de stock",
@@ -390,6 +448,35 @@ const copy = {
         "Seguimiento de estados, tiempos y avance operativo."
       ]
     ],
+"whatWeDoEyebrow": "我们的服务",
+    "whatWeDoTitle": "覆盖整个配送链的物流解决方案。",
+    "whatWeDo": [
+      [
+        "库存管理",
+        "协调货物接收、库存控制和产品可用性。"
+      ],
+      [
+        "订单准备",
+        "根据每项业务安排拣货、准备和包装。"
+      ],
+      [
+        "零售配送",
+        "规划向门店、连锁企业和销售点的配送。"
+      ],
+      [
+        "电商物流",
+        "协调多渠道业务的订单准备和配送。"
+      ],
+      [
+        "活动与需求高峰",
+        "根据高周转时期调整物流能力和计划。"
+      ],
+      [
+        "交付追踪",
+        "从订单准备到最终交付保持全程可视化。"
+      ]
+    ],
+
     "servicesEyebrow": "专业解决方案",
     "servicesTitle": "满足行业不同需求的专业物流服务。",
     "services": [
@@ -783,6 +870,126 @@ export default function ConsumoDistribucionSectorPage() {
 
   const t = copy[locale];
 
+
+  const operationalStages =
+    locale === "es"
+      ? [
+          {
+            number: "01",
+            eyebrow: "Planificación y abastecimiento",
+            title: "Inventario preparado para responder a la demanda.",
+            text:
+              "Coordinamos entradas, disponibilidad, rotación y necesidades de stock para mantener continuidad operativa y anticipar campañas o períodos de alta demanda.",
+            details: [
+              "Control de inventario y disponibilidad",
+              "Planificación de rotación",
+              "Gestión de campañas y picos de demanda"
+            ]
+          },
+          {
+            number: "02",
+            eyebrow: "Preparación y expedición",
+            title: "Cada pedido preparado según su canal y destino.",
+            text:
+              "Organizamos los procesos previos a la distribución, desde la preparación y consolidación hasta el acondicionamiento requerido por cada operación.",
+            details: [
+              "Picking y preparación de pedidos",
+              "Packing y acondicionamiento",
+              "Consolidación por destino o canal"
+            ]
+          },
+          {
+            number: "03",
+            eyebrow: "Distribución y control",
+            title: "Una operación coordinada hasta la entrega final.",
+            text:
+              "Integramos distribución retail, B2B y e-commerce con seguimiento operativo para mantener visibilidad sobre entregas, estados e incidencias.",
+            details: [
+              "Distribución a retail y puntos de venta",
+              "Operaciones B2B y omnicanal",
+              "Trazabilidad y gestión de incidencias"
+            ]
+          }
+        ]
+      : locale === "en"
+        ? [
+            {
+              number: "01",
+              eyebrow: "Planning and supply",
+              title: "Inventory prepared to respond to demand.",
+              text:
+                "We coordinate inbound flows, availability, rotation and stock requirements to maintain operational continuity and anticipate peak-demand periods.",
+              details: [
+                "Inventory and availability control",
+                "Stock rotation planning",
+                "Campaign and demand-peak management"
+              ]
+            },
+            {
+              number: "02",
+              eyebrow: "Preparation and dispatch",
+              title: "Every order prepared for its channel and destination.",
+              text:
+                "We organize the processes prior to distribution, from picking and consolidation to the conditioning required by each operation.",
+              details: [
+                "Picking and order preparation",
+                "Packing and conditioning",
+                "Consolidation by destination or channel"
+              ]
+            },
+            {
+              number: "03",
+              eyebrow: "Distribution and control",
+              title: "A coordinated operation through final delivery.",
+              text:
+                "We integrate retail, B2B and e-commerce distribution with operational tracking to maintain visibility over deliveries, status and incidents.",
+              details: [
+                "Retail and point-of-sale distribution",
+                "B2B and omnichannel operations",
+                "Traceability and incident management"
+              ]
+            }
+          ]
+        : [
+            {
+              number: "01",
+              eyebrow: "规划与供应",
+              title: "以库存管理支持持续的市场需求。",
+              text:
+                "协调入库、库存可用性、周转以及需求变化，确保运营连续性并应对销售活动和需求高峰。",
+              details: [
+                "库存与可用性管理",
+                "库存周转规划",
+                "活动与需求高峰管理"
+              ]
+            },
+            {
+              number: "02",
+              eyebrow: "订单准备与发运",
+              title: "根据渠道和目的地准备每一笔订单。",
+              text:
+                "协调配送前的订单准备、整合以及不同业务所需的包装和处理流程。",
+              details: [
+                "拣货与订单准备",
+                "包装与处理",
+                "按渠道或目的地整合"
+              ]
+            },
+            {
+              number: "03",
+              eyebrow: "配送与运营控制",
+              title: "从仓库到最终交付的完整协调。",
+              text:
+                "整合零售、B2B和电商配送，并通过运营追踪保持对交付状态和异常情况的可视化。",
+              details: [
+                "零售与销售点配送",
+                "B2B与多渠道运营",
+                "追踪与异常管理"
+              ]
+            }
+          ];
+
+
   return (
     <div className="page-shell">
       <Header />
@@ -884,7 +1091,8 @@ export default function ConsumoDistribucionSectorPage() {
           </div>
         </section>
 
-        <section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/sectores/consumo3.png')" } as CSSProperties}>
+
+<section className={styles.services} data-mobile-hide-after-cert="true" style={{ "--mobile-bg": "url('/images/sectores/consumo3.png')" } as CSSProperties}>
           <div className={styles.sectionHead}>
             <span className={styles.eyebrow}>{t.servicesEyebrow}</span>
             <h2>{t.servicesTitle}</h2>
@@ -930,27 +1138,50 @@ export default function ConsumoDistribucionSectorPage() {
           </div>
         </section>
 
-        <section className={styles.process}>
-          <div className={styles.sectionHead}>
-            <span className={styles.eyebrow}>{t.processEyebrow}</span>
-            <h2>{t.processTitle}</h2>
-          </div>
+        <section className={styles.operationalModel}>
+          <div className={styles.operationalModelInner}>
 
-          <div className={styles.processGrid}>
-            {t.process.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["search", "route", "document", "plane", "tracking", "truck"];
+            <header className={styles.operationalModelHead}>
+              <span className={styles.operationalModelEyebrow}>
+                {t.whatWeDoEyebrow}
+              </span>
 
-              return (
-                <article key={title}>
-                  <strong>{index + 1}</strong>
-                  <i>
-                    <Icon name={icons[index]} />
-                  </i>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
+              <h2>{t.whatWeDoTitle}</h2>
+
+              <p>
+                {locale === "es"
+                  ? "Coordinamos de forma integral cada etapa de la operación, desde la planificación de inventario y la preparación de pedidos hasta la distribución y la entrega final. Integramos capacidad operativa, trazabilidad y control para adaptar cada flujo a los volúmenes, canales y necesidades específicas de cada cliente."
+                  : locale === "en"
+                    ? "An operational structure designed to coordinate goods, orders and distribution within a single logistics flow."
+                    : "通过统一的物流流程协调货物、订单准备和配送。"}
+              </p>
+            </header>
+
+            <div className={styles.operationalStages}>
+              {operationalStages.map((stage) => (
+                <article
+                  key={stage.number}
+                  className={styles.operationalStage}
+                >
+                  <div className={styles.operationalStageNumber}>
+                    {stage.number}
+                  </div>
+
+                  <div className={styles.operationalStageMain}>
+                    <span>{stage.eyebrow}</span>
+                    <h3>{stage.title}</h3>
+                    <p>{stage.text}</p>
+                  </div>
+
+                  <ul className={styles.operationalStageDetails}>
+                    {stage.details.map((detail) => (
+                      <li key={detail}>{detail}</li>
+                    ))}
+                  </ul>
                 </article>
-              );
-            })}
+              ))}
+            </div>
+
           </div>
         </section>
 

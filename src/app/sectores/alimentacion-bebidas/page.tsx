@@ -92,7 +92,7 @@ const copy = {
       ],
       [
             "Servicios de aduanas",
-            "Coordinación documental y aduanera para facilitar operaciones de importación y exportación."
+            "Control de tiempos y condiciones para facilitar operaciones de importación y exportación."
       ]
 ],
     "useCasesEyebrow": "Cuándo necesita logística especializada",
@@ -760,6 +760,146 @@ export default function AlimentacionBebidasSectorPage() {
 
   const t = copy[locale];
 
+const operationalEyebrow =
+    locale === "es"
+      ? "Capacidad operativa"
+      : locale === "en"
+        ? "Operational capability"
+        : "运营能力";
+
+  const operationalTitle =
+    locale === "es"
+      ? "Control de producto y continuidad para alimentos y bebidas."
+      : locale === "en"
+        ? "Product control and continuity for food and beverage operations."
+        : "食品与饮料物流中的产品控制与供应连续性。";
+
+  const operationalIntro =
+    locale === "es"
+      ? "Gestionamos operaciones adaptadas a las condiciones de cada alimento o bebida, coordinando conservación, tiempos de tránsito, transporte y distribución. Cuando el producto lo requiere, integramos control térmico y seguimiento operativo para proteger la mercancía y mantener la continuidad desde el origen hasta la entrega."
+      : locale === "en"
+        ? "We manage operations adapted to the requirements of each food and beverage product, coordinating preservation, transit times, transport and distribution. When required, we integrate temperature control and operational tracking to protect the cargo and maintain continuity from origin through final delivery."
+        : "我们根据不同食品和饮料产品的要求管理物流运营，协调储存条件、运输时效、运输方式和配送。必要时整合温度控制和运营跟踪，确保货物从始发地到最终交付始终受到保护。";
+
+  const operationalStages =
+    locale === "es"
+      ? [
+          {
+            number: "01",
+            eyebrow: "Conservación y preparación",
+            title: "Condiciones definidas antes de mover la mercancía.",
+            text:
+              "Preparamos cada operación teniendo en cuenta la sensibilidad del producto, sus necesidades de conservación y las condiciones necesarias para mantener su calidad.",
+            details: [
+              "Cadena de frío cuando aplica",
+              "Control de conservación y manipulación",
+              "Preparación según producto y destino"
+            ]
+          },
+          {
+            number: "02",
+            eyebrow: "Transporte y control",
+            title: "La mercancía bajo control durante todo el trayecto.",
+            text:
+              "Coordinamos la modalidad de transporte, los tiempos de tránsito y los principales hitos operativos para mantener continuidad durante el movimiento.",
+            details: [
+              "Transporte nacional e internacional",
+              "Control de tiempos de tránsito",
+              "Coordinación documental y aduanera"
+            ]
+          },
+          {
+            number: "03",
+            eyebrow: "Distribución y entrega",
+            title: "Coordinación hasta el punto final de recepción.",
+            text:
+              "Organizamos la distribución y las entregas según el canal de destino, manteniendo seguimiento sobre la operación hasta la recepción final.",
+            details: [
+              "Distribución a retail y clientes",
+              "Entregas programadas y coordinadas",
+              "Seguimiento y gestión de incidencias"
+            ]
+          }
+        ]
+      : locale === "en"
+        ? [
+            {
+              number: "01",
+              eyebrow: "Preservation and preparation",
+              title: "Conditions defined before the cargo moves.",
+              text:
+                "We prepare every operation according to product sensitivity, preservation requirements and the conditions needed to maintain product quality.",
+              details: [
+                "Cold chain when required",
+                "Preservation and handling control",
+                "Preparation according to product and destination"
+              ]
+            },
+            {
+              number: "02",
+              eyebrow: "Transport and control",
+              title: "Cargo under control throughout the journey.",
+              text:
+                "We coordinate transport mode, transit times and key operational milestones to maintain continuity throughout the movement.",
+              details: [
+                "Domestic and international transport",
+                "Transit-time control",
+                "Customs and document coordination"
+              ]
+            },
+            {
+              number: "03",
+              eyebrow: "Distribution and delivery",
+              title: "Coordination through the final point of reception.",
+              text:
+                "We organize distribution and deliveries according to the destination channel while maintaining operational tracking through final reception.",
+              details: [
+                "Distribution to retail and clients",
+                "Scheduled and coordinated deliveries",
+                "Tracking and incident management"
+              ]
+            }
+          ]
+        : [
+            {
+              number: "01",
+              eyebrow: "储存与准备",
+              title: "在货物运输前确定所需条件。",
+              text:
+                "根据产品敏感性、储存要求和保持产品品质所需的条件准备每项物流运营。",
+              details: [
+                "需要时提供冷链",
+                "储存和操作条件控制",
+                "根据产品和目的地进行准备"
+              ]
+            },
+            {
+              number: "02",
+              eyebrow: "运输与控制",
+              title: "在整个运输过程中保持货物受控。",
+              text:
+                "协调运输方式、运输时效和主要运营节点，保持整个运输过程的连续性。",
+              details: [
+                "国内和国际运输",
+                "运输时效控制",
+                "海关及文件协调"
+              ]
+            },
+            {
+              number: "03",
+              eyebrow: "配送与交付",
+              title: "协调直至最终收货地点。",
+              text:
+                "根据不同目的地渠道组织配送和交付，并持续跟踪运营直至最终收货。",
+              details: [
+                "零售及客户配送",
+                "计划与协调交付",
+                "跟踪与异常管理"
+              ]
+            }
+          ];
+
+
   return (
     <div className="page-shell">
       <Header />
@@ -904,27 +1044,48 @@ export default function AlimentacionBebidasSectorPage() {
         </section>
 
 
-        <section className={styles.process}>
-          <div className={styles.sectionHead}>
-            <span className={styles.eyebrow}>{t.processEyebrow}</span>
-            <h2>{t.processTitle}</h2>
-          </div>
+        <section className={styles.operationalModel}>
+          <div className={styles.operationalModelInner}>
 
-          <div className={styles.processGrid}>
-            {t.process.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["search", "route", "tracking", "truck"];
+            <header className={styles.operationalModelHead}>
+              <span className={styles.operationalModelEyebrow}>
+                {operationalEyebrow}
+              </span>
 
-              return (
-                <article key={title}>
-                  <strong>{index + 1}</strong>
-                  <i>
-                    <Icon name={icons[index]} />
-                  </i>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
+              <h2>{operationalTitle}</h2>
+
+              <p>{operationalIntro}</p>
+            </header>
+
+            <div className={styles.operationalStages}>
+              {operationalStages.map((stage) => (
+                <article
+                  key={stage.number}
+                  className={styles.operationalStage}
+                >
+                  <div className={styles.operationalStageNumber}>
+                    {stage.number}
+                  </div>
+
+                  <div className={styles.operationalStageMain}>
+                    <span>{stage.eyebrow}</span>
+
+                    <h3>{stage.title}</h3>
+
+                    <p>{stage.text}</p>
+                  </div>
+
+                  <ul className={styles.operationalStageDetails}>
+                    {stage.details.map((detail) => (
+                      <li key={detail}>
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
                 </article>
-              );
-            })}
+              ))}
+            </div>
+
           </div>
         </section>
 

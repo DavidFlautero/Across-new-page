@@ -547,146 +547,6 @@ export default function EnergiasRenovablesSectorPage() {
 
   const t = copy[locale];
 
-const operationalEyebrow =
-    locale === "es"
-      ? "Capacidad operativa"
-      : locale === "en"
-        ? "Operational capability"
-        : "运营能力";
-
-  const operationalTitle =
-    locale === "es"
-      ? "Transporte especializado para proyectos e infraestructuras de energías renovables."
-      : locale === "en"
-        ? "Specialized transport for renewable energy projects and infrastructure."
-        : "可再生能源项目与基础设施的专业运输。";
-
-  const operationalIntro =
-    locale === "es"
-      ? "Coordinamos operaciones logísticas para parques eólicos, plantas solares y otros proyectos energéticos, adaptando cada transporte a las dimensiones, el peso y las características de los componentes. Integramos planificación de rutas, gestión de cargas especiales, transporte multimodal y coordinación de entregas en obra para mantener cada operación bajo control desde el origen hasta su destino final."
-      : locale === "en"
-        ? "We coordinate logistics operations for wind farms, solar plants and other renewable energy projects, adapting each transport operation to the dimensions, weight and characteristics of the components. We integrate route planning, special cargo management, multimodal transport and on-site delivery coordination from origin through final destination."
-        : "我们为风电场、太阳能电站及其他可再生能源项目协调物流运营，根据设备的尺寸、重量和特性制定运输方案，并整合路线规划、特殊货物运输、多式联运及项目现场交付协调。";
-
-  const operationalStages =
-    locale === "es"
-      ? [
-          {
-            number: "01",
-            eyebrow: "Planificación técnica",
-            title: "Cada operación diseñada según las características del proyecto.",
-            text:
-              "Analizamos dimensiones, pesos, puntos de origen, accesos y condiciones de entrega para definir una estrategia de transporte adaptada a cada componente.",
-            details: [
-              "Estudios de ruta y accesibilidad",
-              "Planificación según peso y dimensiones",
-              "Coordinación documental y permisos"
-            ]
-          },
-          {
-            number: "02",
-            eyebrow: "Cargas especiales y transporte",
-            title: "Soluciones para componentes que exigen una operativa específica.",
-            text:
-              "Coordinamos el movimiento de equipos y componentes mediante soluciones terrestres, marítimas y aéreas según las necesidades técnicas y geográficas de cada proyecto.",
-            details: [
-              "Componentes eólicos y fotovoltaicos",
-              "Cargas sobredimensionadas y pesadas",
-              "Transporte nacional e internacional"
-            ]
-          },
-          {
-            number: "03",
-            eyebrow: "Coordinación y entrega en obra",
-            title: "Control operativo hasta el punto final de instalación.",
-            text:
-              "Gestionamos los principales hitos del transporte y coordinamos las entregas según el calendario, los accesos y las necesidades operativas del proyecto.",
-            details: [
-              "Coordinación de entregas en obra",
-              "Seguimiento de operaciones críticas",
-              "Gestión de incidencias y tiempos de proyecto"
-            ]
-          }
-        ]
-      : locale === "en"
-        ? [
-          {
-            number: "01",
-            eyebrow: "Technical planning",
-            title: "Every operation designed around the project requirements.",
-            text:
-              "We analyze dimensions, weights, origins, access conditions and delivery requirements to define a transport strategy adapted to each component.",
-            details: [
-              "Route and accessibility studies",
-              "Planning according to weight and dimensions",
-              "Documentation and permit coordination"
-            ]
-          },
-          {
-            number: "02",
-            eyebrow: "Special cargo and transport",
-            title: "Solutions for components requiring specialized operations.",
-            text:
-              "We coordinate the movement of equipment and components through road, ocean and air solutions according to the technical and geographical requirements of each project.",
-            details: [
-              "Wind and photovoltaic components",
-              "Oversized and heavy cargo",
-              "Domestic and international transport"
-            ]
-          },
-          {
-            number: "03",
-            eyebrow: "Coordination and site delivery",
-            title: "Operational control through the final installation point.",
-            text:
-              "We manage key transport milestones and coordinate deliveries according to project schedules, access conditions and operational requirements.",
-            details: [
-              "On-site delivery coordination",
-              "Critical operation tracking",
-              "Incident and project timing management"
-            ]
-          }
-        ]
-      : [
-          {
-            number: "01",
-            eyebrow: "技术规划",
-            title: "根据项目特点设计每项运输运营。",
-            text:
-              "分析设备尺寸、重量、始发地、道路条件和交付要求，为每个组件制定适合的运输策略。",
-            details: [
-              "路线与通行条件研究",
-              "根据重量和尺寸制定运输计划",
-              "文件与许可协调"
-            ]
-          },
-          {
-            number: "02",
-            eyebrow: "特殊货物与运输",
-            title: "为需要专业操作的能源设备提供运输方案。",
-            text:
-              "根据项目的技术和地理要求，通过陆运、海运和空运协调设备及组件运输。",
-            details: [
-              "风电与光伏设备组件",
-              "超限及重型货物运输",
-              "国内与国际运输"
-            ]
-          },
-          {
-            number: "03",
-            eyebrow: "协调与项目现场交付",
-            title: "运营控制直至最终安装地点。",
-            text:
-              "根据项目进度、现场通行条件和运营要求管理运输节点并协调最终交付。",
-            details: [
-              "项目现场交付协调",
-              "关键运输运营跟踪",
-              "异常与项目时效管理"
-            ]
-          }
-        ];
-
-
   const trustIcons: IconName[] = [
     "box",
     "route",
@@ -700,7 +560,6 @@ const operationalEyebrow =
     "route",
     "truck",
   ];
-
 
   return (
     <div className="page-shell">
@@ -884,48 +743,31 @@ const operationalEyebrow =
             PROCESO
         ========================== */}
 
-        <section className={styles.operationalModel}>
-          <div className={styles.operationalModelInner}>
+        <section className={styles.process}>
+          <div className={styles.sectionHead}>
+            <span className={styles.eyebrow}>
+              {t.processEyebrow}
+            </span>
 
-            <header className={styles.operationalModelHead}>
-              <span className={styles.operationalModelEyebrow}>
-                {operationalEyebrow}
-              </span>
+            <h2>{t.processTitle}</h2>
+          </div>
 
-              <h2>{operationalTitle}</h2>
+          <div className={styles.processGrid}>
+            {t.process.map(
+              (
+                [title, text]: string[],
+                index: number,
+              ) => (
+                <article key={title}>
+                  <strong>
+                    {index + 1}
+                  </strong>
 
-              <p>{operationalIntro}</p>
-            </header>
-
-            <div className={styles.operationalStages}>
-              {operationalStages.map((stage) => (
-                <article
-                  key={stage.number}
-                  className={styles.operationalStage}
-                >
-                  <div className={styles.operationalStageNumber}>
-                    {stage.number}
-                  </div>
-
-                  <div className={styles.operationalStageMain}>
-                    <span>{stage.eyebrow}</span>
-
-                    <h3>{stage.title}</h3>
-
-                    <p>{stage.text}</p>
-                  </div>
-
-                  <ul className={styles.operationalStageDetails}>
-                    {stage.details.map((detail) => (
-                      <li key={detail}>
-                        {detail}
-                      </li>
-                    ))}
-                  </ul>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
                 </article>
-              ))}
-            </div>
-
+              ),
+            )}
           </div>
         </section>
 

@@ -783,6 +783,145 @@ export default function TecnologicoSectorPage() {
 
   const t = copy[locale];
 
+const operationalEyebrow =
+    locale === "es"
+      ? "Capacidad operativa"
+      : locale === "en"
+        ? "Operational capability"
+        : "运营能力";
+
+  const operationalTitle =
+    locale === "es"
+      ? "Transporte especializado para tecnología, equipos sensibles y mercancía de alto valor."
+      : locale === "en"
+        ? "Specialized transport for technology, sensitive equipment and high-value cargo."
+        : "面向科技产品、敏感设备和高价值货物的专业运输。";
+
+  const operationalIntro =
+    locale === "es"
+      ? "Coordinamos operaciones para dispositivos electrónicos, hardware, servidores, componentes y equipos profesionales que requieren seguridad, manipulación controlada y trazabilidad. Adaptamos cada movimiento al valor, la sensibilidad y la urgencia de la mercancía, integrando transporte internacional, gestión documental, coordinación aduanera y entregas programadas hasta centros técnicos, integradores, empresas o puntos de distribución."
+      : locale === "en"
+        ? "We coordinate operations for electronic devices, hardware, servers, components and professional equipment requiring security, controlled handling and traceability. Each movement is adapted to cargo value, sensitivity and urgency, integrating international transport, documentation, customs coordination and scheduled deliveries to technical centers, integrators, businesses or distribution points."
+        : "我们为电子设备、硬件、服务器、零部件及专业技术设备协调物流运营。根据货物价值、敏感性和紧急程度制定运输方案，并整合国际运输、文件管理、海关协调及面向技术中心、系统集成商、企业和配送点的计划交付。";
+
+  const operationalStages =
+    locale === "es"
+      ? [
+          {
+            number: "01",
+            eyebrow: "Preparación y protección",
+            title: "Cada equipo preparado según su valor y sensibilidad técnica.",
+            text:
+              "Definimos la operativa teniendo en cuenta las características del producto, el embalaje, la manipulación requerida y los puntos de transferencia previstos durante el transporte.",
+            details: [
+              "Revisión de requisitos de manipulación",
+              "Coordinación de embalaje y acondicionamiento",
+              "Control de recogidas y puntos de transferencia"
+            ]
+          },
+          {
+            number: "02",
+            eyebrow: "Transporte y seguridad operativa",
+            title: "Control reforzado para mercancía sensible y de alto valor.",
+            text:
+              "Seleccionamos la modalidad y la ruta según valor, urgencia y destino, coordinando los principales hitos documentales y operativos para reducir exposición y mantener continuidad.",
+            details: [
+              "Transporte terrestre, aéreo y multimodal",
+              "Operaciones urgentes para equipos críticos",
+              "Gestión documental y coordinación aduanera"
+            ]
+          },
+          {
+            number: "03",
+            eyebrow: "Trazabilidad y entrega técnica",
+            title: "Visibilidad hasta la recepción en el punto de destino.",
+            text:
+              "Coordinamos entregas programadas y mantenemos seguimiento sobre los hitos principales de la operación hasta la recepción de los equipos en centros técnicos, empresas, integradores o redes de distribución.",
+            details: [
+              "Seguimiento de movimientos y entregas",
+              "Coordinación de ventanas de recepción",
+              "Gestión de incidencias y entrega final"
+            ]
+          }
+        ]
+      : locale === "en"
+        ? [
+          {
+            number: "01",
+            eyebrow: "Preparation and protection",
+            title: "Every piece of equipment prepared according to its value and technical sensitivity.",
+            text:
+              "We define the operation according to product characteristics, packaging, handling requirements and planned transfer points throughout transport.",
+            details: [
+              "Handling requirement assessment",
+              "Packaging and conditioning coordination",
+              "Pickup and transfer-point control"
+            ]
+          },
+          {
+            number: "02",
+            eyebrow: "Transport and operational security",
+            title: "Enhanced control for sensitive and high-value cargo.",
+            text:
+              "We select transport mode and route according to value, urgency and destination, coordinating key documentary and operational milestones to reduce exposure and maintain continuity.",
+            details: [
+              "Road, air and multimodal transport",
+              "Urgent operations for critical equipment",
+              "Documentation and customs coordination"
+            ]
+          },
+          {
+            number: "03",
+            eyebrow: "Traceability and technical delivery",
+            title: "Visibility through reception at the final destination.",
+            text:
+              "We coordinate scheduled deliveries and maintain visibility over key operational milestones through equipment reception at technical centers, businesses, integrators or distribution networks.",
+            details: [
+              "Movement and delivery tracking",
+              "Receiving-window coordination",
+              "Incident management and final delivery"
+            ]
+          }
+        ]
+      : [
+          {
+            number: "01",
+            eyebrow: "准备与保护",
+            title: "根据设备价值和技术敏感性制定运输准备方案。",
+            text:
+              "根据产品特性、包装、操作要求和运输过程中的中转节点规划物流运营。",
+            details: [
+              "操作要求评估",
+              "包装与运输准备协调",
+              "提货及中转节点控制"
+            ]
+          },
+          {
+            number: "02",
+            eyebrow: "运输与运营安全",
+            title: "为敏感和高价值货物提供加强控制。",
+            text:
+              "根据货物价值、紧急程度和目的地选择运输方式和路线，并协调主要文件及运营节点。",
+            details: [
+              "陆运、空运及多式联运",
+              "关键设备紧急运输",
+              "文件及海关协调"
+            ]
+          },
+          {
+            number: "03",
+            eyebrow: "追踪与技术交付",
+            title: "保持可视化直至最终目的地收货。",
+            text:
+              "协调计划交付并跟踪主要运营节点，直至设备送达技术中心、企业、系统集成商或配送网络。",
+            details: [
+              "运输与交付跟踪",
+              "收货时间窗口协调",
+              "异常管理与最终交付"
+            ]
+          }
+        ];
+
   return (
     <div className="page-shell">
       <Header />
@@ -929,27 +1068,48 @@ export default function TecnologicoSectorPage() {
           </div>
         </section>
 
-        <section className={styles.process}>
-          <div className={styles.sectionHead}>
-            <span className={styles.eyebrow}>{t.processEyebrow}</span>
-            <h2>{t.processTitle}</h2>
-          </div>
+        <section className={styles.operationalModel}>
+          <div className={styles.operationalModelInner}>
 
-          <div className={styles.processGrid}>
-            {t.process.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["search", "route", "document", "plane", "tracking", "truck"];
+            <header className={styles.operationalModelHead}>
+              <span className={styles.operationalModelEyebrow}>
+                {operationalEyebrow}
+              </span>
 
-              return (
-                <article key={title}>
-                  <strong>{index + 1}</strong>
-                  <i>
-                    <Icon name={icons[index]} />
-                  </i>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
+              <h2>{operationalTitle}</h2>
+
+              <p>{operationalIntro}</p>
+            </header>
+
+            <div className={styles.operationalStages}>
+              {operationalStages.map((stage) => (
+                <article
+                  key={stage.number}
+                  className={styles.operationalStage}
+                >
+                  <div className={styles.operationalStageNumber}>
+                    {stage.number}
+                  </div>
+
+                  <div className={styles.operationalStageMain}>
+                    <span>{stage.eyebrow}</span>
+
+                    <h3>{stage.title}</h3>
+
+                    <p>{stage.text}</p>
+                  </div>
+
+                  <ul className={styles.operationalStageDetails}>
+                    {stage.details.map((detail) => (
+                      <li key={detail}>
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
                 </article>
-              );
-            })}
+              ))}
+            </div>
+
           </div>
         </section>
 

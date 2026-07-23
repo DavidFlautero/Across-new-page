@@ -11849,3 +11849,711 @@ a.primaryBtn:hover {
 
 /* === /SECTOR LEAD FINAL COMPACT CORRECTION === */
 
+
+/* === CONTACT FORM GOLD ACCENT === */
+
+.sectorLeadFormTitle {
+  position: relative !important;
+  padding-top: 1rem !important;
+}
+
+.sectorLeadFormTitle::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+
+  width: 54px !important;
+  height: 2px !important;
+
+  background: #c7a96b !important;
+}
+
+/* === /CONTACT FORM GOLD ACCENT === */
+
+/* === SECTOR OVERVIEW CTA STANDARD FINAL === */
+
+/* CTA igual a Alimentos y Bebidas */
+.overviewCopy a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  min-height: 48px !important;
+  margin-top: 1.8rem !important;
+  padding: 0 1.25rem !important;
+
+  background: #173247 !important;
+  color: #ffffff !important;
+
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+
+  font-size: .78rem !important;
+  font-weight: 950 !important;
+  letter-spacing: .03em !important;
+
+  box-shadow: 0 18px 42px rgba(23, 50, 71, .28) !important;
+}
+
+.overviewCopy a::after {
+  content: "→" !important;
+  margin-left: .7rem !important;
+}
+
+/* === /SECTOR OVERVIEW CTA STANDARD FINAL === */
+
+/* === OPERATIONAL MODEL — EXECUTIVE STRIP FINAL === */
+
+.operationalModel {
+  width: 100vw !important;
+  margin: 0 50% !important;
+  transform: translateX(-50%) !important;
+
+  background: #f4f1eb !important;
+  color: #081521 !important;
+
+  border-top: 1px solid rgba(8, 21, 33, .08) !important;
+  border-bottom: 1px solid rgba(8, 21, 33, .10) !important;
+}
+
+.operationalModelInner {
+  width: min(1180px, calc(100% - 48px)) !important;
+  margin: 0 auto !important;
+
+  padding: 2.5rem 0 2.7rem !important;
+}
+
+
+/* ==========================================================
+   CABECERA
+========================================================== */
+
+.operationalModelHead {
+  display: grid !important;
+  grid-template-columns:
+    minmax(420px, 1fr)
+    minmax(340px, .72fr) !important;
+
+  column-gap: clamp(4rem, 8vw, 8rem) !important;
+  align-items: end !important;
+
+  margin: 0 !important;
+  padding: 0 0 1.7rem !important;
+
+  border: 0 !important;
+  border-bottom:
+    1px solid rgba(8, 21, 33, .18) !important;
+
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.operationalModelEyebrow {
+  grid-column: 1 / -1 !important;
+
+  margin: 0 0 .4rem !important;
+
+  color: #b58b43 !important;
+
+  font-size: .62rem !important;
+  font-weight: 950 !important;
+  letter-spacing: .22em !important;
+  text-transform: uppercase !important;
+}
+
+.operationalModelHead h2 {
+  max-width: 570px !important;
+  margin: 0 !important;
+
+  color: #081521 !important;
+
+  font-size: clamp(2.2rem, 3vw, 3.35rem) !important;
+  line-height: .94 !important;
+  letter-spacing: -.05em !important;
+  font-weight: 950 !important;
+}
+
+.operationalModelHead > p {
+  max-width: 440px !important;
+
+  margin: 0 0 .15rem !important;
+
+  color: rgba(8, 21, 33, .62) !important;
+
+  font-size: .84rem !important;
+  line-height: 1.55 !important;
+}
+
+
+/* ==========================================================
+   UNA SOLA FRANJA OPERATIVA
+========================================================== */
+
+.operationalStages {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border: 0 !important;
+}
+
+
+/* No son cards: todos forman una misma banda */
+
+.operationalStage {
+  position: relative !important;
+
+  display: block !important;
+
+  min-width: 0 !important;
+  min-height: 0 !important;
+
+  padding: 1.7rem 2.2rem 1.2rem !important;
+
+  border: 0 !important;
+  border-left:
+    1px solid rgba(8, 21, 33, .13) !important;
+
+  background: transparent !important;
+
+  transition: none !important;
+}
+
+.operationalStage:first-child {
+  padding-left: 0 !important;
+  border-left: 0 !important;
+}
+
+.operationalStage:last-child {
+  padding-right: 0 !important;
+}
+
+
+/* Quitar cualquier resto del timeline anterior */
+
+.operationalStage::before,
+.operationalStageNumber::after {
+  display: none !important;
+}
+
+
+/* ==========================================================
+   NÚMERO
+========================================================== */
+
+.operationalStageNumber {
+  display: block !important;
+
+  width: auto !important;
+  height: auto !important;
+
+  margin: 0 0 .8rem !important;
+
+  color: #b58b43 !important;
+  background: transparent !important;
+
+  border: 0 !important;
+  border-radius: 0 !important;
+
+  font-size: .72rem !important;
+  line-height: 1 !important;
+  letter-spacing: .16em !important;
+  font-weight: 950 !important;
+}
+
+
+/* ==========================================================
+   CONTENIDO
+========================================================== */
+
+.operationalStageMain {
+  padding: 0 !important;
+}
+
+.operationalStageMain > span {
+  display: block !important;
+
+  margin: 0 0 .45rem !important;
+
+  color: #b58b43 !important;
+
+  font-size: .56rem !important;
+  font-weight: 950 !important;
+  letter-spacing: .18em !important;
+  text-transform: uppercase !important;
+}
+
+.operationalStageMain h3 {
+  max-width: 300px !important;
+
+  margin: 0 !important;
+
+  color: #081521 !important;
+
+  font-size: 1.2rem !important;
+  line-height: 1.02 !important;
+  letter-spacing: -.025em !important;
+  font-weight: 950 !important;
+}
+
+.operationalStageMain p {
+  max-width: 320px !important;
+
+  margin: .65rem 0 0 !important;
+
+  color: rgba(8, 21, 33, .61) !important;
+
+  font-size: .77rem !important;
+  line-height: 1.52 !important;
+}
+
+
+/* ==========================================================
+   DETALLE TÉCNICO
+========================================================== */
+
+.operationalStageDetails {
+  margin: 1rem 0 0 !important;
+  padding: 0 !important;
+
+  list-style: none !important;
+}
+
+.operationalStageDetails li {
+  position: relative !important;
+
+  padding: .43rem 0 .43rem 1rem !important;
+
+  border: 0 !important;
+  border-top:
+    1px solid rgba(8, 21, 33, .10) !important;
+
+  color: rgba(8, 21, 33, .76) !important;
+
+  font-size: .72rem !important;
+  line-height: 1.3 !important;
+}
+
+.operationalStageDetails li::before {
+  content: "" !important;
+
+  position: absolute !important;
+  left: 0 !important;
+  top: .7rem !important;
+
+  width: 4px !important;
+  height: 4px !important;
+
+  border-radius: 50% !important;
+  background: #b58b43 !important;
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 900px) {
+
+  .operationalModelHead {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .operationalStages {
+    grid-template-columns: 1fr !important;
+  }
+
+  .operationalStage,
+  .operationalStage:first-child,
+  .operationalStage:last-child {
+    padding: 1.5rem 0 !important;
+
+    border-left: 0 !important;
+    border-top:
+      1px solid rgba(8, 21, 33, .13) !important;
+  }
+
+  .operationalStage:first-child {
+    border-top: 0 !important;
+  }
+
+  .operationalStageMain h3,
+  .operationalStageMain p {
+    max-width: 600px !important;
+  }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+  .operationalModelInner {
+    width: calc(100% - 36px) !important;
+    padding: 2.2rem 0 !important;
+  }
+
+  .operationalModelHead h2 {
+    font-size:
+      clamp(2rem, 10vw, 2.8rem) !important;
+  }
+}
+
+/* === /OPERATIONAL MODEL — EXECUTIVE STRIP FINAL === */
+
+/* === OPERATIONAL MODEL TITLE SIZE FINAL === */
+
+.operationalModelHead h2 {
+  max-width: 560px !important;
+  font-size: clamp(2rem, 2.7vw, 3.15rem) !important;
+  line-height: .95 !important;
+}
+
+/* === /OPERATIONAL MODEL TITLE SIZE FINAL === */
+
+/* === OPERATIONAL MODEL INTRO STACKED === */
+
+.operationalModelHead {
+  display: block !important;
+  padding-bottom: 1.6rem !important;
+}
+
+.operationalModelEyebrow {
+  display: block !important;
+  margin-bottom: .55rem !important;
+}
+
+.operationalModelHead h2 {
+  max-width: 700px !important;
+}
+
+.operationalModelHead > p {
+  max-width: 720px !important;
+  margin: 1rem 0 0 !important;
+
+  font-size: .88rem !important;
+  line-height: 1.6 !important;
+  color: rgba(8, 21, 33, .66) !important;
+}
+
+/* === /OPERATIONAL MODEL INTRO STACKED === */
+
+/* === OPERATIONAL MODEL — CENTERED CORPORATE INTRO FINAL === */
+
+.operationalModelHead {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+
+  max-width: 960px !important;
+  margin: 0 auto !important;
+
+  padding: 0 0 2rem !important;
+
+  text-align: center !important;
+
+  border-bottom: 1px solid rgba(8, 21, 33, .16) !important;
+}
+
+.operationalModelEyebrow {
+  display: block !important;
+
+  margin: 0 0 .65rem !important;
+
+  text-align: center !important;
+
+  color: #b58b43 !important;
+  -webkit-text-fill-color: #b58b43 !important;
+
+  font-size: .62rem !important;
+  letter-spacing: .22em !important;
+}
+
+.operationalModelHead h2 {
+  max-width: 820px !important;
+
+  margin: 0 auto !important;
+
+  text-align: center !important;
+
+  font-size: clamp(2.45rem, 3.5vw, 4rem) !important;
+  line-height: .94 !important;
+  letter-spacing: -.05em !important;
+}
+
+.operationalModelHead > p {
+  max-width: 760px !important;
+
+  margin: 1rem auto 0 !important;
+
+  text-align: center !important;
+
+  color: rgba(8, 21, 33, .65) !important;
+
+  font-size: .88rem !important;
+  line-height: 1.65 !important;
+}
+
+/* Acercar las tres capacidades a la introducción */
+.operationalStages {
+  margin-top: 0 !important;
+}
+
+/* === /OPERATIONAL MODEL — CENTERED CORPORATE INTRO FINAL === */
+
+/* === OPERATIONAL MODEL COLUMNS CLOSER TO INTRO === */
+
+.operationalModelHead {
+  padding-bottom: 1.15rem !important;
+}
+
+.operationalStages {
+  margin-top: 0 !important;
+}
+
+/* === /OPERATIONAL MODEL COLUMNS CLOSER TO INTRO === */
+
+/* === UNIVERSAL OPERATIONAL MOBILE PRO === */
+
+@media (max-width: 700px) {
+
+  .operationalModelInner {
+    width: calc(100% - 36px) !important;
+    margin: 0 auto !important;
+    padding: 2.35rem 0 2.5rem !important;
+  }
+
+
+  /* INTRO PREMIUM CENTRADA */
+
+  .operationalModelHead {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    margin: 0 auto !important;
+    padding: 0 0 1.55rem !important;
+
+    text-align: center !important;
+
+    border-bottom: 0 !important;
+  }
+
+  .operationalModelEyebrow {
+    display: block !important;
+
+    width: 100% !important;
+
+    margin: 0 auto .7rem !important;
+
+    text-align: center !important;
+
+    font-size: .58rem !important;
+    line-height: 1.2 !important;
+    letter-spacing: .2em !important;
+  }
+
+  .operationalModelHead h2 {
+    width: 100% !important;
+    max-width: 430px !important;
+
+    margin: 0 auto !important;
+
+    text-align: center !important;
+
+    font-size: clamp(2rem, 9.5vw, 2.65rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.045em !important;
+    text-wrap: balance !important;
+  }
+
+  .operationalModelHead > p {
+    width: 100% !important;
+    max-width: 430px !important;
+
+    margin: 1.15rem auto 0 !important;
+
+    text-align: center !important;
+
+    font-size: .86rem !important;
+    line-height: 1.6 !important;
+  }
+
+
+  /* CONTENIDO TÉCNICO: ALINEADO A LA IZQUIERDA */
+
+  .operationalStages {
+    display: block !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: 0 !important;
+    border-top: 1px solid rgba(8, 21, 33, .16) !important;
+  }
+
+  .operationalStage,
+  .operationalStage:first-child,
+  .operationalStage:last-child {
+    position: relative !important;
+
+    display: block !important;
+
+    margin: 0 !important;
+
+    padding:
+      1.45rem
+      1.25rem
+      1.55rem
+      0 !important;
+
+    text-align: left !important;
+
+    border: 0 !important;
+    border-bottom:
+      1px solid
+      rgba(8, 21, 33, .12) !important;
+
+    background: transparent !important;
+  }
+
+  .operationalStage:last-child {
+    border-bottom: 0 !important;
+  }
+
+
+  /* NÚMERO DISCRETO */
+
+  .operationalStageNumber {
+    display: block !important;
+
+    position: absolute !important;
+
+    top: 1.48rem !important;
+    right: 0 !important;
+
+    color: rgba(181, 139, 67, .72) !important;
+
+    font-size: .6rem !important;
+    line-height: 1 !important;
+    font-weight: 950 !important;
+    letter-spacing: .14em !important;
+  }
+
+
+  /* ETIQUETA DE CADA ETAPA */
+
+  .operationalStageMain > span {
+    display: block !important;
+
+    max-width: calc(100% - 42px) !important;
+
+    margin: 0 0 .5rem !important;
+
+    text-align: left !important;
+
+    font-size: .54rem !important;
+    line-height: 1.3 !important;
+    letter-spacing: .16em !important;
+  }
+
+
+  /* TÍTULO DE CADA ETAPA */
+
+  .operationalStageMain h3 {
+    max-width: 330px !important;
+
+    margin: 0 !important;
+
+    text-align: left !important;
+
+    font-size: 1.18rem !important;
+    line-height: 1.04 !important;
+    letter-spacing: -.025em !important;
+  }
+
+
+  /* DESCRIPCIÓN */
+
+  .operationalStageMain p {
+    max-width: 390px !important;
+
+    margin: .7rem 0 0 !important;
+
+    text-align: left !important;
+
+    font-size: .8rem !important;
+    line-height: 1.55 !important;
+  }
+
+
+  /* DETALLES TÉCNICOS */
+
+  .operationalStageDetails {
+    width: 100% !important;
+
+    margin: 1.05rem 0 0 !important;
+    padding: 0 !important;
+
+    text-align: left !important;
+  }
+
+  .operationalStageDetails li {
+    position: relative !important;
+
+    padding:
+      .52rem
+      0
+      .52rem
+      .9rem !important;
+
+    text-align: left !important;
+
+    font-size: .74rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .operationalStageDetails li::before {
+    top: .78rem !important;
+
+    width: 3px !important;
+    height: 3px !important;
+  }
+}
+
+
+/* TELÉFONOS PEQUEÑOS */
+
+@media (max-width: 390px) {
+
+  .operationalModelInner {
+    width: calc(100% - 30px) !important;
+  }
+
+  .operationalModelHead h2 {
+    max-width: 350px !important;
+
+    font-size: 2rem !important;
+  }
+
+  .operationalModelHead > p {
+    font-size: .82rem !important;
+  }
+
+  .operationalStageMain h3 {
+    font-size: 1.1rem !important;
+  }
+}
+
+/* === /UNIVERSAL OPERATIONAL MOBILE PRO === */

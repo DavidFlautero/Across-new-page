@@ -47,7 +47,7 @@ const copy = {
     "overviewEyebrow": "Expertos en el sector de:",
     "overviewTitle": "Transporte y logística especializada para Automoción.",
     "overviewText": "La industria del automóvil exige rapidez, precisión y una coordinación logística especialmente rigurosa. En Across Logistics gestionamos operaciones de transporte, importación y exportación para el sector de la automoción, optimizando la eficiencia de la cadena de suministro. Nuestra cobertura mundial y local nos permite coordinar cada operación con el objetivo de asegurar entregas en los tiempos previstos.",
-    "overviewButton": "Conocer servicios de automoción",
+    "overviewButton": "Hablar con un especialista",
     "pillars": [
       [
         "Continuidad productiva",
@@ -209,7 +209,7 @@ const copy = {
     "overviewEyebrow": "Automotive logistics",
     "overviewTitle": "Logistics precision for demanding industrial operations.",
     "overviewText": "The automotive industry requires punctual deliveries, document control, component availability and response to urgency. We design operations to keep the production chain moving.",
-    "overviewButton": "Learn more about automotive",
+    "overviewButton": "Talk to a specialist",
     "pillars": [
       [
         "Production continuity",
@@ -371,7 +371,7 @@ const copy = {
     "overviewEyebrow": "汽车物流",
     "overviewTitle": "为高要求工业运营提供精准物流。",
     "overviewText": "汽车行业需要准时交付、文件控制、组件可用性和紧急响应。我们设计运营以保持生产链流动。",
-    "overviewButton": "了解汽车物流",
+    "overviewButton": "联系专家",
     "pillars": [
       [
         "生产连续性",
@@ -783,6 +783,145 @@ export default function AutomocionSectorPage() {
 
   const t = copy[locale];
 
+const operationalEyebrow =
+    locale === "es"
+      ? "Capacidad operativa"
+      : locale === "en"
+        ? "Operational capability"
+        : "运营能力";
+
+  const operationalTitle =
+    locale === "es"
+      ? "Logística de precisión para mantener la continuidad de la cadena automotriz."
+      : locale === "en"
+        ? "Precision logistics to maintain continuity across the automotive supply chain."
+        : "保障汽车供应链连续性的精准物流。";
+
+  const operationalIntro =
+    locale === "es"
+      ? "Coordinamos el transporte de componentes, piezas y suministros para fabricantes, proveedores y centros de distribución del sector automotriz. Cada operación se planifica según los ciclos de producción, las ventanas de recepción y la criticidad de la mercancía, integrando consolidación, transporte internacional y seguimiento para reducir interrupciones en la cadena de suministro."
+      : locale === "en"
+        ? "We coordinate the transport of components, parts and supplies for automotive manufacturers, suppliers and distribution centers. Each operation is planned around production cycles, receiving windows and cargo criticality, integrating consolidation, international transport and tracking to reduce supply chain disruptions."
+        : "我们为汽车制造商、供应商和配送中心协调零部件及生产物料运输，并根据生产周期、收货时间窗口和货物重要程度规划每项运营，通过集运、国际运输和全程跟踪降低供应链中断风险。";
+
+  const operationalStages =
+    locale === "es"
+      ? [
+          {
+            number: "01",
+            eyebrow: "Abastecimiento y secuenciación",
+            title: "Componentes coordinados según el ritmo de producción.",
+            text:
+              "Organizamos recogidas y flujos de abastecimiento considerando proveedores, volúmenes, frecuencias y ventanas de recepción para mantener continuidad en planta.",
+            details: [
+              "Recogidas y consolidación de proveedores",
+              "Planificación de frecuencias y rutas",
+              "Coordinación de ventanas de recepción"
+            ]
+          },
+          {
+            number: "02",
+            eyebrow: "Piezas críticas y transporte",
+            title: "Respuesta logística para operaciones que no pueden detenerse.",
+            text:
+              "Gestionamos componentes, autopartes y repuestos sensibles al tiempo mediante soluciones adaptadas a la urgencia y al impacto que cada pieza puede tener sobre la producción.",
+            details: [
+              "Transporte de componentes y autopartes",
+              "Envíos urgentes para piezas críticas",
+              "Soluciones terrestres, aéreas y multimodales"
+            ]
+          },
+          {
+            number: "03",
+            eyebrow: "Control y entrega en planta",
+            title: "Visibilidad operativa hasta la recepción final.",
+            text:
+              "Supervisamos los principales hitos del transporte y coordinamos documentación, aduanas y entrega para responder ante desviaciones que puedan afectar la continuidad de suministro.",
+            details: [
+              "Seguimiento de hitos críticos",
+              "Coordinación documental y aduanera",
+              "Gestión de incidencias y desvíos"
+            ]
+          }
+        ]
+      : locale === "en"
+        ? [
+          {
+            number: "01",
+            eyebrow: "Supply and sequencing",
+            title: "Components coordinated around production requirements.",
+            text:
+              "We organize collections and supply flows according to suppliers, volumes, frequencies and receiving windows to maintain plant continuity.",
+            details: [
+              "Supplier collections and consolidation",
+              "Route and frequency planning",
+              "Receiving-window coordination"
+            ]
+          },
+          {
+            number: "02",
+            eyebrow: "Critical parts and transport",
+            title: "Logistics response for operations that cannot stop.",
+            text:
+              "We manage time-sensitive components, automotive parts and spares through solutions adapted to urgency and their potential impact on production.",
+            details: [
+              "Component and automotive-parts transport",
+              "Urgent shipments for critical parts",
+              "Road, air and multimodal solutions"
+            ]
+          },
+          {
+            number: "03",
+            eyebrow: "Control and plant delivery",
+            title: "Operational visibility through final reception.",
+            text:
+              "We monitor key transport milestones and coordinate documentation, customs and delivery to respond to deviations that could affect supply continuity.",
+            details: [
+              "Critical milestone tracking",
+              "Customs and document coordination",
+              "Incident and deviation management"
+            ]
+          }
+        ]
+      : [
+          {
+            number: "01",
+            eyebrow: "供应与生产排序",
+            title: "根据生产节奏协调零部件供应。",
+            text:
+              "根据供应商、货量、运输频率和工厂收货时间窗口组织提货与供应流，保持生产连续性。",
+            details: [
+              "供应商提货与集运",
+              "运输路线与频率规划",
+              "工厂收货时间窗口协调"
+            ]
+          },
+          {
+            number: "02",
+            eyebrow: "关键零部件与运输",
+            title: "为不能中断的生产运营提供物流响应。",
+            text:
+              "根据紧急程度和对生产的影响，协调对时效敏感的汽车零部件和备件运输。",
+            details: [
+              "汽车零部件运输",
+              "关键配件紧急运输",
+              "陆运、空运及多式联运"
+            ]
+          },
+          {
+            number: "03",
+            eyebrow: "控制与工厂交付",
+            title: "保持运营可视化直至最终收货。",
+            text:
+              "跟踪主要运输节点，并协调文件、海关和最终交付，以应对可能影响供应连续性的运输偏差。",
+            details: [
+              "关键运输节点跟踪",
+              "海关及文件协调",
+              "异常与运输偏差管理"
+            ]
+          }
+        ];
+
   return (
     <div className="page-shell">
       <Header />
@@ -928,27 +1067,48 @@ export default function AutomocionSectorPage() {
           </div>
         </section>
 
-        <section className={styles.process}>
-          <div className={styles.sectionHead}>
-            <span className={styles.eyebrow}>{t.processEyebrow}</span>
-            <h2>{t.processTitle}</h2>
-          </div>
+        <section className={styles.operationalModel}>
+          <div className={styles.operationalModelInner}>
 
-          <div className={styles.processGrid}>
-            {t.process.map(([title, text]: string[], index: number) => {
-              const icons: IconName[] = ["search", "route", "document", "plane", "tracking", "truck"];
+            <header className={styles.operationalModelHead}>
+              <span className={styles.operationalModelEyebrow}>
+                {operationalEyebrow}
+              </span>
 
-              return (
-                <article key={title}>
-                  <strong>{index + 1}</strong>
-                  <i>
-                    <Icon name={icons[index]} />
-                  </i>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
+              <h2>{operationalTitle}</h2>
+
+              <p>{operationalIntro}</p>
+            </header>
+
+            <div className={styles.operationalStages}>
+              {operationalStages.map((stage) => (
+                <article
+                  key={stage.number}
+                  className={styles.operationalStage}
+                >
+                  <div className={styles.operationalStageNumber}>
+                    {stage.number}
+                  </div>
+
+                  <div className={styles.operationalStageMain}>
+                    <span>{stage.eyebrow}</span>
+
+                    <h3>{stage.title}</h3>
+
+                    <p>{stage.text}</p>
+                  </div>
+
+                  <ul className={styles.operationalStageDetails}>
+                    {stage.details.map((detail) => (
+                      <li key={detail}>
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
                 </article>
-              );
-            })}
+              ))}
+            </div>
+
           </div>
         </section>
 

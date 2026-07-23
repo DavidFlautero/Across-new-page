@@ -2963,7 +2963,7 @@
       rgba(5, 6, 9, .55) 100%
     ),
     radial-gradient(circle at 18% 18%, rgba(23, 50, 71, .16), transparent 24rem),
-    url("/images/sectores/consumo1.png") !important;
+    url("/images/sectores/alimentosybebidas.png") !important;
   background-size: cover !important;
   background-position: center 48% !important;
   background-repeat: no-repeat !important;
@@ -3065,7 +3065,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/sectores/consumo1.png") !important;
+    url("/images/sectores/alimentosybebidas.png") !important;
   background-size: cover !important;
   background-position: center 55% !important;
   background-repeat: no-repeat !important;
@@ -3104,7 +3104,7 @@
   .services {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.90)),
-      url("/images/sectores/consumo1.png") !important;
+      url("/images/sectores/alimentosybebidas.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3116,7 +3116,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/consumo1.png") !important;
+      url("/images/sectores/alimentosybebidas.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3134,7 +3134,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/sectores/consumo1.png") !important;
+    url("/images/sectores/alimentosybebidas.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3144,7 +3144,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/consumo1.png") !important;
+      url("/images/sectores/alimentosybebidas.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3162,7 +3162,7 @@
       rgba(5, 6, 9, .44) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/sectores/consumo1.png") !important;
+    url("/images/sectores/alimentosybebidas.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3172,7 +3172,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/sectores/consumo1.png") !important;
+      url("/images/sectores/alimentosybebidas.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -8878,7 +8878,7 @@
   position: relative !important;
   isolation: isolate !important;
   background-color: rgba(0, 0, 0, 0) !important;
-  background-image: url("/images/sectores/consumo1.png") !important;
+  background-image: url("/images/sectores/alimentosybebidas.png") !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
@@ -9121,7 +9121,7 @@
         rgba(3,10,18,.16) 100%
       ),
       radial-gradient(circle at 70% 32%, rgba(15,111,150,.13), transparent 42%),
-      var(--mobile-bg, url("/images/sectores/consumo1.png")) center center / 100% 100% no-repeat !important;
+      var(--mobile-bg, url("/images/sectores/alimentosybebidas.png")) center center / 100% 100% no-repeat !important;
   }
 
   .page .finalCta::before,
@@ -9240,7 +9240,7 @@
 
 /* ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL
    DarkBand restaurado correctamente:
-   - usa SU imagen original del page.tsx: /images/sectores/consumo1.png
+   - usa SU imagen original del page.tsx: /images/sectores/alimentosybebidas.png
    - no usa imagen del CTA
    - elimina capas oscuras viejas
    - mantiene el estilo azul/premium
@@ -9264,7 +9264,7 @@
       rgba(244,239,229,.025) 0%,
       rgba(3,10,18,.16) 100%
     ),
-    url("/images/sectores/consumo1.png") center center / cover no-repeat !important;
+    url("/images/sectores/alimentosybebidas.png") center center / cover no-repeat !important;
 }
 
 .page .darkBand::before {
@@ -9966,6 +9966,114 @@ a.primaryBtn:hover {
 }
 
 
+/* === HERO ALIMENTOS Y BEBIDAS: COMPOSICIÓN FINAL DESKTOP === */
+@media (min-width: 901px) {
+  .hero {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  /* La tarjeta derecha ya no existe: eliminamos la columna vacía */
+  .heroInner {
+    display: block !important;
+    width: min(1280px, 100%) !important;
+    margin: 0 auto !important;
+  }
+
+  .heroContent {
+    width: min(900px, 100%) !important;
+    max-width: 900px !important;
+    transform: translateY(18px);
+  }
+
+  .hero .eyebrow {
+    margin-bottom: .85rem !important;
+    letter-spacing: .28em !important;
+  }
+
+  .heroContent h1 {
+    width: max-content !important;
+    max-width: none !important;
+    white-space: nowrap !important;
+    font-size: clamp(3.6rem, 5vw, 5.5rem) !important;
+    line-height: .94 !important;
+    letter-spacing: -.055em !important;
+  }
+
+  .heroContent p {
+    max-width: 620px !important;
+    margin-top: 1rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .hero .actions {
+    margin-top: 1.4rem !important;
+  }
+}
+
+/* En móvil sí permitimos que el título se adapte */
+@media (max-width: 900px) {
+  .heroContent h1 {
+    width: auto !important;
+    white-space: normal !important;
+  }
+}
+
+
+/* === HERO ALIMENTOS Y BEBIDAS: COMPOSICIÓN FINAL DESKTOP === */
+@media (min-width: 901px) {
+  .hero {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  /* La tarjeta derecha ya no existe: eliminamos la columna vacía */
+  .heroInner {
+    display: block !important;
+    width: min(1280px, 100%) !important;
+    margin: 0 auto !important;
+  }
+
+  .heroContent {
+    width: min(900px, 100%) !important;
+    max-width: 900px !important;
+    transform: translateY(18px);
+  }
+
+  .hero .eyebrow {
+    margin-bottom: .85rem !important;
+    letter-spacing: .28em !important;
+  }
+
+  .heroContent h1 {
+    width: max-content !important;
+    max-width: none !important;
+    white-space: nowrap !important;
+    font-size: clamp(3.6rem, 5vw, 5.5rem) !important;
+    line-height: .94 !important;
+    letter-spacing: -.055em !important;
+  }
+
+  .heroContent p {
+    max-width: 620px !important;
+    margin-top: 1rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .hero .actions {
+    margin-top: 1.4rem !important;
+  }
+}
+
+/* En móvil sí permitimos que el título se adapte */
+@media (max-width: 900px) {
+  .heroContent h1 {
+    width: auto !important;
+    white-space: normal !important;
+  }
+}
+
+
 /* === ALIMENTOS Y BEBIDAS TITLE ONE LINE FINAL === */
 @media (min-width: 901px) {
   .page > .hero .heroContent {
@@ -9983,6 +10091,1274 @@ a.primaryBtn:hover {
 }
 
 
+/* === AJUSTE FINAL HERO ALIMENTOS Y BEBIDAS === */
+@media (min-width: 901px) {
+  .page > .hero .heroContent {
+    transform: translateY(40px) !important;
+  }
+
+  .page > .hero .title {
+    font-size: clamp(3.2rem, 3.9vw, 4.5rem) !important;
+  }
+}
+
+
+/* === HERO ALIMENTOS: POSICIÓN VERTICAL FINAL === */
+@media (min-width: 901px) {
+  .page > .hero .heroContent {
+    transform: translateY(110px) !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin-bottom: .65rem !important;
+  }
+
+  .page > .hero .heroContent p {
+    margin-top: .7rem !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: 1.15rem !important;
+  }
+}
+
+
+/* === AJUSTE VISUAL FINAL HERO ALIMENTOS Y BEBIDAS === */
+@media (min-width: 901px) {
+  .page > .hero .heroContent {
+    transform: translateY(75px) !important;
+  }
+
+  .page > .hero .title {
+    font-size: clamp(3.1rem, 3.7vw, 4.35rem) !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 560px !important;
+  }
+}
+
+
+/* === HERO ALIMENTOS: POSICIÓN VERTICAL DEFINITIVA === */
+@media (min-width: 901px) {
+  .page > .hero .heroContent {
+    transform: translateY(115px) !important;
+  }
+}
+
+
+/* === HERO ALIMENTOS: RITMO ENTRE CONTENIDOS === */
+@media (min-width: 901px) {
+  .page > .hero .heroContent p {
+    margin-top: 1.25rem !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: .75rem !important;
+  }
+}
+
+
+/* === HERO ALIMENTOS: SUBTÍTULO MÁS ELEGANTE === */
+@media (min-width: 901px) {
+  .page > .hero .heroContent p {
+    font-weight: 500 !important;
+    color: rgba(255, 255, 255, .82) !important;
+  }
+}
+
+
+/* === ALIMENTOS Y BEBIDAS: SECCIONES FINAL === */
+
+/* El proceso ahora tiene cuatro pasos */
+@media (min-width: 901px) {
+  .page .processGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    max-width: 1080px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* Tablet: 2 x 2 */
+@media (min-width: 701px) and (max-width: 900px) {
+  .page .processGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Mobile: los servicios ya no se ocultan */
+@media (max-width: 900px) {
+  .page .services {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+}
+
+/* === END ALIMENTOS Y BEBIDAS: SECCIONES FINAL === */
+
+
+/* === ALIMENTOS: SERVICIOS MOBILE COMPACTOS FINAL === */
+.serviceGrid article > a {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.serviceGrid article > a > div {
+  min-width: 0;
+}
+
+.serviceGrid article > a > span {
+  font-size: 1.15rem;
+  opacity: .7;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.serviceGrid article:hover > a > span {
+  transform: translateX(4px);
+  opacity: 1;
+}
+
+@media (max-width: 700px) {
+  .page .services {
+    padding: 2.6rem 17px 2.8rem !important;
+  }
+
+  .page .services .sectionHead {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .page .services .sectionHead h2 {
+    max-width: 390px !important;
+    font-size: clamp(2rem, 8.5vw, 2.65rem) !important;
+    line-height: .96 !important;
+  }
+
+  .page .serviceGrid {
+    gap: 10px !important;
+  }
+
+  .page .serviceGrid article {
+    min-height: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page .serviceGrid article > a {
+    grid-template-columns: 42px 1fr 20px !important;
+    gap: .85rem !important;
+    padding: 1rem 1.05rem !important;
+  }
+
+  .page .serviceGrid i {
+    width: 40px !important;
+    height: 40px !important;
+    margin: 0 !important;
+  }
+
+  .page .serviceGrid i svg {
+    width: 21px !important;
+    height: 21px !important;
+  }
+
+  .page .serviceGrid h3 {
+    margin: 0 !important;
+    font-size: 1rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .page .serviceGrid p {
+    margin: .3rem 0 0 !important;
+    font-size: .82rem !important;
+    line-height: 1.4 !important;
+  }
+}
+
+
+/* === FIX REAL SERVICIOS MOBILE === */
+@media (max-width: 700px) {
+  .page .services {
+    padding: 2.8rem 18px 3rem !important;
+  }
+
+  .page .services .sectionHead {
+    max-width: 100% !important;
+    margin: 0 0 1.6rem !important;
+  }
+
+  .page .services .sectionHead h2 {
+    max-width: 360px !important;
+    font-size: clamp(2rem, 9vw, 2.7rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.045em !important;
+  }
+
+  .page .serviceGrid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .page .serviceGrid article {
+    width: 100% !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+
+  .page .serviceGrid article > a {
+    width: 100% !important;
+    min-height: 96px !important;
+    padding: 1rem !important;
+
+    display: flex !important;
+    align-items: center !important;
+    gap: .9rem !important;
+
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  .page .serviceGrid article > a > i {
+    flex: 0 0 42px !important;
+    width: 42px !important;
+    height: 42px !important;
+    margin: 0 !important;
+  }
+
+  .page .serviceGrid article > a > div {
+    flex: 1 1 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+
+  .page .serviceGrid article > a > div h3 {
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+
+    font-size: 1rem !important;
+    line-height: 1.18 !important;
+    text-align: left !important;
+  }
+
+  .page .serviceGrid article > a > div p {
+    width: auto !important;
+    max-width: none !important;
+    margin: .35rem 0 0 !important;
+
+    font-size: .82rem !important;
+    line-height: 1.42 !important;
+    text-align: left !important;
+  }
+
+  .page .serviceGrid article > a > span {
+    flex: 0 0 18px !important;
+    width: 18px !important;
+    margin-left: auto !important;
+  }
+}
+
+
+/* === SERVICIOS MOBILE: LISTA COMPACTA DEFINITIVA === */
+@media (max-width: 700px) {
+  .page .services {
+    padding: 2.2rem 18px 2.5rem !important;
+  }
+
+  .page .services .sectionHead {
+    margin: 0 0 1.25rem !important;
+  }
+
+  .page .services .sectionHead h2 {
+    max-width: 330px !important;
+    font-size: clamp(2rem, 8vw, 2.5rem) !important;
+    line-height: .96 !important;
+  }
+
+  .page .serviceGrid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  .page .serviceGrid article {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 0 !important;
+  }
+
+  .page .serviceGrid article > a {
+    min-height: 68px !important;
+    padding: .75rem 1rem !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: .85rem !important;
+  }
+
+  .page .serviceGrid article > a > i {
+    flex: 0 0 38px !important;
+    width: 38px !important;
+    height: 38px !important;
+    margin: 0 !important;
+  }
+
+  .page .serviceGrid article > a > div {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+  }
+
+  .page .serviceGrid article h3 {
+    margin: 0 !important;
+    font-size: .98rem !important;
+    line-height: 1.15 !important;
+  }
+
+  /* En mobile la tarjeta navega: no necesitamos repetir la descripción */
+  .page .serviceGrid article p {
+    display: none !important;
+  }
+
+  .page .serviceGrid article > a > span {
+    flex: 0 0 auto !important;
+    margin-left: auto !important;
+  }
+}
+
+
+
+
+/* === SERVICIOS MOBILE TITLE SIZE ONLY === */
+@media (max-width: 900px) {
+  .page .services .sectionHead h2 {
+    font-size: clamp(1.9rem, 8.2vw, 2.35rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.055em !important;
+    max-width: 330px !important;
+  }
+}
+
+/* === FIX ÚNICO: TÍTULO SERVICIOS MOBILE === */
+@media (max-width: 900px) {
+  .page .services .sectionHead h2 {
+    font-size: clamp(1.9rem, 8.2vw, 2.35rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.055em !important;
+    font-weight: 950 !important;
+    max-width: 330px !important;
+  }
+}
+
+/* === FIX REAL ÚNICAMENTE TÍTULO SERVICIOS MOBILE === */
+@media (max-width: 900px) {
+  .page .services .sectionHead h2 {
+    font-size: 22.08px !important;
+    line-height: 22.5216px !important;
+    max-width: 285px !important;
+  }
+}
+
+/* === PROCESO MOBILE: LISTA LIMPIA FINAL === */
+@media (max-width: 700px) {
+
+  .page .processGrid {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  .page .processGrid > article {
+    display: grid !important;
+    grid-template-columns: 48px minmax(0, 1fr) !important;
+    grid-template-areas:
+      "number title"
+      "number text" !important;
+
+    column-gap: 1rem !important;
+    row-gap: .35rem !important;
+
+    width: 100% !important;
+    min-height: 0 !important;
+    padding: 1.25rem 0 !important;
+    margin: 0 !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    border-top: 1px solid rgba(7, 17, 29, .13) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .page .processGrid > article:last-child {
+    border-bottom: 1px solid rgba(7, 17, 29, .13) !important;
+  }
+
+  /* Número: único indicador visual del paso */
+  .page .processGrid > article > strong {
+    grid-area: number !important;
+
+    width: 40px !important;
+    height: 40px !important;
+    margin: 0 !important;
+
+    display: grid !important;
+    place-items: center !important;
+    align-self: start !important;
+
+    background: #0d1c2b !important;
+    color: #fff !important;
+    border-radius: 999px !important;
+
+    font-size: .78rem !important;
+    font-weight: 900 !important;
+    box-shadow: none !important;
+  }
+
+  /* En mobile el icono sobra: el número ya marca el proceso */
+  .page .processGrid > article > i {
+    display: none !important;
+  }
+
+  .page .processGrid > article > h3 {
+    grid-area: title !important;
+
+    margin: .05rem 0 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+
+    font-size: 1.02rem !important;
+    line-height: 1.15 !important;
+    letter-spacing: -.025em !important;
+    text-align: left !important;
+  }
+
+  .page .processGrid > article > p {
+    grid-area: text !important;
+
+    display: block !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+
+    font-size: .84rem !important;
+    line-height: 1.5 !important;
+    text-align: left !important;
+    color: rgba(7, 17, 29, .64) !important;
+  }
+}
+
+/* === PROCESO MOBILE: LIMPIEZA VISUAL FINAL === */
+@media (max-width: 700px) {
+
+  /* Números visibles */
+  .page .processGrid > article > strong {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+  }
+
+  /* Quitar la rayita antes de cada título */
+  .page .processGrid > article > h3 {
+    border-left: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .page .processGrid > article > h3::before,
+  .page .processGrid > article > h3::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  /* Un poco más compacto */
+  .page .processGrid > article {
+    padding-top: 1.05rem !important;
+    padding-bottom: 1.05rem !important;
+  }
+}
+
+/* ============================================================
+   SECTOR LEAD FINAL — ÚNICA VERSIÓN
+   ============================================================ */
+
+.sectorLead {
+  width: 100%;
+  padding: clamp(3.5rem, 6vw, 5.5rem) 0;
+  background: #f1eee8;
+}
+
+.sectorLeadInner {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns:
+    minmax(0, .84fr)
+    minmax(520px, 1.16fr);
+
+  overflow: hidden;
+  border-radius: 28px;
+
+  background: #fff;
+
+  box-shadow:
+    0 32px 90px rgba(7, 19, 30, .16);
+}
+
+
+/* ============================================================
+   PANEL IZQUIERDO CON FOTO REAL
+   ============================================================ */
+
+.sectorLeadCopy {
+  position: relative;
+  min-width: 0;
+  min-height: 620px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+  isolation: isolate;
+
+  background: #071522;
+}
+
+
+/* Contenedor físico de la imagen */
+
+.sectorLeadMedia {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  overflow: hidden;
+}
+
+
+/* Next Image real */
+
+.sectorLeadOperatorImage {
+  object-fit: cover !important;
+  object-position: 72% center !important;
+
+  filter:
+    brightness(.76)
+    contrast(1.06)
+    saturate(.92);
+}
+
+
+/* Overlay separado.
+   Izquierda oscura para texto;
+   derecha más transparente para ver al operador. */
+
+.sectorLeadMedia::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 15, 25, .92) 0%,
+      rgba(5, 20, 32, .78) 42%,
+      rgba(5, 23, 36, .36) 70%,
+      rgba(5, 23, 36, .16) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* Texto */
+
+.sectorLeadCopyContent {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  padding:
+    clamp(3rem, 5vw, 5rem)
+    clamp(2.3rem, 4vw, 4rem);
+}
+
+.sectorLeadCopyContent h2 {
+  max-width: 500px;
+  margin: 0;
+
+  color: #fff;
+
+  font-size:
+    clamp(2.7rem, 4vw, 4.45rem);
+
+  line-height: .95;
+  letter-spacing: -.065em;
+  font-weight: 950;
+
+  text-wrap: balance;
+}
+
+.sectorLeadCopyContent h2::after {
+  content: ".";
+  color: #d8ab62;
+}
+
+.sectorLeadCopyContent p {
+  max-width: 430px;
+  margin: 1.35rem 0 0;
+
+  color: rgba(255, 255, 255, .82);
+
+  font-size: .98rem;
+  line-height: 1.65;
+}
+
+
+/* ============================================================
+   FORMULARIO
+   ============================================================ */
+
+.sectorLeadForm {
+  width: 100%;
+  min-width: 0;
+
+  display: grid;
+  align-content: center;
+  gap: .9rem;
+
+  padding:
+    clamp(2.2rem, 4vw, 3.5rem);
+
+  background: #fff;
+}
+
+.sectorLeadFormTitle {
+  margin: 0 0 .8rem;
+
+  color: #07131e;
+
+  font-size:
+    clamp(1.8rem, 2.5vw, 2.55rem);
+
+  line-height: 1;
+  letter-spacing: -.045em;
+  font-weight: 950;
+}
+
+
+.sectorLeadTwoCols {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: .85rem;
+}
+
+
+.sectorLeadControl {
+  width: 100%;
+  min-width: 0;
+  min-height: 52px;
+
+  padding: .95rem 1rem;
+
+  border: 1px solid transparent;
+  border-radius: 16px;
+  outline: 0;
+
+  background: #f0ede7;
+
+  color: #080b10;
+  -webkit-text-fill-color: #080b10;
+
+  font: inherit;
+  font-size: .94rem;
+  font-weight: 700;
+
+  box-sizing: border-box;
+}
+
+.sectorLeadControl::placeholder {
+  color: rgba(8, 11, 16, .52);
+  -webkit-text-fill-color:
+    rgba(8, 11, 16, .52);
+}
+
+.sectorLeadControl:focus {
+  background: #f5f2ed;
+
+  border-color:
+    rgba(23, 50, 71, .25);
+
+  box-shadow:
+    0 0 0 3px rgba(23, 50, 71, .07);
+}
+
+
+.sectorLeadMessage {
+  min-height: 135px;
+  resize: vertical;
+}
+
+
+.sectorLeadLegal {
+  margin: .15rem 0 0;
+
+  color: rgba(8, 11, 16, .56);
+
+  font-size: .76rem;
+  line-height: 1.5;
+}
+
+
+.sectorLeadCheck {
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  gap: .65rem;
+  align-items: start;
+
+  color: rgba(8, 11, 16, .68);
+
+  font-size: .83rem;
+  line-height: 1.4;
+}
+
+.sectorLeadCheck input {
+  width: 18px;
+  height: 18px;
+
+  margin-top: .12rem;
+
+  accent-color: #173247;
+}
+
+
+.sectorLeadSubmit {
+  width: 100%;
+  min-height: 56px;
+
+  margin-top: .3rem;
+  padding: 0 1.35rem;
+
+  border:
+    1px solid rgba(216, 171, 98, .42);
+
+  border-radius: 999px;
+
+  background: #123149;
+  color: #fff;
+
+  cursor: pointer;
+
+  font-size: .76rem;
+  font-weight: 950;
+  letter-spacing: .045em;
+
+  text-transform: uppercase;
+
+  box-shadow:
+    0 18px 42px rgba(18, 49, 73, .24);
+
+  transition:
+    transform .2s ease,
+    background .2s ease;
+}
+
+.sectorLeadSubmit:hover {
+  transform: translateY(-2px);
+  background: #1a4563;
+}
+
+.sectorLeadSubmit:disabled {
+  opacity: .65;
+  cursor: wait;
+  transform: none;
+}
+
+
+.sectorLeadSuccess,
+.sectorLeadError {
+  margin: .4rem 0 0;
+
+  font-size: .84rem;
+  font-weight: 800;
+}
+
+.sectorLeadSuccess {
+  color: #08763b;
+}
+
+.sectorLeadError {
+  color: #b40032;
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1000px) {
+
+  .sectorLeadInner {
+    max-width: 760px;
+
+    grid-template-columns: 1fr;
+  }
+
+  .sectorLeadCopy {
+    min-height: 440px;
+  }
+
+  .sectorLeadOperatorImage {
+    object-position: 70% center !important;
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+  .sectorLead {
+    padding: 2.5rem 0;
+  }
+
+  .sectorLeadInner {
+    width: calc(100% - 28px);
+
+    border-radius: 20px;
+  }
+
+  .sectorLeadCopy {
+    min-height: 390px;
+  }
+
+  .sectorLeadOperatorImage {
+    object-position: 68% center !important;
+  }
+
+  .sectorLeadMedia::after {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(4, 15, 25, .90) 0%,
+        rgba(5, 20, 32, .64) 62%,
+        rgba(5, 23, 36, .24) 100%
+      );
+  }
+
+  .sectorLeadCopyContent {
+    padding: 2.4rem 1.5rem;
+  }
+
+  .sectorLeadCopyContent h2 {
+    max-width: 340px;
+
+    font-size:
+      clamp(2rem, 10vw, 2.85rem);
+  }
+
+  .sectorLeadCopyContent p {
+    max-width: 330px;
+
+    font-size: .88rem;
+  }
+
+  .sectorLeadForm {
+    padding: 1.4rem 1rem 1.6rem;
+  }
+
+  .sectorLeadFormTitle {
+    font-size: 1.9rem;
+  }
+
+  .sectorLeadTwoCols {
+    grid-template-columns: 1fr;
+    gap: .78rem;
+  }
+
+  .sectorLeadControl {
+    min-height: 50px;
+
+    padding: .9rem .95rem;
+
+    font-size: .9rem;
+  }
+
+  .sectorLeadMessage {
+    min-height: 120px;
+  }
+
+  .sectorLeadLegal {
+    font-size: .7rem;
+  }
+
+  .sectorLeadCheck {
+    font-size: .76rem;
+  }
+
+  .sectorLeadSubmit {
+    min-height: 52px;
+  }
+
+}
+
+/* === ENCUADRE FINAL FOTO OPERADOR === */
+.sectorLeadOperatorImage {
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+/* === FORMULARIO FINAL: MENOS ESPACIO VERTICAL === */
+.sectorLead {
+  padding-top: 2.4rem !important;
+  padding-bottom: 2.4rem !important;
+}
+
+@media (max-width: 700px) {
+  .sectorLead {
+    padding-top: 1.6rem !important;
+    padding-bottom: 1.6rem !important;
+  }
+}
+
+/* === EXPERTOS EN EL SECTOR: DORADO === */
+.overview .eyebrow {
+  color: #d8ab62 !important;
+}
+
+/* === EYEBROWS SECCIONES: DORADO UNIFICADO === */
+.page .overview .eyebrow,
+.page .services .eyebrow {
+  color: #d8ab62 !important;
+  -webkit-text-fill-color: #d8ab62 !important;
+}
+
+
+/* =========================================================
+   FINAL SERVICES SYSTEM
+   MISMA ESTRUCTURA EN TODOS LOS TAMAÑOS
+   ========================================================= */
+
+/* Quitar TODAS las flechas falsas heredadas.
+   La única flecha será el <span> real dentro del Link. */
+.serviceGrid article::before,
+.serviceGrid article::after,
+.serviceGrid article > a::before,
+.serviceGrid article > a::after {
+  content: none !important;
+  display: none !important;
+}
+
+
+/* =========================================================
+   BASE — TODOS LOS TAMAÑOS
+   ========================================================= */
+
+.services .serviceGrid {
+  display: grid !important;
+  width: 100% !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.services .serviceGrid article {
+  position: relative !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+
+  text-align: left !important;
+
+  border: 1px solid rgba(255, 255, 255, .22) !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, .13),
+      rgba(8, 20, 29, .24)
+    ) !important;
+
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .08) !important;
+}
+
+.services .serviceGrid article > a {
+  width: 100% !important;
+  height: 100% !important;
+
+  display: grid !important;
+  grid-template-columns: 52px minmax(0, 1fr) auto !important;
+  align-items: center !important;
+
+  gap: 1rem !important;
+
+  padding: 1.35rem 1.45rem !important;
+
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.services .serviceGrid article > a > i {
+  grid-column: 1 !important;
+
+  width: 46px !important;
+  height: 46px !important;
+
+  display: grid !important;
+  place-items: center !important;
+
+  margin: 0 !important;
+
+  flex-shrink: 0 !important;
+
+  color: #d8ab62 !important;
+
+  border: 1px solid rgba(216, 171, 98, .48) !important;
+  border-radius: 999px !important;
+
+  background: rgba(5, 28, 43, .92) !important;
+}
+
+.services .serviceGrid article > a > i svg {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.services .serviceGrid article > a > div {
+  min-width: 0 !important;
+}
+
+.services .serviceGrid article h3 {
+  width: auto !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+
+  color: #fff !important;
+
+  font-size: 1.08rem !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.025em !important;
+  font-weight: 900 !important;
+
+  text-align: left !important;
+}
+
+.services .serviceGrid article p {
+  max-width: 300px !important;
+
+  margin: .55rem 0 0 !important;
+
+  color: rgba(255, 255, 255, .76) !important;
+
+  font-size: .84rem !important;
+  line-height: 1.5 !important;
+
+  text-align: left !important;
+}
+
+.services .serviceGrid article > a > span {
+  grid-column: 3 !important;
+
+  display: block !important;
+
+  margin: 0 !important;
+
+  color: rgba(255, 255, 255, .88) !important;
+
+  font-size: 1.35rem !important;
+  line-height: 1 !important;
+  font-weight: 300 !important;
+
+  transform: none !important;
+}
+
+.services .serviceGrid article:hover {
+  border-color: rgba(216, 171, 98, .42) !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, .18),
+      rgba(8, 20, 29, .34)
+    ) !important;
+}
+
+
+/* =========================================================
+   DESKTOP GRANDE
+   3 x 2
+   ========================================================= */
+
+@media (min-width: 1181px) {
+
+  .services .serviceGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+  }
+
+  .services .serviceGrid article {
+    min-height: 165px !important;
+  }
+
+  .services .serviceGrid article > a {
+    min-height: 165px !important;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP / TABLET HORIZONTAL
+   2 COLUMNAS
+   ========================================================= */
+
+@media (min-width: 701px) and (max-width: 1180px) {
+
+  .services .serviceGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+
+  .services .serviceGrid article {
+    min-height: 145px !important;
+  }
+
+  .services .serviceGrid article > a {
+    min-height: 145px !important;
+
+    grid-template-columns: 50px minmax(0, 1fr) auto !important;
+
+    padding: 1.25rem 1.3rem !important;
+  }
+
+  .services .serviceGrid article h3 {
+    font-size: 1.02rem !important;
+  }
+
+  .services .serviceGrid article p {
+    font-size: .8rem !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   IGUAL A ALIMENTOS Y BEBIDAS
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .services .serviceGrid {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  .services .serviceGrid article {
+    min-height: 88px !important;
+  }
+
+  .services .serviceGrid article > a {
+    min-height: 88px !important;
+
+    grid-template-columns: 48px minmax(0, 1fr) 24px !important;
+
+    gap: .8rem !important;
+
+    padding: .9rem 1rem !important;
+  }
+
+  .services .serviceGrid article > a > i {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .services .serviceGrid article > a > i svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  .services .serviceGrid article h3 {
+    font-size: 1rem !important;
+    line-height: 1.08 !important;
+  }
+
+  /* En mobile queda limpio como Alimentos */
+  .services .serviceGrid article p {
+    display: none !important;
+  }
+
+  .services .serviceGrid article > a > span {
+    justify-self: end !important;
+
+    font-size: 1.2rem !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE PEQUEÑO
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+  .services .serviceGrid article {
+    min-height: 82px !important;
+  }
+
+  .services .serviceGrid article > a {
+    min-height: 82px !important;
+
+    grid-template-columns: 44px minmax(0, 1fr) 20px !important;
+
+    gap: .7rem !important;
+
+    padding: .8rem .85rem !important;
+  }
+
+  .services .serviceGrid article > a > i {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .services .serviceGrid article > a > i svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .services .serviceGrid article h3 {
+    font-size: .92rem !important;
+  }
+
+  .services .serviceGrid article > a > span {
+    font-size: 1.05rem !important;
+  }
+}
+
+
+/* === /FINAL SERVICES SYSTEM === */
+
+
+
 /* === SECTOR SERVICES EYEBROW — GLOBAL CONSISTENCY === */
 .services .sectionHead .eyebrow,
 .services > .sectionHead > .eyebrow {
@@ -9990,6 +11366,221 @@ a.primaryBtn:hover {
   -webkit-text-fill-color: #d8ab62 !important;
 }
 /* === /SECTOR SERVICES EYEBROW === */
+
+
+/* === SECTOR HERO EXACT SYNC START === */
+
+/*
+  HERO sincronizado automáticamente con:
+  sectores/alimentacion-bebidas/Sector.module.css
+
+  Se conserva:
+  - texto propio del sector
+  - imagen propia del sector
+  - contenido propio del sector
+*/
+
+/* === HERO ALIMENTOS Y BEBIDAS: COMPOSICIÓN FINAL DESKTOP === */
+@media (min-width: 901px) {
+  .hero {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  /* La tarjeta derecha ya no existe: eliminamos la columna vacía */
+  .heroInner {
+    display: block !important;
+    width: min(1280px, 100%) !important;
+    margin: 0 auto !important;
+  }
+
+  .heroContent {
+    width: min(900px, 100%) !important;
+    max-width: 900px !important;
+    transform: translateY(18px);
+  }
+
+  .hero .eyebrow {
+    margin-bottom: .85rem !important;
+    letter-spacing: .28em !important;
+  }
+
+  .heroContent h1 {
+    width: max-content !important;
+    max-width: none !important;
+    white-space: nowrap !important;
+    font-size: clamp(3.6rem, 5vw, 5.5rem) !important;
+    line-height: .94 !important;
+    letter-spacing: -.055em !important;
+  }
+
+  .heroContent p {
+    max-width: 620px !important;
+    margin-top: 1rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .hero .actions {
+    margin-top: 1.4rem !important;
+  }
+}
+
+/* En móvil sí permitimos que el título se adapte */
+@media (max-width: 900px) {
+  .heroContent h1 {
+    width: auto !important;
+    white-space: normal !important;
+  }
+}
+
+
+/* === HERO ALIMENTOS Y BEBIDAS: COMPOSICIÓN FINAL DESKTOP === */
+@media (min-width: 901px) {
+  .hero {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  /* La tarjeta derecha ya no existe: eliminamos la columna vacía */
+  .heroInner {
+    display: block !important;
+    width: min(1280px, 100%) !important;
+    margin: 0 auto !important;
+  }
+
+  .heroContent {
+    width: min(900px, 100%) !important;
+    max-width: 900px !important;
+    transform: translateY(18px);
+  }
+
+  .hero .eyebrow {
+    margin-bottom: .85rem !important;
+    letter-spacing: .28em !important;
+  }
+
+  .heroContent h1 {
+    width: max-content !important;
+    max-width: none !important;
+    white-space: nowrap !important;
+    font-size: clamp(3.6rem, 5vw, 5.5rem) !important;
+    line-height: .94 !important;
+    letter-spacing: -.055em !important;
+  }
+
+  .heroContent p {
+    max-width: 620px !important;
+    margin-top: 1rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .hero .actions {
+    margin-top: 1.4rem !important;
+  }
+}
+
+/* En móvil sí permitimos que el título se adapte */
+@media (max-width: 900px) {
+  .heroContent h1 {
+    width: auto !important;
+    white-space: normal !important;
+  }
+}
+
+
+/* === ALIMENTOS Y BEBIDAS TITLE ONE LINE FINAL === */
+@media (min-width: 901px) {
+  .page > .hero .heroContent {
+    width: auto !important;
+    max-width: none !important;
+  }
+
+  .page > .hero .title {
+    width: max-content !important;
+    max-width: none !important;
+    white-space: nowrap !important;
+    text-wrap: nowrap !important;
+    font-size: clamp(3.4rem, 4.2vw, 4.8rem) !important;
+  }
+}
+
+
+/* === AJUSTE FINAL HERO ALIMENTOS Y BEBIDAS === */
+@media (min-width: 901px) {
+  .page > .hero .heroContent {
+    transform: translateY(40px) !important;
+  }
+
+  .page > .hero .title {
+    font-size: clamp(3.2rem, 3.9vw, 4.5rem) !important;
+  }
+}
+
+
+/* === HERO ALIMENTOS: POSICIÓN VERTICAL FINAL === */
+@media (min-width: 901px) {
+  .page > .hero .heroContent {
+    transform: translateY(110px) !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin-bottom: .65rem !important;
+  }
+
+  .page > .hero .heroContent p {
+    margin-top: .7rem !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: 1.15rem !important;
+  }
+}
+
+
+/* === AJUSTE VISUAL FINAL HERO ALIMENTOS Y BEBIDAS === */
+@media (min-width: 901px) {
+  .page > .hero .heroContent {
+    transform: translateY(75px) !important;
+  }
+
+  .page > .hero .title {
+    font-size: clamp(3.1rem, 3.7vw, 4.35rem) !important;
+  }
+
+  .page > .hero .heroContent p {
+    max-width: 560px !important;
+  }
+}
+
+
+/* === HERO ALIMENTOS: POSICIÓN VERTICAL DEFINITIVA === */
+@media (min-width: 901px) {
+  .page > .hero .heroContent {
+    transform: translateY(115px) !important;
+  }
+}
+
+
+/* === HERO ALIMENTOS: RITMO ENTRE CONTENIDOS === */
+@media (min-width: 901px) {
+  .page > .hero .heroContent p {
+    margin-top: 1.25rem !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: .75rem !important;
+  }
+}
+
+
+/* === HERO ALIMENTOS: SUBTÍTULO MÁS ELEGANTE === */
+@media (min-width: 901px) {
+  .page > .hero .heroContent p {
+    font-weight: 500 !important;
+    color: rgba(255, 255, 255, .82) !important;
+  }
+}
+
 
 /* === SECTOR HERO POSITION STANDARD === */
 
@@ -10187,3 +11778,57 @@ a.primaryBtn:hover {
 }
 
 /* === /SECTOR HERO POSITION STANDARD === */
+
+/* === SECTOR HERO EXACT SYNC END === */
+
+/* === SECTOR OVERVIEW EYEBROW GOLD === */
+.overview .eyebrow {
+  color: #d8ab62 !important;
+}
+/* === /SECTOR OVERVIEW EYEBROW GOLD === */
+
+/* === OVERVIEW EYEBROW GOLD FINAL === */
+.page .overview .overviewCopy .eyebrow,
+.page .overview .eyebrow,
+.page .overviewCopy .eyebrow,
+.page .overview [class*="eyebrow"],
+.page .overviewCopy [class*="eyebrow"] {
+  color: #c7a96b !important;
+  -webkit-text-fill-color: #c7a96b !important;
+  text-shadow: none !important;
+  background: transparent !important;
+  background-image: none !important;
+}
+/* === /OVERVIEW EYEBROW GOLD FINAL === */
+
+/* === SECTOR OVERVIEW CTA STANDARD FINAL === */
+
+/* CTA igual a Alimentos y Bebidas */
+.overviewCopy a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  min-height: 48px !important;
+  margin-top: 1.8rem !important;
+  padding: 0 1.25rem !important;
+
+  background: #173247 !important;
+  color: #ffffff !important;
+
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+
+  font-size: .78rem !important;
+  font-weight: 950 !important;
+  letter-spacing: .03em !important;
+
+  box-shadow: 0 18px 42px rgba(23, 50, 71, .28) !important;
+}
+
+.overviewCopy a::after {
+  content: "→" !important;
+  margin-left: .7rem !important;
+}
+
+/* === /SECTOR OVERVIEW CTA STANDARD FINAL === */
