@@ -9981,3 +9981,476 @@
 
 /* === /ACROSS DESKTOP HERO TYPO FIX === */
 
+/* === HERO SECTOR REFERENCE FIX START === */
+
+/*
+  Igualación real con el hero de Alimentos y Bebidas.
+  La trustBar está fuera del hero, no dentro.
+*/
+
+.page > .hero {
+  position: relative !important;
+  width: 100% !important;
+
+  height: calc(100svh - 86px) !important;
+  min-height: 750px !important;
+  max-height: 850px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: block !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+
+  background: #05070b !important;
+  color: #fff !important;
+}
+
+/* Imagen cubriendo todo el hero, igual que la referencia */
+.page > .hero .heroImage {
+  position: absolute !important;
+  inset: 0 !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  object-fit: cover !important;
+  object-position: center center !important;
+
+  transform: none !important;
+  filter: brightness(.92) contrast(1.06) saturate(1.06) !important;
+
+  z-index: -3 !important;
+}
+
+/* Oscuridad solamente donde debe leerse el texto */
+.page > .hero .heroOverlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -2 !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2, 5, 10, .94) 0%,
+      rgba(2, 5, 10, .78) 28%,
+      rgba(2, 5, 10, .44) 52%,
+      rgba(2, 5, 10, .16) 78%,
+      rgba(2, 5, 10, .12) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, .08) 0%,
+      rgba(0, 0, 0, .18) 56%,
+      rgba(0, 0, 0, .52) 100%
+    ) !important;
+}
+
+/* Posición exacta del bloque, sin centrarlo verticalmente */
+.page > .hero .heroInner {
+  position: absolute !important;
+
+  top: clamp(175px, 21vh, 215px) !important;
+  left: max(6.6vw, calc((100vw - 1460px) / 2)) !important;
+  right: auto !important;
+  bottom: auto !important;
+
+  z-index: 5 !important;
+
+  width: min(820px, 58vw) !important;
+  max-width: 820px !important;
+  height: auto !important;
+  min-height: 0 !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: block !important;
+  transform: none !important;
+}
+
+/* Ancho suficiente para no convertir el título en una torre */
+.page > .hero .heroContent {
+  width: 100% !important;
+  max-width: 820px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  text-align: left !important;
+  transform: none !important;
+}
+
+/* Sin tarjeta lateral */
+.page > .hero .operationCard {
+  display: none !important;
+}
+
+/* Volanta */
+.page > .hero .eyebrow {
+  display: inline-flex !important;
+
+  margin: 0 0 .85rem !important;
+  padding: 0 !important;
+
+  color: #d7b46a !important;
+  -webkit-text-fill-color: #d7b46a !important;
+
+  font-size: .72rem !important;
+  line-height: 1 !important;
+  font-weight: 950 !important;
+  letter-spacing: .20em !important;
+  text-transform: uppercase !important;
+}
+
+/* Título: mismo peso visual que Alimentos y Bebidas, no monstruoso */
+.page > .hero .title,
+.page > .hero .heroContent h1 {
+  width: 100% !important;
+  max-width: 820px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  color: #f5f1e8 !important;
+  -webkit-text-fill-color: #f5f1e8 !important;
+
+  font-size: clamp(3.25rem, 3.8vw, 4rem) !important;
+  line-height: .95 !important;
+  letter-spacing: -.055em !important;
+  font-weight: 950 !important;
+
+  white-space: normal !important;
+  text-wrap: balance !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  hyphens: none !important;
+
+  transform: none !important;
+}
+
+/* Quita puntos/decoraciones añadidos por CSS viejo */
+.page > .hero .title::after,
+.page > .hero .heroContent h1::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Texto descriptivo */
+.page > .hero .subtitle,
+.page > .hero .heroContent > p {
+  width: 100% !important;
+  max-width: 610px !important;
+
+  margin: 1rem 0 0 !important;
+  padding: 0 !important;
+
+  color: rgba(255, 255, 255, .88) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, .88) !important;
+
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+  font-weight: 500 !important;
+
+  transform: none !important;
+}
+
+/* Botones en línea como en la referencia */
+.page > .hero .actions {
+  width: auto !important;
+  max-width: none !important;
+
+  margin: 1.05rem 0 0 !important;
+  padding: 0 !important;
+
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+
+  gap: .8rem !important;
+  transform: none !important;
+}
+
+.page > .hero .actions a,
+.page > .hero .primaryBtn,
+.page > .hero .secondaryBtn {
+  width: auto !important;
+  min-width: 0 !important;
+  min-height: 46px !important;
+
+  padding: 0 1.35rem !important;
+
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  border-radius: 999px !important;
+
+  font-size: .65rem !important;
+  line-height: 1 !important;
+  letter-spacing: .04em !important;
+  font-weight: 950 !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+}
+
+/* Los dos botones deben verse */
+.page > .hero .actions a:nth-child(2) {
+  display: inline-flex !important;
+}
+
+/*
+  Barra inferior REAL.
+  Es hermana del hero dentro de .page, no hija del hero.
+*/
+.page > .trustBar {
+  position: relative !important;
+
+  width: 100% !important;
+  height: 86px !important;
+  min-height: 86px !important;
+  max-height: 86px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 0 !important;
+
+  background: #080d13 !important;
+  border-top: 1px solid rgba(255, 255, 255, .10) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, .08) !important;
+
+  overflow: hidden !important;
+}
+
+.page > .trustBar > div {
+  width: auto !important;
+  height: 86px !important;
+  min-height: 86px !important;
+
+  margin: 0 !important;
+  padding: 1rem 2rem !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: .8rem !important;
+
+  border-right: 1px solid rgba(255, 255, 255, .12) !important;
+}
+
+.page > .trustBar > div:last-child {
+  border-right: 0 !important;
+}
+
+/* Desktop */
+@media (min-width: 901px) {
+  .page > .hero .heroImageDesktop {
+    display: block !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: none !important;
+  }
+}
+
+/* Notebook bajo: mantiene todo dentro del primer pantallazo */
+@media (min-width: 901px) and (max-height: 850px) {
+  .page > .hero {
+    height: 680px !important;
+    min-height: 680px !important;
+    max-height: 680px !important;
+  }
+
+  .page > .hero .heroInner {
+    top: 150px !important;
+  }
+
+  .page > .hero .title,
+  .page > .hero .heroContent h1 {
+    font-size: clamp(3rem, 3.55vw, 3.75rem) !important;
+  }
+
+  .page > .hero .subtitle,
+  .page > .hero .heroContent > p {
+    margin-top: .85rem !important;
+    font-size: .94rem !important;
+  }
+
+  .page > .hero .actions {
+    margin-top: .9rem !important;
+  }
+}
+
+/* Tablet y móvil */
+@media (max-width: 900px) {
+  .page > .hero {
+    height: auto !important;
+    min-height: 620px !important;
+    max-height: none !important;
+  }
+
+  .page > .hero .heroImageDesktop {
+    display: none !important;
+  }
+
+  .page > .hero .heroImageMobile {
+    display: block !important;
+  }
+
+  .page > .hero .heroInner {
+    position: relative !important;
+
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 620px !important;
+
+    padding:
+      calc(env(safe-area-inset-top) + 8rem)
+      1.35rem
+      3rem !important;
+
+    display: flex !important;
+    align-items: flex-start !important;
+  }
+
+  .page > .hero .heroContent {
+    width: 100% !important;
+    max-width: 430px !important;
+  }
+
+  .page > .hero .title,
+  .page > .hero .heroContent h1 {
+    max-width: 390px !important;
+
+    font-size: clamp(2.35rem, 10vw, 3.25rem) !important;
+    line-height: .94 !important;
+    letter-spacing: -.05em !important;
+  }
+
+  .page > .hero .subtitle,
+  .page > .hero .heroContent > p {
+    max-width: 390px !important;
+
+    margin-top: .85rem !important;
+
+    font-size: .9rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .page > .hero .actions {
+    max-width: 390px !important;
+    margin-top: 1rem !important;
+  }
+
+  .page > .hero .actions a,
+  .page > .hero .primaryBtn,
+  .page > .hero .secondaryBtn {
+    min-height: 44px !important;
+    padding: 0 1rem !important;
+    font-size: .61rem !important;
+  }
+
+  .page > .trustBar {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .page > .trustBar > div {
+    height: 72px !important;
+    min-height: 72px !important;
+    padding: .7rem 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .page > .hero {
+    min-height: 590px !important;
+  }
+
+  .page > .hero .heroInner {
+    min-height: 590px !important;
+
+    padding:
+      calc(env(safe-area-inset-top) + 7.2rem)
+      1.1rem
+      2.4rem !important;
+  }
+
+  .page > .hero .eyebrow {
+    margin-bottom: .65rem !important;
+    font-size: .58rem !important;
+  }
+
+  .page > .hero .title,
+  .page > .hero .heroContent h1 {
+    max-width: 340px !important;
+
+    font-size: clamp(2.1rem, 10.6vw, 2.8rem) !important;
+    line-height: .95 !important;
+  }
+
+  .page > .hero .subtitle,
+  .page > .hero .heroContent > p {
+    max-width: 345px !important;
+    font-size: .84rem !important;
+  }
+
+  .page > .hero .actions {
+    max-width: 345px !important;
+    gap: .55rem !important;
+  }
+
+  .page > .hero .actions a,
+  .page > .hero .primaryBtn,
+  .page > .hero .secondaryBtn {
+    min-height: 42px !important;
+    padding: 0 .85rem !important;
+    font-size: .56rem !important;
+  }
+
+  .page > .trustBar > div {
+    padding: .65rem .75rem !important;
+  }
+}
+
+/* === HERO SECTOR REFERENCE FIX END === */
+
+/* === AJUSTE FINAL: HERO SOSTENIBILIDAD A LA IZQUIERDA === */
+
+@media (min-width: 901px) {
+  .hero .heroInner {
+    left: 6.6vw !important;
+    right: auto !important;
+    width: min(820px, 58vw) !important;
+    max-width: 820px !important;
+    margin: 0 !important;
+  }
+
+  .hero .heroContent {
+    margin: 0 !important;
+    max-width: 820px !important;
+  }
+}
+
+/* Pantallas muy anchas: mantener alineación con el resto del sitio */
+@media (min-width: 1500px) {
+  .hero .heroInner {
+    left: max(6.6vw, calc((100vw - 1460px) / 2)) !important;
+  }
+}
+
+/* === FIN AJUSTE HERO SOSTENIBILIDAD === */

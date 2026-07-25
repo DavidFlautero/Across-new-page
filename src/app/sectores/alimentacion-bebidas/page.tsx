@@ -48,7 +48,7 @@ const copy = {
     "overviewEyebrow": "Expertos en el sector de:",
     "overviewTitle": "Transporte y logística especializada para Alimentos y Bebidas.",
     "overviewText": "El transporte de alimentos y bebidas exige precisión, trazabilidad y capacidad de respuesta. Diseñamos soluciones para mercancía perecedera, productos con temperatura controlada y operaciones nacionales e internacionales, adaptando cada movimiento a los requisitos del producto, el mercado y el destino.",
-    "overviewButton": "Hablar con un especialista",
+    "overviewButton": "Inicia mi operación",
     "pillars": [
       [
         "Control de producto",
@@ -202,7 +202,7 @@ const copy = {
     "overviewEyebrow": "Sector expertise",
     "overviewTitle": "Experts in transport and logistics for the Food and Beverage sector.",
     "overviewText": "Food and beverage transport demands precision, traceability and responsiveness. We design solutions for perishable goods, temperature-controlled products and domestic and international operations, adapting every movement to the product, market and destination requirements.",
-    "overviewButton": "Talk to a specialist",
+    "overviewButton": "Start my operation",
     "pillars": [
       [
         "Product control",
@@ -356,7 +356,7 @@ const copy = {
     "overviewEyebrow": "行业专业能力",
     "overviewTitle": "食品与饮料行业运输和物流专家。",
     "overviewText": "食品与饮料运输需要精准、可追溯性和快速响应能力。我们为易腐产品、温控货物以及国内和国际业务设计物流解决方案，根据产品、市场和目的地的具体要求规划每一次运输。",
-    "overviewButton": "联系专家",
+    "overviewButton": "开始我的物流操作",
     "pillars": [
       [
         "产品控制",
@@ -937,8 +937,8 @@ const operationalEyebrow =
               
 
               <div className={styles.actions}>
-                <Link href="#solicitar-propuesta" className={styles.primaryBtn}>{t.primaryCta}</Link>
-                <Link href="/contacto" className={styles.secondaryBtn}>{t.secondaryCta}</Link>
+                <Link href="/cotizacion">{t.primaryCta}</Link>
+                <Link href="/contacto">{t.secondaryCta}</Link>
               </div>
             </div>
 

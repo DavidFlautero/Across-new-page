@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import type { CSSProperties } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Certifications from "@/components/sections/Certifications";
-import SectorLeadForm from "../../sectores/alimentacion-bebidas/SectorLeadForm";
 import styles from "./QuienesSomos.module.css";
 import empresaHeroStyles from "../Empresa.module.css";
 
@@ -446,7 +446,7 @@ export default function QuienesSomosPage() {
       <Header />
 
       <section
-        className={`${empresaHeroStyles.hero} ${styles.quienesHero}`}
+        className={empresaHeroStyles.hero}
         data-quienes-hero="true"
         data-aereo-hero="true"
         data-service-hero-home="true"
@@ -471,21 +471,21 @@ export default function QuienesSomosPage() {
 
         <div className={empresaHeroStyles.heroOverlay} />
 
-        <div className={`${empresaHeroStyles.heroInner} ${styles.quienesHeroInner}`}>
-          <div className={`${empresaHeroStyles.heroContent} ${styles.quienesHeroContent}`} data-quienes-hero-content="true">
-            <span className={`${empresaHeroStyles.eyebrow} ${styles.quienesHeroEyebrow}`}>{t.eyebrow}</span>
+        <div className={empresaHeroStyles.heroInner}>
+          <div className={empresaHeroStyles.heroContent} data-quienes-hero-content="true">
+            <span className={empresaHeroStyles.eyebrow}>{t.eyebrow}</span>
 
-            <h1 className={styles.quienesHeroTitle}>{heroTitle}</h1>
+            <h1>{heroTitle}</h1>
 
-            <p className={styles.quienesHeroDescription}>{t.description}</p>
+            <p>{t.description}</p>
 
-            <div className={`${empresaHeroStyles.actions} ${styles.quienesHeroActions}`}>
+            <div className={empresaHeroStyles.actions}>
               <Link href="/servicios">{t.primary}</Link>
               <Link href="/empresa/oficinas">{t.secondary}</Link>
             </div>
           </div>
         </div>
-          <div className={`${empresaHeroStyles.commandBar} ${styles.quienesCommandBar}`} data-aereo-trust="true">
+          <div className={empresaHeroStyles.commandBar} data-aereo-trust="true">
             {heroTrust.map(([title, text]) => (
               <div key={title} className={empresaHeroStyles.commandItem}>
                 <i aria-hidden="true">
@@ -604,7 +604,25 @@ export default function QuienesSomosPage() {
           </button>
         </section>
 
-        <SectorLeadForm />
+        <section
+          className={styles.compactCta}
+          style={
+            {
+              "--contact-bg": "url('/images/operador/contactcenter.png')",
+            } as CSSProperties
+          }
+        >
+          <div>
+            <span>{t.ctaEyebrow}</span>
+            <h2>{t.ctaTitle}</h2>
+            <p>{t.ctaText}</p>
+          </div>
+
+          <div className={styles.compactCtaActions}>
+            <Link href="/contacto">{t.ctaPrimary}</Link>
+            <Link href="/empresa/oficinas">{t.ctaSecondary}</Link>
+          </div>
+        </section>
       </main>
 
       <Footer />

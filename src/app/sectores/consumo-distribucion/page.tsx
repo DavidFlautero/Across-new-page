@@ -47,7 +47,7 @@ const copy = {
     "overviewEyebrow": "Logística de consumo",
     "overviewTitle": "Operaciones flexibles para marcas, retail y distribución comercial.",
     "overviewText": "El consumo exige velocidad, cobertura, preparación eficiente y capacidad para responder a picos de demanda. Diseñamos operaciones para mover mercancía con orden y visibilidad.",
-    "overviewButton": "Hablar con un especialista",
+    "overviewButton": "Inicia mi operación",
     "pillars": [
       [
         "Gestión de stock",
@@ -238,7 +238,7 @@ const copy = {
     "overviewEyebrow": "Logística de consumo",
     "overviewTitle": "Operaciones flexibles para marcas, retail y distribución comercial.",
     "overviewText": "El consumo exige velocidad, cobertura, preparación eficiente y capacidad para responder a picos de demanda. Diseñamos operaciones para mover mercancía con orden y visibilidad.",
-    "overviewButton": "Talk to a specialist",
+    "overviewButton": "Start my operation",
     "pillars": [
       [
         "Gestión de stock",
@@ -429,7 +429,7 @@ const copy = {
     "overviewEyebrow": "Logística de consumo",
     "overviewTitle": "Operaciones flexibles para marcas, retail y distribución comercial.",
     "overviewText": "El consumo exige velocidad, cobertura, preparación eficiente y capacidad para responder a picos de demanda. Diseñamos operaciones para mover mercancía con orden y visibilidad.",
-    "overviewButton": "联系专家",
+    "overviewButton": "开始我的物流操作",
     "pillars": [
       [
         "Gestión de stock",
@@ -1025,8 +1025,8 @@ export default function ConsumoDistribucionSectorPage() {
               <p className={styles.subtitle}>{t.heroText}</p>
 
               <div className={styles.actions}>
-                <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>
-                <Link href="/contacto" className={styles.secondaryBtn}>{t.secondaryCta}</Link>
+                <Link href="/cotizacion">{t.primaryCta}</Link>
+                <Link href="/contacto">{t.secondaryCta}</Link>
               </div>
             </div>
 

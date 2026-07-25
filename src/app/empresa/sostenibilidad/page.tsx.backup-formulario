@@ -11,6 +11,8 @@ import styles from "./Sostenibilidad.module.css";
 
 import SostenibilidadOnlyNumbersFixer from "@/components/SostenibilidadOnlyNumbersFixer";
 
+import SostenibilidadFinalCtaFixer from "@/components/SostenibilidadFinalCtaFixer";
+
 type Locale = "es" | "en" | "zh";
 
 const copy = {
@@ -519,6 +521,7 @@ export default function SostenibilidadPage() {
   return (
     <div className="page-shell">
       <Header />
+      <SostenibilidadFinalCtaFixer />
       <SostenibilidadOnlyNumbersFixer />
 
       <main className={styles.page}>

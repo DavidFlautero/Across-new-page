@@ -6,6 +6,7 @@ import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Certifications from "@/components/sections/Certifications";
+import SectorLeadForm from "../../sectores/alimentacion-bebidas/SectorLeadForm";
 import { offices } from "@/data/offices";
 import styles from "./Oficinas.module.css";
 import empresaHeroStyles from "../Empresa.module.css";
@@ -280,6 +281,8 @@ useEffect(() => {
             ))}
           </div>
         </section>
+      
+        <SectorLeadForm />
       </main>
 
       <Footer />

@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import type { CSSProperties } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Certifications from "@/components/sections/Certifications";
-import SectorLeadForm from "../../sectores/alimentacion-bebidas/SectorLeadForm";
 import styles from "./QuienesSomos.module.css";
 import empresaHeroStyles from "../Empresa.module.css";
 
@@ -604,7 +604,25 @@ export default function QuienesSomosPage() {
           </button>
         </section>
 
-        <SectorLeadForm />
+        <section
+          className={styles.compactCta}
+          style={
+            {
+              "--contact-bg": "url('/images/operador/contactcenter.png')",
+            } as CSSProperties
+          }
+        >
+          <div>
+            <span>{t.ctaEyebrow}</span>
+            <h2>{t.ctaTitle}</h2>
+            <p>{t.ctaText}</p>
+          </div>
+
+          <div className={styles.compactCtaActions}>
+            <Link href="/contacto">{t.ctaPrimary}</Link>
+            <Link href="/empresa/oficinas">{t.ctaSecondary}</Link>
+          </div>
+        </section>
       </main>
 
       <Footer />

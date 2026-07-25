@@ -745,7 +745,7 @@ export default function SostenibilidadPage() {
         </section>
 </main>
 
-      <Footer />
+<Footer />
     </div>
   );
 }

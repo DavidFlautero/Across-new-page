@@ -47,7 +47,7 @@ const copy = {
     "overviewEyebrow": "Logística sanitaria",
     "overviewTitle": "Control, cumplimiento y trazabilidad para mercancía sensible.",
     "overviewText": "El sector farmacéutico y sanitario exige precisión documental, seguridad, control de condiciones y continuidad. Diseñamos operaciones para proteger productos críticos de origen a destino.",
-    "overviewButton": "Hablar con un especialista",
+    "overviewButton": "Inicia mi operación",
     "pillars": [
       [
         "Cumplimiento documental",
@@ -209,7 +209,7 @@ const copy = {
     "overviewEyebrow": "Logística sanitaria",
     "overviewTitle": "Control, cumplimiento y trazabilidad para mercancía sensible.",
     "overviewText": "El sector farmacéutico y sanitario exige precisión documental, seguridad, control de condiciones y continuidad. Diseñamos operaciones para proteger productos críticos de origen a destino.",
-    "overviewButton": "Talk to a specialist",
+    "overviewButton": "Start my operation",
     "pillars": [
       [
         "Cumplimiento documental",
@@ -371,7 +371,7 @@ const copy = {
     "overviewEyebrow": "Logística sanitaria",
     "overviewTitle": "Control, cumplimiento y trazabilidad para mercancía sensible.",
     "overviewText": "El sector farmacéutico y sanitario exige precisión documental, seguridad, control de condiciones y continuidad. Diseñamos operaciones para proteger productos críticos de origen a destino.",
-    "overviewButton": "联系专家",
+    "overviewButton": "开始我的物流操作",
     "pillars": [
       [
         "Cumplimiento documental",
@@ -957,7 +957,8 @@ const operationalEyebrow =
               <p className={styles.subtitle}>{t.heroText}</p>
 
               <div className={styles.actions}>
-                <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>
+                <Link href="/cotizacion">{t.primaryCta}</Link>
+                <Link href="/contacto">{t.secondaryCta}</Link>
               </div>
             </div>
           </div>

@@ -47,7 +47,7 @@ const copy = {
     "overviewEyebrow": "Expertos en el sector de:",
     "overviewTitle": "Transporte y logística especializada para Tecnología.",
     "overviewText": "La tecnología requiere manipulación cuidadosa, control documental, seguridad, tiempos precisos y visibilidad. Coordinamos operaciones para proteger equipos, componentes y dispositivos durante toda la cadena.",
-    "overviewButton": "Hablar con un especialista",
+    "overviewButton": "Inicia mi operación",
     "pillars": [
       [
         "Seguridad operativa",
@@ -209,7 +209,7 @@ const copy = {
     "overviewEyebrow": "Sector expertise",
     "overviewTitle": "Specialized transport and logistics for the Technology sector.",
     "overviewText": "Technology requires careful handling, document control, security, precise timing and visibility. We coordinate operations to protect equipment, components and devices across the entire chain.",
-    "overviewButton": "Talk to a specialist",
+    "overviewButton": "Start my operation",
     "pillars": [
       [
         "Operational security",
@@ -371,7 +371,7 @@ const copy = {
     "overviewEyebrow": "行业专业能力",
     "overviewTitle": "面向科技行业的专业运输与物流服务。",
     "overviewText": "科技产品需要谨慎处理、文件控制、安全、准时和可视化。我们协调全链路操作以保护设备、组件和产品。",
-    "overviewButton": "联系专家",
+    "overviewButton": "开始我的物流操作",
     "pillars": [
       [
         "运营安全",
@@ -957,7 +957,8 @@ const operationalEyebrow =
               <p className={styles.subtitle}>{t.heroText}</p>
 
               <div className={styles.actions}>
-                <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>
+                <Link href="/cotizacion">{t.primaryCta}</Link>
+                <Link href="/contacto">{t.secondaryCta}</Link>
               </div>
             </div>
 

@@ -33,6 +33,7 @@ const copy = {
     heroText:
       "Soluciones logísticas para proyectos de energías renovables, con transporte especial, coordinación multimodal y entrega en obra.",
     primaryCta: "Solicitar propuesta logística",
+    secondaryCta: "Hablar con un especialista",
 
     trust: [
       ["Carga especial", "Componentes sobredimensionados"],
@@ -44,7 +45,7 @@ const copy = {
     overviewEyebrow: "Expertos en el sector de:",
     overviewTitle: "Transporte y logística especializada para Energías Renovables.",
     overviewText: "La industria de las energías renovables exige planificación, flexibilidad y experiencia en operaciones de alta complejidad. En Across Logistics coordinamos soluciones para parques eólicos, plantas solares e infraestructuras energéticas, adaptando cada operación a las necesidades del proyecto y manteniendo nuestro compromiso con una logística eficiente, responsable y respetuosa con el medio ambiente.",
-    overviewButton: "Hablar con un especialista",
+    overviewButton: "Inicia mi operación",
 
     pillars: [
       [
@@ -124,6 +125,7 @@ const copy = {
     heroText:
       "Logistics solutions for renewable energy projects, with special transport, multimodal coordination and final site delivery.",
     primaryCta: "Request logistics proposal",
+    secondaryCta: "Talk to a specialist",
 
     trust: [
       ["Special cargo", "Oversized components"],
@@ -137,7 +139,7 @@ const copy = {
       "Specialized logistics for demanding energy projects.",
     overviewText:
       "We manage oversized components, sensitive equipment and critical cargo for solar farms, wind projects and energy infrastructure, coordinating routes, permits, handling and final delivery.",
-    overviewButton: "Talk to a specialist",
+    overviewButton: "Start my operation",
 
     pillars: [
       [
@@ -217,6 +219,7 @@ const copy = {
     heroText:
       "为可再生能源项目提供物流解决方案，包括特殊运输、多式联运协调和最终工地交付。",
     primaryCta: "申请物流方案",
+    secondaryCta: "联系专家",
 
     trust: [
       ["特殊货物", "超限组件"],
@@ -230,7 +233,7 @@ const copy = {
       "可再生能源行业运输与物流专家。",
     overviewText:
       "可再生能源行业需要快速响应、灵活性和精准的物流规划。Across Logistics 为风电场、太阳能电站及其他能源基础设施的建设、投产和维护提供物流协调服务。我们根据每个项目的具体需求设计高效的运输和国际协调方案，并致力于发展更加高效、负责任的物流解决方案，为向更可持续能源模式的转型提供支持。",
-    overviewButton: "联系专家",
+    overviewButton: "开始我的物流操作",
 
     pillars: [
       [
@@ -752,12 +755,8 @@ const operationalEyebrow =
               </p>
 
               <div className={styles.actions}>
-                <Link
-                  href="/cotizacion"
-                  className={styles.primaryBtn}
-                >
-                  {t.primaryCta}
-                </Link>
+                <Link href="/cotizacion">{t.primaryCta}</Link>
+                <Link href="/contacto">{t.secondaryCta}</Link>
               </div>
             </div>
           </div>

@@ -2963,7 +2963,7 @@
       rgba(5, 6, 9, .55) 100%
     ),
     radial-gradient(circle at 18% 18%, rgba(23, 50, 71, .16), transparent 24rem),
-    url("/images/hero/hero-empresas.png") !important;
+    url("/images/sosten1.png") !important;
   background-size: cover !important;
   background-position: center 48% !important;
   background-repeat: no-repeat !important;
@@ -3065,7 +3065,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/hero/hero-empresas.png") !important;
+    url("/images/sosten1.png") !important;
   background-size: cover !important;
   background-position: center 55% !important;
   background-repeat: no-repeat !important;
@@ -3104,7 +3104,7 @@
   .services {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.90)),
-      url("/images/hero/hero-empresas.png") !important;
+      url("/images/sosten1.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3116,7 +3116,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/hero/hero-empresas.png") !important;
+      url("/images/sosten1.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3134,7 +3134,7 @@
       rgba(5, 6, 9, .42) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/hero/hero-empresas.png") !important;
+    url("/images/sosten1.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3144,7 +3144,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/hero/hero-empresas.png") !important;
+      url("/images/sosten1.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -3162,7 +3162,7 @@
       rgba(5, 6, 9, .44) 100%
     ),
     radial-gradient(circle at 82% 30%, rgba(23, 50, 71, .14), transparent 24rem),
-    url("/images/quienes2.png") !important;
+    url("/images/sosten2.png") !important;
   background-size: cover !important;
   background-position: center 52% !important;
   background-repeat: no-repeat !important;
@@ -3172,7 +3172,7 @@
   .darkBand {
     background:
       linear-gradient(180deg, rgba(5,6,9,.96), rgba(5,6,9,.88)),
-      url("/images/quienes2.png") !important;
+      url("/images/sosten2.png") !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -8872,7 +8872,7 @@
   position: relative !important;
   isolation: isolate !important;
   background-color: rgba(0, 0, 0, 0) !important;
-  background-image: url("/images/quienes2.png") !important;
+  background-image: url("/images/sosten2.png") !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
@@ -9115,7 +9115,7 @@
         rgba(3,10,18,.16) 100%
       ),
       radial-gradient(circle at 70% 32%, rgba(15,111,150,.13), transparent 42%),
-      var(--mobile-bg, url("/images/hero/hero-empresas.png")) center center / 100% 100% no-repeat !important;
+      var(--mobile-bg, url("/images/sosten1.png")) center center / 100% 100% no-repeat !important;
   }
 
   .page .finalCta::before,
@@ -9234,7 +9234,7 @@
 
 /* ZZZ SERVICIOS DARKBAND OWN IMAGE LIGHT FINAL
    DarkBand restaurado correctamente:
-   - usa SU imagen original del page.tsx: /images/hero/hero-empresas.png
+   - usa SU imagen original del page.tsx: /images/sosten1.png
    - no usa imagen del CTA
    - elimina capas oscuras viejas
    - mantiene el estilo azul/premium
@@ -9258,7 +9258,7 @@
       rgba(244,239,229,.025) 0%,
       rgba(3,10,18,.16) 100%
     ),
-    url("/images/hero/hero-empresas.png") center center / cover no-repeat !important;
+    url("/images/sosten1.png") center center / cover no-repeat !important;
 }
 
 .page .darkBand::before {
@@ -9646,87 +9646,6 @@
   }
 }
 
-/* =====================================================
-   HERO SECONDARY BUTTON - ESPACIO TEXTO
-   Da aire al texto del botón sin cambiar el estilo general
-   ===================================================== */
-
-.secondaryBtn {
-  width: auto !important;
-  min-width: 245px !important;
-  height: 44px !important;
-  padding: 0 34px !important;
-  box-sizing: border-box !important;
-
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-
-  white-space: nowrap !important;
-  line-height: 1 !important;
-  letter-spacing: .055em !important;
-  font-size: .72rem !important;
-}
-
-
-/* === HERO MOBILE CONTENT SPACING START === */
-/* Mobile:
-   baja el bloque izquierdo,
-   da doble espacio entre título / texto / botón,
-   centra el botón dentro de la columna.
-*/
-
-@media (max-width: 768px) {
-  .content {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    justify-content: center !important;
-
-    min-height: 100% !important;
-    padding-top: 72px !important;
-    padding-left: 14px !important;
-    padding-right: 14px !important;
-  }
-
-  .title {
-    margin-bottom: 22px !important;
-  }
-
-  .subtitle {
-    margin-top: 0 !important;
-    margin-bottom: 30px !important;
-    max-width: 330px !important;
-  }
-
-  .actions {
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 14px !important;
-    margin-top: 12px !important;
-  }
-
-  .secondaryBtn {
-    width: auto !important;
-    min-width: 245px !important;
-    height: 44px !important;
-    padding: 0 34px !important;
-    box-sizing: border-box !important;
-
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    white-space: nowrap !important;
-    line-height: 1 !important;
-    letter-spacing: .055em !important;
-    font-size: .72rem !important;
-  }
-}
-/* === HERO MOBILE CONTENT SPACING END === */
-
 
 /* === ACROSS LOCAL DARKBAND LAYOUT START === */
 /* Layout profesional:
@@ -9864,321 +9783,108 @@
 /* === ACROSS LOCAL DARKBAND LAYOUT END === */
 
 
-/* QUIENES SOMOS HERO DESKTOP LIKE TABLET FIX */
+/* === SOSTENIBILIDAD OPERADORES BG START === */
+/* Bloque:
+   "Operaciones logísticas con visión sostenible."
+   Fondo con imagen de operadores.
+   Desktop, tablet y mobile usan la misma imagen.
+*/
 
-.hero[data-quienes-hero="true"] {
-  min-height: 88vh !important;
-  padding: clamp(7rem, 8vw, 8.5rem) 0 96px !important;
+:global(section[data-sostenibilidad-operadores-bg="true"]),
+.darkBand[data-sostenibilidad-operadores-bg="true"] {
   position: relative !important;
-  display: flex !important;
-  align-items: center !important;
   overflow: hidden !important;
+  isolation: isolate !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,12,20,.72) 0%,
+      rgba(5,12,20,.48) 42%,
+      rgba(5,12,20,.18) 100%
+    ),
+    url("/images/operador/contactcenter.png") center center / cover no-repeat !important;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(5,12,20,.72) 0%,
+      rgba(5,12,20,.48) 42%,
+      rgba(5,12,20,.18) 100%
+    ),
+    url("/images/operador/contactcenter.png") !important;
+
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
 }
 
-.hero[data-quienes-hero="true"] .heroInner {
-  width: min(1180px, calc(100% - 40px)) !important;
-  margin: 0 auto !important;
-  padding: 0 !important;
-}
-
-.hero[data-quienes-hero="true"] .heroContent {
-  max-width: 720px !important;
-}
-
-.hero[data-quienes-hero="true"] .eyebrow {
-  color: #d7b46a !important;
-  font-size: .78rem !important;
-  font-weight: 950 !important;
-  letter-spacing: .22em !important;
-  text-transform: uppercase !important;
-}
-
-.hero[data-quienes-hero="true"] .heroContent h1 {
-  max-width: 760px !important;
-  margin: .85rem 0 1.25rem !important;
-  color: #f4efe6 !important;
-  font-size: clamp(3rem, 5.25vw, 5.8rem) !important;
-  line-height: .94 !important;
-  letter-spacing: -.075em !important;
-  font-weight: 950 !important;
-  text-wrap: balance !important;
-}
-
-.hero[data-quienes-hero="true"] .heroContent p {
-  max-width: 660px !important;
-  margin: 0 !important;
-  color: rgba(255, 255, 255, .84) !important;
-  font-size: clamp(1rem, 1.12vw, 1.14rem) !important;
-  line-height: 1.68 !important;
-  font-weight: 500 !important;
-}
-
-.hero[data-quienes-hero="true"] .actions {
-  margin-top: 1.75rem !important;
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: .9rem !important;
-}
-
-.hero[data-quienes-hero="true"] .actions a {
-  min-width: 230px !important;
-  min-height: 48px !important;
-  padding: 0 1.45rem !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  border-radius: 999px !important;
-  text-decoration: none !important;
-  text-transform: uppercase !important;
-  font-size: .72rem !important;
-  letter-spacing: .045em !important;
-  font-weight: 950 !important;
-  line-height: 1 !important;
-}
-
-.hero[data-quienes-hero="true"] .actions a:first-child {
-  background: #173247 !important;
-  color: #fff !important;
-  border: 1px solid rgba(255, 255, 255, .18) !important;
-  box-shadow: 0 18px 44px rgba(0, 0, 0, .24) !important;
-}
-
-.hero[data-quienes-hero="true"] .actions a:first-child::after {
-  content: "→" !important;
-  margin-left: .8rem !important;
-}
-
-.hero[data-quienes-hero="true"] .actions a:last-child {
-  background: rgba(23, 50, 71, .88) !important;
-  color: #fff !important;
-  border: 1px solid rgba(255, 255, 255, .14) !important;
-  backdrop-filter: blur(10px) !important;
-}
-
-.hero[data-quienes-hero="true"] .commandBar {
+:global(section[data-sostenibilidad-operadores-bg="true"]::before),
+.darkBand[data-sostenibilidad-operadores-bg="true"]::before {
+  content: "" !important;
   position: absolute !important;
-  left: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  z-index: 8 !important;
-  width: 100% !important;
-  max-width: none !important;
-  margin: 0 !important;
-  transform: none !important;
-
-  display: grid !important;
-  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-
-  border-top: 1px solid rgba(255, 255, 255, .14) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, .08) !important;
-  border-left: 0 !important;
-  border-right: 0 !important;
-
-  background: rgba(5, 6, 9, .84) !important;
-  backdrop-filter: blur(16px) saturate(1.15) !important;
-  -webkit-backdrop-filter: blur(16px) saturate(1.15) !important;
-
-  box-shadow:
-    0 -20px 70px rgba(0, 0, 0, .24),
-    inset 0 1px 0 rgba(255, 255, 255, .08) !important;
-
-  overflow: hidden !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,12,20,.50) 0%,
+      rgba(5,12,20,.22) 48%,
+      rgba(5,12,20,.08) 100%
+    ) !important;
+  opacity: 1 !important;
 }
 
-.hero[data-quienes-hero="true"] .commandItem {
-  min-height: 82px !important;
-  padding: 1rem clamp(.9rem, 2vw, 1.5rem) !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: .9rem !important;
-  border-right: 1px solid rgba(255, 255, 255, .12) !important;
-  color: #fff !important;
+:global(section[data-sostenibilidad-operadores-bg="true"]::after),
+.darkBand[data-sostenibilidad-operadores-bg="true"]::after {
+  opacity: 0 !important;
+  background: transparent !important;
 }
 
-.hero[data-quienes-hero="true"] .commandItem:last-child {
-  border-right: 0 !important;
+:global(section[data-sostenibilidad-operadores-bg="true"] > *),
+.darkBand[data-sostenibilidad-operadores-bg="true"] > * {
+  position: relative !important;
+  z-index: 2 !important;
 }
 
-.hero[data-quienes-hero="true"] .commandItem i {
-  flex: 0 0 auto !important;
-  width: 38px !important;
-  height: 38px !important;
-  display: grid !important;
-  place-items: center !important;
-  color: #d7b46a !important;
-  border: 1px solid rgba(215, 180, 106, .38) !important;
-  background: rgba(215, 180, 106, .055) !important;
-}
-
-.hero[data-quienes-hero="true"] .commandItem span {
-  min-width: 0 !important;
-  display: grid !important;
-  gap: .18rem !important;
-}
-
-.hero[data-quienes-hero="true"] .commandItem strong {
-  color: #fff !important;
-  font-size: .92rem !important;
-  line-height: 1.08 !important;
-  font-weight: 950 !important;
-  letter-spacing: -.025em !important;
-  white-space: nowrap !important;
-}
-
-.hero[data-quienes-hero="true"] .commandItem small {
-  color: rgba(255, 255, 255, .72) !important;
-  font-size: .74rem !important;
-  line-height: 1.22 !important;
-  font-weight: 750 !important;
-  white-space: nowrap !important;
+:global(section[data-sostenibilidad-operadores-bg="true"] img),
+:global(section[data-sostenibilidad-operadores-bg="true"] picture),
+.darkBand[data-sostenibilidad-operadores-bg="true"] img,
+.darkBand[data-sostenibilidad-operadores-bg="true"] picture {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 @media (max-width: 900px) {
-  .hero[data-quienes-hero="true"] {
-    min-height: auto !important;
-    padding: 6.7rem 0 0 !important;
-    display: block !important;
-  }
+  :global(section[data-sostenibilidad-operadores-bg="true"]),
+  .darkBand[data-sostenibilidad-operadores-bg="true"] {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5,12,20,.56) 0%,
+        rgba(5,12,20,.28) 45%,
+        rgba(5,12,20,.66) 100%
+      ),
+      url("/images/operador/contactcenter.png") center center / cover no-repeat !important;
 
-  .hero[data-quienes-hero="true"] .heroInner {
-    width: min(100% - 36px, 760px) !important;
-    padding-bottom: 2.2rem !important;
-  }
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(5,12,20,.56) 0%,
+        rgba(5,12,20,.28) 45%,
+        rgba(5,12,20,.66) 100%
+      ),
+      url("/images/operador/contactcenter.png") !important;
 
-  .hero[data-quienes-hero="true"] .heroContent h1 {
-    font-size: clamp(2.8rem, 11vw, 4.6rem) !important;
-    line-height: .94 !important;
-  }
-
-  .hero[data-quienes-hero="true"] .actions {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    width: 100% !important;
-  }
-
-  .hero[data-quienes-hero="true"] .actions a {
-    width: 100% !important;
-    min-width: 0 !important;
-  }
-
-  .hero[data-quienes-hero="true"] .commandBar {
-    position: relative !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-  }
-
-  .hero[data-quienes-hero="true"] .commandItem {
-    min-height: 76px !important;
-    padding: .85rem .65rem !important;
-    gap: .65rem !important;
-    justify-content: flex-start !important;
-  }
-
-  .hero[data-quienes-hero="true"] .commandItem i {
-    width: 34px !important;
-    height: 34px !important;
-  }
-
-  .hero[data-quienes-hero="true"] .commandItem strong {
-    font-size: .82rem !important;
-  }
-
-  .hero[data-quienes-hero="true"] .commandItem small {
-    max-width: 130px !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
   }
 }
-
-@media (max-width: 640px) {
-  .hero[data-quienes-hero="true"] {
-    padding-top: 5.9rem !important;
-  }
-
-  .hero[data-quienes-hero="true"] .heroInner {
-    width: calc(100% - 36px) !important;
-  }
-
-  .hero[data-quienes-hero="true"] .heroContent h1 {
-    font-size: clamp(2.35rem, 12vw, 3.7rem) !important;
-    line-height: .96 !important;
-  }
-
-  .hero[data-quienes-hero="true"] .heroContent p {
-    font-size: .95rem !important;
-    line-height: 1.55 !important;
-  }
-
-  .hero[data-quienes-hero="true"] .commandBar {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  }
-
-  .hero[data-quienes-hero="true"] .commandItem {
-    min-height: 70px !important;
-    border-bottom: 1px solid rgba(255, 255, 255, .1) !important;
-  }
-
-  .hero[data-quienes-hero="true"] .commandItem:nth-child(2n) {
-    border-right: 0 !important;
-  }
-}
-/* QUIENES SOMOS MOBILE BUTTON FIX */
-
-@media (max-width: 900px) {
-  .hero[data-quienes-hero="true"] .actions {
-    width: min(560px, 100%) !important;
-    max-width: 100% !important;
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: .75rem !important;
-  }
-
-  .hero[data-quienes-hero="true"] .actions a {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    box-sizing: border-box !important;
-    overflow: hidden !important;
-  }
-}
-
-@media (max-width: 640px) {
-  .hero[data-quienes-hero="true"] .actions {
-    margin-top: 1.55rem !important;
-    width: 100% !important;
-  }
-
-  .hero[data-quienes-hero="true"] .actions a {
-    min-height: 48px !important;
-    padding: 0 .85rem !important;
-    justify-content: center !important;
-    text-align: center !important;
-    white-space: nowrap !important;
-    font-size: clamp(.58rem, 2.55vw, .68rem) !important;
-    letter-spacing: .018em !important;
-    line-height: 1 !important;
-  }
-
-  .hero[data-quienes-hero="true"] .actions a:first-child::after {
-    margin-left: .45rem !important;
-    flex: 0 0 auto !important;
-  }
-}
-
-@media (max-width: 380px) {
-  .hero[data-quienes-hero="true"] .actions a {
-    padding: 0 .7rem !important;
-    font-size: clamp(.54rem, 2.45vw, .62rem) !important;
-    letter-spacing: 0 !important;
-  }
-
-  .hero[data-quienes-hero="true"] .actions a:first-child::after {
-    margin-left: .35rem !important;
-  }
-}
+/* === SOSTENIBILIDAD OPERADORES BG END === */
 
 /* === ACROSS DESKTOP HERO TYPO FIX === */
 /* Solo desktop. Arregla títulos hero demasiado angostos/altos en páginas internas. */
@@ -10275,82 +9981,3 @@
 
 /* === /ACROSS DESKTOP HERO TYPO FIX === */
 
-/* === HIDE QUIENES HERO COMMANDBAR START === */
-/* Oculta la barra de confianza del hero SOLO en Quiénes somos.
-   No toca otras páginas ni Certifications. */
-:global(section[data-quienes-hero="true"] [data-aereo-trust="true"]) {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
-/* === HIDE QUIENES HERO COMMANDBAR END === */
-
-/* === QUIENES HERO MOBILE FLOW FINAL START === */
-/* Mobile chico: sube volanta, título, texto y botón juntos.
-   Mantiene el orden visual y evita que el botón toque certificaciones. */
-@media (max-width: 430px) and (min-height: 600px) {
-  :global(section[data-quienes-hero="true"]) {
-    padding-bottom: 6.9rem !important;
-  }
-
-  :global(section[data-quienes-hero="true"] [class*="eyebrow"]),
-  :global(section[data-quienes-hero="true"] h1),
-  :global(section[data-quienes-hero="true"] h1 + p),
-  :global(section[data-quienes-hero="true"] [class*="actions"]) {
-    transform: translateY(-38px) !important;
-    position: relative !important;
-  }
-
-  :global(section[data-quienes-hero="true"] [class*="eyebrow"]) {
-    display: inline-block !important;
-    z-index: 31 !important;
-    margin-bottom: .75rem !important;
-  }
-
-  :global(section[data-quienes-hero="true"] h1) {
-    z-index: 30 !important;
-    margin-bottom: 1rem !important;
-  }
-
-  :global(section[data-quienes-hero="true"] h1 + p) {
-    z-index: 30 !important;
-    margin-bottom: 1.45rem !important;
-  }
-
-  :global(section[data-quienes-hero="true"] [class*="actions"]) {
-    z-index: 32 !important;
-    margin-top: 0 !important;
-    margin-bottom: 3.6rem !important;
-  }
-}
-/* === QUIENES HERO MOBILE FLOW FINAL END === */
-
-/* === QUIENES HERO DESKTOP LEFT FINAL START === */
-/* Desktop: mueve todo el bloque del hero hacia la izquierda.
-   No toca mobile/tablet. */
-@media (min-width: 901px) {
-  .heroContent {
-    transform: translateX(-65px) !important;
-    position: relative !important;
-    z-index: 25 !important;
-    margin-left: 0 !important;
-    margin-right: auto !important;
-    text-align: left !important;
-    align-items: flex-start !important;
-  }
-
-  .heroContent h1,
-  .heroContent p {
-    text-align: left !important;
-    margin-left: 0 !important;
-    margin-right: auto !important;
-  }
-
-  .actions {
-    justify-content: flex-start !important;
-    margin-left: 0 !important;
-    margin-right: auto !important;
-  }
-}
-/* === QUIENES HERO DESKTOP LEFT FINAL END === */

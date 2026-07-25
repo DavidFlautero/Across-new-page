@@ -12557,3 +12557,11 @@ a.primaryBtn:hover {
 }
 
 /* === /UNIVERSAL OPERATIONAL MOBILE PRO === */
+
+/* === RESTORE HERO TWO CTAS === */
+
+.hero .actions a:last-child {
+  display: inline-flex !important;
+}
+
+/* === /RESTORE HERO TWO CTAS === */

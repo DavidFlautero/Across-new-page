@@ -47,7 +47,7 @@ const copy = {
     "overviewEyebrow": "Expertos en el sector de:",
     "overviewTitle": "Transporte y logística especializada para Automoción.",
     "overviewText": "La industria del automóvil exige rapidez, precisión y una coordinación logística especialmente rigurosa. En Across Logistics gestionamos operaciones de transporte, importación y exportación para el sector de la automoción, optimizando la eficiencia de la cadena de suministro. Nuestra cobertura mundial y local nos permite coordinar cada operación con el objetivo de asegurar entregas en los tiempos previstos.",
-    "overviewButton": "Hablar con un especialista",
+    "overviewButton": "Inicia mi operación",
     "pillars": [
       [
         "Continuidad productiva",
@@ -209,7 +209,7 @@ const copy = {
     "overviewEyebrow": "Automotive logistics",
     "overviewTitle": "Logistics precision for demanding industrial operations.",
     "overviewText": "The automotive industry requires punctual deliveries, document control, component availability and response to urgency. We design operations to keep the production chain moving.",
-    "overviewButton": "Talk to a specialist",
+    "overviewButton": "Start my operation",
     "pillars": [
       [
         "Production continuity",
@@ -371,7 +371,7 @@ const copy = {
     "overviewEyebrow": "汽车物流",
     "overviewTitle": "为高要求工业运营提供精准物流。",
     "overviewText": "汽车行业需要准时交付、文件控制、组件可用性和紧急响应。我们设计运营以保持生产链流动。",
-    "overviewButton": "联系专家",
+    "overviewButton": "开始我的物流操作",
     "pillars": [
       [
         "生产连续性",
@@ -957,7 +957,8 @@ const operationalEyebrow =
               <p className={styles.subtitle}>{t.heroText}</p>
 
               <div className={styles.actions}>
-                <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>
+                <Link href="/cotizacion">{t.primaryCta}</Link>
+                <Link href="/contacto">{t.secondaryCta}</Link>
               </div>
             </div>
 

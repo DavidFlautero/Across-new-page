@@ -47,7 +47,7 @@ const copy = {
     "overviewEyebrow": "Expertos en el sector de:",
     "overviewTitle": "Transporte y logística especializada para la Industria Química.",
     "overviewText": "El transporte de productos químicos exige seguridad, precisión y un control riguroso. Diseñamos soluciones para mercancías sensibles y reguladas, operaciones nacionales e internacionales, adaptando cada movimiento a los requisitos del producto, la normativa aplicable y el destino.",
-    "overviewButton": "Hablar con un especialista",
+    "overviewButton": "Inicia mi operación",
     "pillars": [
       [
         "Control documental",
@@ -209,7 +209,7 @@ const copy = {
     "overviewEyebrow": "Specialized chemical logistics",
     "overviewTitle": "Operational control for products that require precision and responsibility.",
     "overviewText": "The chemical sector requires planning, documentary compliance, proper handling and visibility at every stage. We design operations to reduce risks, maintain continuity and protect cargo integrity.",
-    "overviewButton": "Talk to a specialist",
+    "overviewButton": "Start my operation",
     "pillars": [
       [
         "Document control",
@@ -371,7 +371,7 @@ const copy = {
     "overviewEyebrow": "专业化工物流",
     "overviewTitle": "为需要精准和责任的产品提供运营控制。",
     "overviewText": "化工行业需要规划、文件合规、适当处理和每个阶段的可视化。我们设计运营以降低风险、保持连续性并保护货物完整性。",
-    "overviewButton": "联系专家",
+    "overviewButton": "开始我的物流操作",
     "pillars": [
       [
         "文件控制",
@@ -957,8 +957,8 @@ const operationalEyebrow =
               <p className={styles.subtitle}>{t.heroText}</p>
 
               <div className={styles.actions}>
-                <Link href="/cotizacion" className={styles.primaryBtn}>{t.primaryCta}</Link>
-                <Link href="/contacto" className={styles.secondaryBtn}>{t.secondaryCta}</Link>
+                <Link href="/cotizacion">{t.primaryCta}</Link>
+                <Link href="/contacto">{t.secondaryCta}</Link>
               </div>
             </div>
 
