@@ -1,0 +1,598 @@
+     1	.page {
+     2	  background: #f4f4f4;
+     3	  color: #090b10;
+     4	  overflow: hidden;
+     5	}
+     6	
+     7	.hero {
+     8	  position: relative;
+     9	  min-height: 78vh;
+    10	  display: flex;
+    11	  align-items: center;
+    12	  padding: 8.5rem 6vw 5.5rem;
+    13	  isolation: isolate;
+    14	  background: #05070b;
+    15	  color: #fff;
+    16	  overflow: hidden;
+    17	}
+    18	
+    19	.heroImage {
+    20	  object-fit: cover;
+    21	  z-index: -3;
+    22	}
+    23	
+    24	.heroImageMobile {
+    25	  display: none;
+    26	}
+    27	
+    28	.heroOverlay {
+    29	  position: absolute;
+    30	  inset: 0;
+    31	  z-index: -2;
+    32	  background:
+    33	    linear-gradient(90deg, rgba(2, 4, 8, .96) 0%, rgba(2, 4, 8, .82) 34%, rgba(2, 4, 8, .28) 72%, rgba(2, 4, 8, .14) 100%),
+    34	    linear-gradient(180deg, rgba(0, 0, 0, .14) 0%, rgba(0, 0, 0, .68) 100%);
+    35	}
+    36	
+    37	.hero::after {
+    38	  content: "";
+    39	  position: absolute;
+    40	  left: 0;
+    41	  right: 0;
+    42	  bottom: -1px;
+    43	  height: 90px;
+    44	  background: linear-gradient(180deg, transparent, #07101a);
+    45	  z-index: -1;
+    46	}
+    47	
+    48	.heroInner {
+    49	  width: min(1180px, 100%);
+    50	  margin: 0 auto;
+    51	  display: grid;
+    52	  grid-template-columns: minmax(0, 1fr) 340px;
+    53	  gap: 3rem;
+    54	  align-items: center;
+    55	}
+    56	
+    57	.heroContent {
+    58	  max-width: 760px;
+    59	}
+    60	
+    61	.eyebrow {
+    62	  display: inline-flex;
+    63	  margin-bottom: 1rem;
+    64	  color: #173247;
+    65	  font-size: .78rem;
+    66	  font-weight: 950;
+    67	  letter-spacing: .16em;
+    68	  text-transform: uppercase;
+    69	}
+    70	
+    71	.heroContent h1 {
+    72	  margin: 0;
+    73	  max-width: 760px;
+    74	  font-size: clamp(2.6rem, 5.5vw, 5.6rem);
+    75	  line-height: .92;
+    76	  letter-spacing: -.065em;
+    77	  font-weight: 950;
+    78	}
+    79	
+    80	.heroContent p {
+    81	  max-width: 650px;
+    82	  margin: 1.45rem 0 0;
+    83	  color: rgba(255, 255, 255, .82);
+    84	  font-size: clamp(1rem, 1.3vw, 1.14rem);
+    85	  line-height: 1.72;
+    86	}
+    87	
+    88	.actions,
+    89	.finalActions {
+    90	  display: flex;
+    91	  flex-wrap: wrap;
+    92	  gap: .9rem;
+    93	  margin-top: 2rem;
+    94	}
+    95	
+    96	.actions a,
+    97	.finalActions a,
+    98	.overviewCopy a {
+    99	  display: inline-flex;
+   100	  align-items: center;
+   101	  justify-content: center;
+   102	  min-height: 48px;
+   103	  padding: 0 1.25rem;
+   104	  text-decoration: none;
+   105	  text-transform: uppercase;
+   106	  font-size: .78rem;
+   107	  letter-spacing: .03em;
+   108	  font-weight: 950;
+   109	}
+   110	
+   111	.actions a:first-child,
+   112	.finalActions a:first-child,
+   113	.overviewCopy a {
+   114	  background: #173247;
+   115	  color: #fff;
+   116	  box-shadow: 0 18px 42px rgba(23, 50, 71, .28);
+   117	}
+   118	
+   119	.actions a:first-child::after,
+   120	.finalActions a:first-child::after,
+   121	.overviewCopy a::after {
+   122	  content: "→";
+   123	  margin-left: .7rem;
+   124	}
+   125	
+   126	.actions a:last-child,
+   127	.finalActions a:last-child {
+   128	  color: #fff;
+   129	  border: 1px solid rgba(255, 255, 255, .34);
+   130	  background: rgba(255, 255, 255, .06);
+   520	  align-self: center;
+   521	}
+   522	
+   523	.finalCta p {
+   524	  max-width: 620px;
+   525	  margin: 1.1rem 0 0;
+   526	  color: rgba(8, 11, 16, .72);
+   527	  line-height: 1.65;
+   528	}
+   529	
+   530	.finalActions a:last-child {
+   531	  color: #080b10;
+   532	  border-color: rgba(8, 11, 16, .18);
+   533	  background: #fff;
+   534	}
+   535	
+   536	.finalImage {
+   537	  position: relative;
+   538	  min-height: 360px;
+   539	  overflow: hidden;
+   540	}
+   541	
+   542	.finalImage img {
+   543	  object-fit: cover;
+   544	  filter: brightness(1.03) contrast(1.04) saturate(1.02);
+   545	}
+   546	
+   547	@media (max-width: 1180px) {
+   548	  .heroInner {
+   549	    grid-template-columns: 1fr;
+   550	  }
+   551	
+   552	  .operationCard {
+   553	    justify-self: start;
+   554	  }
+   555	
+   556	  .overview {
+   557	    grid-template-columns: 1fr;
+   558	    gap: 2.5rem;
+   559	  }
+   560	
+   561	  .pillars {
+   562	    grid-template-columns: repeat(2, 1fr);
+   563	  }
+   564	
+   565	  .serviceGrid,
+   566	  .useCaseGrid,
+   567	  .processGrid {
+   568	    grid-template-columns: repeat(3, 1fr);
+   569	  }
+   570	
+   571	  .serviceGrid article:nth-child(3),
+   572	  .serviceGrid article:nth-child(6),
+   573	  .useCaseGrid article:nth-child(3),
+   574	  .useCaseGrid article:nth-child(6) {
+   575	    border-right: 0;
+   576	  }
+   577	
+   578	  .processGrid {
+   579	    gap: 1.6rem;
+   580	  }
+   581	
+   582	  .processGrid::before {
+   583	    display: none;
+   584	  }
+   585	
+   586	  .stats {
+   587	    grid-template-columns: repeat(2, 1fr);
+   588	    gap: 1.4rem;
+   589	  }
+   590	
+   591	  .stats article {
+   592	    border-right: 0;
+   593	    padding: 0;
+   594	  }
+   595	}
+   596	
+   597	@media (max-width: 900px) {
+   598	  .hero {
+   599	    min-height: 74vh;
+   600	    padding: 7rem 22px 4rem;
+   601	  }
+   602	
+   603	  .heroImageDesktop {
+   604	    display: none;
+   605	  }
+   606	
+   607	  .heroImageMobile {
+   608	    display: block;
+   609	  }
+   610	
+   611	  .heroOverlay {
+   612	    background:
+   613	      linear-gradient(180deg, rgba(2, 4, 8, .78) 0%, rgba(2, 4, 8, .94) 70%, rgba(2, 4, 8, .98) 100%);
+   614	  }
+   615	
+   616	  .operationCard {
+   617	    display: none;
+   618	  }
+   619	
+   620	  .trustBar {
+   621	    grid-template-columns: 1fr 1fr;
+   622	  }
+   623	
+   624	  .trustBar div {
+   625	    min-height: 88px;
+   626	    padding: 1.1rem 20px;
+   627	  }
+   628	
+   629	  .overview,
+   630	  .services,
+   631	  .useCases,
+   632	  .process {
+   633	    width: min(100% - 28px, 720px);
+   634	    margin: 3.7rem auto;
+   635	  }
+   636	
+   637	  .pillars,
+   638	  .serviceGrid,
+   639	  .useCaseGrid,
+   640	  .processGrid,
+   641	  .darkBand,
+   642	  .finalCta {
+   643	    grid-template-columns: 1fr;
+   644	  }
+   645	
+   646	  .pillars article,
+   647	  .serviceGrid article,
+   648	  .useCaseGrid article {
+   649	    border-right: 0;
+   650	    border-left: 0;
+   651	    border-bottom: 1px solid rgba(8, 11, 16, .1);
+   652	  }
+   653	
+   654	  .serviceGrid article,
+   655	  .useCaseGrid article {
+   656	    min-height: auto;
+   657	    padding: 1.6rem 1.2rem;
+   658	  }
+   659	
+   660	  .processGrid article {
+   661	    min-height: auto;
+   662	    padding: 0;
+   663	  }
+   664	
+   665	  .darkBandImage,
+   666	  .finalImage {
+   667	    min-height: 260px;
+   668	  }
+   669	
+   670	  .finalImage {
+   671	    order: -1;
+   672	  }
+   673	}
+   674	
+   675	@media (max-width: 560px) {
+   676	  .heroContent h1 {
+   677	    font-size: clamp(2.25rem, 13vw, 3.55rem);
+   678	  }
+   679	
+   680	  .heroContent p {
+   681	    font-size: .96rem;
+   682	  }
+   683	
+   684	  .actions,
+   685	  .finalActions {
+   686	    width: 100%;
+   687	  }
+   688	
+   689	  .actions a,
+   690	  .finalActions a,
+   691	  .overviewCopy a {
+   692	    width: 100%;
+   693	  }
+   694	
+   695	  .trustBar {
+   696	    grid-template-columns: 1fr;
+   697	  }
+   698	
+   699	  .trustBar div {
+   700	    border-right: 0;
+   701	    border-bottom: 1px solid rgba(255, 255, 255, .12);
+   702	  }
+   703	
+   704	  .overviewCopy h2,
+   705	  .sectionHead h2,
+   706	  .darkBandContent h2,
+   707	  .finalCta h2 {
+   708	    font-size: clamp(2rem, 10vw, 3rem);
+   709	  }
+   710	
+   860	      ) !important;
+   861	  }
+   862	
+   863	  .hero::before {
+   864	    content: "" !important;
+   865	    position: absolute !important;
+   866	    right: 5vw !important;
+   867	    top: 18% !important;
+   868	    width: min(44vw, 680px) !important;
+   869	    height: min(44vw, 620px) !important;
+   870	    border-radius: 999px !important;
+   871	    background:
+   872	      radial-gradient(circle, rgba(255, 255, 255, .20), transparent 26%),
+   873	      radial-gradient(circle, rgba(23, 50, 71, .16), transparent 58%) !important;
+   874	    filter: blur(28px) !important;
+   875	    opacity: .72 !important;
+   876	    z-index: -1 !important;
+   877	    pointer-events: none !important;
+   878	  }
+   879	
+   880	  .hero::after {
+   881	    height: 120px !important;
+   882	    background:
+   883	      linear-gradient(
+   884	        180deg,
+   885	        transparent 0%,
+   886	        rgba(3, 7, 13, .38) 45%,
+   887	        #07101a 100%
+   888	      ) !important;
+   889	  }
+   890	
+   891	  .heroInner {
+   892	    width: min(1280px, 100%) !important;
+   893	    grid-template-columns: minmax(480px, 610px) 1fr !important;
+   894	    gap: clamp(3rem, 8vw, 9rem) !important;
+   895	    align-items: center !important;
+   896	  }
+   897	
+   898	  .heroContent {
+   899	    max-width: 610px !important;
+   900	  }
+   901	
+   902	  .eyebrow {
+   903	    color: #173247 !important;
+   904	    margin-bottom: 1rem !important;
+   905	    font-size: .76rem !important;
+   906	    letter-spacing: .2em !important;
+   907	  }
+   908	
+   909	  .heroContent h1 {
+   910	    max-width: 600px !important;
+   911	    font-size: clamp(3.45rem, 4.55vw, 5.6rem) !important;
+   912	    line-height: .9 !important;
+   913	    letter-spacing: -.06em !important;
+   914	    text-wrap: balance !important;
+   915	  }
+   916	
+   917	  .heroContent h1::after {
+   918	    content: "." !important;
+   919	    color: #173247 !important;
+   920	  }
+   921	
+   922	  .heroContent p {
+   923	    max-width: 560px !important;
+   924	    margin-top: 1.35rem !important;
+   925	    font-size: clamp(1rem, 1.05vw, 1.13rem) !important;
+   926	    line-height: 1.62 !important;
+   927	    color: rgba(255, 255, 255, .86) !important;
+   928	  }
+   929	
+   930	  .actions {
+   931	    margin-top: 1.8rem !important;
+   932	    gap: .9rem !important;
+   933	  }
+   934	
+   935	  .actions a {
+   936	    min-height: 48px !important;
+   937	    padding: 0 1.5rem !important;
+   938	    font-size: .76rem !important;
+   939	  }
+   940	
+   941	  /* Sacamos la tarjeta Madrid → Bogotá en desktop: ensuciaba el hero */
+   942	  .operationCard {
+   943	    display: none !important;
+   944	  }
+   945	}
+   946	
+   947	/* Desktop bajo / notebook: que entre completo sin sentirse aplastado */
+   948	@media (min-width: 901px) and (max-height: 760px) {
+   949	  .hero {
+   950	    min-height: 590px !important;
+   951	    height: calc(100svh - 20px) !important;
+   952	    padding-top: 6.2rem !important;
+   953	    padding-bottom: 3rem !important;
+   954	  }
+   955	
+   956	  .heroContent h1 {
+   957	    font-size: clamp(3.05rem, 4.15vw, 4.85rem) !important;
+   958	    line-height: .9 !important;
+   959	  }
+   960	
+   961	  .heroContent p {
+   962	    max-width: 530px !important;
+   963	    line-height: 1.52 !important;
+   964	  }
+   965	
+   966	  .actions {
+   967	    margin-top: 1.35rem !important;
+   968	  }
+   969	}
+   970	
+   971	/* Desktop ancho: más vida al avión, menos sombra plana */
+   972	@media (min-width: 1400px) {
+   973	  .heroImage {
+   974	    object-position: center 46% !important;
+   975	  }
+   976	
+   977	  .heroOverlay {
+   978	    background:
+   979	      radial-gradient(
+   980	        circle at 70% 42%,
+  1070	/* Separación limpia debajo de hero/certificaciones */
+  1071	.content {
+  1072	  background: #f4f1eb !important;
+  1073	}
+  1074	
+  1075	/* Bandas oscuras sin carnaval de degradés */
+  1076	.compactCta,
+  1077	.capabilitiesContent {
+  1078	  background: #10030a !important;
+  1079	  border-color: rgba(255,255,255,.08) !important;
+  1080	}
+  1081	
+  1082	
+  1083	/* === HERO FINAL BALANCE: DESKTOP + MOBILE === */
+  1084	
+  1085	/* Desktop limpio: primer pantallazo fuerte, sin título monstruoso */
+  1086	@media (min-width: 901px) {
+  1087	  .hero {
+  1088	    min-height: 620px !important;
+  1089	    height: calc(100svh - 20px) !important;
+  1090	    max-height: 740px !important;
+  1091	    padding: 6.8rem 6vw 3.4rem !important;
+  1092	    align-items: center !important;
+  1093	  }
+  1094	
+  1095	  .heroContent {
+  1096	    max-width: 620px !important;
+  1097	  }
+  1098	
+  1099	  .heroContent h1 {
+  1100	    max-width: 620px !important;
+  1101	    font-size: clamp(3.35rem, 4.6vw, 5.7rem) !important;
+  1102	    line-height: .9 !important;
+  1103	    letter-spacing: -.06em !important;
+  1104	  }
+  1105	
+  1106	  .heroContent p {
+  1107	    max-width: 540px !important;
+  1108	    font-size: clamp(.98rem, 1vw, 1.08rem) !important;
+  1109	    line-height: 1.6 !important;
+  1110	  }
+  1111	
+  1112	  .heroImage {
+  1113	    object-position: center 48% !important;
+  1114	    filter: brightness(1.05) contrast(1.08) saturate(1.08) !important;
+  1115	  }
+  1116	
+  1117	  .heroOverlay {
+  1118	    background:
+  1119	      radial-gradient(circle at 72% 45%, rgba(255, 172, 96, .25), transparent 34%),
+  1120	      linear-gradient(90deg, rgba(2,4,8,.96) 0%, rgba(2,4,8,.82) 30%, rgba(2,4,8,.42) 58%, rgba(2,4,8,.20) 82%, rgba(2,4,8,.35) 100%),
+  1121	      linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.42)) !important;
+  1122	  }
+  1123	
+  1124	  .operationCard {
+  1125	    display: none !important;
+  1126	  }
+  1127	}
+  1128	
+  1129	/* Mobile real: no hero gigante, no botones flotando raro */
+  1130	@media (max-width: 900px) {
+  1131	  .hero {
+  1132	    min-height: 560px !important;
+  1133	    height: auto !important;
+  1134	    padding: 5.8rem 24px 3.2rem !important;
+  1135	    align-items: flex-end !important;
+  1136	  }
+  1137	
+  1138	  .heroInner {
+  1139	    display: block !important;
+  1140	  }
+  1141	
+  1142	  .heroContent {
+  1143	    max-width: 100% !important;
+  1144	  }
+  1145	
+  1146	  .eyebrow {
+  1147	    font-size: .66rem !important;
+  1148	    letter-spacing: .18em !important;
+  1149	    margin-bottom: .8rem !important;
+  1150	  }
+  1151	
+  1152	  .heroContent h1 {
+  1153	    max-width: 440px !important;
+  1154	    font-size: clamp(2.25rem, 9vw, 3.6rem) !important;
+  1155	    line-height: .95 !important;
+  1156	    letter-spacing: -.045em !important;
+  1157	  }
+  1158	
+  1159	  .heroContent p {
+  1160	    max-width: 430px !important;
+  1161	    margin-top: 1rem !important;
+  1162	    font-size: .95rem !important;
+  1163	    line-height: 1.55 !important;
+  1164	  }
+  1165	
+  1166	  .actions {
+  1167	    display: grid !important;
+  1168	    grid-template-columns: 1fr !important;
+  1169	    max-width: 360px !important;
+  1170	    gap: .75rem !important;
+  1171	    margin-top: 1.35rem !important;
+  1172	  }
+  1173	
+  1174	  .actions a {
+  1175	    width: 100% !important;
+  1176	    min-height: 46px !important;
+  1177	    border-radius: 999px !important;
+  1178	  }
+  1179	
+  1180	  .heroOverlay {
+  1181	    background:
+  1182	      linear-gradient(90deg, rgba(2,4,8,.92) 0%, rgba(2,4,8,.72) 48%, rgba(2,4,8,.35) 100%),
+  1183	      linear-gradient(180deg, rgba(0,0,0,.14), rgba(0,0,0,.74)) !important;
+  1184	  }
+  1185	
+  1186	  .operationCard {
+  1187	    display: none !important;
+  1188	  }
+  1189	}
+  1190	
+  1191	/* iPhone SE: compacto de verdad */
+  1192	@media (max-width: 430px) {
+  1193	  .hero {
+  1194	    min-height: 520px !important;
+  1195	    padding: 5.4rem 18px 2.6rem !important;
+  1196	  }
+  1197	
+  1198	  .heroContent h1 {
+  1199	    font-size: clamp(2rem, 10.5vw, 2.8rem) !important;
+  1200	    line-height: .96 !important;
+  1201	  }
+  1202	
+  1203	  .heroContent p {
+  1204	    font-size: .9rem !important;
+  1205	    line-height: 1.5 !important;
+  1206	  }
+  1207	
+  1208	  .actions {
+  1209	    max-width: 100% !important;
+  1210	  }
+  1211	
+  1212	  .trustBar {
+  1213	    grid-template-columns: 1fr 1fr !important;
+  1214	  }
+  1215	
+  1216	  .trustBar div {
+  1217	    padding: .85rem 14px !important;
+  1218	  }
+  1219	
+  1220	  .trustBar strong {
+  1221	    font-size: .68rem !important;
+  1222	  }
+  1223	
+  1224	  .trustBar small {
+  1225	    font-size: .72rem !important;

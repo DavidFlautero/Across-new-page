@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import RelatedServices from "@/app/servicios/_shared/RelatedServices";
-import HomeCorporateFinal from "@/components/sections/HomeCorporateFinal";
+import SectorLeadForm from "@/app/sectores/alimentacion-bebidas/SectorLeadForm";
 import styles from "./Servicio.module.css";
 
 type Locale = "es" | "en" | "zh";
@@ -954,11 +954,7 @@ export default function TransporteTerrestrePage() {
 
         <RelatedServices current="transporte-terrestre" locale={locale} />
 
-        <div className={styles.serviceFinalStack}>
-          <div className={styles.homeFinalContact}>
-            <HomeCorporateFinal />
-          </div>
-        </div>
+        <SectorLeadForm />
       </main>
 
       <div className={styles.mobileStickyCta} aria-label="Acciones rápidas de transporte terrestre">

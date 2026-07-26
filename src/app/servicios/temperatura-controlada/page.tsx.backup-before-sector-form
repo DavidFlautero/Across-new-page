@@ -8,17 +8,17 @@ import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import RelatedServices from "@/app/servicios/_shared/RelatedServices";
-import SectorLeadForm from "@/app/sectores/alimentacion-bebidas/SectorLeadForm";
-import styles from "./AlmacenDistribucion.module.css";
+import HomeCorporateFinal from "@/components/sections/HomeCorporateFinal";
+import styles from "./Servicio.module.css";
 
 type Locale = "es" | "en" | "zh";
 
 const copy = {
   "es": {
-    "heroEyebrow": "ALMACÉN Y DISTRIBUCIÓN",
-    "heroTitle": "Gestionamos su inventario con orden, velocidad y trazabilidad.",
-    "heroText": "Coordinamos almacenaje, preparación de pedidos, distribución y control operativo para empresas que necesitan stock visible, procesos ordenados y entregas coordinadas.",
-    "primaryCta": "Cotizar almacenaje",
+    "heroEyebrow": "TEMPERATURA CONTROLADA",
+    "heroTitle": "Protegemos su carga sensible con control térmico y trazabilidad.",
+    "heroText": "Coordinamos operaciones para mercancías que requieren temperatura controlada, monitoreo, protocolos claros y seguimiento operativo de origen a destino.",
+    "primaryCta": "Cotizar cadena de frío",
     "secondaryCta": "Hablar con un especialista",
     contactEyebrow: "CONTACTO DIRECTO",
     contactTitle: "Coordinemos su próxima operación internacional.",
@@ -27,156 +27,156 @@ const copy = {
     contactSecondary: "Cotizar ahora",
 
 
-    activeLabel: "Operación logística activa",
-    activeRoute: "Almacén → Cliente",
-    activeCargo: "Preparación y distribución",
+    activeLabel: "Operación refrigerada activa",
+    activeRoute: "Origen → Destino",
+    activeCargo: "Carga sensible",
     activeStatusLabel: "Estado:",
-    activeStatus: "En gestión",
-    activeEtaLabel: "Salida:",
-    activeEta: "Programada",
+    activeStatus: "Temperatura controlada",
+    activeEtaLabel: "Control:",
+    activeEta: "Monitoreo activo",
 
     trust: [
-      ["Almacenaje", "Stock controlado"],
-      ["Picking", "Preparación eficiente"],
-      ["Distribución", "Entrega coordinada"],
-      ["Trazabilidad", "Visibilidad operativa"],
+      ["Cadena de frío", "Control térmico"],
+      ["Carga sensible", "Pharma / alimentos"],
+      ["Monitoreo", "Trazabilidad operativa"],
+      ["Cumplimiento", "Protocolos especializados"],
     ],
 
-    overviewEyebrow: "GESTIÓN LOGÍSTICA",
-    overviewTitle: "Almacén y distribución sin interrupciones.",
-    overviewText: "Una operación eficiente requiere control de stock, preparación precisa, coordinación de salidas y seguimiento. Diseñamos soluciones para mejorar continuidad, visibilidad y respuesta logística.",
+    overviewEyebrow: "LOGÍSTICA SENSIBLE",
+    overviewTitle: "Control térmico, seguridad y trazabilidad para mercancías críticas.",
+    overviewText: "La carga con temperatura controlada exige planificación, equipos adecuados, seguimiento y protocolos claros. Diseñamos operaciones para proteger la integridad del producto.",
     overviewButton: "Rastrea tu carga",
 
-    stickyPrimary: "Cotizar almacén",
+    stickyPrimary: "Cotizar frío",
     stickySecondary: "Hablar ahora",
     stickySecondaryHref: "",
 
     preQuoteEyebrow: "ANTES DE COTIZAR",
-    preQuoteTitle: "La operación se define por stock, pedidos y frecuencia de salida.",
-    preQuoteText: "Revisamos volumen, rotación, tipo de mercancía, preparación requerida y canales de distribución para proponer una solución operativa viable.",
-    preQuoteCta: "Cotizar almacenaje",
+    preQuoteTitle: "La operación depende del producto, rango térmico y ruta.",
+    preQuoteText: "Revisamos tipo de mercancía, temperatura requerida, tiempo de tránsito, origen, destino y protocolo para proteger la integridad del producto.",
+    preQuoteCta: "Cotizar cadena de frío",
     preQuotePoints: [
-      ["Stock", "Volumen, referencias, rotación y condiciones de almacenamiento."],
-      ["Pedidos", "Picking, packing, etiquetado y preparación."],
-      ["Distribución", "Frecuencia de salida, destinos y nivel de servicio."],
+      ["Producto", "Pharma, alimentos, muestras o mercancía crítica."],
+      ["Temperatura", "Rango térmico, sensibilidad y tiempo de exposición."],
+      ["Control", "Monitoreo, protocolo y trazabilidad operativa."],
     ],
 
     "pillars": [
       [
-        "Control de stock",
-        "Gestión organizada de inventario, entradas, salidas y disponibilidad."
+        "Control de temperatura",
+        "Coordinación de rangos térmicos según producto, ruta y requerimientos."
       ],
       [
-        "Preparación de pedidos",
-        "Procesos de picking, packing y acondicionamiento según operación."
+        "Monitoreo operativo",
+        "Seguimiento de condiciones y avance durante la operación."
       ],
       [
-        "Distribución coordinada",
-        "Planificación de rutas y entregas para clientes o puntos de venta."
+        "Protocolos especializados",
+        "Procedimientos para mercancía sensible, pharma, alimentos o productos críticos."
       ],
       [
-        "Trazabilidad operativa",
-        "Visibilidad sobre movimientos, estados y tiempos de gestión."
+        "Entrega segura",
+        "Coordinación final para reducir riesgos y conservar la integridad de la carga."
       ]
     ],
-    "servicesEyebrow": "Nuestros servicios de almacén",
-    "servicesTitle": "Soluciones para ordenar, preparar y distribuir mercancía.",
+    "servicesEyebrow": "Nuestros servicios de temperatura",
+    "servicesTitle": "Soluciones para cargas sensibles que requieren control continuo.",
     "services": [
       [
-        "Almacenaje",
-        "Espacios y procesos para conservar mercancía bajo control."
+        "Transporte refrigerado",
+        "Movimientos con control térmico para productos sensibles."
       ],
       [
-        "Picking y packing",
-        "Preparación de pedidos con orden, velocidad y precisión."
+        "Carga pharma",
+        "Coordinación para productos sanitarios, médicos o farmacéuticos."
       ],
       [
-        "Distribución",
-        "Coordinación de entregas regionales, nacionales o dedicadas."
+        "Alimentos y perecederos",
+        "Operaciones para mercancías que requieren conservación y tiempos precisos."
       ],
       [
-        "Cross docking",
-        "Flujos rápidos para mercancía que necesita salida inmediata."
+        "Monitoreo de condiciones",
+        "Seguimiento operativo para mantener visibilidad sobre la carga."
       ],
       [
-        "Gestión de stock",
-        "Control operativo de inventario, entradas y salidas."
+        "Cadena de frío internacional",
+        "Soluciones multimodales para operaciones globales sensibles."
       ],
       [
-        "Operaciones B2B",
-        "Soluciones para empresas, retail, e-commerce y distribución comercial."
+        "Door to door",
+        "Coordinación completa desde retiro hasta entrega final."
       ]
     ],
-    "useCasesEyebrow": "Cuándo usar almacén y distribución",
-    "useCasesTitle": "Cuando el stock necesita convertirse en entrega.",
+    "useCasesEyebrow": "Cuándo usar temperatura controlada",
+    "useCasesTitle": "Cuando el producto depende del control térmico.",
     "useCases": [
       [
-        "E-commerce",
-        "Preparación y salida de pedidos online."
+        "Productos farmacéuticos",
+        "Operaciones para mercancía médica o sanitaria."
       ],
       [
-        "Retail",
-        "Distribución hacia tiendas, puntos de venta o clientes."
+        "Alimentos perecederos",
+        "Transporte para productos que requieren conservación."
       ],
       [
-        "Stock estacional",
-        "Gestión de picos de demanda y campañas."
+        "Cosmética sensible",
+        "Cargas que no deben exponerse a variaciones térmicas."
       ],
       [
-        "Mercancía importada",
-        "Recepción, control y distribución posterior."
+        "Muestras críticas",
+        "Envíos donde la estabilidad del producto es prioridad."
       ],
       [
-        "Operaciones B2B",
-        "Flujos para clientes corporativos y comerciales."
+        "Carga sanitaria",
+        "Operaciones con protocolos y trazabilidad."
       ],
       [
-        "Cross docking",
-        "Reducción de tiempos de permanencia en almacén."
+        "Distribución refrigerada",
+        "Movimientos programados con control operativo."
       ]
     ],
     "processEyebrow": "Nuestro proceso operativo",
-    "processTitle": "Una operación de almacén clara desde la recepción hasta la entrega.",
+    "processTitle": "Una operación térmica clara desde el primer contacto.",
     "process": [
       [
-        "Recepción",
-        "Coordinamos entrada, descarga e identificación de mercancía."
+        "Análisis del producto",
+        "Revisamos tipo de carga, rango térmico y sensibilidad."
       ],
       [
-        "Control de stock",
-        "Registramos disponibilidad, ubicación y estado operativo."
+        "Selección de solución",
+        "Definimos equipo, ruta y modalidad adecuada."
       ],
       [
-        "Preparación",
-        "Gestionamos picking, packing y acondicionamiento."
+        "Documentación",
+        "Coordinamos requisitos comerciales, sanitarios y operativos."
       ],
       [
-        "Plan de salida",
-        "Definimos distribución, rutas y prioridades."
+        "Preparación de operación",
+        "Gestionamos retiro, acondicionamiento y control inicial."
       ],
       [
         "Seguimiento",
-        "Monitoreamos estados, tiempos y entregas."
+        "Monitoreamos avance y condiciones operativas."
       ],
       [
         "Entrega final",
-        "Cerramos la operación con control y trazabilidad."
+        "Coordinamos recepción y cierre seguro."
       ]
     ],
-    "bandTitle": "Operaciones de almacén diseñadas para mantener la cadena en movimiento.",
-    "bandText": "Nuestro equipo coordina soluciones para empresas que necesitan control de stock, preparación eficiente y distribución confiable.",
+    "bandTitle": "Operaciones con temperatura controlada para cargas que no admiten variaciones.",
+    "bandText": "Nuestro equipo coordina soluciones para empresas que necesitan preservar producto, cumplir protocolos y mantener trazabilidad en operaciones sensibles.",
     "stats": [
       [
-        "Stock controlado",
-        "Visibilidad operativa"
+        "Control térmico",
+        "Rangos según producto"
       ],
       [
-        "Picking",
-        "Preparación precisa"
+        "Carga sensible",
+        "Pharma, alimentos y más"
       ],
       [
-        "Distribución",
-        "Entregas coordinadas"
+        "Trazabilidad",
+        "Seguimiento operativo"
       ],
       [
         "Soporte experto",
@@ -186,13 +186,13 @@ const copy = {
     "finalTitle": "Coordinemos su próxima operación internacional.",
     "finalText": "Hable con un especialista y reciba una solución logística adaptada a su carga, destino y urgencia.",
     "finalPrimary": "Hablar con un especialista",
-    "finalSecondary": "Cotizar almacenaje"
+    "finalSecondary": "Cotizar cadena de frío"
   },
   "en": {
-    "heroEyebrow": "WAREHOUSING AND DISTRIBUTION",
-    "heroTitle": "We manage your inventory with order, speed and traceability.",
-    "heroText": "We coordinate warehousing, order preparation, distribution and operational control for companies that need visible stock, organized processes and coordinated deliveries.",
-    "primaryCta": "Quote warehousing",
+    "heroEyebrow": "TEMPERATURE CONTROLLED CARGO",
+    "heroTitle": "We protect sensitive cargo with thermal control and traceability.",
+    "heroText": "We coordinate operations for goods that require controlled temperature, monitoring, clear protocols and operational tracking from origin to destination.",
+    "primaryCta": "Quote cold chain",
     "secondaryCta": "Talk to a specialist",
     contactEyebrow: "DIRECT CONTACT",
     contactTitle: "Let’s coordinate your next international operation.",
@@ -201,156 +201,156 @@ const copy = {
     contactSecondary: "Quote now",
 
 
-    activeLabel: "Active logistics operation",
-    activeRoute: "Warehouse → Client",
-    activeCargo: "Preparation and distribution",
+    activeLabel: "Active cold chain operation",
+    activeRoute: "Origin → Destination",
+    activeCargo: "Sensitive cargo",
     activeStatusLabel: "Status:",
-    activeStatus: "In progress",
-    activeEtaLabel: "Outbound:",
-    activeEta: "Scheduled",
+    activeStatus: "Temperature controlled",
+    activeEtaLabel: "Control:",
+    activeEta: "Active monitoring",
 
     trust: [
-      ["Warehousing", "Controlled stock"],
-      ["Picking", "Efficient preparation"],
-      ["Distribution", "Coordinated delivery"],
-      ["Traceability", "Operational visibility"],
+      ["Cold chain", "Thermal control"],
+      ["Sensitive cargo", "Pharma / food"],
+      ["Monitoring", "Operational traceability"],
+      ["Compliance", "Specialized protocols"],
     ],
 
-    overviewEyebrow: "LOGISTICS MANAGEMENT",
-    overviewTitle: "Warehousing and distribution without interruptions.",
-    overviewText: "An efficient operation requires stock control, precise preparation, outbound coordination and tracking. We design solutions to improve continuity, visibility and logistics response.",
-    overviewButton: "Track your shipment",
+    overviewEyebrow: "SENSITIVE LOGISTICS",
+    overviewTitle: "Thermal control, safety and traceability for critical goods.",
+    overviewText: "Temperature-controlled cargo requires planning, proper equipment, tracking and clear protocols. We design operations to protect product integrity.",
+    overviewButton: "Track your cargo",
 
-    stickyPrimary: "Quote storage",
+    stickyPrimary: "Quote cold",
     stickySecondary: "Talk now",
     stickySecondaryHref: "",
 
     preQuoteEyebrow: "BEFORE QUOTING",
-    preQuoteTitle: "The operation is defined by stock, orders and outbound frequency.",
-    preQuoteText: "We review volume, rotation, cargo type, preparation needs and distribution channels to propose a viable operational solution.",
-    preQuoteCta: "Quote warehousing",
+    preQuoteTitle: "The operation depends on product, temperature range and route.",
+    preQuoteText: "We review cargo type, required temperature, transit time, origin, destination and protocol to protect product integrity.",
+    preQuoteCta: "Quote cold chain",
     preQuotePoints: [
-      ["Stock", "Volume, SKUs, rotation and storage conditions."],
-      ["Orders", "Picking, packing, labeling and preparation."],
-      ["Distribution", "Outbound frequency, destinations and service level."],
+      ["Product", "Pharma, food, samples or critical goods."],
+      ["Temperature", "Thermal range, sensitivity and exposure time."],
+      ["Control", "Monitoring, protocol and operational traceability."],
     ],
 
     "pillars": [
       [
-        "Stock control",
-        "Organized management of inventory, inbound, outbound and availability."
+        "Temperature control",
+        "Coordination of thermal ranges according to product, route and requirements."
       ],
       [
-        "Order preparation",
-        "Picking, packing and conditioning processes according to the operation."
+        "Operational monitoring",
+        "Tracking of conditions and progress during the operation."
       ],
       [
-        "Coordinated distribution",
-        "Route and delivery planning for clients or points of sale."
+        "Specialized protocols",
+        "Procedures for sensitive goods, pharma, food or critical products."
       ],
       [
-        "Operational traceability",
-        "Visibility over movements, statuses and management times."
+        "Safe delivery",
+        "Final coordination to reduce risks and preserve cargo integrity."
       ]
     ],
-    "servicesEyebrow": "Our warehousing services",
-    "servicesTitle": "Solutions to store, prepare and distribute goods.",
+    "servicesEyebrow": "Our temperature services",
+    "servicesTitle": "Solutions for sensitive cargo requiring continuous control.",
     "services": [
       [
-        "Warehousing",
-        "Spaces and processes to keep goods under control."
+        "Refrigerated transport",
+        "Movements with thermal control for sensitive products."
       ],
       [
-        "Picking and packing",
-        "Order preparation with order, speed and precision."
+        "Pharma cargo",
+        "Coordination for healthcare, medical or pharmaceutical products."
       ],
       [
-        "Distribution",
-        "Regional, national or dedicated delivery coordination."
+        "Food and perishables",
+        "Operations for goods requiring preservation and precise timing."
       ],
       [
-        "Cross docking",
-        "Fast flows for goods requiring immediate dispatch."
+        "Condition monitoring",
+        "Operational tracking to maintain visibility over cargo."
       ],
       [
-        "Stock management",
-        "Operational control of inventory, inbound and outbound."
+        "International cold chain",
+        "Multimodal solutions for sensitive global operations."
       ],
       [
-        "B2B operations",
-        "Solutions for companies, retail, e-commerce and commercial distribution."
+        "Door to door",
+        "Complete coordination from pickup to final delivery."
       ]
     ],
-    "useCasesEyebrow": "When to use warehousing and distribution",
-    "useCasesTitle": "When stock needs to become delivery.",
+    "useCasesEyebrow": "When to use temperature control",
+    "useCasesTitle": "When the product depends on thermal control.",
     "useCases": [
       [
-        "E-commerce",
-        "Preparation and dispatch of online orders."
+        "Pharmaceutical products",
+        "Operations for medical or healthcare goods."
       ],
       [
-        "Retail",
-        "Distribution to stores, points of sale or clients."
+        "Perishable food",
+        "Transport for products requiring preservation."
       ],
       [
-        "Seasonal stock",
-        "Management of demand peaks and campaigns."
+        "Sensitive cosmetics",
+        "Cargo that should not be exposed to thermal variations."
       ],
       [
-        "Imported goods",
-        "Reception, control and later distribution."
+        "Critical samples",
+        "Shipments where product stability is a priority."
       ],
       [
-        "B2B operations",
-        "Flows for corporate and commercial clients."
+        "Healthcare cargo",
+        "Operations with protocols and traceability."
       ],
       [
-        "Cross docking",
-        "Reduction of warehouse dwell times."
+        "Refrigerated distribution",
+        "Scheduled movements with operational control."
       ]
     ],
     "processEyebrow": "Our operational process",
-    "processTitle": "A clear warehouse operation from reception to delivery.",
+    "processTitle": "A clear thermal operation from the first contact.",
     "process": [
       [
-        "Reception",
-        "We coordinate inbound, unloading and goods identification."
+        "Product analysis",
+        "We review cargo type, thermal range and sensitivity."
       ],
       [
-        "Stock control",
-        "We register availability, location and operational status."
+        "Solution selection",
+        "We define the proper equipment, route and modality."
       ],
       [
-        "Preparation",
-        "We manage picking, packing and conditioning."
+        "Documentation",
+        "We coordinate commercial, sanitary and operational requirements."
       ],
       [
-        "Dispatch plan",
-        "We define distribution, routes and priorities."
+        "Operation setup",
+        "We manage pickup, preparation and initial control."
       ],
       [
         "Tracking",
-        "We monitor statuses, times and deliveries."
+        "We monitor progress and operational conditions."
       ],
       [
         "Final delivery",
-        "We close the operation with control and traceability."
+        "We coordinate reception and secure closure."
       ]
     ],
-    "bandTitle": "Warehouse operations designed to keep the chain moving.",
-    "bandText": "Our team coordinates solutions for companies that need stock control, efficient preparation and reliable distribution.",
+    "bandTitle": "Temperature-controlled operations for cargo that cannot tolerate variations.",
+    "bandText": "Our team coordinates solutions for companies that need to preserve products, comply with protocols and maintain traceability in sensitive operations.",
     "stats": [
       [
-        "Controlled stock",
-        "Operational visibility"
+        "Thermal control",
+        "Ranges according to product"
       ],
       [
-        "Picking",
-        "Accurate preparation"
+        "Sensitive cargo",
+        "Pharma, food and more"
       ],
       [
-        "Distribution",
-        "Coordinated deliveries"
+        "Traceability",
+        "Operational tracking"
       ],
       [
         "Expert support",
@@ -360,13 +360,13 @@ const copy = {
     "finalTitle": "Let’s coordinate your next international operation.",
     "finalText": "Talk to a specialist and receive a logistics solution adapted to your cargo, destination and urgency.",
     "finalPrimary": "Talk to a specialist",
-    "finalSecondary": "Quote warehousing"
+    "finalSecondary": "Quote cold chain"
   },
   "zh": {
-    "heroEyebrow": "仓储与配送",
-    "heroTitle": "以秩序、速度和可追踪性管理您的库存。",
-    "heroText": "我们协调仓储、订单准备、配送和运营管控，帮助企业实现库存可视、 流程有序和交付协调。",
-    "primaryCta": "获取仓储报价",
+    "heroEyebrow": "温控货物",
+    "heroTitle": "通过温控和可追踪性保护您的敏感货物。",
+    "heroText": "我们协调需要温控、监控、明确协议和从始发地到目的地运营跟踪的货 物操作。",
+    "primaryCta": "获取冷链报价",
     "secondaryCta": "联系专家",
     contactEyebrow: "直接联系",
     contactTitle: "协调您的下一次国际物流操作。",
@@ -375,156 +375,156 @@ const copy = {
     contactSecondary: "立即报价",
 
 
-    activeLabel: "物流操作中",
-    activeRoute: "仓库 → 客户",
-    activeCargo: "备货与配送",
+    activeLabel: "冷链操作中",
+    activeRoute: "始发地 → 目的地",
+    activeCargo: "敏感货物",
     activeStatusLabel: "状态：",
-    activeStatus: "处理中",
-    activeEtaLabel: "出库：",
-    activeEta: "已安排",
+    activeStatus: "温控中",
+    activeEtaLabel: "管控：",
+    activeEta: "主动监控",
 
     trust: [
-      ["仓储", "库存管控"],
-      ["拣货", "高效准备"],
-      ["配送", "协调交付"],
-      ["可追踪性", "运营可视化"],
+      ["冷链", "温度管控"],
+      ["敏感货物", "医药 / 食品"],
+      ["监控", "运营可追踪"],
+      ["合规", "专业协议"],
     ],
 
-    overviewEyebrow: "物流管理",
-    overviewTitle: "不中断的仓储与配送。",
-    overviewText: "高效操作需要库存管控、精准准备、出库协调和跟踪。我们设计解决方案，以提升连续性、可视性和物流响应能力。",
+    overviewEyebrow: "敏感物流",
+    overviewTitle: "为关键货物提供温控、安全和可追踪性。",
+    overviewText: "温控货物需要规划、合适设备、跟踪和明确协议。我们设计操作以保护产品完整性。",
     overviewButton: "追踪货物",
 
-    stickyPrimary: "仓储报价",
+    stickyPrimary: "冷链报价",
     stickySecondary: "立即联系",
     stickySecondaryHref: "",
 
     preQuoteEyebrow: "报价前",
-    preQuoteTitle: "仓储操作取决于库存、订单和出库频率。",
-    preQuoteText: "我们会审核体量、周转、货物类型、准备需求和配送渠道，以提出可行的运营方案。",
-    preQuoteCta: "获取仓储报价",
+    preQuoteTitle: "操作取决于产品、温度范围和路线。",
+    preQuoteText: "我们会审核货物类型、所需温度、运输时间、始发地、目的地和操作协议，以保护产品完整性。",
+    preQuoteCta: "获取冷链报价",
     preQuotePoints: [
-      ["库存", "体量、SKU、周转和存储条件。"],
-      ["订单", "拣货、包装 、贴标和准备。"],
-      ["配送", "出库频率、目的地和服务水平。"],
+      ["产品", "医药、食品、样品或关键货物。"],
+      ["温度", "温度范围、敏感性和暴露时间。"],
+      ["管控", "监控、协议和运营可追踪性。"],
     ],
 
     "pillars": [
       [
-        "库存控制",
-        "有序管理库存、入库、出库和可用性。"
+        "温度控制",
+        "根据产品、路线和要求协调温度范围。"
       ],
       [
-        "订单准备",
-        "根据操作进行拣货、包装和处理。"
+        "运营监控",
+        "跟踪操作过程中的条件和进度。"
       ],
       [
-        "配送协调",
-        "为客户或销售点规划路线和交付。"
+        "专业协议",
+        "适用于敏感、医药、食品或关键产品的流程。"
       ],
       [
-        "运营可追溯",
-        "对移动、状态和管理时间保持可视化。"
+        "安全交付",
+        "协调最终交付以降低风险并保持货物完整。"
       ]
     ],
-    "servicesEyebrow": "我们的仓储服务",
-    "servicesTitle": "用于存储、准备和配送货物的解决方案。",
+    "servicesEyebrow": "我们的温控服务",
+    "servicesTitle": "为需要持续控制的敏感货物提供解决方案。",
     "services": [
       [
-        "仓储",
-        "保持货物受控的空间和流程。"
+        "冷藏运输",
+        "为敏感产品提供温控运输。"
       ],
       [
-        "拣货与包装",
-        "有序、快速、准确地准备订单。"
+        "医药货物",
+        "为医疗、卫生或制药产品提供协调。"
       ],
       [
-        "配送",
-        "区域、全国或专属交付协调。"
+        "食品与易腐品",
+        "为需要保存和准时运输的货物提供操作。"
       ],
       [
-        "越库",
-        "为需要快速出库的货物提供快速流转。"
+        "条件监控",
+        "通过运营跟踪保持货物可视化。"
       ],
       [
-        "库存管理",
-        "库存、入库和出库的运营控制。"
+        "国际冷链",
+        "为全球敏感业务提供多式联运方案。"
       ],
       [
-        "B2B 运营",
-        "面向企业、零售、电商和商业配送的解决方案。"
+        "门到门",
+        "从提货到最终交付的完整协调。"
       ]
     ],
-    "useCasesEyebrow": "何时使用仓储与配送",
-    "useCasesTitle": "当库存需要转化为交付时。",
+    "useCasesEyebrow": "何时使用温控",
+    "useCasesTitle": "当产品依赖温度控制时。",
     "useCases": [
       [
-        "电商",
-        "在线订单准备和出库。"
+        "药品",
+        "医疗或卫生货物操作。"
       ],
       [
-        "零售",
-        "配送到门店、销售点或客户。"
+        "易腐食品",
+        "需要保存的产品运输。"
       ],
       [
-        "季节性库存",
-        "管理需求高峰和活动。"
+        "敏感化妆品",
+        "不应暴露于温度变化的货物。"
       ],
       [
-        "进口货物",
-        "接收、控制和后续配送。"
+        "关键样品",
+        "产品稳定性优先的运输。"
       ],
       [
-        "B2B 运营",
-        "企业和商业客户流程。"
+        "卫生货物",
+        "带有协议和可追溯性的操作。"
       ],
       [
-        "越库",
-        "减少货物在仓库停留时间。"
+        "冷藏配送",
+        "带有运营控制的计划运输。"
       ]
     ],
     "processEyebrow": "我们的运营流程",
-    "processTitle": "从接收到交付，仓储操作清晰可控。",
+    "processTitle": "从首次联系开始，温控操作清晰可控。",
     "process": [
       [
-        "接收",
-        "协调入库、卸货和货物识别。"
+        "产品分析",
+        "审核货物类型、温度范围和敏感性。"
       ],
       [
-        "库存控制",
-        "记录可用性、位置和运营状态。"
+        "方案选择",
+        "确定合适设备、路线和运输方式。"
       ],
       [
-        "准备",
-        "管理拣货、包装和处理。"
+        "文件管理",
+        "协调商业、卫生和运营要求。"
       ],
       [
-        "出库计划",
-        "定义配送、路线和优先级。"
+        "操作准备",
+        "管理提货、准备和初始控制。"
       ],
       [
         "跟踪",
-        "监控状态、时间和交付。"
+        "监控进度和运营条件。"
       ],
       [
         "最终交付",
-        "通过控制和可追溯关闭操作。"
+        "协调收货和安全关闭。"
       ]
     ],
-    "bandTitle": "为保持供应链流动而设计的仓储运营。",
-    "bandText": "我们的团队为需要库存控制、高效准备和可靠配送的企业协调解决方案。",
+    "bandTitle": "为不能承受温度波动的货物提供温控操作。",
+    "bandText": "我们的团队为需要保护产品、遵守协议并保持可追溯性的企业协调敏感操作。",
     "stats": [
       [
-        "库存受控",
-        "运营可视化"
+        "温度控制",
+        "根据产品设定范围"
       ],
       [
-        "拣货",
-        "准确准备"
+        "敏感货物",
+        "医药、食品等"
       ],
       [
-        "配送",
-        "协调交付"
+        "可追溯性",
+        "运营跟踪"
       ],
       [
         "专家支持",
@@ -534,7 +534,7 @@ const copy = {
     "finalTitle": "协调您的下一次国际物流操作。",
     "finalText": "联系专家，根据您的货物、目的地和紧急程度获得合适的物流方案。",
     "finalPrimary": "联系专家",
-    "finalSecondary": "获取仓储报价"
+    "finalSecondary": "获取冷链报价"
   }
 } satisfies Record<Locale, any>;
 
@@ -777,7 +777,7 @@ function Icon({ name }: { name: IconName }) {
   }
 }
 
-export default function AlmacenDistribucionPage() {
+export default function TemperaturaControladaPage() {
   const [locale, setLocale] = useState<Locale>("es");
 
   useEffect(() => {
@@ -825,10 +825,10 @@ export default function AlmacenDistribucionPage() {
       <Header />
 
       <main className={styles.page}>
-        <section className={styles.hero} data-service-name="almacen-distribucion" data-service-hero-home="true"
+        <section className={styles.hero} data-service-name="temperatura-controlada" data-service-hero-home="true"
       >
           <Image
-            src="/images/almacenHero.png"
+            src="/images/temperaturacontrolada.png"
             alt={t.heroTitle}
             fill
             priority
@@ -837,7 +837,7 @@ export default function AlmacenDistribucionPage() {
           />
 
           <Image
-            src="/images/almacen.png"
+            src="/images/controltemp.png"
             alt={t.heroTitle}
             fill
             priority
@@ -877,7 +877,7 @@ export default function AlmacenDistribucionPage() {
             </div>
           </div>
 
-          <div className={styles.commandBar} data-service-trust="almacen-distribucion">
+          <div className={styles.commandBar} data-service-trust="temperatura-controlada">
             {t.trust.map(([title, text]: string[], index: number) => {
               const icons: IconName[] = ["timer", "shield", "document", "tracking"];
 
@@ -1039,7 +1039,7 @@ export default function AlmacenDistribucionPage() {
                         : "我们根据货物紧急程度协调路线、文件、时间和操作跟踪。"}
                   </p>
 
-                  <Link href="/cotizacion?servicio=almacen-distribucion">
+                  <Link href="/cotizacion?servicio=temperatura-controlada">
                     {locale === "es" ? "Cotizar esta modalidad" : locale === "en" ? "Quote this option" : "获取报价"}
                   </Link>
                 </div>
@@ -1050,7 +1050,7 @@ export default function AlmacenDistribucionPage() {
             <div>
               <strong>
                 {locale === "es"
-                  ? "¿Tenés una operación de almacén y distribución en curso?"
+                  ? "¿Tenés una operación de temperatura controlada en curso?"
                   : locale === "en"
                     ? "Do you have an air operation in progress?"
                     : "您是否有正在进行的空运操作？"}
@@ -1065,11 +1065,11 @@ export default function AlmacenDistribucionPage() {
             </div>
 
             <div>
-              <Link href="/cotizacion?servicio=almacen-distribucion">
-                {locale === "es" ? "Solicitar cotización de almacén y distribución" : locale === "en" ? "Request air quote" : "申请空运报价"}
+              <Link href="/cotizacion?servicio=temperatura-controlada">
+                {locale === "es" ? "Solicitar cotización de temperatura controlada" : locale === "en" ? "Request air quote" : "申请空运报价"}
               </Link>
 
-              <Link href="/contacto?servicio=almacen-distribucion">
+              <Link href="/contacto?servicio=temperatura-controlada">
                 {locale === "es" ? "Hablar con asesor" : locale === "en" ? "Talk to an advisor" : "联系顾问"}
               </Link>
             </div>
@@ -1080,7 +1080,7 @@ export default function AlmacenDistribucionPage() {
         <section className={styles.darkBand} data-mobile-hide-after-cert="true">
           <div className={styles.darkBandImage}>
             <Image
-              src="/images/almacen/almacensegunda.png"
+              src="/images/transporte-cima/controltemp.png"
               alt={t.bandTitle}
               fill
               sizes="(max-width: 900px) 100vw, 42vw"
@@ -1107,11 +1107,7 @@ export default function AlmacenDistribucionPage() {
           </div>
         </section>
 
-
-
-
-
-        <section className={styles.faqSection} data-almacen-distribucion-faq-section="true">
+        <section className={styles.faqSection} data-temperatura-controlada-faq-section="true">
           <div className={styles.faqHead}>
             <span className={styles.eyebrow}>
               {locale === "es" ? "Preguntas frecuentes" : locale === "en" ? "Frequently asked questions" : "常见问题"}
@@ -1119,70 +1115,70 @@ export default function AlmacenDistribucionPage() {
 
             <h2>
               {locale === "es"
-                ? "Dudas frecuentes sobre almacén y distribución."
+                ? "Dudas frecuentes sobre logística con temperatura controlada."
                 : locale === "en"
-                  ? "Dudas frecuentes sobre almacén y distribución."
-                  : "Dudas frecuentes sobre almacén y distribución."}
+                  ? "Common questions about temperature-controlled logistics."
+                  : "关于温控物流的常见问题。"}
             </h2>
 
             <p>
               {locale === "es"
-                ? "Resolvemos las principales dudas antes de coordinar almacenamiento, preparación, distribución, inventario y entrega."
+                ? "Resolvemos las principales dudas antes de coordinar una carga sensible a temperatura: rango térmico, embalaje, trazabilidad, documentación y entrega."
                 : locale === "en"
-                  ? "Resolvemos las principales dudas antes de coordinar almacenamiento, preparación, distribución, inventario y entrega."
-                  : "Resolvemos las principales dudas antes de coordinar almacenamiento, preparación, distribución, inventario y entrega."}
+                  ? "We answer the main questions before coordinating temperature-sensitive cargo: temperature range, packaging, traceability, documentation and delivery."
+                  : "我们解答温控货物运输前的主要问题：温度范围、包装、可追溯性、文件和交付。"}
             </p>
           </div>
 
           <div className={styles.faqList}>
             {[
               [
-                locale === "es" ? "¿Qué servicios incluye almacén y distribución?" : locale === "en" ? "¿Qué servicios incluye almacén y distribución?" : "¿Qué servicios incluye almacén y distribución?",
+                locale === "es" ? "¿Qué cargas requieren temperatura controlada?" : locale === "en" ? "What cargo requires temperature control?" : "哪些货物需要温控？",
                 locale === "es"
-                  ? "Incluye recepción, almacenamiento, control de inventario, preparación de pedidos, distribución y coordinación de entregas."
+                  ? "Productos farmacéuticos, sanitarios, alimentos, perecederos, químicos sensibles, cosmética y mercancía que requiere un rango térmico estable."
                   : locale === "en"
-                    ? "Incluye recepción, almacenamiento, control de inventario, preparación de pedidos, distribución y coordinación de entregas."
-                    : "Incluye recepción, almacenamiento, control de inventario, preparación de pedidos, distribución y coordinación de entregas."
+                    ? "Pharmaceuticals, healthcare products, food, perishables, sensitive chemicals, cosmetics and goods that require a stable temperature range."
+                    : "药品、医疗产品、食品、易腐品、敏感化学品、化妆品以及需要稳定温度范围的货物。"
               ],
               [
-                locale === "es" ? "¿Across puede coordinar distribución nacional?" : locale === "en" ? "¿Across puede coordinar distribución nacional?" : "¿Across puede coordinar distribución nacional?",
+                locale === "es" ? "¿Cómo se define el rango de temperatura?" : locale === "en" ? "How is the temperature range defined?" : "温度范围如何确定？",
                 locale === "es"
-                  ? "Sí. Coordinamos entregas regionales o nacionales según volumen, frecuencia, destino y requisitos operativos."
+                  ? "Se define según el producto, ficha técnica, requisitos del fabricante, embalaje, normativa y condiciones de tránsito."
                   : locale === "en"
-                    ? "Sí. Coordinamos entregas regionales o nacionales según volumen, frecuencia, destino y requisitos operativos."
-                    : "Sí. Coordinamos entregas regionales o nacionales según volumen, frecuencia, destino y requisitos operativos."
+                    ? "It is defined according to the product, technical sheet, manufacturer requirements, packaging, regulations and transit conditions."
+                    : "温度范围根据产品、技术资料、制造商要求、包装、法规和运输条件确定。"
               ],
               [
-                locale === "es" ? "¿Puedo integrar almacenamiento con transporte internacional?" : locale === "en" ? "¿Puedo integrar almacenamiento con transporte internacional?" : "¿Puedo integrar almacenamiento con transporte internacional?",
+                locale === "es" ? "¿Se puede hacer seguimiento de la cadena de frío?" : locale === "en" ? "Can the cold chain be tracked?" : "冷链可以跟踪吗？",
                 locale === "es"
-                  ? "Sí. Podemos conectar almacenamiento, aduanas, transporte internacional y distribución final en un mismo flujo operativo."
+                  ? "Sí. Coordinamos seguimiento operativo y trazabilidad de hitos críticos para mantener visibilidad durante la operación."
                   : locale === "en"
-                    ? "Sí. Podemos conectar almacenamiento, aduanas, transporte internacional y distribución final en un mismo flujo operativo."
-                    : "Sí. Podemos conectar almacenamiento, aduanas, transporte internacional y distribución final en un mismo flujo operativo."
+                    ? "Yes. We coordinate operational tracking and traceability of critical milestones to maintain visibility during the operation."
+                    : "可以。我们协调关键节点的操作跟踪和可追溯性，以保持运输过程可视化。"
               ],
               [
-                locale === "es" ? "¿Qué información necesito para cotizar?" : locale === "en" ? "¿Qué información necesito para cotizar?" : "¿Qué información necesito para cotizar?",
+                locale === "es" ? "¿Across coordina transporte internacional con temperatura controlada?" : locale === "en" ? "Does Across coordinate international temperature-controlled transport?" : "Across 是否协调国际温控运输？",
                 locale === "es"
-                  ? "Volumen, tipo de mercancía, rotación, ubicación, frecuencia de despacho, destinos y servicios requeridos."
+                  ? "Sí. Coordinamos operaciones internacionales con proveedores, documentación, aduanas, manipulación y entrega final."
                   : locale === "en"
-                    ? "Volumen, tipo de mercancía, rotación, ubicación, frecuencia de despacho, destinos y servicios requeridos."
-                    : "Volumen, tipo de mercancía, rotación, ubicación, frecuencia de despacho, destinos y servicios requeridos."
+                    ? "Yes. We coordinate international operations with providers, documentation, customs, handling and final delivery."
+                    : "是的。我们协调国际操作，包括供应商、文件、清关、操作和最终交付。"
               ],
               [
-                locale === "es" ? "¿Se puede controlar el inventario?" : locale === "en" ? "¿Se puede controlar el inventario?" : "¿Se puede controlar el inventario?",
+                locale === "es" ? "¿Qué información necesito para cotizar?" : locale === "en" ? "What information is needed for a quote?" : "报价需要哪些信息？",
                 locale === "es"
-                  ? "Sí. Coordinamos procesos de control, preparación y trazabilidad operativa según el tipo de mercancía."
+                  ? "Producto, volumen, peso, origen, destino, rango de temperatura, embalaje, fecha estimada y requisitos documentales."
                   : locale === "en"
-                    ? "Sí. Coordinamos procesos de control, preparación y trazabilidad operativa según el tipo de mercancía."
-                    : "Sí. Coordinamos procesos de control, preparación y trazabilidad operativa según el tipo de mercancía."
+                    ? "Product, volume, weight, origin, destination, temperature range, packaging, estimated date and documentation requirements."
+                    : "产品、体积、重量、起点、目的地、温度范围、包装、预计日期和文件要求。"
               ],
               [
-                locale === "es" ? "¿Pueden preparar pedidos o entregas finales?" : locale === "en" ? "¿Pueden preparar pedidos o entregas finales?" : "¿Pueden preparar pedidos o entregas finales?",
+                locale === "es" ? "¿Qué pasa si la carga es farmacéutica o sanitaria?" : locale === "en" ? "What if the cargo is pharmaceutical or healthcare-related?" : "如果货物是药品或医疗产品怎么办？",
                 locale === "es"
-                  ? "Sí. Podemos coordinar preparación, consolidación, despacho y entrega final según las necesidades de la operación."
+                  ? "Revisamos requisitos de manipulación, documentación, trazabilidad y condiciones de transporte para reducir riesgos operativos."
                   : locale === "en"
-                    ? "Sí. Podemos coordinar preparación, consolidación, despacho y entrega final según las necesidades de la operación."
-                    : "Sí. Podemos coordinar preparación, consolidación, despacho y entrega final según las necesidades de la operación."
+                    ? "We review handling, documentation, traceability and transport conditions to reduce operational risks."
+                    : "我们审核操作、文件、可追溯性和运输条件，以降低操作风险。"
               ]
             ].map(([question, answer]) => (
               <details className={styles.faqItem} key={question}>
@@ -1199,29 +1195,45 @@ export default function AlmacenDistribucionPage() {
           </div>
         </section>
 
-<RelatedServices current="almacen-distribucion" locale={locale} />
 
-        <SectorLeadForm />
+
+
+
+<RelatedServices current="temperatura-controlada" locale={locale} />
 
         <div className={styles.aereoFinalStack}>
+          <div className={styles.homeFinalContact}>
+            <HomeCorporateFinal />
+          </div>
+
           <Footer />
         </div>
 
       </main>
 
-      <div className={styles.mobileStickyCta} aria-label="Acciones rápidas de almacén y distribución">
-        <Link href="/cotizacion?servicio=almacen-distribucion">
+      <div className={styles.mobileStickyCta} aria-label="Acciones rápidas de temperatura controlada">
+        <Link href="/cotizacion?servicio=temperatura-controlada">
           SOLICITAR COTIZACIÓN
         </Link>
 
-        <Link href="/contacto?servicio=almacen-distribucion">
+        <Link href="/contacto?servicio=temperatura-controlada">
           HABLAR CON ASESOR
         </Link>
       </div>
 
 
 
+      <div className={styles.mobileStickyCta} aria-label="Acciones rápidas">
+        <Link href="/cotizacion?servicio=temperatura-controlada">
+          {t.stickyPrimary}
+        </Link>
 
-</div>
+        <Link href={t.stickySecondaryHref || "/contacto?servicio=temperatura-controlada"}>
+          {t.stickySecondary}
+        </Link>
+      </div>
+
+      
+    </div>
   );
 }

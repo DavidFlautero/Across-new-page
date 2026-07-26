@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Certifications from "@/components/sections/Certifications";
 import RelatedServices from "@/app/servicios/_shared/RelatedServices";
-import HomeCorporateFinal from "@/components/sections/HomeCorporateFinal";
+import SectorLeadForm from "@/app/sectores/alimentacion-bebidas/SectorLeadForm";
 import styles from "./CargasEspeciales.module.css";
 
 type Locale = "es" | "en" | "zh";
@@ -1033,11 +1033,9 @@ export default function CargasEspecialesPage() {
 
 <RelatedServices current="cargas-especiales" locale={locale} />
 
-        <div className={styles.aereoFinalStack}>
-          <div className={styles.homeFinalContact}>
-            <HomeCorporateFinal />
-          </div>
+        <SectorLeadForm />
 
+        <div className={styles.aereoFinalStack}>
           <Footer />
         </div>
 
