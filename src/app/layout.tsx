@@ -1,4 +1,5 @@
 import "./globals.css";
+import "./service-tablet-fix.css";
 import CookieConsent from "@/components/legal/CookieConsent";
 import HeaderScrollClass from "@/components/layout/HeaderScrollClass";
 import { Manrope, Inter_Tight } from "next/font/google";
