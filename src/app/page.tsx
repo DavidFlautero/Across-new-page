@@ -7,10 +7,10 @@ import HomeTabletHeroButtonsFixer from "@/components/HomeTabletHeroButtonsFixer"
 
 export default function HomePage() {
   return (
-    <div className="page-shell homePageShell">
+    <div className="page-shell">
       <Header />
 
-      <main className="homeMain" style={{ background: "#F3EFE8" }}>
+      <main style={{ background: "#F3EFE8" }}>
         <Hero />
         <HomeCorporateFinal />
         <HomeTabletHeroButtonsFixer />

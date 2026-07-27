@@ -25,7 +25,7 @@ const copy = {
     overviewEyebrow: "Compromiso ambiental",
     overviewTitle: "Tecnología, multimodalidad y reducción de impacto en cada proyecto.",
     overviewText: "Buscamos alternativas operativas que ayuden a reducir emisiones, optimizar rutas y mejorar la eficiencia logística.",
-    overviewButton: "Conocer soluciones",
+    overviewButton: "Cotizar mi operación",
     servicesEyebrow: "Ejes sostenibles",
     servicesTitle: "Nuestra sostenibilidad se construye desde la operación.",
     useCasesEyebrow: "Impacto responsable",
@@ -603,7 +603,7 @@ export default function SostenibilidadPage() {
             <span className={styles.eyebrow}>{t.overviewEyebrow}</span>
             <h2>{t.overviewTitle}</h2>
             <p>{t.overviewText}</p>
-            <Link href="/contacto">{t.overviewButton}</Link>
+            <Link href="/cotizacion">{t.overviewButton}</Link>
           </div>
 
           <div className={styles.pillars}>

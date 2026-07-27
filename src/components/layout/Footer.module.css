@@ -945,42 +945,222 @@
 
 /* END FOOTER REMOVE NAV LINK PILL FINAL */
 
+/* FOOTER DESKTOP ALIGNMENT ONLY START */
 
-/* === FOOTER BOTTOM CENTER STACK FINAL === */
+/*
+ * Únicamente organización del footer desktop.
+ * No modifica colores, fondos, bordes ni tipografía.
+ */
+@media (min-width: 1101px) {
+  .footer {
+    padding:
+      clamp(2rem, 4vw, 3.5rem)
+      5vw
+      1rem !important;
+  }
 
-/* Última línea del footer: copyright centrado y Across Logistics debajo */
-.footer > :last-child {
-  width: 100% !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: .28rem !important;
-  margin-top: 1rem !important;
-  padding-top: .65rem !important;
-  text-align: center !important;
-}
+  .footer > .inner {
+    width: min(1380px, 100%) !important;
+    max-width: 1380px !important;
 
-.footer > :last-child > * {
-  margin: 0 auto !important;
-  text-align: center !important;
-  justify-self: center !important;
-  align-self: center !important;
-}
+    display: block !important;
 
-.footer > :last-child a,
-.footer > :last-child span,
-.footer > :last-child p,
-.footer > :last-child small {
-  text-align: center !important;
-}
+    margin: 0 auto !important;
+    padding: 0 !important;
 
-@media (max-width: 900px) {
-  .footer > :last-child {
-    gap: .22rem !important;
-    margin-top: .8rem !important;
-    padding-top: .55rem !important;
+    text-align: initial !important;
+  }
+
+  .footer > .inner > .top {
+    width: 100% !important;
+
+    display: grid !important;
+    grid-template-columns:
+      minmax(180px, 220px)
+      minmax(300px, 2.1fr)
+      repeat(4, minmax(130px, 1fr)) !important;
+
+    gap: clamp(1.1rem, 2vw, 2rem) !important;
+
+    align-items: start !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .footer .brand {
+    min-width: 0 !important;
+    width: auto !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+
+    gap: .95rem !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    text-align: left !important;
+  }
+
+  .footer .brand img {
+    width: min(180px, 100%) !important;
+    height: auto !important;
+
+    margin: 0 !important;
+  }
+
+  .footer .socials {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+
+    justify-content: flex-start !important;
+    align-items: center !important;
+
+    gap: .55rem !important;
+
+    margin: 0 !important;
+  }
+
+  .footer .email {
+    width: auto !important;
+
+    display: inline-block !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    text-align: left !important;
+  }
+
+  .footer .top > .section {
+    min-width: 0 !important;
+    width: 100% !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+
+    gap: .65rem !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    text-align: left !important;
+  }
+
+  .footer .section h3 {
+    width: fit-content !important;
+    min-height: 0 !important;
+
+    display: block !important;
+
+    margin: 0 0 .35rem !important;
+
+    text-align: left !important;
+    cursor: default !important;
+  }
+
+  .footer .section h3::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  .footer .sectionContent,
+  .footer .section.open .sectionContent {
+    width: 100% !important;
+    max-height: none !important;
+
+    display: block !important;
+
+    overflow: visible !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .footer .officesGrid {
+    width: 100% !important;
+
+    display: grid !important;
+    grid-template-columns:
+      repeat(2, minmax(115px, 1fr)) !important;
+
+    gap: .55rem .9rem !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .footer .officesGrid p {
+    min-width: 0 !important;
+
+    display: block !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    text-align: left !important;
+  }
+
+  .footer .officesGrid strong,
+  .footer .officesGrid span {
+    display: block !important;
+    text-align: left !important;
+  }
+
+  .footer .linksList {
+    width: 100% !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+
+    gap: .48rem !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .footer .linksList a {
+    width: auto !important;
+    min-height: 0 !important;
+
+    display: block !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    text-align: left !important;
+  }
+
+  .footer > .inner > .bottom {
+    width: 100% !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: .28rem !important;
+
+    margin:
+      clamp(1.6rem, 3vw, 2.4rem)
+      0
+      0 !important;
+
+    padding-top: 1rem !important;
+
+    text-align: center !important;
+  }
+
+  .footer > .inner > .bottom > * {
+    margin: 0 auto !important;
+    text-align: center !important;
   }
 }
 
-/* END FOOTER BOTTOM CENTER STACK FINAL */
+/* FOOTER DESKTOP ALIGNMENT ONLY END */
+

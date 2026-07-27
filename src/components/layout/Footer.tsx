@@ -261,7 +261,23 @@ export default function Footer() {
             <Image src="/images/logo-ACROSS-Blanco.svg" alt="Across Logistics" width={210} height={64} />
             <div className={styles.socials}>
               {socials.map(([href, label]) => (
-                <a key={href} href={href} target="_blank" rel="noopener noreferrer">{label}</a>
+                <a
+                  key={href}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={
+                    label === "in"
+                      ? "LinkedIn"
+                      : label === "fb"
+                        ? "Facebook"
+                        : label === "ig"
+                          ? "Instagram"
+                          : "X"
+                  }
+                >
+                  {label}
+                </a>
               ))}
             </div>
             <a className={styles.email} href="mailto:info@acrosslogistics.com">

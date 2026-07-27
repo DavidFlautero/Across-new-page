@@ -130,7 +130,7 @@ const copy = {
     finalText:
       "Hable con un especialista y reciba una solución logística adaptada a su carga, destino y urgencia.",
     finalPrimary: "Hablar con un especialista",
-    finalSecondary: "Cotizar carga marítima",
+    finalSecondary: "Cotizar mi operación",
   },
 
   en: {
@@ -249,7 +249,7 @@ const copy = {
     finalText:
       "Talk to a specialist and receive a logistics solution adapted to your cargo, destination and urgency.",
     finalPrimary: "Talk to a specialist",
-    finalSecondary: "Quote ocean freight",
+    finalSecondary: "Request a detailed quote",
   },
 
   zh: {
@@ -368,7 +368,7 @@ const copy = {
     finalText:
       "联系专家，根据您的货物、目的地和紧急程度获得合适的物流方案。",
     finalPrimary: "联系专家",
-    finalSecondary: "获取海运报价",
+    finalSecondary: "获取详细报价",
   },
 } satisfies Record<Locale, any>;
 
@@ -939,8 +939,8 @@ export default function TransporteMaritimoPage() {
             </div>
 
             <div className={styles.darkBandActions}>
-              <Link href="/cotizacion">{t.finalPrimary}</Link>
-              <Link href="/contacto">{t.finalSecondary}</Link>
+              <Link href="#solicitar-propuesta">{t.finalPrimary}</Link>
+              <Link href="/cotizacion?servicio=transporte-maritimo">{t.finalSecondary}</Link>
             </div>
           </div>
         </section>
