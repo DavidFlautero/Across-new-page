@@ -851,32 +851,16 @@ export default function CargasEspecialesPage() {
 
           <div className={styles.processAccordionList}>
             {t.process.map(([title, text]: string[], index: number) => (
-              <details className={`${styles.processAccordionCard} aereoProcessCard`} key={title}>
-                <summary className={`${styles.processAccordionSummary} aereoProcessSummary`}>
+              <article className={`${styles.processAccordionCard} aereoProcessCard`} key={title}>
+                <div className={`${styles.processAccordionSummary} aereoProcessSummary`}>
                   <span className={styles.processAccordionNumber}>{index + 1}</span>
 
                   <span className={`${styles.processAccordionTitle} aereoProcessTitle`}>
                     <strong>{title}</strong>
                     <small>{text}</small>
                   </span>
-
-                  <span className={`${styles.processAccordionIcon} aereoProcessIcon`} aria-hidden="true" />
-                </summary>
-
-                <div className={`${styles.processAccordionBody} aereoProcessBody`}>
-                  <p>
-                    {locale === "es"
-                      ? "Coordinamos ruta, documentación, tiempos y seguimiento operativo según la urgencia de la carga."
-                      : locale === "en"
-                        ? "We coordinate route, documentation, timing and operational tracking according to cargo urgency."
-                        : "我们根据货物紧急程度协调路线、文件、时间和操作跟踪。"}
-                  </p>
-
-                  <Link href="/cotizacion?servicio=cargas-especiales">
-                    {locale === "es" ? "Cotizar esta modalidad" : locale === "en" ? "Quote this option" : "获取报价"}
-                  </Link>
-                </div>
-              </details>
+</div>
+              </article>
             ))}          </div>
 
           <div className={styles.processAccordionActions}>

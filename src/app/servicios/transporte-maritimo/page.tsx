@@ -654,6 +654,34 @@ export default function TransporteMaritimoPage() {
 
   const t = copy[locale];
 
+  const processBodies = {
+    es: [
+      "Evaluamos volumen, peso, tipo de mercancía, Incoterm, origen, destino y requisitos especiales para definir correctamente la operación.",
+      "Comparamos puertos, navieras, frecuencias, tiempos de tránsito y alternativas FCL, LCL o proyecto para seleccionar la ruta más conveniente.",
+      "Revisamos factura comercial, packing list, instrucciones del BL, permisos, certificados y documentación aduanera antes de la salida.",
+      "Confirmamos espacio, booking, cut-off, retiro de la carga, ingreso a terminal y salida efectiva con la naviera seleccionada.",
+      "Controlamos transbordos, hitos del embarque, ETA, posibles incidencias y actualizaciones durante todo el tránsito marítimo.",
+      "Coordinamos llegada a puerto, liberación documental, aduana, transporte terrestre y entrega final en el destino acordado."
+    ],
+    en: [
+      "We evaluate volume, weight, cargo type, Incoterm, origin, destination and special requirements to define the operation correctly.",
+      "We compare ports, carriers, frequencies, transit times and FCL, LCL or project alternatives to select the most suitable route.",
+      "We review the commercial invoice, packing list, BL instructions, permits, certificates and customs documentation before departure.",
+      "We confirm space, booking, cut-off, cargo pickup, terminal entry and actual departure with the selected carrier.",
+      "We monitor transshipments, shipment milestones, ETA, potential incidents and updates throughout the ocean transit.",
+      "We coordinate port arrival, document release, customs clearance, road transport and final delivery at the agreed destination."
+    ],
+    zh: [
+      "我们评估货物体积、重量、类型、贸易条款、起点、目的地及特殊要求，以正确确定运输方案。",
+      "我们比较港口、船公司、班次、运输时间以及整柜、拼箱或项目货方案，选择最合适的路线。",
+      "我们在离港前审核商业发票、装箱单、提单指示、许可证、证书和海关文件。",
+      "我们确认舱位、订舱、截关时间、提货、进港以及所选船公司的实际离港情况。",
+      "我们在整个海运过程中跟踪中转、运输节点、预计到达时间、异常情况和最新进展。",
+      "我们协调到港、文件放行、清关、陆路运输以及约定目的地的最终交付。"
+    ]
+  } as const;
+
+
   return (
     <div className="page-shell">
       <Header />
@@ -856,32 +884,16 @@ export default function TransporteMaritimoPage() {
 
           <div className={styles.processAccordionList}>
             {t.process.map(([title, text]: string[], index: number) => (
-              <details className={`${styles.processAccordionCard} aereoProcessCard`} key={title}>
-                <summary className={`${styles.processAccordionSummary} aereoProcessSummary`}>
+              <article className={`${styles.processAccordionCard} aereoProcessCard`} key={title}>
+                <div className={`${styles.processAccordionSummary} aereoProcessSummary`}>
                   <span className={styles.processAccordionNumber}>{index + 1}</span>
 
                   <span className={`${styles.processAccordionTitle} aereoProcessTitle`}>
                     <strong>{title}</strong>
                     <small>{text}</small>
                   </span>
-
-                  <span className={`${styles.processAccordionIcon} aereoProcessIcon`} aria-hidden="true" />
-                </summary>
-
-                <div className={`${styles.processAccordionBody} aereoProcessBody`}>
-                  <p>
-                    {locale === "es"
-                      ? "Coordinamos ruta, documentación, tiempos y seguimiento operativo según la urgencia de la carga."
-                      : locale === "en"
-                        ? "We coordinate route, documentation, timing and operational tracking according to cargo urgency."
-                        : "我们根据货物紧急程度协调路线、文件、时间和操作跟踪。"}
-                  </p>
-
-                  <Link href="/cotizacion?servicio=transporte-maritimo">
-                    {locale === "es" ? "Cotizar esta modalidad" : locale === "en" ? "Quote this option" : "获取报价"}
-                  </Link>
-                </div>
-              </details>
+</div>
+              </article>
             ))}          </div>
 
           <div className={styles.processAccordionActions}>
