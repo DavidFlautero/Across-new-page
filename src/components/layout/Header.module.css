@@ -3418,3 +3418,39 @@
   }
 }
 
+/* HEADER LARGE DESKTOP LOGO START */
+
+/* Solo desktop grande: logo del menú más visible */
+@media (min-width: 1200px) {
+  .logo.logo {
+    width: 185px !important;
+    min-width: 185px !important;
+    flex: 0 0 185px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .logo.logo img {
+    display: block !important;
+
+    width: 185px !important;
+    min-width: 185px !important;
+    max-width: 185px !important;
+
+    height: auto !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+  }
+}
+
+/* HEADER LARGE DESKTOP LOGO END */

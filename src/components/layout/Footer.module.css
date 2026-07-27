@@ -1164,3 +1164,15 @@
 
 /* FOOTER DESKTOP ALIGNMENT ONLY END */
 
+/* FOOTER DARK LARGE DESKTOP START */
+
+/* Solo desktop grande: mismo fondo oscuro en todas las páginas */
+@media (min-width: 1200px) {
+  .footer.footer {
+    background: #050b12 !important;
+    background-color: #050b12 !important;
+    background-image: none !important;
+  }
+}
+
+/* FOOTER DARK LARGE DESKTOP END */
