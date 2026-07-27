@@ -1019,14 +1019,14 @@ export default function AduanasPage() {
             <div>
               <strong>
                 {locale === "es"
-                  ? "¿Tenés una operación de aduanas en curso?"
+                  ? "¿Tiene una operación de aduanas en curso?"
                   : locale === "en"
                     ? "Do you have an air operation in progress?"
                     : "您是否有正在进行的空运操作？"}
               </strong>
               <p>
                 {locale === "es"
-                  ? "Coordinamos ruta, documentación y seguimiento para que tu carga avance sin fricción."
+                  ? "Coordinamos ruta, documentación y seguimiento para que su carga avance sin fricción."
                   : locale === "en"
                     ? "We coordinate routing, documentation and tracking so your cargo moves without friction."
                     : "我们协调路线、文件和跟踪，确保您的货物顺利推进。"}

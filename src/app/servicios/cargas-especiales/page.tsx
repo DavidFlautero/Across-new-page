@@ -45,7 +45,7 @@ const copy = {
     overviewEyebrow: "OPERACIONES ESPECIALES",
     overviewTitle: "Planificación precisa para cargas que requieren más que transporte.",
     overviewText: "Las cargas especiales exigen análisis, coordinación y control. Diseñamos soluciones para mercancías que requieren permisos, manipulación especializada, rutas estudiadas y equipos adaptados.",
-    overviewButton: "Rastrea tu carga",
+    overviewButton: "Rastrea su carga",
 
 
 
@@ -867,14 +867,14 @@ export default function CargasEspecialesPage() {
             <div>
               <strong>
                 {locale === "es"
-                  ? "¿Tenés una operación especial en curso?"
+                  ? "¿Tiene una operación especial en curso?"
                   : locale === "en"
                     ? "Do you have an air operation in progress?"
                     : "您是否有正在进行的空运操作？"}
               </strong>
               <p>
                 {locale === "es"
-                  ? "Coordinamos ruta, documentación y seguimiento para que tu carga avance sin fricción."
+                  ? "Coordinamos ruta, documentación y seguimiento para que su carga avance sin fricción."
                   : locale === "en"
                     ? "We coordinate routing, documentation and tracking so your cargo moves without friction."
                     : "我们协调路线、文件和跟踪，确保您的货物顺利推进。"}
