@@ -1,37 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Across Logistics — Corporate Web Platform
 
-## Getting Started
+Responsive corporate logistics platform developed for Across Logistics, focused on presenting services, industries, company information and tracking-related customer journeys in a professional production-ready interface.
 
-First, run the development server:
+## Overview
+
+The project is a complete redesign and implementation of a logistics company website using a modern Next.js architecture. It emphasizes reusable components, responsive behavior, multimedia content and maintainable page composition across multiple business sections.
+
+## Core areas
+
+- Air, sea and road freight service pages
+- Industry-specific content for automotive, technology, pharmaceutical and consumer sectors
+- Company, offices and sustainability sections
+- Resources and blog-oriented content
+- Tracking-related interface flows
+- Responsive desktop/mobile layouts
+- Multimedia and video content
+- Production deployment and iterative client revisions
+
+## Technology
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- ESLint
+
+## Engineering focus
+
+- Component reuse across a multi-page corporate site
+- Responsive layout behavior across desktop and mobile breakpoints
+- Media optimization and video integration
+- TypeScript/build issue resolution
+- Production-oriented iteration and regression fixing
+- Separation of visual presentation from reusable page structures
+
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Production build:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm build
+pnpm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Status
 
-## Learn More
+Client-facing production project under iterative development and maintenance.
 
-To learn more about Next.js, take a look at the following resources:
+## Author
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# Across-new-page
+David Fernando Flautero Peña — Full-Stack Software Developer
